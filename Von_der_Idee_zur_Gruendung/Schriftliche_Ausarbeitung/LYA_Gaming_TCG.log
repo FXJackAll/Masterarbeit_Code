@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.18)  22 JUL 2025 20:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.18)  23 JUL 2025 20:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -653,6 +653,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 229--230
  []
 
 [4]
+
+LaTeX Warning: Reference `subsubsec:Creator' on page 5 undefined on input line 
+231.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 231--232
 
  []
@@ -662,12 +667,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 237--238
 
  []
 
-
+[5]
 Underfull \hbox (badness 10000) in paragraph at lines 239--240
 
  []
 
-[5]
+
 Underfull \hbox (badness 10000) in paragraph at lines 241--242
 
  []
@@ -679,7 +684,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 251--252
 
  []
 
-[6] [7] [8] [9] (./LYA_Gaming_TCG.bbl
+[6] [7]
+
+LaTeX Warning: Reference `subsubsec:Creator' on page 8 undefined on input line 
+277.
+
+[8] [9]
+Underfull \hbox (badness 10000) in paragraph at lines 305--306
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 307--308
+
+ []
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 313--314
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 315--316
+
+ []
+
+[11] (./LYA_Gaming_TCG.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 11--14
 []\T1/cmr/m/it/12 Digital Col-lec-ti-ble Card Ga-mes Mar-ket Over-view\T1/cmr/m
 /n/12 .  $\T1/cmtt/m/n/12 https :
@@ -690,13 +720,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--14
 \T1/cmtt/m/n/12 / / www . businessresearchinsights . com / market-[]reports /
  []
 
-[10]
+[12]
 Underfull \hbox (badness 1019) in paragraph at lines 27--30
 []\T1/cmr/m/it/12 Trading Card Ga-me Rück-blick 2024\T1/cmr/m/n/12 .  $\T1/cmtt
 /m/n/12 https : / / www . magabotato . de / 2025 / 01 /
  []
 
-) [11] (./LYA_Gaming_TCG.lot)
+) [13] (./LYA_Gaming_TCG.lot)
 \tf@lot=\write4
 \openout4 = `LYA_Gaming_TCG.lot'.
 
@@ -704,15 +734,15 @@ Underfull \hbox (badness 1019) in paragraph at lines 27--30
 \tf@lof=\write5
 \openout5 = `LYA_Gaming_TCG.lof'.
 
- [12]
+ [14]
 part without number
 [1]
-Overfull \hbox (12.59427pt too wide) in paragraph at lines 362--363
+Overfull \hbox (12.59427pt too wide) in paragraph at lines 382--383
  $[]$  $[]$  $[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 362--363
+Underfull \hbox (badness 10000) in paragraph at lines 382--383
 
  []
 
@@ -726,12 +756,15 @@ L3 programming layer <2024-01-22>
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.72pt have occurred.
 
+
+LaTeX Warning: There were undefined references.
+
  ) 
 Here is how much of TeX's memory you used:
- 12056 strings out of 474222
- 226499 string characters out of 5748732
+ 12058 strings out of 474222
+ 226545 string characters out of 5748732
  1932975 words of memory out of 5000000
- 34097 multiletter control sequences out of 15000+600000
+ 34099 multiletter control sequences out of 15000+600000
  571755 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,8n,107p,10930b,429s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -743,10 +776,10 @@ onts/type1/public/cm-super/sfsx1440.pfb></usr/share/texmf/fonts/type1/public/cm
 -super/sfsx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx2488.pfb>
 </usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texmf/fo
 nts/type1/public/cm-super/sftt1200.pfb>
-Output written on LYA_Gaming_TCG.pdf (18 pages, 3330085 bytes).
+Output written on LYA_Gaming_TCG.pdf (20 pages, 3334024 bytes).
 PDF statistics:
- 122 PDF objects out of 1000 (max. 8388607)
- 76 compressed objects within 1 object stream
+ 129 PDF objects out of 1000 (max. 8388607)
+ 81 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
