@@ -1,0 +1,20 @@
+{
+  "name": "Martin_and_Gaddy",
+  "comment": "standard Martin_and_Gaddy problem",
+  "type": "continuous problems",
+  "dimension": 2,
+  "optimum_argument": [[5.0, 5.0]],
+  "optimum": 0,
+
+  "variable_boundaries": {
+    "natural_numbers": [],
+    "discrete": [],
+    "continuous": [[-20.0, 20.0]],
+    "ordinal": [],
+    "categorical": []
+  },
+
+  "discrete_values": [],
+
+  "magnitudes_of_categorical_variables": []
+}

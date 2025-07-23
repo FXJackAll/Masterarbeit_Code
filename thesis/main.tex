@@ -1,0 +1,277 @@
+% !TeX document-id = {ae1fcf0c-b497-46b7-bdf7-8dda67a9e27e}
+% !TeX spellcheck = en-US
+% !TeX encoding = utf8
+% !TeX program = pdflatex
+% !BIB program = biber
+
+
+\let\ifdeutsch\iffalse
+\let\ifenglisch\iftrue
+\input{pre-documentclass}
+\documentclass[
+  fontsize=12pt,
+  a4paper,  % Standard format - only KOMAScript uses paper=a4 - https://tex.stackexchange.com/a/61044/9075
+  twoside,  % we are optimizing for both screen and two-side printing. So the page numbers will jump, but the content is configured to stay in the middle (by using the geometry package)
+  bibliography=totoc,
+  %               idxtotoc,   %Index ins Inhaltsverzeichnis
+  %               liststotoc, %List of X ins Inhaltsverzeichnis, mit liststotocnumbered werden die Abbildungsverzeichnisse nummeriert
+  headsepline,
+  cleardoublepage=empty,
+  parskip=half,
+  %               draft    % um zu sehen, wo noch nachgebessert werden muss - wichtig, da Bindungskorrektur mit drin
+  draft=false
+]{scrbook}
+\input{config}
+\linespread{1.1}
+
+\usepackage[chapter]{minted}
+\setminted{numbersep=5pt, xleftmargin=12pt}
+%%%
+
+%http://www.jevon.org/wiki/Eclipse_Pygments_Style
+%\usemintedstyle{eclipse}
+%
+%\usemintedstyle{autumn}
+%\usemintedstyle{rrt}
+%\usemintedstyle{borland}
+%\usemintedstyle{friendlygrayscale}
+\usemintedstyle{friendly}
+
+%EN: compatibility of packages minted and listings with respect to the numbering of "List." caption
+%    source: https://tex.stackexchange.com/a/269510/9075
+\AtBeginEnvironment{listing}{\setcounter{listing}{\value{lstlisting}}}
+\AtEndEnvironment{listing}{\stepcounter{lstlisting}}
+%EN: We use the Listing environment to have the nice bar. So, we also have to patch the "Listing" environment for consistent counters
+\AtBeginEnvironment{Listing}{\setcounter{listing}{\value{lstlisting}}}
+\AtEndEnvironment{Listing}{\stepcounter{lstlisting}}
+
+
+\input{acronyms}
+
+\makeindex
+
+\begin{document}
+
+%tex4ht-Konvertierung verschönern
+\iftex4ht
+  % tell tex4ht to create picures also for formulas starting with '$'
+  % WARNING: a tex4ht run now takes forever!
+  \Configure{$}{\PicMath}{\EndPicMath}{}
+  %$ % <- syntax highlighting fix for emacs
+  \Css{body {text-align:justify;}}
+
+  %conversion of .pdf to .png
+  \Configure{graphics*}
+  {pdf}
+  {\Needs{"convert \csname Gin@base\endcsname.pdf
+      \csname Gin@base\endcsname.png"}%
+    \Picture[pict]{\csname Gin@base\endcsname.png}%
+  }
+\fi
+
+%\VerbatimFootnotes %verbatim text in Fußnoten erlauben. Geht normalerweise nicht.
+
+\input{commands}
+\pagenumbering{arabic}
+
+%\Titelblatt
+\begin{titlepage}
+	\begin{center}
+		
+		
+		\Large
+		Leipzig University\\
+		Faculty of Mathematics and Computer Science
+		
+		\vspace{2.5cm}
+		
+		\Huge
+		\textbf{Hyperparameter Optimization Methods for the H-SPPBO Metaheuristic}
+		
+		\vspace{0.5cm}
+		\Large
+		Applied to the Dynamic Traveling Salesperson Problem
+		
+		\vspace{1cm}
+		
+		
+		Master's Thesis
+		
+		\vspace{2cm}
+
+		
+		\begin{minipage}{0.4\textwidth}
+			\vspace{0.05\linewidth}
+			\begin{flushleft} \large
+				\emph{Author:}\\
+				Daniel Werner\\
+				{\small 3742529\\
+					\vspace{-0.3cm}
+					Computer Science}
+			\end{flushleft}
+		\end{minipage}
+		\begin{minipage}{0.4\textwidth}
+			\begin{flushright} \large
+				\emph{Supervisor:} \\
+				Prof.\ Dr.\ Martin Middendorf\\
+				\hfil
+			\end{flushright}
+		\end{minipage}
+		\vfill
+		
+	
+		\large Swarm Intelligence and Complex Systems Group\\
+		
+		{\large \today}
+		
+			\end{center}
+	\end{titlepage}
+
+%Eigener Seitenstil fuer die Kurzfassung und das Inhaltsverzeichnis
+\deftriplepagestyle{preamble}{}{}{}{}{}{\pagemark}
+%Doku zu deftriplepagestyle: scrguide.pdf
+\pagestyle{preamble}
+\renewcommand*{\chapterpagestyle}{preamble}
+
+
+% BEGIN: Verzeichnisse
+
+\iftex4ht
+\else
+  \microtypesetup{protrusion=false}
+\fi
+
+%%%
+% Literaturverzeichnis ins TOC mit aufnehmen, aber nur wenn nichts anderes mehr hilft!
+% \addcontentsline{toc}{chapter}{Literaturverzeichnis}
+%
+% oder zB
+%\addcontentsline{toc}{section}{Abkürzungsverzeichnis}
+%
+%%%
+
+%Produce table of contents
+%
+%In case you have trouble with headings reaching into the page numbers, enable the following three lines.
+%Hint by http://golatex.de/inhaltsverzeichnis-schreibt-ueber-rand-t3106.html
+%
+%\makeatletter
+%\renewcommand{\@pnumwidth}{2em}
+%\makeatother
+%
+\tableofcontents
+
+% Bei einem ungünstigen Seitenumbruch im Inhaltsverzeichnis, kann dieser mit
+% \addtocontents{toc}{\protect\newpage}
+% an der passenden Stelle im Fließtext erzwungen werden.
+
+
+\iftex4ht
+\else
+  %Optischen Randausgleich und Grauwertkorrektur wieder aktivieren
+  \microtypesetup{protrusion=true}
+\fi
+
+% END: Verzeichnisse
+
+
+% Headline and footline
+\renewcommand*{\chapterpagestyle}{scrplain}
+\pagestyle{scrheadings}
+\pagestyle{scrheadings}
+\ihead[]{}
+\chead[]{}
+\ohead[]{\headmark}
+\cfoot[]{}
+\ofoot[\usekomafont{pagenumber}\thepage]{\usekomafont{pagenumber}\thepage}
+\ifoot[]{}
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Main content starts here
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{introduction}
+
+\input{related}
+
+\input{background}
+
+\input{implementation}
+
+\input{experiments}
+
+\input{results}
+
+\input{conclusions}
+
+\chapter*{Abstract}
+
+This master's thesis in computer science explores the application of \glsfirst{hpo} methods to tune the parameters of the \glsfirst{hsppbo} metaheuristic algorithm for solving the \glsfirst{dtsp}. The work combines various \gls{hpo} methods with the \gls{hsppbo} metaheuristic. The experiments were conducted using ten \gls{tsp} instances and three dynamic intensities to realize the \gls{dtsp}. The first research question about the ideal \gls{hpo} method was answered by comparing the performance of four different methods and found \gls{gbrt} to be the leading method. The second question investigated the best parameter sets for each combination of the problem instance and dynamic intensity, yielding interesting results about the robustness and importance of certain parameters, as well as the insight that no single parameter set is the best choice for all problem descriptions. The third part of the results compared the performance of the \gls{hpo} parameters to a reference parameter set, showing that the \gls{hpo} parameters performed excellently in the \gls{dtsp}, but the reference set outperformed them in dynamic detection. Overall, the work demonstrates the potential of \gls{hpo} in tuning metaheuristic parameters.
+
+\small	
+\textbf{\textit{Keywords---}}
+ \glsfirst{hpo}, Metaheuristics, Parameter Tuning, \glsfirst{dtsp},  \glsfirst{hsppbo}, Python, \glsfirst{rs}, \glsfirst{bo}, \glsfirst{gp}, \glsfirst{et}, \glsfirst{gbrt}
+
+\printbibliography
+
+%All links were last followed on March 1, 2023.
+
+% Abkürzungsverzeichnis
+\printnoidxglossaries
+
+\listoffigures
+\listoftables
+
+%Wird nur bei Verwendung von der lstlisting-Umgebung mit dem "caption"-Parameter benoetigt
+%\lstlistoflistings
+%ansonsten:
+\listof{Listing}{List of Listings}
+
+%mittels \newfloat wurde die Algorithmus-Gleitumgebung definiert.
+%Mit folgendem Befehl werden alle floats dieses Typs ausgegeben
+%\listof{Algorithmus}{List of Algorithms}
+\listofalgorithms %Ist nur für Algorithmen, die mittels \begin{algorithm} umschlossen werden, nötig
+
+
+\appendix
+
+\input{figures}
+
+\input{tables}
+
+\chapter*{Erklärung}
+
+Ich versichere, dass ich die vorliegende Arbeit selbstständig und nur unter Verwendung der angegebenen Quellen und Hilfsmittel angefertigt habe, insbesondere sind wörtliche oder sinngemäße Zitate als solche gekennzeichnet. Mir ist bekannt, dass Zuwiderhandlung auch nachträglich zur Aberkennung des Abschlusses führen kann.
+Ich versichere, dass das elektronische Exemplar mit den gedruckten Exemplaren übereinstimmt.
+
+\vspace{2cm}
+
+\hfill
+\begin{tabular}[t]{c}
+	\rule{10em}{0.4pt}\\ Ort:
+\end{tabular}
+\hfill
+\begin{tabular}[t]{c}
+	\rule{10em}{0.4pt}\\ Datum:
+\end{tabular}
+\hfill
+\begin{tabular}[t]{c}
+	\rule{10em}{0.4pt}\\ Unterschrift:
+\end{tabular}
+\hfill
+\hfill\strut
+
+\pagestyle{empty}
+\renewcommand*{\chapterpagestyle}{empty}
+
+\end{document}

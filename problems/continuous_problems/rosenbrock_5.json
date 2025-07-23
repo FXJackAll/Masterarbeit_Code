@@ -1,0 +1,20 @@
+{
+  "name": "Rosenbrock",
+  "comment": "standard Rosenbrock problem",
+  "type": "continuous problems",
+  "dimension": 5,
+  "optimal_argument": [[1, 1, 1, 1, 1]],
+  "optimum": 0,
+
+  "variable_boundaries": {
+    "natural_numbers": [],
+    "discrete": [],
+    "continuous": [[-5, 5]],
+    "ordinal": [],
+    "categorical": []
+  },
+
+  "discrete_values": [],
+
+  "magnitudes_of_categorical_variables": []
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Goldstein_and_Price",
+  "comment": "standard Goldstein_and_Price problem",
+  "type": "continuous problems",
+  "dimension": 2,
+  "optimum_argument": [[0.0, -1.0]],
+  "optimum": 3,
+
+  "variable_boundaries": {
+    "natural_numbers": [],
+    "discrete": [],
+    "continuous": [[-5.12, 5.12]],
+    "ordinal": [],
+    "categorical": []
+  },
+
+  "discrete_values": [],
+
+  "magnitudes_of_categorical_variables": []
+}

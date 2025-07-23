@@ -1,0 +1,24 @@
+\babel@toc {ngerman}{}\relax 
+\contentsline {section}{\numberline {1}Einleitung}{1}{}%
+\contentsline {section}{\numberline {2}Markt}{2}{}%
+\contentsline {section}{\numberline {3}Geschäftsidee}{4}{}%
+\contentsline {section}{\numberline {4}Kundensegmente}{6}{}%
+\contentsline {subsection}{\numberline {4.1}\acl {f2p} Spieler}{6}{}%
+\contentsline {subsubsection}{\numberline {4.1.1}Gelegenheitsspieler}{7}{}%
+\contentsline {subsubsection}{\numberline {4.1.2}Kernspieler}{7}{}%
+\contentsline {subsection}{\numberline {4.2}Normale Spieler}{8}{}%
+\contentsline {subsubsection}{\numberline {4.2.1}Normaler Gelegenheitsspieler}{8}{}%
+\contentsline {subsubsection}{\numberline {4.2.2}Normaler Kernspieler}{8}{}%
+\contentsline {subsection}{\numberline {4.3}Hardcore Spieler}{8}{}%
+\contentsline {subsection}{\numberline {4.4}Professionelle Spieler}{9}{}%
+\contentsline {subsubsection}{\numberline {4.4.1}Turnierspieler}{9}{}%
+\contentsline {subsubsection}{\numberline {4.4.2}Onlinepokerspieler}{9}{}%
+\contentsline {subsubsection}{\numberline {4.4.3}Streamer}{9}{}%
+\contentsline {subsection}{\numberline {4.5}Creator}{10}{}%
+\contentsline {subsection}{\numberline {4.6}Wal}{10}{}%
+\contentsline {subsection}{\numberline {4.7}Musiker/Künstler}{10}{}%
+\contentsline {subsection}{\numberline {4.8}Investoren}{10}{}%
+\contentsline {section}{\numberline {5}Erlösmodell}{10}{}%
+\contentsline {section}{Literaturverzeichnis}{10}{}%
+\contentsline {part}{\nonumberline Anlagen}{}{}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

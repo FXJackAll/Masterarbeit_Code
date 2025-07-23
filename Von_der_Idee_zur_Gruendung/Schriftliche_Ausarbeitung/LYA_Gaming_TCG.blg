@@ -1,0 +1,64 @@
+This is BibTeX, Version 0.99d (TeX Live 2023/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: LYA_Gaming_TCG.aux
+The style file: abbrvdin.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: Literatur_Von_Der_Idee_zur_Gruendung.bib
+Warning--entry type for "Print_TCG_Market_Size" isn't style-file defined
+--line 1 of file Literatur_Von_Der_Idee_zur_Gruendung.bib
+Warning--entry type for "Online_TCG_Market_Size" isn't style-file defined
+--line 21 of file Literatur_Von_Der_Idee_zur_Gruendung.bib
+Warning--entry type for "TCG_Market_Size" isn't style-file defined
+--line 41 of file Literatur_Von_Der_Idee_zur_Gruendung.bib
+Warning--entry type for "TCG_Market_Size_2024" isn't style-file defined
+--line 61 of file Literatur_Von_Der_Idee_zur_Gruendung.bib
+Warning--to sort, need author or key in Print_TCG_Market_Size
+Warning--to sort, need author or key in Online_TCG_Market_Size
+Warning--to sort, need author or key in TCG_Market_Size_2024
+Warning--to sort, need author or key in TCG_Market_Size
+You've used 4 entries,
+            4332 wiz_defined-function locations,
+            841 strings with 6544 characters,
+and the built_in function-call counts, 839 in all, are:
+= -- 64
+> -- 4
+< -- 0
++ -- 4
+- -- 0
+* -- 38
+:= -- 112
+add.period$ -- 4
+call.type$ -- 4
+change.case$ -- 8
+chr.to.int$ -- 0
+cite$ -- 8
+duplicate$ -- 36
+empty$ -- 109
+format.name$ -- 0
+if$ -- 209
+int.to.chr$ -- 0
+int.to.str$ -- 4
+missing$ -- 24
+newline$ -- 26
+num.names$ -- 0
+pop$ -- 24
+preamble$ -- 1
+purify$ -- 8
+quote$ -- 0
+skip$ -- 40
+stack$ -- 0
+substring$ -- 40
+swap$ -- 4
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 16
+warning$ -- 4
+while$ -- 0
+width$ -- 5
+write$ -- 43
+(There were 8 warnings)

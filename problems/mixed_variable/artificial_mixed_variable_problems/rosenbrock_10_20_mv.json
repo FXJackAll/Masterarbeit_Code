@@ -1,0 +1,26 @@
+{
+  "name": "Rosenbrock_10_20_MV",
+  "comment": "artificial mixed_variable problem",
+  "type": "mixed variable problems",
+  "continuous_dimension": 5,
+  "discrete_dimension": 5,
+  "dimension": 10,
+  "optimum_argument": [[1.0], [1.0]],
+  "optimum": [0.0],
+
+  "variable_boundaries": {
+    "natural_numbers": [],
+    "discrete": [[-3, 7]],
+    "continuous": [[-3, 7]],
+    "ordinal": [],
+    "categorical": []
+  },
+
+  "discrete_values": [-3.0, -2.5, -2.0, -1,5, -1.0,
+                      -0.5, 0.0, 0.5, 1.0, 1.5,
+                      2.0, 2.5, 3.0, 3.5, 4.0,
+                      4.5 ,5.0, 5.5, 6.0, 6.5,
+                      7.0],
+
+  "magnitudes_of_categorical_variables": []
+}

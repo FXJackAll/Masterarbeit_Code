@@ -1,0 +1,58 @@
+This is BibTeX, Version 0.99d (TeX Live 2023/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: LYA_Gaming_TCG.aux
+The style file: abbrvdin.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: Literatur_Von_Der_Idee_zur_Gruendung.bib
+Warning--entry type for "Print_TCG_Market_Size" isn't style-file defined
+--line 1 of file Literatur_Von_Der_Idee_zur_Gruendung.bib
+Warning--entry type for "Online_TCG_Market_Size" isn't style-file defined
+--line 21 of file Literatur_Von_Der_Idee_zur_Gruendung.bib
+Warning--to sort, need author or key in Print_TCG_Market_Size
+Warning--to sort, need author or key in Online_TCG_Market_Size
+You've used 2 entries,
+            4332 wiz_defined-function locations,
+            833 strings with 6241 characters,
+and the built_in function-call counts, 437 in all, are:
+= -- 32
+> -- 2
+< -- 0
++ -- 2
+- -- 0
+* -- 20
+:= -- 62
+add.period$ -- 2
+call.type$ -- 2
+change.case$ -- 4
+chr.to.int$ -- 0
+cite$ -- 4
+duplicate$ -- 18
+empty$ -- 55
+format.name$ -- 0
+if$ -- 105
+int.to.chr$ -- 0
+int.to.str$ -- 2
+missing$ -- 12
+newline$ -- 18
+num.names$ -- 0
+pop$ -- 12
+preamble$ -- 1
+purify$ -- 4
+quote$ -- 0
+skip$ -- 20
+stack$ -- 0
+substring$ -- 20
+swap$ -- 2
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 8
+warning$ -- 2
+while$ -- 0
+width$ -- 3
+write$ -- 25
+(There were 4 warnings)

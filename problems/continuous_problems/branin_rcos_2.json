@@ -1,0 +1,20 @@
+{
+  "name": "Branin_RCOS",
+  "comment": "standard Branin_RCOS problem",
+  "type": "continuous problems",
+  "dimension": 2,
+  "optimum_argument": [[-3.14159, 12.275], [3.14159, 2.275], [9.42478, 2.475]],
+  "optimum": 0.397887,
+
+  "variable_boundaries": {
+    "natural_numbers": [],
+    "discrete": [],
+    "continuous": [[-5, 15]],
+    "ordinal": [],
+    "categorical": []
+  },
+
+  "discrete_values": [],
+
+  "magnitudes_of_categorical_variables": []
+}

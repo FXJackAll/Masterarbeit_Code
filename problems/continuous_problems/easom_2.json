@@ -1,0 +1,20 @@
+{
+  "name": "Easom",
+  "comment": "standard Easom problem",
+  "type": "continuous problems",
+  "dimension": 2,
+  "optimum_argument": [["π, π"]],
+  "optimum": -1,
+
+  "variable_boundaries": {
+    "natural_numbers": [],
+    "discrete": [],
+    "continuous": [[-100, 100]],
+    "ordinal": [],
+    "categorical": []
+  },
+
+  "discrete_values": [],
+
+  "magnitudes_of_categorical_variables": []
+}

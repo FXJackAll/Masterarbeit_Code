@@ -1,0 +1,20 @@
+{
+  "name": "diagonal Plane",
+  "comment": "standard diagonal plane problem",
+  "type": "simple continuous problems",
+  "dimension": 10,
+  "optimum_argument": [[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]],
+  "optimum": 10000000000,
+
+  "variable_boundaries": {
+    "natural_numbers": [],
+    "discrete": [],
+    "continuous": [[-0.5, 1.5]],
+    "ordinal": [],
+    "categorical": []
+  },
+
+  "discrete_values": [],
+
+  "magnitudes_of_categorical_variables": []
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Griewangk",
+  "comment": "standard Griewangk problem",
+  "type": "continuous problems",
+  "dimension": 10,
+  "optimum_argument": [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+  "optimum": 0,
+
+  "variable_boundaries": {
+    "natural_numbers": [],
+    "discrete": [],
+    "continuous": [[-600, 600]],
+    "ordinal": [],
+    "categorical": []
+  },
+
+  "discrete_values": [],
+
+  "magnitudes_of_categorical_variables": []
+}

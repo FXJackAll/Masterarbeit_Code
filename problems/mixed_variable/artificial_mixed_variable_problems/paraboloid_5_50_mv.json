@@ -1,0 +1,32 @@
+{
+  "name": "Paraboloid_5_50_MV",
+  "comment": "artificial mixed_variable problem",
+  "type": "mixed variable problems",
+  "continuous_dimension": 3,
+  "discrete_dimension": 2,
+  "dimension": 5,
+  "optimum_argument": [[0.0], [0.0]],
+  "optimum": [0.0],
+
+  "variable_boundaries": {
+    "natural_numbers": [],
+    "discrete": [[-3, 7]],
+    "continuous": [[-3, 7]],
+    "ordinal": [],
+    "categorical": []
+  },
+
+  "discrete_values": [-3.0, -2.8, -2.6, -2.4, -2.2,
+                      -2.0, -1.8, -1.6, -1,4, -1.2,
+                      -1.0, -0.8, -0.6, -0.4, -0.2,
+                      0.0, 0.2, 0.4, 0.6, 0.8,
+                      1.0, 1.2, 1.4, 1.6, 1.8,
+                      2.0, 2.2, 2.4, 2.6, 2.8,
+                      3.0, 3.2, 3.4, 3.6, 3.8,
+                      4.0, 4.2, 4.4, 4.6, 4.8,
+                      5.0, 5.2, 5.4, 5.6, 5.8,
+                      6.0, 6.2, 6.4, 6.6, 6.8,
+                      7.0],
+
+  "magnitudes_of_categorical_variables": []
+}
