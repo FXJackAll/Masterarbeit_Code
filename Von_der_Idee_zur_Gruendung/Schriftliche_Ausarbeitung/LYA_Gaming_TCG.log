@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.18)  26 JUL 2025 18:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.18)  26 JUL 2025 20:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -730,6 +730,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 232--233
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 234--235
+
+ []
+
 [5]
 Underfull \hbox (badness 10000) in paragraph at lines 238--239
 
@@ -782,28 +787,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 326--327
 
  []
 
-
+[12]
 Underfull \hbox (badness 10000) in paragraph at lines 328--329
 
  []
 
-[12]
+
 Underfull \hbox (badness 10000) in paragraph at lines 338--339
 
  []
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 344--345
+Underfull \hbox (badness 10000) in paragraph at lines 340--341
 
  []
 
-[14{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/e
-nc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}]
+[14]
 Underfull \hbox (badness 10000) in paragraph at lines 346--347
 
  []
 
-[15] (./LYA_Gaming_TCG.bbl
+
+Underfull \hbox (badness 10000) in paragraph at lines 348--349
+
+ []
+
+[15{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/e
+nc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}]
+(./LYA_Gaming_TCG.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 11--14
 []\T1/lmr/m/it/12 Digital Col-lec-ti-ble Card Ga-mes Mar-ket Over-view\T1/lmr/m
 /n/12 .  $\T1/lmtt/m/n/12 https :
@@ -814,13 +825,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--14
 \T1/lmtt/m/n/12 / / www . businessresearchinsights . com / market-[]reports /
  []
 
-
+[16]
 Underfull \hbox (badness 1009) in paragraph at lines 27--30
 []\T1/lmr/m/it/12 Trading Card Ga-me Rück-blick 2024\T1/lmr/m/n/12 .  $\T1/lmtt
 /m/n/12 https : / / www . magabotato . de / 2025 / 01 /
  []
 
-) [16] (./LYA_Gaming_TCG.lot)
+) [17] (./LYA_Gaming_TCG.lot)
 \tf@lot=\write4
 \openout4 = `LYA_Gaming_TCG.lot'.
 
@@ -828,15 +839,15 @@ Underfull \hbox (badness 1009) in paragraph at lines 27--30
 \tf@lof=\write5
 \openout5 = `LYA_Gaming_TCG.lof'.
 
- [17]
+ [18]
 part without number
 [1]
-Overfull \hbox (12.59717pt too wide) in paragraph at lines 413--414
+Overfull \hbox (12.59717pt too wide) in paragraph at lines 409--410
  $[]$  $[]$  $[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 413--414
+Underfull \hbox (badness 10000) in paragraph at lines 409--410
 
  []
 
@@ -861,10 +872,10 @@ lic/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/
 texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/l
 m/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on LYA_Gaming_TCG.pdf (24 pages, 3303192 bytes).
+Output written on LYA_Gaming_TCG.pdf (25 pages, 3303827 bytes).
 PDF statistics:
- 144 PDF objects out of 1000 (max. 8388607)
- 92 compressed objects within 1 object stream
+ 148 PDF objects out of 1000 (max. 8388607)
+ 95 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
