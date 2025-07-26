@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.18)  25 JUL 2025 20:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.18)  26 JUL 2025 18:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -667,7 +667,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write3
 \openout3 = `LYA_Gaming_TCG.toc'.
 
- [1] [2]
+ [1] [2] [3]
 Package acronym Info: Label `acro:mtg' newly defined as it shall be overridden
 although it is yet undefined on input line 196.
 Package acronym Info: Label `acro:ip' newly defined as it shall be overridden
@@ -676,7 +676,7 @@ Package acronym Info: Label `acro:HS' newly defined as it shall be overridden
 although it is yet undefined on input line 196.
 Package acronym Info: Label `acro:fab' newly defined as it shall be overridden
 although it is yet undefined on input line 196.
-<Abbildungen/Yu_Gi_Oh_card_example_with_a_lot_of_text.png, id=18, 812.03375pt x
+<Abbildungen/Yu_Gi_Oh_card_example_with_a_lot_of_text.png, id=21, 812.03375pt x
  1190.4475pt>
 File: Abbildungen/Yu_Gi_Oh_card_example_with_a_lot_of_text.png Graphic file (ty
 pe png)
@@ -684,14 +684,14 @@ pe png)
 Package pdftex.def Info: Abbildungen/Yu_Gi_Oh_card_example_with_a_lot_of_text.p
 ng  used on input line 201.
 (pdftex.def)             Requested size: 134.44064pt x 197.08745pt.
-<Abbildungen/Magic_the_gathering_card_example.png, id=19, 359.3425pt x 501.875p
+<Abbildungen/Magic_the_gathering_card_example.png, id=22, 359.3425pt x 501.875p
 t>
 File: Abbildungen/Magic_the_gathering_card_example.png Graphic file (type png)
 <use Abbildungen/Magic_the_gathering_card_example.png>
 Package pdftex.def Info: Abbildungen/Magic_the_gathering_card_example.png  used
  on input line 202.
 (pdftex.def)             Requested size: 141.16234pt x 197.15485pt.
-<Abbildungen/Hearthstone_card_example_cropped.png, id=20, 411.5375pt x 583.1787
+<Abbildungen/Hearthstone_card_example_cropped.png, id=23, 411.5375pt x 583.1787
 6pt>
 File: Abbildungen/Hearthstone_card_example_cropped.png Graphic file (type png)
 <use Abbildungen/Hearthstone_card_example_cropped.png>
@@ -730,12 +730,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 232--233
 
  []
 
-
+[5]
 Underfull \hbox (badness 10000) in paragraph at lines 238--239
 
  []
 
-[5]
+
 Underfull \hbox (badness 10000) in paragraph at lines 240--241
 
  []
@@ -757,12 +757,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 306--307
 
  []
 
-
+[10]
 Underfull \hbox (badness 10000) in paragraph at lines 308--309
 
  []
 
-[10]
+
 Underfull \hbox (badness 10000) in paragraph at lines 314--315
 
  []
@@ -793,13 +793,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 338--339
  []
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 342--343
+Underfull \hbox (badness 10000) in paragraph at lines 344--345
 
  []
 
 [14{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/e
 nc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}]
-(./LYA_Gaming_TCG.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 346--347
+
+ []
+
+[15] (./LYA_Gaming_TCG.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 11--14
 []\T1/lmr/m/it/12 Digital Col-lec-ti-ble Card Ga-mes Mar-ket Over-view\T1/lmr/m
 /n/12 .  $\T1/lmtt/m/n/12 https :
@@ -816,7 +820,7 @@ Underfull \hbox (badness 1009) in paragraph at lines 27--30
 /m/n/12 https : / / www . magabotato . de / 2025 / 01 /
  []
 
-) [15] (./LYA_Gaming_TCG.lot)
+) [16] (./LYA_Gaming_TCG.lot)
 \tf@lot=\write4
 \openout4 = `LYA_Gaming_TCG.lot'.
 
@@ -824,15 +828,15 @@ Underfull \hbox (badness 1009) in paragraph at lines 27--30
 \tf@lof=\write5
 \openout5 = `LYA_Gaming_TCG.lof'.
 
- [16]
+ [17]
 part without number
 [1]
-Overfull \hbox (12.59717pt too wide) in paragraph at lines 407--408
+Overfull \hbox (12.59717pt too wide) in paragraph at lines 413--414
  $[]$  $[]$  $[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 407--408
+Underfull \hbox (badness 10000) in paragraph at lines 413--414
 
  []
 
@@ -843,10 +847,10 @@ L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 12275 strings out of 474222
- 230938 string characters out of 5748732
- 1932975 words of memory out of 5000000
- 34293 multiletter control sequences out of 15000+600000
+ 12277 strings out of 474222
+ 230969 string characters out of 5748732
+ 1933975 words of memory out of 5000000
+ 34295 multiletter control sequences out of 15000+600000
  604430 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,8n,107p,10930b,429s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -857,10 +861,10 @@ lic/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/
 texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/l
 m/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on LYA_Gaming_TCG.pdf (22 pages, 3300114 bytes).
+Output written on LYA_Gaming_TCG.pdf (24 pages, 3303192 bytes).
 PDF statistics:
- 138 PDF objects out of 1000 (max. 8388607)
- 88 compressed objects within 1 object stream
+ 144 PDF objects out of 1000 (max. 8388607)
+ 92 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

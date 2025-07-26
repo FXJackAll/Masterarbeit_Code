@@ -23,7 +23,8 @@
 \contentsline {subsection}{\numberline {5.1}Direkte Einnahmen}{13}{}%
 \contentsline {subsection}{\numberline {5.2}Indirekte Einnahmen}{14}{}%
 \contentsline {subsection}{\numberline {5.3}Eingesparte Ausgaben}{15}{}%
-\contentsline {section}{\numberline {6}Negative Space}{15}{}%
-\contentsline {section}{Literaturverzeichnis}{15}{}%
+\contentsline {section}{\numberline {6}Kosten}{16}{}%
+\contentsline {section}{\numberline {7}Negative Space}{16}{}%
+\contentsline {section}{Literaturverzeichnis}{16}{}%
 \contentsline {part}{\nonumberline Anlagen}{}{}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
