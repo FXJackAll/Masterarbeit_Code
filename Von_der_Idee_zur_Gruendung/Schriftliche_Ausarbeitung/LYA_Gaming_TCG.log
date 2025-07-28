@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.18)  28 JUL 2025 20:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.18)  28 JUL 2025 21:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -762,12 +762,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 306--307
 
  []
 
-
+[11]
 Underfull \hbox (badness 10000) in paragraph at lines 308--309
 
  []
 
-[11]
+
 Underfull \hbox (badness 10000) in paragraph at lines 314--315
 
  []
@@ -797,12 +797,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 334--335
 
  []
 
-
+[14]
 Underfull \hbox (badness 10000) in paragraph at lines 344--345
 
  []
 
-[14]
+
 Underfull \hbox (badness 10000) in paragraph at lines 346--347
 
  []
@@ -812,13 +812,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 352--353
 
  []
 
-
+[16{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/e
+nc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}]
 Underfull \hbox (badness 10000) in paragraph at lines 354--355
 
  []
 
-[16{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/e
-nc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}]
 </home/user/Dokumente/Universität/Informatik_Master/Semester_X/Von_der_Idee_zu
 r_Gruendung/Schriftliche_Ausarbeitung/Abbildungen/pie_chart_better_neu_better.p
 ng, id=83, 606.3453pt x 278.2395pt>
@@ -830,10 +829,9 @@ e_zur_Gruendung/Schriftliche_Ausarbeitung/Abbildungen/pie_chart_better_neu_bett
 er.png>
 Package pdftex.def Info: /home/user/Dokumente/Universität/Informatik_Master/Se
 mester_X/Von_der_Idee_zur_Gruendung/Schriftliche_Ausarbeitung/Abbildungen/pie_c
-hart_better_neu_better.png  used on input line 371.
+hart_better_neu_better.png  used on input line 373.
 (pdftex.def)             Requested size: 358.50612pt x 164.50801pt.
-
-(./LYA_Gaming_TCG.bbl
+[17] (./LYA_Gaming_TCG.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 11--14
 []\T1/lmr/m/it/12 Digital Col-lec-ti-ble Card Ga-mes Mar-ket Over-view\T1/lmr/m
 /n/12 .  $\T1/lmtt/m/n/12 https :
@@ -844,7 +842,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--14
 \T1/lmtt/m/n/12 / / www . businessresearchinsights . com / market-[]reports /
  []
 
-[17]
+
 Underfull \hbox (badness 1009) in paragraph at lines 27--30
 []\T1/lmr/m/it/12 Trading Card Ga-me R�ck-blick 2024\T1/lmr/m/n/12 .  $\T1/lmtt
 /m/n/12 https : / / www . magabotato . de / 2025 / 01 /
@@ -863,12 +861,12 @@ tter.png>] (./LYA_Gaming_TCG.lot)
  [19]
 part without number
 [1]
-Overfull \hbox (12.59717pt too wide) in paragraph at lines 426--427
+Overfull \hbox (12.59717pt too wide) in paragraph at lines 428--429
  $[]$  $[]$  $[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 426--427
+Underfull \hbox (badness 10000) in paragraph at lines 428--429
 
  []
 
@@ -881,7 +879,7 @@ L3 programming layer <2024-01-22>
 Here is how much of TeX's memory you used:
  12287 strings out of 474222
  232201 string characters out of 5748732
- 1933975 words of memory out of 5000000
+ 1932975 words of memory out of 5000000
  34305 multiletter control sequences out of 15000+600000
  604430 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -893,7 +891,7 @@ lic/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/
 texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/l
 m/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on LYA_Gaming_TCG.pdf (26 pages, 3352886 bytes).
+Output written on LYA_Gaming_TCG.pdf (26 pages, 3353234 bytes).
 PDF statistics:
  153 PDF objects out of 1000 (max. 8388607)
  97 compressed objects within 1 object stream

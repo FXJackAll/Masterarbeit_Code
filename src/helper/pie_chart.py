@@ -23,14 +23,14 @@ fig, (ax1,ax2) = plt.subplots(1,2,figsize=(10,10)) #ax1,ax2 refer to your two pi
 
 # 1,2 denotes 1 row, 2 columns - if you want to stack vertically, it would be 2,1
 
-y_1 = np.array([300, 50, 500, 50, 800])
+y_1 = np.array([300, 250, 500, 50, 800])
 
 labels_1 = ['Server', 'Legal', 'Strom', 'Miete', 'Gehälter']
 
 ax1.pie(y_1,labels = labels_1, autopct = lambda p:f'{p*sum(y_1)/100 :.0f}€, ({p:.2f}%)', startangle=260, shadow=True) #plot first pie
 ax1.set_title('Ohne EXIST - 1700€')
 
-y_2 = np.array([300, 50, 500, 50])
+y_2 = np.array([300, 250, 500, 50])
 
 labels_2 = ['Server', 'Legal', 'Strom', 'Miete']
 
