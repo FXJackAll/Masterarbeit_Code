@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.18)  28 JUL 2025 21:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.18)  29 JUL 2025 19:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -624,42 +624,42 @@ LaTeX Font Info:    Trying to load font information for T1+lmss on input line 1
 (/usr/share/texmf/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (./LYA_Gaming_TCG.toc
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 6
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 7
 .
 
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 6
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 7
 .
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-6.
+7.
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-6.
+7.
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 6.
+(Font)              <12> on input line 7.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 6.
+(Font)              <8> on input line 7.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 6.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 6.
+(Font)              <6> on input line 7.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 7.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 6.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 7.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -750,40 +750,41 @@ Underfull \hbox (badness 10000) in paragraph at lines 242--243
 
  []
 
-Package acronym Info: Label `acro:f2p' newly defined as it shall be overridden
-although it is yet undefined on input line 252.
 
-Underfull \hbox (badness 10000) in paragraph at lines 252--253
+Underfull \hbox (badness 10000) in paragraph at lines 248--249
 
  []
 
-[7] [8] [9] [10]
-Underfull \hbox (badness 10000) in paragraph at lines 306--307
+[7]
+Package acronym Info: Label `acro:f2p' newly defined as it shall be overridden
+although it is yet undefined on input line 258.
+
+Underfull \hbox (badness 10000) in paragraph at lines 258--259
+
+ []
+
+[8] [9] [10]
+Underfull \hbox (badness 10000) in paragraph at lines 312--313
 
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 308--309
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 314--315
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 316--317
+Underfull \hbox (badness 10000) in paragraph at lines 320--321
 
  []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 318--319
+Underfull \hbox (badness 10000) in paragraph at lines 322--323
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 326--327
+Underfull \hbox (badness 10000) in paragraph at lines 324--325
 
  []
 
@@ -793,17 +794,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 332--333
  []
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 334--335
+Underfull \hbox (badness 10000) in paragraph at lines 338--339
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 340--341
 
  []
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 344--345
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 346--347
+Underfull \hbox (badness 10000) in paragraph at lines 350--351
 
  []
 
@@ -812,26 +813,39 @@ Underfull \hbox (badness 10000) in paragraph at lines 352--353
 
  []
 
-[16{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/e
-nc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 354--355
+
+Underfull \hbox (badness 10000) in paragraph at lines 358--359
 
  []
 
+[16{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/e
+nc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}]
+Underfull \hbox (badness 10000) in paragraph at lines 360--361
+
+ []
+
+[17]
 </home/user/Dokumente/Universität/Informatik_Master/Semester_X/Von_der_Idee_zu
-r_Gruendung/Schriftliche_Ausarbeitung/Abbildungen/pie_chart_better_neu_better.p
-ng, id=83, 606.3453pt x 278.2395pt>
+r_Gruendung/Schriftliche_Ausarbeitung/Abbildungen/pie_chart_better_neu_2_higher
+_resolution_cropped.png, id=86, 722.7pt x 326.6604pt>
 File: /home/user/Dokumente/Universität/Informatik_Master/Semester_X/Von_der_Id
-ee_zur_Gruendung/Schriftliche_Ausarbeitung/Abbildungen/pie_chart_better_neu_bet
-ter.png Graphic file (type png)
+ee_zur_Gruendung/Schriftliche_Ausarbeitung/Abbildungen/pie_chart_better_neu_2_h
+igher_resolution_cropped.png Graphic file (type png)
 <use /home/user/Dokumente/Universität/Informatik_Master/Semester_X/Von_der_Ide
-e_zur_Gruendung/Schriftliche_Ausarbeitung/Abbildungen/pie_chart_better_neu_bett
-er.png>
+e_zur_Gruendung/Schriftliche_Ausarbeitung/Abbildungen/pie_chart_better_neu_2_hi
+gher_resolution_cropped.png>
 Package pdftex.def Info: /home/user/Dokumente/Universität/Informatik_Master/Se
 mester_X/Von_der_Idee_zur_Gruendung/Schriftliche_Ausarbeitung/Abbildungen/pie_c
-hart_better_neu_better.png  used on input line 373.
-(pdftex.def)             Requested size: 358.50612pt x 164.50801pt.
-[17] (./LYA_Gaming_TCG.bbl
+hart_better_neu_2_higher_resolution_cropped.png  used on input line 379.
+(pdftex.def)             Requested size: 358.50612pt x 162.04381pt.
+ [18 </home/user/Dokumente/Universität/Informatik_Master/Semester_X/Von_der_Id
+ee_zur_Gruendung/Schriftliche_Ausarbeitung/Abbildungen/pie_chart_better_neu_2_h
+igher_resolution_cropped.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 391--392
+
+ []
+
+[19] (./LYA_Gaming_TCG.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 11--14
 []\T1/lmr/m/it/12 Digital Col-lec-ti-ble Card Ga-mes Mar-ket Over-view\T1/lmr/m
 /n/12 .  $\T1/lmtt/m/n/12 https :
@@ -848,9 +862,7 @@ Underfull \hbox (badness 1009) in paragraph at lines 27--30
 /m/n/12 https : / / www . magabotato . de / 2025 / 01 /
  []
 
-) [18 </home/user/Dokumente/Universität/Informatik_Master/Semester_X/Von_der_I
-dee_zur_Gruendung/Schriftliche_Ausarbeitung/Abbildungen/pie_chart_better_neu_be
-tter.png>] (./LYA_Gaming_TCG.lot)
+) [20] (./LYA_Gaming_TCG.lot)
 \tf@lot=\write4
 \openout4 = `LYA_Gaming_TCG.lot'.
 
@@ -858,15 +870,15 @@ tter.png>] (./LYA_Gaming_TCG.lot)
 \tf@lof=\write5
 \openout5 = `LYA_Gaming_TCG.lof'.
 
- [19]
+ [21]
 part without number
 [1]
-Overfull \hbox (12.59717pt too wide) in paragraph at lines 428--429
+Overfull \hbox (12.59717pt too wide) in paragraph at lines 454--455
  $[]$  $[]$  $[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 428--429
+Underfull \hbox (badness 10000) in paragraph at lines 454--455
 
  []
 
@@ -877,10 +889,10 @@ L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 12287 strings out of 474222
- 232201 string characters out of 5748732
- 1932975 words of memory out of 5000000
- 34305 multiletter control sequences out of 15000+600000
+ 12293 strings out of 474222
+ 232499 string characters out of 5748732
+ 1933975 words of memory out of 5000000
+ 34311 multiletter control sequences out of 15000+600000
  604430 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,8n,107p,10930b,429s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -891,10 +903,10 @@ lic/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/
 texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/l
 m/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on LYA_Gaming_TCG.pdf (26 pages, 3353234 bytes).
+Output written on LYA_Gaming_TCG.pdf (28 pages, 3361524 bytes).
 PDF statistics:
- 153 PDF objects out of 1000 (max. 8388607)
- 97 compressed objects within 1 object stream
+ 160 PDF objects out of 1000 (max. 8388607)
+ 101 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

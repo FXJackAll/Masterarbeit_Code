@@ -2,31 +2,37 @@
 \contentsline {section}{\numberline {1}Einleitung}{1}{}%
 \contentsline {section}{\numberline {2}Markt}{2}{}%
 \contentsline {section}{\numberline {3}Geschäftsidee}{4}{}%
-\contentsline {section}{\numberline {4}Kundensegmente}{7}{}%
-\contentsline {subsection}{\numberline {4.1}\acl {f2p} Spieler}{7}{}%
-\contentsline {subsubsection}{\numberline {4.1.1}Gelegenheitsspieler}{8}{}%
-\contentsline {subsubsection}{\numberline {4.1.2}Kernspieler}{8}{}%
-\contentsline {subsection}{\numberline {4.2}Normale Spieler}{9}{}%
-\contentsline {subsubsection}{\numberline {4.2.1}Normaler Gelegenheitsspieler}{9}{}%
-\contentsline {subsubsection}{\numberline {4.2.2}Normaler Kernspieler}{9}{}%
-\contentsline {subsection}{\numberline {4.3}Hardcore Spieler}{9}{}%
-\contentsline {subsection}{\numberline {4.4}Professionelle Spieler}{10}{}%
-\contentsline {subsubsection}{\numberline {4.4.1}Turnierspieler}{10}{}%
-\contentsline {subsubsection}{\numberline {4.4.2}Onlinepokerspieler}{10}{}%
-\contentsline {subsubsection}{\numberline {4.4.3}Streamer}{10}{}%
-\contentsline {subsection}{\numberline {4.5}Wal}{11}{}%
-\contentsline {subsection}{\numberline {4.6}Kreative}{11}{}%
-\contentsline {subsubsection}{\numberline {4.6.1}Musiker/Künstler}{11}{}%
-\contentsline {subsubsection}{\numberline {4.6.2}Fan-Creator}{12}{}%
-\contentsline {subsubsection}{\numberline {4.6.3}Professionelle Creator}{13}{}%
-\contentsline {subsection}{\numberline {4.7}Investoren}{13}{}%
-\contentsline {section}{\numberline {5}Erlösmodell}{15}{}%
-\contentsline {subsection}{\numberline {5.1}Direkte Einnahmen}{15}{}%
-\contentsline {subsection}{\numberline {5.2}Indirekte Einnahmen}{16}{}%
-\contentsline {subsection}{\numberline {5.3}Eingesparte Ausgaben}{17}{}%
-\contentsline {section}{\numberline {6}Ressourcen}{18}{}%
-\contentsline {section}{\numberline {7}Kosten}{18}{}%
-\contentsline {section}{\numberline {8}Negative Space}{18}{}%
-\contentsline {section}{Literaturverzeichnis}{18}{}%
+\contentsline {section}{\numberline {4}Team}{7}{}%
+\contentsline {section}{\numberline {5}Kundensegmente}{7}{}%
+\contentsline {subsection}{\numberline {5.1}\acl {f2p} Spieler}{8}{}%
+\contentsline {subsubsection}{\numberline {5.1.1}Gelegenheitsspieler}{8}{}%
+\contentsline {subsubsection}{\numberline {5.1.2}Kernspieler}{9}{}%
+\contentsline {subsection}{\numberline {5.2}Normale Spieler}{9}{}%
+\contentsline {subsubsection}{\numberline {5.2.1}Normaler Gelegenheitsspieler}{9}{}%
+\contentsline {subsubsection}{\numberline {5.2.2}Normaler Kernspieler}{9}{}%
+\contentsline {subsection}{\numberline {5.3}Hardcore Spieler}{10}{}%
+\contentsline {subsection}{\numberline {5.4}Professionelle Spieler}{10}{}%
+\contentsline {subsubsection}{\numberline {5.4.1}Turnierspieler}{10}{}%
+\contentsline {subsubsection}{\numberline {5.4.2}Onlinepokerspieler}{10}{}%
+\contentsline {subsubsection}{\numberline {5.4.3}Streamer}{11}{}%
+\contentsline {subsection}{\numberline {5.5}Wal}{11}{}%
+\contentsline {subsection}{\numberline {5.6}Kreative}{11}{}%
+\contentsline {subsubsection}{\numberline {5.6.1}Musiker/Künstler}{12}{}%
+\contentsline {subsubsection}{\numberline {5.6.2}Fan-Creator}{12}{}%
+\contentsline {subsubsection}{\numberline {5.6.3}Professionelle Creator}{13}{}%
+\contentsline {subsection}{\numberline {5.7}Investoren}{14}{}%
+\contentsline {section}{\numberline {6}Erlösmodell}{15}{}%
+\contentsline {subsection}{\numberline {6.1}Direkte Einnahmen}{15}{}%
+\contentsline {subsection}{\numberline {6.2}Indirekte Einnahmen}{16}{}%
+\contentsline {subsection}{\numberline {6.3}Eingesparte Ausgaben}{17}{}%
+\contentsline {section}{\numberline {7}Ressourcen}{18}{}%
+\contentsline {section}{\numberline {8}Kosten}{18}{}%
+\contentsline {subsection}{\numberline {8.1}Serverkosten}{18}{}%
+\contentsline {subsection}{\numberline {8.2}Kosten Für Karten In Basisversion}{19}{}%
+\contentsline {subsection}{\numberline {8.3}Anwaltskosten}{19}{}%
+\contentsline {subsection}{\numberline {8.4}Fall 1: Ohne EXIST}{20}{}%
+\contentsline {subsection}{\numberline {8.5}Fall 2: Mit EXIT}{20}{}%
+\contentsline {section}{\numberline {9}Negative Space}{20}{}%
+\contentsline {section}{Literaturverzeichnis}{20}{}%
 \contentsline {part}{\nonumberline Anlagen}{}{}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

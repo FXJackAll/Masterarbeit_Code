@@ -23,19 +23,21 @@ fig, (ax1,ax2) = plt.subplots(1,2,figsize=(10,10)) #ax1,ax2 refer to your two pi
 
 # 1,2 denotes 1 row, 2 columns - if you want to stack vertically, it would be 2,1
 
-y_1 = np.array([300, 250, 500, 50, 800])
+y_1 = np.array([300, 1000, 500, 50, 1112])
 
 labels_1 = ['Server', 'Legal', 'Strom', 'Miete', 'Gehälter']
 
-ax1.pie(y_1,labels = labels_1, autopct = lambda p:f'{p*sum(y_1)/100 :.0f}€, ({p:.2f}%)', startangle=260, shadow=True) #plot first pie
-ax1.set_title('Ohne EXIST - 1700€')
+ax1.pie(y_1,labels = labels_1, autopct = lambda p:f'{p*sum(y_1)/100 :.0f}€, ({p:.2f}%)', startangle=225, shadow=True) #plot first pie
+ax1.set_title('Ohne EXIST - 2962€')
 
-y_2 = np.array([300, 250, 500, 50])
+y_2 = np.array([300, 1000, 500, 50])
 
 labels_2 = ['Server', 'Legal', 'Strom', 'Miete']
 
 ax2.pie(y_2 ,labels = labels_2, autopct = lambda p:f'{p*sum(y_2)/100 :.0f}€, ({p:.2f}%)', startangle=90, shadow=True) #plot second pie
-ax2.set_title('Mit EXIST - 900€')
+ax2.set_title('Mit EXIST - 1850€')
 
-plt.savefig('pie_chart_better.png')
+# fig = plt.figure(figsize=(50,50))
+
+plt.savefig('pie_chart_better_neu_2_higher_resolution.png')
 plt.show()
