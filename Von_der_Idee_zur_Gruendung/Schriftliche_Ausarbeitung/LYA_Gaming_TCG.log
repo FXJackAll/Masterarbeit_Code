@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.18)  29 JUL 2025 19:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.18)  30 JUL 2025 21:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -617,7 +617,7 @@ File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/
-dvips/lm/lm-ec.enc}] [1]
+dvips/lm/lm-ec.enc}]
 LaTeX Font Info:    Trying to load font information for T1+lmss on input line 1
 64.
 
@@ -676,7 +676,7 @@ Package acronym Info: Label `acro:HS' newly defined as it shall be overridden
 although it is yet undefined on input line 196.
 Package acronym Info: Label `acro:fab' newly defined as it shall be overridden
 although it is yet undefined on input line 196.
-<Abbildungen/Yu_Gi_Oh_card_example_with_a_lot_of_text.png, id=21, 812.03375pt x
+<Abbildungen/Yu_Gi_Oh_card_example_with_a_lot_of_text.png, id=18, 812.03375pt x
  1190.4475pt>
 File: Abbildungen/Yu_Gi_Oh_card_example_with_a_lot_of_text.png Graphic file (ty
 pe png)
@@ -684,14 +684,14 @@ pe png)
 Package pdftex.def Info: Abbildungen/Yu_Gi_Oh_card_example_with_a_lot_of_text.p
 ng  used on input line 201.
 (pdftex.def)             Requested size: 134.44064pt x 197.08745pt.
-<Abbildungen/Magic_the_gathering_card_example.png, id=22, 359.3425pt x 501.875p
+<Abbildungen/Magic_the_gathering_card_example.png, id=19, 359.3425pt x 501.875p
 t>
 File: Abbildungen/Magic_the_gathering_card_example.png Graphic file (type png)
 <use Abbildungen/Magic_the_gathering_card_example.png>
 Package pdftex.def Info: Abbildungen/Magic_the_gathering_card_example.png  used
  on input line 202.
 (pdftex.def)             Requested size: 141.16234pt x 197.15485pt.
-<Abbildungen/Hearthstone_card_example_cropped.png, id=23, 411.5375pt x 583.1787
+<Abbildungen/Hearthstone_card_example_cropped.png, id=20, 411.5375pt x 583.1787
 6pt>
 File: Abbildungen/Hearthstone_card_example_cropped.png Graphic file (type png)
 <use Abbildungen/Hearthstone_card_example_cropped.png>
@@ -715,7 +715,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 218--219
 
  []
 
-[2{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}] [3]
+[2{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}]
 Underfull \hbox (badness 10000) in paragraph at lines 228--229
 
  []
@@ -725,22 +725,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 230--231
 
  []
 
-[4]
+[3]
 Underfull \hbox (badness 10000) in paragraph at lines 232--233
 
  []
 
-
+[4]
 Underfull \hbox (badness 10000) in paragraph at lines 234--235
 
  []
 
-[5]
+
 Underfull \hbox (badness 10000) in paragraph at lines 238--239
 
  []
 
-[6]
+[5]
 Underfull \hbox (badness 10000) in paragraph at lines 240--241
 
  []
@@ -755,7 +755,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 248--249
 
  []
 
-[7]
 Package acronym Info: Label `acro:f2p' newly defined as it shall be overridden
 although it is yet undefined on input line 258.
 
@@ -763,12 +762,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 258--259
 
  []
 
-[8] [9] [10]
+[6] [7] [8] [9]
 Underfull \hbox (badness 10000) in paragraph at lines 312--313
 
  []
 
-[11]
+
 Underfull \hbox (badness 10000) in paragraph at lines 314--315
 
  []
@@ -778,12 +777,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 320--321
 
  []
 
-[12]
+
 Underfull \hbox (badness 10000) in paragraph at lines 322--323
 
  []
 
-
+[10]
 Underfull \hbox (badness 10000) in paragraph at lines 324--325
 
  []
@@ -793,22 +792,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 332--333
 
  []
 
-[13]
+
 Underfull \hbox (badness 10000) in paragraph at lines 338--339
 
  []
 
-
+[11]
 Underfull \hbox (badness 10000) in paragraph at lines 340--341
 
  []
 
-[14]
+
 Underfull \hbox (badness 10000) in paragraph at lines 350--351
 
  []
 
-[15]
+[12]
 Underfull \hbox (badness 10000) in paragraph at lines 352--353
 
  []
@@ -818,16 +817,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 358--359
 
  []
 
-[16{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/e
+[13{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/e
 nc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}]
 Underfull \hbox (badness 10000) in paragraph at lines 360--361
 
  []
 
-[17]
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 372--373
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 374--375
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 376--377
+
+ []
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 380--381
+
+ []
+
+[16]
 </home/user/Dokumente/Universität/Informatik_Master/Semester_X/Von_der_Idee_zu
 r_Gruendung/Schriftliche_Ausarbeitung/Abbildungen/pie_chart_better_neu_2_higher
-_resolution_cropped.png, id=86, 722.7pt x 326.6604pt>
+_resolution_cropped.png, id=80, 722.7pt x 326.6604pt>
 File: /home/user/Dokumente/Universität/Informatik_Master/Semester_X/Von_der_Id
 ee_zur_Gruendung/Schriftliche_Ausarbeitung/Abbildungen/pie_chart_better_neu_2_h
 igher_resolution_cropped.png Graphic file (type png)
@@ -836,16 +855,16 @@ e_zur_Gruendung/Schriftliche_Ausarbeitung/Abbildungen/pie_chart_better_neu_2_hi
 gher_resolution_cropped.png>
 Package pdftex.def Info: /home/user/Dokumente/Universität/Informatik_Master/Se
 mester_X/Von_der_Idee_zur_Gruendung/Schriftliche_Ausarbeitung/Abbildungen/pie_c
-hart_better_neu_2_higher_resolution_cropped.png  used on input line 379.
+hart_better_neu_2_higher_resolution_cropped.png  used on input line 411.
 (pdftex.def)             Requested size: 358.50612pt x 162.04381pt.
- [18 </home/user/Dokumente/Universität/Informatik_Master/Semester_X/Von_der_Id
+ [17 </home/user/Dokumente/Universität/Informatik_Master/Semester_X/Von_der_Id
 ee_zur_Gruendung/Schriftliche_Ausarbeitung/Abbildungen/pie_chart_better_neu_2_h
 igher_resolution_cropped.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 391--392
+Underfull \hbox (badness 10000) in paragraph at lines 423--424
 
  []
 
-[19] (./LYA_Gaming_TCG.bbl
+[18] (./LYA_Gaming_TCG.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 11--14
 []\T1/lmr/m/it/12 Digital Col-lec-ti-ble Card Ga-mes Mar-ket Over-view\T1/lmr/m
 /n/12 .  $\T1/lmtt/m/n/12 https :
@@ -862,7 +881,7 @@ Underfull \hbox (badness 1009) in paragraph at lines 27--30
 /m/n/12 https : / / www . magabotato . de / 2025 / 01 /
  []
 
-) [20] (./LYA_Gaming_TCG.lot)
+) [19] (./LYA_Gaming_TCG.lot)
 \tf@lot=\write4
 \openout4 = `LYA_Gaming_TCG.lot'.
 
@@ -870,15 +889,15 @@ Underfull \hbox (badness 1009) in paragraph at lines 27--30
 \tf@lof=\write5
 \openout5 = `LYA_Gaming_TCG.lof'.
 
- [21]
+ [20]
 part without number
 [1]
-Overfull \hbox (12.59717pt too wide) in paragraph at lines 454--455
+Overfull \hbox (12.59717pt too wide) in paragraph at lines 488--489
  $[]$  $[]$  $[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 454--455
+Underfull \hbox (badness 10000) in paragraph at lines 488--489
 
  []
 
@@ -889,13 +908,13 @@ L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 12293 strings out of 474222
- 232499 string characters out of 5748732
- 1933975 words of memory out of 5000000
- 34311 multiletter control sequences out of 15000+600000
+ 12298 strings out of 474222
+ 232624 string characters out of 5748732
+ 1936975 words of memory out of 5000000
+ 34316 multiletter control sequences out of 15000+600000
  604430 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,8n,107p,10930b,429s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,7n,107p,10930b,429s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></us
 r/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/pub
@@ -903,10 +922,10 @@ lic/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/
 texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/l
 m/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on LYA_Gaming_TCG.pdf (28 pages, 3361524 bytes).
+Output written on LYA_Gaming_TCG.pdf (26 pages, 3365708 bytes).
 PDF statistics:
- 160 PDF objects out of 1000 (max. 8388607)
- 101 compressed objects within 2 object streams
+ 153 PDF objects out of 1000 (max. 8388607)
+ 97 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
