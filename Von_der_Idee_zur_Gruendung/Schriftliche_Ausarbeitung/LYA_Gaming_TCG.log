@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.18)  31 JUL 2025 18:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.18)  31 JUL 2025 18:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -803,28 +803,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 340--341
  []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 368--369
-
- []
-
-[13]
 Underfull \hbox (badness 10000) in paragraph at lines 370--371
 
  []
 
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 372--373
 
-Underfull \hbox (badness 10000) in paragraph at lines 376--377
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 378--379
 
  []
 
 [14{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/e
 nc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 378--379
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 390--391
+Underfull \hbox (badness 10000) in paragraph at lines 380--381
 
  []
 
@@ -839,7 +834,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 394--395
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 398--399
+Underfull \hbox (badness 10000) in paragraph at lines 396--397
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 400--401
 
  []
 
@@ -855,10 +855,10 @@ e_zur_Gruendung/Schriftliche_Ausarbeitung/Abbildungen/pie_chart_better_neu_2_hi
 gher_resolution_cropped.png>
 Package pdftex.def Info: /home/user/Dokumente/Universität/Informatik_Master/Se
 mester_X/Von_der_Idee_zur_Gruendung/Schriftliche_Ausarbeitung/Abbildungen/pie_c
-hart_better_neu_2_higher_resolution_cropped.png  used on input line 429.
+hart_better_neu_2_higher_resolution_cropped.png  used on input line 431.
 (pdftex.def)             Requested size: 358.50612pt x 162.04381pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 441--442
+Underfull \hbox (badness 10000) in paragraph at lines 443--444
 
  []
 
@@ -892,12 +892,12 @@ Underfull \hbox (badness 1009) in paragraph at lines 27--30
  [21]
 part without number
 [1]
-Overfull \hbox (12.59717pt too wide) in paragraph at lines 516--517
+Overfull \hbox (12.59717pt too wide) in paragraph at lines 518--519
  $[]$  $[]$  $[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 516--517
+Underfull \hbox (badness 10000) in paragraph at lines 518--519
 
  []
 
@@ -922,7 +922,7 @@ lic/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/
 texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/l
 m/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on LYA_Gaming_TCG.pdf (27 pages, 3367503 bytes).
+Output written on LYA_Gaming_TCG.pdf (27 pages, 3367506 bytes).
 PDF statistics:
  156 PDF objects out of 1000 (max. 8388607)
  99 compressed objects within 1 object stream
