@@ -7,55 +7,56 @@
 \contentsline {subsection}{\numberline {5.1}\acl {f2p} Spieler}{6}{}%
 \contentsline {subsubsection}{\numberline {5.1.1}Gelegenheitsspieler}{7}{}%
 \contentsline {subsubsection}{\numberline {5.1.2}Kernspieler}{7}{}%
-\contentsline {subsection}{\numberline {5.2}Normale Spieler}{8}{}%
-\contentsline {subsubsection}{\numberline {5.2.1}Normaler Gelegenheitsspieler}{8}{}%
-\contentsline {subsubsection}{\numberline {5.2.2}Normaler Kernspieler}{8}{}%
-\contentsline {subsection}{\numberline {5.3}Hardcore Spieler}{8}{}%
+\contentsline {subsection}{\numberline {5.2}Normale Spieler}{7}{}%
+\contentsline {subsection}{\numberline {5.3}Hardcore Spieler}{7}{}%
 \contentsline {subsection}{\numberline {5.4}Professionelle Spieler}{8}{}%
 \contentsline {subsubsection}{\numberline {5.4.1}Turnierspieler}{8}{}%
-\contentsline {subsubsection}{\numberline {5.4.2}Onlinepokerspieler}{9}{}%
+\contentsline {subsubsection}{\numberline {5.4.2}Onlinepokerspieler}{8}{}%
 \contentsline {subsubsection}{\numberline {5.4.3}Streamer}{9}{}%
 \contentsline {subsection}{\numberline {5.5}Wal}{9}{}%
-\contentsline {subsection}{\numberline {5.6}Kreative}{10}{}%
-\contentsline {subsubsection}{\numberline {5.6.1}Musiker/Künstler}{10}{}%
+\contentsline {subsection}{\numberline {5.6}Kreative}{9}{}%
+\contentsline {subsubsection}{\numberline {5.6.1}Musiker/Künstler}{9}{}%
 \contentsline {subsubsection}{\numberline {5.6.2}Fan-Creator}{10}{}%
 \contentsline {subsubsection}{\numberline {5.6.3}Professionelle Creator}{11}{}%
-\contentsline {subsection}{\numberline {5.7}Investoren}{12}{}%
+\contentsline {subsection}{\numberline {5.7}Investoren}{11}{}%
 \contentsline {section}{\numberline {6}Wertangebot}{12}{}%
-\contentsline {subsection}{\numberline {6.1}\acl {f2p} Spieler}{13}{}%
-\contentsline {subsection}{\numberline {6.2}Hardcore Spieler}{13}{}%
+\contentsline {subsection}{\numberline {6.1}\acl {f2p} Spieler}{12}{}%
+\contentsline {subsection}{\numberline {6.2}Hardcore Spieler}{12}{}%
 \contentsline {subsection}{\numberline {6.3}Professionelle Spieler}{13}{}%
 \contentsline {subsubsection}{\numberline {6.3.1}Turnierspieler}{13}{}%
 \contentsline {subsubsection}{\numberline {6.3.2}Onlinepokerspieler}{13}{}%
-\contentsline {subsubsection}{\numberline {6.3.3}Streamer}{14}{}%
-\contentsline {subsection}{\numberline {6.4}Wal}{14}{}%
+\contentsline {subsubsection}{\numberline {6.3.3}Streamer}{13}{}%
+\contentsline {subsection}{\numberline {6.4}Wal}{13}{}%
 \contentsline {subsection}{\numberline {6.5}Kreative}{14}{}%
 \contentsline {subsubsection}{\numberline {6.5.1}Musiker/Künstler}{14}{}%
-\contentsline {subsubsection}{\numberline {6.5.2}Fan-Creator}{15}{}%
+\contentsline {subsubsection}{\numberline {6.5.2}Fan-Creator}{14}{}%
 \contentsline {subsubsection}{\numberline {6.5.3}Professionelle Creator}{15}{}%
 \contentsline {subsection}{\numberline {6.6}Investoren}{15}{}%
 \contentsline {section}{\numberline {7}Kanäle}{15}{}%
-\contentsline {subsection}{\numberline {7.1}DevLogs}{16}{}%
-\contentsline {subsection}{\numberline {7.2}Feedback durch Instagram}{16}{}%
+\contentsline {subsection}{\numberline {7.1}DevLogs}{15}{}%
+\contentsline {subsection}{\numberline {7.2}Feedback durch Instagram}{15}{}%
 \contentsline {subsection}{\numberline {7.3}Restliche Kanäle}{16}{}%
 \contentsline {section}{\numberline {8}Kundenbeziehungen}{16}{}%
-\contentsline {subsection}{\numberline {8.1}Dedizierte Persönliche Betreuung}{16}{}%
+\contentsline {subsection}{\numberline {8.1}Automatisierte Dienste}{16}{}%
+\contentsline {subsection}{\numberline {8.2}Co-Creation}{16}{}%
+\contentsline {subsection}{\numberline {8.3}Persönliche Betreuung}{16}{}%
+\contentsline {subsection}{\numberline {8.4}Dedizierte Persönliche Betreuung}{16}{}%
 \contentsline {section}{\numberline {9}Erlösmodell}{17}{}%
-\contentsline {subsection}{\numberline {9.1}Direkte Einnahmen}{17}{}%
-\contentsline {subsection}{\numberline {9.2}Indirekte Einnahmen}{18}{}%
+\contentsline {subsection}{\numberline {9.1}Direkte Einnahmen}{18}{}%
+\contentsline {subsection}{\numberline {9.2}Indirekte Einnahmen}{19}{}%
 \contentsline {subsection}{\numberline {9.3}Eingesparte Ausgaben}{19}{}%
 \contentsline {section}{\numberline {10}Aktivitäten}{20}{}%
-\contentsline {section}{\numberline {11}Partner}{20}{}%
+\contentsline {section}{\numberline {11}Partner}{21}{}%
 \contentsline {subsection}{\numberline {11.1}Ehemalige Karten- und Spieldesigner}{21}{}%
 \contentsline {subsection}{\numberline {11.2}Kartenspieltheoretiker}{21}{}%
-\contentsline {subsection}{\numberline {11.3}Influencer}{21}{}%
-\contentsline {section}{\numberline {12}Ressourcen}{21}{}%
+\contentsline {subsection}{\numberline {11.3}Influencer}{22}{}%
+\contentsline {section}{\numberline {12}Ressourcen}{22}{}%
 \contentsline {section}{\numberline {13}Kosten}{22}{}%
-\contentsline {subsection}{\numberline {13.1}Serverkosten}{22}{}%
-\contentsline {subsection}{\numberline {13.2}Kosten Für Karten In Basisversion}{22}{}%
+\contentsline {subsection}{\numberline {13.1}Serverkosten}{23}{}%
+\contentsline {subsection}{\numberline {13.2}Kosten Für Karten In Basisversion}{23}{}%
 \contentsline {subsection}{\numberline {13.3}Anwaltskosten}{23}{}%
-\contentsline {subsection}{\numberline {13.4}Fall 1: Ohne EXIST}{23}{}%
-\contentsline {subsection}{\numberline {13.5}Fall 2: Mit EXIT}{23}{}%
+\contentsline {subsection}{\numberline {13.4}Fall 1: Ohne EXIST}{24}{}%
+\contentsline {subsection}{\numberline {13.5}Fall 2: Mit EXIT}{24}{}%
 \contentsline {section}{\numberline {14}Negative Space}{24}{}%
 \contentsline {section}{Literaturverzeichnis}{24}{}%
 \contentsline {part}{\nonumberline Anlagen}{}{}%
