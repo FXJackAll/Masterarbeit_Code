@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.18)  4 AUG 2025 21:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.18)  4 AUG 2025 21:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -923,12 +923,12 @@ Underfull \hbox (badness 1009) in paragraph at lines 27--30
  [25]
 part without number
 [1]
-Overfull \hbox (12.59717pt too wide) in paragraph at lines 594--595
+Overfull \hbox (12.59717pt too wide) in paragraph at lines 596--597
  $[]$  $[]$  $[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 594--595
+Underfull \hbox (badness 10000) in paragraph at lines 596--597
 
  []
 
@@ -953,7 +953,7 @@ lic/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/
 texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/l
 m/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on LYA_Gaming_TCG.pdf (31 pages, 3379019 bytes).
+Output written on LYA_Gaming_TCG.pdf (31 pages, 3379024 bytes).
 PDF statistics:
  170 PDF objects out of 1000 (max. 8388607)
  108 compressed objects within 2 object streams
