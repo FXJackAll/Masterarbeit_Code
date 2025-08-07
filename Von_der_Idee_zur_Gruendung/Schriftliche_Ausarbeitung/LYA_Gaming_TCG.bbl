@@ -8,24 +8,48 @@
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
 \bibitem[1]{Online_TCG_Market_Size}
-\emph{Digital Collectible Card Games Market Overview}.
+\textsc{Businessresearchinsights}:
+\newblock \emph{Digital Collectible Card Games Market Overview}.
 \newblock
   \url{https://www.businessresearchinsights.com/market-reports/digital-collectible-card-games-market-109749}
 
-\bibitem[2]{TCG_Market_Size}
-\emph{Globaler Markt für Sammelkartenspiele: Informationen nach Gerätetyp}.
+\bibitem[2]{Magic_:_the_Gathering_Release_Date}
+\textsc{Coast}, W.  of~t.:
+\newblock \emph{Magic: the Gathering Erstveröffentlichung}.
+\newblock \url{https://magic.wizards.com/de/products/card-set-archive}, Abruf:
+  07.08.2025
+
+\bibitem[3]{Rechtliche_Situation_bzgl_Lootboxen}
+\textsc{Deutschland}, E.~V.:
+\newblock \emph{Rechtliche Situation bzgl. Lootboxen}.
+\newblock
+  \url{https://www.evz.de/einkaufen-internet/gaming/lootboxen-in-computer-und-videospielen.html},
+  Abruf: 07.08.2025
+
+\bibitem[4]{TCG_Market_Size_2024}
+\textsc{Magabotato}:
+\newblock \emph{Trading Card Game Rückblick 2024}.
+\newblock
+  \url{https://www.magabotato.de/2025/01/trading-card-game-rueckblick-2024/}
+
+\bibitem[5]{Print_TCG_Market_Size}
+\textsc{Mordorintelligence}:
+\newblock \emph{Trading Card Game Market Size \& Share Analysis - Growth Trends
+  \& Forecasts (2025 - 2030)}.
+\newblock
+  \url{https://www.mordorintelligence.com/industry-reports/trading-card-game-market},
+  Abruf: 10.08.2025
+
+\bibitem[6]{TCG_Market_Size}
+\textsc{Straitresearch}:
+\newblock \emph{Globaler Markt für Sammelkartenspiele: Informationen nach
+  Gerätetyp}.
 \newblock
   \url{https://straitsresearch.com/de/report/collectible-card-games-market}
 
-\bibitem[3]{Print_TCG_Market_Size}
-\emph{Trading Card Game Market Size \& Share Analysis - Growth Trends \&
-  Forecasts (2025 - 2030)}.
-\newblock
-  \url{https://www.mordorintelligence.com/industry-reports/trading-card-game-market}
-
-\bibitem[4]{TCG_Market_Size_2024}
-\emph{Trading Card Game Rückblick 2024}.
-\newblock
-  \url{https://www.magabotato.de/2025/01/trading-card-game-rueckblick-2024/}
+\bibitem[7]{Swrve_2019}
+\textsc{Swrve}:
+\newblock \emph{Swrve 2019 Monetization Report}.
+\newblock 2019
 
 \end{thebibliography}
