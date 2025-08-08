@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.18)  7 AUG 2025 21:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.18)  8 AUG 2025 22:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -42,12 +42,12 @@ Package: tocbasic 2023/07/07 v3.41 KOMA-Script package (handling toc-files)
 Package tocbasic Info: omitting babel extension for `toc'
 (tocbasic)             because of feature `nobabel' available
 (tocbasic)             for `toc' on input line 133.
-Class scrartcl Info: File `scrsize12pt.clo' used instead of
-(scrartcl)           file `scrsize12.clo' to setup font sizes on input line 244
+Class scrartcl Info: File `scrsize11pt.clo' used instead of
+(scrartcl)           file `scrsize11.clo' to setup font sizes on input line 244
 1.
 
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrsize12pt.clo
-File: scrsize12pt.clo 2023/07/07 v3.41 KOMA-Script font size class option (12pt
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrsize11pt.clo
+File: scrsize11pt.clo 2023/07/07 v3.41 KOMA-Script font size class option (11pt
 )
 )
 (/usr/share/texlive/texmf-dist/tex/latex/koma-script/typearea.sty
@@ -59,21 +59,21 @@ Package: typearea 2023/07/07 v3.41 KOMA-Script package (type area)
 \ta@temp=\skip52
 \footheight=\skip53
 Package typearea Info: These are the values describing the layout:
-(typearea)             DIV  = 12
+(typearea)             DIV  = 10
 (typearea)             BCOR = 0.0pt
 (typearea)             \paperwidth      = 597.50793pt
-(typearea)              \textwidth      = 448.13095pt
+(typearea)              \textwidth      = 418.25555pt
 (typearea)              DIV departure   = -6%
-(typearea)              \evensidemargin = 2.4185pt
-(typearea)              \oddsidemargin  = 2.4185pt
+(typearea)              \evensidemargin = 17.3562pt
+(typearea)              \oddsidemargin  = 17.3562pt
 (typearea)             \paperheight     = 845.04694pt
-(typearea)              \textheight     = 635.5pt
-(typearea)              \topmargin      = -41.72441pt
-(typearea)              \headheight     = 18.125pt
-(typearea)              \headsep        = 21.75pt
-(typearea)              \topskip        = 12.0pt
-(typearea)              \footskip       = 50.75pt
-(typearea)              \baselineskip   = 14.5pt
+(typearea)              \textheight     = 595.80026pt
+(typearea)              \topmargin      = -25.16531pt
+(typearea)              \headheight     = 17.0pt
+(typearea)              \headsep        = 20.40001pt
+(typearea)              \topskip        = 11.0pt
+(typearea)              \footskip       = 47.6pt
+(typearea)              \baselineskip   = 13.6pt
 (typearea)              on input line 1799.
 )
 \c@part=\count188
@@ -649,7 +649,7 @@ LaTeX Font Info:    Trying to load font information for OMX+lmex on input line
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 8.
+(Font)              <10.95> on input line 8.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 8.
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -663,12 +663,50 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 8.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1])
+) [1]
+
+Package tocbasic Warning: number width of subsection toc entries should be incr
+eased!
+(tocbasic)                Currently used number width = 25.24576pt,
+(tocbasic)                Wanted number separation    = 4.37993pt,
+(tocbasic)                Reserved number width       = 25.18501pt on input lin
+e 71.
+
+[2]
+Overfull \hbox (3.71039pt too wide) detected at line 75
+ \T1/lmr/m/n/10.95 VIII
+ []
+
+
+Overfull \hbox (3.71039pt too wide) detected at line 76
+ \T1/lmr/m/n/10.95 VIII
+ []
+
+
+Overfull \hbox (2.58478pt too wide) detected at line 77
+ \T1/lmss/bx/n/10.95 VIII
+ []
+
+
+Overfull \hbox (3.71039pt too wide) detected at line 78
+ \T1/lmr/m/n/10.95 VIII
+ []
+
+
+Overfull \hbox (3.71039pt too wide) detected at line 79
+ \T1/lmr/m/n/10.95 VIII
+ []
+
+
+Overfull \hbox (3.71039pt too wide) detected at line 80
+ \T1/lmr/m/n/10.95 VIII
+ []
+
+)
 \tf@toc=\write3
 \openout3 = `LYA_Gaming_TCG.toc'.
 
- [2] [3]
-[4]
+ [3] [4]
 Package acronym Info: Label `acro:mtg' newly defined as it shall be overridden
 although it is yet undefined on input line 197.
 Package acronym Info: Label `acro:ip' newly defined as it shall be overridden
@@ -785,9 +823,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 311--312
  []
 
 [10] [11] [12]
-Overfull \hbox (8.25273pt too wide) in paragraph at lines 357--358
-\T1/lmr/m/n/12 und Feed-back. Mod-ding ist die Ver-än-de-rung/Erweiterung ei-ne
-s Spie-les durch Fans/Spieler,
+Overfull \hbox (7.25014pt too wide) in paragraph at lines 357--358
+\T1/lmr/m/n/10.95 und Feed-back. Mod-ding ist die Ver-än-de-rung/Erweiterung ei
+-nes Spie-les durch Fans/Spieler,
  []
 
 
@@ -800,12 +838,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 403--404
 
  []
 
-[15]
+
 Underfull \hbox (badness 10000) in paragraph at lines 405--406
 
  []
 
-
+[15]
 Underfull \hbox (badness 10000) in paragraph at lines 407--408
 
  []
@@ -836,14 +874,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 429--430
 
  []
 
-[18]
+
 Underfull \hbox (badness 10000) in paragraph at lines 441--442
 
  []
 
-
+[18]
 Underfull \hbox (badness 10000) in paragraph at lines 443--444
 
+ []
+
+
+Overfull \hbox (18.4454pt too wide) in paragraph at lines 445--446
+\T1/lmr/m/n/10.95 Unsere letz-te Ak-ti-vi-tät ist das Influencer-Marketing. Nor
+-ma-ler-wei-se ist Influencer-Marketing,
  []
 
 
@@ -851,44 +895,39 @@ Underfull \hbox (badness 10000) in paragraph at lines 445--446
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 449--450
-
- []
-
 [19] [20]
-Underfull \hbox (badness 10000) in paragraph at lines 485--486
+Underfull \hbox (badness 10000) in paragraph at lines 481--482
 
  []
 
 [21] (./LYA_Gaming_TCG.bbl
-Underfull \hbox (badness 1314) in paragraph at lines 11--15
-[]\T1/lmr/m/sc/12 Businessresearchinsights\T1/lmr/m/n/12 :  \T1/lmr/m/it/12 Di-
-gi-tal Col-lec-ti-ble Card Ga-mes Mar-ket Over-
+Underfull \hbox (badness 1769) in paragraph at lines 11--15
+[]\T1/lmr/m/sc/10.95 Businessresearchinsights\T1/lmr/m/n/10.95 :  \T1/lmr/m/it/
+10.95 Di-gi-tal Col-lec-ti-ble Card Ga-mes Mar-ket Over-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 11--15
-\T1/lmr/m/it/12 view\T1/lmr/m/n/12 .  $\T1/lmtt/m/n/12 https : / / www . busine
-ssresearchinsights . com / market-[]reports /
+\T1/lmr/m/it/10.95 view\T1/lmr/m/n/10.95 .  $\T1/lmtt/m/n/10.95 https : / / www
+ . businessresearchinsights . com / market-[]reports /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--28
+\T1/lmtt/m/n/10.95 de / einkaufen-[]internet / gaming / lootboxen-[]in-[]comput
+er-[]und-[]videospielen .
  []
 
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 23--28
-\T1/lmtt/m/n/12 de / einkaufen-[]internet / gaming / lootboxen-[]in-[]computer-
-[]und-[]videospielen .
+Underfull \hbox (badness 10000) in paragraph at lines 44--49
+[]\T1/lmr/m/sc/10.95 Straitresearch\T1/lmr/m/n/10.95 :  \T1/lmr/m/it/10.95 Glo-
+ba-ler Markt für Sam-mel-kar-ten-spie-le: In-for-ma-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 44--49
-[]\T1/lmr/m/sc/12 Straitresearch\T1/lmr/m/n/12 :  \T1/lmr/m/it/12 Glo-ba-ler Ma
-rkt für Sam-mel-kar-ten-spie-le: In-for-ma-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 44--49
-\T1/lmr/m/it/12 tio-nen nach Ge-rä-te-typ\T1/lmr/m/n/12 .  $\T1/lmtt/m/n/12 htt
-ps : / / straitsresearch . com / de / report /
+\T1/lmr/m/it/10.95 tio-nen nach Ge-rä-te-typ\T1/lmr/m/n/10.95 .  $\T1/lmtt/m/n/
+10.95 https : / / straitsresearch . com / de / report /
  []
 
 ) [23] (./LYA_Gaming_TCG.lot)
@@ -901,84 +940,98 @@ ps : / / straitsresearch . com / de / report /
 
  [24]
 part without number
-<Abbildungen/Yu_Gi_Oh_card_example_with_a_lot_of_text.png, id=106, 812.03375pt 
+<Abbildungen/Product_-_Market_-_Fit_F2P_Kern_-_Spieler.png, id=107, 462.528pt x
+ 260.172pt>
+File: Abbildungen/Product_-_Market_-_Fit_F2P_Kern_-_Spieler.png Graphic file (t
+ype png)
+<use Abbildungen/Product_-_Market_-_Fit_F2P_Kern_-_Spieler.png>
+Package pdftex.def Info: Abbildungen/Product_-_Market_-_Fit_F2P_Kern_-_Spieler.
+png  used on input line 532.
+(pdftex.def)             Requested size: 418.25555pt x 235.28006pt.
+<Abbildungen/Product_-_Market_-_Fit_Hardcore_Spieler.png, id=109, 462.528pt x 2
+60.172pt>
+File: Abbildungen/Product_-_Market_-_Fit_Hardcore_Spieler.png Graphic file (typ
+e png)
+<use Abbildungen/Product_-_Market_-_Fit_Hardcore_Spieler.png>
+Package pdftex.def Info: Abbildungen/Product_-_Market_-_Fit_Hardcore_Spieler.pn
+g  used on input line 544.
+(pdftex.def)             Requested size: 418.25555pt x 235.28006pt.
+<Abbildungen/Yu_Gi_Oh_card_example_with_a_lot_of_text.png, id=110, 812.03375pt 
 x 1190.4475pt>
 File: Abbildungen/Yu_Gi_Oh_card_example_with_a_lot_of_text.png Graphic file (ty
 pe png)
 <use Abbildungen/Yu_Gi_Oh_card_example_with_a_lot_of_text.png>
 Package pdftex.def Info: Abbildungen/Yu_Gi_Oh_card_example_with_a_lot_of_text.p
-ng  used on input line 534.
-(pdftex.def)             Requested size: 134.44064pt x 197.08745pt.
-<Abbildungen/Magic_the_gathering_card_example.png, id=107, 359.3425pt x 501.875
+ng  used on input line 572.
+(pdftex.def)             Requested size: 125.47794pt x 183.93617pt.
+<Abbildungen/Magic_the_gathering_card_example.png, id=111, 359.3425pt x 501.875
 pt>
 File: Abbildungen/Magic_the_gathering_card_example.png Graphic file (type png)
 <use Abbildungen/Magic_the_gathering_card_example.png>
 Package pdftex.def Info: Abbildungen/Magic_the_gathering_card_example.png  used
- on input line 535.
-(pdftex.def)             Requested size: 141.16234pt x 197.15485pt.
-<Abbildungen/Hearthstone_card_example_cropped.png, id=108, 411.5375pt x 583.178
+ on input line 573.
+(pdftex.def)             Requested size: 131.75151pt x 184.01373pt.
+<Abbildungen/Hearthstone_card_example_cropped.png, id=112, 411.5375pt x 583.178
 76pt>
 File: Abbildungen/Hearthstone_card_example_cropped.png Graphic file (type png)
 <use Abbildungen/Hearthstone_card_example_cropped.png>
 Package pdftex.def Info: Abbildungen/Hearthstone_card_example_cropped.png  used
- on input line 536.
-(pdftex.def)             Requested size: 139.81526pt x 198.12688pt.
-</home/user/Dokumente/UniversitÃ¤t/Informatik_Master/Semester_X/Von_der_Idee_zu
-r_Gruendung/Schriftliche_Ausarbeitung/Abbildungen/pie_chart_better_neu_2_higher
-_resolution_cropped.png, id=110, 722.7pt x 326.6604pt>
-File: /home/user/Dokumente/UniversitÃ¤t/Informatik_Master/Semester_X/Von_der_Id
-ee_zur_Gruendung/Schriftliche_Ausarbeitung/Abbildungen/pie_chart_better_neu_2_h
-igher_resolution_cropped.png Graphic file (type png)
-<use /home/user/Dokumente/UniversitÃ¤t/Informatik_Master/Semester_X/Von_der_Ide
-e_zur_Gruendung/Schriftliche_Ausarbeitung/Abbildungen/pie_chart_better_neu_2_hi
-gher_resolution_cropped.png>
-Package pdftex.def Info: /home/user/Dokumente/UniversitÃ¤t/Informatik_Master/Se
-mester_X/Von_der_Idee_zur_Gruendung/Schriftliche_Ausarbeitung/Abbildungen/pie_c
-hart_better_neu_2_higher_resolution_cropped.png  used on input line 546.
-(pdftex.def)             Requested size: 358.50612pt x 162.04381pt.
-[1 <./Abbildungen/Yu_Gi_Oh_card_example_with_a_lot_of_text.png (PNG copy)> <./A
-bbildungen/Magic_the_gathering_card_example.png> <./Abbildungen/Hearthstone_car
-d_example_cropped.png> </home/user/Dokumente/UniversitÃ¤t/Informatik_Master/Sem
-ester_X/Von_der_Idee_zur_Gruendung/Schriftliche_Ausarbeitung/Abbildungen/pie_ch
-art_better_neu_2_higher_resolution_cropped.png>]
+ on input line 574.
+(pdftex.def)             Requested size: 130.49425pt x 184.92139pt.
+[5
+
+ <./Abbildungen/Product_-_Market_-_Fit_F2P_Kern_-_Spieler.png>]
+<Abbildungen/pie_chart_better_neu_2_higher_resolution_cropped.png, id=117, 722.
+7pt x 326.6604pt>
+File: Abbildungen/pie_chart_better_neu_2_higher_resolution_cropped.png Graphic 
+file (type png)
+<use Abbildungen/pie_chart_better_neu_2_higher_resolution_cropped.png>
+Package pdftex.def Info: Abbildungen/pie_chart_better_neu_2_higher_resolution_c
+ropped.png  used on input line 584.
+(pdftex.def)             Requested size: 334.60571pt x 151.24254pt.
+ [6 <./Abbildungen/Product_-_Market_-_Fit_Hardcore_Spieler.png>] [7 <./Abbildun
+gen/Yu_Gi_Oh_card_example_with_a_lot_of_text.png (PNG copy)> <./Abbildungen/Mag
+ic_the_gathering_card_example.png> <./Abbildungen/Hearthstone_card_example_crop
+ped.png> <./Abbildungen/pie_chart_better_neu_2_higher_resolution_cropped.png>]
 Package acronym Info: Label `acro:wow' newly defined as it shall be overridden
-although it is yet undefined on input line 562.
- [2] [3]
-Overfull \hbox (12.59717pt too wide) in paragraph at lines 600--601
+although it is yet undefined on input line 600.
+ [8]
+Overfull \hbox (11.73903pt too wide) in paragraph at lines 638--639
  $[]$  $[]$  $[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 600--601
+Underfull \hbox (badness 10000) in paragraph at lines 638--639
 
  []
 
-[4] (./LYA_Gaming_TCG.aux)
+[9] (./LYA_Gaming_TCG.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 12337 strings out of 474222
- 233951 string characters out of 5748732
+ 12364 strings out of 474222
+ 234702 string characters out of 5748732
  1937975 words of memory out of 5000000
- 34354 multiletter control sequences out of 15000+600000
- 607225 words of font info for 67 fonts, out of 8000000 for 9000
+ 34380 multiletter control sequences out of 15000+600000
+ 607189 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,7n,107p,10930b,429s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/ty
-pe1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></
-usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/p
-ublic/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share
-/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm
-/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/te
-xmf/fonts/type1/public/lm/lmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/symbols/msbm10.pfb>
-Output written on LYA_Gaming_TCG.pdf (33 pages, 3407527 bytes).
+</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/ty
+pe1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></
+usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/
+public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/sha
+re/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm
+/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/te
+xmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lm
+tt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msb
+m10.pfb>
+Output written on LYA_Gaming_TCG.pdf (34 pages, 3654381 bytes).
 PDF statistics:
- 181 PDF objects out of 1000 (max. 8388607)
- 115 compressed objects within 2 object streams
+ 193 PDF objects out of 1000 (max. 8388607)
+ 120 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

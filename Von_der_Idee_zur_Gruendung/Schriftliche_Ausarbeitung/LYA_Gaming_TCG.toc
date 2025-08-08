@@ -34,7 +34,7 @@
 \contentsline {subsection}{\numberline {7.1}DevLogs}{14}{}%
 \contentsline {subsection}{\numberline {7.2}Feedback durch Instagram}{14}{}%
 \contentsline {subsection}{\numberline {7.3}Restliche Kanäle}{14}{}%
-\contentsline {section}{\numberline {8}Kundenbeziehungen}{15}{}%
+\contentsline {section}{\numberline {8}Kundenbeziehungen}{14}{}%
 \contentsline {subsection}{\numberline {8.1}Automatisierte Dienste}{15}{}%
 \contentsline {subsection}{\numberline {8.2}Co-Creation}{15}{}%
 \contentsline {subsection}{\numberline {8.3}Persönliche Betreuung}{15}{}%
@@ -44,28 +44,38 @@
 \contentsline {subsection}{\numberline {9.2}Indirekte Einnahmen}{17}{}%
 \contentsline {subsection}{\numberline {9.3}Eingesparte Ausgaben}{18}{}%
 \contentsline {section}{\numberline {10}Schlüsselaktivitäten}{19}{}%
-\contentsline {section}{\numberline {11}Schlüsselpartner}{20}{}%
+\contentsline {section}{\numberline {11}Schlüsselpartner}{19}{}%
 \contentsline {subsection}{\numberline {11.1}Ehemalige Karten- und Spieldesigner}{20}{}%
 \contentsline {subsection}{\numberline {11.2}Kartenspieltheoretiker}{20}{}%
 \contentsline {subsection}{\numberline {11.3}Influencer}{20}{}%
-\contentsline {section}{\numberline {12}Schlüsselressourcen}{21}{}%
+\contentsline {section}{\numberline {12}Schlüsselressourcen}{20}{}%
 \contentsline {section}{\numberline {13}Kosten}{21}{}%
 \contentsline {subsection}{\numberline {13.1}Serverkosten}{21}{}%
 \contentsline {subsection}{\numberline {13.2}Kosten Für Karten In Basisversion}{21}{}%
-\contentsline {subsection}{\numberline {13.3}Anwaltskosten}{22}{}%
+\contentsline {subsection}{\numberline {13.3}Anwaltskosten}{21}{}%
 \contentsline {subsection}{\numberline {13.4}Fall 1: Ohne EXIST}{22}{}%
 \contentsline {subsection}{\numberline {13.5}Fall 2: Mit EXIT}{22}{}%
 \contentsline {section}{\numberline {14}Negative Space}{22}{}%
 \contentsline {section}{Literaturverzeichnis}{22}{}%
-\contentsline {part}{\nonumberline Anlagen}{I}{}%
-\contentsline {section}{\numberline {A}Product-Market-Fit}{I}{}%
-\contentsline {section}{\numberline {B}Abbildungen}{I}{}%
-\contentsline {section}{\numberline {C}Fallstudien Ignorierter Community-Bewegungen}{II}{}%
-\contentsline {subsection}{\numberline {C.1}DotA}{II}{}%
-\contentsline {subsection}{\numberline {C.2}Vanilla WoW}{II}{}%
-\contentsline {subsection}{\numberline {C.3}Ankündigung Von Diablo Immortal}{II}{}%
-\contentsline {section}{\numberline {D}Potenzielle Influencer Partner}{III}{}%
-\contentsline {subsection}{\numberline {D.1}Kripperian}{III}{}%
-\contentsline {subsection}{\numberline {D.2}Trump}{III}{}%
-\contentsline {subsection}{\numberline {D.3}Kohdok}{III}{}%
+\contentsline {part}{\nonumberline Anlagen}{V}{}%
+\contentsline {section}{\numberline {A}Product-Market-Fit}{V}{}%
+\contentsline {subsection}{\numberline {A.1}\acl {f2p} Kern-Spieler}{V}{}%
+\contentsline {subsection}{\numberline {A.2}Hardcore Spieler}{VI}{}%
+\contentsline {subsection}{\numberline {A.3}Turnierspieler}{VI}{}%
+\contentsline {subsection}{\numberline {A.4}Onlinepokerspieler}{VI}{}%
+\contentsline {subsection}{\numberline {A.5}Streamer}{VI}{}%
+\contentsline {subsection}{\numberline {A.6}Wal}{VI}{}%
+\contentsline {subsection}{\numberline {A.7}Musiker/Künstler}{VI}{}%
+\contentsline {subsection}{\numberline {A.8}Fan-Creator}{VI}{}%
+\contentsline {subsection}{\numberline {A.9}Professionelle Creator}{VI}{}%
+\contentsline {subsection}{\numberline {A.10}Investoren}{VI}{}%
+\contentsline {section}{\numberline {B}Abbildungen}{VI}{}%
+\contentsline {section}{\numberline {C}Fallstudien Ignorierter Community-Bewegungen}{VI}{}%
+\contentsline {subsection}{\numberline {C.1}DotA}{VI}{}%
+\contentsline {subsection}{\numberline {C.2}Vanilla WoW}{VIII}{}%
+\contentsline {subsection}{\numberline {C.3}Ankündigung Von Diablo Immortal}{VIII}{}%
+\contentsline {section}{\numberline {D}Potenzielle Influencer Partner}{VIII}{}%
+\contentsline {subsection}{\numberline {D.1}Kripperian}{VIII}{}%
+\contentsline {subsection}{\numberline {D.2}Trump}{VIII}{}%
+\contentsline {subsection}{\numberline {D.3}Kohdok}{VIII}{}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
