@@ -19,20 +19,20 @@ Warning--entry type for "Rechtliche_Situation_bzgl_Lootboxen" isn't style-file d
 Warning--entry type for "Online_TCG_Market_Size" isn't style-file defined
 --line 37 of file Literatur_Von_Der_Idee_zur_Gruendung.bib
 Warning--entry type for "TCG_Market_Size" isn't style-file defined
---line 44 of file Literatur_Von_Der_Idee_zur_Gruendung.bib
+--line 45 of file Literatur_Von_Der_Idee_zur_Gruendung.bib
 Warning--entry type for "TCG_Market_Size_2024" isn't style-file defined
---line 51 of file Literatur_Von_Der_Idee_zur_Gruendung.bib
+--line 53 of file Literatur_Von_Der_Idee_zur_Gruendung.bib
 You've used 7 entries,
             4332 wiz_defined-function locations,
-            863 strings with 7117 characters,
-and the built_in function-call counts, 2191 in all, are:
-= -- 203
+            865 strings with 7137 characters,
+and the built_in function-call counts, 2245 in all, are:
+= -- 221
 > -- 49
 < -- 25
 + -- 39
 - -- 16
-* -- 111
-:= -- 405
+* -- 117
+:= -- 414
 add.period$ -- 7
 call.type$ -- 7
 change.case$ -- 21
@@ -41,20 +41,20 @@ cite$ -- 7
 duplicate$ -- 71
 empty$ -- 195
 format.name$ -- 28
-if$ -- 472
+if$ -- 490
 int.to.chr$ -- 0
 int.to.str$ -- 7
 missing$ -- 40
 newline$ -- 45
 num.names$ -- 14
-pop$ -- 45
+pop$ -- 42
 preamble$ -- 1
 purify$ -- 21
 quote$ -- 0
 skip$ -- 98
 stack$ -- 0
 substring$ -- 96
-swap$ -- 17
+swap$ -- 20
 text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
@@ -62,5 +62,5 @@ type$ -- 28
 warning$ -- 0
 while$ -- 21
 width$ -- 8
-write$ -- 87
+write$ -- 90
 (There were 7 warnings)

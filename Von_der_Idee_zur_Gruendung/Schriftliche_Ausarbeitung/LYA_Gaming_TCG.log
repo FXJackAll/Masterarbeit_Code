@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.18)  8 AUG 2025 22:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.18)  9 AUG 2025 21:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -333,6 +333,9 @@ LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
+(/usr/share/texlive/texmf-dist/tex/latex/placeins/placeins.sty
+Package: placeins 2005/04/18  v 2.2
+)
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2023/05/13 v2.17o AMS math features
 \@mathmargin=\skip64
@@ -502,11 +505,11 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 )
 Package newfloat Info: New float `anlage' with options ` fileext=loa, listname=
 Anlagenverzeichnis, name=Anlage, placement=htbp, within=section, ' on input lin
-e 34.
+e 35.
 \c@anlage=\count321
-Package newfloat Info: float type `anlage'=4 on input line 34.
+Package newfloat Info: float type `anlage'=4 on input line 35.
 \c@loadepth=\count322
-Package tocbasic Info: setting babel extension for `loa' on input line 34.
+Package tocbasic Info: setting babel extension for `loa' on input line 35.
 
 (/usr/share/texlive/texmf-dist/tex/latex/acronym/acronym.sty
 Package: acronym 2020/04/17 v1.47 Support for acronyms (Tobias Oetiker)
@@ -533,20 +536,20 @@ LaTeX Warning: Unused global option(s):
 (./LYA_Gaming_TCG.aux)
 \openout1 = `LYA_Gaming_TCG.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -610,7 +613,7 @@ Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 8
-2.
+3.
 
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -619,7 +622,7 @@ File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/
 dvips/lm/lm-ec.enc}]
 LaTeX Font Info:    Trying to load font information for T1+lmss on input line 1
-68.
+69.
 
 (/usr/share/texmf/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -664,41 +667,32 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 8.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1]
-
-Package tocbasic Warning: number width of subsection toc entries should be incr
-eased!
-(tocbasic)                Currently used number width = 25.24576pt,
-(tocbasic)                Wanted number separation    = 4.37993pt,
-(tocbasic)                Reserved number width       = 25.18501pt on input lin
-e 71.
-
-[2]
-Overfull \hbox (3.71039pt too wide) detected at line 75
+Overfull \hbox (3.71039pt too wide) detected at line 65
  \T1/lmr/m/n/10.95 VIII
  []
 
 
-Overfull \hbox (3.71039pt too wide) detected at line 76
+Overfull \hbox (3.71039pt too wide) detected at line 66
  \T1/lmr/m/n/10.95 VIII
  []
 
 
-Overfull \hbox (2.58478pt too wide) detected at line 77
+Overfull \hbox (2.58478pt too wide) detected at line 67
  \T1/lmss/bx/n/10.95 VIII
  []
 
 
-Overfull \hbox (3.71039pt too wide) detected at line 78
+Overfull \hbox (3.71039pt too wide) detected at line 68
  \T1/lmr/m/n/10.95 VIII
  []
 
 
-Overfull \hbox (3.71039pt too wide) detected at line 79
+Overfull \hbox (3.71039pt too wide) detected at line 69
  \T1/lmr/m/n/10.95 VIII
  []
 
 
-Overfull \hbox (3.71039pt too wide) detected at line 80
+Overfull \hbox (3.71039pt too wide) detected at line 70
  \T1/lmr/m/n/10.95 VIII
  []
 
@@ -706,226 +700,226 @@ Overfull \hbox (3.71039pt too wide) detected at line 80
 \tf@toc=\write3
 \openout3 = `LYA_Gaming_TCG.toc'.
 
- [3] [4]
+ [2] [3] [4]
 Package acronym Info: Label `acro:mtg' newly defined as it shall be overridden
-although it is yet undefined on input line 197.
+although it is yet undefined on input line 198.
 Package acronym Info: Label `acro:ip' newly defined as it shall be overridden
-although it is yet undefined on input line 197.
+although it is yet undefined on input line 198.
 Package acronym Info: Label `acro:HS' newly defined as it shall be overridden
-although it is yet undefined on input line 197.
+although it is yet undefined on input line 198.
 Package acronym Info: Label `acro:fab' newly defined as it shall be overridden
-although it is yet undefined on input line 197.
+although it is yet undefined on input line 198.
 
-Underfull \hbox (badness 10000) in paragraph at lines 197--198
+Underfull \hbox (badness 10000) in paragraph at lines 198--199
 
  []
 
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2
-01.
+02.
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Underfull \hbox (badness 10000) in paragraph at lines 201--202
+Underfull \hbox (badness 10000) in paragraph at lines 202--203
 
  []
 
 [1{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 209--210
+Underfull \hbox (badness 10000) in paragraph at lines 210--211
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 219--220
+Underfull \hbox (badness 10000) in paragraph at lines 220--221
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 221--222
+Underfull \hbox (badness 10000) in paragraph at lines 222--223
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 223--224
+Underfull \hbox (badness 10000) in paragraph at lines 224--225
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 225--226
+Underfull \hbox (badness 10000) in paragraph at lines 226--227
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 229--230
+Underfull \hbox (badness 10000) in paragraph at lines 230--231
 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 231--232
+Underfull \hbox (badness 10000) in paragraph at lines 232--233
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 233--234
+Underfull \hbox (badness 10000) in paragraph at lines 234--235
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 239--240
+Underfull \hbox (badness 10000) in paragraph at lines 240--241
 
  []
 
 [5]
 Package acronym Info: Label `acro:f2p' newly defined as it shall be overridden
-although it is yet undefined on input line 249.
+although it is yet undefined on input line 250.
 
-Underfull \hbox (badness 10000) in paragraph at lines 249--250
+Underfull \hbox (badness 10000) in paragraph at lines 250--251
 
  []
 
 [6] [7]
-Underfull \hbox (badness 10000) in paragraph at lines 283--284
+Underfull \hbox (badness 10000) in paragraph at lines 284--285
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 285--286
+Underfull \hbox (badness 10000) in paragraph at lines 286--287
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 291--292
+Underfull \hbox (badness 10000) in paragraph at lines 292--293
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 293--294
+Underfull \hbox (badness 10000) in paragraph at lines 294--295
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 295--296
+Underfull \hbox (badness 10000) in paragraph at lines 296--297
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 303--304
+Underfull \hbox (badness 10000) in paragraph at lines 304--305
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 309--310
+Underfull \hbox (badness 10000) in paragraph at lines 310--311
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 311--312
+Underfull \hbox (badness 10000) in paragraph at lines 312--313
 
  []
 
 [10] [11] [12]
-Overfull \hbox (7.25014pt too wide) in paragraph at lines 357--358
+Overfull \hbox (7.25014pt too wide) in paragraph at lines 358--359
 \T1/lmr/m/n/10.95 und Feed-back. Mod-ding ist die Ver-än-de-rung/Erweiterung ei
 -nes Spie-les durch Fans/Spieler,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 357--358
+Underfull \hbox (badness 10000) in paragraph at lines 358--359
 
  []
 
 [13] [14]
-Underfull \hbox (badness 10000) in paragraph at lines 403--404
+Underfull \hbox (badness 10000) in paragraph at lines 404--405
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 405--406
+Underfull \hbox (badness 10000) in paragraph at lines 406--407
 
  []
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 407--408
+Underfull \hbox (badness 10000) in paragraph at lines 408--409
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 409--410
+Underfull \hbox (badness 10000) in paragraph at lines 410--411
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 419--420
+Underfull \hbox (badness 10000) in paragraph at lines 420--421
 
  []
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 421--422
+Underfull \hbox (badness 10000) in paragraph at lines 422--423
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 427--428
+Underfull \hbox (badness 10000) in paragraph at lines 428--429
 
  []
 
 [17{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/e
 nc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 429--430
+Underfull \hbox (badness 10000) in paragraph at lines 430--431
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 441--442
+Underfull \hbox (badness 10000) in paragraph at lines 442--443
 
  []
 
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 443--444
+Underfull \hbox (badness 10000) in paragraph at lines 444--445
 
  []
 
 
-Overfull \hbox (18.4454pt too wide) in paragraph at lines 445--446
+Overfull \hbox (18.4454pt too wide) in paragraph at lines 446--447
 \T1/lmr/m/n/10.95 Unsere letz-te Ak-ti-vi-tät ist das Influencer-Marketing. Nor
 -ma-ler-wei-se ist Influencer-Marketing,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 445--446
+Underfull \hbox (badness 10000) in paragraph at lines 446--447
 
  []
 
 [19] [20]
-Underfull \hbox (badness 10000) in paragraph at lines 481--482
+Underfull \hbox (badness 10000) in paragraph at lines 482--483
 
  []
 
 [21] (./LYA_Gaming_TCG.bbl
-Underfull \hbox (badness 1769) in paragraph at lines 11--15
+Underfull \hbox (badness 1769) in paragraph at lines 11--16
 []\T1/lmr/m/sc/10.95 Businessresearchinsights\T1/lmr/m/n/10.95 :  \T1/lmr/m/it/
 10.95 Di-gi-tal Col-lec-ti-ble Card Ga-mes Mar-ket Over-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 11--15
+Underfull \hbox (badness 10000) in paragraph at lines 11--16
 \T1/lmr/m/it/10.95 view\T1/lmr/m/n/10.95 .  $\T1/lmtt/m/n/10.95 https : / / www
  . businessresearchinsights . com / market-[]reports /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--28
+Underfull \hbox (badness 10000) in paragraph at lines 24--29
 \T1/lmtt/m/n/10.95 de / einkaufen-[]internet / gaming / lootboxen-[]in-[]comput
 er-[]und-[]videospielen .
  []
 
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 44--49
+Underfull \hbox (badness 10000) in paragraph at lines 46--52
 []\T1/lmr/m/sc/10.95 Straitresearch\T1/lmr/m/n/10.95 :  \T1/lmr/m/it/10.95 Glo-
 ba-ler Markt für Sam-mel-kar-ten-spie-le: In-for-ma-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--49
+Underfull \hbox (badness 10000) in paragraph at lines 46--52
 \T1/lmr/m/it/10.95 tio-nen nach Ge-rä-te-typ\T1/lmr/m/n/10.95 .  $\T1/lmtt/m/n/
 10.95 https : / / straitsresearch . com / de / report /
  []
@@ -946,7 +940,7 @@ File: Abbildungen/Product_-_Market_-_Fit_F2P_Kern_-_Spieler.png Graphic file (t
 ype png)
 <use Abbildungen/Product_-_Market_-_Fit_F2P_Kern_-_Spieler.png>
 Package pdftex.def Info: Abbildungen/Product_-_Market_-_Fit_F2P_Kern_-_Spieler.
-png  used on input line 532.
+png  used on input line 533.
 (pdftex.def)             Requested size: 418.25555pt x 235.28006pt.
 <Abbildungen/Product_-_Market_-_Fit_Hardcore_Spieler.png, id=109, 462.528pt x 2
 60.172pt>
@@ -954,54 +948,62 @@ File: Abbildungen/Product_-_Market_-_Fit_Hardcore_Spieler.png Graphic file (typ
 e png)
 <use Abbildungen/Product_-_Market_-_Fit_Hardcore_Spieler.png>
 Package pdftex.def Info: Abbildungen/Product_-_Market_-_Fit_Hardcore_Spieler.pn
-g  used on input line 544.
+g  used on input line 545.
 (pdftex.def)             Requested size: 418.25555pt x 235.28006pt.
-<Abbildungen/Yu_Gi_Oh_card_example_with_a_lot_of_text.png, id=110, 812.03375pt 
+<Abbildungen/Product_-_Market_-_Fit_Wal.png, id=110, 462.528pt x 260.172pt>
+File: Abbildungen/Product_-_Market_-_Fit_Wal.png Graphic file (type png)
+<use Abbildungen/Product_-_Market_-_Fit_Wal.png>
+Package pdftex.def Info: Abbildungen/Product_-_Market_-_Fit_Wal.png  used on in
+put line 563.
+(pdftex.def)             Requested size: 418.25555pt x 235.28006pt.
+[5
+
+ <./Abbildungen/Product_-_Market_-_Fit_F2P_Kern_-_Spieler.png>] [6 <./Abbildung
+en/Product_-_Market_-_Fit_Hardcore_Spieler.png> <./Abbildungen/Product_-_Market
+_-_Fit_Wal.png>]
+<Abbildungen/Yu_Gi_Oh_card_example_with_a_lot_of_text.png, id=121, 812.03375pt 
 x 1190.4475pt>
 File: Abbildungen/Yu_Gi_Oh_card_example_with_a_lot_of_text.png Graphic file (ty
 pe png)
 <use Abbildungen/Yu_Gi_Oh_card_example_with_a_lot_of_text.png>
 Package pdftex.def Info: Abbildungen/Yu_Gi_Oh_card_example_with_a_lot_of_text.p
-ng  used on input line 572.
+ng  used on input line 583.
 (pdftex.def)             Requested size: 125.47794pt x 183.93617pt.
-<Abbildungen/Magic_the_gathering_card_example.png, id=111, 359.3425pt x 501.875
+<Abbildungen/Magic_the_gathering_card_example.png, id=122, 359.3425pt x 501.875
 pt>
 File: Abbildungen/Magic_the_gathering_card_example.png Graphic file (type png)
 <use Abbildungen/Magic_the_gathering_card_example.png>
 Package pdftex.def Info: Abbildungen/Magic_the_gathering_card_example.png  used
- on input line 573.
+ on input line 584.
 (pdftex.def)             Requested size: 131.75151pt x 184.01373pt.
-<Abbildungen/Hearthstone_card_example_cropped.png, id=112, 411.5375pt x 583.178
+<Abbildungen/Hearthstone_card_example_cropped.png, id=123, 411.5375pt x 583.178
 76pt>
 File: Abbildungen/Hearthstone_card_example_cropped.png Graphic file (type png)
 <use Abbildungen/Hearthstone_card_example_cropped.png>
 Package pdftex.def Info: Abbildungen/Hearthstone_card_example_cropped.png  used
- on input line 574.
+ on input line 585.
 (pdftex.def)             Requested size: 130.49425pt x 184.92139pt.
-[5
-
- <./Abbildungen/Product_-_Market_-_Fit_F2P_Kern_-_Spieler.png>]
-<Abbildungen/pie_chart_better_neu_2_higher_resolution_cropped.png, id=117, 722.
+<Abbildungen/pie_chart_better_neu_2_higher_resolution_cropped.png, id=124, 722.
 7pt x 326.6604pt>
 File: Abbildungen/pie_chart_better_neu_2_higher_resolution_cropped.png Graphic 
 file (type png)
 <use Abbildungen/pie_chart_better_neu_2_higher_resolution_cropped.png>
 Package pdftex.def Info: Abbildungen/pie_chart_better_neu_2_higher_resolution_c
-ropped.png  used on input line 584.
+ropped.png  used on input line 595.
 (pdftex.def)             Requested size: 334.60571pt x 151.24254pt.
- [6 <./Abbildungen/Product_-_Market_-_Fit_Hardcore_Spieler.png>] [7 <./Abbildun
-gen/Yu_Gi_Oh_card_example_with_a_lot_of_text.png (PNG copy)> <./Abbildungen/Mag
-ic_the_gathering_card_example.png> <./Abbildungen/Hearthstone_card_example_crop
-ped.png> <./Abbildungen/pie_chart_better_neu_2_higher_resolution_cropped.png>]
+ [7 <./Abbildungen/Yu_Gi_Oh_card_example_with_a_lot_of_text.png (PNG copy)> <./
+Abbildungen/Magic_the_gathering_card_example.png> <./Abbildungen/Hearthstone_ca
+rd_example_cropped.png> <./Abbildungen/pie_chart_better_neu_2_higher_resolution
+_cropped.png>]
 Package acronym Info: Label `acro:wow' newly defined as it shall be overridden
-although it is yet undefined on input line 600.
+although it is yet undefined on input line 611.
  [8]
-Overfull \hbox (11.73903pt too wide) in paragraph at lines 638--639
+Overfull \hbox (11.73903pt too wide) in paragraph at lines 649--650
  $[]$  $[]$  $[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 638--639
+Underfull \hbox (badness 10000) in paragraph at lines 649--650
 
  []
 
@@ -1012,10 +1014,10 @@ L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 12364 strings out of 474222
- 234702 string characters out of 5748732
+ 12391 strings out of 474222
+ 235277 string characters out of 5748732
  1937975 words of memory out of 5000000
- 34380 multiletter control sequences out of 15000+600000
+ 34403 multiletter control sequences out of 15000+600000
  607189 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,7n,107p,10930b,429s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1028,10 +1030,10 @@ re/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm
 xmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lm
 tt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msb
 m10.pfb>
-Output written on LYA_Gaming_TCG.pdf (34 pages, 3654381 bytes).
+Output written on LYA_Gaming_TCG.pdf (34 pages, 3741789 bytes).
 PDF statistics:
- 193 PDF objects out of 1000 (max. 8388607)
+ 195 PDF objects out of 1000 (max. 8388607)
  120 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

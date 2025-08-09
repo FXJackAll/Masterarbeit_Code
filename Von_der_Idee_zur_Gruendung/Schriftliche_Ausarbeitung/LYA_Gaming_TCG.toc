@@ -58,20 +58,10 @@
 \contentsline {section}{\numberline {14}Negative Space}{22}{}%
 \contentsline {section}{Literaturverzeichnis}{22}{}%
 \contentsline {part}{\nonumberline Anlagen}{V}{}%
-\contentsline {section}{\numberline {A}Product-Market-Fit}{V}{}%
-\contentsline {subsection}{\numberline {A.1}\acl {f2p} Kern-Spieler}{V}{}%
-\contentsline {subsection}{\numberline {A.2}Hardcore Spieler}{VI}{}%
-\contentsline {subsection}{\numberline {A.3}Turnierspieler}{VI}{}%
-\contentsline {subsection}{\numberline {A.4}Onlinepokerspieler}{VI}{}%
-\contentsline {subsection}{\numberline {A.5}Streamer}{VI}{}%
-\contentsline {subsection}{\numberline {A.6}Wal}{VI}{}%
-\contentsline {subsection}{\numberline {A.7}Musiker/Künstler}{VI}{}%
-\contentsline {subsection}{\numberline {A.8}Fan-Creator}{VI}{}%
-\contentsline {subsection}{\numberline {A.9}Professionelle Creator}{VI}{}%
-\contentsline {subsection}{\numberline {A.10}Investoren}{VI}{}%
-\contentsline {section}{\numberline {B}Abbildungen}{VI}{}%
-\contentsline {section}{\numberline {C}Fallstudien Ignorierter Community-Bewegungen}{VI}{}%
-\contentsline {subsection}{\numberline {C.1}DotA}{VI}{}%
+\contentsline {section}{\numberline {A}Grafische Ausarbeitung Des Product-Market-Fit}{V}{}%
+\contentsline {section}{\numberline {B}Abbildungen}{VII}{}%
+\contentsline {section}{\numberline {C}Fallstudien Ignorierter Community-Bewegungen}{VII}{}%
+\contentsline {subsection}{\numberline {C.1}DotA}{VII}{}%
 \contentsline {subsection}{\numberline {C.2}Vanilla WoW}{VIII}{}%
 \contentsline {subsection}{\numberline {C.3}Ankündigung Von Diablo Immortal}{VIII}{}%
 \contentsline {section}{\numberline {D}Potenzielle Influencer Partner}{VIII}{}%
