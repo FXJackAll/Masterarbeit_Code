@@ -1,0 +1,13 @@
+- Beschreibung war unklar
+- Fokus war auf den Falschen Themen (auf Permutationsproblemen statt stetigen Problemen)
+- Standardameisenalgorithmus teils ungenau beschrieben
+- dadurch war die Verbindung zu den Kontinuierlichen Problemen nicht klar zu erkennen
+- Literaturrecherche war zu knapp, insbesondere wurde nicht genannt wozu die stetigen Ameisenalgorithmen eingesetzt werden ()
+- Durchführung der Experimente war ungenau (Dauer der Messung, gemessene Größen, Anzahl durchgeführte Wiederholungen)
+- Experimente/Auswahl der Testfunktionen war nicht klar - Begründung war wichtig
+- Achsenbeschriftung
+- Abschnitt Zusammenfassung war eine Auswertung
+- wertende Formulierungen, wie trivial, erst recht, gehen wir davon aus, dass ... als der bessere Algorithmus hervorgehen wird, besonders, vermeiden
+- Behauptungen genau genug Begründung
+- zwei Mal lesen, einmal prüfen auf sprachliche Korrektheit und einmal auf schriftliche Korrektheit
+- begründen, warum ACO_R_VS besser ist als ACO_R_S und wieso man deswegen ACO_R_VS nimmt

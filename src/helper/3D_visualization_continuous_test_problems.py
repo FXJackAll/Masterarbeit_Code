@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 # from sympy.printing.pretty.pretty_symbology import linewidth
 
 # path where to save the box plot
-save_pic_path = "../figures/3D_visualization_hartmann_not_3_2_4_0_1_coolwarm.png"
+save_pic_path = "../figures/3D_visualization_paraboloid_2_-3_7_coolwarm.png"
 
 fig, ax = plt.subplots(subplot_kw={"projection": "3d"})
 
@@ -115,6 +115,12 @@ def f_hartmann_not_6_2_4(x,y):
 def f_martin_and_gaddy_2(x,y):
 
     function_value = (x - y) ** 2 + ((x + y - 10) / 3) ** 2
+
+    return function_value
+
+def f_paraboloid_2(x,y):
+
+    function_value = x ** 2 + y ** 2
 
     return function_value
 
@@ -226,7 +232,7 @@ x = np.linspace(-0.0, 1.0, 50, dtype=float)
 y = np.linspace(-0.0, 1.0, 50, dtype=float)
 
 X, Y = np.meshgrid(x,y)
-Z = f_hartmann_not_3_2_4(X,Y)
+Z = f_paraboloid_2(X,Y)
 
 surf = ax.plot_surface(X, Y, Z, cmap=cm.coolwarm, linewidth=0, antialiased=False)
 
@@ -238,7 +244,7 @@ ax.set_ylabel('y')
 ax.zaxis.set_rotate_label(False)
 ax.set_zlabel('$f(x)$', rotation=5)
 
-ax.set_title('Hartmann(2,4)')
+ax.set_title('Paraboloid')
 
 ax.view_init(elev=30, azim=190)
 

@@ -1,0 +1,4 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'Hauptdokument.blg'
+[85] biber:340> INFO - === Mo Okt 21, 2024, 20:36:30
+[100] Biber.pm:419> INFO - Reading 'Hauptdokument.bcf'
