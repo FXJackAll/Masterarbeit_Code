@@ -1,5 +1,6 @@
 \babel@toc {ngerman}{}\relax 
 \contentsline {section}{Inhaltsverzeichnis}{I}{}%
+\contentsline {section}{Abkürzungsverzeichnis}{III}{}%
 \contentsline {section}{\numberline {1}Einleitung}{1}{}%
 \contentsline {section}{\numberline {2}Markt}{2}{}%
 \contentsline {section}{\numberline {3}Geschäftsidee}{3}{}%
@@ -57,6 +58,7 @@
 \contentsline {subsection}{\numberline {13.5}Fall 2: Mit EXIT}{22}{}%
 \contentsline {section}{\numberline {14}Negative Space}{22}{}%
 \contentsline {section}{Literaturverzeichnis}{22}{}%
+\contentsline {section}{Abbildungsverzeichnis}{24}{}%
 \contentsline {part}{\nonumberline Anlagen}{V}{}%
 \contentsline {section}{\numberline {A}Grafische Ausarbeitung Des Product-Market-Fit}{V}{}%
 \contentsline {section}{\numberline {B}Abbildungen}{VII}{}%
@@ -64,8 +66,4 @@
 \contentsline {subsection}{\numberline {C.1}DotA}{VII}{}%
 \contentsline {subsection}{\numberline {C.2}Vanilla WoW}{VIII}{}%
 \contentsline {subsection}{\numberline {C.3}Ankündigung Von Diablo Immortal}{VIII}{}%
-\contentsline {section}{\numberline {D}Potenzielle Influencer Partner}{VIII}{}%
-\contentsline {subsection}{\numberline {D.1}Kripperian}{VIII}{}%
-\contentsline {subsection}{\numberline {D.2}Trump}{VIII}{}%
-\contentsline {subsection}{\numberline {D.3}Kohdok}{VIII}{}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
