@@ -1,0 +1,2 @@
+For each insulator I there corresponds an effective thermal conductivity function
+k(I, T ) that typically is given in the form of tabulated data over a certain temperature range.
