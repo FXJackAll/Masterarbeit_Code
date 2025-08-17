@@ -806,7 +806,9 @@ within=section,
 		
 		\subsubsection{Testfunktion - Paraboloid} \label{subsubsec:Testfunktion_-_Paraboloid}
 		
-		Die Paraboloid-Testfunktion ist unimodal und konvex. Sie ist die einfachste aller einfachen Testfunktion und somit insgesamt die einfachste Testfunktion. Sie dient sowohl als Demonstration, dass der Algorithmus, welcher getestet wird, ordnungsgemäß funktioniert, als auch zum Testen der Konvergenzgeschwindigkeit des Algorithmus. Konvergiert ein Algorithmus zu schnell, kann er ein globales Optimum überspringen, konvergiert er zu langsam, erreicht er das globale Optimum nicht in der vorgegebenen Menge an Ressourcen, wobei Ressourcen maximale Ausführungszeit oder maximale Anzahl an Funktionsausführungen sein können.
+		Die Paraboloid-Testfunktion ist unimodal und konvex. Sie ist die einfachste aller einfachen Testfunktion und somit insgesamt die einfachste Testfunktion. Sie dient sowohl als Demonstration, dass der Algorithmus, welcher getestet wird, ordnungsgemäß funktioniert, als auch zum Testen der Konvergenzgeschwindigkeit des Algorithmus. Konvergiert ein Algorithmus zu schnell, kann er ein globales Optimum überspringen, konvergiert er zu langsam, erreicht er das globale Optimum nicht in der vorgegebenen Menge an Ressourcen, wobei Ressourcen maximale Ausführungszeit oder maximale Anzahl an Funktionsausführungen sein können. Letzteres ist für die Testfunktion Rosenbrock eingetreten, als die Initialversion des ACO\(_\mathbb{R}\)-VS Algorithmus aus meiner Bachelorarbeit~\cite{FCM_2019} versucht hat diese zu optimieren. Ferner haben \textit{Merkle und Middendorf}~\cite{ACO_2003_simiple_problems} gezeigt, dass die Untersuchung einfacher Probleme ein lohnendes Unterfangen sein kann, da einfache Probleme ein unvorhergesehenes Verhalten des Algorithmus erwirken können.
+		
+		%optimiert?
 		
 		\begin{figure}[H]
 			\centering
@@ -821,7 +823,7 @@ within=section,
 		
 		Wie in \cite{molga2005test} beschrieben ist die Griewangk-Testfunktion multimodal und hat damit viele lokale Optima, was die Suche nach dem globalen für Algorithmen erschwert. Ferner sind die lokalen Minima zwar gleich verteilt aber weit gestreut, was die Suche nach dem globalen Optima weiter verkompliziert. Die Griewangk-Testfunktion wurde auch deswegen gewählt, da, wie in Abbildung~\ref{fig:3D_Visualization_Griewangk_2_Various_Intervals} zusehen, sich das Aussehen der Funktion in Abhängigkeit vom Betrachtungsintervall ändert. Im Intervall \([-600,600]^n, n = 2\), was die 2-dimensionale Version des Initialisierungsintervall \([-600,600]^n, n = 10\) ist, welches für die Optimierung verwendet wird, muss der Algorithmus schnell konvergieren, um nicht viele Iterationen mit schlechten Werten zu verbrauchen. Im Intervall \([-10,10]^n, n = 2\), muss der Algorithmus Variabilität zeigen, um die große Menge an lokalen Minima zu meiden. Und schließlich im Intervall \([-4,4]^n, n = 2\) muss der Algorithmus eine aperiodische, zerklüftete Landschaft manövrieren, um das globale Optimum zu finden. Deswegen eignet sich die Griewangk-Testfunktion besonders gut, um das Können eines Algorithmus zu testen. 
 		
-		\begin{figure}[htp]
+		\begin{figure}[H]
 			
 			\centering
 			\includegraphics[width=.3\textwidth]{Abbildungen/3D_Visualisationen/3D_visualization_griewangk_2_-600_600_coolwarm.png}\hfill

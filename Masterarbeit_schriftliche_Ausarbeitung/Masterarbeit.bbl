@@ -73,57 +73,63 @@
   Ameisenalgorithmen zur Funktionsoptimierung}, Universit{\"a}t Leipzig,
   Bachelorarbeit, 2002
 
-\bibitem[11]{middendorf2017ant}
+\bibitem[11]{ACO_2003_simiple_problems}
+\textsc{Merkle}, D.  ; \textsc{Middendorf}, M. :
+\newblock On the behavior of ACO algorithms: Studies on simple problems.
+\newblock {In: }\emph{Metaheuristics: computer decision-making}.
+\newblock Springer, 2003, S. 465--480
+
+\bibitem[12]{middendorf2017ant}
 \textsc{Middendorf}, M. :
 \newblock Verfahren der Schwarmintelligenz.
 \newblock {In: }\emph{Vorlesung Verfahren der Schwarmintelligenz}  (2017)
 
-\bibitem[12]{molga2005test}
+\bibitem[13]{molga2005test}
 \textsc{Molga}, M.  ; \textsc{Smutnicki}, C. :
 \newblock Test functions for optimization needs.
 \newblock {In: }\emph{Test functions for optimization needs} 101 (2005)
 
-\bibitem[13]{sandgren1990nonlinear}
+\bibitem[14]{sandgren1990nonlinear}
 \textsc{Sandgren}, E. :
 \newblock Nonlinear integer and discrete programming in mechanical design
   optimization.
 \newblock   (1990), S. 223--229
 
-\bibitem[14]{socha2008ant}
+\bibitem[15]{socha2008ant}
 \textsc{Socha}, K.  ; \textsc{Dorigo}, M. :
 \newblock Ant colony optimization for continuous domains.
 \newblock {In: }\emph{European journal of operational research} 185 (2008), Nr.
   3, S. 1155--1173
 
-\bibitem[15]{testFunctionShekel}
+\bibitem[16]{testFunctionShekel}
 \textsc{Surjanovic}, S.  ; \textsc{Bingham}, D. :
 \newblock Virtual Library of Simulation Experiments: Test Function and
   Datasets.
 \newblock {In: }\emph{https://www.sfu.ca/$\sim$ssurjano/shekel.html}
   (abgerufen am 17.08.2019)
 
-\bibitem[16]{testFunctionHartmann3}
+\bibitem[17]{testFunctionHartmann3}
 \textsc{Surjanovic}, S.  ; \textsc{Bingham}, D. :
 \newblock Virtual Library of Simulation Experiments: Test Function and
   Datasets.
 \newblock {In: }\emph{https://www.sfu.ca/$\sim$ssurjano/hart3.html}  (abgerufen
   am 17.08.2019)
 
-\bibitem[17]{testFunctionHartmann6}
+\bibitem[18]{testFunctionHartmann6}
 \textsc{Surjanovic}, S.  ; \textsc{Bingham}, D. :
 \newblock Virtual Library of Simulation Experiments: Test Function and
   Datasets.
 \newblock {In: }\emph{https://www.sfu.ca/$\sim$ssurjano/hart6.html}  (abgerufen
   am 17.08.2019)
 
-\bibitem[18]{testFunctionBranin}
+\bibitem[19]{testFunctionBranin}
 \textsc{Surjanovic}, S.  ; \textsc{Bingham}, D. :
 \newblock Virtual Library of Simulation Experiments: Test Function and
   Datasets.
 \newblock {In: }\emph{https://www.sfu.ca/$\sim$ssurjano/branin.html}
   (abgerufen am 19.08.2019)
 
-\bibitem[19]{testFunctionGoldsteinandPrice}
+\bibitem[20]{testFunctionGoldsteinandPrice}
 \textsc{Surjanovic}, S.  ; \textsc{Bingham}, D. :
 \newblock Virtual Library of Simulation Experiments: Test Function and
   Datasets.
