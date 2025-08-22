@@ -37,6 +37,8 @@ within=section,
 \newcommand\Tstrut{\rule{0pt}{3ex}}           % = `top' strut
 \newcommand\Bstrut{\rule[-0.9ex]{0pt}{0pt}}   % = `bottom' strut
 
+\usepackage[printonlyused]{acronym}
+
 %der eigentliche Text
 \begin{document}
 	
@@ -130,6 +132,20 @@ within=section,
 	
 	% Inhaltsverzeichnis erzeugen
 	\tableofcontents
+	\newpage
+	
+	\addcontentsline{toc}{section}{Abkürzungsverzeichnis}
+	
+	\section*{Abkürzungsverzeichnis}
+	
+	%\printglossary[type=\acronymtype]
+	%\printglossaries
+	
+	\begin{acronym}[Masterarbeit]
+		\acro{csd}[CSD Problem]{Coil Spring Design Problem}
+		
+	\end{acronym}
+	
 	\newpage
 	
 	\section{Einleitung}
@@ -234,6 +250,18 @@ within=section,
 	Zudem gilt, dass in jedem Durchlauf, abgesehen von den ersten \(n\), eine Lösung in die diskrete Pheromonmatrix aufgenommen und eine aus selbiger wieder entfernt wird. Es gilt also, wenn man die Matrix \textit{P} als solches interpretiert, dass \textit{P} ein Lösungsarchiv ist, mit dessen Hilfe eine neue Lösung erzeugt wird.\hfill\newline
 	
 	Diese Verbesserung ist auch ein wesentlicher Schritt in Richtung der Algorithmen, welche dieser Arbeit beiliegen und auch des Algorithmus mit dem der Vergleich in dieser Arbeit gezogen wird.\hfill\newline
+	
+	\section{Optimierungsprobleme} \label{sec:Optimierungsprobleme}
+	
+	Da wir, im Vergleich zu meiner Bachelorarbeit~\cite{FCM_2019}, in dieser Arbeit die Menge der betrachteten Probleme auf Probleme mit gemischten Variablem erweitern, bietet es sich an, eine abstraktere Definition von Optimierungsproblemen zu etablieren.\hfill\newline
+	
+	Wie in \cite{lin2015simple} beschrieben besteht ein Optimierungsproblem aus 4 Teilen. Diese sind der Suchraum \(\Sigma = \{\Sigma_1, \dots, \Sigma_n\}, n \in \mathbb{N}\), die Menge der abstrakten Variablen \(X = \{X_1, \dots, X_n\}, n \in \mathbb{N}\), die Beschränkungen an die Variablen \(\mathcal{B} = \{\mathcal{B}_1, \dots, \mathcal{B}_n\}, n \in \mathbb{N}\) und eine Fitness- bzw. Zielfunktion \(f: \Sigma \to \mathbb{R}^+\), die jeder Lösung \(s \in \Sigma\) einen Wert \(f(s) > 0\) zuordnet, wobei eine Lösung \(s \in \Sigma\) das Belegen aller Variablen \(X_i\) mit den Werten aus \(\Sigma_i\) ist, sodass die Werte den Beschränkungen \(\mathcal{B}_i\) genügen, \(i \in \{1, \dots, n\}\). Damit kann ein Optimierungsproblem definiert werden als das Tupel \((\Sigma, X, \mathcal{B}, f)\). Wenn \(\mathcal{B} = \emptyset\), dann ist das Problem unbeschränkt, sonst ist es beschränkt.\hfill\newline
+	
+	Eine Lösung \(s_{opt}\) heißt Optimum, wenn gilt \(f(s_{opt}) \leq f(s) \, \forall s \in \Sigma\). Ein Optimierungsproblem kann mehr als ein \(s_{opt}\) haben. Das Ziel eines Optimierungsproblems ist mindestens ein \(s_{opt}\) zu finden.\hfill\newline
+	
+	Mit dieser nun rigoroseren Definition können wir beispielhaft den Suchraum für das \acl{csd} angeben. Dieser ist \(\Sigma = \{D, d, N\}\), \(D\) ist stetig, \(d\) ist ordinal und damit diskret und N ist eine natürliche Zahl, damit auch ordinal und stetig, wobei die Beschränkungen gelten \(D \in \{3 \cdot d_{min}, 3.0\}\), \(d \in \{d_{min}, 0.5000\}\) und \(N \in \{1, \dots, 70\}\). Die Beschränkung \(d_{min}\) wird im Abschnitt~\ref{subsubsec:Coil_Spring_Design_Problem} zum \ac{csd} angegeben.
+	
+	%TODO Braucht man eine Unterscheidung zwischen Sigma und feasable Sigma
 	
 	\subsection{Ameisenalgorithmen mit stetigem Lösungsarchiv}
 	
@@ -870,7 +898,7 @@ within=section,
 		
 		\subsection{Testfunktionen mit gemischten Variablem} \label{subsec:mixed_variable}
 		
-			\subsubsection{Coil Spring Design Problem (CSD)} \label{subsub:CSD}
+			\subsubsection{Coil Spring Design Problem (CSD)} \label{subsubsec:Coil_Spring_Design_Problem}
 			
 			Das Coil Spring Design Problem (CSD) kann auf verschiedene Arten definiert werden, wie in \cite{guo2004swarm}, \cite{ACO_2013}, oder []. In dieser Arbeit verwenden wir die Definition aus \cite{ACO_2013}. %TODO mehr Quellen finden; vllt. die Namen aus ACO_2013 verwenden, statt nur \cite{ACO_2013}
 			Im CSD Problem, wie es in \cite{ACO_2013} definiert wird, wird so nach dem Außendurchmesser \(D\), dem Drahtdurchmesser \(d\) und der Windungszahl \(N\) einer Schraubenfeder (Coil Spring) gesucht, dass der Materialbedarf für die Schraubenfeder minimiert wird, während gleichzeitig die Nebenbedingungen (Constrains) erfüllt werden.\\
@@ -1077,7 +1105,7 @@ within=section,
 			\paragraph{Vollständiger Raum als Initialisierungsintervall}\mbox{}\\%TODO fragen, ob 5.5.1.1 gut ist?
 			\newline
 			\noindent Wie bereits im Abschnitt~\ref{subsec:Definition_ACO_R} beschrieben, hat das Initialisierungsintervall großen Einfluss auf den Erfolg %die Güte?
-			des Algorithmus. So können für das CSD Anfangslösungen aus dem gesamten Raum \(\{3d, 3.0\} \times \{d_{min}, 0.5000\} \times \{1, 70\}\) oder dem gefilterten Raum gezogen werden, was für das CSD einen Unterschied macht. Nimmt man den gesamten Raum als Grundlage, so findet ACO\(_\mathbb{R}\)-VS das Optimum nicht oder nur nach mehreren tausend Iterationen, wie in der Abbildung~\ref{fig:box_plot:ACO_R-VS_CSD_penalty_perform} zu sehen.\\%TODO besser formulieren
+			des Algorithmus. So können für das CSD Anfangslösungen aus dem gesamten Raum \(\{3 \cdot d_{min}, 3.0\} \times \{d_{min}, 0.5000\} \times \{1, 70\}\) oder dem gefilterten Raum gezogen werden, was für das CSD einen Unterschied macht. Nimmt man den gesamten Raum als Grundlage, so findet ACO\(_\mathbb{R}\)-VS das Optimum nicht oder nur nach mehreren tausend Iterationen, wie in der Abbildung~\ref{fig:box_plot:ACO_R-VS_CSD_penalty_perform} zu sehen.\\%TODO besser formulieren
 			
 			Nimmt man den gesamten Raum zum ziehen der Initiallösungen, so ändert sich die Zielfunktion von der Formel~\ref{eq:CSD_material} zu der Formel~\ref{eq:CSD_penalty}, wie in \cite{ACO_2013} definiert.
 			
