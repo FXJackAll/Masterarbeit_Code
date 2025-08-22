@@ -7,16 +7,16 @@
 \contentsline {subsection}{\numberline {2.3}Permutationsprobleme}{4}{}%
 \contentsline {subsection}{\numberline {2.4}Verbesserungen der ACO Metaheuristik zur PB-ACO}{4}{}%
 \contentsline {section}{\numberline {3}Optimierungsprobleme}{5}{}%
-\contentsline {subsection}{\numberline {3.1}Ameisenalgorithmen mit stetigem Lösungsarchiv}{5}{}%
+\contentsline {subsection}{\numberline {3.1}Ameisenalgorithmen mit stetigem Lösungsarchiv}{6}{}%
 \contentsline {subsection}{\numberline {3.2}Ameisenalgorithmen in stetigen Variablen}{6}{}%
-\contentsline {section}{\numberline {4}Varianten der Lösungsfindung}{6}{}%
+\contentsline {section}{\numberline {4}Varianten der Lösungsfindung}{7}{}%
 \contentsline {subsection}{\numberline {4.1}ACO\(_{\mathbb {R}}\)}{7}{}%
 \contentsline {subsection}{\numberline {4.2}ACO\(_{\mathbb {R}}\)-simple}{8}{}%
 \contentsline {subsection}{\numberline {4.3}ACO\(_{\mathbb {R}}\)-very-simple}{9}{}%
 \contentsline {section}{\numberline {5}SPPBPO-Schema}{10}{}%
 \contentsline {section}{\numberline {6}HSPPBO-Schema}{11}{}%
-\contentsline {section}{\numberline {7}Kombinieren des HSPPBO-Schemas mit ACO\(_\mathbb {R}\)-very-simple}{11}{}%
-\contentsline {subsection}{\numberline {7.1}Hom-HPB-ACO\(_\mathbb {R}\)-very-simple}{11}{}%
+\contentsline {section}{\numberline {7}Kombinieren des HSPPBO-Schemas mit ACO\(_\mathbb {R}\)-very-simple}{12}{}%
+\contentsline {subsection}{\numberline {7.1}Hom-HPB-ACO\(_\mathbb {R}\)-very-simple}{12}{}%
 \contentsline {subsection}{\numberline {7.2}Het-HPB-ACO\(_\mathbb {R}\)-very-simple}{12}{}%
 \contentsline {subsection}{\numberline {7.3}Het-HSPPB-ACO\(_\mathbb {R}\)-very-simple}{13}{}%
 \contentsline {section}{\numberline {8}Testfunktionen}{13}{}%
