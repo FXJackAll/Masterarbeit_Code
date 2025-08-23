@@ -219,7 +219,7 @@ within=section,
 	
 	Eine Lösung \(s_{opt}\) ist ein Optimum, wenn \(f(s_{opt}) \leq f(s) \hspace{.16667em} \forall s \in S\).
 	
-	\subsection{Verbesserungen der ACO Metaheuristik zur PB-ACO}
+	\subsection{Verbesserung Der ACO Metaheuristik Zu P-ACO} \label{subsec:Verbesserung_Der_ACO_Metaheuristik_Zu_P-ACO}
 	
 	Die folgende Beschreibung ist nach \textit{Prof. Dr. M. Middendorf}~\cite{middendorf2017ant}.\hfill\newline
 	
@@ -231,7 +231,7 @@ within=section,
 		\rho_{ij} = \rho_0 ~ \forall i,j \in \{1,...,n\}
 	\end{equation}
 	
-	\noindent Alle Einträge der Pheromonmatrix \(P\) werden also zu Beginn auf einen Initialwert \(\rho_0\) gesetzt. Danach konstruieren die Ameisen mehrere Lösungen und die best wird in die Pheromonmatrix eingefügt gemäß Gleichung~(\ref{diskretesPheromonupdate}).
+	\noindent Alle Einträge der Pheromonmatrix \(P\) werden also zu Beginn auf einen Initialwert \(\rho_0\) gesetzt. Danach konstruieren die Ameisen mehrere Lösungen und die beste wird in die Pheromonmatrix eingefügt gemäß Gleichung~(\ref{diskretesPheromonupdate}).
 	
 	\begin{equation} \label{diskretesPheromonupdate}
 		\rho_{ij} = \rho_{ij} + \delta,
@@ -251,6 +251,33 @@ within=section,
 	
 	Diese Verbesserung ist auch ein wesentlicher Schritt in Richtung der Algorithmen, welche dieser Arbeit beiliegen und auch des Algorithmus mit dem der Vergleich in dieser Arbeit gezogen wird.\hfill\newline
 	
+	\subsection{Ameisenalgorithmen Mit Einem Stetigen Lösungsarchiv} \label{subsec:Ameisenalgorithmen_Mit_Einem_Stetigen_Loesungsarchiv}
+	
+	Wie im Abschnitt~\ref{subsec:Verbesserung_Der_ACO_Metaheuristik_Zu_P-ACO} beschrieben, kann man, statt die Pheromoninformation von Iterationsschritt zu Iterationsschritt mitzuführen, die Information auch in einer diskreten Matrix speichern, also einem diskreten Lösungsarchiv. Dies funktioniert jedoch nur für diskrete Probleme. Um stetige Probleme zu lösen, kann man auf ein Archiv mit stetigen Einträgen zurückgreifen, was dann u.a. eine Liste sein kann.\hfill\newline
+	
+	Ameisenalgorithmen mit einem stetigen Lösungsarchiv speichern ihre Lösungen in stetigen Einträgen. Wie genau, hängt von dem jeweiligen Algorithmus ab. Die einfachste Art und Weise dies zu tun, ist jedoch, die Lösungen wie sie generiert werden, nach einer bestimmten Vorschrift zu speichern, also ein einfaches Lösungsarchiv zu verwenden.\hfill\newline
+	
+	Wiederum die einfachsten Vorschriften zum Speichern von Lösungen sind \glqq first in last out\grqq \hspace{.16667em} und \glqq best in worst out\grqq. Bei der ersten Vorschrift wird die neueste Lösung ins Archiv aufgenommen und die Älteste entfernt und bei der Zweiten wird die Lösung nach ihrer Güte einsortiert. Ist bei der zweiten Vorschrift die Lösung schlechter als alle anderen im Archiv, wird die Lösung verworfen, ist sie besser als eine gespeicherte Lösung, wird die neue gute Lösung an die Stelle der alten schlechteren Lösung gesetzt, alle Lösungen ab der schlechteren Lösung, die schlechtere Lösung eingeschlossen, werden um einen Platz nach hinten verschoben und die dann neue schlechteste Lösung wird aus dem Archiv gelöscht.\hfill\newline
+	
+	%Bei den dieser Arbeit beiliegenden Algorithmen wird ein einfaches Lösungsarchiv verwendet und nach dem \glqq best in worst out\grqq \hspace{.16667em} Prinzip befüllt.
+	
+	\subsection{Ameisenalgorithmen Mit Einem Gemischten Lösungsarchiv}
+	
+	Da in dieser Arbeit die Art der Algorithmen, die getestet werden und die Art der Funktionen, die zum Testen benutzt werden, erweitert wird, müssen wir auch den Begriff des Lösungsarchivs erweitern. Gegeben eine Funktion mit gemischten Variablen, wie in den Abschnitten [] und \ref{subsubsec:Coil_Spring_Design_Problem} und ein einfaches Lösungsarchiv mit \(n \in \mathbb{N}\) Einträgen, wie es im Abschnitt~\ref{subsec:Ameisenalgorithmen_Mit_Einem_Stetigen_Loesungsarchiv} definiert wurde, dann ist die einfachste Erweiterung für ein einfaches Lösungsarchiv, mehrere einfache Lösungsarchive zu einem einfachen Lösungsarchiv zusammenzufassen. Dabei bilden die Einträge der Unterarchive an der Stelle \(i \in \{1, \dots, n\}\) eine Gesamtlösung.
+	
+	%Wie im Abschnitt~\ref{subsec:mixed_variable} beschrieben, können Variablen verschieden Skalenniveaus haben aber wenn 
+	
+	\subsection{Ameisenalgorithmen in stetigen Variablen}
+	
+	Ameisenalgorithmen in stetigen Variablen suchen Belegungen für jede ihrer Variablen in \(\mathbb{R}\) oder in einem Intervall von \(\mathbb{R}\), der Suchraum ist also z.B. \(\mathbb{R}^n, n \in \mathbb{N}\).\hfill\newline
+	
+	Da für ein stetiges Problem keine Matrix mit diskreten Einträgen verwendet werden kann, ist es möglich, wie in \textit{Socha und Dorigo}~\cite{socha2008ant} und dem vorherigen Abschnitt beschrieben, ein Lösungsarchiv zu verwendet, in dem die Lösungen gespeichert werden.
+	\hfill\newline
+	
+	Aus den Lösungen im Archiv wird dann eine neue Lösung konstruiert. Dies kann auf unterschiedlichste Weise passieren, wie in den Abschnitten~\ref{ACO_R}, \ref{ACO_R_simple} und~\ref{ACO_R_very_simple} beschrieben.\hfill\newline
+	
+	Das Beschreiben andere Methoden der Generierung und Verarbeitung von Lösungen, abgesehen vom Speichern in einem Lösungsarchiv und der Konstruktion von neuen Lösungen aus diesem, geht über den Umfang dieser Arbeit hinaus und wird nicht betrachtet.
+	
 	\section{Optimierungsprobleme} \label{sec:Optimierungsprobleme}
 	
 	Da wir, im Vergleich zu meiner Bachelorarbeit~\cite{FCM_2019}, in dieser Arbeit die Menge der betrachteten Probleme auf Probleme mit gemischten Variablem erweitern, bietet es sich an, eine abstraktere Definition von Optimierungsproblemen zu etablieren.\hfill\newline
@@ -263,31 +290,10 @@ within=section,
 	
 	Eine Lösung \(s_{opt}\) heißt Optimum, wenn gilt \(f(s_{opt}) \leq f(s) \, \forall s \in \Sigma\). Ein Optimierungsproblem kann mehr als ein \(s_{opt}\) haben. Das Ziel eines Optimierungsproblems ist mindestens ein \(s_{opt}\) zu finden.\hfill\newline
 	
-	Mit dieser nun rigoroseren Definition können wir beispielhaft den Suchraum für das \acl{csd} angeben. Dieser ist \(\Sigma = \{D, d, N\}\), \(D\) ist stetig, \(d\) ist ordinal und damit diskret und N ist eine natürliche Zahl, damit auch ordinal und stetig, wobei die Beschränkungen gelten \(D \in \{3 \cdot d_{min}, 3.0\}\), \(d \in \{d_{min}, 0.5000\}\) und \(N \in \{1, \dots, 70\}\). Die Beschränkung \(d_{min}\) wird im Abschnitt~\ref{subsubsec:Coil_Spring_Design_Problem} zum \ac{csd} angegeben.
+	Mit dieser nun rigoroseren Definition können wir beispielhaft den Suchraum und die Variablen für das \acl{csd} angeben. Der Suchraum ist \(\Sigma = \{\mathbb{R}, \mathbb{O}, \mathbb{N}_{>0}\}\) und die Variablen sind \(X = \{D, d, N\}\). \(\mathbb{O}\) ist die Menge aller rationalen ordinalen Zahlen. Es ist die Menge der rationalen Zahlen \(\mathbb{Q}\) ohne eine Ordnungsrelation. \(D\) ist eine stetige Variable, \(d\) ist ordinal und N ist natürlich, wobei die Beschränkungen \(D \in \{3 \cdot d_{min}, 3.0\}\), \(d \in \{d_{min}, \dots, 0.5000\}\) und \(N \in \{1, \dots, 70\}\) gelten. Die Beschränkung \(d_{min}\) wird im Abschnitt~\ref{subsubsec:Coil_Spring_Design_Problem} zum \ac{csd} angegeben.
 	
 	%TODO fragen, ob d_min angeben werden soll
 	%TODO Braucht man eine Unterscheidung zwischen Sigma und feasable Sigma
-	
-	\subsection{Ameisenalgorithmen mit stetigem Lösungsarchiv}
-	
-	Wie in dem vorherigen Abschnitt beschrieben, kann man, statt die Pheromoninformation von Iterationsschritt zu Iterationsschritt mitzuführen, die Information auch in einer diskreten Matrix speichern, also einem diskreten Lösungsarchiv. Dies funktioniert jedoch nur für diskrete Probleme. Um stetige Probleme zu lösen, kann man auf ein Archiv mit stetigen Einträgen zurückgreifen, was dann eine u.a. eine Liste sein kann.\hfill\newline
-	
-	Ameisenalgorithmen mit einem stetigen Lösungsarchiv speichern ihre Lösungen in stetigen Einträgen. Wie genau, hängt von dem jeweiligen Algorithmus ab. Die einfachste Art und Weise dies zu tun, ist jedoch, die Lösungen wie sie generiert werden, nach einer bestimmten Vorschrift zu speichern, also ein einfaches Lösungsarchiv zu verwenden.\hfill\newline
-	
-	Wiederum die einfachsten Vorschriften zum Speichern von Lösungen sind \glqq first in last out\grqq \hspace{.16667em} und \glqq best in worst out\grqq. Bei der ersten Vorschrift wird die neueste Lösung ins Archiv aufgenommen und die Älteste entfernt und bei der Zweiten wird die Lösung nach ihrer Güte einsortiert. Ist bei der zweiten Vorschrift die Lösung schlechter als alle anderen im Archiv, wird die Lösung verworfen, ist sie besser als eine gespeicherte Lösung, wird die neue gute Lösung an die Stelle der alten schlechteren Lösung gesetzt, alle Lösungen ab der schlechteren Lösung, die schlechtere Lösung eingeschlossen, werden um einen Platz nach hinten verschoben und die schlechteste Lösung wird aus dem Archiv gelöscht.\hfill\newline
-	
-	Bei den dieser Arbeit beiliegenden Algorithmen wird ein einfaches Lösungsarchiv verwendet und nach dem \glqq best in worst out\grqq \hspace{.16667em} Prinzip befüllt.
-	
-	\subsection{Ameisenalgorithmen in stetigen Variablen}
-	
-	Ameisenalgorithmen in stetigen Variablen suchen Belegungen für jede ihrer Variablen in \(\mathbb{R}\) oder in einem Intervall von \(\mathbb{R}\), der Suchraum ist also z.B. \(\mathbb{R}^n, n \in \mathbb{N}\).\hfill\newline
-	
-	Da für ein stetiges Problem keine Matrix mit diskreten Einträgen verwendet werden kann, ist es möglich, wie in \textit{Socha und Dorigo}~\cite{socha2008ant} und dem vorherigen Abschnitt beschrieben, ein Lösungsarchiv zu verwendet, in dem die Lösungen gespeichert werden.
-	\hfill\newline
-	
-	Aus den Lösungen im Archiv wird dann eine neue Lösung konstruiert. Dies kann auf unterschiedlichste Weise passieren, wie in den Abschnitten~\ref{ACO_R}, \ref{ACO_R_simple} und~\ref{ACO_R_very_simple} beschrieben.\hfill\newline
-	
-	Das Beschreiben andere Methoden der Generierung und Verarbeitung von Lösungen, abgesehen vom Speichern in einem Lösungsarchiv und der Konstruktion von neuen Lösungen aus diesem, geht über den Umfang dieser Arbeit hinaus und wird nicht betrachtet.
 	
 	\section{Varianten der Lösungsfindung} %TODO besseren Titel überlegen
 	
@@ -897,6 +903,8 @@ within=section,
 		im Paper werden keine Grenzen für N genannt, obwohl das sehr wichtig ist, weil das Intervall aus dem die ersten k Lösungen gezogen werden, Einfluss hat auf das Verhalten des Algorithmus
 		
 		Es müsste \(\pi^2\) sein
+		
+		Probleme mit nur diskreten Variablen nehmen, statt einer diskret und einer stetigen
 		
 		\subsection{Kategorische Testfunktionen} \label{subsec:Kategorische_Testfunktionen} %wichtig
 		

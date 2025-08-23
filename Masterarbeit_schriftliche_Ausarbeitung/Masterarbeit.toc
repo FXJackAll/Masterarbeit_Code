@@ -5,16 +5,17 @@
 \contentsline {subsection}{\numberline {2.1}Beschreibung der Idee eines Ameisenalgorithmen}{2}{}%
 \contentsline {subsection}{\numberline {2.2}mathematische Beschreibung}{3}{}%
 \contentsline {subsection}{\numberline {2.3}Permutationsprobleme}{4}{}%
-\contentsline {subsection}{\numberline {2.4}Verbesserungen der ACO Metaheuristik zur PB-ACO}{4}{}%
-\contentsline {section}{\numberline {3}Optimierungsprobleme}{5}{}%
-\contentsline {subsection}{\numberline {3.1}Ameisenalgorithmen mit stetigem Lösungsarchiv}{6}{}%
-\contentsline {subsection}{\numberline {3.2}Ameisenalgorithmen in stetigen Variablen}{6}{}%
+\contentsline {subsection}{\numberline {2.4}Verbesserung Der ACO Metaheuristik Zu P-ACO}{4}{}%
+\contentsline {subsection}{\numberline {2.5}Ameisenalgorithmen Mit Einem Stetigen Lösungsarchiv}{5}{}%
+\contentsline {subsection}{\numberline {2.6}Ameisenalgorithmen Mit Einem Gemischten Lösungsarchiv}{5}{}%
+\contentsline {subsection}{\numberline {2.7}Ameisenalgorithmen in stetigen Variablen}{6}{}%
+\contentsline {section}{\numberline {3}Optimierungsprobleme}{6}{}%
 \contentsline {section}{\numberline {4}Varianten der Lösungsfindung}{7}{}%
 \contentsline {subsection}{\numberline {4.1}ACO\(_{\mathbb {R}}\)}{7}{}%
-\contentsline {subsection}{\numberline {4.2}ACO\(_{\mathbb {R}}\)-simple}{8}{}%
-\contentsline {subsection}{\numberline {4.3}ACO\(_{\mathbb {R}}\)-very-simple}{9}{}%
-\contentsline {section}{\numberline {5}SPPBPO-Schema}{10}{}%
-\contentsline {section}{\numberline {6}HSPPBO-Schema}{11}{}%
+\contentsline {subsection}{\numberline {4.2}ACO\(_{\mathbb {R}}\)-simple}{9}{}%
+\contentsline {subsection}{\numberline {4.3}ACO\(_{\mathbb {R}}\)-very-simple}{10}{}%
+\contentsline {section}{\numberline {5}SPPBPO-Schema}{11}{}%
+\contentsline {section}{\numberline {6}HSPPBO-Schema}{12}{}%
 \contentsline {section}{\numberline {7}Kombinieren des HSPPBO-Schemas mit ACO\(_\mathbb {R}\)-very-simple}{12}{}%
 \contentsline {subsection}{\numberline {7.1}Hom-HPB-ACO\(_\mathbb {R}\)-very-simple}{12}{}%
 \contentsline {subsection}{\numberline {7.2}Het-HPB-ACO\(_\mathbb {R}\)-very-simple}{12}{}%
