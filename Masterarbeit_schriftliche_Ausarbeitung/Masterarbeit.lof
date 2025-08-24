@@ -1,15 +1,15 @@
 \babel@toc {ngerman}{}\relax 
-\contentsline {figure}{\numberline {1}{\ignorespaces Paraboloid - Visualisierung in 3D}}{20}{}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Verschiedene Auflösungen der Griewangk Testfunktion}}{21}{}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Rosenbrock - Visualisierung in 3D}}{21}{}%
-\contentsline {figure}{\numberline {4}{\ignorespaces gefilterter und ungefilterter Suchraum für das CSD-Problem}}{26}{}%
-\contentsline {figure}{\numberline {5}{\ignorespaces gefilterter und ungefilterter Raum}}{26}{}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Schematische Zeichnung des TISD, wie dargestellt in \cite {ACO_2013}}}{27}{}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Ellipsoid Verglich m}}{28}{}%
-\contentsline {figure}{\numberline {8}{\ignorespaces Ellipsoid Vergleich \textit {q}}}{29}{}%
-\contentsline {figure}{\numberline {9}{\ignorespaces Ellipsoid Vergleich \(\xi \)}}{30}{}%
-\contentsline {figure}{\numberline {10}{\ignorespaces Vergleich zwischen linearer und Standardabweichung (Ellipsoid)}}{32}{}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Vergleich zwischen linearer und Standardabweichung (Ellipsoid)}}{32}{}%
+\contentsline {figure}{\numberline {1}{\ignorespaces Paraboloid - Visualisierung in 3D}}{21}{}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Verschiedene Auflösungen der Griewangk Testfunktion}}{22}{}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Rosenbrock - Visualisierung in 3D}}{22}{}%
+\contentsline {figure}{\numberline {4}{\ignorespaces gefilterter und ungefilterter Suchraum für das CSD-Problem}}{27}{}%
+\contentsline {figure}{\numberline {5}{\ignorespaces gefilterter und ungefilterter Raum}}{27}{}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Schematische Zeichnung des TISD, wie dargestellt in \cite {ACO_2013}}}{28}{}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Ellipsoid Verglich m}}{29}{}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Ellipsoid Vergleich \textit {q}}}{30}{}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Ellipsoid Vergleich \(\xi \)}}{31}{}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Vergleich zwischen linearer und Standardabweichung (Ellipsoid)}}{33}{}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Vergleich zwischen linearer und Standardabweichung (Ellipsoid)}}{33}{}%
 \contentsline {figure}{\numberline {12}{\ignorespaces Cigar Verglich m}}{}{}%
 \contentsline {figure}{\numberline {13}{\ignorespaces Paraboloid Verglich m}}{}{}%
 \contentsline {figure}{\numberline {14}{\ignorespaces Tablet Verglich m}}{}{}%
