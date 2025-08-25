@@ -279,7 +279,7 @@ within=section,
 		Güte = c_1 \cdot f(s_{opt}) + c_2 \cdot \frac{\sum_{i = 1}^n f(s_i)}{n}
 	\end{equation}
 	
-	Dabei sind \(c_1\) und \(c_2\) Konstanten, \(s_{opt}\) die beste Lösung und \(n\) die Anzahl der Lösungen in den Archiven, wobei alle Archive die selbe Anzahl an Lösungen halten. In diesem Fall kann auf eine persönliche und globale beste verzichtet werden.
+	Dabei sind \(c_1, c_2 \in \mathbb{R}\) Konstanten, \(s_{opt}\) die beste Lösung und \(n\) die Anzahl der Lösungen in den Archiven, wobei alle Archive die selbe Anzahl an Lösungen halten. In diesem Fall kann auf eine persönliche und globale beste Lösung verzichtet werden.
 	
 	%TODO Fragen, wo dieser Abschnitt am besten hin soll
 	
@@ -312,6 +312,8 @@ within=section,
 	%TODO Braucht man eine Unterscheidung zwischen Sigma und feasable Sigma
 	
 	\section{Varianten der Lösungsfindung} %TODO besseren Titel überlegen
+	
+	%TODO ACO_R nochmal definieren?
 	
 	Das dieser Arbeit beiliegende Programm ist ein Intervallauswertungsalgorithmus. Wie in der Einleitung motiviert, fragen wir uns, ob komplexe Lösungsfindungsmethoden wirklich nötig sind, um gute Lösungen zu finden, unabhängig davon, ob wir bereits vorhandene Lösungen zu Neuen zusammensetzen oder komplett neue Lösungen auf eine andere Art und Weise generieren.\hfill\newline
 	
@@ -401,6 +403,8 @@ within=section,
 	\noindent genommen. Damit haben wir, ausgehen von einem Lösungsarchiv, eine neue Lösung gewonnen. \hfill\newline
 	
 	\noindent Die Standardeinstellungen der Parameter sind, wie in Tabelle~\ref{ACO_R_simple_Parametereinstellungen} zu sehen ist.
+	
+	%TODO woher kommen die Konstanten erklären
 	
 	\begin{table}[H]
 		\fontsize{10pt}{12pt}
@@ -494,14 +498,20 @@ within=section,
 	
 	Das HSPPBO-Scheme, wie in \cite{kupfer2021hierarchical} beschrieben, zeichnet sich durch die
 	
+	\section{Formulierung Von ACO\(_\mathbb{R}\)-VS Im HSPPBO-Schema}
+	
 	\section{Kombinieren des HSPPBO-Schemas mit ACO\(_\mathbb{R}\)-very-simple}
 	
 	\subsection{Hom-HPB-ACO\(_\mathbb{R}\)-very-simple} \label{subsec:Homogen_HPB_ACO_R_very_simple}
 	
-	\noindent Die einfachste Kombination aus dem HSPPBO-Schema und ACO\(_\mathbb{R}\)-very-simple ergibt Hom-HPB-ACO\(_\mathbb{R}\)-very-simple. Dabei führt jede \ac{sce}, nach der Initialisierung, den ACO\(_\mathbb{R}\)-very-simple Algorithmus aus. Das Archiv, welches bei der Ausführung von ACO\(_\mathbb{R}\)-very-simple notwendig ist, hat diesmal statt 100 Lösungen nur 3. Diese 3 Lösungen sind die zwei Populationen, die jede der SCE mitführt plus die Population, welche die beste bis dato gefunden Lösung hält, wie in Abschnitt~\ref{sec:HSPPBO_Schema} erläutert. Der Mechanismus, welcher das Tauschen von Populationen steuert, wenn eine Eltern-SCE eine schlechtere Lösungen oder eine Kind-SCE eine bessere Lösung findet, wie ebenfalls im Abschnitt~\ref{sec:HSPPBO_Schema} dargelegt, bleibt der gleiche. Dies führt zur Bezeichnung Hierarchical Population-Based ACO\(_\mathbb{R}\)-very-simple oder kurz HPB-ACO\(_\mathbb{R}\)-VS. Was wir noch nicht aufgegriffen haben und wovon in \cite{kupfer2021hierarchical}, über das Tauschen der Knoten im Baum hinaus, kein weiterer Gebraucht gemacht wird, ist, dass die SCEs, abhängig von ihrer Position im Baum, nicht exakt denselben Algorithmus ausführen müssen. Weil aber die erste Iteration der Kombination des HSPPBO-Schemes mit dem ACO\(_\mathbb{R}\)-very-simple Algorithmus dies ebenfalls nicht ausnutzt, bezeichnen wir diese Iteration Homogen-HPB-ACO\(_\mathbb{R}\)-VS oder kurz Hom-HPB-ACO\(_\mathbb{R}\)-VS.
+	\noindent Die einfachste Kombination aus dem HSPPBO-Schema und ACO\(_\mathbb{R}\)-very-simple ergibt Hom-HPB-ACO\(_\mathbb{R}\)-very-simple. Dabei führt jede \ac{sce}, nach der Initialisierung, den ACO\(_\mathbb{R}\)-very-simple Algorithmus aus. Das Archiv, welches bei der Ausführung von ACO\(_\mathbb{R}\)-very-simple notwendig ist, hat diesmal statt 100 Lösungen nur 3. Diese 3 Lösungen sind die zwei Populationen, die jede der SCE mitführt plus die Population, welche die beste bis dato gefunden Lösung hält, wie in Abschnitt~\ref{sec:HSPPBO_Schema} erläutert. Der Mechanismus, welcher das Tauschen von Populationen steuert, wenn eine Eltern-SCE eine schlechtere Lösungen oder eine Kind-SCE eine bessere Lösung findet, wie ebenfalls im Abschnitt~\ref{sec:HSPPBO_Schema} dargelegt, bleibt der gleiche. Dies führt zur Bezeichnung Hierarchical Population-Based ACO\(_\mathbb{R}\)-very-simple oder kurz HPB-ACO\(_\mathbb{R}\)-VS. Was wir noch nicht aufgegriffen haben und wovon in \cite{kupfer2021hierarchical}, über das Tauschen der Knoten im Baum hinaus, kein weiterer Gebraucht gemacht wird, ist, dass die SCEs, abhängig von ihrer Position im Baum, nicht exakt denselben Algorithmus ausführen müssen. Weil aber die erste Iteration der Kombination des HSPPBO-Schemes mit dem ACO\(_\mathbb{R}\)-very-simple Algorithmus dies ebenfalls nicht ausnutzt, bezeichnen wir diese Iteration Homogen-HPB-ACO\(_\mathbb{R}\)-VS oder kurz Hom-HPB-ACO\(_\mathbb{R}\)-VS.\hfill\newline
+	
+	Im HPB-ACO\(_\mathbb{R}\)-VS 
+	
+	
 	
 	%TODO einarbeiten, dass Archive sehr klein sind und es trotzdem funktioniert
-	%TODO fragen ob Überschrift Homo-HPB-ACO sein soll oder Homo-Hierarchical Population-Based Aco
+	%TODO fragen ob Überschrift Hom-HPB-ACO sein soll oder Hom-Hierarchical Population-Based Aco
 	
 	\subsection{Het-HPB-ACO\(_\mathbb{R}\)-very-simple} \label{subsec:Heterogen_HPB_ACO_R_very_simple}
 	
