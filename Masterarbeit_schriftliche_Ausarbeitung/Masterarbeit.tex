@@ -267,7 +267,7 @@ within=section,
 	
 	%Wie im Abschnitt~\ref{subsec:mixed_variable} beschrieben, können Variablen verschieden Skalenniveaus haben aber wenn 
 	
-	\subsection{Ameisenalgorithmen Mit Einem Hierarchischen Gemischten Lösungsarchiv}
+	\subsection{Ameisenalgorithmen mit einem Hierarchischen Gemischten Lösungsarchiv}
 	
 	Wie im Abschnitt~\ref{sec:HSPPBO_Schema} beschrieben, wird bei einem hierarchischen Algorithmus die Anzahl der Archive von insgesamt 1 auf 2 pro \ac{sce} erhöht. Ein Archiv für die letzte gefundene Lösung und Eines für die bis dato beste persönliche Lösung. Zusätzlich gibt es noch 1 weiteres Archiv, welches die bis dato insgesamt beste Lösung hält. Die Größe der Lösungsarchive schrumpft aber, von \(n = 100\) bei ACO\(_\mathbb{R}\)-VS, auf \(n = 1\). Dies ist notwendig, damit Lösungen entlang dem Baum im HSPPBO-Schema wandern können, denn man kann Archive nur dann einfach vergleichen, wenn sie nur eine Lösung haben. Das Vergleichskriterium ist dann der Funktionswert der Fitnessfunktion.\hfill\newline
 	
@@ -276,12 +276,14 @@ within=section,
 	Eine offene Forschungsfrage ist, wie mit Archiven in einer hierarchischen Struktur umgegangen werden kann, wenn sie mehr als 1 Lösung halten. Die einfachste Anordnung ist nach der Besten Lösung im Archiv zu ordnen. Die zweit einfachste Anordnung ist die Archive nach der Durchschnittsqualität der Lösungen zu sortieren. Eine komplexere Möglichkeit die Archive bzgl. ihrer Güte zu ordnen ist einen zusammengesetzten Term zu verwenden, wie in der Gleichung~\ref{eq:Archiveguete} zu sehen.
 	
 	\begin{equation} \label{eq:Archiveguete}
-		Güte = c_1 \cdot f(s_{opt}) + c_2 \cdot \frac{\sum_{i = 1}^n f(s_i)}{n}
+		G"ute = c_1 \cdot f(s_{opt}) + c_2 \cdot \frac{\sum_{i = 1}^n f(s_i)}{n}
 	\end{equation}
 	
-	Dabei sind \(c_1, c_2 \in \mathbb{R}\) Konstanten, \(s_{opt}\) die beste Lösung und \(n\) die Anzahl der Lösungen in den Archiven, wobei alle Archive die selbe Anzahl an Lösungen halten. In diesem Fall kann auf eine persönliche und globale beste Lösung verzichtet werden.
+	Dabei sind \(c_1, c_2 \in \mathbb{R}\) Konstanten, \(s_{opt}\) die beste Lösung und \(n\) die Anzahl der Lösungen in den Archiven, wobei alle Archive die selbe Anzahl an Lösungen halten. In diesem Fall kann auf eine persönliche und globale beste Lösung verzichtet werden. Als Ausgangspunkt für weitere Forschung eignet sich mit der Beziehung \(c_1 + c_2 = 1\), \(c_1, c_2 \in [0,1]\) anzufangen. Als letzte Forschungsfrage können verschiedene Archive verschieden viele Lösungen halten.
 	
+	%TODO c_1 + c_2 = 1 separat als Gleichung oder im Text beibehalten? m Text beubehalten
 	%TODO Fragen, wo dieser Abschnitt am besten hin soll
+	%TODO weitere Forschungsfrage Archiv teilt sich in Teilarchive wenn Lösungen hinreichend stark von einander unterscheiden
 	
 	\subsection{Ameisenalgorithmen in stetigen Variablen}
 	
@@ -302,14 +304,16 @@ within=section,
 	
 	Eine Population \(\mathcal{P}\) besteht aus mindestens einer Lösung \(s \in \Sigma\). Alle Lösungen \(s \in \Sigma\), die auch in einer Population \(\mathcal{P}\) sind, werden durch \(\Sigma|\mathcal{P}\) beschrieben. Darauf aufbauend, gegeben eine Population \(\mathcal{P}\), beschreibt \(\Sigma|\mathcal{P}_i, i \in \{1, \dots, n\}\), alle Werte in \(\Sigma\) an der Stelle \(i\), die auch in \(\mathcal{P}\) an der Stelle \(i\) auftreten.\hfill\newline
 	
-	%TODO Seite 246 müsste es am Ende P sein statt V?
+	%TODO Seite 246 müsste es am Ende P sein statt V? V
 	
 	Eine Lösung \(s_{opt}\) heißt Optimum, wenn gilt \(f(s_{opt}) \leq f(s) \, \forall s \in \Sigma\). Ein Optimierungsproblem kann mehr als ein \(s_{opt}\) haben. Das Ziel eines Optimierungsproblems ist mindestens ein \(s_{opt}\) zu finden.\hfill\newline
 	
 	Mit dieser nun rigoroseren Definition können wir beispielhaft den Suchraum und die Variablen für das \acl{csd} angeben. Der Suchraum ist \(\Sigma = \{\mathbb{R}, \mathbb{O}, \mathbb{N}_{>0}\}\) und die Variablen sind \(X = \{D, d, N\}\). \(\mathbb{O}\) ist die Menge aller rationalen ordinalen Zahlen. Es ist die Menge der rationalen Zahlen \(\mathbb{Q}\) ohne eine Ordnungsrelation. \(D\) ist eine stetige Variable, \(d\) ist ordinal und N ist natürlich, wobei die Beschränkungen \(D \in \{3 \cdot d_{min}, 3.0\}\), \(d \in \{d_{min}, \dots, 0.5000\}\) und \(N \in \{1, \dots, 70\}\) gelten. Die Beschränkung \(d_{min}\) wird im Abschnitt~\ref{subsubsec:Coil_Spring_Design_Problem} zum \ac{csd} angegeben.
 	
-	%TODO fragen, ob d_min angeben werden soll
-	%TODO Braucht man eine Unterscheidung zwischen Sigma und feasable Sigma
+	%TODO Ordnungsrelaton erstetzen
+	
+	%TODO fragen, ob d_min angeben werden soll? nein
+	%TODO Braucht man eine Unterscheidung zwischen Sigma und feasable Sigma? Nein, da feasable gleich eingeschränkten Suchraum aber erwähnen sollte man es
 	
 	\section{Varianten der Lösungsfindung} %TODO besseren Titel überlegen
 	
@@ -404,7 +408,7 @@ within=section,
 	
 	\noindent Die Standardeinstellungen der Parameter sind, wie in Tabelle~\ref{ACO_R_simple_Parametereinstellungen} zu sehen ist.
 	
-	%TODO woher kommen die Konstanten erklären
+	%TODO woher kommen die Konstanten erklären, Schauen, ob es im Paper ACO_R definiert wurde
 	
 	\begin{table}[H]
 		\fontsize{10pt}{12pt}
@@ -523,9 +527,7 @@ within=section,
 	
 	\noindent Für die Tiefe \(0\), also die Wurzel, setzten wir \(\xi = 0.7\), für die Tiefe \(1\) setzen wir \(\xi = 1.0\), für die Tiefe \(2\) setzen wir \(\xi = 1.3\) und ab der Tiefe \(3\) setzen wir \(\xi = 1.5\).\hfill\newline
 	
-	\noindent Die Entscheidung die initialen Werte von \(\xi\) so zu wählen, ergibt sich aus der Überlegung, dass je höher im Baum sich die SCE sich befindet, desto höher auch die Güte der Lösung dieses SCE. Ferner wurde die Annahme getroffen, dass in der Nähe schlechter Lösungen sich weitere schlechte Lösungen befinden und in der Nähe guter Lösungen sich weitere gute Lösungen befinden. Daher verkleinert \(\xi\) das Suchintervall für die Tiefe 0, lässt es unverändert für die Tiefe 1 und vergrößert es ab Tiefe 2.\\
-	
-	%TODO Annahme, wieso gute Lösungen sich in der Nähe von bereits gefundenen guten Lösungen sich befinden, begründen
+	\noindent Die Entscheidung die initialen Werte von \(\xi\) so zu wählen, ergibt sich aus der Überlegung, dass je höher im Baum sich die SCE sich befindet, desto höher auch die Güte der Lösung dieses SCE. Ferner gilt für viele Optimierungsprobleme, dass in der Nähe schlechter Lösungen sich weitere schlechte Lösungen befinden und in der Nähe guter Lösungen sich weitere gute Lösungen befinden. Daher verkleinert \(\xi\) das Suchintervall für die Tiefe 0, lässt es unverändert für die Tiefe 1 und vergrößert es ab Tiefe 2.\\
 	
 	\noindent Wir müssen jetzt jedoch die Generierung des neuen Punktes in Gleichung~\ref{eq:ACO_R_very_simple:interval} anpassen, da für \(\xi > 1.0\) das Intervall größer sein kann als Initialisierungsintervall, was dazu führen kann, dass eine Lösung generiert wird, die nicht im Definitionsraum des Problems liegt und damit ein Optimum angenommen werden kann, dass so nicht existiert. Deswegen ändern wir die Gleichung~\ref{eq:ACO_R_very_simple:interval} zur Gleichung~\ref{eq:Hetero_HPB_ACO_R_very_simple:interval}, wobei \(lg_d\) und \(rg_d\) die respektiven linken bzw. rechten Intervallgrenzen der \(d\)-ten Dimension des Testproblems sind.
 	
@@ -546,11 +548,11 @@ within=section,
 	\noindent Schließlich wird noch die Zufallskomponente in Hetero-HPB-ACO\(_\mathbb{R}\)-very-simple eingearbeitet. Auch hier bietet es sich an, abhängig von der Position der SCE im Baum, die Wahrscheinlichkeit mit der die Zufallskomponente verwendet wird, zu verändern. Die Zufallskomponente für die sich entschieden wurde, ist das Verwenden einer zufälligen Lösung aus dem Initialisierungsraum, anstatt der Lösungskonstruktion in Gleichung~\ref{eq:ACO_R_very_simple_linear_d}. Diese zufällige Lösung wird in der Tiefe \(0\) mit der Wahrscheinlichkeit \(0\%\) genommen, in der Tiefe \(1\) mit \(10\%\), in der Tiefe \(2\) mit \(15\%\) und in der Tiefe \(3\) mit der Wahrscheinlichkeit \(20\%\).
 	
 	%TODO ist es immernoch simple wenn die Wahrscheinlichkeit mit der Höhe des Baumes variiert wird
-	%TODO Code?
+	%TODO Code? Ja, aber Pseudocode
 	
 	\section{Testfunktionen} \label{sec:Testfunktionen}
 	
-	Aufbauend auf meiner Bachelorarbeit~\cite{FCM_2019}, erweitern wir die Art der Testfunktionen, anhand derer wir die Güte der hier vorlegten Erweiterungen von ACO\(_\mathbb{R}\)-VS beurteilen. Wo ACO\(_{\mathbb{R}}\)-VS nur auf stetigen Testfunktionen getestet wurde, werden die Erweiterungen von ACO\(_{\mathbb{R}}\)-VS auf stetigen Testfunktionen getestet, auf Testfunktionen mit stetigen und ordinalen Variablen, sowie auf einem Testproblem mit gemischten Variablen, dem Coil Spring Design Problem~(CSD)~\cite{ACO_2013}. 
+	Aufbauend auf meiner Bachelorarbeit~\cite{FCM_2019}, erweitern wir die Art der Testfunktionen, anhand derer wir die Güte der hier vorlegten Erweiterungen von ACO\(_\mathbb{R}\)-VS beurteilen. Wo ACO\(_{\mathbb{R}}\)-VS nur auf stetigen Testfunktionen getestet wurde, werden die Erweiterungen von ACO\(_{\mathbb{R}}\)-VS auf stetigen Testfunktionen getestet, auf Testfunktionen mit diskreten/ordinalen Variablen und auf Testfunktionen mit gemischten Variablen.
 	
 	%TODO beibehalten, dass es nur zwei der drei sind? explizit auf diskreten testen, weil das sonst niemand tut
 	
@@ -924,13 +926,69 @@ within=section,
 		
 		\subsection{Ordinale Testfunktionen} \label{subsec:Ordinale_Testfunktionen} %wichtig
 		
+		%TODO soll es ordinale oder diskrete Testfunktionen heißen?
+		
 		%TODO Probleme ausdenken
+		
+		\subsubsection{Ordinale Testfunktionen mit gleichverteiltem Definitionsbereich} \label{subsubsec:Ordinale_Testfunktionen_Mit_Gleichverteiltem_Definitionsbereich}
+		
+		Die einfachste Art diskrete/ordinale Testfunktionen zu erhalten, ist die Diskretisierung von stetigen Testfunktionen. Dabei nimmt man \(m \in \mathbb{N}\) Punkte aus dem Definitionsbereich einer stetigen Funktion und bildet aus diesen Punkten einen neuen diskreten Definitionsbereich. Zum Beispiel ist die Funktion \glqq Paraboloid\grqq{} aus Tabelle~\ref{einfacheTestfunktionen} über dem stetigen Definitionsbereich \( D = [-3,7]^n, n = 10\) definiert. Wir nehmen diesen Definitionsbereich und zerlegen ihn in \(m = 11\) gleichverteilte diskrete Punkte. Dies Ergibt \(D = [-3, -2, -1, 0, 1, 2, 3 , 4, 5, 6, 7]^n, n = 10\). Analog gewinnen wir die anderen diskreten Testfunktionen aus Tabelle~\ref{tab:Einfache_Diskrete_Testfunktionen} mit \(m \in \{11, 21, 51\}\). Wie im Abschnitt~\ref{subsec:Definition_ACO_R} hat das Initialisierungsintervall großen Einfluss auf das Verhalten des Algorithmus aber da wir eine gleichverteilte Diskretisierung genommen haben, um die neuen Definitionsbereiche zu erlangen, ist zu erwarten, dass sich das Lösungsverhalten für die Testfunktionen in Tabelle~\ref{tab:Einfache_Diskrete_Testfunktionen} nicht signifikant von denen in Tabelle~\ref{einfacheTestfunktionen} unterscheiden wird.
+		
+		\begin{table}[H]
+			
+			\fontsize{10pt}{12pt}
+			
+			\caption{Testfunktionen zum Vergleich mit Algorithmen, die probabilistisches\hfill\newline
+				Lernen einsetzen}
+			
+			\label{tab:Einfache_Diskrete_Testfunktionen}
+			
+			\begin{tabularx}{\textwidth}{l|l}
+				
+				\rule{6.4cm}{0.4pt} & \rule{8cm}{0.4pt}\\
+				
+				Funktion, Definitionsbereich, & Formel\\
+				Optimum & \\
+				
+				\rule{6.4cm}{0.4pt} & \rule{8cm}{0.4pt}\\
+				
+				Cigar, \(\overrightarrow{x} \in [-3,7]^n, n = 10\), & \(f(x)=x_1^2 + 10^4\sum_{i=2}^{n} x_i^2\)\Tstrut\\
+				0 bei \(\overrightarrow{x} = [0, 0, 0, ...]\) & \\
+				
+				Diagonal plane, \(\overrightarrow{x} \in [0.5,1.5]^n, n = 10\), & \(f(x)=\frac{1}{n} \sum_{i=1}^{n} x_i\)\Tstrut\\
+				\(10^{10}\) bei mehreren & \\
+				
+				Ellipsoid, \(\overrightarrow{x} \in [-3,7]^n, n = 10\), & \(f(x)=\sum_{i=1}^{n} \left(100^\frac{i-1}{n-1} x_i\right)^2\)\Tstrut\\
+				0 bei \(\overrightarrow{x} = [0, 0, 0, ...]\) & \\
+				
+				Paraboloid, \(\overrightarrow{x} \in [-3,7]^n, n = 10\), & \(f(x)=\sum_{i=1}^{n} x^2\)\Tstrut\\
+				0 bei \(\overrightarrow{x} = [0, 0, 0, ...]\) & \\
+				
+				Plane, \(\overrightarrow{x} \in [0.5,1.5]^n, n = 10\), & \(f(x)=x_1\)\Tstrut\\
+				\(10^{10}\) bei \(x_1 = 10^{10}\) & \\
+				
+				Rosenbrock, \(\overrightarrow{x} \in [-3,7]^n, n = 10\),  & \(f(x)=\sum_{i=1}^{n-1} 100 (x^2_i-x_{i+1})^2 + (x_i-1)^2\) \Tstrut\\
+				0 bei \(\overrightarrow{x} = [1, 1, 1, ...]\) & \\
+				
+				Tablet, \(\overrightarrow{x} \in [-3,7]^n, n = 10\), & \(f(x)=10^4x_1^2 + \sum_{i=2}^{n}x^2_i \)\Tstrut\\
+				0 bei \(\overrightarrow{x} = [0, 0, 0, ...]\) &
+				
+			\end{tabularx}
+			
+		\end{table}
+		
+		
+		
 		
 		im Paper werden keine Grenzen für N genannt, obwohl das sehr wichtig ist, weil das Intervall aus dem die ersten k Lösungen gezogen werden, Einfluss hat auf das Verhalten des Algorithmus
 		
 		Es müsste \(\pi^2\) sein
 		
 		Probleme mit nur diskreten Variablen nehmen, statt einer diskret und einer stetigen
+		
+		\subsubsection{Ordinale Testfunktionen mit asymmetrischem Definitionsbereich}
+		
+		Wie in Abschnitt~\ref{subsec:Definition_ACO_R} geschildert, hat das Initialisierungsintervall großen Einfluss auf das Verhalten des Algorithmus. Zusätzlich, wie in \cite{ACO_2003_simiple_problems} beschrieben, kann das Betrachten von einfachen Testfunktionen zu unerwarteten Ergebnissen führen. Deswegen definieren wir in diesem Abschnitt explizit diskrete Funktionen, die einfach sind aber einen nicht-Standarddefinitionsbereich haben. Wir wählen, wie im Abschnitt~\ref{subsubsec:Ordinale_Testfunktionen_Mit_Gleichverteiltem_Definitionsbereich}, \(m \in \{11, 21, 51\}\) aber diesmal ist der Definitionsbereich asymmetrisch verteilt mit \(3\) Clustern. Zum Beispiel transformiert dies den Definitionsbereich der Testfunktion \glqq Paraboloid\grqq{} von \(D = [-3, 7]^n, n = 10\) zu \(D = [-3, -2.8, -2.6, -0.4, -0.2, 0.0, 0.2, 0.4]\)
 		
 		\subsection{Kategorische Testfunktionen} \label{subsec:Kategorische_Testfunktionen} %wichtig
 		

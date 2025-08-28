@@ -1,4 +1,4 @@
-    import os
+import os
 from functools import reduce
 import json
 from src.problem import Problem
