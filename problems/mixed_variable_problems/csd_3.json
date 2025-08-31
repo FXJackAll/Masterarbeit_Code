@@ -1,7 +1,7 @@
 {
   "name": "Coil_Spring_Design_Problem",
   "comment": "standard coil_spring_design problem",
-  "type": "mixed variable problems",
+  "type": "engineering mixed variable problems",
   "dimension": 3,
   "optimum_argument": [[[5], [1.68750609510874], [0.3070]], [[9], [1.2230410099638072], [0.283]], [[9], [1.2230410099821152], [0.283]]],
   "optimum": [2.658559, 2.6585591659695993, 2.6585591660406087, 2.658559166009396],

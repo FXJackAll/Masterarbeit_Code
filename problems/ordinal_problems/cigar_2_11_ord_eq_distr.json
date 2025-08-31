@@ -1,0 +1,24 @@
+{
+  "name": "Cigar_2_11_Ord_Eq_Distr",
+  "comment": "artificial ordinal variable problem",
+  "type": "ordinal variable problems",
+  "continuous_dimension": 0,
+  "discrete_dimension": 2,
+  "dimension": 2,
+  "optimum_argument": [[0.0], [0.0]],
+  "optimum": [0.0],
+
+  "variable_boundaries": {
+    "natural_numbers": [],
+    "discrete": [[-3, 7]],
+    "continuous": [],
+    "ordinal": [],
+    "categorical": []
+  },
+
+  "discrete_values": [-3.0, -2.0, -1.0, 0.0, 1.0,
+                      2.0, 3.0, 4.0 ,5.0, 6.0,
+                      7.0],
+
+  "magnitudes_of_categorical_variables": []
+}

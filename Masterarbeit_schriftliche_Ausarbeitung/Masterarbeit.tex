@@ -18,6 +18,43 @@
 \usepackage{subfig}
 \usepackage{caption, booktabs}
 
+\usepackage{listings}
+\usepackage{xcolor}
+
+\colorlet{punct}{red!60!black}
+\definecolor{background}{HTML}{EEEEEE}
+\definecolor{delim}{RGB}{20,105,176}
+\colorlet{numb}{magenta!60!black}
+
+\lstdefinelanguage{json}{
+	basicstyle=\normalfont\ttfamily,
+	numbers=left,
+	numberstyle=\scriptsize,
+	stepnumber=1,
+	numbersep=8pt,
+	showstringspaces=false,
+	breaklines=true,
+	frame=lines,
+	backgroundcolor=\color{background},
+	literate=
+	*{0}{{{\color{numb}0}}}{1}
+	{1}{{{\color{numb}1}}}{1}
+	{2}{{{\color{numb}2}}}{1}
+	{3}{{{\color{numb}3}}}{1}
+	{4}{{{\color{numb}4}}}{1}
+	{5}{{{\color{numb}5}}}{1}
+	{6}{{{\color{numb}6}}}{1}
+	{7}{{{\color{numb}7}}}{1}
+	{8}{{{\color{numb}8}}}{1}
+	{9}{{{\color{numb}9}}}{1}
+	{:}{{{\color{punct}{:}}}}{1}
+	{,}{{{\color{punct}{,}}}}{1}
+	{\{}{{{\color{delim}{\{}}}}{1}
+	{\}}{{{\color{delim}{\}}}}}{1}
+	{[}{{{\color{delim}{[}}}}{1}
+	{]}{{{\color{delim}{]}}}}{1},
+}
+
 \usepackage{float}
 
 \DeclareFloatingEnvironment
@@ -552,7 +589,44 @@ within=section,
 	
 	\section{Testfunktionen} \label{sec:Testfunktionen}
 	
-	Aufbauend auf meiner Bachelorarbeit~\cite{FCM_2019}, erweitern wir die Art der Testfunktionen, anhand derer wir die Güte der hier vorlegten Erweiterungen von ACO\(_\mathbb{R}\)-VS beurteilen. Wo ACO\(_{\mathbb{R}}\)-VS nur auf stetigen Testfunktionen getestet wurde, werden die Erweiterungen von ACO\(_{\mathbb{R}}\)-VS auf stetigen Testfunktionen getestet, auf Testfunktionen mit diskreten/ordinalen Variablen und auf Testfunktionen mit gemischten Variablen.
+	Aufbauend auf meiner Bachelorarbeit~\cite{FCM_2019}, erweitern wir die Art der Testfunktionen, anhand derer wir die Güte der hier vorlegten Erweiterungen von ACO\(_\mathbb{R}\)-VS beurteilen. Wo ACO\(_{\mathbb{R}}\)-VS nur auf stetigen Testfunktionen getestet wurde, werden die Erweiterungen von ACO\(_{\mathbb{R}}\)-VS auf stetigen Testfunktionen getestet, auf Testfunktionen mit diskreten/ordinalen Variablen und auf Testfunktionen mit gemischten Variablen.\hfill\newline
+	
+	Da in meiner Bachelorarbeit die Testfunktionen in ihren Dimensionen nicht variiert haben, Intervallgrenzen keine Rolle spielten und alle Funktionen über stetigen, zusammenhängenden Definitionsbereichen definiert waren, brauchte es keiner standardisierten, abstrakten Definition. In dieser Arbeit aber betrachten wir stetige und diskrete/ordinale Testfunktionen, sowie Testfunktionen mit gemischten Variablen. Ferner liegen 5 der Testprobleme mit gemischten Variablen in drei verschiedenen Dimensionen dar, nämlich \(n \in \{2, 5, 10\}\). Deswegen war eine überarbeitete Definition der Testprobleme notwendig. Die einfachste Definition mit dem neuen Standard ist in Abbildung~\ref{JSON:Cigar10DimCont} zu sehen.
+	
+	%TODO Testfunktion oder Testproblem?
+	
+	%TODO ist es Abbildung, Liste oder Pseudo Code
+
+\newpage
+	
+	\begin{lstlisting}[language=json, caption=Cigar 10Dim stetiger Definitionsbereich, label=JSON:Cigar10DimCont]
+{
+	"name": "Cigar",
+	"comment": "standard Cigar problem",
+	"type": "simple continuous problems",
+	"dimension": 10,
+	"optimum_argument": [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
+	"optimum": 0,
+	
+	"variable_boundaries": {
+		"natural_numbers": [],
+		"discrete": [],
+		"continuous": [[-3, 7]],
+		"ordinal": [],
+		"categorical": []
+	},
+	
+	"discrete_values": [],
+	
+	"magnitudes_of_categorical_variables": []
+}
+	\end{lstlisting}
+	
+	\hfill\newline
+
+	Wie zu in Abbildung~\ref{JSON:Cigar10DimCont} zu sehen, besteht die neue, abstrakte Definition u.a. aus \glqq variable boundaries\grqq{}. Dies ist ein neuer Eintrag, der notwendig geworden ist, da  da für das Problem im Abschnitt~\ref{subsubsec:Coil_Spring_Design_Problem} die Intervallgrenzen zugleich Beschränkungen des Problems sind. Ein weiterer Grund das JSON-Format zu nehmen, ist, dass die Intervallgrenzen direkt als Dictionary in Python ausgelesen können
+	
+	%TODO jeden Eintrag erklären?
 	
 	%TODO beibehalten, dass es nur zwei der drei sind? explizit auf diskreten testen, weil das sonst niemand tut
 	
@@ -988,7 +1062,34 @@ within=section,
 		
 		\subsubsection{Ordinale Testfunktionen mit asymmetrischem Definitionsbereich}
 		
-		Wie in Abschnitt~\ref{subsec:Definition_ACO_R} geschildert, hat das Initialisierungsintervall großen Einfluss auf das Verhalten des Algorithmus. Zusätzlich, wie in \cite{ACO_2003_simiple_problems} beschrieben, kann das Betrachten von einfachen Testfunktionen zu unerwarteten Ergebnissen führen. Deswegen definieren wir in diesem Abschnitt explizit diskrete Funktionen, die einfach sind aber einen nicht-Standarddefinitionsbereich haben. Wir wählen, wie im Abschnitt~\ref{subsubsec:Ordinale_Testfunktionen_Mit_Gleichverteiltem_Definitionsbereich}, \(m \in \{11, 21, 51\}\) aber diesmal ist der Definitionsbereich asymmetrisch verteilt mit \(3\) Clustern. Zum Beispiel transformiert dies den Definitionsbereich der Testfunktion \glqq Paraboloid\grqq{} von \(D = [-3, 7]^n, n = 10\) zu \(D = [-3, -2.8, -2.6, -0.4, -0.2, 0.0, 0.2, 0.4]\)
+		Wie in Abschnitt~\ref{subsec:Definition_ACO_R} geschildert, hat das Initialisierungsintervall großen Einfluss auf das Verhalten des Algorithmus. Zusätzlich, wie in \cite{ACO_2003_simiple_problems} beschrieben, kann das Betrachten von einfachen Testfunktionen zu unerwarteten Ergebnissen führen. Deswegen definieren wir in diesem Abschnitt explizit diskrete Funktionen, die einfach sind aber einen nicht-Standarddefinitionsbereich haben. Wir wählen, wie im Abschnitt~\ref{subsubsec:Ordinale_Testfunktionen_Mit_Gleichverteiltem_Definitionsbereich}, \(m \in \{11, 21, 51\}\) aber diesmal ist der Definitionsbereich asymmetrisch verteilt mit \(3\) Clustern. Zum Beispiel transformiert dies den stetigen Definitionsbereich der Testfunktion \glqq Paraboloid\grqq{} von \(D = [-3, 7]^n, n = 10\) zu \(D = [-3, -2.8, -2.6, -0.4, -0.2, 0.0, 0.2, 0.4, 6.6, 6.8, 7.0]\). Im JSON-Format wird dies wie im JSON-File~\ref{JSON:Cigar2Dim11OrdAsymm} angezeigt.
+		
+		\begin{lstlisting}[language=json, caption=Cigar 2Dim ordinal asymmetrischer Definitionsbereich, label=JSON:Cigar2Dim11OrdAsymm]
+{
+	"name": "Cigar_2_11_Ord_Eq_Distr",
+	"comment": "artificial ordinal variable problem",
+	"type": "ordinal variable problems",
+	"continuous_dimension": 0,
+	"discrete_dimension": 2,
+	"dimension": 2,
+	"optimum_argument": [[0.0], [0.0]],
+	"optimum": [0.0],
+	
+	"variable_boundaries": {
+		"natural_numbers": [],
+		"discrete": [[-3, 7]],
+		"continuous": [],
+		"ordinal": [],
+		"categorical": []
+	},
+	
+	"discrete_values": [-3, -2.8, -2.6,
+			    -0.4, -0.2, 0.0, 0.2, 0.4,
+			    6.6, 6.8, 7.0],
+	
+	"magnitudes_of_categorical_variables": []
+}
+		\end{lstlisting}
 		
 		\subsection{Kategorische Testfunktionen} \label{subsec:Kategorische_Testfunktionen} %wichtig
 		
