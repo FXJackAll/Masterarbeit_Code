@@ -2,7 +2,7 @@
   "name": "Paraboloid",
   "comment": "standard paraboloid problem",
   "type": "simple continuous problems",
-  "dimension": 10,
+  "dimension": 6,
   "optimum_argument": [[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]],
   "optimum": 0,
 
