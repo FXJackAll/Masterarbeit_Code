@@ -171,6 +171,9 @@ within=section,
 	\tableofcontents
 	\newpage
 	
+	%TODO Inhaltverzeichnis im Inhaltsverzeichnis anzeigen?
+	%TODO römische Seitenzahlen für Inhaltsverzeichnis und Anlagen?
+	
 	\addcontentsline{toc}{section}{Abkürzungsverzeichnis}
 	
 	\section*{Abkürzungsverzeichnis}
@@ -599,7 +602,7 @@ within=section,
 
 \newpage
 	
-	\begin{lstlisting}[language=json, caption=Cigar 10Dim stetiger Definitionsbereich, label=JSON:Cigar10DimCont]
+	\begin{lstlisting}[language=json, caption=Cigar 10 Dim stetiger Definitionsbereich, label=JSON:Cigar10DimCont]
 {
 	"name": "Cigar",
 	"comment": "standard Cigar problem",
@@ -624,9 +627,15 @@ within=section,
 	
 	\hfill\newline
 
-	Wie zu in Abbildung~\ref{JSON:Cigar10DimCont} zu sehen, besteht die neue, abstrakte Definition u.a. aus \glqq variable boundaries\grqq{}. Dies ist ein neuer Eintrag, der notwendig geworden ist, da  da für das Problem im Abschnitt~\ref{subsubsec:Coil_Spring_Design_Problem} die Intervallgrenzen zugleich Beschränkungen des Problems sind. Ein weiterer Grund das JSON-Format zu nehmen, ist, dass die Intervallgrenzen direkt als Dictionary in Python ausgelesen können
+	Wie zu in Abbildung~\ref{JSON:Cigar10DimCont} zu sehen, besteht die neue, abstrakte Definition u.a. aus \glqq variable\_boundaries\grqq{}. Dies ist ein neuer Eintrag, der notwendig geworden ist, da für das Problem im Abschnitt~\ref{subsubsec:Coil_Spring_Design_Problem} die Intervallgrenzen zugleich Beschränkungen des Problems sind. Ein weiterer Grund das JSON-Format zu nehmen, ist, dass alle Einträge als Wörterbücher ausgelesen werden können, was die Definition von neuen abstrakten Einträger leicht macht, da die Anordnung, im Vergleich zu einem Feld, bei einem Wörterbuch keine Rolle spielt.\hfill\newline
+	
+	Weitere Einträge, die notwendig geworden sind.\hfill\newline
+	
+	Der letzte Grund, warum das JSON-Format gewählt wurde, wie in Abbildung~\ref{JSON:Cigar10DimCont} zu sehen, kann das JSON-Format jede Art von Eintrag aufnehmen und somit jede Form von abstrakter Variable beherbergen und damit einen hohen Abstraktionsgrad liefern, der, für auf dieser Arbeit aufbauende Forschung, notwendig ist.
 	
 	%TODO jeden Eintrag erklären?
+	
+	%TODO Wörterbuch oder Dictionary, Array oder Feld?
 	
 	%TODO beibehalten, dass es nur zwei der drei sind? explizit auf diskreten testen, weil das sonst niemand tut
 	
@@ -1942,7 +1951,7 @@ within=section,
 	
 	\addpart{Anlagen}
 	
-	\pagenumbering{gobble}
+	\pagenumbering{Roman}
 	
 	\section{Einfluss der Anzahl der Ameisen}
 	

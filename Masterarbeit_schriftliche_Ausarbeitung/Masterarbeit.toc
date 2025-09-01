@@ -23,10 +23,10 @@
 \contentsline {subsection}{\numberline {8.2}Het-HPB-ACO\(_\mathbb {R}\)-very-simple}{13}{}%
 \contentsline {subsection}{\numberline {8.3}Het-HSPPB-ACO\(_\mathbb {R}\)-very-simple}{14}{}%
 \contentsline {section}{\numberline {9}Testfunktionen}{14}{}%
-\contentsline {subsection}{\numberline {9.1}Permutationsprobleme Testfunktionen}{15}{}%
-\contentsline {subsubsection}{\numberline {9.1.1}Traveling Salesperson Problem (TSP)}{15}{}%
-\contentsline {subsubsection}{\numberline {9.1.2}Quadratic Assigment Problem (QAP)}{15}{}%
-\contentsline {subsection}{\numberline {9.2}Stetige Testfunktionen}{15}{}%
+\contentsline {subsection}{\numberline {9.1}Permutationsprobleme Testfunktionen}{16}{}%
+\contentsline {subsubsection}{\numberline {9.1.1}Traveling Salesperson Problem (TSP)}{16}{}%
+\contentsline {subsubsection}{\numberline {9.1.2}Quadratic Assigment Problem (QAP)}{16}{}%
+\contentsline {subsection}{\numberline {9.2}Stetige Testfunktionen}{16}{}%
 \contentsline {subsubsection}{\numberline {9.2.1}Testfunktion - Paraboloid}{21}{}%
 \contentsline {subsubsection}{\numberline {9.2.2}Testfunktion - Griewangk}{22}{}%
 \contentsline {subsubsection}{\numberline {9.2.3}Testfunktion - Rosenbrock}{23}{}%
@@ -54,8 +54,8 @@
 \contentsline {subsection}{\numberline {14.1}Rosenbrock}{45}{}%
 \contentsline {section}{\numberline {15}Kurzzusammenfassung}{46}{}%
 \contentsline {section}{Literaturverzeichnis}{47}{}%
-\contentsline {part}{\nonumberline Anlagen}{}{}%
-\contentsline {section}{\numberline {A}Einfluss der Anzahl der Ameisen}{}{}%
-\contentsline {section}{\numberline {B}Einfluss des Parameters \textit {q}}{}{}%
-\contentsline {section}{\numberline {C}Einfluss des Parameters \(\xi \)}{}{}%
+\contentsline {part}{\nonumberline Anlagen}{I}{}%
+\contentsline {section}{\numberline {A}Einfluss der Anzahl der Ameisen}{I}{}%
+\contentsline {section}{\numberline {B}Einfluss des Parameters \textit {q}}{II}{}%
+\contentsline {section}{\numberline {C}Einfluss des Parameters \(\xi \)}{III}{}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

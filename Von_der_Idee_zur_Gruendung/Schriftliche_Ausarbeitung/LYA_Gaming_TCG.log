@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.18)  10 AUG 2025 18:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.18)  1 SEP 2025 16:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -622,7 +622,7 @@ File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/
 dvips/lm/lm-ec.enc}]
 LaTeX Font Info:    Trying to load font information for T1+lmss on input line 1
-69.
+71.
 
 (/usr/share/texmf/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -682,92 +682,87 @@ Overfull \hbox (3.71039pt too wide) detected at line 68
 
  [2] [3]
 Package acronym Info: Label `acro:mtg' newly defined as it shall be overridden
-although it is yet undefined on input line 200.
+although it is yet undefined on input line 202.
 Package acronym Info: Label `acro:ip' newly defined as it shall be overridden
-although it is yet undefined on input line 200.
+although it is yet undefined on input line 202.
 Package acronym Info: Label `acro:HS' newly defined as it shall be overridden
-although it is yet undefined on input line 200.
+although it is yet undefined on input line 202.
 Package acronym Info: Label `acro:fab' newly defined as it shall be overridden
-although it is yet undefined on input line 200.
+although it is yet undefined on input line 202.
 
-Underfull \hbox (badness 10000) in paragraph at lines 200--201
+Underfull \hbox (badness 10000) in paragraph at lines 202--203
 
  []
 
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2
-04.
+06.
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Underfull \hbox (badness 10000) in paragraph at lines 204--205
+Underfull \hbox (badness 10000) in paragraph at lines 206--207
 
  []
 
 [1{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 212--213
+Underfull \hbox (badness 10000) in paragraph at lines 214--215
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 222--223
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 224--225
 
  []
 
-[3]
+
 Underfull \hbox (badness 10000) in paragraph at lines 226--227
 
  []
 
-
+[3]
 Underfull \hbox (badness 10000) in paragraph at lines 228--229
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 232--233
+Underfull \hbox (badness 10000) in paragraph at lines 230--231
 
  []
 
-[4]
+
 Underfull \hbox (badness 10000) in paragraph at lines 234--235
 
  []
 
-
+[4]
 Underfull \hbox (badness 10000) in paragraph at lines 236--237
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 242--243
+Underfull \hbox (badness 10000) in paragraph at lines 238--239
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 244--245
 
  []
 
 [5]
 Package acronym Info: Label `acro:f2p' newly defined as it shall be overridden
-although it is yet undefined on input line 252.
+although it is yet undefined on input line 254.
 
-Underfull \hbox (badness 10000) in paragraph at lines 252--253
+Underfull \hbox (badness 10000) in paragraph at lines 254--255
 
  []
 
 [6] [7]
-Underfull \hbox (badness 10000) in paragraph at lines 286--287
-
- []
-
-[8]
 Underfull \hbox (badness 10000) in paragraph at lines 288--289
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 294--295
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 290--291
 
  []
 
@@ -782,95 +777,100 @@ Underfull \hbox (badness 10000) in paragraph at lines 298--299
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 306--307
+Underfull \hbox (badness 10000) in paragraph at lines 300--301
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 308--309
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 312--313
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 314--315
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 316--317
+
+ []
+
 [10] [11] [12]
-Overfull \hbox (7.25014pt too wide) in paragraph at lines 360--361
+Overfull \hbox (7.25014pt too wide) in paragraph at lines 362--363
 \T1/lmr/m/n/10.95 und Feed-back. Mod-ding ist die Ver-än-de-rung/Erweiterung ei
 -nes Spie-les durch Fans/Spieler,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 360--361
+Underfull \hbox (badness 10000) in paragraph at lines 362--363
 
  []
 
 [13] [14]
-Underfull \hbox (badness 10000) in paragraph at lines 406--407
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 408--409
 
  []
 
-[15]
+
 Underfull \hbox (badness 10000) in paragraph at lines 410--411
 
  []
 
-
+[15]
 Underfull \hbox (badness 10000) in paragraph at lines 412--413
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 422--423
+Underfull \hbox (badness 10000) in paragraph at lines 414--415
 
  []
 
-[16]
+
 Underfull \hbox (badness 10000) in paragraph at lines 424--425
 
  []
 
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 426--427
 
-Underfull \hbox (badness 10000) in paragraph at lines 430--431
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 432--433
 
  []
 
 [17{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/e
 nc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 432--433
+Underfull \hbox (badness 10000) in paragraph at lines 434--435
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 444--445
-
- []
-
-[18]
 Underfull \hbox (badness 10000) in paragraph at lines 446--447
 
  []
 
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 448--449
 
-Overfull \hbox (18.4454pt too wide) in paragraph at lines 448--449
+ []
+
+
+Overfull \hbox (18.4454pt too wide) in paragraph at lines 450--451
 \T1/lmr/m/n/10.95 Unsere letz-te Ak-ti-vi-tät ist das Influencer-Marketing. Nor
 -ma-ler-wei-se ist Influencer-Marketing,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 448--449
+Underfull \hbox (badness 10000) in paragraph at lines 450--451
 
  []
 
 [19] [20]
-Underfull \hbox (badness 10000) in paragraph at lines 484--485
+Underfull \hbox (badness 10000) in paragraph at lines 486--487
 
  []
 
@@ -916,7 +916,7 @@ File: Abbildungen/Product_-_Market_-_Fit_F2P_Kern_-_Spieler.png Graphic file (t
 ype png)
 <use Abbildungen/Product_-_Market_-_Fit_F2P_Kern_-_Spieler.png>
 Package pdftex.def Info: Abbildungen/Product_-_Market_-_Fit_F2P_Kern_-_Spieler.
-png  used on input line 537.
+png  used on input line 539.
 (pdftex.def)             Requested size: 418.25555pt x 235.28006pt.
 <Abbildungen/Product_-_Market_-_Fit_Hardcore_Spieler.png, id=106, 462.528pt x 2
 60.172pt>
@@ -924,13 +924,13 @@ File: Abbildungen/Product_-_Market_-_Fit_Hardcore_Spieler.png Graphic file (typ
 e png)
 <use Abbildungen/Product_-_Market_-_Fit_Hardcore_Spieler.png>
 Package pdftex.def Info: Abbildungen/Product_-_Market_-_Fit_Hardcore_Spieler.pn
-g  used on input line 549.
+g  used on input line 551.
 (pdftex.def)             Requested size: 418.25555pt x 235.28006pt.
 <Abbildungen/Product_-_Market_-_Fit_Wal.png, id=107, 462.528pt x 260.172pt>
 File: Abbildungen/Product_-_Market_-_Fit_Wal.png Graphic file (type png)
 <use Abbildungen/Product_-_Market_-_Fit_Wal.png>
 Package pdftex.def Info: Abbildungen/Product_-_Market_-_Fit_Wal.png  used on in
-put line 567.
+put line 569.
 (pdftex.def)             Requested size: 418.25555pt x 235.28006pt.
 [5
 
@@ -943,21 +943,21 @@ File: Abbildungen/Yu_Gi_Oh_card_example_with_a_lot_of_text.png Graphic file (ty
 pe png)
 <use Abbildungen/Yu_Gi_Oh_card_example_with_a_lot_of_text.png>
 Package pdftex.def Info: Abbildungen/Yu_Gi_Oh_card_example_with_a_lot_of_text.p
-ng  used on input line 587.
+ng  used on input line 589.
 (pdftex.def)             Requested size: 125.47794pt x 183.93617pt.
 <Abbildungen/Magic_the_gathering_card_example.png, id=118, 359.3425pt x 501.875
 pt>
 File: Abbildungen/Magic_the_gathering_card_example.png Graphic file (type png)
 <use Abbildungen/Magic_the_gathering_card_example.png>
 Package pdftex.def Info: Abbildungen/Magic_the_gathering_card_example.png  used
- on input line 588.
+ on input line 590.
 (pdftex.def)             Requested size: 131.75151pt x 184.01373pt.
 <Abbildungen/Hearthstone_card_example_cropped.png, id=119, 411.5375pt x 583.178
 76pt>
 File: Abbildungen/Hearthstone_card_example_cropped.png Graphic file (type png)
 <use Abbildungen/Hearthstone_card_example_cropped.png>
 Package pdftex.def Info: Abbildungen/Hearthstone_card_example_cropped.png  used
- on input line 589.
+ on input line 591.
 (pdftex.def)             Requested size: 130.49425pt x 184.92139pt.
 <Abbildungen/pie_chart_better_neu_2_higher_resolution_cropped.png, id=120, 722.
 7pt x 326.6604pt>
@@ -965,23 +965,23 @@ File: Abbildungen/pie_chart_better_neu_2_higher_resolution_cropped.png Graphic
 file (type png)
 <use Abbildungen/pie_chart_better_neu_2_higher_resolution_cropped.png>
 Package pdftex.def Info: Abbildungen/pie_chart_better_neu_2_higher_resolution_c
-ropped.png  used on input line 599.
+ropped.png  used on input line 601.
 (pdftex.def)             Requested size: 334.60571pt x 151.24254pt.
  [7 <./Abbildungen/Yu_Gi_Oh_card_example_with_a_lot_of_text.png (PNG copy)> <./
 Abbildungen/Magic_the_gathering_card_example.png> <./Abbildungen/Hearthstone_ca
 rd_example_cropped.png> <./Abbildungen/pie_chart_better_neu_2_higher_resolution
 _cropped.png>]
 Package acronym Info: Label `acro:wow' newly defined as it shall be overridden
-although it is yet undefined on input line 615.
+although it is yet undefined on input line 617.
  [8]
-Underfull \hbox (badness 10000) in paragraph at lines 652--653
+Underfull \hbox (badness 10000) in paragraph at lines 654--655
 
  []
 
 <Abbildungen/Unterschrift.png, id=130, 91.0602pt x 38.3031pt>
 File: Abbildungen/Unterschrift.png Graphic file (type png)
 <use Abbildungen/Unterschrift.png>
-Package pdftex.def Info: Abbildungen/Unterschrift.png  used on input line 657.
+Package pdftex.def Info: Abbildungen/Unterschrift.png  used on input line 659.
 (pdftex.def)             Requested size: 209.12778pt x 87.97893pt.
 [9 <./Abbildungen/Unterschrift.png>] (./LYA_Gaming_TCG.aux)
  ***********
