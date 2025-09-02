@@ -1,0 +1,31 @@
+\babel@toc {ngerman}{}\relax 
+\contentsline {section}{\numberline {1}Einleitung}{1}{}%
+\contentsline {section}{\numberline {2}Einführung in Ameisenalgorithmen}{2}{}%
+\contentsline {subsection}{\numberline {2.1}Beschreibung der Idee eines Ameisenalgorithmen}{2}{}%
+\contentsline {subsection}{\numberline {2.2}mathematische Beschreibung}{3}{}%
+\contentsline {subsection}{\numberline {2.3}Permutationsprobleme}{4}{}%
+\contentsline {subsection}{\numberline {2.4}Verbesserungen der ACO Metaheuristik zur PB-ACO}{4}{}%
+\contentsline {subsection}{\numberline {2.5}Ameisenalgorithmen mit stetigem Lösungsarchiv}{5}{}%
+\contentsline {subsection}{\numberline {2.6}Ameisenalgorithmen in stetigen Variablen}{5}{}%
+\contentsline {section}{\numberline {3}Varianten der Lösungsfindung}{6}{}%
+\contentsline {subsection}{\numberline {3.1}ACO\(_{\mathbb {R}}\)}{6}{}%
+\contentsline {subsection}{\numberline {3.2}ACO\(_{\mathbb {R}}\)-simple}{8}{}%
+\contentsline {subsection}{\numberline {3.3}ACO\(_{\mathbb {R}}\)-very-simple}{9}{}%
+\contentsline {section}{\numberline {4}Testfunktion}{10}{}%
+\contentsline {section}{\numberline {5}Einfluss der Parameter}{15}{}%
+\contentsline {subsection}{\numberline {5.1}Einfluss der Anzahl der Ameisen}{16}{}%
+\contentsline {subsection}{\numberline {5.2}Einfluss des Parameters \textit {q}}{16}{}%
+\contentsline {subsection}{\numberline {5.3}Einfluss des Parameters \textit {k}}{17}{}%
+\contentsline {subsection}{\numberline {5.4}Einfluss des Parameters \(\xi \)}{18}{}%
+\contentsline {subsection}{\numberline {5.5}Auswertung der Einflüsse der Parameter}{18}{}%
+\contentsline {section}{\numberline {6}Vergleich zweier Intervallberechnungen für ACO\(_{\mathbb {R}}\)-simple und ACO\(_{\mathbb {R}}\)-very-simple}{19}{}%
+\contentsline {section}{\numberline {7}Vergleich von ACO\(_{\mathbb {R}}\), ACO\(_{\mathbb {R}}\)-simple und ACO\(_{\mathbb {R}}\)-very-simple}{21}{}%
+\contentsline {section}{\numberline {8}Konvergenzbetrachtung}{28}{}%
+\contentsline {subsection}{\numberline {8.1}Rosenbrock}{29}{}%
+\contentsline {section}{\numberline {9}Kurzzusammenfassung}{30}{}%
+\contentsline {section}{Literaturverzeichnis}{31}{}%
+\contentsline {part}{\nonumberline Anlagen}{}{}%
+\contentsline {section}{\numberline {A}Einfluss der Anzahl der Ameisen}{}{}%
+\contentsline {section}{\numberline {B}Einfluss des Parameters \textit {q}}{}{}%
+\contentsline {section}{\numberline {C}Einfluss des Parameters \(\xi \)}{}{}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

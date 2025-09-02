@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2023/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Bachelorarbeit.aux
+The style file: abbrvdin.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: literatur.bib
+You've used 11 entries,
+            4332 wiz_defined-function locations,
+            882 strings with 7372 characters,
+and the built_in function-call counts, 5451 in all, are:
+= -- 556
+> -- 157
+< -- 135
++ -- 169
+- -- 52
+* -- 351
+:= -- 985
+add.period$ -- 11
+call.type$ -- 11
+change.case$ -- 47
+chr.to.int$ -- 0
+cite$ -- 11
+duplicate$ -- 161
+empty$ -- 411
+format.name$ -- 100
+if$ -- 1097
+int.to.chr$ -- 0
+int.to.str$ -- 11
+missing$ -- 49
+newline$ -- 65
+num.names$ -- 22
+pop$ -- 80
+preamble$ -- 1
+purify$ -- 47
+quote$ -- 0
+skip$ -- 276
+stack$ -- 0
+substring$ -- 313
+swap$ -- 49
+text.length$ -- 29
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 44
+warning$ -- 0
+while$ -- 55
+width$ -- 13
+write$ -- 143
