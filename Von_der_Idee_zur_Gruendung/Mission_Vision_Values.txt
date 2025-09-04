@@ -1,42 +1,26 @@
-Though you said that we shouldn't say outright that we aim to be "The Good Guys",
-manifesting this intention will be at the core of everything that we do,
-that does include mission, vision and values. And it starts by influencing those
-by keeping it real, instead of sounding pretentious like it does
-in the examples you send me.
-
 Mission:
 
-Creating the best TCG
-by turning players into creators
-and allowing everyone around the world
-to participate in the games evolution
-transforming the game into a global
-effort and phenomenon.
+Creating a Framework that allows us and others,
+without writing even a single line of code,
+to create the card games of our dreams.
 
 Vision:
 
-Reforming the industry by creating a TCG where players
-not just play but co-create the game, too.
-
-- developing a software that allows player, upon the fundation we provide,
-  to build the best TCG ever created.
+To create foundations that tear down rad tape
+and enable others together with us to manifest our dreams.
 
 Values:
 
-- Honesty: With us the players and creators get what the see.
-	   We openly communicate our price structures
-	   and revenue streams.
+- Curiousness:
+	We search for opportunaties to tear down obsticals for other
+	so they can pursue theis dreams with ease
 
-- Trust: We give the players and creators the feeling
-	 that their voicec and feeling are heard, cherished
-	 and that they actively inform our design decision.
+- Integrity:
+	We only act in ways that are free from ulterior motives.
 
-- Community: All of us create the game together.
-	     It is ours from the start and we all
-	     share it.
-
-
-
+- Community:
+	We listen to and value the communities that our foundations create.
+	We work together and we succeed together.
 
 
 - no predatory advertising, marketing
