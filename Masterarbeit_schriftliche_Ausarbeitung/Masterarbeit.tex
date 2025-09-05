@@ -21,6 +21,10 @@
 \usepackage{listings}
 \usepackage{xcolor}
 
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\makeatletter
+
 \colorlet{punct}{red!60!black}
 \definecolor{background}{HTML}{EEEEEE}
 \definecolor{delim}{RGB}{20,105,176}
@@ -537,26 +541,96 @@ within=section,
 	
 	%TODO reicht das oder Pseudocode hinzufügen?
 	
-	\section{SPPBPO-Schema} \label{sec:SPPBO_Schema}
+	\section{SPPBO-Schema} \label{sec:SPPBO_Schema}
 	
 	Wie in \cite{lin2015simple} beschrieben, besteht das SPPBO-Scheme aus 6 Teilen. Diese sind der Suchraum \(\Sigma\), die Menge der lösungskreierenden Entitäten \(\mathcal{E}\), die Menge der Populationen bzw. Archive von Lösungen \(\mathcal{P}\), die Heuristik \(\eta\), die Initialisierungsmethode \(\mathcal{I}\) und das Stoppkriterium \(\mathcal{S}\). Also kann das SPPBO-Scheme beschrieben werden durch das Tupel \((\Sigma, \mathcal{E}, \mathcal{P}, \eta, \mathcal{I}, \mathcal{S})\). Im Folgenden werden die lösungskreierenden Entitäten als \ac{sce} (\acl{sce}) bezeichnet.\hfill\newline
 	
 	\noindent Der Suchraum \(\Sigma\) kann \(\Sigma=\{a_1, \dots, a_n\}\) sein, für das TSP, wobei die \(a_i, i \in \{1, \dots, \mathbb{N}\}\) die Positionen der Städte sind, \(\mathbb{R}^n, n \in \mathbb{N}\) für stetige Funktionen, wie der Paraboloidfunktion, wie sie in Tabelle~\ref{einfacheTestfunktionen} definiert ist oder eine Zusammensetzung von Intervallen über verschiedenen Skalenniveaus, wie es in Abschnitt~\ref{subsubsec:Coil_Spring_Design_Problem} für das CSD ist, wo \(\Sigma\) sich aus einem stetigem, einem ordinalen und einem Intervall über den natürlichen Zahlen zusammensetzt. Im SPPBO-Schema kann \(\mathcal{E}\) aus 2 Ameisen, wie in ACO~\cite{blum2005ant} oder PACO~\cite{guntsch2002population}, bestehen oder auch nur einer Ameise, wie in ACO\(_\mathbb{R}\)-VS~\cite{FCM_2019}, oder \(N \in \mathbb{N}\) Partikeln, wie im Set-Based Discrete PSO~\cite{chen2012set}. Die Menge der Populationen \(\mathcal{P}\) im SPPBO-Schema, wie es in \cite{lin2015simple} definiert ist, besteht aus zwei Populationen, die jede \ac{sce} mitführt, einer Persönlichen \(P^{SCE}_{pers}\) und einer Globalen \(P^{SCE}_{best}\). Die persönliche Population \(p_{pers}\) besteht aus der besten Lösung, welche die jeweilige SCE bis einschließlich der letzten Iteration des Algorithmus gefunden hat. Die globale Population \(P^{SCE}_{best}\) besteht aus der besten Lösung, die alle SCE bis einschließlich der letzten Iteration gefunden haben. Wenn es jedoch nur eine Population, wie in ACO\(_\mathbb{R}\)-VS~\cite{FCM_2019}, gibt, dann kann diese \(n \in \mathbb{N}\) Lösungen haben, wobei \(n = 100\) in \cite{FCM_2019} gewählt wurde.\hfill\newline
 	
-	\noindent Beim Ausführen des SPPBO-Scheme werden mit Hilfe der Initialisierungsmethode \(\mathcal{I}\) zunächst Lösungen aus dem Suchraum \(\Sigma\) erzeugt, welche die Initiallösungen der Populationen bilden. Sollte es Einschränkungen/Constrains für \(\Sigma\) geben, wie es für das \ac{csd} ist, können diese gleich beim Erzeugen der Initiallösungen berücksichtigt werden, sodass nur gültige Lösungen aus \(\Sigma\) generiert werden. Sollte sich für dieses Vorgehen entschieden werden, können zusätzliche Iterationen bei der Initialisierung benötigt werden, neben den Iterationen bei der Ausführung der Lösungssuche des Algorithmus. Wenn das Filtern des Suchraumes \(\Sigma\) nach gültigen Lösungen bei gegeben Einschränkungen währen der Initialisierung nicht durchgeführt wird, können die Suchvariablen mit Werten aus \(\Sigma\) so belegt werden, dass keine gültigen Lösungen entstehen. Deswegen wird, sollte der Suchraum \(\Sigma\) nicht gefiltert werden, eine Straffunktion eingeführt, welche sich aus der Zielfunktion und Straftermen zusammensetzt. Bei der Anwendung von ACO\(_\mathbb{R}\)-VS auf das \ac{csd} werden beide Vorgehen betrachtet und miteinander verglichen.\hfill\newline
+	\noindent Beim Ausführen des SPPBO-Scheme werden mit Hilfe der Initialisierungsmethode \(\mathcal{I}\) zunächst Lösungen aus dem Suchraum \(\Sigma\) erzeugt, welche die Initiallösungen der Populationen bilden. Sollte es Einschränkungen/Constrains für \(\Sigma\) geben, wie es für das \ac{csd} ist, können diese gleich beim Erzeugen der Initiallösungen berücksichtigt werden, sodass nur gültige Lösungen aus \(\Sigma\) generiert werden. Sollte sich für dieses Vorgehen entschieden werden, können zusätzliche Iterationen bei der Initialisierung benötigt werden, neben den Iterationen bei der Ausführung der Lösungssuche des Algorithmus. In diesem Fall bezeichnen wir die Initialisierungsmethode als \(\mathcal{I}_{exact}\). Wenn das Filtern des Suchraumes \(\Sigma\) nach gültigen Lösungen bei gegeben Einschränkungen währen der Initialisierung nicht durchgeführt wird, können die Suchvariablen mit Werten aus \(\Sigma\) so belegt werden, dass keine gültigen Lösungen entstehen. Deswegen wird, sollte der Suchraum \(\Sigma\) nicht gefiltert werden, eine Straffunktion eingeführt, welche sich aus der Zielfunktion und Straftermen zusammensetzt. In diesem Fall bezeichnen wir die Initialisierungsmethode als \(\mathcal{I}_{penalty}\). Bei der Anwendung von ACO\(_\mathbb{R}\)-VS auf das \ac{csd} werden beide Vorgehen betrachtet und miteinander verglichen. Algorithmus~\ref{sec:SPPBO_Schema:alg:SPPBO} zeigt nochmal den Ablauf des SPPBO-Schema in Pseudocode.\hfill\newline
+
+	\begin{algorithm}
+		
+		\caption{SPPBO}\label{sec:SPPBO_Schema:alg:SPPBO}
+		
+		\begin{algorithmic}[1]
+			
+			\State Execute \(\mathcal{I}\)
+			
+			\Repeat
+			
+				%\State test
+				\For {\(\ac{sce} \in \mathcal{E}\)}
+				
+					CreateSolution(SCE)
+				
+				\EndFor
+				
+				\For{\(\text{P} \in \mathcal{P}\)}
+				
+					UpdatePopulation(P)
+			
+				\EndFor
+				
+			\Until {\(\mathcal{S}\) not met}
+				
+		\end{algorithmic}
+		
+	\end{algorithm}
 	
 	%TODO fragen, ob erklärt werden muss, was a_i sind
 	%TODO zeigen, wo SELECT+COPY und RANDOM im ACO_R-VS benutzt werden
 	
+	%TODO fragen ob Pseudoceod in Deutsch oder Englisch geschrieben sein muss
+	
+	%TODO While oder For; For so ok?
+	
 	\section{HSPPBO-Schema} \label{sec:HSPPBO_Schema}
 	
-	Das HSPPBO-Schema steht für Hierarchical Simple Probabilistic Populations-Based Optimization-Schema. Es ist die hierarchische Version des SPBBO-Schema~\cite{lin2015simple}. Das HSPPBO-Schema, wie in \cite{kupfer2021hierarchical} beschrieben, besteht aus 8 Teilen, den 6 Teilen aus dem SPPBO-Schema und einer Hierarchie- bzw. Baumstruktur \(\mathcal{B}\), einer Funktion \textit{range} \(\mathcal{R}\), welche jeder \(\ac{sce} \in \mathcal{E}\) eine Menge von Populationen \(P \in \mathcal{P}\) zuweist, also \(range(A) \subseteq \mathcal{P}\), eine Funktion \textit{update} \(\mathcal{U}\), welche bestimmt, wie Knoten getauscht werden, wenn ein Kindknoten eine bessere Lösung findet, als der Elternknoten, einem Threshold \(\theta\), der bestimmt, wann der Algorithmus auf Veränderungen im \ac{sce}-Baum reagiert und eine Funktion \textit{handling} \(\mathcal{H}\), welche bestimmt, wie der Algorithmus auf Veränderungen reagiert. Demnach kann das HSPPBO-Schema beschrieben werden durch das Tupel \((\Sigma, \mathcal{E}, \mathcal{B}, \mathcal{R}, \mathcal{U}, \theta, \mathcal{H}, \mathcal{P}, \eta, \mathcal{I}, \mathcal{S})\). In der Ausführung in \cite{kupfer2021hierarchical} weist \(\mathcal{R}\) jeder \(\ac{sce} \in \mathcal{E}\) drei Populationen zu. Eine Population \(P^{SCE}_{persprev}\) hält die von der \ac{sce} als letztes berechnete Lösung des Optimierungsproblems, eine Population \(P^{SCE}_{persbest}\) hält die bis dato beste berechnete Lösung des \ac{sce} und eine Population \(P^{SEC}_{parentbest}\) hält bis dato beste berechnete Lösung der Eltern-\ac{sce}. Es gilt also \(P^{SEC}_{parentbest} = P^{parent(SEC)}_{persbest}\). Im Fall der Wurzel-\ac{sce} sind die letzten beiden Populationen identisch. Damit gibt es implizit eine globale beste Lösung, da die Population \(P^{SCE^*}_{persbest}\) der Wurzel \ac{sce}* ausgelesen werden kann.\hfill\newline
+	Das HSPPBO-Schema steht für Hierarchical Simple Probabilistic Populations-Based Optimization-Schema. Es ist die hierarchische Version des SPBBO-Schema~\cite{lin2015simple}. Das HSPPBO-Schema, wie in \cite{kupfer2021hierarchical} beschrieben, besteht aus 11 Teilen, den 6 Teilen aus dem SPPBO-Schema und einer Hierarchie- bzw. Baumstruktur \(\mathcal{B}\), einer Funktion \textit{range} \(\mathcal{R}\), welche jeder \(\ac{sce} \in \mathcal{E}\) eine Menge von Populationen \(P \in \mathcal{P}\) zuweist, also \(range(A) \subseteq \mathcal{P}\), eine Funktion \textit{update} \(\mathcal{U}\), welche bestimmt, wie Knoten getauscht werden, wenn ein Kindknoten eine bessere Lösung findet, als der Elternknoten, einem Threshold \(\theta\), der bestimmt, wann der Algorithmus auf Veränderungen im \ac{sce}-Baum reagiert und eine Funktion \textit{handling} \(\mathcal{H}\), welche bestimmt, wie der Algorithmus auf Veränderungen reagiert. Demnach kann das HSPPBO-Schema beschrieben werden durch das Tupel \((\Sigma, \mathcal{E}, \mathcal{B}, \mathcal{R}, \mathcal{U}, \theta, \mathcal{H}, \mathcal{P}, \eta, \mathcal{I}, \mathcal{S})\). In der Ausführung in \cite{kupfer2021hierarchical} weist \(\mathcal{R}\) jeder \(\ac{sce} \in \mathcal{E}\) drei Populationen zu. Eine Population \(P^{SCE}_{persprev}\) hält die von der \ac{sce} als letztes berechnete Lösung des Optimierungsproblems, eine Population \(P^{SCE}_{persbest}\) hält die bis dato beste berechnete Lösung des \ac{sce} und eine Population \(P^{SEC}_{parentbest}\) hält bis dato beste berechnete Lösung der Eltern-\ac{sce}. Es gilt also \(P^{SEC}_{parentbest} = P^{parent(SEC)}_{persbest}\). Im Fall der Wurzel-\ac{sce} sind die letzten beiden Populationen identisch. Damit gibt es implizit eine globale beste Lösung, da die Population \(P^{SCE^*}_{persbest}\) der Wurzel \ac{sce}* ausgelesen werden kann.\hfill\newline
 	
 	%TODO besserer Funktionsname als Update
 	
 	Das HSPPBO-Schema zeichnet sich dadurch aus, dass die \ac{sce} in einer Baumstruktur angeordnet sind. Dadurch wird eine Nachbarschaftstopologie ermöglicht, welche die \ac{sce} gemäß der Güte ihrer Lösung ordnet. In \cite{kupfer2021hierarchical} wurde sich für eine tertiäre Baumstruktur mit 13 Knoten entschieden, die wir hier übernehmen. Wie beschrieben ordnet \(\mathcal{R}\) jeder der \ac{sce} drei Populationen zu, die alle nur eine Lösung haben. Von diesen Populationen ist für die Funktion \(\mathcal{U}\) nur die Population \(P^{SCE}_{persbest}\) entscheidend. Stellt der Algorithmus fest, dass \(P^{SCE}_{persbest} > P^{parent(SCE)}_{persbest}\) gilt, werden die \ac{sce} im Baum getauscht. Die Prüfung, ob dies gilt, wird \glqq top-down\grqq{} durchgeführt. Wie in \cite{kupfer2021hierarchical} beobachtet, lässt dieses Vorgehen schlechte Lösungen schnell im Baum sich nach unten bewegen, während gute Lösungen hinreichend lange gut bleiben müssen, um im Baum nach oben zu wandern. Wird festgestellt, dass die Anzahl der Vertauschung im Baum im Verhältnis zur Gesamtanzahl an \ac{sce} im Baum einen Threshold \(\theta\) übersteigt, wird die Funktion \(\mathcal{H}\) aufgerufen. Nach \cite{kupfer2021hierarchical} gilt für den Threshold \(\theta \in \{0.1, 0.25, 0.5\}\). Im Code ist \(\theta = 0.25\) eingestellt. Die Einstellung wurde beibehalten. Wird der Threshold überschritten, greift \(\mathcal{H}\). Nach \cite{kupfer2021hierarchical} gibt es drei Einstellungen für \(\mathcal{H}\), nämlich \(\mathcal{H}_{full}\), \(\mathcal{H}_{partial}\) und \(\mathcal{H}_{none}\).  Ist \(\mathcal{H}_{full}\) eingestellt, werden beim überschreiten des Thresholds alle Populationen \(P^{SCE}_{persbest}\) gelöscht. Das entspricht einem kompletten Vergessen der \ac{sce} und ist äquivalent zum Neustart des Algorithmus. Ist \(\mathcal{H}_{partial}\) eingestellt, werden nur die Population \(P^{SCE}_{persbest}\) der \ac{sce} ab der Tiefe 3 und abwärts gelöscht. Ist \(\mathcal{H}_{none}\) eingestellt, gibt es keine Veränderungen an den Populationen. Im Code ist \(\mathcal{H}_{partial}\) eingestellt. Die Einstellung wurde beibehalten.
 	
 	%TODO andere Baumstrukturen als offene Forschungsfrage?
+	
+	Algorithmus~\ref{sec:HSPPBO_Schema:alg:HSPPBO} zeigt nochmal den Ablauf des HSPPBO-Schema in Pseudocode.
+	
+	\begin{algorithm}
+		
+		\caption{HSPPBO}\label{sec:HSPPBO_Schema:alg:HSPPBO}
+		
+		\begin{algorithmic}[1]
+			
+			\State Initialize \(\mathcal{B}\)
+			
+			\State Execute \(\mathcal{I}\)
+			
+			\Repeat
+			
+				%\State test
+				\For {|\(\mathcal{E}\)|}
+				
+					\State NumberOfSwaps = 0
+				
+					\State CreateSolution(SCE)
+					\State UpdatePopulation(P\(^{SCE}_{persprev}\))
+					\State UpdatePopulation(P\(^{SCE}_{persbest}\))
+					
+				\EndFor
+					
+					\For{|\(\mathcal{E}\)|}
+					
+					UpdatePopulation(P\(_i\))
+				
+				\EndFor
+				
+			\Until {\(\mathcal{S}\) not met}
+			
+		\end{algorithmic}
+		
+	\end{algorithm}
 	
 	\section{Formulierung Von ACO\(_\mathbb{R}\)-VS Im HSPPBO-Schema}
 	
@@ -732,7 +806,7 @@ within=section,
 		
 		Es ist noch zu bemerken, dass das Initialisierungsintervall, also das Intervall aus dem die ersten zufälligen \textit{k} Lösungen entnommen werden, um das Lösungsarchiv zu füllen, von entscheidender Bedeutung ist. Wenn es unglücklich gewählt ist, liegen die Lösungen so um das Optimum, dass bei bestimmten Testproblemen die Algorithmusleistung stark zum positiven verzerrt wird. Ein so wichtiger Punkt wird hier für die gegeben stetige Testfunktionen nur deswegen nebensächlich erwähnt, da in \textit{Socha und Dorigo}~\cite{socha2008ant} darauf bereits eingegangen wurde, die Initialisierungsintervalle, wie sie dort aufgeführt sind, für gut befunden wurden und wir diese lediglich nur übernehmen müssen.\hfill\newline
 		
-		Wenn es Nebenbedingungen/Constrains gibt, kann das vollständige Initialisierungsintervall sich vom Initialisierungsintervall, das durch Anwenden der Nebenbedingungen entsteht, stark unterscheiden, wie im Abschnitt~\ref{subsub:CSD}. Ein solchen Intervall wird hier als gefiltert bezeichnet.\hfill\newline 
+		Wenn es Nebenbedingungen/Constrains gibt, kann das vollständige Initialisierungsintervall sich vom Initialisierungsintervall, das durch Anwenden der Nebenbedingungen entsteht, stark unterscheiden, wie im Abschnitt~\ref{subsubsec:Coil_Spring_Design_Problem}. Ein solchen Intervall wird hier als gefiltert bezeichnet.\hfill\newline 
 		%TODO stetige Funktionen finden und schauen, ob es wie beim CSD einen Unterschied gibt zwischen Initialisierung über dem Gesamtbereich und Initialisierung über den filtrierten Initial. durch Nebenbedingungen
 		
 		Wir bezeichnen die Initialisierungsintervalle hier jedoch als Definitionsbereiche, da die Funktionen initial über diesen definiert sind und führen sie nach dem Namen der Funktion an oder separat, wie in Tabelle~\ref{schwereTestfunktionenTeil2}.
