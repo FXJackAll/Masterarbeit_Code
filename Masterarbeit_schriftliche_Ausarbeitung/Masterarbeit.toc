@@ -18,9 +18,9 @@
 \contentsline {subsection}{\numberline {4.4}Erweiterung von ACO\(_\mathbb {R}\)-very-simple für Probleme mit nicht-stetigen Variablen}{11}{}%
 \contentsline {section}{\numberline {5}SPPBO-Schema}{12}{}%
 \contentsline {section}{\numberline {6}HSPPBO-Schema}{13}{}%
-\contentsline {section}{\numberline {7}Formulierung Von ACO\(_\mathbb {R}\)-VS Im HSPPBO-Schema}{14}{}%
-\contentsline {section}{\numberline {8}Kombinieren des HSPPBO-Schemas mit ACO\(_\mathbb {R}\)-very-simple}{14}{}%
-\contentsline {subsection}{\numberline {8.1}Hom-HPB-ACO\(_\mathbb {R}\)-very-simple}{14}{}%
+\contentsline {section}{\numberline {7}Formulierung Von ACO\(_\mathbb {R}\)-VS Im HSPPBO-Schema}{15}{}%
+\contentsline {section}{\numberline {8}Kombinieren des HSPPBO-Schemas mit ACO\(_\mathbb {R}\)-very-simple}{15}{}%
+\contentsline {subsection}{\numberline {8.1}Hom-HPB-ACO\(_\mathbb {R}\)-very-simple}{15}{}%
 \contentsline {subsection}{\numberline {8.2}Het-HPB-ACO\(_\mathbb {R}\)-very-simple}{15}{}%
 \contentsline {subsection}{\numberline {8.3}Het-HSPPB-ACO\(_\mathbb {R}\)-very-simple}{16}{}%
 \contentsline {section}{\numberline {9}Testfunktionen}{16}{}%

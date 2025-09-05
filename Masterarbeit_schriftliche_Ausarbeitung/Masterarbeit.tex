@@ -25,6 +25,9 @@
 \usepackage[noend]{algpseudocode}
 \makeatletter
 
+\algnewcommand{\algorithmicand}{\textbf{ and }}
+\algnewcommand{\AND}{\algorithmicand}
+
 \colorlet{punct}{red!60!black}
 \definecolor{background}{HTML}{EEEEEE}
 \definecolor{delim}{RGB}{20,105,176}
@@ -572,7 +575,7 @@ within=section,
 			
 				\EndFor
 				
-			\Until {\(\mathcal{S}\) not met}
+			\Until {\(\mathcal{S}\) fulfilled}
 				
 		\end{algorithmic}
 		
@@ -609,6 +612,8 @@ within=section,
 			
 			\Repeat
 			
+				\State \(L \gets L + 1\)
+			
 				%\State test
 				\For {|\(\mathcal{E}\)|}
 				
@@ -620,13 +625,24 @@ within=section,
 					
 				\EndFor
 					
-					\For{|\(\mathcal{E}\)|}
+				\For{|\(\mathcal{E}\)|}
 					
-					UpdatePopulation(P\(_i\))
+						\If{f(P\(^{parent(SCE)}_{persbest}\) < f(P\(^{SCE}_{persbest}\)))}
+						
+						\State swap tree position between SCE and parent(SCE)
+						\State NumberOfSwaps \(\gets\) NumberOfSwaps + 1
+						%TODO swap tree position so beibehalten?
+						\EndIf
 				
 				\EndFor
 				
-			\Until {\(\mathcal{S}\) not met}
+				\If{NumerOfSwaps > \(\lceil \theta \cdot |\mathcal{E}| \rceil\) \AND \(L_{pause} > 5\)}
+					\State \(L \gets 0\)
+					\State Execute \(\mathcal{H}\)
+				
+				\EndIf
+				
+			\Until {\(\mathcal{S}\) fulfilled}
 			
 		\end{algorithmic}
 		
