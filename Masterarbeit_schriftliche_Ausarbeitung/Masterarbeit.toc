@@ -28,33 +28,33 @@
 \contentsline {subsubsection}{\numberline {9.1.1}Traveling Salesperson Problem (TSP)}{18}{}%
 \contentsline {subsubsection}{\numberline {9.1.2}Quadratic Assigment Problem (QAP)}{18}{}%
 \contentsline {subsection}{\numberline {9.2}Stetige Testfunktionen}{18}{}%
-\contentsline {subsubsection}{\numberline {9.2.1}Testfunktion - Paraboloid}{24}{}%
-\contentsline {subsubsection}{\numberline {9.2.2}Testfunktion - Griewangk}{25}{}%
-\contentsline {subsubsection}{\numberline {9.2.3}Testfunktion - Rosenbrock}{26}{}%
-\contentsline {subsection}{\numberline {9.3}Ordinale Testfunktionen}{27}{}%
-\contentsline {subsubsection}{\numberline {9.3.1}Ordinale Testfunktionen mit gleichverteiltem Definitionsbereich}{27}{}%
-\contentsline {subsubsection}{\numberline {9.3.2}Ordinale Testfunktionen mit asymmetrischem Definitionsbereich}{28}{}%
-\contentsline {subsection}{\numberline {9.4}Kategorische Testfunktionen}{29}{}%
-\contentsline {subsubsection}{\numberline {9.4.1}konstruierte Testfunktionen}{29}{}%
-\contentsline {subsection}{\numberline {9.5}Testfunktionen mit gemischten Variablem}{29}{}%
-\contentsline {subsubsection}{\numberline {9.5.1}Coil Spring Design Problem (CSD)}{29}{}%
-\contentsline {paragraph}{\numberline {9.5.1.1}Vollständiger Raum als Initialisierungsintervall}{31}{}%
-\contentsline {paragraph}{\numberline {9.5.1.2}Gefilterter Raum als Initialisierungsintervall}{32}{}%
-\contentsline {subsubsection}{\numberline {9.5.2}Thermal Insulation System Design Problem (TISD)}{33}{}%
-\contentsline {subsubsection}{\numberline {9.5.3}Traveling Spice Salesperson Problem (TSSP)}{34}{}%
-\contentsline {section}{\numberline {10}Herausforderung}{34}{}%
-\contentsline {section}{\numberline {11}Einfluss der Parameter}{34}{}%
-\contentsline {subsection}{\numberline {11.1}Einfluss der Anzahl der Ameisen}{35}{}%
-\contentsline {subsection}{\numberline {11.2}Einfluss des Parameters \textit {q}}{35}{}%
-\contentsline {subsection}{\numberline {11.3}Einfluss des Parameters \textit {k}}{36}{}%
-\contentsline {subsection}{\numberline {11.4}Einfluss des Parameters \(\xi \)}{37}{}%
-\contentsline {subsection}{\numberline {11.5}Auswertung der Einflüsse der Parameter}{37}{}%
-\contentsline {section}{\numberline {12}Vergleich zweier Intervallberechnungen für ACO\(_{\mathbb {R}}\)-simple und ACO\(_{\mathbb {R}}\)-very-simple}{38}{}%
-\contentsline {section}{\numberline {13}Vergleich von ACO\(_{\mathbb {R}}\), ACO\(_{\mathbb {R}}\)-simple und ACO\(_{\mathbb {R}}\)-very-simple}{40}{}%
-\contentsline {section}{\numberline {14}Konvergenzbetrachtung}{47}{}%
-\contentsline {subsection}{\numberline {14.1}Rosenbrock}{48}{}%
-\contentsline {section}{\numberline {15}Kurzzusammenfassung}{49}{}%
-\contentsline {section}{Literaturverzeichnis}{50}{}%
+\contentsline {subsubsection}{\numberline {9.2.1}Testfunktion - Paraboloid}{23}{}%
+\contentsline {subsubsection}{\numberline {9.2.2}Testfunktion - Griewangk}{24}{}%
+\contentsline {subsubsection}{\numberline {9.2.3}Testfunktion - Rosenbrock}{25}{}%
+\contentsline {subsection}{\numberline {9.3}Ordinale Testfunktionen}{26}{}%
+\contentsline {subsubsection}{\numberline {9.3.1}Ordinale Testfunktionen mit gleichverteiltem Definitionsbereich}{26}{}%
+\contentsline {subsubsection}{\numberline {9.3.2}Ordinale Testfunktionen mit asymmetrischem Definitionsbereich}{27}{}%
+\contentsline {subsection}{\numberline {9.4}Kategorische Testfunktionen}{28}{}%
+\contentsline {subsubsection}{\numberline {9.4.1}konstruierte Testfunktionen}{28}{}%
+\contentsline {subsection}{\numberline {9.5}Testfunktionen mit gemischten Variablem}{28}{}%
+\contentsline {subsubsection}{\numberline {9.5.1}Coil Spring Design Problem (CSD)}{28}{}%
+\contentsline {paragraph}{\numberline {9.5.1.1}Vollständiger Raum als Initialisierungsintervall}{30}{}%
+\contentsline {paragraph}{\numberline {9.5.1.2}Gefilterter Raum als Initialisierungsintervall}{31}{}%
+\contentsline {subsubsection}{\numberline {9.5.2}Thermal Insulation System Design Problem (TISD)}{32}{}%
+\contentsline {subsubsection}{\numberline {9.5.3}Traveling Spice Salesperson Problem (TSSP)}{33}{}%
+\contentsline {section}{\numberline {10}Herausforderung}{33}{}%
+\contentsline {section}{\numberline {11}Einfluss der Parameter}{33}{}%
+\contentsline {subsection}{\numberline {11.1}Einfluss der Anzahl der Ameisen}{34}{}%
+\contentsline {subsection}{\numberline {11.2}Einfluss des Parameters \textit {q}}{34}{}%
+\contentsline {subsection}{\numberline {11.3}Einfluss des Parameters \textit {k}}{35}{}%
+\contentsline {subsection}{\numberline {11.4}Einfluss des Parameters \(\xi \)}{36}{}%
+\contentsline {subsection}{\numberline {11.5}Auswertung der Einflüsse der Parameter}{36}{}%
+\contentsline {section}{\numberline {12}Vergleich zweier Intervallberechnungen für ACO\(_{\mathbb {R}}\)-simple und ACO\(_{\mathbb {R}}\)-very-simple}{37}{}%
+\contentsline {section}{\numberline {13}Vergleich von ACO\(_{\mathbb {R}}\), ACO\(_{\mathbb {R}}\)-simple und ACO\(_{\mathbb {R}}\)-very-simple}{39}{}%
+\contentsline {section}{\numberline {14}Konvergenzbetrachtung}{46}{}%
+\contentsline {subsection}{\numberline {14.1}Rosenbrock}{47}{}%
+\contentsline {section}{\numberline {15}Kurzzusammenfassung}{48}{}%
+\contentsline {section}{Literaturverzeichnis}{49}{}%
 \contentsline {part}{\nonumberline Anlagen}{I}{}%
 \contentsline {section}{\numberline {A}Einfluss der Anzahl der Ameisen}{I}{}%
 \contentsline {section}{\numberline {B}Einfluss des Parameters \textit {q}}{II}{}%

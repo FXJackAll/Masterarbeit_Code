@@ -189,8 +189,8 @@ within=section,
 	%\printglossaries
 	
 	\begin{acronym}[Masterarbeit]
-		%\acro{acorvs}[ACO\(_{\mathbb{R}}\)-VS]{ACO\(_\mathbb{R}\)-very-simple}
-		%\acro{csd}{CSD Problem}{Coil Spring Design Problem}
+		\acro{acorvs}[ACO\(_{\mathbb{R}}\)-VS]{ACO\(_\mathbb{R}\)-very-simple}
+		\acro{csd}[CSD Problem]{Coil Spring Design Problem}
 		\acro{sce}[SCE]{solution creating entities}
 	\end{acronym}
 	
@@ -701,7 +701,7 @@ within=section,
 	
 	Aufbauend auf meiner Bachelorarbeit~\cite{FCM_2019}, erweitern wir die Art der Testfunktionen, anhand derer wir die Güte der hier vorlegten Erweiterungen von ACO\(_\mathbb{R}\)-VS beurteilen. Wo ACO\(_{\mathbb{R}}\)-VS nur auf stetigen Testfunktionen getestet wurde, werden die Erweiterungen von ACO\(_{\mathbb{R}}\)-VS auf stetigen Testfunktionen getestet, auf Testfunktionen mit diskreten/ordinalen Variablen und auf Testfunktionen mit gemischten Variablen.\hfill\newline
 	
-	Da in meiner Bachelorarbeit die Testfunktionen in ihren Dimensionen nicht variiert haben, Intervallgrenzen keine Rolle spielten und alle Funktionen über stetigen, zusammenhängenden Definitionsbereichen definiert waren, brauchte es keiner standardisierten, abstrakten Definition. In dieser Arbeit aber betrachten wir stetige und diskrete/ordinale Testfunktionen, sowie Testfunktionen mit gemischten Variablen. Ferner liegen 5 der Testprobleme mit gemischten Variablen in drei verschiedenen Dimensionen dar, nämlich \(n \in \{2, 5, 10\}\). Deswegen war eine überarbeitete Definition der Testprobleme notwendig. Die einfachste Definition mit dem neuen Standard ist in Abbildung~\ref{JSON:Paraboloid10DimCont} zu sehen.
+	Da in meiner Bachelorarbeit die Testfunktionen in ihren Dimensionen nicht variiert haben, Intervallgrenzen keine Rolle spielten und alle Funktionen über stetigen, zusammenhängenden Definitionsbereichen definiert waren, brauchte es keiner standardisierten, abstrakten Definition. In dieser Arbeit aber betrachten wir stetige und diskrete/ordinale Testfunktionen, sowie Testfunktionen mit gemischten Variablen. Ferner liegen 5 der Testprobleme mit gemischten Variablen in drei verschiedenen Dimensionen dar, nämlich \(n \in \{2, 5, 10\}\). Deswegen war eine überarbeitete Definition der Testprobleme notwendig. Die einfachste Definition mit dem neuen Standard ist in Abbildung~\ref{sec:Testfunktionen:abb:JSON:Paraboloid10DimCont} zu sehen.\hfill\newline
 	
 	%TODO Testfunktion oder Testproblem?
 	
@@ -709,7 +709,7 @@ within=section,
 
 \newpage
 	
-	\begin{lstlisting}[language=json, caption=Parabolid 10 Dim stetiger Definitionsbereich, label=JSON:Paraboloid10DimCont]
+	\begin{lstlisting}[language=json, caption=Parabolid 10 Dim stetiger Definitionsbereich, label=sec:Testfunktionen:abb:JSON:Paraboloid10DimCont]
 {
 	"name": "Paraboloid",
 	"comment": "standard paraboloid problem",
@@ -734,11 +734,11 @@ within=section,
 	
 	\hfill\newline
 
-	Wie in Abbildung~\ref{JSON:Paraboloid10DimCont} zu sehen, besteht die neue, abstrakte Definition u.a. aus \glqq variable\_boundaries\grqq{}. Dies ist ein neuer Eintrag, der notwendig geworden ist, da für das Problem im Abschnitt~\ref{subsubsec:Coil_Spring_Design_Problem} die Intervallgrenzen zugleich Beschränkungen der Suchintervalle sind. Ein weiterer Grund das JSON-Format zu nehmen, ist, dass alle Einträge als Wörterbücher ausgelesen werden können, was die Definition von neuen abstrakten Einträger leicht macht, da die Anordnung, im Vergleich zu einem Feld, bei einem Wörterbuch keine Rolle spielt.\hfill\newline
+	Wie in Abbildung~\ref{sec:Testfunktionen:abb:JSON:Paraboloid10DimCont} zu sehen, besteht die neue, abstrakte Definition u.a. aus \glqq variable\_boundaries\grqq{}. Dies ist ein neuer Eintrag, der notwendig geworden ist, da für das Problem im Abschnitt~\ref{subsubsec:Coil_Spring_Design_Problem} die Intervallgrenzen zugleich Beschränkungen der Suchintervalle sind. Ein weiterer Grund das JSON-Format zu nehmen, ist, dass alle Einträge als Wörterbücher ausgelesen werden können, was die Definition von neuen abstrakten Einträger leicht macht, da die Anordnung, im Vergleich zu einem Feld, bei einem Wörterbuch keine Rolle spielt.\hfill\newline
 	
-	Weitere Einträge, die notwendig wurden, sind \glqq dimension\grqq, \glqq optimum\grqq, \glqq discrete\_values\grqq{} und \glqq magnitudes\_of\_categorical\_variables\grqq. Da ein weiteres Ziel war, dass, neben der Abstraktion, Automatisation implementiert werden sollte, wurden die JSON-Dateien so konzipiert, dass statische Werte einer Testfunktion, ohne Nutzereingabe, zum Start des Algorithmus ausgelesen werden konnten. Dabei bezeichnet \glqq dimension\grqq die Dimension des Problems. In Kombination mit den \glqq variable\_boundaries\grqq{} ergibt dies für die Abbildung~\ref{JSON:Paraboloid10DimCont} den Definitionsbereich \([-3, 7]^{10}\). Der Eintrag \glqq optimum\_argument\grqq{} definiert das zum Optimum gehörige Argument, also die notwendige Belegung der unabhängigen Variablen, um das Optimum der Testfunktion zu erhalten, welches im Eintrag \glqq optimum\grqq{} ausgelesen werden kann. Die Intervallgrenzen für den Definitionsbereich einer Testfunktion sind unter \glqq variable\_blundaries\grqq{} hinterlegt und definieren sowohl die Intervalle, in denen eine Lösung liegen muss, um eine gültige Lösung zu sein, als auch die Intervalle, aus denen Initiallösungen während der Initialisierungsmethode \(\mathcal{I}\) gezogen werden, wie diese im Abschnitt~\ref{sec:HSPPBO_Schema} definiert wurde. Der Eintrag \glqq discrete\_values\grqq{} listet alle diskreten/ordinalen Werte auf, welche die Testfunktion annehmen kann\hfill\newline
+	Weitere Einträge, die notwendig wurden, sind \glqq dimension\grqq, \glqq optimum\grqq, \glqq discrete\_values\grqq{} und \glqq magnitudes\_of\_categorical\_variables\grqq. Da ein weiteres Ziel war, dass, neben der Abstraktion, Automatisation implementiert werden sollte, wurden die JSON-Dateien so konzipiert, dass statische Werte einer Testfunktion, ohne Nutzereingabe, zum Start des Algorithmus ausgelesen werden konnten. Dabei bezeichnet \glqq dimension\grqq die Dimension des Problems. In Kombination mit den \glqq variable\_boundaries\grqq{} ergibt dies für die Abbildung~\ref{sec:Testfunktionen:abb:JSON:Paraboloid10DimCont} den Definitionsbereich \([-3, 7]^{10}\). Der Eintrag \glqq optimum\_argument\grqq{} definiert das zum Optimum gehörige Argument, also die notwendige Belegung der unabhängigen Variablen, um das Optimum der Testfunktion zu erhalten, welches im Eintrag \glqq optimum\grqq{} ausgelesen werden kann. Die Intervallgrenzen für den Definitionsbereich einer Testfunktion sind unter \glqq variable\_blundaries\grqq{} hinterlegt und definieren sowohl die Intervalle, in denen eine Lösung liegen muss, um eine gültige Lösung zu sein, als auch die Intervalle, aus denen Initiallösungen während der Initialisierungsmethode \(\mathcal{I}\) gezogen werden, wie diese im Abschnitt~\ref{sec:HSPPBO_Schema} definiert wurde. Der Eintrag \glqq discrete\_values\grqq{} listet alle diskreten/ordinalen Werte auf, welche die Testfunktion annehmen kann\hfill\newline
 	
-	Der letzte Grund, warum das JSON-Format gewählt wurde, wie in Abbildung~\ref{JSON:Paraboloid10DimCont} zu sehen, kann das JSON-Format jede Art von Eintrag aufnehmen und somit jede Form von abstrakter Variable beherbergen und damit einen hohen Abstraktionsgrad liefern, der, für auf dieser Arbeit aufbauende Forschung, notwendig ist.
+	Der letzte Grund, warum das JSON-Format gewählt wurde, wie in Abbildung~\ref{sec:Testfunktionen:abb:JSON:Paraboloid10DimCont} zu sehen, kann das JSON-Format jede Art von Eintrag aufnehmen und somit jede Form von abstrakter Variable beherbergen und damit einen hohen Abstraktionsgrad liefern, der, für auf dieser Arbeit aufbauende Forschung, notwendig ist.
 	
 	%TODO jeden Eintrag erklären?
 	
@@ -759,60 +759,76 @@ within=section,
 		%wie in Bachelorarbeit
 		%TODO nachfragen, ob Querformat für Testfunktionen verwendet werden darf - ja nur
 		
-		Aufbauend auf meiner Bachelorarbeit~\cite{FCM_2019} werden die Erweiterungen von \ac{acorvs} auf denselben stetigen Testfunktionen getestet, wie der ursprüngliche Algorithmus \ac{acorvs}. Diese sind Testfunktion zum Vergleich mit Algorithmen, die probabilistisches Lernen einsetzten in Tabelle und Testfunktionen zum Vergleich mit anderen mit Ameisenalgorithmen verwandten Methoden und Metaheuristiken, die für stetige Probleme adaptiert wurden in Tabellen und.
+		Aufbauend auf meiner Bachelorarbeit~\cite{FCM_2019} werden die Erweiterungen von \ac{acorvs} auf denselben stetigen Testfunktionen getestet, wie der ursprüngliche Algorithmus \ac{acorvs}. Diese sind Testfunktion zum Vergleich mit Algorithmen, die probabilistisches Lernen einsetzten in Tabelle~\ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} und Testfunktionen zum Vergleich mit anderen mit Ameisenalgorithmen verwandten Methoden und Metaheuristiken, die für stetige Probleme adaptiert wurden in Tabellen \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_2_1_Stet_Adapt}.\hfill\newline
 		
-		Es wurden, wie in Tabelle~\ref{einfacheTestfunktionen}, Tabelle~\ref{mittlereTestfunktionen} und Tabelle~\ref{schwereTestfunktionen} zu entnehmen, die dort aufgeführten Testfunktionen verwendet. Da in dieser Arbeit mit ACO\(_{\mathbb{R}}\) verglichen wird, vergleichen sich ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple indirekt auch mit den anderen Verfahren, mit denen sich ACO\(_{\mathbb{R}}\) verglichen hat.\hfill\newline
+		%Es wurden, wie in Tabelle~\ref{subsec:Stetige_Funktionen:tab:Prob_Lernen}, Tabelle~\ref{subsec:Stetige_Funktionen:tab:Teil_1_Stet_Adapt} und Tabelle~\ref{subsec:Stetige_Funktionen:tab:Teil_2_Stet_Adapt} zu entnehmen, die dort aufgeführten Testfunktionen verwendet. Da in dieser Arbeit mit ACO\(_{\mathbb{R}}\) verglichen wird, vergleichen sich ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple indirekt auch mit den anderen Verfahren, mit denen sich ACO\(_{\mathbb{R}}\) verglichen hat.\hfill\newline
 		
 		%Da ein direkter Vergleich über den Umfang dieser Arbeit aber hinaus gehen würde, wird hier nur mit ACO\(_{\mathbb{R}}\) verglichen und bzgl. des Vergleiches mit den anderen Methoden auf \textit{Socha und Dorigo}~\cite{socha2008ant} verwiesen.\hfill\newline
 		
-		Die Testfunktionen sind alle aus \cite{socha2008ant} entnommen, um die beiden Algorithmen vergleichen zu können, bis auf Branin~RCOS, Goldstein and Price, Griewangk, Hartmann und Shekel. Die Branin~RCOS-Testfunktion wurde aus~\cite{testFunctionBranin}  entnommen, die Goldstein and Price-Testfunktion aus~\cite{testFunctionGoldsteinandPrice}, Griewangk-Testfunktion wurde aus \textit{Molga und Smutnicki}~\cite{molga2005test} entnommen, während die Shekel-Testfunktionen aus~\cite{testFunctionShekel} und die Hartmann-Testfunktionen aus~\cite{testFunctionHartmann3} und~\cite{testFunctionHartmann6}. Sie stimmen mit denen aus \cite{socha2008ant} überein, bis auf einen Matrixeintrag bei der Hartmann(6,4)-Testfunktion, aber in den anderen Quellen waren die Optima angegeben und die Argumente der Optima, also ihre x-Werte, während in \cite{socha2008ant} nicht, weswegen die Entscheidung sich auf die anderen Quellen, bei den Angaben zu Optima und den dazugehörigen Argumenten zu verlassen, getroffen wurde.\hfill\newline
+		Die Testfunktionen wurden aus verschiedene Quellen entnommen. Die Branin RCOS-Testfunktion stammt aus \cite{testFunctionBranin}, die Goldstein and Price-Testfunktion aus \cite{testFunctionGoldsteinandPrice} und die Griewangk-Testfunktion aus \cite{molga2005test}. Die Testfunktionen Hartmann stammen aus \cite{testFunctionHartmann3} und \cite{testFunctionHartmann6} und die Shekel-Testfunktionen aus \cite{testFunctionShekel}. Alle anderen Testfunktionen stammen aus \cite{socha2008ant} und \cite{socha2009ant}. Bei der Hartmann(6,4)-Testfunktion haben sich die Quellen in ihrer Definition des Funktionsterms im Matrixeintrag \(a_{15}\) widersprochen. In \cite{socha2008ant} und \cite{socha2009ant} wird \(a_{15} = 1.5\) angegeben während in \cite{testFunctionHartmann6} angegeben wird, dass \(a_{15} = 1.7\). Da nur in \cite{testFunctionHartmann6} das dazugehörige Optimum angegeben wird, wurde in dieser Arbeit sich für die Angabe aus dieser Quelle entschieden. Um zukünftige Forschung zu erleichtern, werden alle Testfunktionen in dieser Arbeit, genau wie in meiner Bachelorarbeit, nicht nur mit Name und Funktionsterm, sondern auch mit Definitionsbereich/Initialisierungsintervall, Optimum und Argument des Optimums angegeben.\hfill\newline
 		
-		Der Matrixeintrag ist \(a_{15}=1.7\), statt \(1.5\), da alle vorhandenen Quellen, bis auf \cite{socha2008ant}, dies so angeben.\hfill\newline
+		In meiner Bachelorarbeit stimmten die von mir berechnete Optima für die Funktionen Hartmann(3,4), Hartmann(6,4), Shekel(4,5), Shekel(4,7) und Shekel(4,10) mit denen in der Literatur nicht überein. Ich konnte den Fehler finden. Ich habe die Funktionsgleichungen der Testprobleme in den Quellen falsch interpretiert, weswegen ich falsche Ergebnisse bekommen hatte. Für Schekel(4,k;k = 5,7,10) lag der Fehler in der Interpretationen der Gleichung~\ref{subsec:Stetige_Testfunktionen:eq:Shekel}. Ich habe die Gleichung so verstanden, we es in der Gleichung~\ref{subsec:Stetige_Testfunktionen:eq:Bachelorinterpretation} geschrieben ist. Aber der Term ist, wie in Gleichung~\ref{subsec:Stetige_Testfunktionen:eq:Masterinterpretation} zu interpretieren.\hfill\newline
 		
-		In meiner Bachelorarbeit stimmten die von mir berechnete Optima für die Funktionen Hartmann(3,4), Hartmann(6,4), Shekel(4,5), Shekel(4,7) und Shekel(4,10) mit denen in der Literatur nicht überein. Ich konnte den Fehler finden. Ich habe die Funktionsgleichungen der Testprobleme in den Quellen falsch interpretiert, weswegen ich falsche Ergebnisse bekommen hatte. Für Schekel(4,k;k = 5,7,10) lag der Fehler in der Interpretationen der Gleichung. Ich habe die es so verstanden, we es in Gleichung \hfill\newline
+		\begin{equation} \label{subsec:Stetige_Testfunktionen:eq:Shekel}
+			f(x) = -\sum_{i=1}^{k}(\sum_{j=1}^{4} (x_j - a_{ji})^2 + c_i)^{-1}
+		\end{equation}
 		
-		Ferner wurde festgestellt, dass die angegeben Optima in \cite{testFunctionShekel}, \cite{testFunctionHartmann3} und \cite{testFunctionHartmann6} nicht mit den Optima übereinstimmen, wenn in die Funktion die Argumente der Optima, also ihre x-Werte, eingegeben werden. Deswegen werden die berechneten Optima genutzt, statt den angegeben, da die Algorithmen sonst keine Chance haben die Optima zu finden und für die aufgeführten Funktionen nicht konvergieren.\hfill\newline
+		\begin{equation} \label{subsec:Stetige_Testfunktionen:eq:Bachelorinterpretation}
+			f(x) = -\sum_{i=1}^{k}(\sum_{j=1}^{4} \big( (x_j - a_{ji})^2 + c_i) \big)^{-1}
+		\end{equation}
 		
-		\noindent Die verwendeten Optima sind wie folgt aufgeführt.\hfill\newline
+		\begin{equation} \label{subsec:Stetige_Testfunktionen:eq:Masterinterpretation}
+			f(x) = -\sum_{i=1}^{k}(\sum_{j=1}^{4} \big( (x_j - a_{ji})^2 \big) + c_i)^{-1}
+		\end{equation}
 		
-		\begin{table}[H]
+		\begin{equation} \label{subsec:Stetige_Testfunktionen:eq:Klare_Formulierung}
+			f(x) = -\sum_{i=1}^{k}(c_i + \sum_{j=1}^{4} (x_j - a_{ji})^2)^{-1}
+		\end{equation}
+		
+		%TODO Gleichungen beibehalten?
+		
+		%Ferner wurde festgestellt, dass die angegeben Optima in \cite{testFunctionShekel}, \cite{testFunctionHartmann3} und \cite{testFunctionHartmann6} nicht mit den Optima übereinstimmen, wenn in die Funktion die Argumente der Optima, also ihre x-Werte, eingegeben werden. Deswegen werden die berechneten Optima genutzt, statt den angegeben, da die Algorithmen sonst keine Chance haben die Optima zu finden und für die aufgeführten Funktionen nicht konvergieren.\hfill\newline
+		
+		%\noindent Die verwendeten Optima sind wie folgt aufgeführt.\hfill\newline
+		
+		%\begin{table}[H]
 			
-			\fontsize{10pt}{12pt}
+		%	\fontsize{10pt}{12pt}
 			
-			\caption{berechnete Optima statt angegeben Optima}
+		%	\caption{berechnete Optima statt angegeben Optima}
 			
-			\label{berechneteOptima}
+		%	\label{subsec:Stetige_Funktionen:tab:berechneteOptima}
 			
-			\begin{tabularx}{\textwidth}{l|l}
+		%	\begin{tabularx}{\textwidth}{l|l}
 				
-				\rule{6cm}{0.4pt} & \rule{8.4cm}{0.4pt}\\
+		%		\rule{6cm}{0.4pt} & \rule{8.4cm}{0.4pt}\\
 				
-				Funktion & Optima\\
+		%		Funktion & Optima\\
 				
-				\rule{6cm}{0.4pt} & \rule{8.4cm}{0.4pt}\\
+		%		\rule{6cm}{0.4pt} & \rule{8.4cm}{0.4pt}\\
 				
-				Hartmann(3,4) & y= 7.421029683540756e-06 statt y= -3.86278\\
+		%		Hartmann(3,4) & y= 7.421029683540756e-06 statt y= -3.86278\\
 				
-				Hartmann(6,4) & y= 0.42294247223934295 statt y= -3.32237\\
+		%		Hartmann(6,4) & y= 0.42294247223934295 statt y= -3.32237\\
 				
-				Shekel(4,5) & y = -2.552128998986617 statt y = -10.1532\\
+		%		Shekel(4,5) & y = -2.552128998986617 statt y = -10.1532\\
 				
-				Shekel(4,7) & y = -2.561924906388908 statt y =  -10.4029\\
+		%		Shekel(4,7) & y = -2.561924906388908 statt y =  -10.4029\\
 				
-				Shekel(4,10) & y = -2.5727358977878936 statt y = -10.5364\\
+		%		Shekel(4,10) & y = -2.5727358977878936 statt y = -10.5364\\
 				
-			\end{tabularx}
+		%	\end{tabularx}
 			
-		\end{table}
+		%\end{table}
 		
-		Es konnte leider nicht festgestellt werden, ob die angegeben Optima falsch sind oder ob die Berechnung und damit die Implementierung der Testfunktionen im Programm falsch ist. Wahrscheinlich ist die Implementierung fehlerhaft, aber nach gründlicher Kontrolle des Codes konnte ich leider keinen Fehler feststellen und nehme auch deswegen die berechneten Optima als Ausgangswerte für die Analyse der Güte der Algorithmen.\hfill\newline
+		%Es konnte leider nicht festgestellt werden, ob die angegeben Optima falsch sind oder ob die Berechnung und damit die Implementierung der Testfunktionen im Programm falsch ist. Wahrscheinlich ist die Implementierung fehlerhaft, aber nach gründlicher Kontrolle des Codes konnte ich leider keinen Fehler feststellen und nehme auch deswegen die berechneten Optima als Ausgangswerte für die Analyse der Güte der Algorithmen.\hfill\newline
 		
-		Positiv aufgefallen ist aber, dass bei der Suche nach den Fehlern die Algorithmen die berechneten Optima selbst dann fanden, wenn die Angegebenen als Ziel verwendet wurden. Die Verfahren brachen nur nicht ab, weil das Ziel eben eines war, was nicht erreicht werden konnte.\hfill\newline
+		%Positiv aufgefallen ist aber, dass bei der Suche nach den Fehlern die Algorithmen die berechneten Optima selbst dann fanden, wenn die Angegebenen als Ziel verwendet wurden. Die Verfahren brachen nur nicht ab, weil das Ziel eben eines war, was nicht erreicht werden konnte.\hfill\newline
 		
-		Fernen wurde das Abbruchkriterium für alle Testfunktionen, außer für die Maximierungsprobleme \glqq Plane\grqq \hspace{.16667em} und \glqq Diagonal Plane\grqq, aus Tabelle~\ref{einfacheTestfunktionen} auf\\
+		Fernen wurde das Abbruchkriterium für alle Testfunktionen, außer für die Maximierungsprobleme \glqq Plane\grqq \hspace{.16667em} und \glqq Diagonal Plane\grqq, aus Tabelle~\ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} auf\\
 		\(|f-f^*|<\epsilon, \epsilon = 10^{-10}\) gesetzt, dabei ist \(f\) der momentane Funktionswert und \(f^*\) das bekannte Optimum. Für die Maximierungsprobleme wurde das Abbruchkriterium \(f>\epsilon\) gesetzt, mit \(\epsilon=10^{10}\).\hfill\newline
 		
-		In \textit{Socha und Dorigo}~\cite{socha2008ant} wurde später das schwächere Abbruchkriterium\\
+		In \cite{socha2008ant} und \cite{socha2009ant} und  wurde später das schwächere Abbruchkriterium\\
 		\(|f-f^*|<\epsilon_1f + \epsilon_2\), \(\epsilon_1=\epsilon_2=10^{-4}\) verwendet, wobei \(\epsilon_1\) der relative Fehler und \(\epsilon_2\) der absolute Fehler ist. Um Vergleichswerte zu haben, wurde auch hier das schwächere Kriterium für Testfunktionen aus Tabelle~\ref{mittlereTestfunktionen} und~\ref{schwereTestfunktionen} angewandt, wobei es etwas abgeändert wurde zu \(|f-f^*|<|\epsilon_1f + \epsilon_2|\), \(\epsilon_1=\epsilon_2=10^{-4}\). Die Änderung ist notwendig, da bei negativen Funktionswerten die linke Seite stets positiv bleibt, während die rechte negativ werden kann, sodass die Algorithmen nicht konvergieren. Abgesehen davon, ist das schwächere Kriterium schlecht gewählt, da manche der Testfunktionen Optima mit mehr Nachkommastellen haben als 4, z.B. liegt das Optimum der Testfunktion Hartmann(3,4) bei -3.86278.\hfill\newline
 		
 		%TODO sollte es vllt. |e*f| + e?
@@ -838,7 +854,7 @@ within=section,
 			\caption{Testfunktionen zum Vergleich mit Algorithmen, die probabilistisches\hfill\newline
 				Lernen einsetzen}
 			
-			\label{}
+			\label{subsec:Stetige_Testfunktionen:tab:Prob_Lernen}
 			
 			\begin{tabularx}{\textwidth}{l|l}
 				
@@ -884,7 +900,7 @@ within=section,
 			
 			\caption{erster Teil der Testfunktionen zum Vergleich mit anderen mit Ameisenalgorithmen verwandten Methoden und Metaheuristiken, die für stetige Probleme adaptiert wurden}
 			
-			\label{}
+			\label{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt}
 			
 			\begin{tabularx}{\textwidth}{l|l}
 				
@@ -948,7 +964,7 @@ within=section,
 			
 			\caption{zweiter Teil der Testfunktionen zum Vergleich mit anderen mit Ameisenalgorithmen verwandten Methoden und Metaheuristiken, die für stetige Probleme adaptiert wurden}
 			
-			\label{}
+			\label{subsec:Stetige_Testfunktionen:tab:Teil_2_1_Stet_Adapt}
 			
 			\begin{tabularx}{\textwidth}{l|l}
 				
@@ -1004,10 +1020,10 @@ within=section,
 					0.4047 & 0.8828 & 0.8732 & 0.5743 & 0.1091 & 0.0381
 				\end{pmatrix}\)\\
 				
-				Shekel(4,k; k = 5,7,10) & \(f(x) = -\sum_{i=1}^{k}(\sum_{j=1}^{4} (x_j - A_{ji})^2 + c_i)^{-1}\)\Tstrut\\
+				Shekel(4,k; k = 5,7,10) & \(f(x) = -\sum_{i=1}^{k}(\sum_{j=1}^{4} (x_j - a_{ji})^2 + c_i)^{-1}\)\Tstrut\\
 				&
 				
-				\(A = 	\begin{pmatrix}
+				\(a_{ij} = \begin{pmatrix}
 					4.0 & 4.0 & 4.0 & 4.0\\
 					1.0 & 1.0 & 1.0 & 1.0\\
 					8.0 & 8.0 & 8.0 & 8.0\\
@@ -1045,7 +1061,7 @@ within=section,
 			
 			\caption{zweiter Teil der Testfunktionen zum Vergleich mit anderen mit Ameisenalgorithmen verwandten Methoden und Metaheuristiken, die für stetige Probleme adaptiert wurden}
 			
-			\label{schwereTestfunktionenTeil2}
+			\label{subsec:Stetige_Testfunktionen:tab:Teil_2_2_Stet_Adapt}
 			
 			\begin{tabularx}{\textwidth}{l|l}
 				
