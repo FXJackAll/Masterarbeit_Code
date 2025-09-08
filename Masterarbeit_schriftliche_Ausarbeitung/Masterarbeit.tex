@@ -189,7 +189,8 @@ within=section,
 	%\printglossaries
 	
 	\begin{acronym}[Masterarbeit]
-		\acro{csd}[CSD Problem]{Coil Spring Design Problem}
+		%\acro{acorvs}[ACO\(_{\mathbb{R}}\)-VS]{ACO\(_\mathbb{R}\)-very-simple}
+		%\acro{csd}{CSD Problem}{Coil Spring Design Problem}
 		\acro{sce}[SCE]{solution creating entities}
 	\end{acronym}
 	
@@ -747,6 +748,8 @@ within=section,
 	
 		\subsection{Permutationsprobleme Testfunktionen}
 		
+		%TODO fragen, ob kurz beschrieben was permutatioinsprobleme sind oder ganz weglassen
+		
 			\subsubsection{Traveling Salesperson Problem (TSP)} \label{subsubsec:TSP} %in Experimenten weglassen
 			
 			\subsubsection{Quadratic Assigment Problem (QAP)} \label{subsubsec:QAP}
@@ -756,17 +759,17 @@ within=section,
 		%wie in Bachelorarbeit
 		%TODO nachfragen, ob Querformat für Testfunktionen verwendet werden darf - ja nur
 		
-		Aufbauend auf meiner Bachelorarbeit~\cite{FCM_2019}
+		Aufbauend auf meiner Bachelorarbeit~\cite{FCM_2019} werden die Erweiterungen von \ac{acorvs} auf denselben stetigen Testfunktionen getestet, wie der ursprüngliche Algorithmus \ac{acorvs}. Diese sind Testfunktion zum Vergleich mit Algorithmen, die probabilistisches Lernen einsetzten in Tabelle und Testfunktionen zum Vergleich mit anderen mit Ameisenalgorithmen verwandten Methoden und Metaheuristiken, die für stetige Probleme adaptiert wurden in Tabellen und.
 		
 		Es wurden, wie in Tabelle~\ref{einfacheTestfunktionen}, Tabelle~\ref{mittlereTestfunktionen} und Tabelle~\ref{schwereTestfunktionen} zu entnehmen, die dort aufgeführten Testfunktionen verwendet. Da in dieser Arbeit mit ACO\(_{\mathbb{R}}\) verglichen wird, vergleichen sich ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple indirekt auch mit den anderen Verfahren, mit denen sich ACO\(_{\mathbb{R}}\) verglichen hat.\hfill\newline
 		
-		Da ein direkter Vergleich über den Umfang dieser Arbeit aber hinaus gehen würde, wird hier nur mit ACO\(_{\mathbb{R}}\) verglichen und bzgl. des Vergleiches mit den anderen Methoden auf \textit{Socha und Dorigo}~\cite{socha2008ant} verwiesen.\hfill\newline
+		%Da ein direkter Vergleich über den Umfang dieser Arbeit aber hinaus gehen würde, wird hier nur mit ACO\(_{\mathbb{R}}\) verglichen und bzgl. des Vergleiches mit den anderen Methoden auf \textit{Socha und Dorigo}~\cite{socha2008ant} verwiesen.\hfill\newline
 		
 		Die Testfunktionen sind alle aus \cite{socha2008ant} entnommen, um die beiden Algorithmen vergleichen zu können, bis auf Branin~RCOS, Goldstein and Price, Griewangk, Hartmann und Shekel. Die Branin~RCOS-Testfunktion wurde aus~\cite{testFunctionBranin}  entnommen, die Goldstein and Price-Testfunktion aus~\cite{testFunctionGoldsteinandPrice}, Griewangk-Testfunktion wurde aus \textit{Molga und Smutnicki}~\cite{molga2005test} entnommen, während die Shekel-Testfunktionen aus~\cite{testFunctionShekel} und die Hartmann-Testfunktionen aus~\cite{testFunctionHartmann3} und~\cite{testFunctionHartmann6}. Sie stimmen mit denen aus \cite{socha2008ant} überein, bis auf einen Matrixeintrag bei der Hartmann(6,4)-Testfunktion, aber in den anderen Quellen waren die Optima angegeben und die Argumente der Optima, also ihre x-Werte, während in \cite{socha2008ant} nicht, weswegen die Entscheidung sich auf die anderen Quellen, bei den Angaben zu Optima und den dazugehörigen Argumenten zu verlassen, getroffen wurde.\hfill\newline
 		
 		Der Matrixeintrag ist \(a_{15}=1.7\), statt \(1.5\), da alle vorhandenen Quellen, bis auf \cite{socha2008ant}, dies so angeben.\hfill\newline
 		
-		An dieser Stelle wurden in meiner Bachelorarbeit für die Funktionen Hartmann(3,4), Hartmann(6,4), Shekel(4,5), Shekel(4,7) und Shekel(4,10) andere Optima, als in der Literatur angegeben. Ich konnte den Fehler finden. Ich habe die Funktionsgleichungen der Testprobleme in den Quellen falsch interpretiert, weswegen ich falsche Ergebnisse bekommen hatte.\hfill\newline
+		In meiner Bachelorarbeit stimmten die von mir berechnete Optima für die Funktionen Hartmann(3,4), Hartmann(6,4), Shekel(4,5), Shekel(4,7) und Shekel(4,10) mit denen in der Literatur nicht überein. Ich konnte den Fehler finden. Ich habe die Funktionsgleichungen der Testprobleme in den Quellen falsch interpretiert, weswegen ich falsche Ergebnisse bekommen hatte. Für Schekel(4,k;k = 5,7,10) lag der Fehler in der Interpretationen der Gleichung. Ich habe die es so verstanden, we es in Gleichung \hfill\newline
 		
 		Ferner wurde festgestellt, dass die angegeben Optima in \cite{testFunctionShekel}, \cite{testFunctionHartmann3} und \cite{testFunctionHartmann6} nicht mit den Optima übereinstimmen, wenn in die Funktion die Argumente der Optima, also ihre x-Werte, eingegeben werden. Deswegen werden die berechneten Optima genutzt, statt den angegeben, da die Algorithmen sonst keine Chance haben die Optima zu finden und für die aufgeführten Funktionen nicht konvergieren.\hfill\newline
 		
@@ -835,7 +838,7 @@ within=section,
 			\caption{Testfunktionen zum Vergleich mit Algorithmen, die probabilistisches\hfill\newline
 				Lernen einsetzen}
 			
-			\label{einfacheTestfunktionen}
+			\label{}
 			
 			\begin{tabularx}{\textwidth}{l|l}
 				
@@ -871,6 +874,8 @@ within=section,
 			
 		\end{table}
 		
+		%TODO Optimum separat von Name und Definitionsbereich in anderer Tabelle?
+		
 		\bigskip
 		
 		\begin{table}[H]
@@ -879,7 +884,7 @@ within=section,
 			
 			\caption{erster Teil der Testfunktionen zum Vergleich mit anderen mit Ameisenalgorithmen verwandten Methoden und Metaheuristiken, die für stetige Probleme adaptiert wurden}
 			
-			\label{mittlereTestfunktionen}
+			\label{}
 			
 			\begin{tabularx}{\textwidth}{l|l}
 				
@@ -895,11 +900,11 @@ within=section,
 				
 				Branin RCOS, \(\overrightarrow{x} \in [-5,15]^n, n = 2\),
 				& \(f(x)=(x_2 - \frac{5}{4\pi}^2 x_1^2 + \frac{5}{\pi} x_1 - 6)^2 + 10 (1 - \frac{1}{8\pi})cos(x_1) + 10\)\Tstrut\\
-				0.397887 bei \(\overrightarrow{x} = [-\pi , 12.275]\) & \\ 
+				0.397887 bei \(\overrightarrow{x} = [-\pi , 12.275]\) & \\
 				od. \(x = [\pi , 2.275]\) & \\
 				od. \(x = [9.42478, 2.475]\) & \\
 				
-				Easom, \(\overrightarrow{x} \in [-100,100]^n, n = 2\), & \(f(x)=-cos(x_1) \, cos(x_2) e^{(x_1-\pi)^2(x_2-\pi)^2}\)\Tstrut\\
+				Easom, \(\overrightarrow{x} \in [-100,100]^n, n = 2\), & \(f(x)=-cos(x_1) \, cos(x_2) e^{-(x_1-\pi)^2 - (x_2-\pi)^2}\)\Tstrut\\
 				0 bei \(\overrightarrow{x} = [\pi \cdot k + \pi/2]\), & \\
 				\( \pi \cdot k + \pi/2], k \in \mathbb{Z}\) & \\
 				
@@ -943,7 +948,7 @@ within=section,
 			
 			\caption{zweiter Teil der Testfunktionen zum Vergleich mit anderen mit Ameisenalgorithmen verwandten Methoden und Metaheuristiken, die für stetige Probleme adaptiert wurden}
 			
-			\label{schwereTestfunktionen}
+			\label{}
 			
 			\begin{tabularx}{\textwidth}{l|l}
 				
@@ -2050,6 +2055,10 @@ within=section,
 	\listoftables
 	
 	\listoffigures
+	
+	%TODO List of Algorithms anhäften
+	
+	%TODO Für weitere Quellen in der Masterarbeit nachschauen
 	
 	\newpage
 	
