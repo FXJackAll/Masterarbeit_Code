@@ -759,7 +759,7 @@ within=section,
 		%wie in Bachelorarbeit
 		%TODO nachfragen, ob Querformat für Testfunktionen verwendet werden darf - ja nur
 		
-		Aufbauend auf meiner Bachelorarbeit~\cite{FCM_2019} werden die Erweiterungen von \ac{acorvs} auf denselben stetigen Testfunktionen getestet, wie der ursprüngliche Algorithmus \ac{acorvs}. Diese sind Testfunktion zum Vergleich mit Algorithmen, die probabilistisches Lernen einsetzten in Tabelle~\ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} und Testfunktionen zum Vergleich mit anderen mit Ameisenalgorithmen verwandten Methoden und Metaheuristiken, die für stetige Probleme adaptiert wurden in Tabellen \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_2_1_Stet_Adapt}.\hfill\newline
+		Aufbauend auf meiner Bachelorarbeit~\cite{FCM_2019} werden die Erweiterungen von \ac{acorvs} auf denselben stetigen Testfunktionen getestet, wie der ursprüngliche Algorithmus \ac{acorvs}. Diese sind Testfunktion zum Vergleich mit Algorithmen, die probabilistisches Lernen einsetzten in Tabelle~\ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} und Testfunktionen zum Vergleich mit anderen mit Ameisenalgorithmen verwandten Methoden und Metaheuristiken, die für stetige Probleme adaptiert wurden, in Tabellen \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt}, \ref{subsec:Stetige_Testfunktionen:tab:Teil_2_1_Stet_Adapt} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_2_2_Stet_Adapt}.\hfill\newline
 		
 		%Es wurden, wie in Tabelle~\ref{subsec:Stetige_Funktionen:tab:Prob_Lernen}, Tabelle~\ref{subsec:Stetige_Funktionen:tab:Teil_1_Stet_Adapt} und Tabelle~\ref{subsec:Stetige_Funktionen:tab:Teil_2_Stet_Adapt} zu entnehmen, die dort aufgeführten Testfunktionen verwendet. Da in dieser Arbeit mit ACO\(_{\mathbb{R}}\) verglichen wird, vergleichen sich ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple indirekt auch mit den anderen Verfahren, mit denen sich ACO\(_{\mathbb{R}}\) verglichen hat.\hfill\newline
 		
@@ -825,11 +825,14 @@ within=section,
 		
 		%Positiv aufgefallen ist aber, dass bei der Suche nach den Fehlern die Algorithmen die berechneten Optima selbst dann fanden, wenn die Angegebenen als Ziel verwendet wurden. Die Verfahren brachen nur nicht ab, weil das Ziel eben eines war, was nicht erreicht werden konnte.\hfill\newline
 		
-		Fernen wurde das Abbruchkriterium für alle Testfunktionen, außer für die Maximierungsprobleme \glqq Plane\grqq \hspace{.16667em} und \glqq Diagonal Plane\grqq, aus Tabelle~\ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} auf\\
-		\(|f-f^*|<\epsilon, \epsilon = 10^{-10}\) gesetzt, dabei ist \(f\) der momentane Funktionswert und \(f^*\) das bekannte Optimum. Für die Maximierungsprobleme wurde das Abbruchkriterium \(f>\epsilon\) gesetzt, mit \(\epsilon=10^{10}\).\hfill\newline
+		Die Testfunktionen, welche in den Tabellen \ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen}, \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt}, \ref{subsec:Stetige_Testfunktionen:tab:Teil_2_1_Stet_Adapt} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_2_2_Stet_Adapt} gelistet sind, unterscheiden sich nicht nur darin, für welche Vergleiche sie herangezogen werden, sondern auch welches Abbruchkriterium beim Vergleich genutzt wird. Für Testfunktionen aus Tabelle~\ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} gilt das Abbruchkriterium \(|f - f^*| < \varepsilon, \, \varepsilon = 10^{-10}\) und für Testfunktionen aus den Tabellen~\ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt}, \ref{subsec:Stetige_Testfunktionen:tab:Teil_2_1_Stet_Adapt} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_2_2_Stet_Adapt} gilt das Abbruchkriterium \(|f - f^*| < |\varepsilon_1 f| + \varepsilon_2, \, \varepsilon_1 = \varepsilon_2 = 10^{-4}\). Dabei ist \(\varepsilon_1\) der relative Fehler und \(\varepsilon_2\) der absolute Fehler. In beiden Abbruchkriterien steht \(f\) für den momentanen Funktionswert und \(f^*\) für das bekannte Optimum. Das zweite Abbruchkriterium wird in \cite{socha2008ant} und \cite{socha2009ant} als \(|f - f^*| < \varepsilon_1 f + \varepsilon_2, \varepsilon_1 = \varepsilon_2 = 10^{-
+		4}\) angegeben, aber es musste zu der jetzigen Form verändert werden, da sonst negative Optima nicht erreicht werden können. So wird z.B. das Optimum \(f^* = -3.32237\) der Testfunktion Hartmann(6,4) nicht erreicht, da, für einen an das Optima hinreichend nahen, Funktionswert \(f = -3.32237 + \varepsilon_1\) gilt \(|-3.32237 - (f + \varepsilon_1)| = |\varepsilon_1| = \varepsilon_1 > \varepsilon_1 \cdot (-3.32237) + \varepsilon_2\). Ein weitere Herausforderung des Abbruchkriteriums \(|f - f^*| < \varepsilon_1 f + \varepsilon_2, \, \varepsilon_1 = \varepsilon_2 = 10^{-4}\) ist die Tatsache\hfill\newline
 		
-		In \cite{socha2008ant} und \cite{socha2009ant} und  wurde später das schwächere Abbruchkriterium\\
-		\(|f-f^*|<\epsilon_1f + \epsilon_2\), \(\epsilon_1=\epsilon_2=10^{-4}\) verwendet, wobei \(\epsilon_1\) der relative Fehler und \(\epsilon_2\) der absolute Fehler ist. Um Vergleichswerte zu haben, wurde auch hier das schwächere Kriterium für Testfunktionen aus Tabelle~\ref{mittlereTestfunktionen} und~\ref{schwereTestfunktionen} angewandt, wobei es etwas abgeändert wurde zu \(|f-f^*|<|\epsilon_1f + \epsilon_2|\), \(\epsilon_1=\epsilon_2=10^{-4}\). Die Änderung ist notwendig, da bei negativen Funktionswerten die linke Seite stets positiv bleibt, während die rechte negativ werden kann, sodass die Algorithmen nicht konvergieren. Abgesehen davon, ist das schwächere Kriterium schlecht gewählt, da manche der Testfunktionen Optima mit mehr Nachkommastellen haben als 4, z.B. liegt das Optimum der Testfunktion Hartmann(3,4) bei -3.86278.\hfill\newline
+		%Fernen wurde das Abbruchkriterium für alle Testfunktionen, außer für die Maximierungsprobleme \glqq Plane\grqq \hspace{.16667em} und \glqq Diagonal Plane\grqq, aus Tabelle~\ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} auf\\
+		%\(|f-f^*|<\epsilon, \epsilon = 10^{-10}\) gesetzt, dabei ist \(f\) der momentane Funktionswert und \(f^*\) das bekannte Optimum. Für die Maximierungsprobleme wurde das Abbruchkriterium \(f>\epsilon\) gesetzt, mit \(\epsilon=10^{10}\).\hfill\newline
+		
+		%In \cite{socha2008ant} und \cite{socha2009ant} und  wurde später das schwächere Abbruchkriterium\\
+		%\(|f-f^*|<\epsilon_1f + \epsilon_2\), \(\epsilon_1=\epsilon_2=10^{-4}\) verwendet, wobei \(\epsilon_1\) der relative Fehler und \(\epsilon_2\) der absolute Fehler ist. Um Vergleichswerte zu haben, wurde auch hier das schwächere Kriterium für Testfunktionen aus Tabelle~\ref{mittlereTestfunktionen} und~\ref{schwereTestfunktionen} angewandt, wobei es etwas abgeändert wurde zu \(|f-f^*|<|\epsilon_1f + \epsilon_2|\), \(\epsilon_1=\epsilon_2=10^{-4}\). Die Änderung ist notwendig, da bei negativen Funktionswerten die linke Seite stets positiv bleibt, während die rechte negativ werden kann, sodass die Algorithmen nicht konvergieren. Abgesehen davon, ist das schwächere Kriterium schlecht gewählt, da manche der Testfunktionen Optima mit mehr Nachkommastellen haben als 4, z.B. liegt das Optimum der Testfunktion Hartmann(3,4) bei -3.86278.\hfill\newline
 		
 		%TODO sollte es vllt. |e*f| + e?
 		
@@ -868,7 +871,7 @@ within=section,
 				Cigar, \(\overrightarrow{x} \in [-3,7]^n, n = 10\), & \(f(x)=x_1^2 + 10^4\sum_{i=2}^{n} x_i^2\)\Tstrut\\
 				0 bei \(\overrightarrow{x} = [0, 0, 0, ...]\) & \\
 				
-				Diagonal plane, \(\overrightarrow{x} \in [0.5,1.5]^n, n = 10\), & \(f(x)=\frac{1}{n} \sum_{i=1}^{n} x_i\)\Tstrut\\
+				%Diagonal plane, \(\overrightarrow{x} \in [0.5,1.5]^n, n = 10\), & \(f(x)=\frac{1}{n} \sum_{i=1}^{n} x_i\)\Tstrut\\
 				\(10^{10}\) bei mehreren & \\
 				
 				Ellipsoid, \(\overrightarrow{x} \in [-3,7]^n, n = 10\), & \(f(x)=\sum_{i=1}^{n} \left(100^\frac{i-1}{n-1} x_i\right)^2\)\Tstrut\\
@@ -877,7 +880,7 @@ within=section,
 				Paraboloid, \(\overrightarrow{x} \in [-3,7]^n, n = 10\), & \(f(x)=\sum_{i=1}^{n} x^2\)\Tstrut\\
 				0 bei \(\overrightarrow{x} = [0, 0, 0, ...]\) & \\
 				
-				Plane, \(\overrightarrow{x} \in [0.5,1.5]^n, n = 10\), & \(f(x)=x_1\)\Tstrut\\
+				%Plane, \(\overrightarrow{x} \in [0.5,1.5]^n, n = 10\), & \(f(x)=x_1\)\Tstrut\\
 				\(10^{10}\) bei \(x_1 = 10^{10}\) & \\
 				
 				Rosenbrock, \(\overrightarrow{x} \in [-3,7]^n, n = 10\),  & \(f(x)=\sum_{i=1}^{n-1} 100 (x^2_i-x_{i+1})^2 + (x_i-1)^2\) \Tstrut\\
