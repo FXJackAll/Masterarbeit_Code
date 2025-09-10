@@ -11,7 +11,7 @@
 \contentsline {subsection}{\numberline {2.7}Ameisenalgorithmen mit einem Hierarchischen Gemischten Lösungsarchiv}{6}{}%
 \contentsline {subsection}{\numberline {2.8}Ameisenalgorithmen in stetigen Variablen}{6}{}%
 \contentsline {section}{\numberline {3}Optimierungsprobleme}{7}{}%
-\contentsline {section}{\numberline {4}Varianten der Lösungsfindung}{8}{}%
+\contentsline {section}{\numberline {4}Grundlagen}{8}{}%
 \contentsline {subsection}{\numberline {4.1}ACO\(_{\mathbb {R}}\)}{8}{}%
 \contentsline {subsection}{\numberline {4.2}ACO\(_{\mathbb {R}}\)-simple}{9}{}%
 \contentsline {subsection}{\numberline {4.3}ACO\(_{\mathbb {R}}\)-very-simple}{10}{}%
