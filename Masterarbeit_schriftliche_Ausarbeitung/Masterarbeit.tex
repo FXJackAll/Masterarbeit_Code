@@ -19,6 +19,7 @@
 \usepackage{caption, booktabs}
 
 \usepackage{listings}
+\renewcommand{\lstlistingname}{Code-S´nipped}
 \usepackage{xcolor}
 
 \usepackage{algorithm}
@@ -736,6 +737,8 @@ within=section,
 }
 	\end{lstlisting}
 	
+	%TODO Code-Snipped oder anders?
+	
 	\hfill\newline
 
 	Wie in Abbildung~\ref{sec:Testfunktionen:abb:JSON:Paraboloid10DimCont} zu sehen, besteht die neue, abstrakte Definition u.a. aus \glqq variable\_boundaries\grqq{}. Dies ist ein neuer Eintrag, der notwendig geworden ist, da für das Problem im Abschnitt~\ref{subsubsec:Coil_Spring_Design_Problem} die Intervallgrenzen zugleich Beschränkungen der Suchintervalle sind. Ein weiterer Grund das JSON-Format zu nehmen, ist, dass alle Einträge als Wörterbücher (Dictionary) ausgelesen werden können, was die Definition von neuen abstrakten Einträger leicht macht, da die Anordnung, im Vergleich zu einem Feld, bei einem Wörterbuch keine Rolle spielt.\hfill\newline
@@ -784,12 +787,6 @@ within=section,
 		\begin{equation} \label{subsec:Stetige_Testfunktionen:eq:Masterinterpretation}
 			f(x) = -\sum_{i=1}^{k}(\sum_{j=1}^{4} \big( (x_j - a_{ji})^2 \big) + c_i)^{-1}
 		\end{equation}
-		
-		\begin{equation} \label{subsec:Stetige_Testfunktionen:eq:Klare_Formulierung}
-			f(x) = -\sum_{i=1}^{k}(c_i + \sum_{j=1}^{4} (x_j - a_{ji})^2)^{-1}
-		\end{equation}
-		
-		%TODO Gleichungen beibehalten?
 		
 		%Ferner wurde festgestellt, dass die angegeben Optima in \cite{testFunctionShekel}, \cite{testFunctionHartmann3} und \cite{testFunctionHartmann6} nicht mit den Optima übereinstimmen, wenn in die Funktion die Argumente der Optima, also ihre x-Werte, eingegeben werden. Deswegen werden die berechneten Optima genutzt, statt den angegeben, da die Algorithmen sonst keine Chance haben die Optima zu finden und für die aufgeführten Funktionen nicht konvergieren.\hfill\newline
 		
@@ -846,7 +843,8 @@ within=section,
 		
 		% TODO Konvergenz betrachten, wie bei Rosenbrock, welche das Optimum nicht erreicht haben
 		
-		Ferner müssen wir noch auf das Initialisierungsintervall eingehen. Das Initialisierungsintervall ist das Intervall aus dem, bei der Initialisierung des Algorithmus, die ersten \(k \in \mathbb{N}\) zufälligen Lösungen gezogen aus denen dann andere Lösungen konstruiert werden. Dabei kann \(k = 13\) sein, wie bei der Initialisierung des HSPPBO-Schema in Abschnitt~\ref{sec:HSPPBO_Schema}, \(k = 50\), wie bei der Initialisierung von ACO\(_\mathbb{R}\) in Abschnitt~\ref{subsec:Definition_ACO_R} oder \(k = 100\) bei der Initialisierung von \ac{acorvs} im Abschnitt~\ref{subsec:ACO_R_very_simple}.
+		
+		Ferner müssen wir noch auf das Initialisierungsintervall eingehen. Das Initialisierungsintervall ist das Intervall aus dem, bei der Initialisierung des Algorithmus, die ersten \(k \in \mathbb{N}\) zufälligen Lösungen gezogen werden aus denen dann andere Lösungen konstruiert werden. Dabei kann \(k = 13\) sein, wie bei der Initialisierung des HSPPBO-Schema in Abschnitt~\ref{sec:HSPPBO_Schema}, \(k = 50\), wie bei der Initialisierung von ACO\(_\mathbb{R}\) in Abschnitt~\ref{subsec:Definition_ACO_R} oder \(k = 100\) bei der Initialisierung von \ac{acorvs} im Abschnitt~\ref{subsec:ACO_R_very_simple}. Wir müssen auf das Initialisierungsintervall ist  Da in \cite{socha2008ant} und \cite{socha2009ant} bereits die Initialisierungsintervalle für alle Testfunktionen aus den Abschnitten \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt}, \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt}, \ref{subsec:Stetige_Testfunktionen:tab:Teil_2_1_Stet_Adapt} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_2_2_Stet_Adapt} für 
 		
 		Es ist noch zu bemerken, dass das Initialisierungsintervall, also das Intervall aus dem die ersten zufälligen \textit{k} Lösungen entnommen werden, um das Lösungsarchiv zu füllen, von entscheidender Bedeutung ist. Wenn es unglücklich gewählt ist, liegen die Lösungen so um das Optimum, dass bei bestimmten Testproblemen die Algorithmusleistung stark zum positiven verzerrt wird. Ein so wichtiger Punkt wird hier für die gegeben stetige Testfunktionen nur deswegen nebensächlich erwähnt, da in \textit{Socha und Dorigo}~\cite{socha2008ant} darauf bereits eingegangen wurde, die Initialisierungsintervalle, wie sie dort aufgeführt sind, für gut befunden wurden und wir diese lediglich nur übernehmen müssen.\hfill\newline
 		
@@ -1207,7 +1205,7 @@ within=section,
 		
 		\subsubsection{Ordinale Testfunktionen mit asymmetrischem Definitionsbereich}
 		
-		Wie in Abschnitt~\ref{subsec:Definition_ACO_R} geschildert, hat das Initialisierungsintervall großen Einfluss auf das Verhalten des Algorithmus. Zusätzlich, wie in \cite{ACO_2003_simiple_problems} beschrieben, kann das Betrachten von einfachen Testfunktionen zu unerwarteten Ergebnissen führen. Deswegen definieren wir in diesem Abschnitt explizit diskrete Funktionen, die einfach sind aber einen nicht-Standarddefinitionsbereich haben. Wir wählen, wie im Abschnitt~\ref{subsubsec:Ordinale_Testfunktionen_Mit_Gleichverteiltem_Definitionsbereich}, \(m \in \{11, 21, 51\}\) aber diesmal ist der Definitionsbereich asymmetrisch verteilt mit \(3\) Clustern. Zum Beispiel transformiert dies den stetigen Definitionsbereich der Testfunktion \glqq Paraboloid\grqq{} von \(D = [-3, 7]^n, n = 10\) zu \(D = [-3, -2.8, -2.6, -0.4, -0.2, 0.0, 0.2, 0.4, 6.6, 6.8, 7.0]\). Im JSON-Format wird dies wie im JSON-File~\ref{JSON:Cigar2Dim11OrdAsymm} angezeigt.
+		Wie in Abschnitt~\ref{subsec:Definition_ACO_R} geschildert, hat das Initialisierungsintervall großen Einfluss auf das Verhalten des Algorithmus. Zusätzlich, wie in \cite{ACO_2003_simiple_problems} beschrieben, kann das Betrachten von einfachen Testfunktionen zu unerwarteten Ergebnissen führen. Deswegen definieren wir in diesem Abschnitt explizit diskrete Funktionen, die einfach sind aber einen nicht-Standarddefinitionsbereich haben. Wir wählen, wie im Abschnitt~\ref{subsubsec:Ordinale_Testfunktionen_Mit_Gleichverteiltem_Definitionsbereich}, \(m \in \{11, 21, 51\}\) aber diesmal ist der Definitionsbereich asymmetrisch verteilt mit \(3\) Clustern. Zum Beispiel transformiert dies den stetigen Definitionsbereich der Testfunktion \glqq Paraboloid\grqq{} von \(D = [-3, 7]^{10}\) zu \(D = [-3, -2.8, -2.6, -0.4, -0.2, 0.0, 0.2, 0.4, 6.6, 6.8, 7.0]^{10}\). Im JSON-Format wird dies wie im JSON-File~\ref{JSON:Cigar2Dim11OrdAsymm} angezeigt.
 		
 		\begin{lstlisting}[language=json, caption=Cigar 2Dim ordinal asymmetrischer Definitionsbereich, label=JSON:Cigar2Dim11OrdAsymm]
 {
