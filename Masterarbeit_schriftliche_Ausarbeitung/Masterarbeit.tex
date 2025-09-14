@@ -19,7 +19,7 @@
 \usepackage{caption, booktabs}
 
 \usepackage{listings}
-\renewcommand{\lstlistingname}{Code-S´nipped}
+\renewcommand{\lstlistingname}{Code-Snipped}
 \usepackage{xcolor}
 
 \usepackage{algorithm}
@@ -704,7 +704,7 @@ within=section,
 	
 	Aufbauend auf meiner Bachelorarbeit~\cite{FCM_2019}, erweitern wir die Art der Testfunktionen, anhand derer wir die Güte der hier vorlegten Erweiterungen von ACO\(_\mathbb{R}\)-VS beurteilen. Wo ACO\(_{\mathbb{R}}\)-VS nur auf stetigen Testfunktionen getestet wurde, werden die Erweiterungen von ACO\(_{\mathbb{R}}\)-VS auf stetigen Testfunktionen getestet, auf Testfunktionen mit diskreten/ordinalen Variablen und auf Testfunktionen mit gemischten Variablen.\hfill\newline
 	
-	Da in meiner Bachelorarbeit die Testfunktionen in ihren Dimensionen nicht variiert haben, Intervallgrenzen keine Rolle spielten und alle Funktionen über stetigen, zusammenhängenden Definitionsbereichen definiert waren, brauchte es keiner standardisierten, abstrakten Definition. In dieser Arbeit aber betrachten wir stetige und diskrete/ordinale Testfunktionen, sowie Testfunktionen mit gemischten Variablen. Ferner liegen 5 der Testprobleme mit gemischten Variablen in drei verschiedenen Dimensionen dar, nämlich \(n \in \{2, 5, 10\}\). Deswegen war eine überarbeitete Definition der Testprobleme notwendig. Die einfachste Definition mit dem neuen Standard ist in Abbildung~\ref{sec:Testfunktionen:abb:JSON:Paraboloid10DimCont} zu sehen.\hfill\newline
+	Da in meiner Bachelorarbeit die Testfunktionen in ihren Dimensionen nicht variiert haben, Intervallgrenzen keine Rolle spielten und alle Funktionen über stetigen, zusammenhängenden Definitionsbereichen definiert waren, brauchte es keiner standardisierten, abstrakten Definition. In dieser Arbeit aber betrachten wir stetige und diskrete/ordinale Testfunktionen, sowie Testfunktionen mit gemischten Variablen. Ferner liegen 5 der Testprobleme mit gemischten Variablen in drei verschiedenen Dimensionen dar, nämlich \(n \in \{2, 5, 10\}\). Deswegen war eine überarbeitete Definition der Testprobleme notwendig. Die einfachste Definition mit dem neuen Standard ist im Code-Snipped~\ref{sec:Testfunktionen:abb:JSON:Paraboloid10DimCont} zu sehen.\hfill\newline
 	
 	%TODO Testfunktion oder Testproblem?
 	
@@ -741,11 +741,11 @@ within=section,
 	
 	\hfill\newline
 
-	Wie in Abbildung~\ref{sec:Testfunktionen:abb:JSON:Paraboloid10DimCont} zu sehen, besteht die neue, abstrakte Definition u.a. aus \glqq variable\_boundaries\grqq{}. Dies ist ein neuer Eintrag, der notwendig geworden ist, da für das Problem im Abschnitt~\ref{subsubsec:Coil_Spring_Design_Problem} die Intervallgrenzen zugleich Beschränkungen der Suchintervalle sind. Ein weiterer Grund das JSON-Format zu nehmen, ist, dass alle Einträge als Wörterbücher (Dictionary) ausgelesen werden können, was die Definition von neuen abstrakten Einträger leicht macht, da die Anordnung, im Vergleich zu einem Feld, bei einem Wörterbuch keine Rolle spielt.\hfill\newline
+	Wie im Code-Snipped~\ref{sec:Testfunktionen:abb:JSON:Paraboloid10DimCont} zu sehen, besteht die neue, abstrakte Definition u.a. aus \glqq variable\_boundaries\grqq{}. Dies ist ein neuer Eintrag, der notwendig geworden ist, da für das Problem im Abschnitt~\ref{subsubsec:Coil_Spring_Design_Problem} die Intervallgrenzen zugleich Beschränkungen der Suchintervalle sind. Ein weiterer Grund das JSON-Format zu nehmen, ist, dass alle Einträge als Wörterbücher (Dictionary) ausgelesen werden können, was die Definition von neuen abstrakten Einträger leicht macht, da die Anordnung, im Vergleich zu einem Feld, bei einem Wörterbuch keine Rolle spielt.\hfill\newline
 	
-	Weitere Einträge, die notwendig wurden, sind \glqq dimension\grqq, \glqq optimum\grqq, \glqq discrete\_values\grqq{} und \glqq magnitudes\_of\_categorical\_variables\grqq. Da ein weiteres Ziel war, dass, neben der Abstraktion, Automatisation implementiert werden sollte, wurden die JSON-Dateien so konzipiert, dass statische Werte einer Testfunktion, ohne Nutzereingabe, zum Start des Algorithmus ausgelesen werden konnten. Dabei bezeichnet \glqq dimension\grqq die Dimension des Problems. In Kombination mit den \glqq variable\_boundaries\grqq{} ergibt dies für die Abbildung~\ref{sec:Testfunktionen:abb:JSON:Paraboloid10DimCont} den Definitionsbereich \([-3, 7]^{10}\). Der Eintrag \glqq optimum\_argument\grqq{} definiert das zum Optimum gehörige Argument, also die notwendige Belegung der unabhängigen Variablen, um das Optimum der Testfunktion zu erhalten, welches im Eintrag \glqq optimum\grqq{} ausgelesen werden kann. Die Intervallgrenzen für den Definitionsbereich einer Testfunktion sind unter \glqq variable\_blundaries\grqq{} hinterlegt und definieren sowohl die Intervalle, in denen eine Lösung liegen muss, um eine gültige Lösung zu sein, als auch die Intervalle, aus denen Initiallösungen während der Initialisierungsmethode \(\mathcal{I}\) gezogen werden, wie diese im Abschnitt~\ref{sec:HSPPBO_Schema} definiert wurde. Der Eintrag \glqq discrete\_values\grqq{} listet alle diskreten/ordinalen Werte auf, welche die Testfunktion annehmen kann\hfill\newline
+	Weitere Einträge, die notwendig wurden, sind \glqq dimension\grqq, \glqq optimum\grqq, \glqq discrete\_values\grqq{} und \glqq magnitudes\_of\_categorical\_variables\grqq. Da ein weiteres Ziel war, dass, neben der Abstraktion, Automatisation implementiert werden sollte, wurden die JSON-Dateien so konzipiert, dass statische Werte einer Testfunktion, ohne Nutzereingabe, zum Start des Algorithmus ausgelesen werden konnten. Dabei bezeichnet \glqq dimension\grqq die Dimension des Problems. In Kombination mit den \glqq variable\_boundaries\grqq{} ergibt dies für den Code-Snipped~\ref{sec:Testfunktionen:abb:JSON:Paraboloid10DimCont} den Definitionsbereich \([-3, 7]^{10}\). Der Eintrag \glqq optimum\_argument\grqq{} definiert das zum Optimum gehörige Argument, also die notwendige Belegung der unabhängigen Variablen, um das Optimum der Testfunktion zu erhalten, welches im Eintrag \glqq optimum\grqq{} ausgelesen werden kann. Die Intervallgrenzen für den Definitionsbereich einer Testfunktion sind unter \glqq variable\_blundaries\grqq{} hinterlegt und definieren sowohl die Intervalle, in denen eine Lösung liegen muss, um eine gültige Lösung zu sein, als auch die Intervalle, aus denen Initiallösungen während der Initialisierungsmethode \(\mathcal{I}\) gezogen werden, wie diese im Abschnitt~\ref{sec:HSPPBO_Schema} definiert wurde. Der Eintrag \glqq discrete\_values\grqq{} listet alle diskreten/ordinalen Werte auf, welche die Testfunktion annehmen kann\hfill\newline
 	
-	Der letzte Grund, warum das JSON-Format gewählt wurde, wie in Abbildung~\ref{sec:Testfunktionen:abb:JSON:Paraboloid10DimCont} zu sehen, kann das JSON-Format jede Art von Eintrag aufnehmen und somit jede Form von abstrakter Variable beherbergen und damit einen hohen Abstraktionsgrad liefern, der, für auf dieser Arbeit aufbauende Forschung, notwendig ist.
+	Der letzte Grund, warum das JSON-Format gewählt wurde, wie im Code-Snipped~\ref{sec:Testfunktionen:abb:JSON:Paraboloid10DimCont} zu sehen, kann das JSON-Format jede Art von Eintrag aufnehmen und somit jede Form von abstrakter Variable beherbergen und damit einen hohen Abstraktionsgrad liefern, der, für auf dieser Arbeit aufbauende Forschung, notwendig ist.
 	
 	%TODO jeden Eintrag erklären?
 	
@@ -862,6 +862,7 @@ within=section,
 			
 			\caption{Testfunktionen zum Vergleich mit Algorithmen, die probabilistisches\hfill\newline
 				Lernen einsetzen}
+			%TODO Darf man die Bezeichnung für die Tabellen beibehalten, weil direktes Zitat aus Bachelorarbeit
 			
 			\label{subsec:Stetige_Testfunktionen:tab:Prob_Lernen}
 			
@@ -1080,22 +1081,34 @@ within=section,
 				
 				\rule{6.4cm}{0.4pt} & \rule{8cm}{0.4pt}\\
 				
-				Hartmann(3,4), \(\overrightarrow{x} \in [0,1]^n, n=3\) & 7.421029683540756e-06 bei\Tstrut\\
-				& \(\overrightarrow{x} = [0.114614, 0.555649, 0.852547]\)\\
+				Hartmann(3,4), \(\overrightarrow{x} \in [0,1]^n, n=3\) & -3.86278 bei \(\overrightarrow{x} = [0.114614, 0.555649, 0.852547]\)\\
 				
-				Hartmann(6,4), \(\overrightarrow{x} \in [0,1]^n, n=6\) & 0.42294247223934295 bei\Tstrut\\
+				Hartmann(6,4), \(\overrightarrow{x} \in [0,1]^n, n=6\) & -3.32237 bei\Tstrut\\
 				& \(\overrightarrow{x} = [0.20169, 0.150011, 0.476874,\)\\
 				& \(0.275332, 0.311652, 0.6573]\) \\
 				
-				Shekel(4,5) \(\overrightarrow{x}, \in [0,1]^n, n = 4\) & -2.552128998986617 bei \(\overrightarrow{x} = [4, 4 , 4, 4]\)\Tstrut\\
+				Shekel(4,5) \(\overrightarrow{x}, \in [0,1]^n, n = 4\) & -10.1532 bei \(\overrightarrow{x} = [4, 4 , 4, 4]\)\Tstrut\\
 				
-				Shekel(4,7) \(\overrightarrow{x}, \in [0,1]^n, n = 4\) & -2.561924906388908 bei \(\overrightarrow{x} = [4, 4 , 4, 4]\)\Tstrut\\ 
+				Shekel(4,7) \(\overrightarrow{x}, \in [0,1]^n, n = 4\) & -10.4029 bei \(\overrightarrow{x} = [4, 4 , 4, 4]\)\Tstrut\\ 
 				
-				Shekel(4,10) \(\overrightarrow{x}, \in [0,1]^n, n = 4\) & 2.5727358977878936 bei \(\overrightarrow{x} = [4, 4 , 4, 4]\)\Tstrut\\
+				Shekel(4,10) \(\overrightarrow{x}, \in [0,1]^n, n = 4\) & -10.5364 bei \(\overrightarrow{x} = [4, 4 , 4, 4]\)\Tstrut\\
 				
 			\end{tabularx}
 			
 		\end{table}
+		
+		\subsubsection{Testfunktion - Easom} \label{subsubsc:Testfunktion_-_Easom}
+		
+		Wie in \cite{molga2005test} beschrieben, ist die Easom-Testfunktion deswegen interessant, weil die Umgebung um das globale Minimum klein ist im Verhältnis zur Größe des gesamten Suchraum. Der Suchraum ist das Quadrat \([-100, 100] \times [-100, 100]\) in der Abbildung~\ref{fig:3D_Visualization_Easom_Various_Intervals} links, während das Optimum im Quadrat \([1, 5] \times [1, 5]\) sich befindet, in der Abbildung~\ref{fig:3D_Visualization_Easom_Various_Intervals} rechts.
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=.5\textwidth]{Abbildungen/3D_Visualisationen/3D_visualization_easom_2_-100_100_coolwarm.png}\hfill
+			\includegraphics[width=.5\textwidth]{Abbildungen/3D_Visualisationen/3D_visualization_easom_2_1_5_coolwarm.png}
+			
+			\caption{Easom-Testfunktion: Vergleich zwischen gesamtem Suchraum (links) und Umgebung um das Optimum (rechts)}
+			\label{fig:3D_Visualization_Easom_Various_Intervals}
+		\end{figure}
 		
 		\subsubsection{Testfunktion - Paraboloid} \label{subsubsec:Testfunktion_-_Paraboloid}
 		
@@ -1108,6 +1121,7 @@ within=section,
 		\begin{figure}[H]
 			\centering
 			\includegraphics[scale=0.8]{Abbildungen/3D_Visualisationen/3D_visualization_paraboloid_2_-3_7_coolwarm.png}
+			
 			\caption{Paraboloid - Visualisierung in 3D}
 			\label{fig:3D_Visualization_Paraboloid_2_-3_7}
 		\end{figure}
@@ -1125,7 +1139,7 @@ within=section,
 			\includegraphics[width=.3\textwidth]{Abbildungen/3D_Visualisationen/3D_visualization_griewangk_2_-10_10_coolwarm.png}\hfill
 			\includegraphics[width=.3\textwidth]{Abbildungen/3D_Visualisationen/3D_visualization_griewangk_2_-4_4_coolwarm.png}
 			
-			\caption{Verschiedene Auflösungen der Griewangk Testfunktion}
+			\caption{Verschiedene Auflösungen der Griewangk-Testfunktion}
 			\label{fig:3D_Visualization_Griewangk_2_Various_Intervals}
 			
 		\end{figure}
@@ -1134,11 +1148,12 @@ within=section,
 		
 		\subsubsection{Testfunktion - Rosenbrock}
 		
-		Wie in \cite{molga2005test} beschrieben besticht die Rosenbrock-Testfunktion dadurch, dass ihr Optimum in einem langen, engen Tal liegt. Es ist leicht das Tal zu finden aber es ist sehr schwer zum Optimum zu konvergieren. Die Rosenbrock-Testfunktion ist interessant, da sie sehr flach nahe dem Optimum ist und die Konvergenz langsam vorangeht. Die Rosenbrock-Testfunktion wurde auch aus dem Grund gewählt, weil in meiner Bachelorarbeit~\cite{FCM_2019}, unter den Testfunktionen zum Vergleich mit Algorithmen, die probabilistisches Lernen einsetzen, es die einzige Testfunktion war, bei welcher der ACO\(_\mathbb{R}\)-Very-Simple Algorithmus nicht der beste Algorithmus war oder zumindest sehr gut. Bei dieser Testfunktion konnte ACO\(_\mathbb{R}\)-VS das Optimum nicht finden. Deswegen ist diese Testfunktion besonders interessant, um die Variationen von ACO\(_\mathbb{R}\)-VS zu testen.
+		Wie in \cite{molga2005test} beschrieben besticht die Rosenbrock-Testfunktion dadurch, dass ihr Optimum in einem langen, engen Tal liegt. Es ist leicht das Tal zu finden aber es ist sehr schwer zum Optimum zu konvergieren. Die Rosenbrock-Testfunktion ist interessant, da sie sehr flach nahe dem Optimum ist und die Konvergenz langsam vorangeht. Die Rosenbrock-Testfunktion wurde auch aus dem Grund gewählt, weil in meiner Bachelorarbeit~\cite{FCM_2019}, unter den Testfunktionen zum Vergleich mit Algorithmen, die probabilistisches Lernen einsetzen, den Testfunktionen aus Tabelle~\ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen}, es die einzige Testfunktion war, bei welcher der \acl{acorvs} nicht der beste Algorithmus war oder zumindest sehr gut. Bei dieser Testfunktion konnte ACO\(_\mathbb{R}\)-VS das Optimum nicht finden. Deswegen ist diese Testfunktion besonders interessant, um die Variationen von ACO\(_\mathbb{R}\)-VS zu testen.
 		
 		\begin{figure}[H]
 			\centering
 			\includegraphics[scale=0.8]{Abbildungen/3D_Visualisationen/3D_visualization_rosenbrock_2_-2_2_coolwarm.png}
+			
 			\caption{Rosenbrock - Visualisierung in 3D}
 			\label{fig:3D_Visualization_Rosenbrock_2-2_2}
 		\end{figure}
@@ -1151,67 +1166,67 @@ within=section,
 		
 		\subsubsection{Ordinale Testfunktionen mit gleichverteiltem Definitionsbereich} \label{subsubsec:Ordinale_Testfunktionen_Mit_Gleichverteiltem_Definitionsbereich}
 		
-		Die einfachste Art diskrete/ordinale Testfunktionen zu erhalten, ist die Diskretisierung von stetigen Testfunktionen. Dabei nimmt man \(m \in \mathbb{N}\) Punkte aus dem Definitionsbereich einer stetigen Funktion und bildet aus diesen Punkten einen neuen diskreten Definitionsbereich. Zum Beispiel ist die Funktion \glqq Paraboloid\grqq{} aus Tabelle~\ref{einfacheTestfunktionen} über dem stetigen Definitionsbereich \( D = [-3,7]^n, n = 10\) definiert. Wir nehmen diesen Definitionsbereich und zerlegen ihn in \(m = 11\) gleichverteilte diskrete Punkte. Dies Ergibt \(D = [-3, -2, -1, 0, 1, 2, 3 , 4, 5, 6, 7]^n, n = 10\). Analog gewinnen wir die anderen diskreten Testfunktionen aus Tabelle~\ref{tab:Einfache_Diskrete_Testfunktionen} mit \(m \in \{11, 21, 51\}\). Wie im Abschnitt~\ref{subsec:Definition_ACO_R} hat das Initialisierungsintervall großen Einfluss auf das Verhalten des Algorithmus aber da wir eine gleichverteilte Diskretisierung genommen haben, um die neuen Definitionsbereiche zu erlangen, ist zu erwarten, dass sich das Lösungsverhalten für die Testfunktionen in Tabelle~\ref{tab:Einfache_Diskrete_Testfunktionen} nicht signifikant von denen in Tabelle~\ref{einfacheTestfunktionen} unterscheiden wird.
+		Die einfachste Art diskrete/ordinale Testfunktionen zu erhalten, ist die Diskretisierung von stetigen Testfunktionen. Dabei nimmt man \(m \in \mathbb{N}\) Punkte aus dem Definitionsbereich einer stetigen Funktion und bildet aus diesen Punkten einen neuen diskreten Definitionsbereich. Zum Beispiel ist die Funktion \glqq Paraboloid\grqq{} aus Tabelle~\ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} über dem stetigen Definitionsbereich \( D = [-3,7]^n, n = 10\) definiert. Wir nehmen diesen Definitionsbereich und zerlegen ihn in \(m = 11\) gleichverteilte diskrete Punkte. Dies Ergibt \(D = [-3, -2, -1, 0, 1, 2, 3 , 4, 5, 6, 7]^n, n = 10\). Analog gewinnen wir anderen diskreten Testfunktionen. Wir nehmen die stetigen Testfunktionen aus den Tabellen \ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt} mit \(m \in \{11, 21, 51\}\). Damit erhalten wir für jede stetige Funktion 3 ordinale/diskrete Testfunktionen. Die Definitionen der Funktionsterme, Optima und Argumente der Optima bleiben gleich, weswegen hier auf eine Doppelung der Tabellen \ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt} verzichtet wird. Wie im Abschnitt~\ref{subsec:Definition_ACO_R} hat das Initialisierungsintervall großen Einfluss auf das Verhalten des Algorithmus aber da wir eine gleichverteilte Diskretisierung genommen haben, um die neuen Definitionsbereiche zu erlangen, ist zu erwarten, dass sich das Lösungsverhalten für die ordinalen/diskreten Testfunktionen nicht signifikant von denen in den Tabellen \ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt} unterscheiden wird.
 		
-		\begin{table}[H]
+		%\begin{table}[H]
 			
-			\fontsize{10pt}{12pt}
+		%	\fontsize{10pt}{12pt}
 			
-			\caption{Testfunktionen zum Vergleich mit Algorithmen, die probabilistisches\hfill\newline
-				Lernen einsetzen}
+		%	\caption{Testfunktionen zum Vergleich mit Algorithmen, die probabilistisches\hfill\newline
+		%		Lernen einsetzen}
 			
-			\label{tab:Einfache_Diskrete_Testfunktionen}
+		%	\label{tab:Einfache_Diskrete_Testfunktionen}
 			
-			\begin{tabularx}{\textwidth}{l|l}
+		%	\begin{tabularx}{\textwidth}{l|l}
 				
-				\rule{6.4cm}{0.4pt} & \rule{8cm}{0.4pt}\\
+		%		\rule{6.4cm}{0.4pt} & \rule{8cm}{0.4pt}\\
 				
-				Funktion, Definitionsbereich, & Formel\\
-				Optimum & \\
+		%		Funktion, Definitionsbereich, & Formel\\
+		%		Optimum & \\
 				
-				\rule{6.4cm}{0.4pt} & \rule{8cm}{0.4pt}\\
+		%		\rule{6.4cm}{0.4pt} & \rule{8cm}{0.4pt}\\
 				
-				Cigar, \(\overrightarrow{x} \in [-3,7]^n, n = 10\), & \(f(x)=x_1^2 + 10^4\sum_{i=2}^{n} x_i^2\)\Tstrut\\
-				0 bei \(\overrightarrow{x} = [0, 0, 0, ...]\) & \\
+		%		Cigar, \(\overrightarrow{x} \in [-3,7]^n, n = 10\), & \(f(x)=x_1^2 + 10^4\sum_{i=2}^{n} x_i^2\)\Tstrut\\
+		%		0 bei \(\overrightarrow{x} = [0, 0, 0, ...]\) & \\
 				
-				Diagonal plane, \(\overrightarrow{x} \in [0.5,1.5]^n, n = 10\), & \(f(x)=\frac{1}{n} \sum_{i=1}^{n} x_i\)\Tstrut\\
-				\(10^{10}\) bei mehreren & \\
+		%		Diagonal plane, \(\overrightarrow{x} \in [0.5,1.5]^n, n = 10\), & \(f(x)=\frac{1}{n} \sum_{i=1}^{n} x_i\)\Tstrut\\
+		%		\(10^{10}\) bei mehreren & \\
 				
-				Ellipsoid, \(\overrightarrow{x} \in [-3,7]^n, n = 10\), & \(f(x)=\sum_{i=1}^{n} \left(100^\frac{i-1}{n-1} x_i\right)^2\)\Tstrut\\
-				0 bei \(\overrightarrow{x} = [0, 0, 0, ...]\) & \\
+		%		Ellipsoid, \(\overrightarrow{x} \in [-3,7]^n, n = 10\), & \(f(x)=\sum_{i=1}^{n} \left(100^\frac{i-1}{n-1} x_i\right)^2\)\Tstrut\\
+		%		0 bei \(\overrightarrow{x} = [0, 0, 0, ...]\) & \\
 				
-				Paraboloid, \(\overrightarrow{x} \in [-3,7]^n, n = 10\), & \(f(x)=\sum_{i=1}^{n} x^2\)\Tstrut\\
-				0 bei \(\overrightarrow{x} = [0, 0, 0, ...]\) & \\
+		%		Paraboloid, \(\overrightarrow{x} \in [-3,7]^n, n = 10\), & \(f(x)=\sum_{i=1}^{n} x^2\)\Tstrut\\
+		%		0 bei \(\overrightarrow{x} = [0, 0, 0, ...]\) & \\
 				
-				Plane, \(\overrightarrow{x} \in [0.5,1.5]^n, n = 10\), & \(f(x)=x_1\)\Tstrut\\
-				\(10^{10}\) bei \(x_1 = 10^{10}\) & \\
+		%		Plane, \(\overrightarrow{x} \in [0.5,1.5]^n, n = 10\), & \(f(x)=x_1\)\Tstrut\\
+		%		\(10^{10}\) bei \(x_1 = 10^{10}\) & \\
 				
-				Rosenbrock, \(\overrightarrow{x} \in [-3,7]^n, n = 10\),  & \(f(x)=\sum_{i=1}^{n-1} 100 (x^2_i-x_{i+1})^2 + (x_i-1)^2\) \Tstrut\\
-				0 bei \(\overrightarrow{x} = [1, 1, 1, ...]\) & \\
+		%		Rosenbrock, \(\overrightarrow{x} \in [-3,7]^n, n = 10\),  & \(f(x)=\sum_{i=1}^{n-1} 100 (x^2_i-x_{i+1})^2 + (x_i-1)^2\) \Tstrut\\
+		%		0 bei \(\overrightarrow{x} = [1, 1, 1, ...]\) & \\
 				
-				Tablet, \(\overrightarrow{x} \in [-3,7]^n, n = 10\), & \(f(x)=10^4x_1^2 + \sum_{i=2}^{n}x^2_i \)\Tstrut\\
-				0 bei \(\overrightarrow{x} = [0, 0, 0, ...]\) &
+		%		Tablet, \(\overrightarrow{x} \in [-3,7]^n, n = 10\), & \(f(x)=10^4x_1^2 + \sum_{i=2}^{n}x^2_i \)\Tstrut\\
+		%		0 bei \(\overrightarrow{x} = [0, 0, 0, ...]\) &
 				
-			\end{tabularx}
+		%	\end{tabularx}
 			
-		\end{table}
+		%\end{table}
 		
 		
 		
 		
-		im Paper werden keine Grenzen für N genannt, obwohl das sehr wichtig ist, weil das Intervall aus dem die ersten k Lösungen gezogen werden, Einfluss hat auf das Verhalten des Algorithmus
+		%TODO im Paper werden keine Grenzen für N genannt, obwohl das sehr wichtig ist, weil das Intervall aus dem die ersten k Lösungen gezogen werden, Einfluss hat auf das Verhalten des Algorithmus
 		
-		Es müsste \(\pi^2\) sein
+		%TODO Es müsste \(\pi^2\) sein
 		
-		Probleme mit nur diskreten Variablen nehmen, statt einer diskret und einer stetigen
+		%TODO Probleme mit nur diskreten Variablen nehmen, statt einer diskret und einer stetigen
 		
 		\subsubsection{Ordinale Testfunktionen mit asymmetrischem Definitionsbereich}
 		
-		Wie in Abschnitt~\ref{subsec:Definition_ACO_R} geschildert, hat das Initialisierungsintervall großen Einfluss auf das Verhalten des Algorithmus. Zusätzlich, wie in \cite{ACO_2003_simiple_problems} beschrieben, kann das Betrachten von einfachen Testfunktionen zu unerwarteten Ergebnissen führen. Deswegen definieren wir in diesem Abschnitt explizit diskrete Funktionen, die einfach sind aber einen nicht-Standarddefinitionsbereich haben. Wir wählen, wie im Abschnitt~\ref{subsubsec:Ordinale_Testfunktionen_Mit_Gleichverteiltem_Definitionsbereich}, \(m \in \{11, 21, 51\}\) aber diesmal ist der Definitionsbereich asymmetrisch verteilt mit \(3\) Clustern. Zum Beispiel transformiert dies den stetigen Definitionsbereich der Testfunktion \glqq Paraboloid\grqq{} von \(D = [-3, 7]^{10}\) zu \(D = [-3, -2.8, -2.6, -0.4, -0.2, 0.0, 0.2, 0.4, 6.6, 6.8, 7.0]^{10}\). Im JSON-Format wird dies wie im JSON-File~\ref{JSON:Cigar2Dim11OrdAsymm} angezeigt.
+		Wie in Abschnitt~\ref{subsec:Definition_ACO_R} geschildert, hat das Initialisierungsintervall großen Einfluss auf das Verhalten des Algorithmus. Zusätzlich, wie in \cite{ACO_2003_simiple_problems} beschrieben, kann das Betrachten von einfachen Testfunktionen zu unerwarteten Ergebnissen führen. Deswegen definieren wir in diesem Abschnitt explizit diskrete Funktionen, die einfach sind aber einen nicht-Standarddefinitionsbereich haben. Wir wählen, wie im Abschnitt~\ref{subsubsec:Ordinale_Testfunktionen_Mit_Gleichverteiltem_Definitionsbereich}, \(m \in \{11, 21, 51\}\) aber diesmal ist der Definitionsbereich asymmetrisch verteilt mit \(3\) Clustern. Zum Beispiel transformiert dies den stetigen Definitionsbereich der Testfunktion \glqq Paraboloid\grqq{} von \(D = [-3, 7]^{10}\) zu \(D = [-3, -2.8, -2.6, -0.4, -0.2, 0.0, 0.2, 0.4, 6.6, 6.8, 7.0]^{10}\). Im JSON-Format wird dies wie im Code-Snipped~\ref{JSON:Paraboloid2Dim11OrdAsymm} angezeigt.
 		
-		\begin{lstlisting}[language=json, caption=Cigar 2Dim ordinal asymmetrischer Definitionsbereich, label=JSON:Cigar2Dim11OrdAsymm]
+		\begin{lstlisting}[language=json, caption=Paraboloid 2Dim ordinal asymmetrischer Definitionsbereich, label=JSON:Paraboloid2Dim11OrdAsymm]
 {
-	"name": "Cigar_2_11_Ord_Eq_Distr",
+	"name": "Paraboloid_2_11_Ord_Asymm",
 	"comment": "artificial ordinal variable problem",
 	"type": "ordinal variable problems",
 	"continuous_dimension": 0,
@@ -1235,12 +1250,6 @@ within=section,
 	"magnitudes_of_categorical_variables": []
 }
 		\end{lstlisting}
-		
-		\subsection{Kategorische Testfunktionen} \label{subsec:Kategorische_Testfunktionen} %wichtig
-		
-			\subsubsection{konstruierte Testfunktionen}
-			
-			%TODO nachfagen, wie man es besser nennen kann
 		
 		\subsection{Testfunktionen mit gemischten Variablem} \label{subsec:mixed_variable}
 		
