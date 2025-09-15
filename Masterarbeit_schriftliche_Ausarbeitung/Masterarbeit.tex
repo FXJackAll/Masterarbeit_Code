@@ -212,11 +212,19 @@ within=section,
 	
 	\newpage
 	
-	\section{Einführung in Ameisenalgorithmen}
+	\section{Grundlagen} \label{sec:Grundlagen}
+	
+	\subsection{Einführung in Ameisenalgorithmen} \label{subsec:Einführung_In_Ameisenalgorithmen}
 	
 	%TODO Grundlagen auch hier
 	
-	\subsection{Beschreibung der Idee eines Ameisenalgorithmen}
+	Wie in meiner Bachelorarbeit~\cite{FCM_2019} beginnen wir zunächst mit der biologischen Beschreibung der Wegfindung von Ameisen.
+	
+	\subsubsection{Biologische Beschreibung der Wegfindung von Ameisen} \label{subsubsec:Biologische_Beschreibung_Des_Verhaltens_Von_Ameisen}
+	
+	Wie \textit{Bonabeau, Dorigo und Theraulaz}~\cite{bonabeau1999swarm} beschrieben haben,
+	
+	\subsubsection{Beschreibung der Idee eines Ameisenalgorithmen}
 	
 	Ameisenalgorithmen sind durch die Art und Weise des Verhaltens, z.B. Nahrungssuche, von Ameisen inspiriert. Dabei hinterlassen Ameisen, bei dem Zurücklegen der Strecke zwischen zwei Punkten A und B, eine Pheromonspur, an der sich Artgenossen orientieren können. Ameisen entscheiden sich jedoch nur mit einer gewissen Wahrscheinlichkeit für den Weg mit der Pheromonspur.\hfill\newline
 	
@@ -962,7 +970,7 @@ within=section,
 			
 			\smallskip
 			
-			Bei Funktionen, welche in mehreren Dimensionen getestet wurden, stehen die getesteten Dimensionen in Klammern hinter der Funktion. Dasselbe gilt für Funktionen, die sich in der getesteten Dimension von der Dimension aus Tabelle~\ref{einfacheTestfunktionen} unterscheiden.
+			Bei Funktionen, welche in mehreren Dimensionen getestet wurden, stehen die getesteten Dimensionen in Klammern hinter der Funktion. Dasselbe gilt für Funktionen, die sich in der getesteten Dimension von der Dimension aus Tabelle~\ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} unterscheiden.
 			
 		\end{table}
 		
@@ -1097,20 +1105,9 @@ within=section,
 			
 		\end{table}
 		
-		\subsubsection{Testfunktion - Easom} \label{subsubsc:Testfunktion_-_Easom}
-		
-		Wie in \cite{molga2005test} beschrieben, ist die Easom-Testfunktion deswegen interessant, weil die Umgebung um das globale Minimum klein ist im Verhältnis zur Größe des gesamten Suchraum. Der Suchraum ist das Quadrat \([-100, 100] \times [-100, 100]\) in der Abbildung~\ref{fig:3D_Visualization_Easom_Various_Intervals} links, während das Optimum im Quadrat \([1, 5] \times [1, 5]\) sich befindet, in der Abbildung~\ref{fig:3D_Visualization_Easom_Various_Intervals} rechts.
-		
-		\begin{figure}[H]
-			\centering
-			\includegraphics[width=.5\textwidth]{Abbildungen/3D_Visualisationen/3D_visualization_easom_2_-100_100_coolwarm.png}\hfill
-			\includegraphics[width=.5\textwidth]{Abbildungen/3D_Visualisationen/3D_visualization_easom_2_1_5_coolwarm.png}
-			
-			\caption{Easom-Testfunktion: Vergleich zwischen gesamtem Suchraum (links) und Umgebung um das Optimum (rechts)}
-			\label{fig:3D_Visualization_Easom_Various_Intervals}
-		\end{figure}
-		
 		\subsubsection{Testfunktion - Paraboloid} \label{subsubsec:Testfunktion_-_Paraboloid}
+		
+		%TODO schreiben, mit welcher Software die Bilder gemacht wurden
 		
 		Die Paraboloid-Testfunktion ist unimodal und konvex. Sie ist die einfachste aller einfachen Testfunktion und somit insgesamt die einfachste Testfunktion. Sie dient sowohl als Demonstration, dass der Algorithmus, welcher getestet wird, ordnungsgemäß funktioniert, als auch zum Testen der Konvergenzgeschwindigkeit des Algorithmus. Konvergiert ein Algorithmus zu schnell, kann er ein globales Optimum überspringen, konvergiert er zu langsam, erreicht er das globale Optimum nicht in der vorgegebenen Menge an Ressourcen, wobei Ressourcen maximale Ausführungszeit oder maximale Anzahl an Funktionsausführungen sein können. Letzteres ist für die Testfunktion Rosenbrock eingetreten, als die Initialversion des ACO\(_\mathbb{R}\)-VS Algorithmus aus meiner Bachelorarbeit~\cite{FCM_2019} versucht hat diese zu optimieren. Ferner haben \textit{Merkle und Middendorf}~\cite{ACO_2003_simiple_problems} gezeigt, dass die Untersuchung einfacher Probleme ein lohnendes Unterfangen sein kann, da einfache Probleme ein unvorhergesehenes Verhalten des Algorithmus aufdecken können. 
 		
@@ -1127,6 +1124,21 @@ within=section,
 		\end{figure}
 		
 		%TODO einarbeiten, dass 
+		
+		\subsubsection{Testfunktion - Easom} \label{subsubsc:Testfunktion_-_Easom}
+		
+		Wie in \cite{molga2005test} beschrieben, ist die Easom-Testfunktion deswegen interessant, weil die Umgebung um das globale Minimum klein ist im Verhältnis zur Größe des gesamten Suchraum. Der Suchraum ist das Quadrat \([-100, 100] \times [-100, 100]\) in der Abbildung~\ref{fig:3D_Visualization_Easom_Various_Intervals} links, während das Optimum im Quadrat \([1, 5] \times [1, 5]\) sich befindet, in der Abbildung~\ref{fig:3D_Visualization_Easom_Various_Intervals} rechts.
+		
+		\begin{figure}[H]
+			
+			\centering
+			\includegraphics[width=.5\textwidth]{Abbildungen/3D_Visualisationen/3D_visualization_easom_2_-100_100_coolwarm.png}\hfill
+			\includegraphics[width=.5\textwidth]{Abbildungen/3D_Visualisationen/3D_visualization_easom_2_1_5_coolwarm.png}
+			
+			\caption{Easom-Testfunktion: Vergleich zwischen gesamtem Suchraum (links) und Umgebung um das Optimum (rechts)}
+			\label{fig:3D_Visualization_Easom_Various_Intervals}
+			
+		\end{figure}
 		
 		\subsubsection{Testfunktion - Griewangk}
 		
@@ -1156,6 +1168,37 @@ within=section,
 			
 			\caption{Rosenbrock - Visualisierung in 3D}
 			\label{fig:3D_Visualization_Rosenbrock_2-2_2}
+		\end{figure}
+		
+		\subsubsection{Testfunktion - Hartmann}
+		
+		Die Familie der Hartmann-Testfunktionen ist eine der beiden Familien der komplexen Testfunktionen, die in dieser Arbeit betrachtet werden. Diese Familie zeichnet sich dadurch aus dass sie die leichtere der beiden komplexen Testfunktionfamilien ist. Sie ist multimodal mit 4 lokalen Minima im Fall von Hartmann(3,4), und respektive 6 lokalen Minima im Fall von Hartmann(6,4).
+		
+		\begin{figure}[H]
+			
+			\centering
+			\includegraphics[width=.5\textwidth]{Abbildungen/3D_Visualisationen/3D_visualization_hartmann_not_3_2_4_0_1_coolwarm.png}\hfill
+			\includegraphics[width=.5\textwidth]{Abbildungen/3D_Visualisationen/3D_visualization_hartmann_not_6_2_4_0_1_coolwarm.png}
+			
+			\caption{Hartmann-Testfunktionen: Hartmann(2,4) (links) und Hartmann(2,6) (rechts)}
+			\label{fig:3D_Visualization_Hartmann_Various_Dimensions}
+			
+		\end{figure}
+		
+		\subsubsection{Testfunktion - Shekel}
+		
+		Die Familie der Shekel-Testfunktionen ist die schwerere der beiden komplexen Testfunktionfamilien, die in dieser Arbeit betrachtet werden. Sie ist multimodal und hat 5 lokale Minima im Fall von Shekel(4,5), 7 lokale Minima im Fall von Shekel(4,7) und respektive 10 lokale Minima im Fall von Shekel(4,10).
+		
+		\begin{figure}[H]
+			
+			\centering
+			\includegraphics[width=.3\textwidth]{Abbildungen/3D_Visualisationen/3D_visualization_shekel_2_5_-0_10_coolwarm.png}\hfill
+			\includegraphics[width=.3\textwidth]{Abbildungen/3D_Visualisationen/3D_visualization_shekel_2_7_-0_10_coolwarm.png}
+			\includegraphics[width=.3\textwidth]{Abbildungen/3D_Visualisationen/3D_visualization_shekel_2_10_-0_10_coolwarm.png}
+			
+			\caption{Shekel-Testfunktionen: Shekel(2,5) (links), Shekel(2,7) (mittig) und Shekel(2,10) (rechts)}
+			\label{fig:3D_Visualization_Shekel_Various_Number_Of_Lokal_Minima}
+			
 		\end{figure}
 		
 		\subsection{Ordinale Testfunktionen} \label{subsec:Ordinale_Testfunktionen} %wichtig

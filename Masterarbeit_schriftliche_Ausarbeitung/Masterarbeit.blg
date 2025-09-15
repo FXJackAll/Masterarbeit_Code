@@ -8,44 +8,46 @@ Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: Master_Arbeit_Literatur.bib
-You've used 22 entries,
+Warning--there's a number but no series in bonabeau1999swarm
+You've used 23 entries,
             4332 wiz_defined-function locations,
-            951 strings with 9319 characters,
-and the built_in function-call counts, 11562 in all, are:
-= -- 1184
-> -- 315
-< -- 307
-+ -- 371
-- -- 107
-* -- 765
-:= -- 2050
-add.period$ -- 22
-call.type$ -- 22
-change.case$ -- 95
+            956 strings with 9468 characters,
+and the built_in function-call counts, 12071 in all, are:
+= -- 1232
+> -- 333
+< -- 322
++ -- 390
+- -- 113
+* -- 800
+:= -- 2147
+add.period$ -- 23
+call.type$ -- 23
+change.case$ -- 100
 chr.to.int$ -- 0
-cite$ -- 22
-duplicate$ -- 336
-empty$ -- 891
-format.name$ -- 204
-if$ -- 2327
+cite$ -- 24
+duplicate$ -- 351
+empty$ -- 928
+format.name$ -- 216
+if$ -- 2426
 int.to.chr$ -- 0
-int.to.str$ -- 22
-missing$ -- 92
-newline$ -- 120
-num.names$ -- 44
-pop$ -- 160
+int.to.str$ -- 23
+missing$ -- 96
+newline$ -- 125
+num.names$ -- 46
+pop$ -- 168
 preamble$ -- 1
-purify$ -- 95
+purify$ -- 100
 quote$ -- 0
-skip$ -- 569
+skip$ -- 593
 stack$ -- 0
-substring$ -- 768
-swap$ -- 99
-text.length$ -- 64
+substring$ -- 790
+swap$ -- 103
+text.length$ -- 67
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 87
-warning$ -- 0
-while$ -- 120
-width$ -- 24
-write$ -- 279
+type$ -- 89
+warning$ -- 1
+while$ -- 125
+width$ -- 25
+write$ -- 291
+(There was 1 warning)
