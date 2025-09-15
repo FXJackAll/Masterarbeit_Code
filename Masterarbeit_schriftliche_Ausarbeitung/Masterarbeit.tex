@@ -218,13 +218,15 @@ within=section,
 	
 	%TODO Grundlagen auch hier
 	
-	Wie in meiner Bachelorarbeit~\cite{FCM_2019} beginnen wir zunächst mit der biologischen Beschreibung der Wegfindung von Ameisen.
+	Wie in meiner Bachelorarbeit~\cite{FCM_2019} beginnen wir zunächst mit der biologischen und mathematischen Beschreibung der Nahrungssuche von Ameisen.
 	
-	\subsubsection{Biologische Beschreibung der Wegfindung von Ameisen} \label{subsubsec:Biologische_Beschreibung_Des_Verhaltens_Von_Ameisen}
+	\subsubsection{Biologische Beschreibung der Nahrungssuche von Ameisen} \label{subsubsec:Biologische_Beschreibung_Des_Verhaltens_Von_Ameisen}
 	
-	Wie \textit{Bonabeau, Dorigo und Theraulaz}~\cite{bonabeau1999swarm} beschrieben haben,
+	Wie \textit{Bonabeau, Dorigo und Theraulaz}~\cite{bonabeau1999swarm} beschrieben haben, hinterlassen Ameisen, bei der Nahrungssuche, wenn sie sich zwischen Nest und Futter bewegen, eine Pheromonspur. Wenn Ameisen Nest oder Futter verlassen, haben die Wege auf denen Pheromon liegt, eine höhere Wahrscheinlichkeit wieder begangen zu werden. Wenn eine Ameise also den optimalen, also kürzesten Weg zwischen Nest und Futter gefunden hat, aggregiert sich Pheromon auf diesem Weg schneller, da Ameisen, die sich für den kürzesten Weg entschieden haben, da der Weg der kürzeste ist, vom Futter schon zurückkommen, während andere Ameisen noch unterwegs sind. Zusätzlich verdunstet Pheromon, was dazu führt, dass seltener begangene Wege zunehmend unwahrscheinlicher begangen werden. Diese beiden Mechanismen sorgen dafür, dass sich die besten Wege über Zeit herauskristallisieren.
 	
-	\subsubsection{Beschreibung der Idee eines Ameisenalgorithmen}
+	%TODO Professor nach Zugang fragen
+	
+	\subsubsection{Mathematische Beschreibung der Nahrungssuche von Ameisen}
 	
 	Ameisenalgorithmen sind durch die Art und Weise des Verhaltens, z.B. Nahrungssuche, von Ameisen inspiriert. Dabei hinterlassen Ameisen, bei dem Zurücklegen der Strecke zwischen zwei Punkten A und B, eine Pheromonspur, an der sich Artgenossen orientieren können. Ameisen entscheiden sich jedoch nur mit einer gewissen Wahrscheinlichkeit für den Weg mit der Pheromonspur.\hfill\newline
 	
@@ -780,7 +782,7 @@ within=section,
 		
 		%Da ein direkter Vergleich über den Umfang dieser Arbeit aber hinaus gehen würde, wird hier nur mit ACO\(_{\mathbb{R}}\) verglichen und bzgl. des Vergleiches mit den anderen Methoden auf \textit{Socha und Dorigo}~\cite{socha2008ant} verwiesen.\hfill\newline
 		
-		Die Testfunktionen wurden aus verschiedene Quellen entnommen. Die Branin RCOS-Testfunktion stammt aus \cite{testFunctionBranin}, die Goldstein and Price-Testfunktion aus \cite{testFunctionGoldsteinandPrice} und die Griewangk-Testfunktion aus \cite{molga2005test}. Die Griewangk-Testfunktion wurde auch in den Arbeiten von \textit{Dorigo und Socha}~\cite{socha2008ant} und \textit{Socha}~\cite{socha2009ant} benutzt, auf denen diese Arbeit aufbaut. Aber dort wurde eine andere Version der Griewangk-Testfunktion benutzt, als die Version in anderen Quellen, nämlich \textit{Molga und Smutnicki}~\cite{molga2005test} und \textit{Pohlheim}~\cite{pohlheim2007examples}, die explizit Testfunktionen auflisten, um Algorithmen zu testen. Da in ~\cite{socha2008ant} und \cite{socha2009ant} keine Optima angegeben wurden, wurde in dieser Arbeit sich für die Version der Grieqangk-Testfunktion aus \cite{pohlheim2007examples} und \cite{molga2005test} entscheiden. Die Testfunktionen Hartmann stammen aus \cite{testFunctionHartmann3} und \cite{testFunctionHartmann6} und die Shekel-Testfunktionen aus \cite{testFunctionShekel}. Alle anderen Testfunktionen stammen aus \cite{socha2008ant} und \cite{socha2009ant}. Bei der Hartmann(6,4)-Testfunktion haben sich die Quellen in ihrer Definition des Funktionsterms im Matrixeintrag \(a_{15}\) widersprochen. In \cite{socha2008ant} und \cite{socha2009ant} wird \(a_{15} = 1.5\) angegeben während in \cite{testFunctionHartmann6} angegeben wird, dass \(a_{15} = 1.7\). Da nur in \cite{testFunctionHartmann6} das dazugehörige Optimum angegeben wird, wurde in dieser Arbeit sich für die Angabe aus dieser Quelle entschieden. Um zukünftige Forschung zu erleichtern, werden alle Testfunktionen in dieser Arbeit, genau wie in meiner Bachelorarbeit~\cite{FCM_2019}, nicht nur mit Name und Funktionsterm, sondern auch mit Definitionsbereich/Initialisierungsintervall, Optimum und Argument des Optimums angegeben.\hfill\newline
+		Die Testfunktionen wurden aus verschiedene Quellen entnommen. Die Branin RCOS-Testfunktion stammt aus \cite{testFunctionBranin}, die Goldstein and Price-Testfunktion aus \cite{testFunctionGoldsteinandPrice} und die Griewangk-Testfunktion aus \cite{molga2005test}. Die Griewangk-Testfunktion wurde auch in den Arbeiten von \textit{Dorigo und Socha}~\cite{socha2008ant} und \textit{Socha}~\cite{socha2009ant} benutzt, auf denen diese Arbeit aufbaut. Aber dort wurde eine andere Version der Griewangk-Testfunktion benutzt, als die Version in anderen Quellen, nämlich \textit{Molga und Smutnicki}~\cite{molga2005test} und \textit{Pohlheim}~\cite{pohlheim2007examples}, die explizit Testfunktionen auflisten, um Algorithmen zu testen. Da in ~\cite{socha2008ant} und \cite{socha2009ant} keine Optima angegeben wurden, wurde in dieser Arbeit sich für die Version der Griewangk-Testfunktion aus \cite{pohlheim2007examples} und \cite{molga2005test} entscheiden. Die Testfunktionen Hartmann stammen aus \cite{testFunctionHartmann3} und \cite{testFunctionHartmann6} und die Shekel-Testfunktionen aus \cite{testFunctionShekel}. Alle anderen Testfunktionen stammen aus \cite{socha2008ant} und \cite{socha2009ant}. Bei der Hartmann(6,4)-Testfunktion haben sich die Quellen in ihrer Definition des Funktionsterms im Matrixeintrag \(a_{15}\) widersprochen. In \cite{socha2008ant} und \cite{socha2009ant} wird \(a_{15} = 1.5\) angegeben während in \cite{testFunctionHartmann6} angegeben wird, dass \(a_{15} = 1.7\). Da nur in \cite{testFunctionHartmann6} das dazugehörige Optimum angegeben wird, wurde in dieser Arbeit sich für die Angabe aus dieser Quelle entschieden. Um zukünftige Forschung zu erleichtern, werden alle Testfunktionen in dieser Arbeit, genau wie in meiner Bachelorarbeit~\cite{FCM_2019}, nicht nur mit Name und Funktionsterm, sondern auch mit Definitionsbereich/Initialisierungsintervall, Optimum und Argument des Optimums angegeben.\hfill\newline
 		
 		In meiner Bachelorarbeit stimmten die von mir berechnete Optima für die Funktionen Hartmann(3,4), Hartmann(6,4), Shekel(4,5), Shekel(4,7) und Shekel(4,10) mit denen in der Literatur nicht überein. Ich konnte den Fehler finden. Ich habe die Funktionsgleichungen der Testprobleme in den Quellen falsch interpretiert, weswegen ich falsche Ergebnisse bekommen hatte. Für Schekel(4,k;k = 5,7,10) lag der Fehler in der Interpretationen der Gleichung~\ref{subsec:Stetige_Testfunktionen:eq:Shekel}. Ich habe die Gleichung so verstanden, we es in der Gleichung~\ref{subsec:Stetige_Testfunktionen:eq:Bachelorinterpretation} geschrieben ist. Aber der Term ist, wie in Gleichung~\ref{subsec:Stetige_Testfunktionen:eq:Masterinterpretation} zu interpretieren.\hfill\newline
 		
@@ -859,7 +861,9 @@ within=section,
 		Wenn es Nebenbedingungen/Constrains gibt, kann das vollständige Initialisierungsintervall sich vom Initialisierungsintervall, das durch Anwenden der Nebenbedingungen entsteht, stark unterscheiden, wie im Abschnitt~\ref{subsubsec:Coil_Spring_Design_Problem}. Ein solchen Intervall wird hier als gefiltert bezeichnet.\hfill\newline 
 		%TODO stetige Funktionen finden und schauen, ob es wie beim CSD einen Unterschied gibt zwischen Initialisierung über dem Gesamtbereich und Initialisierung über den filtrierten Initial. durch Nebenbedingungen
 		
-		Genau wie in meiner Bachelorarbeit bezeichnen wir die Initialisierungsintervalle hier als Definitionsbereiche. Das liegt daran, dass die Funktionen, sowohl initial über diesen Intervallen definiert sind, als auch die Intervallgrenzen definieren, was gültige Lösungen sind. Der Suchraum für die Funktionen aus den Tabellen \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt}, \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt}, \ref{subsec:Stetige_Testfunktionen:tab:Teil_2_1_Stet_Adapt} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_2_2_Stet_Adapt} ist zwar \(\Sigma = \mathbb{R}^n\) aber die Beschränkungen \(\mathcal{B}\) sind die Definitionsbereiche, die für die verschiedenen Testfunktionen abhängig von der Testfunktion definiert sind, z.B. für die Testfunktion \glqq Paraboloid\grqq{} gilt \(\mathcal{B}_1 = \ldots = \mathcal{B}_n = [-3,7]\) 
+		Genau wie in meiner Bachelorarbeit bezeichnen wir die Initialisierungsintervalle hier als Definitionsbereiche. Das liegt daran, dass die Funktionen, sowohl initial über diesen Intervallen definiert sind, als auch die Intervallgrenzen definieren, was gültige Lösungen sind. Der Suchraum für die Funktionen aus den Tabellen \ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen}, \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt}, \ref{subsec:Stetige_Testfunktionen:tab:Teil_2_1_Stet_Adapt} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_2_2_Stet_Adapt} ist zwar \(\Sigma = \mathbb{R}^n\), wobei \(n \in \mathbb{N}\) von Testfunktion abhängt, aber die Beschränkungen \(\mathcal{B}\) sind die Definitionsbereiche, die für die verschiedenen Testfunktionen abhängig von der Testfunktion definiert sind, z.B. für die Testfunktion \glqq Paraboloid\grqq{} gilt \(\mathcal{B}_1 = \ldots = \mathcal{B}_n = [-3,7]\)\hfill\newline
+		
+		Schließlich betrachten wir 6 ausgewählte Testfunktionen in den Abschnitten \ref{subsubsec:Stetige_Testfunktionen:Testfunktion_-_Paraboloid} bis \ref{subsubsec:Stetige_Testfunktionen:Testfunktion_-_Shekel} genauer. Diese Testfunktionen haben sich nicht nur durch besondere Herausforderungen, die sie an einen Optimierungsalgorithmus stellen, herausgetan, sondern auch dadurch, dass die Herausforderung, die bieten, singulär ist, sie also den Algorithmus auf nur eine Weise fordern und damit sich eignen den Algorithmus auf eine Stärke oder eine Schwäche zu testen und werden deswegen näher betrachtet.
 		
 		%Wir bezeichnen die Initialisierungsintervalle hier jedoch als Definitionsbereiche, da die Funktionen initial über diesen definiert sind und führen sie nach dem Namen der Funktion an oder separat, wie in Tabelle~\ref{schwereTestfunktionenTeil2}.
 		
@@ -1105,7 +1109,7 @@ within=section,
 			
 		\end{table}
 		
-		\subsubsection{Testfunktion - Paraboloid} \label{subsubsec:Testfunktion_-_Paraboloid}
+		\subsubsection{Testfunktion - Paraboloid} \label{subsubsec:Stetige_Testfunktionen:Testfunktion_-_Paraboloid}
 		
 		%TODO schreiben, mit welcher Software die Bilder gemacht wurden
 		
@@ -1125,7 +1129,7 @@ within=section,
 		
 		%TODO einarbeiten, dass 
 		
-		\subsubsection{Testfunktion - Easom} \label{subsubsc:Testfunktion_-_Easom}
+		\subsubsection{Testfunktion - Easom} \label{subsubsec:Stetige_Testfunktionen:Testfunktion_-_Easom}
 		
 		Wie in \cite{molga2005test} beschrieben, ist die Easom-Testfunktion deswegen interessant, weil die Umgebung um das globale Minimum klein ist im Verhältnis zur Größe des gesamten Suchraum. Der Suchraum ist das Quadrat \([-100, 100] \times [-100, 100]\) in der Abbildung~\ref{fig:3D_Visualization_Easom_Various_Intervals} links, während das Optimum im Quadrat \([1, 5] \times [1, 5]\) sich befindet, in der Abbildung~\ref{fig:3D_Visualization_Easom_Various_Intervals} rechts.
 		
@@ -1140,7 +1144,7 @@ within=section,
 			
 		\end{figure}
 		
-		\subsubsection{Testfunktion - Griewangk}
+		\subsubsection{Testfunktion - Griewangk} \label{subsubsec:Stetige_Testfunktionen:Testfunktion_-_Griewangk}
 		
 		Wie in \cite{molga2005test} beschrieben ist die Griewangk-Testfunktion multimodal und hat damit viele lokale Optima, was die Suche nach dem globalen für Algorithmen erschwert. Ferner sind die lokalen Minima zwar gleich verteilt aber weit gestreut, was die Suche nach dem globalen Optima weiter verkompliziert. Die Griewangk-Testfunktion wurde auch deswegen gewählt, da, wie in Abbildung~\ref{fig:3D_Visualization_Griewangk_2_Various_Intervals} zusehen, sich das Aussehen der Funktion in Abhängigkeit vom Betrachtungsintervall ändert. Im Intervall \([-600,600]^n, n = 2\), was die 2-dimensionale Version des Initialisierungsintervall \([-600,600]^n, n = 10\) ist, welches für die Optimierung verwendet wird, muss der Algorithmus schnell konvergieren, um nicht viele Iterationen mit schlechten Werten zu verbrauchen. Im Intervall \([-10,10]^n, n = 2\), muss der Algorithmus Variabilität zeigen, um die große Menge an lokalen Minima zu meiden. Und schließlich im Intervall \([-4,4]^n, n = 2\) muss der Algorithmus eine aperiodische, zerklüftete Landschaft manövrieren, um das globale Optimum zu finden. Deswegen eignet sich die Griewangk-Testfunktion besonders gut, um das Können eines Algorithmus zu testen. 
 		
@@ -1158,7 +1162,7 @@ within=section,
 		
 		%TODO mehr Quellen außer molga2005test rausfinden
 		
-		\subsubsection{Testfunktion - Rosenbrock}
+		\subsubsection{Testfunktion - Rosenbrock} \label{subsubsec:Stetige_Testfunktionen:Testfunktion_-_Rosenbrock}
 		
 		Wie in \cite{molga2005test} beschrieben besticht die Rosenbrock-Testfunktion dadurch, dass ihr Optimum in einem langen, engen Tal liegt. Es ist leicht das Tal zu finden aber es ist sehr schwer zum Optimum zu konvergieren. Die Rosenbrock-Testfunktion ist interessant, da sie sehr flach nahe dem Optimum ist und die Konvergenz langsam vorangeht. Die Rosenbrock-Testfunktion wurde auch aus dem Grund gewählt, weil in meiner Bachelorarbeit~\cite{FCM_2019}, unter den Testfunktionen zum Vergleich mit Algorithmen, die probabilistisches Lernen einsetzen, den Testfunktionen aus Tabelle~\ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen}, es die einzige Testfunktion war, bei welcher der \acl{acorvs} nicht der beste Algorithmus war oder zumindest sehr gut. Bei dieser Testfunktion konnte ACO\(_\mathbb{R}\)-VS das Optimum nicht finden. Deswegen ist diese Testfunktion besonders interessant, um die Variationen von ACO\(_\mathbb{R}\)-VS zu testen.
 		
@@ -1170,7 +1174,7 @@ within=section,
 			\label{fig:3D_Visualization_Rosenbrock_2-2_2}
 		\end{figure}
 		
-		\subsubsection{Testfunktion - Hartmann}
+		\subsubsection{Testfunktion - Hartmann} \label{subsubsec:Stetige_Testfunktionen:Testfunktion_-_Hartmann}
 		
 		Die Familie der Hartmann-Testfunktionen ist eine der beiden Familien der komplexen Testfunktionen, die in dieser Arbeit betrachtet werden. Diese Familie zeichnet sich dadurch aus dass sie die leichtere der beiden komplexen Testfunktionfamilien ist. Sie ist multimodal mit 4 lokalen Minima im Fall von Hartmann(3,4), und respektive 6 lokalen Minima im Fall von Hartmann(6,4).
 		
@@ -1185,7 +1189,7 @@ within=section,
 			
 		\end{figure}
 		
-		\subsubsection{Testfunktion - Shekel}
+		\subsubsection{Testfunktion - Shekel} \label{subsubsec:Stetige_Testfunktionen:Testfunktion_-_Shekel}
 		
 		Die Familie der Shekel-Testfunktionen ist die schwerere der beiden komplexen Testfunktionfamilien, die in dieser Arbeit betrachtet werden. Sie ist multimodal und hat 5 lokale Minima im Fall von Shekel(4,5), 7 lokale Minima im Fall von Shekel(4,7) und respektive 10 lokale Minima im Fall von Shekel(4,10).
 		
