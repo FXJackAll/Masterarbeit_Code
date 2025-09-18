@@ -41,20 +41,30 @@
 \newblock Swarm intelligence introduction and application.
 \newblock {In: }\emph{Natural Computing Series, Springer}  (2008), S. 87--100
 
-\bibitem[7]{guntsch2002population}
+\bibitem[7]{dorigo2018ant}
+\textsc{Dorigo}, M.  ; \textsc{St{\"u}tzle}, T. :
+\newblock Ant colony optimization: overview and recent advances.
+\newblock {In: }\emph{Handbook of metaheuristics}  (2018), S. 311--351
+
+\bibitem[8]{brecht2005fundamentals}
+\textsc{Engelbrecht}, A.~P.:
+\newblock Fundamentals of Computational Swarm Intelligence.
+\newblock {In: }\emph{Hoboken, NJ: Wiley}  (2005)
+
+\bibitem[9]{guntsch2002population}
 \textsc{Guntsch}, M.  ; \textsc{Middendorf}, M. :
 \newblock A Population Based Approach for {ACO}.
 \newblock {In: }\emph{Workshops on Applications of Evolutionary Computing},
   Springer Berlin Heidelberg, 2002, S. 72--81
 
-\bibitem[8]{guo2004swarm}
+\bibitem[10]{guo2004swarm}
 \textsc{Guo}, C.-x.  ; \textsc{Hu}, J.-s.  ; \textsc{Ye}, B.   ; \textsc{Cao},
   Y.-j. :
 \newblock Swarm intelligence for mixed-variable design optimization.
 \newblock {In: }\emph{Journal of Zhejiang University-SCIENCE A} 5 (2004), Nr.
   7, S. 851--860
 
-\bibitem[9]{kern2004learning}
+\bibitem[11]{kern2004learning}
 \textsc{Kern}, S.  ; \textsc{M{\"u}ller}, S.~D. ; \textsc{Hansen}, N.  ;
   \textsc{B{\"u}che}, D.  ; \textsc{Ocenasek}, J.   ; \textsc{Koumoutsakos}, P.
   :
@@ -62,7 +72,7 @@
   algorithms--a comparative review.
 \newblock {In: }\emph{Natural Computing} 3 (2004), Nr. 1, S. 77--112
 
-\bibitem[10]{kupfer2021hierarchical}
+\bibitem[12]{kupfer2021hierarchical}
 \textsc{Kupfer}, E.  ; \textsc{Le}, H.~T. ; \textsc{Zitt}, J.  ; \textsc{Lin},
   Y.-C.   ; \textsc{Middendorf}, M. :
 \newblock A Hierarchical Simple Probabilistic Population-Based Algorithm
@@ -70,93 +80,93 @@
 \newblock {In: }\emph{2021 IEEE Symposium Series on Computational Intelligence
   (SSCI)} IEEE, 2021, S. 1--8
 
-\bibitem[11]{ACO_2013}
+\bibitem[13]{ACO_2013}
 \textsc{Liao}, T.  ; \textsc{Socha}, K.  ; \textsc{Oca}, M. A.~M. ;
   \textsc{St{\"u}tzle}, T.   ; \textsc{Dorigo}, M. :
 \newblock Ant colony optimization for mixed-variable optimization problems.
 \newblock {In: }\emph{IEEE Transactions on evolutionary computation} 18 (2013),
   Nr. 4, S. 503--518
 
-\bibitem[12]{lin2015simple}
+\bibitem[14]{lin2015simple}
 \textsc{Lin}, Y.-C.  ; \textsc{Clauss}, M.   ; \textsc{Middendorf}, M. :
 \newblock Simple probabilistic population-based optimization.
 \newblock {In: }\emph{IEEE Transactions on Evolutionary Computation} 20 (2015),
   Nr. 2, S. 245--262
 
-\bibitem[13]{FCM_2019}
+\bibitem[15]{FCM_2019}
 \textsc{Madorskiy}, F.~C.:
 \newblock \emph{Vergleich zweier Varianten der L{\"o}sungserzeugung von
   Ameisenalgorithmen zur Funktionsoptimierung}, Universit{\"a}t Leipzig,
   Bachelorarbeit, 2002
 
-\bibitem[14]{ACO_2003_simiple_problems}
+\bibitem[16]{ACO_2003_simiple_problems}
 \textsc{Merkle}, D.  ; \textsc{Middendorf}, M. :
 \newblock On the behavior of ACO algorithms: Studies on simple problems.
 \newblock {In: }\emph{Metaheuristics: computer decision-making}.
 \newblock Springer, 2003, S. 465--480
 
-\bibitem[15]{middendorf2017ant}
+\bibitem[17]{middendorf2017ant}
 \textsc{Middendorf}, M. :
 \newblock Verfahren der Schwarmintelligenz.
 \newblock {In: }\emph{Vorlesung Verfahren der Schwarmintelligenz}  (2017)
 
-\bibitem[16]{molga2005test}
+\bibitem[18]{molga2005test}
 \textsc{Molga}, M.  ; \textsc{Smutnicki}, C. :
 \newblock Test functions for optimization needs.
 \newblock {In: }\emph{Test functions for optimization needs} 101 (2005)
 
-\bibitem[17]{pohlheim2007examples}
+\bibitem[19]{pohlheim2007examples}
 \textsc{Pohlheim}, H. :
 \newblock Examples of objective functions.
 \newblock {In: }\emph{Retrieved} 4 (2007), Nr. 10, S. 2012
 
-\bibitem[18]{sandgren1990nonlinear}
+\bibitem[20]{sandgren1990nonlinear}
 \textsc{Sandgren}, E. :
 \newblock Nonlinear integer and discrete programming in mechanical design
   optimization.
 \newblock   (1990), S. 223--229
 
-\bibitem[19]{socha2009ant}
+\bibitem[21]{socha2009ant}
 \textsc{Socha}, K. :
 \newblock \emph{Ant colony optimisation for continuous and mixed-variable
   domains}.
 \newblock VDM Publishing Saarbr{\"u}cken, 2009
 
-\bibitem[20]{socha2008ant}
+\bibitem[22]{socha2008ant}
 \textsc{Socha}, K.  ; \textsc{Dorigo}, M. :
 \newblock Ant colony optimization for continuous domains.
 \newblock {In: }\emph{European journal of operational research} 185 (2008), Nr.
   3, S. 1155--1173
 
-\bibitem[21]{testFunctionHartmann3}
+\bibitem[23]{testFunctionHartmann3}
 \textsc{Surjanovic}, S.  ; \textsc{Bingham}, D. :
 \newblock Virtual Library of Simulation Experiments: Test Function and
   Datasets.
 \newblock {In: }\emph{https://www.sfu.ca/$\sim$ssurjano/hart3.html}  (abgerufen
   am 17.08.2019)
 
-\bibitem[22]{testFunctionHartmann6}
+\bibitem[24]{testFunctionHartmann6}
 \textsc{Surjanovic}, S.  ; \textsc{Bingham}, D. :
 \newblock Virtual Library of Simulation Experiments: Test Function and
   Datasets.
 \newblock {In: }\emph{https://www.sfu.ca/$\sim$ssurjano/hart6.html}  (abgerufen
   am 17.08.2019)
 
-\bibitem[23]{testFunctionShekel}
+\bibitem[25]{testFunctionShekel}
 \textsc{Surjanovic}, S.  ; \textsc{Bingham}, D. :
 \newblock Virtual Library of Simulation Experiments: Test Function and
   Datasets.
 \newblock {In: }\emph{https://www.sfu.ca/$\sim$ssurjano/shekel.html}
   (abgerufen am 17.08.2019)
 
-\bibitem[24]{testFunctionBranin}
+\bibitem[26]{testFunctionBranin}
 \textsc{Surjanovic}, S.  ; \textsc{Bingham}, D. :
 \newblock Virtual Library of Simulation Experiments: Test Function and
   Datasets.
 \newblock {In: }\emph{https://www.sfu.ca/$\sim$ssurjano/branin.html}
   (abgerufen am 19.08.2019)
 
-\bibitem[25]{testFunctionGoldsteinandPrice}
+\bibitem[27]{testFunctionGoldsteinandPrice}
 \textsc{Surjanovic}, S.  ; \textsc{Bingham}, D. :
 \newblock Virtual Library of Simulation Experiments: Test Function and
   Datasets.

@@ -230,7 +230,34 @@ within=section,
 	
 	\subsubsection{Mathematische Beschreibung der Nahrungssuche von Ameisen}
 	
-	In diesem Abschnitt betrachten wir ein ideales Futter, also ein Futter, dass in Quantität und Qualität konstant bleibt, und  ideale Ameisen, also Ameisen, die mit konstanter Geschwindigkeit sich geradlinig bewegen. Wir müssen diese Annahmen treffen, da, wie im Abschnitt~\ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Biologische_Beschreibung_Des_Verhaltens_Von_Ameisen} beschrieben, die Menge des auf einem Weg hinterlassenen Pheromons von der Quantität und Qualität des Futters abhängt und wie in \textit{Camazine et al.}\cite{camazineself} beschrieben, reale Ameisen auf einem Weg umdrehen können und wieder zurücklaufen von woher sie kamen.
+	In diesem Abschnitt betrachten wir ein ideales Futter, also ein Futter, dass in Quantität und Qualität konstant bleibt, und  ideale Ameisen, also Ameisen, die mit konstanter Geschwindigkeit sich geradlinig bewegen. Wir müssen diese Annahmen treffen, da, wie im Abschnitt~\ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Biologische_Beschreibung_Des_Verhaltens_Von_Ameisen} beschrieben, die Menge des auf einem Weg hinterlassenen Pheromons von der Quantität und Qualität des Futters abhängt und wie in \textit{Camazine et al.}\cite{camazineself} beschrieben, reale Ameisen auf einem Weg umdrehen können und wieder zurücklaufen von woher sie kamen. Ferner, in Anlehnung an \textit{Engelbrecht}~\cite{brecht2005fundamentals}, betrachten wir eine ideale Experimentaufstellung, welche aus drei Orten an denen sich Ameisen aufhalten können und drei Wegen zwischen diesen Orten besteht. Die Orte sind Nest (N), Food (F) und Umweg/Detour (D). Die Wege verbinden die Orte, wie Abbildung~\ref{fig:Pheromon_Dreieck} zu sehen. Das Begehen eines Weges verbraucht exakt eine Zeiteinheit, also verbraucht der direkte Weg zwischen N und F eine Zeiteinheit und der Weg zwischen N und F über D Zwei.
+	
+	\begin{figure}[H]
+		
+		\centering
+		\includegraphics[scale=0.3]{Abbildungen/Pheromon_Dreieck.png}
+		
+		\caption{Experimentaufstellung\\
+		in Anlehnung an \textit{Engelbrecht}~\cite{brecht2005fundamentals}}
+		\label{fig:Pheromon_Dreieck}
+	\end{figure}
+	
+	%TODO mit Jahr und Seite?
+	
+	Weiter, in Anlehnung an \textit{Dorigo und Stützle}~\cite{dorigo2018ant}, ergibt sich die Wahrscheinlichkeit, dass sich eine Ameise für das Begehen der Weges zwischen N und F entscheidet, aus der Gleichung~\ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen:eq:Wahrscheinlichkeit_NF} und die Wahrscheinlichkeit, dass eine Ameise sich für das Begehen des Weges zwischen N und D entscheidet, aus Gleichung~\ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen:eq:Wahrscheinlichkeit_ND}. Gleichung~\ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen:eq:Verdunstung} beschreibt die Verdunstung des bereits vorhandenen Pheromons auf einem Weg nach dem eine Zeiteinheit verstrichen ist. Dabei ist \(\nu\) die Verdunstungskonstante und \(\alpha\) ein Parameter, der bestimmt, wie viel Einfluss das auf einem Weg liegende Pheromon hat.
+	
+	\begin{equation} \label{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen:eq:Wahrscheinlichkeit_NF}
+		prob_{NF} = \frac{\rho_{NF}^\alpha}{\rho_{NF}^\alpha+\rho_{ND}^\alpha}
+	\end{equation}
+	
+	\begin{equation} \label{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen:eq:Wahrscheinlichkeit_ND}
+		prob_{ND} = \frac{\rho_{ND}^\alpha}{\rho_{ND}^\alpha+\rho_{NF}^\alpha}
+	\end{equation}
+	
+	\begin{equation} \label{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen:eq:Verdunstung}
+		\rho_{XY} = (1-\nu)\cdot\rho_{XY}, ~ \nu \in [0,1), ~ XY \in \{NF, ND, DF\}
+	\end{equation}
+	
 	
 	%Ameisenalgorithmen sind durch die Art und Weise des Verhaltens, z.B. Nahrungssuche, von Ameisen inspiriert. Dabei hinterlassen Ameisen, bei dem Zurücklegen der Strecke zwischen zwei Punkten A und B, eine Pheromonspur, an der sich Artgenossen orientieren können. Ameisen entscheiden sich jedoch nur mit einer gewissen Wahrscheinlichkeit für den Weg mit der Pheromonspur.\hfill\newline
 	
@@ -2134,6 +2161,10 @@ within=section,
 	
 	% Literaturliste endgueltig anzeigen
 	\bibliography{Master_Arbeit_Literatur.bib}
+	
+	\addcontentsline{toc}{section}{Tabellenverzeichnis}
+	
+	\addcontentsline{toc}{section}{Abbildungsverzeichnis}
 	
 	\newpage
 	
