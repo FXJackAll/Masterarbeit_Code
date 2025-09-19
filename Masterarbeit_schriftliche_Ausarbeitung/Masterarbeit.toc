@@ -5,19 +5,22 @@
 \contentsline {subsection}{\numberline {2.1}Einführung in Ameisenalgorithmen}{2}{}%
 \contentsline {subsubsection}{\numberline {2.1.1}Biologische Beschreibung der Nahrungssuche von Ameisen}{2}{}%
 \contentsline {subsubsection}{\numberline {2.1.2}Mathematische Beschreibung der Nahrungssuche von Ameisen}{2}{}%
-\contentsline {subsection}{\numberline {2.2}mathematische Beschreibung}{3}{}%
-\contentsline {subsection}{\numberline {2.3}Permutationsprobleme}{4}{}%
-\contentsline {subsection}{\numberline {2.4}Verbesserung Der ACO Metaheuristik Zu P-ACO}{5}{}%
-\contentsline {subsection}{\numberline {2.5}Ameisenalgorithmen Mit Einem Stetigen Lösungsarchiv}{6}{}%
-\contentsline {subsection}{\numberline {2.6}Ameisenalgorithmen Mit Einem Gemischten Lösungsarchiv}{6}{}%
-\contentsline {subsection}{\numberline {2.7}Ameisenalgorithmen mit einem Hierarchischen Gemischten Lösungsarchiv}{7}{}%
-\contentsline {subsection}{\numberline {2.8}Ameisenalgorithmen in stetigen Variablen}{7}{}%
+\contentsline {subsubsection}{\numberline {2.1.3}Permutationsprobleme}{4}{}%
+\contentsline {subsubsection}{\numberline {2.1.4}Traveling Salesperson Problem (TSP)}{4}{}%
+\contentsline {subsection}{\numberline {2.2}Originale ACO-Metaheuristik}{4}{}%
+\contentsline {subsection}{\numberline {2.3}mathematische Beschreibung}{4}{}%
+\contentsline {subsection}{\numberline {2.4}Permutationsprobleme}{5}{}%
+\contentsline {subsection}{\numberline {2.5}Verbesserung Der ACO Metaheuristik Zu P-ACO}{5}{}%
+\contentsline {subsection}{\numberline {2.6}Ameisenalgorithmen Mit Einem Stetigen Lösungsarchiv}{6}{}%
+\contentsline {subsection}{\numberline {2.7}Ameisenalgorithmen Mit Einem Gemischten Lösungsarchiv}{7}{}%
+\contentsline {subsection}{\numberline {2.8}Ameisenalgorithmen mit einem Hierarchischen Gemischten Lösungsarchiv}{7}{}%
+\contentsline {subsection}{\numberline {2.9}Ameisenalgorithmen in stetigen Variablen}{8}{}%
 \contentsline {section}{\numberline {3}Optimierungsprobleme}{8}{}%
-\contentsline {section}{\numberline {4}Grundlagen}{8}{}%
+\contentsline {section}{\numberline {4}Grundlagen}{9}{}%
 \contentsline {subsection}{\numberline {4.1}ACO\(_{\mathbb {R}}\)}{9}{}%
-\contentsline {subsection}{\numberline {4.2}ACO\(_{\mathbb {R}}\)-simple}{10}{}%
-\contentsline {subsection}{\numberline {4.3}ACO\(_{\mathbb {R}}\)-very-simple}{11}{}%
-\contentsline {subsection}{\numberline {4.4}Erweiterung von ACO\(_\mathbb {R}\)-very-simple für Probleme mit nicht-stetigen Variablen}{12}{}%
+\contentsline {subsection}{\numberline {4.2}ACO\(_{\mathbb {R}}\)-simple}{11}{}%
+\contentsline {subsection}{\numberline {4.3}ACO\(_{\mathbb {R}}\)-very-simple}{12}{}%
+\contentsline {subsection}{\numberline {4.4}Erweiterung von ACO\(_\mathbb {R}\)-very-simple für Probleme mit nicht-stetigen Variablen}{13}{}%
 \contentsline {section}{\numberline {5}SPPBO-Schema}{13}{}%
 \contentsline {section}{\numberline {6}HSPPBO-Schema}{14}{}%
 \contentsline {section}{\numberline {7}Formulierung Von ACO\(_\mathbb {R}\)-VS Im HSPPBO-Schema}{16}{}%
