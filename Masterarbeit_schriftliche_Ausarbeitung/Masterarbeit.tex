@@ -193,6 +193,7 @@ within=section,
 		\acro{acorvs}[ACO\(_{\mathbb{R}}\)-VS]{ACO\(_\mathbb{R}\)-very-simple}
 		\acro{csd}[CSD Problem]{Coil Spring Design Problem}
 		\acro{sce}[SCE]{solution creating entities}
+		\acro{tsp}[TSP]{Traveling Salesperson Problem}
 	\end{acronym}
 	
 	\newpage
@@ -274,17 +275,23 @@ within=section,
 	
 	\subsubsection{Permutationsprobleme} \label{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Permuationsprobleme}
 	
-	In Anlehnung an meine Bachelorarbeit~\cite{FCM_2019}, kann ein Permutationsproblem definiert werden durch das Tupel \((\Sigma, \mathcal{R}, \mathcal{B}, f)\). Für den Suchraum \(\Sigma\) gilt hier \(\Sigma = \{a_1, \dots, a_n\}, n \in \mathbb{N}_{>0}\), wobei die \(a_i\) beliebige Objekte sein können die man mithilfe der Relation \(\mathcal{R}\) ordnen kann. Die Relation \(\mathcal{R}: \Sigma \ni (a_i, a_j) \to \mathbb{R}\) transformiert das abstrakte Verhältnis zwischen den Elementen \(a_i, i \in \{1, \dots, n\}\). Die Menge an Beschränkungen, welche an die Ordnungen der \(a_i, i \in \{1, \dots, n\}\) oder Werte von \(f\) gestellt werden, werden mit \(\mathcal{B} = \{\mathcal{B}_1, \dots, \mathcal{B}_m\}, m \in \mathbb{N}_{>0}\) bezeichnet. Das Permutationsproblem ist unbeschränkt, wenn \(\mathcal{B} = \emptyset\) gilt, sonst ist es beschränkt. Die Zielfunktion \(f: \Sigma \to \mathbb{R}_{\geq 0}\) gibt die Güte der Ordnung der Objekte bzgl. der Relation \(\mathcal{R}\) an. Eine Lösung \(s \in \Sigma\) ist eine Ordnung aller Elemente aus \(\Sigma\), welche konform ist mit den Beschränkungen \(\mathcal{B}\). Eine Lösung \(s_{opt}\) ist ein globales Optimum, wenn \(f(s_{opt}) \leq f(s) \, \forall s \in \Sigma\) gilt.
+	In Anlehnung an meine Bachelorarbeit~\cite{FCM_2019}, kann ein Permutationsproblem definiert werden durch das Tupel \((\Sigma, \mathcal{R}, \mathcal{B}, \pi, f)\). Für den Suchraum \(\Sigma\) gilt hier \(\Sigma = \{a_1, \dots, a_n\}, n \in \mathbb{N}_{>0}\), wobei die \(a_i\) beliebige Objekte sein können die man mithilfe der Relation \(\mathcal{R}\) ordnen kann. Die Relation \(\mathcal{R}: \Sigma \ni (a_i, a_j) \to \mathbb{R}\) transformiert das abstrakte Verhältnis zwischen den Elementen \(a_i, i \in \{1, \dots, n\}\). Die Menge an Beschränkungen, welche an die Ordnungen der \(a_i, i \in \{1, \dots, n\}\) oder Werte von \(f\) gestellt werden, werden mit \(\mathcal{B} = \{\mathcal{B}_1, \dots, \mathcal{B}_m\}, m \in \mathbb{N}_{>0}\) bezeichnet. Das Permutationsproblem ist unbeschränkt, wenn \(\mathcal{B} = \emptyset\) gilt, sonst ist es beschränkt. Die Permutation \(\pi: \Sigma \to \Sigma\) ordnet jedem Element \(a_i \in \Sigma, i \in \{1, \dots, n\}\) das korrespondierende Element \(a_{\pi(i)}\) zu. Die Zielfunktion \(f: \{a_{\pi(1)}, \dots, a_{\pi(n)}\} \to \mathbb{R}_{\geq 0}\) gibt die Güte einer Ordnung \(\{a_{\pi(1)}, \dots, a_{\pi(n)}\}\) der Objekte bzgl. der Relation \(\mathcal{R}\) an. Eine Lösung \(s \in \Sigma\) ist eine Ordnung aller Elemente aus \(\Sigma\), welche konform ist mit den Beschränkungen \(\mathcal{B}\). Eine Lösung \(s_{opt}\) ist ein globales Optimum, wenn \(f(s_{opt}) \leq f(s) \, \forall s \in \Sigma\) gilt. Ein wichtiger Spezialfall eines Permutationsproblems ist das \ac{tsp}.
 	
 	%TODO Fragen, ob das so Sinn macht, Sigme oder \Sigma \times \Sigma?
 	
+	%TODO Fall n = 0 betrachten?
+	
 	\subsubsection{Traveling Salesperson Problem (TSP)} \label{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Traveling_Salesperson_Problem_TSP}
 	
+	Das \ac{tsp} ist ein Permutationsproblem mit \(\Sigma = \{a_i, \dots, a_n\}, n \in \mathbb{N}_{> 0}\), wobei beim \ac{tsp} die \(a_i\) die Städte sind und \(\mathcal{R}: \Sigma \ni (a_i, a_j) \to d(a_i, a_j) \in \mathbb{R}_{\geq 0}\) gilt, wobei \(d: \mathbb{R} \times \mathbb{R} \to \mathbb{R}_{\geq 0}\) die Distanz zwischen zwei Städten ist. Da das \ac{tsp} keine Beschränkungen hat, gilt \(\mathcal{B} = \emptyset\).
+	
+	%TODO braucht das TSP eine Quelle?
+		
 	\subsection{Originale ACO-Metaheuristik} \label{subsec:Grundlagen:ACO_-_Metaheuristik}
 	
 	%TODO Originale oder was anderes?
 	
-	Die originale ACO-Metaheuristik kann als Erweiterung der Konstruktion aus dem Abschnitt~\ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen} gesehen werden, da wir sie auch als Tupel \((\Sigma, \mathcal{E}, \mathcal{M}, \eta, f)\) angeben können. Dabei ist zwar \(\Sigma = G(V,E)\) aber \(V\) und \(E\) sind beliebig. Weiter gilt \(|\mathcal{E}| = m, \, m \in \mathbb{N}\) und nicht nur \(2\) und \(\eta\) ist eine problemabhängige Heuristik. Die Zielfunktion kann auch beliebig formuliert werden, es bleibt jedoch gleich, dass mindestens eines ihrer globalen Minima gesucht wird. Für das TSP gibt \(f\) die Länge der Rundreise wieder und \(\eta\) wird in der Gleichung~\ref{subsec:Originale_ACO_-_Metaheuristik:eq:eta} angegeben, wobei \(d(v_i, v_j), v_i, v_j \in V\) die Distanz zwischen \(v_i\) und \(v_j\) ist.
+	Die originale ACO-Metaheuristik kann als Erweiterung der Konstruktion aus dem Abschnitt~\ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen} gesehen werden, da wir sie auch als Tupel \((\Sigma, \mathcal{E}, \mathcal{M}, \eta, f)\) angeben können. Dabei ist zwar \(\Sigma = G(V,E)\) aber \(V\) und \(E\) sind beliebig. Weiter gilt \(|\mathcal{E}| = m, \, m \in \mathbb{N}\) und nicht nur \(2\) und \(\eta\) ist eine problemabhängige Heuristik. Die Zielfunktion kann auch beliebig formuliert werden, es bleibt jedoch gleich, dass mindestens eines ihrer globalen Minima gesucht wird. Für das TSP gibt \(f\) die Länge der Rundreise wieder, es gilt also \(f: \Sigma \to \mathbb{R}_{\geq 0}\) mit \(f()\), und \(\eta\) wird in der Gleichung~\ref{subsec:Originale_ACO_-_Metaheuristik:eq:eta} angegeben, wobei \(d(v_i, v_j), v_i, v_j \in V\) die Distanz zwischen \(v_i\) und \(v_j\) ist.
 	
 	\begin{equation} \label{subsec:Originale_ACO_-_Metaheuristik:eq:eta}
 		\eta_{ij} := \frac{1}{d(v_i, v_j)} \, \, \text{für zwei Punkte} \, v_i, v_j \in V
