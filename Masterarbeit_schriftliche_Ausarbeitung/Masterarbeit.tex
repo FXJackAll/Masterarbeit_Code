@@ -297,12 +297,20 @@ within=section,
 	
 	%TODO Originale oder was anderes?
 	
-	Die originale ACO-Metaheuristik kann als Erweiterung der Konstruktion aus dem Abschnitt~\ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen} gesehen werden, da wir sie auch als Tupel \((\Sigma, \mathcal{R}, \mathcal{B}, \mathcal{E}, \mathcal{M}, \eta, f)\) angeben können. Dabei ist zwar \(\Sigma = G(V,E)\) aber \(V\) und \(E\) sind beliebig. Die Relation \(\mathcal{R}\) zwischen den \(v_i \in V\) ist ebenfalls beliebig, genauso wie die Beschränkungen. Die  Weiter gilt \(|\mathcal{E}| = m, \, m \in \mathbb{N}\) und nicht nur \(2\). Die Pheromonmatrix \(\mathcal{M}\) kann größer sein, also im Abschnitt~\ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen} aber sie genauso aufgebaut und auch ihre Funktionalität ist die selbe. Die problemabhängige Heuristik ist und \(\eta\). Die Zielfunktion kann auch beliebig formuliert werden, es bleibt jedoch gleich, dass mindestens eines ihrer globalen Minima gesucht wird.\hfill\newline
+	Die originale ACO-Metaheuristik kann als Erweiterung der Konstruktion aus dem Abschnitt~\ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen} gesehen werden, da wir sie auch als Tupel \((\Sigma, \mathcal{R}, \mathcal{B}, \mathcal{E}, \mathcal{M}, \eta, f)\) angeben können. Dabei ist zwar \(\Sigma = G(V,E)\) aber \(V\) und \(E\) sind beliebig. Die Relation \(\mathcal{R}\) zwischen den \(v_i \in V\) ist ebenfalls beliebig, genauso wie die Beschränkungen \(\mathcal{B}\). Weiter gilt \(|\mathcal{E}| = m, \, m \in \mathbb{N}\) und nicht nur \(|\mathcal{E}| = 2\). Die Pheromonmatrix \(\mathcal{M}\) kann größer sein als im Abschnitt~\ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen} aber sie ist genauso aufgebaut und auch ihre Funktionalität ist die selbe. Die problemabhängige Heuristik ist \(\eta\). Die Zielfunktion \(f\) kann auch beliebig formuliert werden, es bleibt jedoch gleich, dass mindestens eines ihrer globalen Minima gesucht wird.\hfill\newline
 	
-	Für das TSP kann \(\mathcal{B} = \max\limits_{v_i, v_j \in V} d(v_i, v_j) \leq m\) sein, wobei \(m\) die maximale erlaubte Entfernung zwischen zwei Städten ist, wenn die maximale Tankfüllung eines Transporters berücksichtigt werden muss. gibt \(f\) die Länge der Rundreise wieder, es gilt also \(f: \Sigma \to \mathbb{R}_{\geq 0}\) mit \(f()\), und für das \ac{tsp} wird \(\eta\) in der Gleichung~\ref{subsec:Originale_ACO_-_Metaheuristik:eq:eta} angegeben, wobei \(d(v_i, v_j), v_i, v_j \in V\) die Distanz zwischen \(v_i\) und \(v_j\) ist.
+	Für die ACO-Metaheuristik angewandt auf das TSP kann \(\mathcal{B} = \max_{v_i, v_j \in V} d(v_i, v_j) \leq D\) sein, wobei \(D\) die maximale erlaubte Distanz zwischen zwei Städten ist, wenn die maximale Tankfüllung eines Transporters oder andere Beschränkungen berücksichtigt werden müssen, sonst gilt \(\mathcal{B} = \emptyset\). Für das \ac{tsp} wird \(\eta\) in der Gleichung~\ref{subsec:Originale_ACO_-_Metaheuristik:eq:eta} angegeben, wobei \(d(v_i, v_j), v_i, v_j \in V\) die Distanz zwischen \(v_i\) und \(v_j\) ist.
+	
+	%TODO wie besser formatieren?
 	
 	\begin{equation} \label{subsec:Originale_ACO_-_Metaheuristik:eq:eta}
 		\eta_{ij} := \frac{1}{d(v_i, v_j)} \, \, \text{für zwei Punkte} \, v_i, v_j \in V
+	\end{equation}
+	
+	Wie in [] beschrieben werden bei der Anwendung der ACO-Metaheuristik auf das TSP die Gleichungen \ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen:eq:Wahrscheinlichkeit_NF} und \ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen:eq:Wahrscheinlichkeit_ND} zuerst zur Gleichung~\ref{subsec:Originale_ACO_-_Metaheuristik:eq:Probabilistik_Rule} erweitert.
+	
+	\begin{equation} \label{subsec:Originale_ACO_-_Metaheuristik:eq:Probabilistik_Rule}
+		´prob_{ij} := \frac{\tau_{ij}}{\sum\limits_{v \in V} \tau_{iv}}
 	\end{equation}
 	
 	\begin{algorithm}
