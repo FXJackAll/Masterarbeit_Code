@@ -1,0 +1,161 @@
+%Präambel
+\documentclass[fontsize=12]{scrartcl}
+
+\usepackage{cite}
+\usepackage[english, ngerman]{babel}
+\usepackage{mwe}
+\usepackage{newfloat}
+\usepackage[utf8]{inputenc}
+\usepackage[autostyle=true,german=quotes]{csquotes}
+\usepackage[T1]{fontenc}
+\usepackage{url}
+\usepackage{amssymb}
+
+\usepackage{amsmath}
+
+\usepackage{tabulary}
+\usepackage{tabularx}
+\usepackage{subfig}
+\usepackage{caption, booktabs}
+
+\usepackage{float}
+
+%der eigentliche Text
+\begin{document}
+	
+	% Festlegung Art der Zitierung - Havardmethode: Abkuerzung Autor + Jahr
+	\bibliographystyle{abbrvdin}
+	
+	\begin{center}
+		
+		\fontsize{14pt}{12pt}
+		
+		\textbf{Light Years Ahead}\\
+		\textbf{- Gaming - }\\
+		
+	\end{center}
+	
+	\begin{verbatim}
+		
+		
+		
+		
+	\end{verbatim}
+	
+	\begin{center}
+		
+		\fontsize{14pt}{12pt}
+		
+		\textbf{Design einer Software zum Erstellen von Sammelkartenspielen}
+		
+	\end{center}
+	
+	\begin{verbatim}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	\end{verbatim}
+	
+	\begin{flushright}
+		
+		Leipzig, September, 2025 \hfill vorgelegt von\\
+		
+		\bigskip
+		
+		Felix Cäsar Madorskiy\\
+		Studiengang Informatik M.Sc.
+		
+	\end{flushright}
+	
+	\vfill
+	
+	\pagenumbering{gobble}
+	
+	\newpage
+	
+	\section{Geschäftsidee} \label{sec:Geschaeftsidee}
+	
+	Die Geschäftsidee ist eine Software zu kreieren, mit deren Hilfe man Sammelkartenspiele erstellen kann, ohne auch nur eine Zeile Code geschrieben zu haben. Die Software besteht aus vier Editoren. Einen zum Erstellen des Spielfeldes und	Zonen auf dem Spielfeld, in die Karten gelegt werden können, einen zum Erstellen von Karten und deren Interaktionen mit den Zonen und untereinander, einen zum Definieren von Zugphasen/-abschnitten, z.B. zum Definieren der Ziehphase oder Angriffsphase und einen zum Definieren/Organisieren von Turnieren und Wettkampfsystemen, samt Rollen, wie Richter oder Kommentator. Die Startmenge an bereits von uns erstellten, kostenlosen Karten zum Anfang des Spiels wird 3000 sein. Ferner besteht die Software aus drei Marketplaces, einen für Bilder für Karten und Effekte, einen für Sounds und Musik, welche abgespielt werden, wenn man das Spiel startet oder eine Karte ausspielt und einen für Merchandise. Die Möglichkeit direkt aus der Software zu streamen ist ebenfalls ein Teil des Software. Schließlich erlaubt es die Software eigene Server für das Spiel bereitzustellen.\hfill\newline
+	
+	Das wichtigste Feature ist aber die Pitchen-und-Bewerten Mechanik. Gegeben ein Sam-
+	melkartenspiel, dass mit unserer Software erstellt wurde, kann jeder, der das Spiel installiert hat, eine Karte pitchen, also sich eine Karte ausdenken, sie mit dem Karteneditor verwirklichen und aus den Marketplaces entweder ein Bild und Sound/Musik kaufen oder leihen, und der Spielergemeinschaft die ausgedachte Karte zum Bewerten vorschlagen. Dies gilt für die Premiumversion der Karte. Für die Basisversion beauftragen wir einen Künstler und Musiker selbst. Wenn man beim Pitchen sich etwas leiht, werden die Urheber des jeweiligen Bildes oder der jeweiligen Musik am Umsatz, den die Karte generiert, beteiligt, wenn sie es eingestellt haben, dass ihre Werke ausgeliehen werden können. Die Bewertung erfolgt gewichtet. Dabei zählt die Stimme eines Spieler umso mehr, je länger er das gegebene Spiel gespielt hat und je höher sein Gewinn/Niederlage-Verhältnis ist. Dies garantiert, dass erfahrene Spieler eingreifen können, wenn eine schlechte Karte für das Spiel vorgeschlagen wird.\hfill\newline
+	
+	Tatsächlich ist diese Mechanik so mächtig, dass generell keine Karten in das Spiel aufgenommen werden, die das Spiel nicht unmittelbar weiterbringen. Das bedeutet, dass diese Mechanik es unmöglich macht, neue Karten zu veröffentlichen, nur um Umsatz zu generieren, wie etablierte Firmen es im Moment tun. Wie wir trotzdem Umsatz generieren
+	werden, wird im Abschnitt~\ref{sec:Erloesmodell} \glqq Erlösmodel\grqq{} erklärt. Auf der anderen Seite garantiert die Pitchen-und-Bewerten Mechanik aber auch, dass ältere Karten und geliebte Spielstrategien erhalten bleiben und niemand in der Spielergemeinschaft frustriert wird, denn jede neue Karte, um ins Spiel aufgenommen zu werden, muss sowohl mit den bereits veröffentlichten Karten harmonieren als auch das Spiel weiterbringen.\hfill\newline
+	
+	Das Pitchen ist aber nur möglich, weil wir es geschafft haben alle Sammelkartenspiele auf wenige Grundmechaniken zu reduzieren. Zum Beispiel sind das Zerstören einer Karte,
+	das Ziehen einer Karte und Ausspielen einer Karte oberflächlich drei verschiedene Interaktionen aber abstrahiert sind sie die selbe Interaktion, nämlich das Verschieben einer Karte von einer Zone in eine andere Zone. Das Zerstören einer Karte verschiebt die
+	Karte von der Spielzone in die Ablagestapelzone, das Ziehen einer Karte verschiebt die
+	Karte von der Kartenstapelzone in die Handzone und das Ausspielen einer Karte verschiebt die Karte aus der Handzone in die Spielzone. Alle anderen Interaktionen lassen
+	sich ebenfalls auf Grundmechaniken reduzieren, die im Karteneditor dargeboten werden. Deswegen können mir unserer Software Sammelkartenspiele erstellt werden, ohne auch nur eine Zeile Code geschrieben zu haben.\hfill\newline
+	
+	Schließlich entsagen wir auch der Spielautomaten-Mechanik durch Verkauf von Booster-
+	packungen und allen preisverscheiernden Mechaniken, da wir uns als „The Good Guys“
+	positionieren wollen. Diese Positionierung ist wichtig, um das größte Kundensegment für uns zu gewinnen, wie im Abschnitt~\ref{subsec:Kundensegmente:Free_-_To_-_Play_Kern_-_Spieler} dargelegt wird. Ein
+	weiterer notwendiger Schritt, um uns als „The Good Guys“ zu positionieren, ist absolute Transparenz. Das heißt wir veröffentlichen alles, sei es Einnahmen vor und nach Steuer, Gehälter, Ausgaben für Freelancer/Künstler/Musiker, Internetkosten, Stromkosten, Serverkosten, Gesamtspielerzahlen, Peak-Spielerzahlen, usw. Die Spieler müssen das
+	Gefühl haben, dass wir sie nicht ausnehmen, sondern einfach nur ein cooles Spiel machen und dass wir ein Teil von Ihnen sind.
+	
+	\section{Markt} \label{sec:Markt}
+	
+	Der Markt für Sammelkartenspiele ist seit seinen Anfängen in 1993 stark gewachsen und
+	ist, für gedruckte Sammelkarten, im Jahr 2025 \$7.51Mrd groß und es wird erwartet, dass
+	er bis zum Jahr 2030 auf \$10.98Mrd wächst. Auf der anderen Seite gibt es auch mittlerweile einen Markt für Online-Sammelkartenspiele. Hearthstone allein hat zwischen 2014 und 2015 \$1Mrd eingebracht und der Markt selbst hatte in 2024 eine Größe von \$0.75Mrd und es wird erwartet, dass er in 2033 auf \$2.1Mrd wächst. Andere Quellen widersprechen aber diesen Zahlen. So wird in angegeben, dass der globale Gesamtmarkt für
+	Sammelkartenspiele, also analog und digital zusammen, im Jahr 2024 ¸\$1Mrd betrug und
+	es wird prognostiziert, dass er bis 2032 auf \$1.57Mrd wächst. In einer anderen Quelle wird aber berichtet, dass der Gesamtmarkt im Jahr 2023 bereits einen Wert von \$7.6Mrd hatte und er soll bis 2032 sogar auf \$23.9Mrd wachsen. Wir entnehmen daraus, dass es einen Markt gibt und dass Gewinne, wie am Beispiel von Hearthstone, realisiert werden können, wenn das Produkt gut genug ist.
+	
+	\section{Kundensegmente} \label{sec:Kundensegmente}
+	
+	\subsection{Free-To-Play Kern-Spieler} \label{subsec:Kundensegmente:Free_-_To_-_Play_Kern_-_Spieler}
+	
+	Free-To-Play sind Spieler, die stur versuchen das Spiel kostenlos zu spielen, wenn das Spiel es ermöglicht. Und sollte das Spiel es nicht in einem angemessenen Zeitraum erlauben alle Inhalte komplett kostenlos zu erspielen, verlassen die Free-To-Play Kern-Spieler die IP. Da wir, wie im Anschnitt~\ref{sec:Geschaeftsidee} dargelegt, die Basisversionen jeder Karte kostenlos anbieten und gleichzeitig dafür sorgen, dass der Spielspaß unseres Spieles durch u.a. die Pitchen-und-Bewerten Mechanik maximiert wird, wie im Abschnitt~\ref{sec:Geschaeftsidee} beschrieben, garantieren wir, dass die Free-To-Play Kern-Spieler in großen Zahlen bei uns bleiben und Spaß am Spiel haben.\hfill\newline
+	
+	Weiter gilt für Free-To-Play Kern-Spieler, dass sie 70\%-90\% der Spieler von digitalen Spielen ausmachen. Kombiniert mit der Tatsache, dass Free-To-Play Kern-Spieler es darauf anlegen Spiele kostenlos zu spielen, bedeutet es, dass der Großteil der Spielerbasis ausschließlich Kosten verursacht. Dies ist das \glqq Free-To-Play Kernspieler-Problem\grqq. Und wir sind die einzigen, welche dieses Problem lösen können, da wir uns, wie im Abschnitt~\ref{sec:Geschaeftsidee} beschrieben, als \glqq The Good Guys\grqq{} positionieren und unser Spiel so gestalten, dass es nicht nur Spaß macht es zu spielen, sondern es sich auch gut anfühlt für unser Spiel Geld auszugeben.
+	
+	\subsection{Wal} \label{subsec:Kundensegmente:Wal}
+	
+	Vorneweg gesagt, wir finden die Bezeichnung \glqq Wal\grqq{} schlimm aber das ist leider Industriejargon. Abgesehen davon, bezeichnet \glqq Wal\grqq{} einen Kunden, der das Spiel nicht aus Spaß spielt, sondern nur, um damit anzugeben, dass er sich alles, was das Spiel bietet, leisten kann und andere nicht, je teurer und exklusiver, desto besser. Ein solches Verhalten ist aber nur möglich, wenn es eine große Spielerbasis gibt, welche wir garantieren können, da wir mit 3000 kostenlosen Karten starten. In anderen Sammelkartenspielen kann man zwar kosmetische Verbesserungen für Karten kaufen aber es wird nichts angeboten, dass dieses Kundensegment direkt anspricht. Durch den \glqq Mensch-zu-Karte-Prozess\grqq{} sind wir die ersten, die dieses Kundensegment direkt monetarisieren. Bei diesem Prozess wird mit dem Käufer zusammen eine Karte erstellt. Das Bild der Karte ist ein schön bearbeitetes Bild des Käufers. Ferner bieten wir für Karten besonders schön bearbeitete Bilder, rare Bilder, nur kurzzeitig verfügbare Bilder, besondere Kartenrücken, usw. an, welche direkt dieses Kundensegment als Ziel haben.
+	
+	\section{Erlösmodell} \label{sec:Erloesmodell}
+	
+	Am Anfang werden wir 1€ für die schönere Version der Karten verlangen, da wir KI generierte Bilder verwenden werden und möglichst schnell davon loskommen wollen. Der
+	Preis für den „Mensch-zu-Karte-Prozess“ wird 10.000€ Kosten. Da wir seit Tag
+	eins durch Devlogs, Patreon und Social Media interessierte Spieler auf uns aufmerksam
+	machen, gehen wir das von aus, dass beim Launch der Software und damit unseres Spieles wir mindestens 100.000 Spieler haben werden. Wale machen 1\% der Spielermenge
+	aus, also gehen wir davon, dass wir 1000 Wale anlocken. Da Wale alles wahllos kaufen, was angeboten wird, erwarten wir einen Umsatz durch den direkten Kartenverkauf
+	mit schöneren Versionen der initialen 3000 Karten von 3.000.000€. Da der „Mensch-zu-
+	Karte-Prozess“ sehr lange dauert, werden wir ihn erst einmal auf 10 beschränken. Dies liefert einen weiteren Umsatz von 100.000€.
+	
+	\newpage
+	
+	% Literaturliste soll im Inhaltsverzeichnis auftauchen
+	%\addcontentsline{toc}{section}{Literaturverzeichnis}
+	
+	% Literaturliste endgueltig anzeigen
+	%\bibliography{Smile_Antrag.bib}
+	
+\end{document}

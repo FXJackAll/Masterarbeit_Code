@@ -1,0 +1,139 @@
+%Präambel
+\documentclass[fontsize=12]{scrartcl}
+
+\usepackage{cite}
+\usepackage[english, ngerman]{babel}
+\usepackage{mwe}
+\usepackage{newfloat}
+\usepackage[utf8]{inputenc}
+\usepackage[autostyle=true,german=quotes]{csquotes}
+\usepackage[T1]{fontenc}
+\usepackage{url}
+\usepackage{amssymb}
+
+\usepackage{amsmath}
+
+\usepackage{tabulary}
+\usepackage{tabularx}
+\usepackage{subfig}
+\usepackage{caption, booktabs}
+
+\usepackage{float}
+
+%der eigentliche Text
+\begin{document}
+	
+	% Festlegung Art der Zitierung - Havardmethode: Abkuerzung Autor + Jahr
+	\bibliographystyle{abbrvdin}
+	
+	\section{Geschäftsidee}
+	
+	\subsection{Innovation}
+	
+	% - Spiel fördert Lernen
+	% - soziale Innovation: "be good"
+	% - technische Innovation: richtig gutes Matchmaking für Pros, Wale und Beginner, Leaguen wie in LoL
+	% - soziale Innovation: radikale Transparenz für Vertrauen der Community und uns etablieren als "The Good Guys" (für Free-to-Player)
+	% - monetäre Innovation: Investoren in Karten
+	
+	Die Innovation besteht aus zwei Komponenten, einer Theoretischen und einer Sozialen. Die soziale Komponente ist die Pitchen-und-Bewerten Mechanik und die Theoretische ist das Zerlegen aller (Sammel-)Kartenspiele in Bausteine.
+	
+	%Die Innovation besteht aus sieben Komponenten, zwei Sozialen, zwei Monetären und drei Theoretischen. Die beiden sozialen Komponenten sind die Pitchen-Bewerten-Mechanik und die radikale Transparenz, die Monetären sind, dass das Spiel spielergesteuert ist und Karten direkt zu Investitionen werden können und die Theoretischen sind die Spaß-Metrik, gutes Matchmaking und Bausteine.
+	
+	\subsubsection{Theoretische Innovation: Bausteine}
+	
+	Unsere erste zentralen Innovationen ist, dass wir es geschafft haben alle (Sammel-)Kartenspiele auf 12 Grundmechaniken zurückzuführen. Diese sind:
+	
+	\begin{itemize}
+		
+		\item Bewegen einer Karte von einem Feld zu einem anderen Feld, wobei beide Felder das selbe Feld sein können, z.B. \glqq Ziehen einer Karte (Bewegen einer Karte vom Deckfeld zum Handfeld) \grqq, \glqq Zerstören einer Karte (Bewegen einer Karte vom Hauptfeld zum Ablagestapelfeld) \grqq, \glqq Karte zurück auf die Hand nehmen (Bewegen einer Karte vom Hauptfeld zum Handfeld) \grqq, \glqq Karte Abwerfen (Bewegen einer Karte vom Handfeld auf das Ablagestapelfeld) \grqq
+		
+		\item Rotieren eine Karte um Vielfache von 45°, z.B. \glqq Tappen einer Karte (Rotieren einer Karte um 90° im Uhrzeigersinn)\grqq
+		
+		\item Flippen/Wenden/Umdrehen einer Karte \glqq Umdrehen einer Fallenkarte \grqq, \glqq Flippen einer Kreaturenkarte \grqq
+		
+		\item Bedingungen, z.B. \glqq Wenn diese Karte gespielt wird \dots \grqq, \glqq Wenn diese Karte umgedreht wird \dots \grqq, \glqq Wenn diese Karte abgeworfen wird \dots \grqq, \glqq Wenn eine andere Karte gespielt wird \dots \grqq
+		
+		\item Ausspielen einer Karte auf das Spielfeld, z.B. \glqq platziere eine Karte verdeckt zwischen Zwei bereits vorhandenen auf dem Spielfeld \grqq
+		
+		\item Bewegen einer Karte auf dem Spielfeld, z.B. \glqq bewege eine Karten auf dem Feld von ganz links nach ganz rechts \grqq
+		
+		\item Überlagerungen, z.B. \glqq Entwickeln einer Karte zu einer Anderen (Legen einer Entwicklungskarte auf eine Grundkarte) \grqq, \glqq Verzaubern einer Karte mit einer Anderen (Legen einer Verzauberungskarte auf eine Karte) \grqq, \glqq bei UNO eine blaue Eins auf eine blaue Zwei legen \grqq, \glqq Ausrüsten einer Karte mit einer Anderen (Legen einer Ausrüstungskarte unter eine Karte) \grqq
+		
+		\item Beschränkungen, z.B. \glqq diese Karte kann nur von der Hand gespielt werden \grqq
+		
+		\item (hierarchische) Typisierung, z.B. \glqq diese Karte ist eine Kreatur, diese Karte ist ein Krieger (Karte ist entweder zuerst Kreatur und dann Krieger oder Kreatur und Krieger gleichzeitig) \grqq, \glqq Diese Karte hat das Attribut Feuer \grqq, \glqq diese Karte ist blau \grqq
+		
+		\item (zusätzliche) Kosten, z.B. \glqq um diese Karte auszuspielen, müssen zwei Kreaturen geopfert werden \grqq, \glqq um diese Karte auszuspielen, müssen zusätzlich 5 Lebenspunkte bezahlt werden \grqq
+		
+		\item Numerische Interaktionen, z.B. \glqq diese Karte fügt einer Kreatur 5 Schaden zu \grqq
+		
+		\item Erschaffen eines Spielsteins, z.B. \glqq Bringe einen Spielstein ins Spiel, der eine Kopie einer Kreatur ist. \grqq, \glqq Bringe einen 1/1-Kaninchen Spielstein ins Spiel. \grqq
+		
+		\item Alle Mechaniken für Karten gelten auch für Spielstein.
+		
+		Das Benennen einer Karte oder das Einfügen eines Bildes wurde nicht als Mechanik aufgefasst, werden aber im Editor möglich sein.\hfill\newline
+		
+	\end{itemize}
+	
+	\noindent Es mag auf den ersten Blick offensichtlich sein, dass diese 12 Bausteine gerade diejenigen sind, in die alle (Sammel-)Kartenspiele sich zerlegen lassen aber diese Einteilung ist die Kulmination eines Jahres geistiger Anstrengung.\hfill\newline
+	
+	\noindent Ferner ist die Allgemeinheit dieser Zerlegung mächtiger, als man denkt. Mit ihr lassen sich nicht nur Sammelkartenspiele erstellen, sondern alle Kartenspiele insgesamt, z.B. auch so etwas wie UNO.
+	
+	\subsubsection{Soziale Innovation: Pitchen-und-Bewerten Mechanik}
+	
+	Eines der größten Probleme von bereits vorhandenen Sammelkartenspielen ist, dass sie als erstes profitgetrieben sind und überspitzt gesagt als letztes spaßgetrieben. Selbstverständlich wollen wir einen Profit generieren aber als Unternehmung, welche ein Spiel kreiert, muss Spaß, wenn nicht an erster, dann wenigstens, an guter zweiter Stelle stehen. Andere Hersteller von Sammelkartenspielen tun alles, um Geld zu erwirtschaften, sei es immer stärkere Karten zu machen, sodass ältere, geliebte Karten und sogar ganze Spielstrategien, welche viel Spaß brachten, obsolet werden und, wenn man mitspielen will, sich immer die neuen Karten kaufen muss oder die stärksten Karten, die jeder haben will in speziellen, besonders teuren Produkten zu vermarkten (MtG sectret lair), diese stärkeren Karten werden selbst dann raus gebracht, wenn sie desaströs für das Spiel sind (affinity, companien Mechanik MtG, Dämonenjäger in HS) oder sie bieten sekundäre Währungen an, wie Edelsteine, welche den realen Preis von Karten verschleiert und Spieler sich verraten und ausgenommen fühlen oder sie brechen ihre Spiele auf, um Karten hinzuzufügen, welche nicht zu dem Kartenspiel passen und ältere Kernspieler alieniert. Ferner, aufgrund der jahrelangen Vernachlässigung, werden Sammelkartenspiele immer monotoner, kürzer und asynchroner, monotoner da es wenige erfolgreiche Strategien gibt, welche alle spielen, kürzer, da diese Strategien wenige Züge brauchen und den Gegner zu besiege (Zug 3-5) und, am schlimmsten, asynchroner, da Züge sehr lange dauern und der Spieler (ein Spieler spielt, ein anderer schaut zu).\hfill\newline
+	
+	\noindent Dies führt dazu, dass wenn Spieler eine Pause vom Spiel machen, sie den Anschluss verlieren und nicht mehr zurückkommen. Sollten Spieler nicht von sich aus aufhören wollen, so hören viele trotzdem auf, weil sie es sich nicht leisten können, immer die neuesten und stärksten Karten zu kaufen. Oder potenzielle Spieler wollen gar nicht erst Geld in das Spiel investieren, weil sie eine schlechte emotionale Verbindung zu dem Spiel haben. Die etablierten Hersteller von Sammelkartenspielen brennen sich also von einer Welle von Spielern zu nächsten.\hfill\newline
+	
+	\noindent Hier greift die Pitchen-und-Bewerten Mechanik. Wenn Spieler Karten vorschlagen können und dann kollektiv abstimmen, ob eine Karte verändert werden soll, um ein besseres Spielerlebnis zu kreieren oder ob eine neue Karte in das Spiel aufgenommen wird, werden alle bis jetzt beschriebenen Probleme eliminiert, bis auf das Gefühl ausgenommen zu werden. Das wir im Abschnitt~\ref{radikale_Trasparenz} behandelt. Wenn die Community darüber entscheiden kann, wie das Spiel sich entwickelt, werden nie Karten eingeführt, die ältere, geliebte Karten oder Spielstrategien obsolet machen. Spieler, die eine Pause vom Spiel gemacht habe, können wiederkommen und mit ihren Karten immer noch spielen. Es werden keine für das Spiel desaströsen Karten gemacht, wodurch das Spiel immer Spaß macht. Dies alles sorgt dafür, dass keine Spieler zu anderen Sammelkartenspielen in Frust abwandern, jedoch Spieler anderer Spiele, wenn sie zu uns kommen, bleiben. Somit wächst unsere Spielerzahl konstant und organisch.\hfill\newline
+	
+	\noindent Schließlich hat die Pithcen-und-Bewerten Mechanik noch den großen Vorteil, dass für uns die Kosten für Kartenkreation und Testen, was bei den anderen Sammelkartenspielen die meiste Zeit und damit Geld braucht, bei und entfallen, weil das bei uns alles die Spieler machen.
+	
+	\subsection{Markteinführung}
+	
+	\subsubsection{Soziale Innovation: Radikale Transparenz} \label{radikale_Trasparenz}
+	
+	Eines der größten Probleme von digitalen Sammelkartenspielen ist, dass ein großer Teil der Spieler, 70\%-90\%, kein Geld in das Spiel investiert. Dies liegt an zwei Gründen. Der erste Grund ist, dass ein kleiner Teil der Spieler einfach kein Geld hat. Der zweite Grund ist, dass der restliche Teil der Spieler, die für Spielinhalte zahlen könnten, das Gefühl haben, dass die Spiele sie manipulieren, um Geld auszugeben, was sich sehr schlecht anfühlt und dazu führt, dass dieser Teil der Spieler es sich emotional dazu verpflichtet fühlen, keinen einzigen Cent für das Spiel auszugeben.\hfill\newline
+	
+	\noindent Hier greift unsere nächste soziale Innovation. Wir werden alles offenlegen - Spielerzahlen, Einnahmen, Ausgaben, Beteiligungen des Creators und alles andere, was wir offenlegen können. Dies, kombiniert mit unserem Leitspruch "be good" und der Tatsache wir Preise weder verschleiern noch in manipulierenden Dezimalbrüchen, wie 4,99€, angeben, sondern in klaren ganzen Zahlen, wie 5,00€, lässt ein Vertrauens- und parasoziales Verhältnis entstehen, was nur von großen Influencern bekannt ist und uns somit als die Guten/ \glqq The Good Guys \grqq etabliert. Das gibt den Spielern, welche normalerweise alles daran setzen nichts auszugeben, das Gefühl, nicht ausgenommen zu werden, sondern ein geliebtes Spiel zu unterstützen.
+	
+	fühlt sich nicht mehr an, als würde man für ein produkt zahlen, sondern ein geliebtes hobby unterstützten
+	
+	radikale Transparenz, Pitchen-Bewerten-Mechanik, Spaß-Metrik, Redukt auf einfache Interaktionen, 
+	
+	\subsection{Kundenbindung}
+	
+	\subsubsection{Theoretische Innovation: Fun-Measure-Funktion}
+	
+	Unsere zweite zentrale Innovation ist die Fun-Measure-Funktion. Es ist zwar klar, dass Spiele Spaß machen sollen, aber dies theoretisch zu formulieren ist weniger offensichtlich. Zuerst definieren wir, was \glqq Spaß \grqq im Zusammenhang mit Sammelkartenspielen bedeutet. Hier verstehen wir \glqq Spaß \grqq als das \glqq Ausspielen \grqq von Karten. Damit können wir Spaß messen, wenn wir messen, wie viele Karten gespielt wurden. Dabei definieren wir \glqq Ausspielen \grqq von Karten als das Verbinden von zwei Aktionen. Die erste Aktion ist die Absicht eine Karte zu spielen, die zweite Aktion ist, dass die Karte tatsächlich auf das Feld trifft bzw., abstrakt ausgedrückt, den Feldstatus verändert. Diese Unterscheidung ist notwendig, da es Karten gibt, die, nachdem die Ausspielabsicht bekannt gegeben wurde, das treffen der Karte auf das Feld bzw. das Verändern des Feldstatus durch die Karte verhindern. Damit misst die Fun-Measure-Funktion das Verhältnis zwischen gespielten Karten und Karten, die Tatsächlich auf das Feld treffen bzw. den Feldstatus verändern.\hfill\newline
+	
+	\noindent Beispiel: Spieler 1 spielt eine Kreatur. D.h. er kündigt an, dass er eine Kreatur spielen will. Spieler 2 hat die Möglichkeit auf die Absicht von Spieler 1 zu reagieren. Das tut er, indem er seine Absicht kundtut eine Karte zu spielen, welche die Kreatur von Spieler 1 neutralisiert. Spieler 1 hat wiederum die Möglichkeit zu reagieren. Er tut dies nicht und die Kette wird aufgelöst. Die Kreatur wird neutralisiert. D.h. 2 Karten gehen rein, 0 Karten treffen das Spielfeld bzw. der Feldstatus bleibt konstant. Damit ist das Ergebnis der Fun-Measure-Funktion -2 und die Interaktion macht nicht nur keinen Spaß, sie ist aktiv frustrierend.\hfill\newline
+	
+	\subsubsection{Theoretische Innovation: Balance-Measure-Funktion}
+	
+	- theoretische Vanilla-Kreatur als Powerceiling Effekte werden als Äquivalent zu Stats gesehen
+	
+	\subsubsection{Monetäre Innovation: Spiel Ist Spielergesteuert}
+	
+	Der Bereich, für den etablierte Hersteller von Sammelkartenspielen zu wenig Geld ausgeben ist Balancing, also dass die Kartenstärke nicht zu schwach und nicht zu stark ist. Das führt dazu, dass Karten gebannt werden müssen oder Regel im Nachhinein geändert, damit die Spiele nicht zerstört werden. Wir hingegen, da das Spiel Spielergesteuert ist, haben die gesamte Spielerbasis als Tester, die wir nicht bezahlen müssen. Wir werden alle Teilnehmenden trotzdem entlohnen, nur nicht monetär.\hfill\newline
+	
+	\noindent Ein weiterer Bereich, der auch sehr wichtig ist, ist die Art, wie neue Karten entwickelt werden. Wegen der Gier nach kurzfristigen Profiten werden Karten herausgebracht, die nicht zu den bis dato veröffentlichen passen. Auch hier sind wir, weil unser Spiel Spielergesteuert ist, abgesichert und es werden nur Karten ins Spiel aufgenommen, die das Spiel tatsächlich erweitern. Dies gibt uns einen entscheidenden Vorteil.
+	
+	\subsubsection{Monetäre Innovation: Investition In Karten}
+	
+	Anders als in allen anderen Spielen, welche nur für Gewinner von Wettbewerben es ermöglichen, machen wir aus Menschen Karten gegen einen festen Preis. Wir geben diesen Menschen auch die Printrechte, sodass ihre Karten zu Sammlerstücken und zu einer Investition macht.
+	
+	\subsubsection{Technische Innovation: Gutes Matchmaking}
+	
+	Es mag einfach klingen, aber Spieler richtig zu verbinden, sodass alle Spaß haben, ist schwerer als es klingt. Um dies zu ermöglichen werden wir AI benutzen.
+	
+	\newpage
+	
+	% Literaturliste soll im Inhaltsverzeichnis auftauchen
+	%\addcontentsline{toc}{section}{Literaturverzeichnis}
+	
+	% Literaturliste endgueltig anzeigen
+	%\bibliography{Smile_Antrag.bib}
+	
+\end{document}
