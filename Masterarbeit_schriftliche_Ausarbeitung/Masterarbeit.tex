@@ -233,15 +233,17 @@ within=section,
 	
 	%TODO ist das schon die ACO-Metaheuristik?
 	
-	In diesem Abschnitt betrachten wir ein ideales Futter, also ein Futter, dass in Quantität und Qualität konstant bleibt, und  ideale Ameisen, also Ameisen, die mit konstanter Geschwindigkeit sich geradlinig bewegen. Wir müssen diese Annahmen treffen, da, wie im Abschnitt~\ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Biologische_Beschreibung_Der_Nahrungssuche_Von_Ameisen} beschrieben, die Menge des auf einem Weg hinterlassenen Pheromons von der Quantität und Qualität des Futters abhängt und wie in \textit{Camazine et al.}\cite{camazineself} beschrieben, reale Ameisen auf einem Weg umdrehen können und wieder zurücklaufen von woher sie kamen. Ferner, in Anlehnung an \textit{Dorigo und Stützle}~\cite{dorigo2018ant} und \textit{Engelbrecht}~\cite{brecht2005fundamentals}, betrachten wir eine ideale Experimentaufstellung in Form eines Tupels (\(\Sigma, \mathcal{E}, \Delta, \mathcal{M}, f, \mathcal{I}, \mathcal{S}\)). Dabei ist \(\Sigma\) der Suchraum, welcher hier der Graph \(G(V,E)\) ist, der aus drei Orten/Punkte besteht, an denen sich Ameisen aufhalten können und drei Wegen zwischen diesen Orten besteht. Der Graph befindet sich in der euklidischen Ebene. Die Orte sind Nest (N), Food (F) und Umweg/Detour (D), also gilt \(V = \{N, F, D\}\). Die Wege verbinden die Orte, wie Abbildung~\ref{fig:Pheromon_Dreieck} zu sehen und haben alle die Länge 1 Längeneinheit (LE), also gilt \(E = \{NF, ND, DF\}\). Zusammengefasst gilt \(G = (\{N, F, D\}, \{NF, ND, DF\})\). Die Menge der idealen Ameisen bzw. der \ac{sce} ist \(\mathcal{E}\). Hier gilt \(|\mathcal{E}| = 2\), es werden also zwei ideale Ameisen in diesem Experiment betrachtet. Die Menge des Pheromons, welches die Gewinnerameise auf die von ihr gewählten Wege hinterlässt, ist \(\Delta\). In unserem Experiment gilt \(\Delta = 1\) Die Menge des Pheromons \(\rho\) auf allen Wegen, also die Pheromoninfotmation, wird in der Pheromonmatrix \(\mathcal{M}\) gespeichert. Dabei steht jeder Matrixeintrag für eine Kante im Graph \(G\) und der Wert des Eintrages steht für die Menge von Pheromon, welches auf der Kante liegt. Die Zielfunktion ist \(f\). Die Zielfunktion gibt die Summe der Weglängen der Wege an, zwischen N und F, welche die Ameisen gegangen sind. In unserer idealen Experimentaufstellung gilt also \(f(x) \in \{1, 2\}\), da die Ameisen entweder den direkten Weg \(\{NF\}\) gehen oder den Umweg \(\{ND, DF\}\) und damit gilt \(f(\{NF\}) = 1\) oder \(f(\{ND, DF\}) = 2\). Das Begehen eines Weges verbraucht exakt eine Zeiteinheit, also verbraucht der direkte Weg \(\{NF\}\) eine Zeiteinheit und der Weg über den Umweg \(\{ND, DF\}\) Zwei. Das Ergebnis des in diesem Abschnitt beschriebenen Vorgehens, und das Ziel für zukünftige Problemstellungen, ist das finden eines globalen Minimums der Zielfunktion. Bevor die idealen Ameisen mit dem Experiment anfangen können, wird \(\mathcal{M}\) mit der Initialisierungmethode \(\mathcal{I}\) initialisiert. Hier wird jeder Matrixeintrag \(m_{ij}; i, j = 1, 2 \) der Pheromonmatrix \(\mathcal{M}\) auf \(\Delta\) gesetzt, damit in den Gleichungen \ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen:eq:Wahrscheinlichkeit_NF} und \ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen:eq:Wahrscheinlichkeit_ND} nicht durch 0 geteilt wird. Das Experiment wird beendet, wenn das Stoppkriterium \(\mathcal{S}\) erreicht ist. Das Stopkriterium \(\mathcal{S}\) ist hier, dass das Experiment, nach dem Verstreichen von 200 Zeiteinheiten beendet wird.
+	In diesem Abschnitt betrachten wir ein ideales Futter, also ein Futter, dass in Quantität und Qualität konstant bleibt, und  ideale Ameisen, also Ameisen, die mit konstanter Geschwindigkeit sich geradlinig bewegen. Wir müssen diese Annahmen treffen, da, wie im Abschnitt~\ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Biologische_Beschreibung_Der_Nahrungssuche_Von_Ameisen} beschrieben, die Menge des auf einem Weg hinterlassenen Pheromons von der Quantität und Qualität des Futters abhängt und wie in \textit{Camazine et al.}\cite{camazineself} beschrieben, reale Ameisen auf einem Weg umdrehen können und wieder zurücklaufen von woher sie kamen. Ferner, in Anlehnung an \textit{Dorigo und Stützle}~\cite{dorigo2018ant} und \textit{Engelbrecht}~\cite{brecht2005fundamentals}, betrachten wir eine ideale Experimentaufstellung in Form eines Tupels (\(\Sigma, \mathcal{E}, \Delta, \mathcal{M}, f, \mathcal{I}, \mathcal{S}\)).\hfill\newline
+	
+	Dabei ist \(\Sigma\) der Suchraum, welcher hier der Graph \(G(V,E)\) ist, der aus drei Orten/Punkte besteht, an denen sich Ameisen aufhalten können und drei Wegen zwischen diesen Orten besteht. Der Graph befindet sich in der euklidischen Ebene. Die Orte sind Nest (N), Food (F) und Umweg/Detour (D), also gilt \(V = \{N, F, D\}\). Die Wege verbinden die Orte, wie Abbildung~\ref{fig:Pheromon_Dreieck} zu sehen und haben alle die Länge 1 Längeneinheit (LE), also gilt \(E = \{NF, ND, DF\}\). Zusammengefasst gilt \(G = (\{N, F, D\}, \{NF, ND, DF\})\). Die Menge der idealen Ameisen bzw. der \ac{sce} ist \(\mathcal{E}\). Hier gilt \(|\mathcal{E}| = 2\), es werden also zwei ideale Ameisen in diesem Experiment betrachtet. Die Menge des Pheromons, welches die Gewinnerameise auf die von ihr gewählten Wege hinterlässt, ist \(\Delta\). In unserem Experiment gilt \(\Delta = 1\) Die Menge des Pheromons \(\rho\) auf allen Wegen, also die Pheromoninfotmation, wird in der Pheromonmatrix \(\mathcal{M}\) gespeichert. Dabei steht jeder Matrixeintrag für eine Kante im Graph \(G\) und der Wert des Eintrages steht für die Menge von Pheromon, welches auf der Kante liegt. Die Zielfunktion ist \(f\). Die Zielfunktion gibt die Summe der Weglängen der Wege an, zwischen N und F, welche die Ameisen gegangen sind. In unserer idealen Experimentaufstellung gilt also \(f(x) \in \{1, 2\}\), da die Ameisen entweder den direkten Weg \(\{NF\}\) gehen oder den Umweg \(\{ND, DF\}\) und damit gilt \(f(\{NF\}) = 1\) oder \(f(\{ND, DF\}) = 2\). Das Begehen eines Weges verbraucht exakt eine Zeiteinheit, also verbraucht der direkte Weg \(\{NF\}\) eine Zeiteinheit und der Weg über den Umweg \(\{ND, DF\}\) Zwei. Das Ergebnis des in diesem Abschnitt beschriebenen Vorgehens, und das Ziel für zukünftige Problemstellungen, ist das finden eines globalen Minimums der Zielfunktion. Bevor die idealen Ameisen mit dem Experiment anfangen können, wird \(\mathcal{M}\) mit der Initialisierungmethode \(\mathcal{I}\) initialisiert. Hier wird jeder Matrixeintrag \(m_{ij}; i, j = 1, 2 \) der Pheromonmatrix \(\mathcal{M}\) auf \(\Delta\) gesetzt, damit in den Gleichungen \ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen:eq:Wahrscheinlichkeit_NF} und \ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen:eq:Wahrscheinlichkeit_ND} nicht durch 0 geteilt wird. Das Experiment wird beendet, wenn das Stoppkriterium \(\mathcal{S}\) erreicht ist. Das Stopkriterium \(\mathcal{S}\) ist hier, dass das Experiment, nach dem Verstreichen von 200 Zeiteinheiten beendet wird.
 	
 	%TODO hier auch \mathcal{R}?
 	
-	%TODO Gewinnerameise oder anderes Wort?
+	%TODO Gewinnerameise oder anderes Wort? Iterationsbeste Ameise
 	
-	%TODO Wert für \Delta finden und begründen, woher
+	%TODO Wert für \Delta finden und begründen, woher: angelehnt an [Quelle]
 	
-	%TODO Text beibehalten oder Unterbrechungen einbauen?
+	%TODO Text beibehalten oder Unterbrechungen einbauen? Absätze einbauen
 	
 	\begin{figure}[H]
 		
@@ -275,6 +277,8 @@ within=section,
 	
 	Wie zu sehen, konstruiert das oben beschriebene Vorgehen eine Belegung der Punkte \(\{N, F, D\}\) so, dass die Kürzeste Verbindung \(\{FN\}\) als Ergebnis entsteht, \(\{D\}\) also nicht begangen wird. Wie in meiner Bachelorarbeit~\cite{FCM_2019} beschrieben, können wir beobachten, dass die Orte N, F und D nur begangen und nicht begangen als Werte angeben können. Damit ist das Problem die kürzeste Verbindung zu finden, ein diskretes Problem, da die Werte, welche die Orte annehmen können, abzählbar sind.
 	
+	%TODO keine Konkurrenz, in jedem Zeitschritt läuft eine Ameise
+	
 	% Ameisenalgorithmen sind durch die Art und Weise des Verhaltens, z.B. Nahrungssuche, von Ameisen inspiriert. Dabei hinterlassen Ameisen, bei dem Zurücklegen der Strecke zwischen zwei Punkten A und B, eine Pheromonspur, an der sich Artgenossen orientieren können. Ameisen entscheiden sich jedoch nur mit einer gewissen Wahrscheinlichkeit für den Weg mit der Pheromonspur.\hfill\newline
 	
 	% Auf der anderen Seite verdunstet diese Spur nach einer gewissen Zeit, sodass einmal gelegte Wege auch wieder verschwinden können.\hfill\newline
@@ -291,7 +295,9 @@ within=section,
 	
 	%TODO Fragen, ob das so Sinn macht, Sigme oder \Sigma \times \Sigma?
 	
-	%TODO Fall n = 0 betrachten?
+	%TODO gegeben Menge und Suchraum mit allen Permutation der Menge und f als Zielfunktion
+	
+	%TODO Fall n = 0 betrachten? nein
 	
 	%TODO muss \pi  Unterzyklenfrei sein?
 	
@@ -299,13 +305,13 @@ within=section,
 	
 	Das \ac{tsp} ist ein Permutationsproblem \((\Sigma, \mathcal{R}, \mathcal{B}, \pi, f)\) mit \(\Sigma = \{a_i, \dots, a_n\}, n \in \mathbb{N}_{> 0}\), wobei beim \ac{tsp} die \(a_i\) die Städte sind und \(\mathcal{R}: \Sigma \ni (a_i, a_j) \to d(a_i, a_j) \in \mathbb{R}_{\geq 0}\) gilt, wobei \(d: \mathbb{R} \times \mathbb{R} \to \mathbb{R}_{\geq 0}\) die Distanz zwischen zwei Städten ist. Da das \ac{tsp} keine Beschränkungen hat, gilt \(\mathcal{B} = \emptyset\). Die Permutation \(\pi\) gibt die Rheinfolge der Städte \(\{a_1, \dots, a_n\}\) und damit eine Rundreise an. Eine Rundreise ist eine Reise, bei der jede Stadt, außer der Startstadt, nur einmal besucht wird. Die Zielfunktion \(f\) gibt die Länge der Rundreise \(\{a_{\pi(1)}, \dots, a_{\pi(n)}\}\) an. Gesucht ist mindestens ein \(s_{opt} \in \Sigma, s_{opt} = \{a_{\pi(1)}, \dots, a_{\pi(n)}\}\), sodass gilt \(f(s_{opt}) \leq f(s) \, \forall s \in \Sigma\). Es ist also die kürzeste Rundreise gesucht. Das \ac{tsp} war eines der Probleme, dass sich angeboten hat, um mit der ACO-Metaheuristik gelöst zu werden.
 	
-	%TODO braucht das TSP eine Quelle?
+	%TODO braucht das TSP eine Quelle? eine reicht
 
-	%TODO besseres Wort als Startstadt?
+	%TODO besseres Wort als Startstadt? nein.
 		
-	\subsection{Originale ACO-Metaheuristik} \label{subsec:Grundlagen:ACO_-_Metaheuristik}
+	\subsection{ACO-Metaheuristik nach \textit{Dorigo et al.}~\cite{dorigo1996ant}} \label{subsec:Grundlagen:ACO_-_Metaheuristik}
 	
-	%TODO Originale oder was anderes?
+	%TODO Originale oder was anderes? Ja
 	
 	Die originale ACO-Metaheuristik kann als Erweiterung der Konstruktion aus dem Abschnitt~\ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen} gesehen werden, da wir sie auch als Tupel \((\Sigma, \mathcal{R}, \mathcal{B}, \mathcal{E}, \Delta, \mathcal{M}, \eta, f, \mathcal{I}, \mathcal{S})\) angeben können. Dabei ist zwar \(\Sigma = G(V,E)\) aber \(V\) und \(E\) sind beliebig. Die Relation \(\mathcal{R}\) zwischen den \(v_i \in V\) ist ebenfalls beliebig, genauso wie die Beschränkungen \(\mathcal{B}\). Weiter gilt \(|\mathcal{E}| = m, \, m \in \mathbb{N}\) und nicht nur \(|\mathcal{E}| = 2\). Die Menge des Pheromons \(\Delta\), welche die Gewinnerameise auf die von ihr gewählten Kanten hinterlegt, wird Problemabhängig gewählt. Die Pheromonmatrix \(\mathcal{M}\) kann größer sein als im Abschnitt~\ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen} aber sie ist genauso aufgebaut und auch ihre Funktionalität ist die selbe. Die problemabhängige Heuristik ist \(\eta\). Die Zielfunktion \(f\) kann auch beliebig formuliert werden, es bleibt jedoch gleich, dass mindestens eines ihrer globalen Minima gesucht wird. Das Initialisierungskriterium bleibt gleich, wie im Abschnitt~\ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen}. Das Stoppkriterium \(\mathcal{S}\) kann frei gewählt werden.\hfill\newline
 	
@@ -313,7 +319,7 @@ within=section,
 	
 	%TODO wie besser formatieren?
 	
-	%TODO wie hoch ist m?
+	%TODO wie hoch ist m? Einfach als m lassen
 	
 	\begin{equation} \label{subsec:Originale_ACO_-_Metaheuristik:eq:Delta}
 		\Delta_{ij} = \sum \limits_{k = 1}^m f(s), (ij) \in s
@@ -450,7 +456,7 @@ within=section,
 	
 	Wie im Abschnitt~\ref{sec:HSPPBO_Schema} beschrieben, wird bei einem hierarchischen Algorithmus die Anzahl der Archive von insgesamt 1 auf 3 pro \ac{sce} erhöht. Ein Archiv für die letzte gefundene Lösung des \ac{sce}, Eines für die bis dato beste gefundene persönliche Lösung des \ac{sce} und Eines für die bis dato beste gefundene Lösung des Eltern-\ac{sce}. Zusätzlich gibt es noch 1 weiteres Archiv, welches die bis dato insgesamt beste Lösung hält. Die Größe der Lösungsarchive schrumpft aber, von \(n = 100\) bei ACO\(_\mathbb{R}\)-VS, auf \(n = 1\). Dies ist notwendig, damit Lösungen entlang dem Baum im HSPPBO-Schema wandern können, denn man kann Archive nur dann einfach vergleichen, wenn sie nur eine Lösung haben. Das Vergleichskriterium ist dann der Funktionswert der Fitnessfunktion.\hfill\newline
 	
-	%TODO Forschungsfrage hier formulieren?
+	%TODO Forschungsfrage hier formulieren? wie ist mir überlassen
 	
 	Eine offene Forschungsfrage ist, wie mit Archiven in einer hierarchischen Struktur umgegangen werden kann, wenn sie mehr als 1 Lösung halten. Die einfachste Anordnung ist nach der Besten Lösung im Archiv zu ordnen. Die zweit einfachste Anordnung ist die Archive nach der Durchschnittsqualität der Lösungen zu sortieren. Eine komplexere Möglichkeit die Archive zu ordnen ist einen zusammengesetzten Term zu verwenden, wie in der Gleichung~\ref{eq:Archiveguete} zu sehen. Dieser Term funktioniert sowohl für Archive, die Lösungen nach der Regel \glqq first in last out\grqq{} speichern als auch für Archive, die Lösungen nach der Regel \glqq best in worst out\grqq{} speichern. Im letzten Fall gilt \(s_1 = s_{opt}\).
 	
@@ -637,7 +643,7 @@ within=section,
 	
 	\noindent Die Standardeinstellungen der Parameter sind, wie in Tabelle~\ref{ACO_R_very_simple_Parametereinstellungen} zu sehen ist.
 	
-	%TODO hinschreiben woher die Parameter stammen, fragen, ob durch systematisches Probieren ok ist
+	%TODO hinschreiben woher die Parameter stammen, fragen, ob durch systematisches Probieren ok ist? nein. Schreiben: mehrere Werte aus Bereich [..] und der beste Wert w wurde genommen
 	
 	\begin{table}[H]
 		\fontsize{10pt}{12pt}
@@ -718,7 +724,7 @@ within=section,
 	
 	%TODO fragen ob Pseudoceod in Deutsch oder Englisch geschrieben sein muss
 	
-	%TODO While oder For; For so ok?
+	%TODO While oder For; For so ok? ist ok.
 	
 	\section{HSPPBO-Schema} \label{sec:HSPPBO_Schema}
 	
@@ -763,7 +769,7 @@ within=section,
 						
 						\State swap tree position between SCE and parent(SCE)
 						\State NumberOfSwaps \(\gets\) NumberOfSwaps + 1
-						%TODO swap tree position so beibehalten?
+						%TODO swap tree position so beibehalten? Ja.
 						\EndIf
 				
 				\EndFor
@@ -834,13 +840,13 @@ within=section,
 	
 	Da in meiner Bachelorarbeit die Testfunktionen in ihren Dimensionen nicht variiert haben, Intervallgrenzen keine Rolle spielten und alle Funktionen über stetigen, zusammenhängenden Definitionsbereichen definiert waren, brauchte es keiner standardisierten, abstrakten Definition. In dieser Arbeit aber betrachten wir stetige und diskrete/ordinale Testfunktionen, sowie Testfunktionen mit gemischten Variablen. Ferner liegen 5 der Testprobleme mit gemischten Variablen in drei verschiedenen Dimensionen dar, nämlich \(n \in \{2, 5, 10\}\). Deswegen war eine überarbeitete Definition der Testprobleme notwendig. Die einfachste Definition mit dem neuen Standard ist im Code-Snipped~\ref{sec:Testfunktionen:abb:JSON:Paraboloid10DimCont} zu sehen.\hfill\newline
 	
-	%TODO Testfunktion oder Testproblem?
+	%TODO Testfunktion oder Testproblem? Testprobleme
 	
 	%TODO ist es Abbildung, Liste oder Pseudo Code
 
 \newpage
 	
-	%TODO Listing auf Deutsch schreiben
+	%TODO Listing auf Deutsch schreiben? nein. Codefragment.
 	
 	\begin{lstlisting}[language=json, caption=Parabolid 10 Dim stetiger Definitionsbereich, label=sec:Testfunktionen:abb:JSON:Paraboloid10DimCont]
 {
@@ -992,7 +998,7 @@ within=section,
 			
 			\caption{Testfunktionen zum Vergleich mit Algorithmen, die probabilistisches\hfill\newline
 				Lernen einsetzen}
-			%TODO Darf man die Bezeichnung für die Tabellen beibehalten, weil direktes Zitat aus Bachelorarbeit
+			%TODO Darf man die Bezeichnung für die Tabellen beibehalten, weil direktes Zitat aus Bachelorarbeit Ja.
 			
 			\label{subsec:Stetige_Testfunktionen:tab:Prob_Lernen}
 			
@@ -1323,9 +1329,9 @@ within=section,
 			
 		\end{figure}
 		
-		\subsection{Ordinale Testfunktionen} \label{subsec:Ordinale_Testfunktionen} %wichtig
+		\subsection{Diskrete Testfunktionen} \label{subsec:Ordinale_Testfunktionen} %wichtig
 		
-		%TODO soll es ordinale oder diskrete Testfunktionen heißen?
+		%TODO soll es ordinale oder diskrete Testfunktionen heißen? Diskrete
 		
 		%TODO Probleme ausdenken
 		
