@@ -111,38 +111,39 @@
 \newblock {In: }\emph{Metaheuristics: computer decision-making}.
 \newblock Springer, 2003, S. 465--480
 
-\bibitem[18]{middendorf2017ant}
-\textsc{Middendorf}, M. :
-\newblock Verfahren der Schwarmintelligenz.
-\newblock {In: }\emph{Vorlesung Verfahren der Schwarmintelligenz}  (2017)
-
-\bibitem[19]{molga2005test}
+\bibitem[18]{molga2005test}
 \textsc{Molga}, M.  ; \textsc{Smutnicki}, C. :
 \newblock Test functions for optimization needs.
 \newblock {In: }\emph{Test functions for optimization needs} 101 (2005)
 
-\bibitem[20]{pohlheim2007examples}
+\bibitem[19]{pohlheim2007examples}
 \textsc{Pohlheim}, H. :
 \newblock Examples of objective functions.
 \newblock {In: }\emph{Retrieved} 4 (2007), Nr. 10, S. 2012
 
-\bibitem[21]{sandgren1990nonlinear}
+\bibitem[20]{sandgren1990nonlinear}
 \textsc{Sandgren}, E. :
 \newblock Nonlinear integer and discrete programming in mechanical design
   optimization.
 \newblock   (1990), S. 223--229
 
-\bibitem[22]{socha2009ant}
+\bibitem[21]{socha2009ant}
 \textsc{Socha}, K. :
 \newblock \emph{Ant colony optimisation for continuous and mixed-variable
   domains}.
 \newblock VDM Publishing Saarbr{\"u}cken, 2009
 
-\bibitem[23]{socha2008ant}
+\bibitem[22]{socha2008ant}
 \textsc{Socha}, K.  ; \textsc{Dorigo}, M. :
 \newblock Ant colony optimization for continuous domains.
 \newblock {In: }\emph{European journal of operational research} 185 (2008), Nr.
   3, S. 1155--1173
+
+\bibitem[23]{stutzle1999aco}
+\textsc{St{\"u}tzle}, T.  ; \textsc{Dorigo}, M.   u.\,a.:
+\newblock ACO algorithms for the traveling salesman problem.
+\newblock {In: }\emph{Evolutionary algorithms in engineering and computer
+  science} 4 (1999), S. 163--183
 
 \bibitem[24]{testFunctionHartmann3}
 \textsc{Surjanovic}, S.  ; \textsc{Bingham}, D. :

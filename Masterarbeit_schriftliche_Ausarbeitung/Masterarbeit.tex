@@ -235,9 +235,13 @@ within=section,
 	
 	In diesem Abschnitt betrachten wir ein ideales Futter, also ein Futter, dass in Quantität und Qualität konstant bleibt, und  ideale Ameisen, also Ameisen, die mit konstanter Geschwindigkeit sich geradlinig bewegen. Wir müssen diese Annahmen treffen, da, wie im Abschnitt~\ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Biologische_Beschreibung_Der_Nahrungssuche_Von_Ameisen} beschrieben, die Menge des auf einem Weg hinterlassenen Pheromons von der Quantität und Qualität des Futters abhängt und wie in \textit{Camazine et al.}\cite{camazineself} beschrieben, reale Ameisen auf einem Weg umdrehen können und wieder zurücklaufen von woher sie kamen. Ferner, in Anlehnung an \textit{Dorigo und Stützle}~\cite{dorigo2018ant} und \textit{Engelbrecht}~\cite{brecht2005fundamentals}, betrachten wir eine ideale Experimentaufstellung in Form eines Tupels (\(\Sigma, \mathcal{E}, \Delta, \mathcal{M}, f, \mathcal{I}, \mathcal{S}\)).\hfill\newline
 	
-	Dabei ist \(\Sigma\) der Suchraum, welcher hier der Graph \(G(V,E)\) ist, der aus drei Orten/Punkte besteht, an denen sich Ameisen aufhalten können und drei Wegen zwischen diesen Orten besteht. Der Graph befindet sich in der euklidischen Ebene. Die Orte sind Nest (N), Food (F) und Umweg/Detour (D), also gilt \(V = \{N, F, D\}\). Die Wege verbinden die Orte, wie Abbildung~\ref{fig:Pheromon_Dreieck} zu sehen und haben alle die Länge 1 Längeneinheit (LE), also gilt \(E = \{NF, ND, DF\}\). Zusammengefasst gilt \(G = (\{N, F, D\}, \{NF, ND, DF\})\). Die Menge der idealen Ameisen bzw. der \ac{sce} ist \(\mathcal{E}\). Hier gilt \(|\mathcal{E}| = 2\), es werden also zwei ideale Ameisen in diesem Experiment betrachtet. Die Menge des Pheromons, welches die Gewinnerameise auf die von ihr gewählten Wege hinterlässt, ist \(\Delta\). In unserem Experiment gilt \(\Delta = 1\) Die Menge des Pheromons \(\rho\) auf allen Wegen, also die Pheromoninfotmation, wird in der Pheromonmatrix \(\mathcal{M}\) gespeichert. Dabei steht jeder Matrixeintrag für eine Kante im Graph \(G\) und der Wert des Eintrages steht für die Menge von Pheromon, welches auf der Kante liegt. Die Zielfunktion ist \(f\). Die Zielfunktion gibt die Summe der Weglängen der Wege an, zwischen N und F, welche die Ameisen gegangen sind. In unserer idealen Experimentaufstellung gilt also \(f(x) \in \{1, 2\}\), da die Ameisen entweder den direkten Weg \(\{NF\}\) gehen oder den Umweg \(\{ND, DF\}\) und damit gilt \(f(\{NF\}) = 1\) oder \(f(\{ND, DF\}) = 2\). Das Begehen eines Weges verbraucht exakt eine Zeiteinheit, also verbraucht der direkte Weg \(\{NF\}\) eine Zeiteinheit und der Weg über den Umweg \(\{ND, DF\}\) Zwei. Das Ergebnis des in diesem Abschnitt beschriebenen Vorgehens, und das Ziel für zukünftige Problemstellungen, ist das finden eines globalen Minimums der Zielfunktion. Bevor die idealen Ameisen mit dem Experiment anfangen können, wird \(\mathcal{M}\) mit der Initialisierungmethode \(\mathcal{I}\) initialisiert. Hier wird jeder Matrixeintrag \(m_{ij}; i, j = 1, 2 \) der Pheromonmatrix \(\mathcal{M}\) auf \(\Delta\) gesetzt, damit in den Gleichungen \ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen:eq:Wahrscheinlichkeit_NF} und \ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen:eq:Wahrscheinlichkeit_ND} nicht durch 0 geteilt wird. Das Experiment wird beendet, wenn das Stoppkriterium \(\mathcal{S}\) erreicht ist. Das Stopkriterium \(\mathcal{S}\) ist hier, dass das Experiment, nach dem Verstreichen von 200 Zeiteinheiten beendet wird.
+	Dabei ist \(\Sigma\) der Suchraum, welcher hier der ungerichtete Graph \(G(V,E)\) ist, der aus drei Orten/Punkten, an denen sich Ameisen aufhalten können und drei Wegen zwischen diesen Orten, besteht. Der Graph befindet sich in der euklidischen Ebene. Die Orte sind Nest (N), Food (F) und Umweg/Detour (D), also gilt \(V = \{N, F, D\}\). Die Wege verbinden die Orte, wie Abbildung~\ref{fig:Pheromon_Dreieck} zu sehen. Die Wege haben alle die Länge 1 Längeneinheit (LE) und können in beide Richtungen begangen werden, also gilt \(E = \{\{NF\}, \{ND\}, \{DF\}\}\). Zusammengefasst gilt \(G = (\{N, F, D\}, \{\{NF\}, \{ND\}, \{DF\}\})\). Die Menge der idealen Ameisen bzw. der \ac{sce} ist \(\mathcal{E}\). Hier gilt \(|\mathcal{E}| = 1\), es wird also immer wieder eine ideale Ameise in diesem Experiment betrachtet. Die Menge des Pheromons, welches die Ameise auf die von ihr gewählten Wege hinterlässt, ist \(\Delta\). In unserem Experiment, angelehnt an \cite{bonabeau1999swarm} und \cite{christian2008swarm}, gilt \(\Delta = 1\). Die Menge des Pheromons \(\rho\) auf allen Wegen, also die Pheromoninfotmation, wird in der Pheromonmatrix \(\mathcal{M}\) gespeichert. Dabei steht jeder Matrixeintrag für eine Kante im Graph \(G\) und der Wert des Eintrages steht für die Menge von Pheromon, welches auf der Kante liegt. Die Zielfunktion ist \(f\). Die Zielfunktion gibt die Summe der Weglängen der Wege an, zwischen N und F, welche die Ameisen gegangen sind. In unserer idealen Experimentaufstellung gilt also \(f(x) \in \{1, 2\}\), da die Ameisen entweder den direkten Weg \(\{NF\}\) gehen oder den Umweg \(\{ND, DF\}\) gehen kann und damit gilt \(f(\{NF\}) = 1\) oder \(f(\{ND, DF\}) = 2\). Das Begehen eines Weges verbraucht exakt eine Zeiteinheit, also verbraucht der direkte Weg \(\{NF\}\) eine Zeiteinheit und der Weg über den Umweg \(\{ND, DF\}\) Zwei. Das Ergebnis des in diesem Abschnitt beschriebenen Vorgehens, und das Ziel für zukünftige Problemstellungen, ist das finden eines globalen Minimums der Zielfunktion. Bevor die idealen Ameisen mit dem Experiment anfangen können, wird \(\mathcal{M}\) mit der Initialisierungmethode \(\mathcal{I}\) initialisiert. Hier wird jeder Matrixeintrag \(m_{ij}; i, j = 1, 2, 3 \) der Pheromonmatrix \(\mathcal{M}\) auf \(\Delta\) gesetzt, damit in den Gleichungen \ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen:eq:Wahrscheinlichkeit_NF} und \ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen:eq:Wahrscheinlichkeit_ND} nicht durch 0 geteilt wird. Das Experiment wird beendet, wenn das Stoppkriterium \(\mathcal{S}\) erreicht ist. Das Stopkriterium \(\mathcal{S}\) ist hier, dass das Experiment, nach dem Verstreichen von 200 Zeiteinheiten beendet wird.
 	
-	%TODO hier auch \mathcal{R}?
+	%TODO hier auch \mathcal{R}? nein
+	
+	%TODO Grundraum?
+	
+	%TODO immer wieder so ok?
 	
 	%TODO Gewinnerameise oder anderes Wort? Iterationsbeste Ameise
 	
@@ -257,7 +261,7 @@ within=section,
 	
 	%TODO mit Jahr und Seite?
 	
-	Weiter, in Anlehnung an \textit{Dorigo und Stützle}~\cite{dorigo2018ant} und wie in meiner Bachelorarbeit~\cite{FCM_2019} beschrieben, ergibt sich die Wahrscheinlichkeit, dass sich eine Ameise für das Begehen der Weges zwischen N und F entscheidet, aus der Gleichung~\ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen:eq:Wahrscheinlichkeit_NF} und die Wahrscheinlichkeit, dass eine Ameise sich für das Begehen des Weges zwischen N und D entscheidet, aus Gleichung~\ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen:eq:Wahrscheinlichkeit_ND}. Gleichung~\ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen:eq:Verdunstung} beschreibt die Verdunstung des bereits vorhandenen Pheromons auf einem Weg nach dem eine Zeiteinheit verstrichen ist. Dabei ist \(\nu\) die Verdunstungskonstante, welche bestimmt, wie schnell Pheromon nach jedem Zeitschritt verdunstet, und \(\alpha\) ein Parameter, der bestimmt, wie viel Einfluss das auf einem Weg liegende Pheromon hat. Wie viel Pheromon auf einem Weg liegt, also die Pheromoninformation, wird nach jedem Zeitschritt aktualisiert. Auf den Kanten, für die sich die Gewinnerameise entschieden hat, wir Pheromon abgelegt gemäß Gleichung~\ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen_eq:Pheromonablage}. 
+	Weiter, in Anlehnung an \textit{Dorigo und Stützle}~\cite{dorigo2018ant} und wie in meiner Bachelorarbeit~\cite{FCM_2019} beschrieben, ergibt sich die Wahrscheinlichkeit, dass sich eine Ameise für das Begehen der Weges zwischen N und F entscheidet, aus der Gleichung~\ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen:eq:Wahrscheinlichkeit_NF} und die Wahrscheinlichkeit, dass eine Ameise sich für das Begehen des Weges zwischen N und D entscheidet, aus Gleichung~\ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen:eq:Wahrscheinlichkeit_ND}. Gleichung~\ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen:eq:Verdunstung} beschreibt die Verdunstung des bereits vorhandenen Pheromons auf einem Weg nach dem eine Zeiteinheit verstrichen ist. Dabei ist \(\nu\) die Verdunstungskonstante, welche bestimmt, wie schnell Pheromon nach jedem Zeitschritt verdunstet, und \(\alpha\) ein Parameter, der bestimmt, wie viel Einfluss das auf einem Weg liegende Pheromon hat. Wie viel Pheromon auf einem Weg liegt, also die Pheromoninformation, wird nach jedem Zeitschritt aktualisiert. Auf den Kanten, für die sich die Ameise entschieden hat, wir Pheromon abgelegt gemäß Gleichung~\ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen_eq:Pheromonablage}. 
 	
 	\begin{equation} \label{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen:eq:Wahrscheinlichkeit_NF}
 		prob_{NF} = \frac{\rho_{NF}^\alpha}{\rho_{NF}^\alpha+\rho_{ND}^\alpha}
@@ -275,7 +279,7 @@ within=section,
 		\rho_{XY} = \rho_{XY} + \Delta_{XY}
 	\end{equation}
 	
-	Wie zu sehen, konstruiert das oben beschriebene Vorgehen eine Belegung der Punkte \(\{N, F, D\}\) so, dass die Kürzeste Verbindung \(\{FN\}\) als Ergebnis entsteht, \(\{D\}\) also nicht begangen wird. Wie in meiner Bachelorarbeit~\cite{FCM_2019} beschrieben, können wir beobachten, dass die Orte N, F und D nur begangen und nicht begangen als Werte angeben können. Damit ist das Problem die kürzeste Verbindung zu finden, ein diskretes Problem, da die Werte, welche die Orte annehmen können, abzählbar sind.
+	Wie zu sehen, konstruiert das oben beschriebene Vorgehen eine Belegung der Punkte \(\{N, F, D\}\) so, dass die Kürzeste Verbindung \(\{FN\}\) als Ergebnis entsteht, \(\{D\}\) also nicht begangen wird. Wie in meiner Bachelorarbeit~\cite{FCM_2019} beschrieben, können wir beobachten, dass die Orte N, F und D nur begangen und nicht begangen als Werte annehmen können. Damit ist das Problem die kürzeste Verbindung zu finden, ein diskretes Problem, da die Werte, welche die Orte, verallgemeinert Variablen, annehmen können, abzählbar sind. Für das bis jetzt beschriebene Vorgehen wichtige Teilmenge von diskreten Problemen, sind Permutationsprobleme.
 	
 	%TODO keine Konkurrenz, in jedem Zeitschritt läuft eine Ameise
 	
@@ -291,11 +295,13 @@ within=section,
 	
 	\subsubsection{Permutationsprobleme} \label{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Permuationsprobleme}
 	
-	In Anlehnung an meine Bachelorarbeit~\cite{FCM_2019}, kann ein Permutationsproblem definiert werden durch das Tupel \((\Sigma, \mathcal{R}, \mathcal{B}, \pi, f)\). Für den Suchraum \(\Sigma\) gilt hier \(\Sigma = \{a_1, \dots, a_n\}, n \in \mathbb{N}_{>0}\), wobei die \(a_i\) beliebige Objekte sein können die man mithilfe der Relation \(\mathcal{R}\) ordnen kann. Die Relation \(\mathcal{R}: \Sigma \ni (a_i, a_j) \to \mathbb{R}\) transformiert das abstrakte Verhältnis zwischen den Elementen \(a_i, i \in \{1, \dots, n\}\). Die Menge an Beschränkungen, welche an die Ordnungen der \(a_i, i \in \{1, \dots, n\}\) oder Werte von \(f\) gestellt werden, werden mit \(\mathcal{B} = \{\mathcal{B}_1, \dots, \mathcal{B}_m\}, m \in \mathbb{N}_{>0}\) bezeichnet. Das Permutationsproblem ist unbeschränkt, wenn \(\mathcal{B} = \emptyset\) gilt, sonst ist es beschränkt. Die Permutation \(\pi: \Sigma \to \Sigma\) ordnet jedem Element \(a_i \in \Sigma, i \in \{1, \dots, n\}\) das korrespondierende Element \(a_{\pi(i)}\) zu. Die Zielfunktion \(f: \{a_{\pi(1)}, \dots, a_{\pi(n)}\} \to \mathbb{R}_{\geq 0}\) gibt die Güte einer Ordnung \(\{a_{\pi(1)}, \dots, a_{\pi(n)}\}\) der Objekte bzgl. der Relation \(\mathcal{R}\) an. Eine Lösung \(s \in \Sigma\) ist eine Ordnung aller Elemente aus \(\Sigma\), welche konform ist mit den Beschränkungen \(\mathcal{B}\). Eine Lösung \(s_{opt}\) ist ein globales Optimum, wenn \(f(s_{opt}) \leq f(s) \, \forall s \in \Sigma\) gilt. Ein wichtiger Spezialfall eines Permutationsproblems ist das \ac{tsp}.
+	In Anlehnung an meine Bachelorarbeit~\cite{FCM_2019}, kann ein Permutationsproblem definiert werden durch das Tupel \((\mathcal{G}, \pi, \Sigma, \mathcal{B}, f)\). Für den Grundraum \(\mathcal{G}\) glit hier \(\mathcal{G} = \{a_1, \dots, a_n\}, n \in \mathbb{N}_{>0}\), wobei die \(a_i\) beliebige Objekte sein können, die man ordnen kann. Die Permutation \(\pi: \Sigma \to \Sigma\) ordnet jedem Element \(a_i \in \Sigma, i \in \{1, \dots, n\}\) das korrespondierende Element \(a_{\pi(i)}\) zu. Für den Suchraum \(\Sigma\) gilt hier \(\Sigma = \{a_{\pi(1)}, \dots, a_{\pi(n)}\}\), wobei \(\{a_{\pi(1)}, \dots, a_{\pi(n)}\}\) jede Permutation der Grundmenge \(\{a_1, \dots, a_n\}\) ist. Die Menge an Beschränkungen, welche an die Ordnungen der \(a_i, i \in \{1, \dots, n\}\) oder Werte von \(f\) gestellt werden, werden mit \(\mathcal{B} = \{\mathcal{B}_1, \dots, \mathcal{B}_m\}, m \in \mathbb{N}_{>0}\) bezeichnet. Das Permutationsproblem ist unbeschränkt, wenn \(\mathcal{B} = \emptyset\) gilt, sonst ist es beschränkt. Die Zielfunktion \(f: \{a_{\pi(1)}, \dots, a_{\pi(n)}\} \to \mathbb{R}_{\geq 0}\) gibt die Güte einer Ordnung \(\{a_{\pi(1)}, \dots, a_{\pi(n)}\}\) der Objekte an. Eine Lösung \(s \in \Sigma\) ist eine Ordnung aller Elemente aus \(\Sigma\), welche konform ist mit den Beschränkungen \(\mathcal{B}\). Eine Lösung \(s_{opt}\) ist ein globales Optimum, wenn \(f(s_{opt}) \leq f(s) \, \forall s \in \Sigma\) gilt. Ein wichtiger Spezialfall eines Permutationsproblems ist das \ac{tsp}.
 	
-	%TODO Fragen, ob das so Sinn macht, Sigme oder \Sigma \times \Sigma?
+	%TODO Fragen, ob das so Sinn macht, Sigme oder \Sigma \times \Sigma? nein
 	
 	%TODO gegeben Menge und Suchraum mit allen Permutation der Menge und f als Zielfunktion
+	
+	%TODO wie Suchraum definieren?
 	
 	%TODO Fall n = 0 betrachten? nein
 	
@@ -303,9 +309,11 @@ within=section,
 	
 	\subsubsection{Traveling Salesperson Problem (TSP)} \label{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Traveling_Salesperson_Problem_TSP}
 	
-	Das \ac{tsp} ist ein Permutationsproblem \((\Sigma, \mathcal{R}, \mathcal{B}, \pi, f)\) mit \(\Sigma = \{a_i, \dots, a_n\}, n \in \mathbb{N}_{> 0}\), wobei beim \ac{tsp} die \(a_i\) die Städte sind und \(\mathcal{R}: \Sigma \ni (a_i, a_j) \to d(a_i, a_j) \in \mathbb{R}_{\geq 0}\) gilt, wobei \(d: \mathbb{R} \times \mathbb{R} \to \mathbb{R}_{\geq 0}\) die Distanz zwischen zwei Städten ist. Da das \ac{tsp} keine Beschränkungen hat, gilt \(\mathcal{B} = \emptyset\). Die Permutation \(\pi\) gibt die Rheinfolge der Städte \(\{a_1, \dots, a_n\}\) und damit eine Rundreise an. Eine Rundreise ist eine Reise, bei der jede Stadt, außer der Startstadt, nur einmal besucht wird. Die Zielfunktion \(f\) gibt die Länge der Rundreise \(\{a_{\pi(1)}, \dots, a_{\pi(n)}\}\) an. Gesucht ist mindestens ein \(s_{opt} \in \Sigma, s_{opt} = \{a_{\pi(1)}, \dots, a_{\pi(n)}\}\), sodass gilt \(f(s_{opt}) \leq f(s) \, \forall s \in \Sigma\). Es ist also die kürzeste Rundreise gesucht. Das \ac{tsp} war eines der Probleme, dass sich angeboten hat, um mit der ACO-Metaheuristik gelöst zu werden.
+	Das \ac{tsp}, nach \textit{Stützle et al.}~\cite{stutzle1999aco}, ist ein Permutationsproblem \((\mathcal{G}, \pi, \Sigma, d, \mathcal{B}, f)\) mit \(\mathcal{G} = \{a_i, \dots, a_n\}, n \in \mathbb{N}_{> 0}\), wobei beim \ac{tsp} die \(a_i\) die Städte sind und \(d: \mathbb{R} \times \mathbb{R} \to \mathbb{R}_{\geq 0}\) die Distanz zwischen zwei Städten ist. Da das \ac{tsp} keine Beschränkungen hat, gilt \(\mathcal{B} = \emptyset\). Die Permutation \(\pi\) gibt die Rheinfolge der Städte \(\{a_{\pi(1)}, \dots, a_{\pi(n)}\}\) und damit eine Rundreise an. Eine Rundreise ist eine Reise, bei der jede Stadt, außer der Startstadt, nur einmal besucht wird. Die Zielfunktion \(f\) gibt die Länge der Rundreise \(\{a_{\pi(1)}, \dots, a_{\pi(n)}\}\) an. Gesucht ist mindestens ein \(s_{opt} \in \Sigma, s_{opt} = \{a_{\pi(1)}, \dots, a_{\pi(n)}\}\), sodass gilt \(f(s_{opt}) \leq f(s) \, \forall s \in \Sigma\). Es ist also mindestens eine kürzeste Rundreise gesucht. Das \ac{tsp} war eines der Probleme, dass sich angeboten hat, um mit der ACO-Metaheuristik gelöst zu werden.
 	
 	%TODO braucht das TSP eine Quelle? eine reicht
+
+	%TODO d beibehalten?
 
 	%TODO besseres Wort als Startstadt? nein.
 		
@@ -313,31 +321,35 @@ within=section,
 	
 	%TODO Originale oder was anderes? Ja
 	
-	Die originale ACO-Metaheuristik kann als Erweiterung der Konstruktion aus dem Abschnitt~\ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen} gesehen werden, da wir sie auch als Tupel \((\Sigma, \mathcal{R}, \mathcal{B}, \mathcal{E}, \Delta, \mathcal{M}, \eta, f, \mathcal{I}, \mathcal{S})\) angeben können. Dabei ist zwar \(\Sigma = G(V,E)\) aber \(V\) und \(E\) sind beliebig. Die Relation \(\mathcal{R}\) zwischen den \(v_i \in V\) ist ebenfalls beliebig, genauso wie die Beschränkungen \(\mathcal{B}\). Weiter gilt \(|\mathcal{E}| = m, \, m \in \mathbb{N}\) und nicht nur \(|\mathcal{E}| = 2\). Die Menge des Pheromons \(\Delta\), welche die Gewinnerameise auf die von ihr gewählten Kanten hinterlegt, wird Problemabhängig gewählt. Die Pheromonmatrix \(\mathcal{M}\) kann größer sein als im Abschnitt~\ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen} aber sie ist genauso aufgebaut und auch ihre Funktionalität ist die selbe. Die problemabhängige Heuristik ist \(\eta\). Die Zielfunktion \(f\) kann auch beliebig formuliert werden, es bleibt jedoch gleich, dass mindestens eines ihrer globalen Minima gesucht wird. Das Initialisierungskriterium bleibt gleich, wie im Abschnitt~\ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen}. Das Stoppkriterium \(\mathcal{S}\) kann frei gewählt werden.\hfill\newline
+	Die ACO-Metaheuristik, nach \textit{Dorigo et al.}~\cite{dorigo1996ant}, kann als Erweiterung der Konstruktion aus Abschnitt~\ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen} gesehen werden, da wir sie auch als Tupel \((\Sigma, \mathcal{B}, \mathcal{E}, \Delta, \mathcal{M}, \eta, f, \mathcal{I}, \mathcal{S})\) angeben können. Dabei ist zwar \(\Sigma = G(V,E)\) aber \(V\) und \(E\) sind beliebig, genauso wie die Beschränkungen \(\mathcal{B}\). Weiter gilt \(|\mathcal{E}| = m, \, m \in \mathbb{N}\) und nicht nur \(|\mathcal{E}| = 1\). Die Menge des Pheromons \(\Delta\), welche die iterationsbeste Ameise auf die von ihr gewählten Kanten hinterlegt, wird Problemabhängig gewählt. Die Pheromonmatrix \(\mathcal{M}\) kann größer sein als im Abschnitt~\ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen} aber sie ist genauso aufgebaut und auch ihre Funktionalität ist die selbe. Die problemabhängige Heuristik ist \(\eta\). Die Zielfunktion \(f\) kann auch beliebig formuliert werden, es bleibt jedoch gleich, dass mindestens eines ihrer globalen Minima gesucht wird. Das Initialisierungskriterium bleibt gleich, wie im Abschnitt~\ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen}. Das Stoppkriterium \(\mathcal{S}\) kann frei gewählt werden.\hfill\newline
 	
-	Für die ACO-Metaheuristik angewandt auf das TSP kann \(\mathcal{B} = \max_{v_i, v_j \in V} d(v_i, v_j) \leq D\) sein, wobei \(D\) die maximale erlaubte Distanz zwischen zwei Städten ist, wenn die maximale Tankfüllung eines Transporters oder andere Beschränkungen berücksichtigt werden müssen, sonst gilt \(\mathcal{B} = \emptyset\). Die Anzahl der Ameisen ist \(|\mathcal{E}| = m\). Die Menge des Pheromons \(\Delta\), dass von der Gewinnerameise abgelegt wird, ist in der Gleichung~\ref{subsec:Originale_ACO_-_Metaheuristik:eq:Delta} angegeben. Für das \ac{tsp} wird \(\eta\) in der Gleichung~\ref{subsec:Originale_ACO_-_Metaheuristik:eq:eta} angegeben, wobei \(d(v_i, v_j), v_i, v_j \in V\) die Distanz zwischen \(v_i\) und \(v_j\) ist.
+	Für die ACO-Metaheuristik angewandt auf das TSP gilt  kann \(\mathcal{B} = \max_{v_i, v_j \in V} d(v_i, v_j) \leq D\) sein, wobei \(D\) die maximale erlaubte Distanz zwischen zwei Städten ist, wenn die maximale Tankfüllung eines Transporters oder andere Beschränkungen berücksichtigt werden müssen, sonst gilt \(\mathcal{B} = \emptyset\). Die Anzahl der Ameisen ist \(|\mathcal{E}| = m\). Die Menge des Pheromons \(\Delta\), dass von der Gewinnerameise abgelegt wird, ist in der Gleichung~\ref{subsec:ACO_-_Metaheuristik_Nach:eq:Delta} angegeben. Für das \ac{tsp} wird \(\eta\) in der Gleichung~\ref{subsec:ACO_-_Metaheuristik_Nach:eq:eta} angegeben, wobei \(d(v_i, v_j), v_i, v_j \in V\) die Distanz zwischen \(v_i\) und \(v_j\) ist.
 	
 	%TODO wie besser formatieren?
 	
 	%TODO wie hoch ist m? Einfach als m lassen
 	
-	\begin{equation} \label{subsec:Originale_ACO_-_Metaheuristik:eq:Delta}
+	\begin{equation} \label{subsec:ACO_-_Metaheuristik_Nach:eq:Delta}
 		\Delta_{ij} = \sum \limits_{k = 1}^m f(s), (ij) \in s
 	\end{equation}
 	
 	Dabei i
 	
-	\begin{equation} \label{subsec:Originale_ACO_-_Metaheuristik:eq:eta}
+	\begin{equation} \label{subsec:ACO_-_Metaheuristik_Nach:eq:eta}
 		\eta_{ij} := \frac{1}{d(v_i, v_j)} \, \, \text{für zwei Punkte} \, v_i, v_j \in V
 	\end{equation}
 	
-	Wie in [] beschrieben werden bei der Anwendung der ACO-Metaheuristik auf das TSP die Gleichungen \ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen:eq:Wahrscheinlichkeit_NF} und \ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen:eq:Wahrscheinlichkeit_ND} zuerst zur Gleichung~\ref{subsec:Originale_ACO_-_Metaheuristik:eq:Probabilistik_Rule} erweitert.
+	Wie in \textit{Dorigo et al.}\cite{dorigo1996ant} beschrieben werden bei der Anwendung der ACO-Metaheuristik auf das TSP die Gleichungen \ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen:eq:Wahrscheinlichkeit_NF} und \ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen:eq:Wahrscheinlichkeit_ND} zuerst zur Gleichung~\ref{subsec:ACO_-_Metaheuristik_Nach:eq:Probabilistik_Rule} erweitert, wobei \(V'\) die Menge der Städte ist, die noch nicht besucht wurden, danach zur Gleichung~\ref{subsec:ACO_-_Metaheuristik_Nach:eq:Extended_Probabilistik_Rule}. Die Gleichung~\ref{subsec:ACO_-_Metaheuristik_Nach:eq:Extended_Probabilistik_Rule} ist schließlich die Gleichung, welche beim Algorithmus~\ref{subsec:ACO_Metaheuristik:alg:ACO} im Schritt \glqq CreateSolution(SCE)\grqq{} verwendet wird.\hfill\newline
 	
-	\begin{equation} \label{subsec:Originale_ACO_-_Metaheuristik:eq:Probabilistik_Rule}
-		´prob_{ij} := \frac{\tau_{ij}}{\sum\limits_{v \in V'} \tau_{iv}}
+	\begin{equation} \label{subsec:ACO_-_Metaheuristik_Nach:eq:Probabilistik_Rule}
+		´prob_{ij} := \frac{\rho_{ij}}{\sum\limits_{v \in V'} \rho_{iv}}
 	\end{equation}
 	
-	Dabei ist \(V'\) die Menge der Städte, die noch nicht besucht wurden.
+	\begin{equation} \label{subsec:ACO_-_Metaheuristik_Nach:eq:Extended_Probabilistik_Rule}
+		prob_{ij} .= \frac{\rho_{ij}^{\alpha} \cdot \eta_{ij}^{\beta}}{\sum\limits_{v \in V'} \rho_{iv}^{\alpha} \cdot \eta_{iv}^{\beta}}
+	\end{equation}
+	
+	Als letztes bemerken wir, dass \glqq UpdatePheromoneInformation\grqq{}, gegeben eine \(n \times n\)-Matrix, da jeder Matrixeintrag aktualisiert werden muss, \(\mathcal{O}(n^2)\) Schritte braucht, was bei großen Problemen viel Zeit verbraucht. Dieses Herausforderung wurde durch \textit{Guntsch und Middendorf}~\cite{guntsch2002population}, mit der Weiterentwicklung der ACO-Metaheuristik zu der P-ACO-Metaheuristik, bewältigt.
 	
 	\begin{algorithm}
 		
@@ -362,7 +374,7 @@ within=section,
 		
 	\end{algorithm}
 	
-	\subsection{mathematische Beschreibung}
+	%\subsection{mathematische Beschreibung}
 	
 	% Die folgende Beschreibung ist nach \textit{Prof. Dr. M. Middendorf}~\cite{middendorf2017ant}.\hfill\newline
 	
@@ -387,11 +399,11 @@ within=section,
 	
 	%Die Pheromoninformation wird hier, von einem Konstruktionsdurchgang der Lösung zum nächsten, weiter gereicht.\hfill\newline
 	
-	Wie zu sehen ist, konstruiert der beschriebene Algorithmus eine Anordnung der Punkte, also von welchem Punkt zu welchem gegangen werden soll und in welcher Reihenfolge, um die kürzeste Verbindung zwischen Startpunkt S und Zielpunkt Z zu finden -- hier die direkte Verbindung SZ. Wir bemerken weiter, dass nur eine einzige Belegung der Punkte mögliche ist und die Belegung ist auf die Punkte beschränkt. Entweder wird ein Punkt begangen oder nicht, so wie U. Und es gibt auch keine andere Möglichkeit, außer SZ, zwischen S und Z zu gehen, es sei denn es ist über U.\hfill\newline
+	%Wie zu sehen ist, konstruiert der beschriebene Algorithmus eine Anordnung der Punkte, also von welchem Punkt zu welchem gegangen werden soll und in welcher Reihenfolge, um die kürzeste Verbindung zwischen Startpunkt S und Zielpunkt Z zu finden -- hier die direkte Verbindung SZ. Wir bemerken weiter, dass nur eine einzige Belegung der Punkte mögliche ist und die Belegung ist auf die Punkte beschränkt. Entweder wird ein Punkt begangen oder nicht, so wie U. Und es gibt auch keine andere Möglichkeit, außer SZ, zwischen S und Z zu gehen, es sei denn es ist über U.\hfill\newline
 	
-	Ein Problem bei dem nur eine abzählbare Belegung der Punkte oder, verallgemeinert ausgedrückt, Variablen mögliche ist, heißt diskretes Problem. Dabei bedeutet abzählbar, dass die Menge der Werte, welche die Variablen annehmen können, wie die natürlichen Zahlen, abzählbar ist bzw. die Belegungen der Variablen gezählt werden können -- hier gibt es nur zwei, begangen und nicht begangen. \hfill\newline
+	%Ein Problem bei dem nur eine abzählbare Belegung der Punkte oder, verallgemeinert ausgedrückt, Variablen mögliche ist, heißt diskretes Problem. Dabei bedeutet abzählbar, dass die Menge der Werte, welche die Variablen annehmen können, wie die natürlichen Zahlen, abzählbar ist bzw. die Belegungen der Variablen gezählt werden können -- hier gibt es nur zwei, begangen und nicht begangen. \hfill\newline
 	
-	Zusammenfassend lässt sich also sagen, die ersten Ameisenalgorithmen waren Algorithmen, Metaheuristiken, zum Lösen diskreter Probleme, also Probleme deren Variablen nur endlich viele Werte annehmen konnten. Um genau zu sein waren es Anordnungs- bzw. Permutationsprobleme. Diese lassen sich wie folgt definieren.\hfill\newline
+	%Zusammenfassend lässt sich also sagen, die ersten Ameisenalgorithmen waren Algorithmen, Metaheuristiken, zum Lösen diskreter Probleme, also Probleme deren Variablen nur endlich viele Werte annehmen konnten. Um genau zu sein waren es Anordnungs- bzw. Permutationsprobleme. Diese lassen sich wie folgt definieren.\hfill\newline
 	
 	%\subsection{Permutationsprobleme}
 	
@@ -404,9 +416,9 @@ within=section,
 	
 	
 	
-	\subsection{Verbesserung Der ACO Metaheuristik Zu P-ACO} \label{subsec:Verbesserung_Der_ACO_Metaheuristik_Zu_P-ACO}
+	\subsection{Weiterentwicklung der ACO Metaheuristik zu der P-ACO-Metaheuristik} \label{subsec:Weiterentwicklung_Der_ACO_Metaheuristik_Zu_P-ACO}
 	
-	Die folgende Beschreibung ist nach \textit{Prof. Dr. M. Middendorf}~\cite{middendorf2017ant}.\hfill\newline
+	Die folgende Beschreibung ist nach \textit{Guntsch und Middendorf}~\cite{guntsch2002population}.\hfill\newline
 	
 	Da festgestellt wurde, dass bei Iterationen der ACO Metaheuristik viel Zeit (\(O(n^2)\)) für das Update der Pheromoninformation aufgewendet wird, wurde von \textit{Gutsch und Middendorf}~\cite{guntsch2002population} ein effizienteres Verfahren vorgestellt, bei dem das Pheromonupdate nur \(O(n)\) benötigt. Dabei wird Pheromon in einer diskreten, quadratischen (n\(\times\)n)-Matrix \textit{P}, \(n \in \mathbb{N}\), gespeichert, mit Einträgen, die sich wie folgt zusammensetzten:\hfill\newline
 	
@@ -438,7 +450,7 @@ within=section,
 	
 	\subsection{Ameisenalgorithmen Mit Einem Stetigen Lösungsarchiv} \label{subsec:Ameisenalgorithmen_Mit_Einem_Stetigen_Loesungsarchiv}
 	
-	Wie im Abschnitt~\ref{subsec:Verbesserung_Der_ACO_Metaheuristik_Zu_P-ACO} beschrieben, kann man, statt die Pheromoninformation von Iterationsschritt zu Iterationsschritt mitzuführen, die Information auch in einer diskreten Matrix speichern, also einem diskreten Lösungsarchiv. Dies funktioniert jedoch nur für diskrete Probleme. Um stetige Probleme zu lösen, kann man auf ein Archiv mit stetigen Einträgen zurückgreifen, was dann u.a. eine Liste sein kann.\hfill\newline
+	Wie im Abschnitt~\ref{subsec:Weiterentwicklung_Der_ACO_Metaheuristik_Zu_P-ACO} beschrieben, kann man, statt die Pheromoninformation von Iterationsschritt zu Iterationsschritt mitzuführen, die Information auch in einer diskreten Matrix speichern, also einem diskreten Lösungsarchiv. Dies funktioniert jedoch nur für diskrete Probleme. Um stetige Probleme zu lösen, kann man auf ein Archiv mit stetigen Einträgen zurückgreifen, was dann u.a. eine Liste sein kann.\hfill\newline
 	
 	Ameisenalgorithmen mit einem stetigen Lösungsarchiv speichern ihre Lösungen in stetigen Einträgen. Wie genau, hängt von dem jeweiligen Algorithmus ab. Die einfachste Art und Weise dies zu tun, ist jedoch, die Lösungen wie sie generiert werden, nach einer bestimmten Vorschrift zu speichern, also ein einfaches Lösungsarchiv zu verwenden.\hfill\newline
 	
@@ -618,6 +630,8 @@ within=section,
 		\end{tabularx}
 		
 	\end{table}
+	
+	100 da Algorithmus einfacher und er damit braucht mehr Information/Lösungsinformation
 	
 	\subsection{ACO\(_{\mathbb{R}}\)-very-simple} \label{subsec:ACO_R_very_simple}
 	

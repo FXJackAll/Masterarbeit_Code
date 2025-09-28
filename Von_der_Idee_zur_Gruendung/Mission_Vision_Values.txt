@@ -1,32 +1,13 @@
 Mission:
 
-Creating a Framework that allows us and others,
-without writing even a single line of code,
-to create the card games of our dreams.
+- Wir sind die Giganten, die breite Schultern zum stehen bieten.
 
 Vision:
 
-To create foundations that tear down rad tape
-and enable others together with us to manifest our dreams.
+- Wir einen die Menschheit und greifen zusammen nach den Sternen.
 
 Values:
 
-- Curiousness:
-	We search for opportunaties to tear down obsticals for other
-	so they can pursue theis dreams with ease
-
-- Integrity:
-	We only act in ways that are free from ulterior motives.
-
-- Community:
-	We listen to and value the communities that our foundations create.
-	We work together and we succeed together.
-
-
-- no predatory advertising, marketing
-- no revenue structures like slot machines
-- no internet connection, unless it is absolutely necessary
-- no pack filler cards/every card has a purepose
-- no/very little power creep
-- user voices are heared, respected and valued
-- we create a game by the community for the community
+- Vertrauen
+- Transparenz
+- Gemeinschaft/Wir gewinnen zusammen.
