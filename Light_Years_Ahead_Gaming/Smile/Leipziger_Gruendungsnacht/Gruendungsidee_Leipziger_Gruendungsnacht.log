@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.18)  27 SEP 2025 21:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.18)  29 SEP 2025 22:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -560,57 +560,111 @@ LaTeX Font Info:    Trying to load font information for T1+lmss on input line 1
 (/usr/share/texmf/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Underfull \hbox (badness 10000) in paragraph at lines 104--106
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
+08.
+
+(/usr/share/texmf/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Underfull \hbox (badness 10000) in paragraph at lines 133--134
+
+ []
+
+[2{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}]
+Underfull \hbox (badness 10000) in paragraph at lines 149--150
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 107--109
+Underfull \hbox (badness 10000) in paragraph at lines 163--164
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--115
+Underfull \hbox (badness 10000) in paragraph at lines 167--168
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 116--117
+Underfull \hbox (badness 10000) in paragraph at lines 171--172
 
  []
 
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 118--119
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--174
 
  []
 
 [3]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-39.
- (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [4{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}] (./Gruendungsidee_Leipzig
-er_Gruendungsnacht.aux)
+Overfull \hbox (11.26794pt too wide) in paragraph at lines 261--262
+[]\T1/lmr/bx/n/12 Individuelle Kar-ten (Mensch-zu-Karte-Prozess)\T1/lmr/m/n/12 
+: Premium-Personalisierungen
+ []
+
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 2
+77.
+(/usr/share/texmf/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2
+77.
+
+(/usr/share/texmf/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
+277.
+
+(/usr/share/texmf/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
+277.
+
+(/usr/share/texmf/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 277.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 277.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 277.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 277
+.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 277
+.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [4{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}]
+(./Gruendungsidee_Leipziger_Gruendungsnacht.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 10754 strings out of 474222
- 204032 string characters out of 5748732
- 1933975 words of memory out of 5000000
- 32869 multiletter control sequences out of 15000+600000
- 576145 words of font info for 45 fonts, out of 8000000 for 9000
+ 10868 strings out of 474222
+ 206367 string characters out of 5748732
+ 1930975 words of memory out of 5000000
+ 32948 multiletter control sequences out of 15000+600000
+ 596041 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,7n,107p,10935b,271s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/ty
-pe1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb>
-Output written on Gruendungsidee_Leipziger_Gruendungsnacht.pdf (4 pages, 97801 
-bytes).
+pe1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></us
+r/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/
+public/lm/lmsy10.pfb>
+Output written on Gruendungsidee_Leipziger_Gruendungsnacht.pdf (4 pages, 124274
+ bytes).
 PDF statistics:
- 37 PDF objects out of 1000 (max. 8388607)
- 23 compressed objects within 1 object stream
+ 51 PDF objects out of 1000 (max. 8388607)
+ 32 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
