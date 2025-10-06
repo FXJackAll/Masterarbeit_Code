@@ -9,23 +9,23 @@
 \contentsline {subsubsection}{\numberline {2.1.4}Traveling Salesperson Problem (TSP)}{5}{}%
 \contentsline {subsection}{\numberline {2.2}ACO-Metaheuristik nach \textit {Dorigo et al.}~\cite {dorigo1996ant}}{5}{}%
 \contentsline {subsection}{\numberline {2.3}Weiterentwicklung der ACO Metaheuristik zu der P-ACO-Metaheuristik}{6}{}%
-\contentsline {subsection}{\numberline {2.4}Ameisenalgorithmen Mit Einem Stetigen Lösungsarchiv}{7}{}%
+\contentsline {subsection}{\numberline {2.4}Ameisenalgorithmen Mit Einem Stetigen Lösungsarchiv}{8}{}%
 \contentsline {subsection}{\numberline {2.5}Ameisenalgorithmen Mit Einem Gemischten Lösungsarchiv}{8}{}%
-\contentsline {subsection}{\numberline {2.6}Ameisenalgorithmen mit einem Hierarchischen Gemischten Lösungsarchiv}{8}{}%
+\contentsline {subsection}{\numberline {2.6}Ameisenalgorithmen mit einem Hierarchischen Gemischten Lösungsarchiv}{9}{}%
 \contentsline {subsection}{\numberline {2.7}Ameisenalgorithmen in stetigen Variablen}{9}{}%
-\contentsline {section}{\numberline {3}Optimierungsprobleme}{9}{}%
-\contentsline {section}{\numberline {4}Grundlagen}{10}{}%
+\contentsline {section}{\numberline {3}Optimierungsprobleme}{10}{}%
+\contentsline {section}{\numberline {4}Grundlagen}{11}{}%
 \contentsline {subsection}{\numberline {4.1}ACO\(_{\mathbb {R}}\)}{11}{}%
 \contentsline {subsection}{\numberline {4.2}ACO\(_{\mathbb {R}}\)-simple}{12}{}%
 \contentsline {subsection}{\numberline {4.3}ACO\(_{\mathbb {R}}\)-very-simple}{13}{}%
 \contentsline {subsection}{\numberline {4.4}Erweiterung von ACO\(_\mathbb {R}\)-very-simple für Probleme mit nicht-stetigen Variablen}{14}{}%
-\contentsline {section}{\numberline {5}SPPBO-Schema}{14}{}%
+\contentsline {section}{\numberline {5}SPPBO-Schema}{15}{}%
 \contentsline {section}{\numberline {6}HSPPBO-Schema}{16}{}%
-\contentsline {section}{\numberline {7}Formulierung Von ACO\(_\mathbb {R}\)-VS Im HSPPBO-Schema}{17}{}%
-\contentsline {section}{\numberline {8}Kombinieren des HSPPBO-Schemas mit ACO\(_\mathbb {R}\)-very-simple}{17}{}%
-\contentsline {subsection}{\numberline {8.1}Hom-HPB-ACO\(_\mathbb {R}\)-very-simple}{17}{}%
+\contentsline {section}{\numberline {7}Formulierung Von ACO\(_\mathbb {R}\)-VS Im HSPPBO-Schema}{18}{}%
+\contentsline {section}{\numberline {8}Kombinieren des HSPPBO-Schemas mit ACO\(_\mathbb {R}\)-very-simple}{18}{}%
+\contentsline {subsection}{\numberline {8.1}Hom-HPB-ACO\(_\mathbb {R}\)-very-simple}{18}{}%
 \contentsline {subsection}{\numberline {8.2}Het-HPB-ACO\(_\mathbb {R}\)-very-simple}{18}{}%
-\contentsline {subsection}{\numberline {8.3}Het-HSPPB-ACO\(_\mathbb {R}\)-very-simple}{18}{}%
+\contentsline {subsection}{\numberline {8.3}Het-HSPPB-ACO\(_\mathbb {R}\)-very-simple}{19}{}%
 \contentsline {section}{\numberline {9}Testfunktionen}{19}{}%
 \contentsline {subsection}{\numberline {9.1}Permutationsprobleme Testfunktionen}{21}{}%
 \contentsline {subsubsection}{\numberline {9.1.1}Traveling Salesperson Problem (TSP)}{21}{}%
