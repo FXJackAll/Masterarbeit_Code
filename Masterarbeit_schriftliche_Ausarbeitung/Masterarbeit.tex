@@ -422,7 +422,7 @@ within=section,
 	
 	
 	
-	\subsection{Weiterentwicklung der ACO Metaheuristik zu der P-ACO-Metaheuristik} \label{subsec:Weiterentwicklung_Der_ACO_Metaheuristik_Zu_Der_P_-_ACO_-_Metaheuristik}
+	\subsection{Weiterentwicklung der ACO Metaheuristik zu der P-ACO Metaheuristik} \label{subsec:Weiterentwicklung_Der_ACO_Metaheuristik_Zu_Der_P_-_ACO_Metaheuristik}
 	
 	Die folgende Beschreibung ist nach \textit{Guntsch und Middendorf}~\cite{guntsch2002population} und in Anlehnung an meine Bachelorarbeit~\cite{FCM_2019}.\hfill\newline
 	
@@ -430,23 +430,23 @@ within=section,
 	
 	%TODO jeder Eintrag nur \(k + 1\) verschiedene Werte: darf das Wort "nur" hier sein?
 	
-	Genauer, nach \cite{guntsch2002population} und \cite{FCM_2019}, seien \(\Delta > 0\), \(\Delta\) konstant, \(\rho_0 = 1/(n - 1)\). Dann werden die Elemente der Pheromonmatrix \(\mathcal{M}_d\) gemäß Gleichung~\ref{subsec:Weiterentwicklung_Der_ACO_Metaheuristik_Zu_Der_P_-_ACO_-_Metaheuristik:eq:Pheromone_Initialization} initialisiert. Nach \cite{guntsch2002population} gilt weiter für die Gleichung~\ref{subsec:ACO_-_Metaheuristik_Nach:eq:Extended_Probabilistik_Rule}, \(\alpha = 1\) und \(\beta = 5\). Die Elemente von \(\mathcal{M}_d\) werden dann, wie in Gleichung~\ref{subsec:Weiterentwicklung_Der_ACO_Metaheuristik_Zu_Der_P_-_ACO_-_Metaheuristik:eq:Pheromone_Update} dargestellt, aktualisiert. Dabei darf, wie zuvor, nur die iterationsbeste Ameise Pheromon legen. Die Tatsache, dass jedes Element von \(\mathcal{M}_d\) nur \(k + 1\) verschiedene Werte annehmen kann, ergibt sich daraus, dass, auf der einen Seite, jedes Element mindestens aus dem Initialisierungswert \(\rho_0\) besteht und, auf der anderen Seite, nur Vielfache von \(\Delta\) hinzugefügt werden können und das nur maximal \(k\)-Mal, da die Menge an Pheromon, welches die iterationsbeste Ameise ablegen kann, konstant \(\Delta\) ist und die Population der Ameisen \(\mathcal{P}\), nach Initialisierung, konstant die Größe \(k\) hat. Somit kann eine Kante \((i,j)\) nur maximal in \(k\) Lösungen vorkommen und damit ergibt sich, dass auf einer Kante nur \(k + 1\) verschiedene Mengen an Pheromon liegen können. Dies wird nochmal in der Gleichung~\ref{subsec:Weiterentwicklung_Der_ACO_Metaheuristik_Zu_Der_P_-_ACO_-_Metaheuristik:eq:Different_Pheromone_Values} verdeutlicht.
+	Genauer, nach \cite{guntsch2002population} und \cite{FCM_2019}, seien \(\Delta > 0\), \(\Delta\) konstant, \(\rho_0 = 1/(n - 1)\). Dann werden die Elemente der Pheromonmatrix \(\mathcal{M}_d\) gemäß Gleichung~\ref{subsec:Weiterentwicklung_Der_ACO_Metaheuristik_Zu_Der_P_-_ACO_Metaheuristik:eq:Pheromone_Initialization} initialisiert. Nach \cite{guntsch2002population} gilt weiter für die Gleichung~\ref{subsec:ACO_-_Metaheuristik_Nach:eq:Extended_Probabilistik_Rule}, \(\alpha = 1\) und \(\beta = 5\). Die Elemente von \(\mathcal{M}_d\) werden dann, wie in Gleichung~\ref{subsec:Weiterentwicklung_Der_ACO_Metaheuristik_Zu_Der_P_-_ACO_Metaheuristik:eq:Pheromone_Update} dargestellt, aktualisiert. Dabei darf, wie zuvor, nur die iterationsbeste Ameise Pheromon legen. Die Tatsache, dass jedes Element von \(\mathcal{M}_d\) nur \(k + 1\) verschiedene Werte annehmen kann, ergibt sich daraus, dass, auf der einen Seite, jedes Element mindestens aus dem Initialisierungswert \(\rho_0\) besteht und, auf der anderen Seite, nur Vielfache von \(\Delta\) hinzugefügt werden können und das nur maximal \(k\)-Mal, da die Menge an Pheromon, welches die iterationsbeste Ameise ablegen kann, konstant \(\Delta\) ist und die Population der Ameisen \(\mathcal{P}\), nach Initialisierung, konstant die Größe \(k\) hat. Somit kann eine Kante \((i,j)\) nur maximal in \(k\) Lösungen vorkommen und damit ergibt sich, dass auf einer Kante nur \(k + 1\) verschiedene Mengen an Pheromon liegen können. Dies wird nochmal in der Gleichung~\ref{subsec:Weiterentwicklung_Der_ACO_Metaheuristik_Zu_Der_P_-_ACO_Metaheuristik:eq:Different_Pheromone_Values} verdeutlicht.
 	
-	\begin{equation} \label{subsec:Weiterentwicklung_Der_ACO_Metaheuristik_Zu_Der_P_-_ACO_-_Metaheuristik:eq:Pheromone_Initialization}
+	\begin{equation} \label{subsec:Weiterentwicklung_Der_ACO_Metaheuristik_Zu_Der_P_-_ACO_Metaheuristik:eq:Pheromone_Initialization}
 			(m_{ij})_{i,j = 1, \dots, n} = (\rho_{ij})_{i,j = 1, \dots, n} = \rho_0;
 	\end{equation}
 	
-	\begin{equation} \label{subsec:Weiterentwicklung_Der_ACO_Metaheuristik_Zu_Der_P_-_ACO_-_Metaheuristik:eq:Pheromone_Update}
+	\begin{equation} \label{subsec:Weiterentwicklung_Der_ACO_Metaheuristik_Zu_Der_P_-_ACO_Metaheuristik:eq:Pheromone_Update}
 		\rho_{ij} = \rho_{ij} + \Delta
 	\end{equation}
 	
 	%TODO Delta=?, erklären woher n kommt?
 	
-	\begin{equation} \label{subsec:Weiterentwicklung_Der_ACO_Metaheuristik_Zu_Der_P_-_ACO_-_Metaheuristik:eq:Different_Pheromone_Values}
+	\begin{equation} \label{subsec:Weiterentwicklung_Der_ACO_Metaheuristik_Zu_Der_P_-_ACO_Metaheuristik:eq:Different_Pheromone_Values}
 		\rho_0 \leq \rho_{ij} \leq \rho_0 + k \cdot \Delta
 	\end{equation}
 	
-	Schließlich können wir noch festhalten, dass wir die Population \(\mathcal{P}\) als Lösungsarchiv interpretieren können, mit dessen Hilfe neue Lösungen konstruiert werden können.
+	Schließlich können wir noch festhalten, dass wir die Population \(\mathcal{P}\) als Lösungsarchiv interpretieren können, mit dessen Hilfe neue Lösungen konstruiert werden können, da in \(\mathcal{P}\) die Pheromoninformation implizit gegeben ist. Darauf aufbauend wird in den folgenden Algorithmen in dieser Arbeit auf eine Pheromonmatrix verzichtet, da diese, gegeben \(\mathcal{P}\), überflüssig in diesen Algorithmen ist.
 	
 	%Da festgestellt wurde, dass bei Iterationen der ACO Metaheuristik viel Zeit (\(O(n^2)\)) für das Update der Pheromoninformation aufgewendet wird, wurde von \textit{Gutsch und Middendorf}~\cite{guntsch2002population} ein effizienteres Verfahren vorgestellt, bei dem das Pheromonupdate nur \(O(n)\) benötigt. Dabei wird Pheromon in einer diskreten, quadratischen (n\(\times\)n)-Matrix \textit{P}, \(n \in \mathbb{N}\), gespeichert, mit Einträgen, die sich wie folgt zusammensetzten:\hfill\newline
 	
@@ -478,21 +478,25 @@ within=section,
 	
 	%TODO fragen, ob für PACO auch der Algorithmus angegeben werden soll, obwohl er identisch ist zu ACO
 	
-	\subsection{Ameisenalgorithmen Mit Einem Stetigen Lösungsarchiv} \label{subsec:Ameisenalgorithmen_Mit_Einem_Stetigen_Loesungsarchiv}
+	\subsection{Alternative Verwaltung für ein Lösungsarchiv} \label{subsec:Alternative_Verwaltungen_Fuer_Ein_Loesunsarchiv}
 	
-	Ein anderes Prinzip \(\mathcal{P}\) zu verwalten ist das \glqq best in worst out\grqq{}. Bei diesem Prinzip, wie in meiner Bachelorarbeit~\cite{FCM_2019} beschrieben, wird Lösung nach ihrer Güte in die Liste \(\mathcal{P}\) einsortiert. Ist die Güte der neu generierte Lösung schlechter als die Güte aller anderen Lösungen in \(\mathcal{P}\), wird die neue Lösung verworfen. Ist dir Güte der neuen Lösung besser als die Güte einer Lösung in \(\mathcal{P}\), wird die neue Lösung an die Stelle der schlechteren Lösung gespeichert und alle Lösungen, die schlechter sind, als die neue Lösung werden um eine Stelle nach hinten verschoben\hfill\newline
+	Ein anderes Prinzip ein Lösungsarchiv zu verwalten ist das \glqq best in worst out\grqq{} Prinzip. Bei diesem Prinzip, wie in meiner Bachelorarbeit~\cite{FCM_2019} beschrieben, wird eine Lösung nach ihrer Güte in das Lösungsarchiv einsortiert. Ist die Güte der neu generierte Lösung schlechter als die Güte aller anderen Lösungen im Lösungsarchiv, wird die neue Lösung verworfen. Ist dir Güte der neuen Lösung besser als die Güte einer Lösung im Lösungsarchiv, wird die neue Lösung an die Stelle der schlechteren Lösung gespeichert, die letzte Lösung im Lösungsarchiv wird gelöscht und alle Lösungen, die schlechter sind, als die neue Lösung werden um eine Stelle nach hinten verschoben. Dieses Verwaltungsprinzip wird in allen folgenden Algorithmen in dieser Arbeit verwendet. Dieses Verwaltungsprinzip ist auch eines, dass den Selektionsdruck von den Ameisen auf das Archiv umlegt, weswegen in den folgenden Algorithmen in dieser Arbeit gilt \(|\mathcal{E}| = 2\), wie im Abschnitt~\ref{subsec:ACO_R} oder sogar \(|\mathcal{E}| = 1\), wie in den Abschnitten \ref{subsec:ACO_R_-_simple} und \ref{subsec:ACO_R_-_very_-_simple}.
 	
-	Wie im Abschnitt~\ref{subsec:Weiterentwicklung_Der_ACO_Metaheuristik_Zu_P-ACO} beschrieben, kann man, statt die Pheromoninformation von Iterationsschritt zu Iterationsschritt mitzuführen, die Information auch in einer diskreten Matrix speichern, also einem diskreten Lösungsarchiv. Dies funktioniert jedoch nur für diskrete Probleme. Um stetige Probleme zu lösen, kann man auf ein Archiv mit stetigen Einträgen zurückgreifen, was dann u.a. eine Liste sein kann.\hfill\newline
+	%TODO oder sogar? ist "sogar" ok?
 	
-	Ameisenalgorithmen mit einem stetigen Lösungsarchiv speichern ihre Lösungen in stetigen Einträgen. Wie genau, hängt von dem jeweiligen Algorithmus ab. Die einfachste Art und Weise dies zu tun, ist jedoch, die Lösungen wie sie generiert werden, nach einer bestimmten Vorschrift zu speichern, also ein einfaches Lösungsarchiv zu verwenden.\hfill\newline
+	\subsection{Ameisenalgorithmen mit einem stetigen Lösungsarchiv} \label{subsec:Ameisenalgorithmen_Mit_Einem_Stetigen_Loesungsarchiv}
 	
-	Wiederum die einfachsten Vorschriften zum Speichern von Lösungen sind \glqq first in last out\grqq{} und \glqq best in worst out\grqq. Bei der ersten Vorschrift wird die neueste Lösung ins Archiv aufgenommen und die Älteste entfernt und bei der Zweiten wird die Lösung nach ihrer Güte einsortiert. Ist bei der zweiten Vorschrift die Lösung schlechter als alle anderen im Archiv, wird die Lösung verworfen, ist sie besser als eine gespeicherte Lösung, wird die neue gute Lösung an die Stelle der alten schlechteren Lösung gesetzt, alle Lösungen ab der schlechteren Lösung, die schlechtere Lösung eingeschlossen, werden um einen Platz nach hinten verschoben und die dann neue schlechteste Lösung wird aus dem Archiv gelöscht.\hfill\newline
+	Wie in meiner Bachelorarbeit~\cite{FCM_2019} und im Abschnitt~\ref{subsec:Weiterentwicklung_Der_ACO_Metaheuristik_Zu_Der_P_-_ACO_Metaheuristik} beschrieben, kann man, statt die Pheromoninformation von Iterationsschritt zu Iterationsschritt mitzuführen, die Information auch in einer diskreten Matrix speichern und implizit einem diskreten Lösungsarchiv. Dies funktioniert jedoch nur für diskrete Probleme. Um stetige Probleme zu lösen, kann man auf ein Archiv mit stetigen Einträgen zurückgreifen, was dann u.a. eine Liste sein kann.\hfill\newline
+	
+	Ameisenalgorithmen mit einem stetigen Lösungsarchiv speichern ihre Lösungen in stetigen Einträgen. Wie genau, hängt von dem jeweiligen Algorithmus ab. Die einfachste Art und Weise dies zu tun, ist jedoch, die Lösungen wie sie generiert werden, nach einer bestimmten Vorschrift bzw. einem bestimmten Prinzip zu speichern, also ein einfaches Lösungsarchiv zu verwenden. Wiederum die einfachsten Vorschriften bzw. Prinzipe zum Speichern von Lösungen sind \glqq first in last out\grqq{} und \glqq best in worst out\grqq.
+	
+	%Wiederum die einfachsten Vorschriften zum Speichern von Lösungen sind \glqq first in last out\grqq{} und \glqq best in worst out\grqq. Bei der ersten Vorschrift wird die neueste Lösung ins Archiv aufgenommen und die Älteste entfernt und bei der Zweiten wird die Lösung nach ihrer Güte einsortiert. Ist bei der zweiten Vorschrift die Lösung schlechter als alle anderen im Archiv, wird die Lösung verworfen, ist sie besser als eine gespeicherte Lösung, wird die neue gute Lösung an die Stelle der alten schlechteren Lösung gesetzt, alle Lösungen ab der schlechteren Lösung, die schlechtere Lösung eingeschlossen, werden um einen Platz nach hinten verschoben und die dann neue schlechteste Lösung wird aus dem Archiv gelöscht.\hfill\newline
 	
 	%Bei den dieser Arbeit beiliegenden Algorithmen wird ein einfaches Lösungsarchiv verwendet und nach dem \glqq best in worst out\grqq \hspace{.16667em} Prinzip befüllt.
 	
 	\subsection{Ameisenalgorithmen Mit Einem Gemischten Lösungsarchiv}
 	
-	Da in dieser Arbeit die Art der Algorithmen, die getestet werden und die Art der Funktionen, die zum Testen benutzt werden, erweitert wird, müssen wir auch den Begriff des Lösungsarchivs erweitern. Gegeben eine Funktion mit gemischten Variablen, wie in den Abschnitten [] und \ref{subsubsec:Coil_Spring_Design_Problem} und ein einfaches Lösungsarchiv mit \(n \in \mathbb{N}\) Einträgen, wie es im Abschnitt~\ref{subsec:Ameisenalgorithmen_Mit_Einem_Stetigen_Loesungsarchiv} definiert wurde, dann ist die einfachste Erweiterung für ein einfaches Lösungsarchiv, mehrere einfache Lösungsarchive bzw. Listen zu einem einfachen zusammengesetzten Lösungsarchiv zusammenzufassen. Dabei bilden die Einträge der Unterarchive an der Stelle \(i \in \{1, \dots, n\}\) eine Gesamtlösung. Zum Beispiel kann ein zusammengesetztes einfaches Lösungsarchiv \{\{'diskret': [1], 'stetig': [1.0,1.5]\}, \{'diskret': [2], 'stetig': [2.0,3.0]\}\} sein. Dann ist die \(2.\)te Lösung \{'diskret': [2], 'stetig': [2.0,3.0]\}.
+	Da in dieser Arbeit die Art der Algorithmen, die getestet werden und die Art der Funktionen, die zum Testen benutzt werden, erweitert wird, müssen wir auch den Begriff des Lösungsarchivs erweitern. Gegeben eine Funktion mit gemischten Variablen, wie in den Abschnitten \ref{subsubsec:Konstruierte_Probleme} und \ref{subsubsec:Coil_Spring_Design_Problem} und ein einfaches Lösungsarchiv mit \(n \in \mathbb{N}\) Einträgen, wie es im Abschnitt~\ref{subsec:Ameisenalgorithmen_Mit_Einem_Stetigen_Loesungsarchiv} definiert wurde, dann ist die einfachste Erweiterung für ein einfaches Lösungsarchiv, mehrere einfache Lösungsarchive bzw. Listen zu einem einfachen zusammengesetzten Lösungsarchiv zusammenzufassen. Dabei bilden die Einträge der Unterarchive an der Stelle \(i \in \{1, \dots, n\}\) eine Gesamtlösung. Zum Beispiel kann ein zusammengesetztes einfaches Lösungsarchiv \{\{'diskret': [1], 'stetig': [1.0,1.5]\}, \{'diskret': [2], 'stetig': [2.0,3.0]\}\} sein. Dann ist die \(2.\)te Lösung \{'diskret': [2], 'stetig': [2.0,3.0]\}.
 	
 	%Wie im Abschnitt~\ref{subsec:mixed_variable} beschrieben, können Variablen verschieden Skalenniveaus haben aber wenn 
 	
@@ -556,7 +560,7 @@ within=section,
 	
 	Die Variante zur Lösungserzeugung, durch das Auswerten einer Funktion, wird im Abschnitt~\ref{ACO_R} beschrieben. Die Variante zur Lösungserzeugung durch das Auswerten eines Intervalls folgt, realisiert durch die beiden Algorithmen ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple, in den Abschnitten~\ref{ACO_R_simple} und~\ref{subsec:ACO_R_very_simple}.\hfill\newline
 	
-	\subsection{ACO\(_{\mathbb{R}}\)} \label{subsec:Definition_ACO_R}
+	\subsection{ACO\(_{\mathbb{R}}\)} \label{subsec:ACO_R}
 	
 	%TODO ACO-R, ACO-R-S und ACO-R-VS nochmal einführen? kurz aber ja
 	
@@ -602,7 +606,7 @@ within=section,
 	
 	\noindent Abschließend gehen wir noch auf die Parameter \(q\) und \(\xi\) ein. Der Parameter \(q\) beeinflusst, wie die Lösungen im Archiv in die Suche eingebunden werden. Bei kleinem \(q\) werden besseren Lösungen stärker bevorzugt. Und der Parameter \(\xi\) beeinflusst, wie schnell der Algorithmus konvergiert. Je größer \(\xi\), desto langsamer konvergiert der Algorithmus.
 	
-	\subsection{ACO\(_{\mathbb{R}}\)-simple} \label{ACO_R_simple}
+	\subsection{ACO\(_{\mathbb{R}}\)-simple} \label{subsec:ACO_R_-_simple}
 	
 	Der erste dieser Arbeit beiliegende Algorithmus ACO\(_{\mathbb{R}}\)-simple, nutzt das Lösungsarchiv auch wie ACO\(_{\mathbb{R}}\), jedoch setzt es die vorhandenen Lösungen auf eine sehr viel einfachere Weise zu einer neuen Lösung zusammen -- deswegen simple, also einfach.\hfill\newline
 	
@@ -665,7 +669,7 @@ within=section,
 	
 	100 da Algorithmus einfacher und er damit braucht mehr Information/Lösungsinformation
 	
-	\subsection{ACO\(_{\mathbb{R}}\)-very-simple} \label{subsec:ACO_R_very_simple}
+	\subsection{ACO\(_{\mathbb{R}}\)-very-simple} \label{subsec:ACO_R_-_very_-_simple}
 	
 	Der zweite dieser Arbeit beiliegende Algorithmus ACO\(_{\mathbb{R}}\)-very-simple, nutzt ebenfalls das Lösungsarchiv wie ACO\(_{\mathbb{R}}\), jedoch setzt es die vorhandenen Lösungen noch einfacher, geradezu trivial, zu einer neuen Lösung zusammen -- deswegen very-simple, also sehr einfach.\hfill\newline
 	
@@ -1381,9 +1385,9 @@ within=section,
 		
 		%TODO Probleme ausdenken
 		
-		\subsubsection{Ordinale Testfunktionen mit gleichverteiltem Definitionsbereich} \label{subsubsec:Ordinale_Testfunktionen_Mit_Gleichverteiltem_Definitionsbereich}
+		\subsubsection{Diskrete Testfunktionen mit gleichverteiltem Definitionsbereich} \label{subsubsec:Ordinale_Testfunktionen_Mit_Gleichverteiltem_Definitionsbereich}
 		
-		Die einfachste Art diskrete/ordinale Testfunktionen zu erhalten, ist die Diskretisierung von stetigen Testfunktionen. Dabei nimmt man \(m \in \mathbb{N}\) Punkte aus dem Definitionsbereich einer stetigen Funktion und bildet aus diesen Punkten einen neuen diskreten Definitionsbereich. Zum Beispiel ist die Funktion \glqq Paraboloid\grqq{} aus Tabelle~\ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} über dem stetigen Definitionsbereich \( D = [-3,7]^n, n = 10\) definiert. Wir nehmen diesen Definitionsbereich und zerlegen ihn in \(m = 11\) gleichverteilte diskrete Punkte. Dies Ergibt \(D = [-3, -2, -1, 0, 1, 2, 3 , 4, 5, 6, 7]^n, n = 10\). Analog gewinnen wir anderen diskreten Testfunktionen. Wir nehmen die stetigen Testfunktionen aus den Tabellen \ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt} mit \(m \in \{11, 21, 51\}\). Damit erhalten wir für jede stetige Funktion 3 ordinale/diskrete Testfunktionen. Die Definitionen der Funktionsterme, Optima und Argumente der Optima bleiben gleich, weswegen hier auf eine Doppelung der Tabellen \ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt} verzichtet wird. Wie im Abschnitt~\ref{subsec:Definition_ACO_R} hat das Initialisierungsintervall großen Einfluss auf das Verhalten des Algorithmus aber da wir eine gleichverteilte Diskretisierung genommen haben, um die neuen Definitionsbereiche zu erlangen, ist zu erwarten, dass sich das Lösungsverhalten für die ordinalen/diskreten Testfunktionen nicht signifikant von denen in den Tabellen \ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt} unterscheiden wird.
+		Die einfachste Art diskrete/ordinale Testfunktionen zu erhalten, ist die Diskretisierung von stetigen Testfunktionen. Dabei nimmt man \(m \in \mathbb{N}\) Punkte aus dem Definitionsbereich einer stetigen Funktion und bildet aus diesen Punkten einen neuen diskreten Definitionsbereich. Zum Beispiel ist die Funktion \glqq Paraboloid\grqq{} aus Tabelle~\ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} über dem stetigen Definitionsbereich \( D = [-3,7]^n, n = 10\) definiert. Wir nehmen diesen Definitionsbereich und zerlegen ihn in \(m = 11\) gleichverteilte diskrete Punkte. Dies Ergibt \(D = [-3, -2, -1, 0, 1, 2, 3 , 4, 5, 6, 7]^n, n = 10\). Analog gewinnen wir anderen diskreten Testfunktionen. Wir nehmen die stetigen Testfunktionen aus den Tabellen \ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt} mit \(m \in \{11, 21, 51\}\). Damit erhalten wir für jede stetige Funktion 3 ordinale/diskrete Testfunktionen. Die Definitionen der Funktionsterme, Optima und Argumente der Optima bleiben gleich, weswegen hier auf eine Doppelung der Tabellen \ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt} verzichtet wird. Wie im Abschnitt~\ref{subsec:ACO_R} hat das Initialisierungsintervall großen Einfluss auf das Verhalten des Algorithmus aber da wir eine gleichverteilte Diskretisierung genommen haben, um die neuen Definitionsbereiche zu erlangen, ist zu erwarten, dass sich das Lösungsverhalten für die ordinalen/diskreten Testfunktionen nicht signifikant von denen in den Tabellen \ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt} unterscheiden wird.
 		
 		%\begin{table}[H]
 			
@@ -1437,9 +1441,9 @@ within=section,
 		
 		%TODO Probleme mit nur diskreten Variablen nehmen, statt einer diskret und einer stetigen
 		
-		\subsubsection{Ordinale Testfunktionen mit asymmetrischem Definitionsbereich}
+		\subsubsection{Diskrete Testfunktionen mit asymmetrischem Definitionsbereich}
 		
-		Wie in Abschnitt~\ref{subsec:Definition_ACO_R} geschildert, hat das Initialisierungsintervall großen Einfluss auf das Verhalten des Algorithmus. Zusätzlich, wie in \cite{ACO_2003_simiple_problems} beschrieben, kann das Betrachten von einfachen Testfunktionen zu unerwarteten Ergebnissen führen. Deswegen definieren wir in diesem Abschnitt explizit diskrete Funktionen, die einfach sind aber einen nicht-Standarddefinitionsbereich haben. Wir wählen, wie im Abschnitt~\ref{subsubsec:Ordinale_Testfunktionen_Mit_Gleichverteiltem_Definitionsbereich}, \(m \in \{11, 21, 51\}\) aber diesmal ist der Definitionsbereich asymmetrisch verteilt mit \(3\) Clustern. Zum Beispiel transformiert dies den stetigen Definitionsbereich der Testfunktion \glqq Paraboloid\grqq{} von \(D = [-3, 7]^{10}\) zu \(D = [-3, -2.8, -2.6, -0.4, -0.2, 0.0, 0.2, 0.4, 6.6, 6.8, 7.0]^{10}\). Im JSON-Format wird dies wie im Code-Snipped~\ref{JSON:Paraboloid2Dim11OrdAsymm} angezeigt.
+		Wie in Abschnitt~\ref{subsec:ACO_R} geschildert, hat das Initialisierungsintervall großen Einfluss auf das Verhalten des Algorithmus. Zusätzlich, wie in \cite{ACO_2003_simiple_problems} beschrieben, kann das Betrachten von einfachen Testfunktionen zu unerwarteten Ergebnissen führen. Deswegen definieren wir in diesem Abschnitt explizit diskrete Funktionen, die einfach sind aber einen nicht-Standarddefinitionsbereich haben. Wir wählen, wie im Abschnitt~\ref{subsubsec:Ordinale_Testfunktionen_Mit_Gleichverteiltem_Definitionsbereich}, \(m \in \{11, 21, 51\}\) aber diesmal ist der Definitionsbereich asymmetrisch verteilt mit \(3\) Clustern. Zum Beispiel transformiert dies den stetigen Definitionsbereich der Testfunktion \glqq Paraboloid\grqq{} von \(D = [-3, 7]^{10}\) zu \(D = [-3, -2.8, -2.6, -0.4, -0.2, 0.0, 0.2, 0.4, 6.6, 6.8, 7.0]^{10}\). Im JSON-Format wird dies wie im Code-Snipped~\ref{JSON:Paraboloid2Dim11OrdAsymm} angezeigt.
 		
 		\begin{lstlisting}[language=json, caption=Paraboloid 2Dim ordinal asymmetrischer Definitionsbereich, label=JSON:Paraboloid2Dim11OrdAsymm]
 {
@@ -1468,329 +1472,331 @@ within=section,
 }
 		\end{lstlisting}
 		
-		\subsection{Testfunktionen mit gemischten Variablem} \label{subsec:mixed_variable}
+		\subsection{Testfunktionen mit gemischten Variablem} \label{subsec:Mixed_Variable}
 		
-			\subsubsection{Coil Spring Design Problem (CSD)} \label{subsubsec:Coil_Spring_Design_Problem}
-			
-			Das Coil Spring Design Problem (CSD) kann auf verschiedene Arten definiert werden, wie in \cite{guo2004swarm}, \cite{ACO_2013}, oder []. In dieser Arbeit verwenden wir die Definition aus \cite{ACO_2013}. %TODO mehr Quellen finden; vllt. die Namen aus ACO_2013 verwenden, statt nur \cite{ACO_2013}
-			Im CSD Problem, wie es in \cite{ACO_2013} definiert wird, wird so nach dem Außendurchmesser \(D\), dem Drahtdurchmesser \(d\) und der Windungszahl \(N\) einer Schraubenfeder (Coil Spring) gesucht, dass der Materialbedarf für die Schraubenfeder minimiert wird, während gleichzeitig die Nebenbedingungen (Constrains) erfüllt werden.\\
-			
-			\noindent Da in \textit{Sandgren}~\cite{sandgren1990nonlinear} das CSD Problem initial in imperialen Maßeinheiten definiert wurde, verwendeten alle Folgestudien %TODO Folgestudien eingügen
-			ebenfalls imperiale Maßeinheiten, um die Ergebnisse vergleichen zu können. Deswegen werden auch in dieser Arbeit hier imperiale Maßeinheiten verwendet.\\
-			
-			\noindent Das Problem zählt zu Problemen mit gemischten Variablen, da \(D\) eine stetige und \(d\) eine ordinale Variable ist. \(N\) ist eine Variable, die nur natürliche Zahlen als Werte annehmen kann.\\
-			
-			\noindent Mögliche Werte, die der Drahtdurchmesser \(d\) annehmen kann, sind in der Tabelle~\ref{table:d_values} aufgelistet.
-			
-			\begin{table}[H]
-				
-				\fontsize{10pt}{12pt}
-				
-				\caption{Standarddrahtdurchmesser für die Schraubenfeder angegeben in Zoll (inch)}
-				
-				\label{table:d_values}
-				
-				\begin{center}
-				
-					\begin{tabular}{c c c c c c}
-						
-						\hline
-						
-						0.0090 & 0.0095 & 0.0104 & 0.0118 & 0.0128 & 0.0132\\
-						
-						0.0140 & 0.0150 & 0.0162 & 0.0173 & 0.0180 & 0.0200\\
-						
-						0.0140 & 0.0150 & 0.0162 & 0.0173 & 0.0180 & 0.0200\\
-						
-						0.0470 & 0.0540 & 0.0630 & 0.0720 & 0.0800 & 0.0920\\
-						
-						0.1050 & 0.1200 & 0.1350 & 0.1480 & 0.1620 & 0.1770\\
-						
-						0.1920 & 0.2070 & 0.2250 & 0.2440 & 0.2630 & 0.2830\\
-						
-						0.3070 & 0.3310 & 0.3620 & 0.3940 & 0.4375 & 0.5000\\
-						
-						\hline
-						
-					\end{tabular}
-				
-				\end{center}
-				
-			\end{table}
-			
-			\noindent Weiter werden in \cite{ACO_2013} Intervallgrenzen definiert, die in der Tabelle~\ref{table:int_restrict} aufgeführt werden.%TODO bessere Quelle finden
-			
-			\begin{table}[H]
-				
-				\fontsize{10pt}{12pt}
-				
-				\caption{Intervallgrenzen}
-				
-				\label{table:int_restrict}
-				
-				\begin{center} %TODO besseren Namen als Intervallgrenzen für Werte finden
-					
-					\begin{tabular}{l l}
-						
-						\hline
-						
-						maximale Arbeitsbelastung & \(F_{max}\) = 1000.0 Pfund (lb)\\
-						
-						zulässige maximale Scherspannung & \(S\) = 189000.0 Pfund pro Quadratzoll (psi)\\
-						
-						maximale freie Länge & \(l_{max}\) = 14.0 Zoll (inch)\\
-						
-						Mindestdrahtdurchmesser & \(d_{min}\) = 0.2 Zoll (inch)\\
-						
-						maximaler Außendurchmesser & \(D_{max}\) = 3.0 Zoll (inch)\\
-						
-						der Feder & \\
-						
-						Vorspannkompressionskraft & \(F_p\) = 300.0 Pfund (lb)\\
-						
-						zulässige maximale Durchbiegung & \(\sigma_{pm}\) = 6.0 Zoll (in)\\
-						
-						unter Vorspannung & \\
-						
-						Auslenkung von der Vorlastposition & \(\sigma_{w}\) = 1.25 Zoll (in)\\
-						
-						zur Maximallastposition & \\
-						
-						Schubmodul des Materials & \(G\) = 11.5 \(\cdot\) 10\(^6\)\\
-						
-						\hline
-						
-					\end{tabular}
-					
-				\end{center}
-				
-			\end{table}
-			
-			\noindent Die Nebenbedingen umfassen primäre und sekundäre Variablen. Die primären Variablen sind \(D\), \(d\) und \(N\). Die sekundären Variablen sind \(C_f\), \(K\), \(\sigma_p\) und \(l_f\). Die sekundären Variablen ergeben sich aus den primären Variablen und den Intervallgrenzen und werden in den Gleichungen~\ref{eq:C_f}~bis~\ref{eq:l_f} definiert. Die Definitionsbereiche der primären Variablen können der Tabelle~\ref{table:prim_var_domain} entnommen werden.\\
-			
-			\begin{table}[H]
-				
-				\fontsize{10pt}{12pt}
-				
-				\caption{Definitionsbereiche}
-				
-				\label{table:prim_var_domain}
-				
-				\begin{center}
-					
-					\begin{tabular}{l l}
-						
-						\hline
-						
-						D & \{3d, 3.0\}\\
-						
-						d & \{d\(_{min}\), 0.5000\}\\
-						
-						N & \{1, 70\}\\
-						
-						\hline
-						
-					\end{tabular}
-					
-				\end{center}
-				
-			\end{table}
-			
-			\begin{equation} \label{eq:C_f}
-				C_f = \frac{4 \frac{D}{d} - 1}{4 \frac{D}{d} - 4} + \frac{0.615d}{D}
-			\end{equation}
-			
-			\begin{equation} \label{eq:K}
-				K = \frac{G d^4}{8 N D^3}
-			\end{equation}
-			
-			\begin{equation} \label{eq:sigma_p}
-				\sigma_p = \frac{F_p}{K}
-			\end{equation}
-			
-			\begin{equation} \label{eq:l_f}
-				l_f = \frac{F_{max}}{K} + 1.05 (N + 2) d
-			\end{equation}\\
-			
-			\noindent Ferner unterliegen die Variablen im CSD 8 Constrains \(c_i, \, i \in \{1, \dots, 8\}\). Diese sind in Tabelle~\ref{table:variable_restrict} dargelegt. %TODO besseres Wort für Constrains finden
-			
-			\begin{table}[H]
-				
-				\fontsize{12pt}{12pt}
-				
-				\caption{Constrains}
-				
-				\label{table:variable_restrict}
-				
-				\begin{center} %TODO besseren Namen als Intervallgrenzen für Werte finden
-					
-					\def\arraystretch{1.5}
-					
-					\begin{tabular}{| l | c |}
-						
-						\hline
-						
-						1 & \(c_1\) = \(\frac{8 C_f F_{max} D}{\pi d^3} - S \leq 0\)\\
-						
-						\hline
-						
-						2 & \(c_2\) = \(l_f - l_{max} \leq 0\)\\
-						
-						\hline
-						
-						3 & \(c_3\) = \(d_{min} - d \leq 0\)\\
-						
-						\hline
-						
-						4 & \(c_4\) = \(D - D_{max} \leq 0\)\\
-						
-						\hline
-						
-						5 & \(c_5\) = \(3.0 - \frac{D}{d}\)\\
-						
-						\hline
-						
-						6 & \(c_6\) = \(\sigma_p - \sigma_{pm} \leq 0\)\\
-						
-						\hline
-						
-						7 & \(c_7\) = \(\sigma_p + \frac{F_{max} - F_p}{K} + 1.05 (N + 2) d - l_f \leq 0\)\\
-						
-						\hline
-						
-						8 & \(c_8\) = \(\sigma_{w} - \frac{F_{max} - F_p}{K} \leq 0\)\\
-						
-						\hline
-						
-					\end{tabular}
-					
-				\end{center}
-				
-			\end{table}
-			
-			\noindent Der Materialbedarf und damit die Zielfunktion wird mit Hilfe der Formel~\ref{eq:coil_spring_material} berechnet.
-			
-			\begin{equation} \label{eq:CSD_material}
-				f(N, D, d) = \frac{\pi^2 D d^2 (N + 2)}{4}
-			\end{equation}
-			
-			\paragraph{Vollständiger Raum als Initialisierungsintervall}\mbox{}\\%TODO fragen, ob 5.5.1.1 gut ist?
-			\newline
-			\noindent Wie bereits im Abschnitt~\ref{subsec:Definition_ACO_R} beschrieben, hat das Initialisierungsintervall großen Einfluss auf den Erfolg %die Güte?
-			des Algorithmus. So können für das CSD Anfangslösungen aus dem gesamten Raum \(\{3 \cdot d_{min}, 3.0\} \times \{d_{min}, 0.5000\} \times \{1, 70\}\) oder dem gefilterten Raum gezogen werden, was für das CSD einen Unterschied macht. Nimmt man den gesamten Raum als Grundlage, so findet ACO\(_\mathbb{R}\)-VS das Optimum nicht oder nur nach mehreren tausend Iterationen, wie in der Abbildung~\ref{fig:box_plot:ACO_R-VS_CSD_penalty_perform} zu sehen.\\%TODO besser formulieren
-			
-			Nimmt man den gesamten Raum zum ziehen der Initiallösungen, so ändert sich die Zielfunktion von der Formel~\ref{eq:CSD_material} zu der Formel~\ref{eq:CSD_penalty}, wie in \cite{ACO_2013} definiert.
-			
-			\begin{equation} \label{eq:CSD_penalty}
-				\hat{f} = f \prod_{i = 1}^{8} \hat{c_i}^3 
-			\end{equation}
-			
-			%TODO hier Kritik einbauen oder eigenen Abschnitt dafür machen
-			
-			Dabei werden die \(\hat{c_i}\)'s in der Formel~\ref{eq:CSD_c_i} definiert.
-			
-			\begin{equation} \label{eq:CSD_c_i}
-				\hat{c_i} =
-				\begin{cases}
-					\begin{aligned}
-						& 1 + w_i c_i, &&\text{wenn } c_i > 0\\
-						& 1, &&\text{sonst}
-					\end{aligned}
-				\end{cases}
-			\end{equation}
-			
-			Die Gewichte \(w_i, \, i \in \{1, \dots, 8\}\) wurden aus \cite{ACO_2013} entnommen und befinden sich in der Tabelle~\ref{table:CSD_penalty_weights}.
-			
-			\begin{table}[H]
-				
-				\fontsize{12pt}{12pt}
-				
-				\caption{Gewichte}
-				
-				\label{table:CSD_penalty_weights} %TODO fragen, ob diese Tabelle mit table:variable_restrict kombiniert werden soll
-				
-				\begin{center}
-					
-					\def\arraystretch{1.5}
-					
-					\begin{tabular}{| l | c |}
-						
-						\hline
-						
-						1 & \(w_1 = \) 10\(^{-5}\)\\
-						
-						\hline
-						
-						2 & \(w_2 =\) 1\\
-						
-						\hline
-						
-						3 & \(w_3 =\) 10\(^2\)\\
-						
-						\hline
-						
-						4 & \(w_4 =\) 1\\
-						
-						\hline
-						
-						5 & \(w_5 =\) 10\(^2\)\\
-						
-						\hline
-						
-						6 & \(w_6 =\) 1\\
-						
-						\hline
-						
-						7 & \(w_7 =\) 10\(^2\)\\
-						
-						\hline
-						
-						8 & \(w_8 =\) 10\(^2\)\\
-						
-						\hline
-						
-					\end{tabular}
-					
-				\end{center}
-				
-			\end{table}
-			
-			\paragraph{Gefilterter Raum als Initialisierungsintervall}\mbox{}\\
-			\newline
-			\noindent Wenn der gefilterte Raum genommen wird, konvergiert der Algorithmus sehr viel schneller, findet aber auch die selben lokalen Minima, anstatt des globalen Minima. Ferner werden mehrere tausend Iterationen für die Initialisierung gebraucht, da Punkte, welche die Constrains verletzen, gefiltert werden. Benutzt man den gefilterten Raum, kann die Formel~\ref{eq:CSD_material} ohne Veränderungen beibehalten werden. Abbildung~\ref{fig:box_plot:ACO_R-VS_CSD_exact_perform} zeigt, wie viele Iterationen bei gefiltertem Raum, für die Initialisierung und für die Lösungssuche selbst, notwendig waren und Abbildung~\ref{fig:3D_plot:CSD:filtered_and_unfiltered_search_spaces} zeigt, wie stark sich der Initialisierungsraum verkleinert und damit die Lösungssuche erleichtert wird, wenn der Initialisierungsraum vor dem Ausführen des Algorithmus nach gültigen Lösungen gefiltert wird. Wie zu sehen verkleinert sich der Initialisierungsraum um mehr als das achtfache.%TODO 3D-Plot vom gefliterten Raum einfügen
-			
-			\begin{figure}[H]
-				\centering
-				\subfloat[][gefilterter Raum]{\includegraphics[width=0.4\linewidth]{Abbildungen/3D_Visualisationen/3D_visualization_CSD_filtered_space.png}}
-				\qquad
-				\subfloat[][ungefilterter Raum]{\includegraphics[width=0.4\linewidth]{Abbildungen/3D_Visualisationen/3D_visualization_CSD_unfiltered_space.png}}
-				\caption{gefilterter und ungefilterter Suchraum für das CSD-Problem}
-				\label{fig:3D_plot:CSD:filtered_and_unfiltered_search_spaces}
-			\end{figure}
-			
-			\noindent Um zu zeigen, wie stark der Initialisierungsraum sich verkleinert, werden die beiden Initialisierungsräume wie in Abbildung~\ref{fig:3D_plot:CSD:filtered_and_unfiltered_search_spaces}
-			
-			\begin{figure}[H] %TODO Abbildung nachmalen
-				\centering
-				\includegraphics[scale=0.5]{Abbildungen/3D_Visualisationen/3D_visualization_CSD_unfiltered_and_filtered_space.png}
-				\caption{gefilterter und ungefilterter Raum} %TODOgenaue Seitenzahl referenzieren?
-				\label{fig:3D_plot:CSD:filtered_and_unfiltered_search_spaces_combined}
-			\end{figure}
-			
-			%TODO boxplots für die Laufzeit der Algorithmen
+		\subsubsection{Konstruierte Probleme} \label{subsubsec:Konstruierte_Probleme}
 		
-			\subsubsection{Thermal Insulation System Design Problem (TISD)} \label{subsubsec:TISD}
+		\subsubsection{Coil Spring Design Problem (CSD)} \label{subsubsec:Coil_Spring_Design_Problem}
+		
+		Das Coil Spring Design Problem (CSD) kann auf verschiedene Arten definiert werden, wie in \cite{guo2004swarm}, \cite{ACO_2013}, oder []. In dieser Arbeit verwenden wir die Definition aus \cite{ACO_2013}. %TODO mehr Quellen finden; vllt. die Namen aus ACO_2013 verwenden, statt nur \cite{ACO_2013}
+		Im CSD Problem, wie es in \cite{ACO_2013} definiert wird, wird so nach dem Außendurchmesser \(D\), dem Drahtdurchmesser \(d\) und der Windungszahl \(N\) einer Schraubenfeder (Coil Spring) gesucht, dass der Materialbedarf für die Schraubenfeder minimiert wird, während gleichzeitig die Nebenbedingungen (Constrains) erfüllt werden.\\
+		
+		\noindent Da in \textit{Sandgren}~\cite{sandgren1990nonlinear} das CSD Problem initial in imperialen Maßeinheiten definiert wurde, verwendeten alle Folgestudien %TODO Folgestudien eingügen
+		ebenfalls imperiale Maßeinheiten, um die Ergebnisse vergleichen zu können. Deswegen werden auch in dieser Arbeit hier imperiale Maßeinheiten verwendet.\\
+		
+		\noindent Das Problem zählt zu Problemen mit gemischten Variablen, da \(D\) eine stetige und \(d\) eine ordinale Variable ist. \(N\) ist eine Variable, die nur natürliche Zahlen als Werte annehmen kann.\\
+		
+		\noindent Mögliche Werte, die der Drahtdurchmesser \(d\) annehmen kann, sind in der Tabelle~\ref{table:d_values} aufgelistet.
+		
+		\begin{table}[H]
 			
-			Das klassische nicht-konstruierte Testproblem, mit kategorischen Variablen, ist das Thermal Insulation System Design Problem (TISD). In der Literatur, wie in \cite{ACO_2013} beschrieben
+			\fontsize{10pt}{12pt}
 			
-			\begin{figure}[H] %TODO Abbildung nachmalen
-				\centering
-				\includegraphics[scale=0.5]{TISD_Sheme.png}
-				\caption{Schematische Zeichnung des TISD, wie dargestellt in \cite{ACO_2013}} %TODOgenaue Seitenzahl referenzieren?
-				\label{pic:TISD}
-			\end{figure}
-
-			\subsubsection{Traveling Spice Salesperson Problem (TSSP)} \label{subsubsec:TSSP}
+			\caption{Standarddrahtdurchmesser für die Schraubenfeder angegeben in Zoll (inch)}
+			
+			\label{table:d_values}
+			
+			\begin{center}
+			
+				\begin{tabular}{c c c c c c}
+					
+					\hline
+					
+					0.0090 & 0.0095 & 0.0104 & 0.0118 & 0.0128 & 0.0132\\
+					
+					0.0140 & 0.0150 & 0.0162 & 0.0173 & 0.0180 & 0.0200\\
+					
+					0.0140 & 0.0150 & 0.0162 & 0.0173 & 0.0180 & 0.0200\\
+					
+					0.0470 & 0.0540 & 0.0630 & 0.0720 & 0.0800 & 0.0920\\
+					
+					0.1050 & 0.1200 & 0.1350 & 0.1480 & 0.1620 & 0.1770\\
+					
+					0.1920 & 0.2070 & 0.2250 & 0.2440 & 0.2630 & 0.2830\\
+					
+					0.3070 & 0.3310 & 0.3620 & 0.3940 & 0.4375 & 0.5000\\
+					
+					\hline
+					
+				\end{tabular}
+			
+			\end{center}
+			
+		\end{table}
+		
+		\noindent Weiter werden in \cite{ACO_2013} Intervallgrenzen definiert, die in der Tabelle~\ref{table:int_restrict} aufgeführt werden.%TODO bessere Quelle finden
+		
+		\begin{table}[H]
+			
+			\fontsize{10pt}{12pt}
+			
+			\caption{Intervallgrenzen}
+			
+			\label{table:int_restrict}
+			
+			\begin{center} %TODO besseren Namen als Intervallgrenzen für Werte finden
+				
+				\begin{tabular}{l l}
+					
+					\hline
+					
+					maximale Arbeitsbelastung & \(F_{max}\) = 1000.0 Pfund (lb)\\
+					
+					zulässige maximale Scherspannung & \(S\) = 189000.0 Pfund pro Quadratzoll (psi)\\
+					
+					maximale freie Länge & \(l_{max}\) = 14.0 Zoll (inch)\\
+					
+					Mindestdrahtdurchmesser & \(d_{min}\) = 0.2 Zoll (inch)\\
+					
+					maximaler Außendurchmesser & \(D_{max}\) = 3.0 Zoll (inch)\\
+					
+					der Feder & \\
+					
+					Vorspannkompressionskraft & \(F_p\) = 300.0 Pfund (lb)\\
+					
+					zulässige maximale Durchbiegung & \(\sigma_{pm}\) = 6.0 Zoll (in)\\
+					
+					unter Vorspannung & \\
+					
+					Auslenkung von der Vorlastposition & \(\sigma_{w}\) = 1.25 Zoll (in)\\
+					
+					zur Maximallastposition & \\
+					
+					Schubmodul des Materials & \(G\) = 11.5 \(\cdot\) 10\(^6\)\\
+					
+					\hline
+					
+				\end{tabular}
+				
+			\end{center}
+			
+		\end{table}
+		
+		\noindent Die Nebenbedingen umfassen primäre und sekundäre Variablen. Die primären Variablen sind \(D\), \(d\) und \(N\). Die sekundären Variablen sind \(C_f\), \(K\), \(\sigma_p\) und \(l_f\). Die sekundären Variablen ergeben sich aus den primären Variablen und den Intervallgrenzen und werden in den Gleichungen~\ref{eq:C_f}~bis~\ref{eq:l_f} definiert. Die Definitionsbereiche der primären Variablen können der Tabelle~\ref{table:prim_var_domain} entnommen werden.\\
+		
+		\begin{table}[H]
+			
+			\fontsize{10pt}{12pt}
+			
+			\caption{Definitionsbereiche}
+			
+			\label{table:prim_var_domain}
+			
+			\begin{center}
+				
+				\begin{tabular}{l l}
+					
+					\hline
+					
+					D & \{3d, 3.0\}\\
+					
+					d & \{d\(_{min}\), 0.5000\}\\
+					
+					N & \{1, 70\}\\
+					
+					\hline
+					
+				\end{tabular}
+				
+			\end{center}
+			
+		\end{table}
+		
+		\begin{equation} \label{eq:C_f}
+			C_f = \frac{4 \frac{D}{d} - 1}{4 \frac{D}{d} - 4} + \frac{0.615d}{D}
+		\end{equation}
+		
+		\begin{equation} \label{eq:K}
+			K = \frac{G d^4}{8 N D^3}
+		\end{equation}
+		
+		\begin{equation} \label{eq:sigma_p}
+			\sigma_p = \frac{F_p}{K}
+		\end{equation}
+		
+		\begin{equation} \label{eq:l_f}
+			l_f = \frac{F_{max}}{K} + 1.05 (N + 2) d
+		\end{equation}\\
+		
+		\noindent Ferner unterliegen die Variablen im CSD 8 Constrains \(c_i, \, i \in \{1, \dots, 8\}\). Diese sind in Tabelle~\ref{table:variable_restrict} dargelegt. %TODO besseres Wort für Constrains finden
+		
+		\begin{table}[H]
+			
+			\fontsize{12pt}{12pt}
+			
+			\caption{Constrains}
+			
+			\label{table:variable_restrict}
+			
+			\begin{center} %TODO besseren Namen als Intervallgrenzen für Werte finden
+				
+				\def\arraystretch{1.5}
+				
+				\begin{tabular}{| l | c |}
+					
+					\hline
+					
+					1 & \(c_1\) = \(\frac{8 C_f F_{max} D}{\pi d^3} - S \leq 0\)\\
+					
+					\hline
+					
+					2 & \(c_2\) = \(l_f - l_{max} \leq 0\)\\
+					
+					\hline
+					
+					3 & \(c_3\) = \(d_{min} - d \leq 0\)\\
+					
+					\hline
+					
+					4 & \(c_4\) = \(D - D_{max} \leq 0\)\\
+					
+					\hline
+					
+					5 & \(c_5\) = \(3.0 - \frac{D}{d}\)\\
+					
+					\hline
+					
+					6 & \(c_6\) = \(\sigma_p - \sigma_{pm} \leq 0\)\\
+					
+					\hline
+					
+					7 & \(c_7\) = \(\sigma_p + \frac{F_{max} - F_p}{K} + 1.05 (N + 2) d - l_f \leq 0\)\\
+					
+					\hline
+					
+					8 & \(c_8\) = \(\sigma_{w} - \frac{F_{max} - F_p}{K} \leq 0\)\\
+					
+					\hline
+					
+				\end{tabular}
+				
+			\end{center}
+			
+		\end{table}
+		
+		\noindent Der Materialbedarf und damit die Zielfunktion wird mit Hilfe der Formel~\ref{eq:coil_spring_material} berechnet.
+		
+		\begin{equation} \label{eq:CSD_material}
+			f(N, D, d) = \frac{\pi^2 D d^2 (N + 2)}{4}
+		\end{equation}
+		
+		\paragraph{Vollständiger Raum als Initialisierungsintervall}\mbox{}\\%TODO fragen, ob 5.5.1.1 gut ist?
+		\newline
+		\noindent Wie bereits im Abschnitt~\ref{subsec:Definition_ACO_R} beschrieben, hat das Initialisierungsintervall großen Einfluss auf den Erfolg %die Güte?
+		des Algorithmus. So können für das CSD Anfangslösungen aus dem gesamten Raum \(\{3 \cdot d_{min}, 3.0\} \times \{d_{min}, 0.5000\} \times \{1, 70\}\) oder dem gefilterten Raum gezogen werden, was für das CSD einen Unterschied macht. Nimmt man den gesamten Raum als Grundlage, so findet ACO\(_\mathbb{R}\)-VS das Optimum nicht oder nur nach mehreren tausend Iterationen, wie in der Abbildung~\ref{fig:box_plot:ACO_R-VS_CSD_penalty_perform} zu sehen.\\%TODO besser formulieren
+		
+		Nimmt man den gesamten Raum zum ziehen der Initiallösungen, so ändert sich die Zielfunktion von der Formel~\ref{eq:CSD_material} zu der Formel~\ref{eq:CSD_penalty}, wie in \cite{ACO_2013} definiert.
+		
+		\begin{equation} \label{eq:CSD_penalty}
+			\hat{f} = f \prod_{i = 1}^{8} \hat{c_i}^3 
+		\end{equation}
+		
+		%TODO hier Kritik einbauen oder eigenen Abschnitt dafür machen
+		
+		Dabei werden die \(\hat{c_i}\)'s in der Formel~\ref{eq:CSD_c_i} definiert.
+		
+		\begin{equation} \label{eq:CSD_c_i}
+			\hat{c_i} =
+			\begin{cases}
+				\begin{aligned}
+					& 1 + w_i c_i, &&\text{wenn } c_i > 0\\
+					& 1, &&\text{sonst}
+				\end{aligned}
+			\end{cases}
+		\end{equation}
+		
+		Die Gewichte \(w_i, \, i \in \{1, \dots, 8\}\) wurden aus \cite{ACO_2013} entnommen und befinden sich in der Tabelle~\ref{table:CSD_penalty_weights}.
+		
+		\begin{table}[H]
+			
+			\fontsize{12pt}{12pt}
+			
+			\caption{Gewichte}
+			
+			\label{table:CSD_penalty_weights} %TODO fragen, ob diese Tabelle mit table:variable_restrict kombiniert werden soll
+			
+			\begin{center}
+				
+				\def\arraystretch{1.5}
+				
+				\begin{tabular}{| l | c |}
+					
+					\hline
+					
+					1 & \(w_1 = \) 10\(^{-5}\)\\
+					
+					\hline
+					
+					2 & \(w_2 =\) 1\\
+					
+					\hline
+					
+					3 & \(w_3 =\) 10\(^2\)\\
+					
+					\hline
+					
+					4 & \(w_4 =\) 1\\
+					
+					\hline
+					
+					5 & \(w_5 =\) 10\(^2\)\\
+					
+					\hline
+					
+					6 & \(w_6 =\) 1\\
+					
+					\hline
+					
+					7 & \(w_7 =\) 10\(^2\)\\
+					
+					\hline
+					
+					8 & \(w_8 =\) 10\(^2\)\\
+					
+					\hline
+					
+				\end{tabular}
+				
+			\end{center}
+			
+		\end{table}
+		
+		\paragraph{Gefilterter Raum als Initialisierungsintervall}\mbox{}\\
+		\newline
+		\noindent Wenn der gefilterte Raum genommen wird, konvergiert der Algorithmus sehr viel schneller, findet aber auch die selben lokalen Minima, anstatt des globalen Minima. Ferner werden mehrere tausend Iterationen für die Initialisierung gebraucht, da Punkte, welche die Constrains verletzen, gefiltert werden. Benutzt man den gefilterten Raum, kann die Formel~\ref{eq:CSD_material} ohne Veränderungen beibehalten werden. Abbildung~\ref{fig:box_plot:ACO_R-VS_CSD_exact_perform} zeigt, wie viele Iterationen bei gefiltertem Raum, für die Initialisierung und für die Lösungssuche selbst, notwendig waren und Abbildung~\ref{fig:3D_plot:CSD:filtered_and_unfiltered_search_spaces} zeigt, wie stark sich der Initialisierungsraum verkleinert und damit die Lösungssuche erleichtert wird, wenn der Initialisierungsraum vor dem Ausführen des Algorithmus nach gültigen Lösungen gefiltert wird. Wie zu sehen verkleinert sich der Initialisierungsraum um mehr als das achtfache.%TODO 3D-Plot vom gefliterten Raum einfügen
+		
+		\begin{figure}[H]
+			\centering
+			\subfloat[][gefilterter Raum]{\includegraphics[width=0.4\linewidth]{Abbildungen/3D_Visualisationen/3D_visualization_CSD_filtered_space.png}}
+			\qquad
+			\subfloat[][ungefilterter Raum]{\includegraphics[width=0.4\linewidth]{Abbildungen/3D_Visualisationen/3D_visualization_CSD_unfiltered_space.png}}
+			\caption{gefilterter und ungefilterter Suchraum für das CSD-Problem}
+			\label{fig:3D_plot:CSD:filtered_and_unfiltered_search_spaces}
+		\end{figure}
+		
+		\noindent Um zu zeigen, wie stark der Initialisierungsraum sich verkleinert, werden die beiden Initialisierungsräume wie in Abbildung~\ref{fig:3D_plot:CSD:filtered_and_unfiltered_search_spaces}
+		
+		\begin{figure}[H] %TODO Abbildung nachmalen
+			\centering
+			\includegraphics[scale=0.5]{Abbildungen/3D_Visualisationen/3D_visualization_CSD_unfiltered_and_filtered_space.png}
+			\caption{gefilterter und ungefilterter Raum} %TODOgenaue Seitenzahl referenzieren?
+			\label{fig:3D_plot:CSD:filtered_and_unfiltered_search_spaces_combined}
+		\end{figure}
+		
+		%TODO boxplots für die Laufzeit der Algorithmen
+	
+		\subsubsection{Thermal Insulation System Design Problem (TISD)} \label{subsubsec:TISD}
+		
+		Das klassische nicht-konstruierte Testproblem, mit kategorischen Variablen, ist das Thermal Insulation System Design Problem (TISD). In der Literatur, wie in \cite{ACO_2013} beschrieben
+		
+		\begin{figure}[H] %TODO Abbildung nachmalen
+			\centering
+			\includegraphics[scale=0.5]{TISD_Sheme.png}
+			\caption{Schematische Zeichnung des TISD, wie dargestellt in \cite{ACO_2013}} %TODOgenaue Seitenzahl referenzieren?
+			\label{pic:TISD}
+		\end{figure}
+	
+		\subsubsection{Traveling Spice Salesperson Problem (TSSP)} \label{subsubsec:TSSP}
 			
 	\section{Herausforderung}
 	
