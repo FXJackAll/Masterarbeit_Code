@@ -10,57 +10,57 @@
 \contentsline {subsection}{\numberline {2.2}ACO-Metaheuristik nach \textit {Dorigo et al.}~\cite {dorigo1996ant}}{5}{}%
 \contentsline {subsection}{\numberline {2.3}Weiterentwicklung der ACO Metaheuristik zu der P-ACO-Metaheuristik}{6}{}%
 \contentsline {subsection}{\numberline {2.4}Ameisenalgorithmen Mit Einem Stetigen Lösungsarchiv}{8}{}%
-\contentsline {subsection}{\numberline {2.5}Ameisenalgorithmen Mit Einem Gemischten Lösungsarchiv}{9}{}%
+\contentsline {subsection}{\numberline {2.5}Ameisenalgorithmen Mit Einem Gemischten Lösungsarchiv}{8}{}%
 \contentsline {subsection}{\numberline {2.6}Ameisenalgorithmen mit einem Hierarchischen Gemischten Lösungsarchiv}{9}{}%
-\contentsline {subsection}{\numberline {2.7}Ameisenalgorithmen in stetigen Variablen}{10}{}%
+\contentsline {subsection}{\numberline {2.7}Ameisenalgorithmen in stetigen Variablen}{9}{}%
 \contentsline {section}{\numberline {3}Optimierungsprobleme}{10}{}%
-\contentsline {section}{\numberline {4}Grundlagen}{11}{}%
-\contentsline {subsection}{\numberline {4.1}ACO\(_{\mathbb {R}}\)}{12}{}%
-\contentsline {subsection}{\numberline {4.2}ACO\(_{\mathbb {R}}\)-simple}{13}{}%
-\contentsline {subsection}{\numberline {4.3}ACO\(_{\mathbb {R}}\)-very-simple}{14}{}%
-\contentsline {subsection}{\numberline {4.4}Erweiterung von ACO\(_\mathbb {R}\)-very-simple für Probleme mit nicht-stetigen Variablen}{15}{}%
+\contentsline {section}{\numberline {4}Grundlagen}{10}{}%
+\contentsline {subsection}{\numberline {4.1}ACO\(_{\mathbb {R}}\)}{11}{}%
+\contentsline {subsection}{\numberline {4.2}ACO\(_{\mathbb {R}}\)-simple}{12}{}%
+\contentsline {subsection}{\numberline {4.3}ACO\(_{\mathbb {R}}\)-very-simple}{13}{}%
+\contentsline {subsection}{\numberline {4.4}Erweiterung von ACO\(_\mathbb {R}\)-very-simple für Probleme mit nicht-stetigen Variablen}{14}{}%
 \contentsline {section}{\numberline {5}SPPBO-Schema}{15}{}%
-\contentsline {section}{\numberline {6}HSPPBO-Schema}{17}{}%
+\contentsline {section}{\numberline {6}HSPPBO-Schema}{16}{}%
 \contentsline {section}{\numberline {7}Formulierung Von ACO\(_\mathbb {R}\)-VS Im HSPPBO-Schema}{18}{}%
 \contentsline {section}{\numberline {8}Kombinieren des HSPPBO-Schemas mit ACO\(_\mathbb {R}\)-very-simple}{18}{}%
 \contentsline {subsection}{\numberline {8.1}Hom-HPB-ACO\(_\mathbb {R}\)-very-simple}{18}{}%
-\contentsline {subsection}{\numberline {8.2}Het-HPB-ACO\(_\mathbb {R}\)-very-simple}{19}{}%
+\contentsline {subsection}{\numberline {8.2}Het-HPB-ACO\(_\mathbb {R}\)-very-simple}{18}{}%
 \contentsline {subsection}{\numberline {8.3}Het-HSPPB-ACO\(_\mathbb {R}\)-very-simple}{19}{}%
-\contentsline {section}{\numberline {9}Testfunktionen}{20}{}%
-\contentsline {subsection}{\numberline {9.1}Permutationsprobleme Testfunktionen}{22}{}%
-\contentsline {subsubsection}{\numberline {9.1.1}Traveling Salesperson Problem (TSP)}{22}{}%
-\contentsline {subsubsection}{\numberline {9.1.2}Quadratic Assigment Problem (QAP)}{22}{}%
-\contentsline {subsection}{\numberline {9.2}Stetige Testfunktionen}{22}{}%
-\contentsline {subsubsection}{\numberline {9.2.1}Testfunktion - Paraboloid}{28}{}%
-\contentsline {subsubsection}{\numberline {9.2.2}Testfunktion - Easom}{29}{}%
-\contentsline {subsubsection}{\numberline {9.2.3}Testfunktion - Griewangk}{30}{}%
-\contentsline {subsubsection}{\numberline {9.2.4}Testfunktion - Rosenbrock}{30}{}%
-\contentsline {subsubsection}{\numberline {9.2.5}Testfunktion - Hartmann}{31}{}%
-\contentsline {subsubsection}{\numberline {9.2.6}Testfunktion - Shekel}{32}{}%
-\contentsline {subsection}{\numberline {9.3}Diskrete Testfunktionen}{32}{}%
-\contentsline {subsubsection}{\numberline {9.3.1}Ordinale Testfunktionen mit gleichverteiltem Definitionsbereich}{32}{}%
-\contentsline {subsubsection}{\numberline {9.3.2}Ordinale Testfunktionen mit asymmetrischem Definitionsbereich}{32}{}%
-\contentsline {subsection}{\numberline {9.4}Testfunktionen mit gemischten Variablem}{33}{}%
-\contentsline {subsubsection}{\numberline {9.4.1}Coil Spring Design Problem (CSD)}{33}{}%
-\contentsline {paragraph}{\numberline {9.4.1.1}Vollständiger Raum als Initialisierungsintervall}{36}{}%
-\contentsline {paragraph}{\numberline {9.4.1.2}Gefilterter Raum als Initialisierungsintervall}{37}{}%
-\contentsline {subsubsection}{\numberline {9.4.2}Thermal Insulation System Design Problem (TISD)}{38}{}%
-\contentsline {subsubsection}{\numberline {9.4.3}Traveling Spice Salesperson Problem (TSSP)}{38}{}%
-\contentsline {section}{\numberline {10}Herausforderung}{38}{}%
-\contentsline {section}{\numberline {11}Einfluss der Parameter}{38}{}%
-\contentsline {subsection}{\numberline {11.1}Einfluss der Anzahl der Ameisen}{39}{}%
-\contentsline {subsection}{\numberline {11.2}Einfluss des Parameters \textit {q}}{39}{}%
-\contentsline {subsection}{\numberline {11.3}Einfluss des Parameters \textit {k}}{40}{}%
-\contentsline {subsection}{\numberline {11.4}Einfluss des Parameters \(\xi \)}{41}{}%
-\contentsline {subsection}{\numberline {11.5}Auswertung der Einflüsse der Parameter}{41}{}%
-\contentsline {section}{\numberline {12}Vergleich zweier Intervallberechnungen für ACO\(_{\mathbb {R}}\)-simple und ACO\(_{\mathbb {R}}\)-very-simple}{42}{}%
-\contentsline {section}{\numberline {13}Vergleich von ACO\(_{\mathbb {R}}\), ACO\(_{\mathbb {R}}\)-simple und ACO\(_{\mathbb {R}}\)-very-simple}{44}{}%
-\contentsline {section}{\numberline {14}Konvergenzbetrachtung}{51}{}%
-\contentsline {subsection}{\numberline {14.1}Rosenbrock}{52}{}%
-\contentsline {section}{\numberline {15}Kurzzusammenfassung}{53}{}%
-\contentsline {section}{Literaturverzeichnis}{54}{}%
-\contentsline {section}{Tabellenverzeichnis}{56}{}%
-\contentsline {section}{Abbildungsverzeichnis}{56}{}%
+\contentsline {section}{\numberline {9}Testfunktionen}{19}{}%
+\contentsline {subsection}{\numberline {9.1}Permutationsprobleme Testfunktionen}{21}{}%
+\contentsline {subsubsection}{\numberline {9.1.1}Traveling Salesperson Problem (TSP)}{21}{}%
+\contentsline {subsubsection}{\numberline {9.1.2}Quadratic Assigment Problem (QAP)}{21}{}%
+\contentsline {subsection}{\numberline {9.2}Stetige Testfunktionen}{21}{}%
+\contentsline {subsubsection}{\numberline {9.2.1}Testfunktion - Paraboloid}{27}{}%
+\contentsline {subsubsection}{\numberline {9.2.2}Testfunktion - Easom}{28}{}%
+\contentsline {subsubsection}{\numberline {9.2.3}Testfunktion - Griewangk}{29}{}%
+\contentsline {subsubsection}{\numberline {9.2.4}Testfunktion - Rosenbrock}{29}{}%
+\contentsline {subsubsection}{\numberline {9.2.5}Testfunktion - Hartmann}{30}{}%
+\contentsline {subsubsection}{\numberline {9.2.6}Testfunktion - Shekel}{31}{}%
+\contentsline {subsection}{\numberline {9.3}Diskrete Testfunktionen}{31}{}%
+\contentsline {subsubsection}{\numberline {9.3.1}Ordinale Testfunktionen mit gleichverteiltem Definitionsbereich}{31}{}%
+\contentsline {subsubsection}{\numberline {9.3.2}Ordinale Testfunktionen mit asymmetrischem Definitionsbereich}{31}{}%
+\contentsline {subsection}{\numberline {9.4}Testfunktionen mit gemischten Variablem}{32}{}%
+\contentsline {subsubsection}{\numberline {9.4.1}Coil Spring Design Problem (CSD)}{32}{}%
+\contentsline {paragraph}{\numberline {9.4.1.1}Vollständiger Raum als Initialisierungsintervall}{35}{}%
+\contentsline {paragraph}{\numberline {9.4.1.2}Gefilterter Raum als Initialisierungsintervall}{36}{}%
+\contentsline {subsubsection}{\numberline {9.4.2}Thermal Insulation System Design Problem (TISD)}{37}{}%
+\contentsline {subsubsection}{\numberline {9.4.3}Traveling Spice Salesperson Problem (TSSP)}{37}{}%
+\contentsline {section}{\numberline {10}Herausforderung}{37}{}%
+\contentsline {section}{\numberline {11}Einfluss der Parameter}{37}{}%
+\contentsline {subsection}{\numberline {11.1}Einfluss der Anzahl der Ameisen}{38}{}%
+\contentsline {subsection}{\numberline {11.2}Einfluss des Parameters \textit {q}}{38}{}%
+\contentsline {subsection}{\numberline {11.3}Einfluss des Parameters \textit {k}}{39}{}%
+\contentsline {subsection}{\numberline {11.4}Einfluss des Parameters \(\xi \)}{40}{}%
+\contentsline {subsection}{\numberline {11.5}Auswertung der Einflüsse der Parameter}{40}{}%
+\contentsline {section}{\numberline {12}Vergleich zweier Intervallberechnungen für ACO\(_{\mathbb {R}}\)-simple und ACO\(_{\mathbb {R}}\)-very-simple}{41}{}%
+\contentsline {section}{\numberline {13}Vergleich von ACO\(_{\mathbb {R}}\), ACO\(_{\mathbb {R}}\)-simple und ACO\(_{\mathbb {R}}\)-very-simple}{43}{}%
+\contentsline {section}{\numberline {14}Konvergenzbetrachtung}{50}{}%
+\contentsline {subsection}{\numberline {14.1}Rosenbrock}{51}{}%
+\contentsline {section}{\numberline {15}Kurzzusammenfassung}{52}{}%
+\contentsline {section}{Literaturverzeichnis}{53}{}%
+\contentsline {section}{Tabellenverzeichnis}{55}{}%
+\contentsline {section}{Abbildungsverzeichnis}{55}{}%
 \contentsline {part}{\nonumberline Anlagen}{I}{}%
 \contentsline {section}{\numberline {A}Einfluss der Anzahl der Ameisen}{I}{}%
 \contentsline {section}{\numberline {B}Einfluss des Parameters \textit {q}}{II}{}%
