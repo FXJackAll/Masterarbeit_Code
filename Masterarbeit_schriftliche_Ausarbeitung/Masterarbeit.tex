@@ -323,7 +323,7 @@ within=section,
 	
 	%TODO Originale oder was anderes? Ja
 	
-	Die ACO-Metaheuristik, nach \textit{Dorigo et al.}~\cite{dorigo1996ant}, kann als Erweiterung der Konstruktion aus Abschnitt~\ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen} gesehen werden, da wir sie auch als Tupel \((\Sigma, \mathcal{B}, \mathcal{E}, \Delta, \mathcal{M}, \eta, f, \mathcal{I}, \mathcal{S})\) angeben können. Dabei ist zwar \(\Sigma = G(V,E)\) aber \(V\) und \(E\) sind beliebig, genauso wie die Beschränkungen \(\mathcal{B}\). Weiter gilt \(|\mathcal{E}| = m, \, m \in \mathbb{N}\) und nicht nur \(|\mathcal{E}| = 1\). Die Menge des Pheromons \(\Delta\), welche die iterationsbeste Ameise auf die von ihr gewählten Kanten hinterlegt, wird Problemabhängig gewählt. Die Pheromonmatrix \(\mathcal{M}\) kann größer sein als im Abschnitt~\ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen} aber sie ist genauso aufgebaut und auch ihre Funktionalität ist die selbe. Die problemabhängige Heuristik ist \(\eta\). Die Zielfunktion \(f\) kann auch beliebig formuliert werden, es bleibt jedoch gleich, dass mindestens eines ihrer globalen Minima gesucht wird. Das Initialisierungskriterium bleibt gleich, wie im Abschnitt~\ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen}. Das Stoppkriterium \(\mathcal{S}\) kann frei gewählt werden.\hfill\newline
+	Die ACO-Metaheuristik, nach \textit{Dorigo et al.}~\cite{dorigo1996ant}, kann als Erweiterung der Konstruktion aus Abschnitt~\ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen} gesehen werden, da wir sie auch als Tupel \((\Sigma, \mathcal{B}, \mathcal{E}, \Delta_c, \mathcal{M}_c, \eta, f, \mathcal{I}, \mathcal{S})\) angeben können. Dabei ist zwar \(\Sigma = G(V,E)\) aber \(V\) und \(E\) sind beliebig, genauso wie die Beschränkungen \(\mathcal{B}\). Weiter gilt \(|\mathcal{E}| = m, \, m \in \mathbb{N}\) und nicht nur \(|\mathcal{E}| = 1\). Die Menge des Pheromons \(\Delta\), welche die iterationsbeste Ameise auf die von ihr gewählten Kanten hinterlegt, wird Problemabhängig gewählt. Die Pheromonmatrix \(\mathcal{M}\) kann größer sein als im Abschnitt~\ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen} aber sie ist genauso aufgebaut und auch ihre Funktionalität ist die selbe. Die problemabhängige Heuristik ist \(\eta\). Die Zielfunktion \(f\) kann auch beliebig formuliert werden, es bleibt jedoch gleich, dass mindestens eines ihrer globalen Minima gesucht wird. Das Initialisierungskriterium bleibt gleich, wie im Abschnitt~\ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen}. Das Stoppkriterium \(\mathcal{S}\) kann frei gewählt werden.\hfill\newline
 	
 	Für die ACO-Metaheuristik angewandt auf das TSP gilt  kann \(\mathcal{B} = \max_{v_i, v_j \in V} d(v_i, v_j) \leq D\) sein, wobei \(D\) die maximale erlaubte Distanz zwischen zwei Städten ist, wenn die maximale Tankfüllung eines Transporters oder andere Beschränkungen berücksichtigt werden müssen, sonst gilt \(\mathcal{B} = \emptyset\). Die Anzahl der Ameisen ist \(|\mathcal{E}| = m\). Die Menge des Pheromons \(\Delta\), dass von der iterationsbesten Ameise abgelegt wird, ist in der Gleichung~\ref{subsec:ACO_-_Metaheuristik_Nach:eq:Delta} angegeben. Für das \ac{tsp} wird \(\eta\) in der Gleichung~\ref{subsec:ACO_-_Metaheuristik_Nach:eq:eta} angegeben, wobei \(d(v_i, v_j), v_i, v_j \in V\) die Distanz zwischen \(v_i\) und \(v_j\) ist.
 	
@@ -426,7 +426,7 @@ within=section,
 	
 	Die folgende Beschreibung ist nach \textit{Guntsch und Middendorf}~\cite{guntsch2002population} und in Anlehnung an meine Bachelorarbeit~\cite{FCM_2019}.\hfill\newline
 	
-	P-ACO steht für Population based ACO. Die Unterschiede zu ACO sind, dass in P-ACO die Pheromoninformation nicht mehr in einer stetigen \(n \times n\)-Pheromonmatrix \(\mathcal{M}\), sondern in einer diskreten \(n \times n\)-Pheromonmatrix \(\mathcal{M}_d\) gespeichert wird. Die Matrix \(\mathcal{M}_d\) ist diskret, da ihre Elemente nur endlich viele Werte annehmen können. In P-ACO wird auch zudem eine Liste \(\mathcal{P}\) der Länge \(k, k \in \mathbb{N}\), von Lösungen mitgeführt, wobei in \cite{guntsch2002population} gilt \(k \in \{1, 5, 25\}\). Die in \(P\) gespeicherten Lösungen werden als Populationen interpretiert, daher \glqq P-ACO\grqq{} als Name für diese Erweiterung von \glqq ACO\grqq. Demnach können wir, angelehnt an ACO, die P-ACO-Metaheuristik als Tupel \((\Sigma, \mathcal{B}, \mathcal{E}, \Delta, \mathcal{M}_d, \mathcal{P}, \eta, f, \mathcal{I}, \mathcal{S})\) angeben. Nach \cite{guntsch2002population}, gilt \(|\mathcal{E}| = 10\). Dabei wird in \textit{Guntsch und Middendorf}~\cite{guntsch2002population} die Liste der Populationen nach dem Prinzip \glqq first in last out\grqq{} befüllt. Bei diesem Prinzip wird, nachdem die Liste \(\mathcal{P}\) zunächst mit \(k\) Lösungen befüllt wurde, wenn eine neue Lösung generiert wird, die älteste Lösung entfernt, die verbleibenden Lösungen um eine Stelle nach hinten verschoben und die neue Lösung an den ersten Platz in der Liste \(\mathcal{P}\) gespeichert. Ein anderes Prinzip \(\mathcal{P}\) zu verwalten ist das \glqq best in worst out\grqq{} Prinzip. Dieses Prinzip wird im Abschnitt~\ref{subsec:Ameisenalgorithmen_Mit_Einem_Stetigen_Loesungsarchiv} erläutert. Das Befüllen von \(\mathcal{P}\) mit \(k\) Lösungen und dem folgenden Aufbau von \(\mathcal{M}_d\) ist hier die Initialisierungsmethode \(\mathcal{I}\). Ein weiterer Unterschied ist, dass die Pheromonmatrix \(\mathcal{M}_d\) nicht mehr beliebig viel Pheromoninformation enthält, wie \(\mathcal{M}\), sondern jedes Element nur \(k + 1\) verschiedene Werte annehmen kann, wodurch \(\mathcal{M}_d\) diskret ist. Ferner muss bei P-ACO nicht mehr jedes Element der Pheromonmatrix \(\mathcal{M}_d\) bei jeder Iteration betrachtet werden. Nur die Elemente von \(\mathcal{M}_d\), welche in der neuen Lösung, welche in \(\mathcal{P}\) aufgenommen wird, vorkommen und die in der alten Lösung vorkommen, welche aus \(\mathcal{P}\) entfernt wird, und damit verändert werden, müssen betrachtet werden. Beides braucht \(n, n \in \mathbb{N}\) Schritte, also insgesamt \(2n\) Schritte. Damit braucht das Pheromonupdate statt \(\mathcal{O}(n^2)\) Zeit, nur \(\mathcal{O}(n)\). In dieser Tatsache liegt die Errungenschaft von  \textit{Guntsch und Middendorf}~\cite{guntsch2002population}.\hfill\newline
+	P-ACO steht für Population based ACO. Die Unterschiede zu ACO sind, dass in P-ACO die Pheromoninformation nicht mehr in einer stetigen \(n \times n\)-Pheromonmatrix \(\mathcal{M}\), sondern in einer diskreten \(n \times n\)-Pheromonmatrix \(\mathcal{M}_d\) gespeichert wird. Die Matrix \(\mathcal{M}_d\) ist diskret, da ihre Elemente nur endlich viele Werte annehmen können. In P-ACO wird auch zudem eine Liste \(\mathcal{P}\) der Länge \(k, k \in \mathbb{N}\), von Lösungen mitgeführt, wobei in \cite{guntsch2002population} gilt \(k \in \{1, 5, 25\}\). Die in \(P\) gespeicherten Lösungen werden als Populationen interpretiert, daher \glqq P-ACO\grqq{} als Name für diese Erweiterung von \glqq ACO\grqq. Demnach können wir, angelehnt an ACO, die P-ACO-Metaheuristik als Tupel \((\Sigma, \mathcal{B}, \mathcal{E}, \Delta_d, \mathcal{M}_d, \mathcal{P}, \eta, f, \mathcal{I}, \mathcal{S})\) angeben. Nach \cite{guntsch2002population}, gilt \(|\mathcal{E}| = 10\). Dabei wird in \textit{Guntsch und Middendorf}~\cite{guntsch2002population} die Liste der Populationen nach dem Prinzip \glqq first in last out\grqq{} befüllt. Bei diesem Prinzip wird, nachdem die Liste \(\mathcal{P}\) zunächst mit \(k\) Lösungen befüllt wurde, wenn eine neue Lösung generiert wird, die älteste Lösung entfernt, die verbleibenden Lösungen um eine Stelle nach hinten verschoben und die neue Lösung an den ersten Platz in der Liste \(\mathcal{P}\) gespeichert. Ein anderes Prinzip \(\mathcal{P}\) zu verwalten ist das \glqq best in worst out\grqq{} Prinzip. Dieses Prinzip wird im Abschnitt~\ref{subsec:Ameisenalgorithmen_Mit_Einem_Stetigen_Loesungsarchiv} erläutert. Das Befüllen von \(\mathcal{P}\) mit \(k\) Lösungen und dem folgenden Aufbau von \(\mathcal{M}_d\) ist hier die Initialisierungsmethode \(\mathcal{I}\). Ein weiterer Unterschied ist, dass die Pheromonmatrix \(\mathcal{M}_d\) nicht mehr beliebig viel Pheromoninformation enthält, wie \(\mathcal{M}\), sondern jedes Element nur \(k + 1\) verschiedene Werte annehmen kann, wodurch \(\mathcal{M}_d\) diskret ist. Ferner muss bei P-ACO nicht mehr jedes Element der Pheromonmatrix \(\mathcal{M}_d\) bei jeder Iteration betrachtet werden. Nur die Elemente von \(\mathcal{M}_d\), welche in der neuen Lösung, welche in \(\mathcal{P}\) aufgenommen wird, vorkommen und die in der alten Lösung vorkommen, welche aus \(\mathcal{P}\) entfernt wird, und damit verändert werden, müssen betrachtet werden. Beides braucht \(n, n \in \mathbb{N}\) Schritte, also insgesamt \(2n\) Schritte. Damit braucht das Pheromonupdate statt \(\mathcal{O}(n^2)\) Zeit, nur \(\mathcal{O}(n)\). In dieser Tatsache liegt die Errungenschaft von  \textit{Guntsch und Middendorf}~\cite{guntsch2002population}.\hfill\newline
 	
 	%TODO jeder Eintrag nur \(k + 1\) verschiedene Werte: darf das Wort "nur" hier sein?
 	
@@ -488,6 +488,8 @@ within=section,
 	
 	Wie in meiner Bachelorarbeit~\cite{FCM_2019} und im Abschnitt~\ref{subsec:Weiterentwicklung_Der_ACO_Metaheuristik_Zu_Der_P_-_ACO_Metaheuristik} beschrieben, kann man, statt die Pheromoninformation von Iterationsschritt zu Iterationsschritt mitzuführen, die Information auch in einer diskreten Matrix speichern und implizit einem diskreten Lösungsarchiv. Dies funktioniert jedoch nur für diskrete Probleme. Um stetige Probleme zu lösen, kann man auf ein Archiv mit stetigen Einträgen zurückgreifen, was dann u.a. eine Liste sein kann.\hfill\newline
 	
+	%TODO umschreiben
+	
 	Ameisenalgorithmen mit einem stetigen Lösungsarchiv speichern ihre Lösungen in stetigen Einträgen. Wie genau, hängt von dem jeweiligen Algorithmus ab. Die einfachste Art und Weise dies zu tun, ist jedoch, die Lösungen wie sie generiert werden, nach einer bestimmten Vorschrift bzw. einem bestimmten Prinzip zu speichern, also ein einfaches Lösungsarchiv zu verwenden. Wiederum die einfachsten Vorschriften bzw. Prinzipe zum Speichern von Lösungen sind \glqq first in last out\grqq{} und \glqq best in worst out\grqq.
 	
 	%Wiederum die einfachsten Vorschriften zum Speichern von Lösungen sind \glqq first in last out\grqq{} und \glqq best in worst out\grqq. Bei der ersten Vorschrift wird die neueste Lösung ins Archiv aufgenommen und die Älteste entfernt und bei der Zweiten wird die Lösung nach ihrer Güte einsortiert. Ist bei der zweiten Vorschrift die Lösung schlechter als alle anderen im Archiv, wird die Lösung verworfen, ist sie besser als eine gespeicherte Lösung, wird die neue gute Lösung an die Stelle der alten schlechteren Lösung gesetzt, alle Lösungen ab der schlechteren Lösung, die schlechtere Lösung eingeschlossen, werden um einen Platz nach hinten verschoben und die dann neue schlechteste Lösung wird aus dem Archiv gelöscht.\hfill\newline
@@ -500,13 +502,15 @@ within=section,
 	
 	%Wie im Abschnitt~\ref{subsec:mixed_variable} beschrieben, können Variablen verschieden Skalenniveaus haben aber wenn 
 	
-	\subsection{Ameisenalgorithmen mit einem Hierarchischen Gemischten Lösungsarchiv}
+	\subsection{Ameisenalgorithmen mit gemischten Lösungsarchiven in einer hierarchischen Struktur}
 	
-	Wie im Abschnitt~\ref{sec:HSPPBO_Schema} beschrieben, wird bei einem hierarchischen Algorithmus die Anzahl der Archive von insgesamt 1 auf 3 pro \ac{sce} erhöht. Ein Archiv für die letzte gefundene Lösung des \ac{sce}, Eines für die bis dato beste gefundene persönliche Lösung des \ac{sce} und Eines für die bis dato beste gefundene Lösung des Eltern-\ac{sce}. Zusätzlich gibt es noch 1 weiteres Archiv, welches die bis dato insgesamt beste Lösung hält. Die Größe der Lösungsarchive schrumpft aber, von \(n = 100\) bei ACO\(_\mathbb{R}\)-VS, auf \(n = 1\). Dies ist notwendig, damit Lösungen entlang dem Baum im HSPPBO-Schema wandern können, denn man kann Archive nur dann einfach vergleichen, wenn sie nur eine Lösung haben. Das Vergleichskriterium ist dann der Funktionswert der Fitnessfunktion.\hfill\newline
+	Wie in \cite{kupfer2021hierarchical} beschrieben, werden bei einem hierarchischen Algorithmus die Ameisen in einer Baumstruktur angeordnet und die Anzahl der Archive wird von insgesamt 1 auf 3 pro Ameise erhöht. Ein Archiv für die letzte gefundene Lösung der Ameise, Eines für die bis dato beste gefundene persönliche Lösung der Ameise und Eines für die bis dato beste gefundene Lösung der Elternameise. Zusätzlich gibt es noch 1 weiteres Archiv, welches die bis dato insgesamt beste Lösung hält. Die Größe der Lösungsarchive schrumpft aber, von \(n = 100\) bei ACO\(_\mathbb{R}\)-VS~\cite{FCM_2019}, auf \(n = 1\). Dies ist notwendig, damit Lösungen entlang dem Baum wandern können, wie z.B. im HSPPBO-Schema, denn man kann Archive nur dann einfach vergleichen, wenn sie nur eine Lösung haben. Das Vergleichskriterium ist dann der Funktionswert der Fitnessfunktion.\hfill\newline
+	
+	%TODO fragen, ob der obere Abschnitt so ok ist´
 	
 	%TODO Forschungsfrage hier formulieren? wie ist mir überlassen
 	
-	Eine offene Forschungsfrage ist, wie mit Archiven in einer hierarchischen Struktur umgegangen werden kann, wenn sie mehr als 1 Lösung halten. Die einfachste Anordnung ist nach der Besten Lösung im Archiv zu ordnen. Die zweit einfachste Anordnung ist die Archive nach der Durchschnittsqualität der Lösungen zu sortieren. Eine komplexere Möglichkeit die Archive zu ordnen ist einen zusammengesetzten Term zu verwenden, wie in der Gleichung~\ref{eq:Archiveguete} zu sehen. Dieser Term funktioniert sowohl für Archive, die Lösungen nach der Regel \glqq first in last out\grqq{} speichern als auch für Archive, die Lösungen nach der Regel \glqq best in worst out\grqq{} speichern. Im letzten Fall gilt \(s_1 = s_{opt}\).
+	Eine offene Forschungsfrage ist, wie mit Archiven in einer hierarchischen Struktur umgegangen werden kann, wenn sie mehr als 1 Lösung halten. Die einfachste Anordnung ist nach der Besten Lösung im Archiv zu ordnen. Die zweit einfachste Anordnung ist die Archive nach der Durchschnittsqualität der Lösungen zu sortieren. Eine komplexere Möglichkeit die Archive zu ordnen ist einen zusammengesetzten Term zu verwenden, wie in Gleichung~\ref{eq:Archiveguete} zu sehen. Dieser Term funktioniert sowohl für Archive, die Lösungen nach dem Prinzip \glqq first in last out\grqq{} speichern als auch für Archive, die Lösungen nach dem Prinzip \glqq best in worst out\grqq{} speichern. Im letzten Fall gilt \(s_1 = s_{opt}\).
 	
 	\begin{equation} \label{eq:Archiveguete}
 		G"ute = c_1 \cdot f(s_1) + c_2 \cdot \frac{\sum_{i = 2}^n f(s_i)}{n - 1}
@@ -518,18 +522,18 @@ within=section,
 	%TODO Fragen, wo dieser Abschnitt am besten hin soll
 	%TODO weitere Forschungsfrage Archiv teilt sich in Teilarchive wenn Lösungen hinreichend stark von einander unterscheiden
 	
-	\subsection{Ameisenalgorithmen in stetigen Variablen}
+	%\subsection{Ameisenalgorithmen in stetigen Variablen}
 	
-	Ameisenalgorithmen in stetigen Variablen suchen Belegungen für jede ihrer Variablen in \(\mathbb{R}\) oder in einem Intervall von \(\mathbb{R}\), der Suchraum ist also z.B. \(\mathbb{R}^n, n \in \mathbb{N}\).\hfill\newline
+	%Ameisenalgorithmen in stetigen Variablen suchen Belegungen für jede ihrer Variablen in \(\mathbb{R}\) oder in einem Intervall von \(\mathbb{R}\), der Suchraum ist also z.B. \(\mathbb{R}^n, n \in \mathbb{N}\).\hfill\newline
 	
-	Da für ein stetiges Problem keine Matrix mit diskreten Einträgen verwendet werden kann, ist es möglich, wie in \textit{Socha und Dorigo}~\cite{socha2008ant} und dem vorherigen Abschnitt beschrieben, ein Lösungsarchiv zu verwendet, in dem die Lösungen gespeichert werden.
-	\hfill\newline
+	%Da für ein stetiges Problem keine Matrix mit diskreten Einträgen verwendet werden kann, ist es möglich, wie in \textit{Socha und Dorigo}~\cite{socha2008ant} und dem vorherigen Abschnitt beschrieben, ein Lösungsarchiv zu verwendet, in dem die Lösungen gespeichert werden.
+	%\hfill\newline
 	
-	Aus den Lösungen im Archiv wird dann eine neue Lösung konstruiert. Dies kann auf unterschiedlichste Weise passieren, wie in den Abschnitten~\ref{ACO_R}, \ref{ACO_R_simple} und~\ref{ACO_R_very_simple} beschrieben.\hfill\newline
+	%Aus den Lösungen im Archiv wird dann eine neue Lösung konstruiert. Dies kann auf unterschiedlichste Weise passieren, wie in den Abschnitten~\ref{ACO_R}, \ref{ACO_R_simple} und~\ref{ACO_R_very_simple} beschrieben.\hfill\newline
 	
-	Das Beschreiben andere Methoden der Generierung und Verarbeitung von Lösungen, abgesehen vom Speichern in einem Lösungsarchiv und der Konstruktion von neuen Lösungen aus diesem, geht über den Umfang dieser Arbeit hinaus und wird nicht betrachtet.
+	%Das Beschreiben andere Methoden der Generierung und Verarbeitung von Lösungen, abgesehen vom Speichern in einem Lösungsarchiv und der Konstruktion von neuen Lösungen aus diesem, geht über den Umfang dieser Arbeit hinaus und wird nicht betrachtet.
 	
-	\section{Optimierungsprobleme} \label{sec:Optimierungsprobleme}
+	\subsection{Optimierungsprobleme} \label{sec:Optimierungsprobleme}
 	
 	Da wir, im Vergleich zu meiner Bachelorarbeit~\cite{FCM_2019}, in dieser Arbeit die Menge der betrachteten Probleme auf Probleme mit gemischten Variablem erweitern, bietet es sich an, eine abstraktere Definition von Optimierungsproblemen zu etablieren.\hfill\newline
 	
@@ -564,25 +568,33 @@ within=section,
 	
 	%TODO ACO-R, ACO-R-S und ACO-R-VS nochmal einführen? kurz aber ja
 	
-	Wie in \textit{Socha und Dorigo}~\cite{socha2008ant} dargelegt, wird in ACO\(_{\mathbb{R}}\) ein Lösungsarchiv bei der Lösungssuche mitgeführt. Das Archiv hat die Größe k, es hält also zu jedem Zeitpunkt k Lösungen.\hfill\newline
+	In Anlehnung an \textit{Socha und Dorigo}~\cite{socha2008ant} und wie in meiner Bachelorarbeit~\cite{FCM_2019} beschrieben, baut der ACO\(_{\mathbb{R}}\) Algorithmus auf einem stetigen Lösungsarchive \(\mathcal{P}_c\) der Größe \(k\) auf. Auf eine Pheromonmatrix und damit auf Pheromon, sowie eine problemabhängige Heuristik wird verzichtet. Demnach können wir ACO\(_{\mathbb{R}}\) als Tupel \((\Sigma, \mathcal{B}, \mathcal{E}, \mathcal{P}_c, f, \mathcal{I}, \mathcal{S})\) angeben. In \cite{socha2008ant} gilt \(\mathcal{E} = 2\), \(\mathcal{P}_c = 50\).\hfill\newline
 	
-	\noindent Des Weiteren führt in ACO\(_{\mathbb{R}}\) jede Ameise n Konstruktionsschritte durch, wobei n die Anzahl der Dimensionen des Problems ist. Dabei wird im i-ten Konstruktionsschritt die folgende Funktion ausgewertet.\hfill\newline
+	Die Initialisierungsmethode \(\mathcal{I}\) ist auch hier das Füllen von \(\mathcal{P}_c\) mit Lösungen, wie bei P-ACO. Aber Das Stoppkriterium ist problemabhängig. So kann z.B. \(|f - f^*| < \varepsilon, \varepsilon = 10^{-10}\), wie in Abschnitt~\ref{subsec:Stetige_Testfunktionen}, wobei \(f^*\) das bekannte Optimum einer Testfunktion ist und \(f\) der Momentane Funktionswert, den der Lösungsalgorithmus gefunden hat.\hfill\newline
 	
-	\begin{equation}
+	Die Veränderung von P-ACO zu ACO\(_{\mathbb{R}}\), um stetige Probleme lösen zu können, transformiert die Lösungskonstruktion aus Gleichung~\ref{subsec:ACO_-_Metaheuristik_Nach:eq:Extended_Probabilistik_Rule} zur Gleichung~\ref{subsec:ACO_R:eq:Gauss-Kern_in_i_-_th_Dimension}. Und es wir nicht mehr betrachtet wie wahrscheinlich das wandern entlang einer Kante \((i,j)\) ist, sondern es wir im \(i\)-ten Konstruktionsschritt ein Gauss-Kernel in der \(i\)-ten Dimension ausgewertet, wobei gilt \(i \in \{1, \dots, n\}\) und \(n\) ist sowohl die Dimension der Testfunktion, als auch die Anzahl der Konstruktionsschritte, die jede Ameise pro Iteration macht.\hfill\newline¨
+	
+	%TODO ist bei "Dimension der Testfunktion" klar, dass es die Anzahl der Dimensionen ist?
+	
+	%Wie in \textit{Socha und Dorigo}~\cite{socha2008ant} dargelegt, wird in ACO\(_{\mathbb{R}}\) ein Lösungsarchiv bei der Lösungssuche mitgeführt. Das Archiv hat die Größe k, es hält also zu jedem Zeitpunkt k Lösungen.\hfill\newline
+	
+	%\noindent Des Weiteren führt in ACO\(_{\mathbb{R}}\) jede Ameise n Konstruktionsschritte durch, wobei n die Anzahl der Dimensionen des Problems ist. Dabei wird im i-ten Konstruktionsschritt die folgende Funktion ausgewertet.\hfill\newline
+	
+	\begin{equation} \label{subsec:ACO_R:eq:Gauss-Kern_in_i_-_th_Dimension}
 		G^i=\sum_{l=1}^{k} \omega_l g^i_l(x)=\sum_{l=1}^{k} \omega_l \frac{1}{ \sigma^i_l \sqrt{2\pi} }e^{-\frac{(x-\mu^i_l)^2}{2 {\sigma^i_l}^2}}, ~  i \in \{1, ..., n\}
 	\end{equation}
 	
-	\noindent Für Vektoren \(\omega\) , \(\mu\) und \(\sigma\) gilt, dass sie so viele Komponenten haben, wie es Lösungen im Lösungsarchiv gibt, also \(|\omega| = |\mu| = |\sigma| = k \).\hfill\newline
+	\noindent Weiter, in Anlehnung an \textit{Socha und Dorigo}~\cite{socha2008ant} gilt für die Vektoren \(\omega\) , \(\mu\) und \(\sigma\), dass ihre Kardinalität gleich der Kardinalität von \(\mathcal{P}\) ist, also gilt \(|\omega| = |\mu| = |\sigma| = |\mathcal{P}| = 50\). Die Parametervektoren \(\omega\) , \(\mu\) und \(\sigma\) werden in den Gleichungen \ref{subsec:ACO_R:eq:mu}, \ref{subsec:ACO_R:eq:omega} und \ref{subsec:ACO_R:eq:sigma} berechnet.\hfill\newline
 	
-	\noindent Ferner werden die Parametervektoren \(\omega\) , \(\mu\) und \(\sigma\) folgendermaßen berechnet.
+	%\noindent Ferner werden die Parametervektoren \(\omega\) , \(\mu\) und \(\sigma\) folgendermaßen berechnet.
 	
-	\begin{equation}
+	\begin{equation} \label{subsec:ACO_R:eq:mu}
 		\mu = \{ \mu^i_1, ...,\mu^i_k \} = \{ s^i_1, ..., s^i_k \}, ~  i \in \{1, ..., n\},
 	\end{equation}
 	
 	\noindent wobei \(n\) die Anzahl der Dimensionen ist, \(i\) der Konstruktionsschritt und \(s^i_j\) die \(i\)-te Variable der \(j\)-ten Lösung ist. Die Gewichte für jede Lösung ergeben sich nach Gleichung~(\ref{ACO_R_weights}).\hfill\newline
 	
-	\begin{equation} \label{ACO_R_weights}
+	\begin{equation} \label{subsec:ACO_R:eq:omega}
 		\omega_l = \frac{1}{qk\sqrt{2\pi}}e^{-\frac{(l-1)^2}{2q^2k^2}}, ~ 
 		l \in \{1, ..., k\},
 	\end{equation}
@@ -596,7 +608,7 @@ within=section,
 	
 	\noindent Und die Standardabweichung im \textit{i}-ten Konstruktionsschritt wird wie folgt berechnet.
 	
-	\begin{equation} \label{ACO_R_standard_distribution}
+	\begin{equation} \label{subsec:ACO_R:eq:sigma}
 		\sigma^i_l=\xi \sum_{e=1}^{k} \frac{|s^i_e-s^i_l|}{k-1}, ~ l \in \{1, ..., k\}, ~ i \in \{1, ..., n\}.
 	\end{equation}
 	
