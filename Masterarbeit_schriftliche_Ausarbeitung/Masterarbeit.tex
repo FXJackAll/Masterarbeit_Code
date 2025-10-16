@@ -568,11 +568,11 @@ within=section,
 	
 	%TODO ACO-R, ACO-R-S und ACO-R-VS nochmal einführen? kurz aber ja
 	
-	In Anlehnung an \textit{Socha und Dorigo}~\cite{socha2008ant} und wie in meiner Bachelorarbeit~\cite{FCM_2019} beschrieben, baut der ACO\(_{\mathbb{R}}\) Algorithmus auf einem stetigen Lösungsarchive \(\mathcal{P}_c\) der Größe \(k\) auf. Auf eine Pheromonmatrix und damit auf Pheromon, sowie eine problemabhängige Heuristik wird verzichtet. Demnach können wir ACO\(_{\mathbb{R}}\) als Tupel \((\Sigma, \mathcal{B}, \mathcal{E}, \mathcal{P}_c, f, \mathcal{I}, \mathcal{S})\) angeben. In \cite{socha2008ant} gilt \(\mathcal{E} = 2\), \(\mathcal{P}_c = 50\).\hfill\newline
+	In Anlehnung an \textit{Socha und Dorigo}~\cite{socha2008ant} und wie in meiner Bachelorarbeit~\cite{FCM_2019} beschrieben, baut der ACO\(_{\mathbb{R}}\) Algorithmus auf einem stetigen Lösungsarchive \(\mathcal{P}_c\) der Größe \(k\) auf. Auf eine Pheromonmatrix und damit auf Pheromon, sowie eine problemabhängige Heuristik wird verzichtet. Demnach können wir ACO\(_{\mathbb{R}}\) als Tupel \((\Sigma, \mathcal{B}, \mathcal{E}, \mathcal{P}_c, f, \mathcal{I}, \mathcal{S})\) angeben. In \cite{socha2008ant} gilt \(|\mathcal{E}| = 2\), \(|\mathcal{P}_c| = k = 50\).\hfill\newline
 	
-	Die Initialisierungsmethode \(\mathcal{I}\) ist auch hier das Füllen von \(\mathcal{P}_c\) mit Lösungen, wie bei P-ACO. Aber Das Stoppkriterium ist problemabhängig. So kann z.B. \(|f - f^*| < \varepsilon, \varepsilon = 10^{-10}\), wie in Abschnitt~\ref{subsec:Stetige_Testfunktionen}, wobei \(f^*\) das bekannte Optimum einer Testfunktion ist und \(f\) der Momentane Funktionswert, den der Lösungsalgorithmus gefunden hat.\hfill\newline
+	Die Initialisierungsmethode \(\mathcal{I}\) ist auch hier das Füllen von \(\mathcal{P}_c\) mit Lösungen, wie bei P-ACO. Aber Das Stoppkriterium ist problemabhängig. So kann z.B. \(|f - f^*| < \varepsilon, \varepsilon = 10^{-10}\) sein, wie in Abschnitt~\ref{subsec:Stetige_Testfunktionen}, wobei \(f^*\) das bekannte Optimum einer Testfunktion ist und \(f\) der Momentane Funktionswert, den der Lösungsalgorithmus gefunden hat.\hfill\newline
 	
-	Die Veränderung von P-ACO zu ACO\(_{\mathbb{R}}\), um stetige Probleme lösen zu können, transformiert die Lösungskonstruktion aus Gleichung~\ref{subsec:ACO_-_Metaheuristik_Nach:eq:Extended_Probabilistik_Rule} zur Gleichung~\ref{subsec:ACO_R:eq:Gauss-Kern_in_i_-_th_Dimension}. Und es wir nicht mehr betrachtet wie wahrscheinlich das wandern entlang einer Kante \((i,j)\) ist, sondern es wir im \(i\)-ten Konstruktionsschritt ein Gauss-Kernel in der \(i\)-ten Dimension ausgewertet, wobei gilt \(i \in \{1, \dots, n\}\) und \(n\) ist sowohl die Dimension der Testfunktion, als auch die Anzahl der Konstruktionsschritte, die jede Ameise pro Iteration macht.\hfill\newline¨
+	Die Veränderung von P-ACO zu ACO\(_{\mathbb{R}}\), um stetige Probleme lösen zu können, transformiert die Lösungskonstruktion aus Gleichung~\ref{subsec:ACO_-_Metaheuristik_Nach:eq:Extended_Probabilistik_Rule} zur Gleichung~\ref{subsec:ACO_R:eq:Gauss_-_Kern_In_i_-_th_Dimension}. Und es wir nicht mehr betrachtet wie wahrscheinlich das wandern entlang einer Kante \((i,j)\) ist, sondern es wir im \(i\)-ten Konstruktionsschritt ein Gauss-Kernel in der \(i\)-ten Dimension ausgewertet, wobei gilt \(i \in \{1, \dots, n\}\) und \(n\) ist sowohl die Dimension der Testfunktion, als auch die Anzahl der Konstruktionsschritte, die jede Ameise pro Iteration macht.\hfill\newline¨
 	
 	%TODO ist bei "Dimension der Testfunktion" klar, dass es die Anzahl der Dimensionen ist?
 	
@@ -580,64 +580,72 @@ within=section,
 	
 	%\noindent Des Weiteren führt in ACO\(_{\mathbb{R}}\) jede Ameise n Konstruktionsschritte durch, wobei n die Anzahl der Dimensionen des Problems ist. Dabei wird im i-ten Konstruktionsschritt die folgende Funktion ausgewertet.\hfill\newline
 	
-	\begin{equation} \label{subsec:ACO_R:eq:Gauss-Kern_in_i_-_th_Dimension}
+	\begin{equation} \label{subsec:ACO_R:eq:Gauss_-_Kern_In_i_-_th_Dimension}
 		G^i=\sum_{l=1}^{k} \omega_l g^i_l(x)=\sum_{l=1}^{k} \omega_l \frac{1}{ \sigma^i_l \sqrt{2\pi} }e^{-\frac{(x-\mu^i_l)^2}{2 {\sigma^i_l}^2}}, ~  i \in \{1, ..., n\}
 	\end{equation}
 	
-	\noindent Weiter, in Anlehnung an \textit{Socha und Dorigo}~\cite{socha2008ant} gilt für die Vektoren \(\omega\) , \(\mu\) und \(\sigma\), dass ihre Kardinalität gleich der Kardinalität von \(\mathcal{P}\) ist, also gilt \(|\omega| = |\mu| = |\sigma| = |\mathcal{P}| = 50\). Die Parametervektoren \(\omega\) , \(\mu\) und \(\sigma\) werden in den Gleichungen \ref{subsec:ACO_R:eq:mu}, \ref{subsec:ACO_R:eq:omega} und \ref{subsec:ACO_R:eq:sigma} berechnet.\hfill\newline
+	\noindent Weiter, in Anlehnung an \textit{Socha und Dorigo}~\cite{socha2008ant} gilt für die Vektoren \(\omega\) , \(\mu\) und \(\sigma\), dass ihre Kardinalität gleich der Kardinalität von \(\mathcal{P}\) ist, also gilt \(|\omega| = |\mu| = |\sigma| = |\mathcal{P}| = k = 50\). Die Elemente der Parametervektoren \(\omega\) , \(\mu\) und \(\sigma\) werden in den Gleichungen \ref{subsec:ACO_R:eq:mu}, \ref{subsec:ACO_R:eq:omega} und \ref{subsec:ACO_R:eq:sigma} berechnet. Dabei gilt, dass \(n\) die Anzahl der Dimensionen des Testproblems und \(i\) der Konstruktionsschritt ist. Weiter ist \(s^i_j\) die \(i\)-te Variable der \(j\)-ten Lösung. Der Parametervektor \(\omega\) unterscheidet sich von \(\mu\) und \(\sigma\) darin, dass er nicht zur Erzeugung der nächsten Lösung benutzt wird, sondern er jeder bereits vorhandenen Lösung im Lösungsarchiv \(\mathcal{P}_c\) ein Gewicht \(\omega_l\) zuordnen, welches dazu benutzt wird mithilfe der Gleichung~\ref{subsec:ACO_R:eq:Probability_Distribution} eine Wahrscheinlichkeitsverteilung aufzubauen. Unter Anwendung dieser Wahrscheinlichkeitsverteilung wird dann die \(l\)-te Gaußfunktion gewählt.\hfill\newline
+	
+	Der Term in Gleichung~\ref{subsec:ACO_R:eq:sigma} wird in \textit{Socha und Dorigo}~\cite{socha2008ant} als Standardabweichung bezeichnet, auch wenn in diesem Term keine Wurzel vorhanden ist. Wir verstehen das so, dass der Term zwar aus mathematischer Sicht keine Standardabweichung ist aber als Standardabweichung für den Algorithmus interpretiert wird, da in der Gleichung~\ref{subsec:ACO_R:eq:Gauss_-_Kern_In_i_-_th_Dimension} nach einer Standardabweichung verlangt wird.
 	
 	%\noindent Ferner werden die Parametervektoren \(\omega\) , \(\mu\) und \(\sigma\) folgendermaßen berechnet.
 	
 	\begin{equation} \label{subsec:ACO_R:eq:mu}
-		\mu = \{ \mu^i_1, ...,\mu^i_k \} = \{ s^i_1, ..., s^i_k \}, ~  i \in \{1, ..., n\},
+		\mu = \{ \mu^i_1, ...,\mu^i_k \} = \{ s^i_1, ..., s^i_k \}, ~ i \in \{1, ..., n\},
 	\end{equation}
 	
-	\noindent wobei \(n\) die Anzahl der Dimensionen ist, \(i\) der Konstruktionsschritt und \(s^i_j\) die \(i\)-te Variable der \(j\)-ten Lösung ist. Die Gewichte für jede Lösung ergeben sich nach Gleichung~(\ref{ACO_R_weights}).\hfill\newline
+	%\noindent wobei \(n\) die Anzahl der Dimensionen ist, \(i\) der Konstruktionsschritt und \(s^i_j\) die \(i\)-te Variable der \(j\)-ten Lösung ist. Die Gewichte für jede Lösung ergeben sich nach Gleichung~(\ref{subsec:ACO_R:eq:omega}).\hfill\newline
 	
 	\begin{equation} \label{subsec:ACO_R:eq:omega}
 		\omega_l = \frac{1}{qk\sqrt{2\pi}}e^{-\frac{(l-1)^2}{2q^2k^2}}, ~ 
-		l \in \{1, ..., k\},
+		l \in \{1, ..., k\}
 	\end{equation}
 	
-	\noindent Demnach wird die \textit{l}-te Gaußfunktion nach der Wahrscheinlichkeitsverteilung aus Gleichung~(\ref{ACO_R_probability_distribution}) gewählt.
+	%\noindent Demnach wird die \textit{l}-te Gaußfunktion nach der Wahrscheinlichkeitsverteilung aus Gleichung~(\ref{subsec:ACO_R:eq:Probability_Distribution}) gewählt.
 	
-	\begin{equation} \label{ACO_R_probability_distribution}
+	%\noindent Und die Standardabweichung im \textit{i}-ten Konstruktionsschritt wird wie folgt berechnet.
+	
+	\begin{equation} \label{subsec:ACO_R:eq:sigma}
+		\sigma^i_l=\xi \sum_{e=1}^{k} \frac{|s^i_e-s^i_l|}{k-1}, ~ l \in \{1, ..., k\}, ~ i \in \{1, ..., n\}
+	\end{equation}
+	
+	\begin{equation} \label{subsec:ACO_R:eq:Probability_Distribution}
 		p_l = \frac{\omega_l}{\sum_{r=1}^{k} \omega_r},  ~ 
 		l \in \{1, ..., k\}
 	\end{equation}
 	
-	\noindent Und die Standardabweichung im \textit{i}-ten Konstruktionsschritt wird wie folgt berechnet.
+	Nachdem die Parametervektoren berechnet wurden, wir im Konstruktionsschritt \(i\) die Gaußfunktion \(g^i_l\) ausgewertet, was durch einen Zufallszahlengenerator, der Zufallszahlen aus einer parametrisierten Normalverteilung erzeugt, passieren kann.\hfill\newline
 	
-	\begin{equation} \label{subsec:ACO_R:eq:sigma}
-		\sigma^i_l=\xi \sum_{e=1}^{k} \frac{|s^i_e-s^i_l|}{k-1}, ~ l \in \{1, ..., k\}, ~ i \in \{1, ..., n\}.
-	\end{equation}
+	Der Parameter \(q\) steuert, wie stark bessere Lösungen im Archiv bei der Konstruktion einer neuen Lösung bevorzugt werden. Je kleiner \(q\), desto stärker werden bessere Lösungen bevorzugt. Der Parameter \(\xi\) steuer, wie schnell der Algorithmus konvergiert. Je größer \(\xi\), desto langsamer konvergiert der Algorithmus. In \cite{socha2008ant} gilt \(q = 10^{-4}\), \(\xi = 0.85\).\hfill\newline
 	
-	\noindent wobei \(q\) und \(\xi\) Parameter sind. Es mag zwar die Wurzel fehlen aber in \textit{Socha und Dorigo}~\cite{socha2008ant} wurde die Standardabweichung so berechnet bzw. der Term in der Gleichung~(\ref{ACO_R_standard_distribution}) als Standardabweichung bezeichnet.\hfill\newline
+	%TODO reicht die Angabe q = 10^-4 und xi = 0.85 oder kleine Tabelle?
 	
-	\noindent Abschließend wird in Schritt \textit{i} die Gaußfunktion \(g^i_l\) ausgewertet. Dies kann u.a. durch einen Zufallszahlengenerator geschehen, der Zufallszahlen gemäß einer parametrisierten Normalverteilung generieren kann. \hfill\newline
+	%\noindent Abschließend wird in Schritt \textit{i} die Gaußfunktion \(g^i_l\) ausgewertet. Dies kann u.a. durch einen Zufallszahlengenerator geschehen, der Zufallszahlen gemäß einer parametrisierten Normalverteilung generieren kann. \hfill\newline
 	
-	\noindent Abschließend gehen wir noch auf die Parameter \(q\) und \(\xi\) ein. Der Parameter \(q\) beeinflusst, wie die Lösungen im Archiv in die Suche eingebunden werden. Bei kleinem \(q\) werden besseren Lösungen stärker bevorzugt. Und der Parameter \(\xi\) beeinflusst, wie schnell der Algorithmus konvergiert. Je größer \(\xi\), desto langsamer konvergiert der Algorithmus.
+	%\noindent Abschließend gehen wir noch auf die Parameter \(q\) und \(\xi\) ein. Der Parameter \(q\) beeinflusst, wie die Lösungen im Archiv in die Suche eingebunden werden. Bei kleinem \(q\) werden besseren Lösungen stärker bevorzugt. Und der Parameter \(\xi\) beeinflusst, wie schnell der Algorithmus konvergiert. Je größer \(\xi\), desto langsamer konvergiert der Algorithmus.
 	
 	\subsection{ACO\(_{\mathbb{R}}\)-simple} \label{subsec:ACO_R_-_simple}
 	
-	Der erste dieser Arbeit beiliegende Algorithmus ACO\(_{\mathbb{R}}\)-simple, nutzt das Lösungsarchiv auch wie ACO\(_{\mathbb{R}}\), jedoch setzt es die vorhandenen Lösungen auf eine sehr viel einfachere Weise zu einer neuen Lösung zusammen -- deswegen simple, also einfach.\hfill\newline
+	Wie in meiner Bachelorarbeit~\cite{FCM_2019} beschrieben, entstand der ACO\(_{\mathbb{R}}\)-simple Algorithmus durch eine Vereinfachung des ACO\(_\mathbb{R}\) Algorithmus. Der ACO\(_{\mathbb{R}}\)-simple Algorithmus nutzt das Lösungsarchiv auch wie ACO\(_{\mathbb{R}}\), jedoch setzt er die vorhandenen Lösungen auf eine einfachere Weise zu einer neuen Lösung zusammen -- deswegen simple, also einfach.\hfill\newline
 	
-	\noindent Dabei wird, wie in ACO\(_{\mathbb{R}}\) dieselbe Gewichtung der Lösungen vorgenommen. Zuerst werden die Gewichte anhand Gleichung~(\ref{ACO_R_simple_weights}) berechnet,
+	Die beiden Konzepte, die aus ACO\(_{\mathbb{R}}\) übernommen wurden, ist die Zuweisung jeder Lösung im Archiv eines Gewichts \(w_i\), dass mit der Gleichung~\ref{subsec:ACO_R_-_simple:eq:omega} berechnet und zum Aufbau einer Wahrscheinlichkeitsverteilung mithilfe der Gleichung~\ref{subsec:ACO_R_-_simple:eq:Probability_Distribution} benutzt wird, sowie die Art wie die Abweichung in Gleichung~\ref{subsec:ACO_R_-_simple:eq:Linear_Distribution} berechnet wird. Hier wird aber explizit 
 	
-	\begin{equation} \label{ACO_R_simple_weights}
+	\noindent Dabei wird, wie in ACO\(_{\mathbb{R}}\) dieselbe Gewichtung der Lösungen vorgenommen. Zuerst werden die Gewichte anhand Gleichung~(\ref{}) berechnet,
+	
+	\begin{equation} \label{subsec:ACO_R_-_simple:eq:omega}
 		\omega_i = \frac{1}{qk\sqrt{2\pi}}e^{-\frac{(i-1)^2}{2q^2k^2}}, ~ 
 		i \in \{1, ..., k\},
 	\end{equation}
 	
 	\noindent wobei auch hier k die Anzahl der Lösungen im Lösungsarchiv ist, also die Größe des Archivs. Danach wird die Wahrscheinlichkeitsverteilung, nach welcher eine Lösung aus dem Archiv gewählt wird, gemäß Gleichung~(\ref{ACO_R_simple_probability_distribution}) berechnet.
 	
-	\begin{equation} \label{ACO_R_simple_probability_distribution}
+	\begin{equation} \label{subsec:ACO_R_-_simple:eq:Probability_Distribution}
 		p_i=\frac{w_i}{\sum_{j=1}^{n} w_j}, ~  i \in \{1, ..., k\}.
 	\end{equation}
 	
 	\noindent Es wird also zufällig eine Lösung \(s_i\) mit der Wahrscheinlichkeit \(p_i\) aus dem Lösungsarchiv gewählt. Danach wird die lineare Abweichung in der d-ten Dimension zu dieser Lösung mit der Gleichung~(\ref{ACO_R_simple_linear_distribution}) berechnet.
 	
-	\begin{equation} \label{ACO_R_simple_linear_distribution}
+	\begin{equation} \label{subsec:ACO_R_-_simple:eq:Linear_Distribution}
 		\delta_d = \xi\sum_{j=1}^{k} \frac{|s_{j\_d}-s_{i\_d}|}{k-1}, ~ j \in \{1, ..., k\}, ~ d \in \{1, ..., n\},
 	\end{equation}
 	
