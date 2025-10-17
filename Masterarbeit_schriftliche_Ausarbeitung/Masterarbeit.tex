@@ -568,7 +568,7 @@ within=section,
 	
 	%TODO ACO-R, ACO-R-S und ACO-R-VS nochmal einführen? kurz aber ja
 	
-	In Anlehnung an \textit{Socha und Dorigo}~\cite{socha2008ant} und wie in meiner Bachelorarbeit~\cite{FCM_2019} beschrieben, baut der ACO\(_{\mathbb{R}}\) Algorithmus auf einem stetigen Lösungsarchive \(\mathcal{P}_c\) der Größe \(k\) auf. Auf eine Pheromonmatrix und damit auf Pheromon, sowie eine problemabhängige Heuristik wird verzichtet. Demnach können wir ACO\(_{\mathbb{R}}\) als Tupel \((\Sigma, \mathcal{B}, \mathcal{E}, \mathcal{P}_c, f, \mathcal{I}, \mathcal{S})\) angeben. In \cite{socha2008ant} gilt \(|\mathcal{E}| = 2\), \(|\mathcal{P}_c| = k = 50\).\hfill\newline
+	In Anlehnung an \textit{Socha und Dorigo}~\cite{socha2008ant} und wie in meiner Bachelorarbeit~\cite{FCM_2019} beschrieben, baut der ACO\(_{\mathbb{R}}\) Algorithmus auf einem stetigen Lösungsarchiv \(\mathcal{P}_c\) der Größe \(k\) auf. Auf eine Pheromonmatrix und damit auf Pheromon, sowie eine problemabhängige Heuristik wird verzichtet. Demnach können wir ACO\(_{\mathbb{R}}\) als Tupel \((\Sigma, \mathcal{B}, \mathcal{E}, \mathcal{P}_c, f, \mathcal{I}, \mathcal{S})\) angeben. In \cite{socha2008ant} gilt \(|\mathcal{E}| = 2\), \(|\mathcal{P}_c| = k = 50\).\hfill\newline
 	
 	Die Initialisierungsmethode \(\mathcal{I}\) ist auch hier das Füllen von \(\mathcal{P}_c\) mit Lösungen, wie bei P-ACO. Aber Das Stoppkriterium ist problemabhängig. So kann z.B. \(|f - f^*| < \varepsilon, \varepsilon = 10^{-10}\) sein, wie in Abschnitt~\ref{subsec:Stetige_Testfunktionen}, wobei \(f^*\) das bekannte Optimum einer Testfunktion ist und \(f\) der Momentane Funktionswert, den der Lösungsalgorithmus gefunden hat.\hfill\newline
 	
@@ -628,36 +628,42 @@ within=section,
 	
 	Wie in meiner Bachelorarbeit~\cite{FCM_2019} beschrieben, entstand der ACO\(_{\mathbb{R}}\)-simple Algorithmus durch eine Vereinfachung des ACO\(_\mathbb{R}\) Algorithmus. Der ACO\(_{\mathbb{R}}\)-simple Algorithmus nutzt das Lösungsarchiv auch wie ACO\(_{\mathbb{R}}\), jedoch setzt er die vorhandenen Lösungen auf eine einfachere Weise zu einer neuen Lösung zusammen -- deswegen simple, also einfach.\hfill\newline
 	
-	Die beiden Konzepte, die aus ACO\(_{\mathbb{R}}\) übernommen wurden, ist die Zuweisung jeder Lösung im Archiv eines Gewichts \(w_i\), dass mit der Gleichung~\ref{subsec:ACO_R_-_simple:eq:omega} berechnet und zum Aufbau einer Wahrscheinlichkeitsverteilung mithilfe der Gleichung~\ref{subsec:ACO_R_-_simple:eq:Probability_Distribution} benutzt wird, sowie die Art wie die Abweichung in Gleichung~\ref{subsec:ACO_R_-_simple:eq:Linear_Distribution} berechnet wird. Hier wird aber explizit 
+	Die vier Konzepte, die aus ACO\(_{\mathbb{R}}\) übernommen wurden, ist die Verwendung eines Lösungsarchivs \(\mathcal{P}_c\), die Zuweisung jeder Lösung im Archiv eines Gewichts \(w_i\), dass mit der Gleichung~\ref{subsec:ACO_R_-_simple:eq:omega} berechnet und zum Aufbau einer Wahrscheinlichkeitsverteilung mithilfe der Gleichung~\ref{subsec:ACO_R_-_simple:eq:Probability_Distribution} benutzt wird und somit wie eine Lösung \(s_i\) aus dem Archiv gewählt wird, die Art wie die Abweichung in Gleichung~\ref{subsec:ACO_R_-_simple:eq:Linear_Deviation} berechnet wird, sowie die Verwendung der Parameter \(q\) und \(\xi\). Bei der Berechnung der Abweichung in Gleichung~\ref{subsec:ACO_R_-_simple:eq:Linear_Deviation} wird aber, aufgrund der Art und Weise wie die Abweichung späteren verwendet wird, explizit die lineare Abweichung gewollt.\hfill\newline
 	
-	\noindent Dabei wird, wie in ACO\(_{\mathbb{R}}\) dieselbe Gewichtung der Lösungen vorgenommen. Zuerst werden die Gewichte anhand Gleichung~(\ref{}) berechnet,
+	Im Gegensatz zu ACO\(_\mathbb{R}\) gilt in ACO\(_{\mathbb{R}}\)-simple aber \(|\mathcal{P}| = k = 100\), \(q = 0.95\) und \(\xi = 0.95\).¨Die Archivgröße wurde verdoppelt, da der Algorithmus viel einfacher ist als ACO\(_\mathbb{R}\), wodurch ich schlussfolgerte, dass eine größere Archivgröße ACO\(_{\mathbb{R}}\)-simple erlaubt auch vom momentanen Bestwert weiter entferntere Lösungen im Suchraum zu erforschen. Das ist auch der selbe Grund, wieso \(q = 0.85\) gesetzt wurde. Auf der anderen Seite wurde \(\xi = 0.95\) gesetzt, damit das Suchintervall in Gleichung~\ref{subsec:ACO_R_-_simple:eq:Suchintervall} möglichst erhalten bleibt. Es gab auch die Möglichkeit \(\xi = 1.0\) zu setzten aber im Sinne der Einfachheit habe ich mich dazu entschlossen \(q = \xi = 0.95\) zu setzten. Im Bestreben nach Einfachheit habe ich auch \(|\mathcal{E}| = 1\) gesetzt, da ich den Selektionsdruck, der durch das Verwalten des Lösungsarchivs nach dem \glqq best in worst out\grqq Prinzip entsteht, für bereits ausreichend hielt. Demnach können wir ACO\(_{\mathbb{R}}\)-simple als Tupel \((\Sigma, \mathcal{B}, \mathcal{E}, \mathcal{P}_c, f, \mathcal{I}, \mathcal{S})\) angeben. Der größte Unterschied zu ACO\(_\mathbb{R}\) liegt aber darin wie ACO\(_{\mathbb{R}}\)-simple eine neue Lösung erzeugt. Denn nachdem die lineare Abweichung in jeder Dimension in Gleichung~\ref{subsec:ACO_R_-_simple:eq:Linear_Deviation} berechnet wurde, wird nur noch ein Intervall in jeder Dimension \(d, d \in \{1, \dots, n\}\) des Problems mithilfe der linearen Abweichung aufgebaut und dann wird aus jedem der Intervalle ein zufälliger Punkt als Komponente der neuen Lösung gewählt.
+	
+	%TODO schlussfolgerte ok so oder anderes Wort?
+	
+	%TODO reicht es, wenn s_i im Text erwähnt wird für die spätere Gleichung oder nochmal irgendwo nennen
+	
+	%\noindent Dabei wird, wie in ACO\(_{\mathbb{R}}\) dieselbe Gewichtung der Lösungen vorgenommen. Zuerst werden die Gewichte anhand Gleichung~(\ref{}) berechnet,
 	
 	\begin{equation} \label{subsec:ACO_R_-_simple:eq:omega}
 		\omega_i = \frac{1}{qk\sqrt{2\pi}}e^{-\frac{(i-1)^2}{2q^2k^2}}, ~ 
 		i \in \{1, ..., k\},
 	\end{equation}
 	
-	\noindent wobei auch hier k die Anzahl der Lösungen im Lösungsarchiv ist, also die Größe des Archivs. Danach wird die Wahrscheinlichkeitsverteilung, nach welcher eine Lösung aus dem Archiv gewählt wird, gemäß Gleichung~(\ref{ACO_R_simple_probability_distribution}) berechnet.
+	%\noindent wobei auch hier k die Anzahl der Lösungen im Lösungsarchiv ist, also die Größe des Archivs. Danach wird die Wahrscheinlichkeitsverteilung, nach welcher eine Lösung aus dem Archiv gewählt wird, gemäß Gleichung~(\ref{ACO_R_simple_probability_distribution}) berechnet.
 	
 	\begin{equation} \label{subsec:ACO_R_-_simple:eq:Probability_Distribution}
 		p_i=\frac{w_i}{\sum_{j=1}^{n} w_j}, ~  i \in \{1, ..., k\}.
 	\end{equation}
 	
-	\noindent Es wird also zufällig eine Lösung \(s_i\) mit der Wahrscheinlichkeit \(p_i\) aus dem Lösungsarchiv gewählt. Danach wird die lineare Abweichung in der d-ten Dimension zu dieser Lösung mit der Gleichung~(\ref{ACO_R_simple_linear_distribution}) berechnet.
+	%\noindent Es wird also zufällig eine Lösung \(s_i\) mit der Wahrscheinlichkeit \(p_i\) aus dem Lösungsarchiv gewählt. Danach wird die lineare Abweichung in der d-ten Dimension zu dieser Lösung mit der Gleichung~(\ref{ACO_R_simple_linear_distribution}) berechnet.
 	
-	\begin{equation} \label{subsec:ACO_R_-_simple:eq:Linear_Distribution}
+	\begin{equation} \label{subsec:ACO_R_-_simple:eq:Linear_Deviation}
 		\delta_d = \xi\sum_{j=1}^{k} \frac{|s_{j\_d}-s_{i\_d}|}{k-1}, ~ j \in \{1, ..., k\}, ~ d \in \{1, ..., n\},
 	\end{equation}
 	
-	\noindent Dabei ist \(n\) die Anzahl der Dimensionen des Problems.\hfill\newline
+	%\noindent Dabei ist \(n\) die Anzahl der Dimensionen des Problems.\hfill\newline
 	
-	\noindent Anschließend wird für jede Dimension ein zufälliger Punkt aus dem Intervall
+	%\noindent Anschließend wird für jede Dimension ein zufälliger Punkt aus dem Intervall
 	
-	\begin{equation}
+	\begin{equation} \label{subsec:ACO_R_-_simple:eq:Suchintervall}
 		[s_d - \delta_d, s_d + \delta_d], ~ d \in \{1, ..., n\},
 	\end{equation}
 	
-	\noindent genommen. Damit haben wir, ausgehen von einem Lösungsarchiv, eine neue Lösung gewonnen. \hfill\newline
+	%\noindent genommen. Damit haben wir, ausgehen von einem Lösungsarchiv, eine neue Lösung gewonnen. \hfill\newline
 	
 	\noindent Die Standardeinstellungen der Parameter sind, wie in Tabelle~\ref{ACO_R_simple_Parametereinstellungen} zu sehen ist.
 	
@@ -687,7 +693,7 @@ within=section,
 		
 	\end{table}
 	
-	100 da Algorithmus einfacher und er damit braucht mehr Information/Lösungsinformation
+	%TODO 100 da Algorithmus einfacher und er damit braucht mehr Information/Lösungsinformation
 	
 	\subsection{ACO\(_{\mathbb{R}}\)-very-simple} \label{subsec:ACO_R_-_very_-_simple}
 	
