@@ -341,7 +341,7 @@ within=section,
 		\eta_{ij} := \frac{1}{d(v_i, v_j)} \, \, \text{für zwei Knoten} \, v_i, v_j \in V
 	\end{equation}
 	
-	Wie in \textit{Dorigo et al.}\cite{dorigo1996ant} beschrieben werden bei der Anwendung der ACO-Metaheuristik auf das TSP die Gleichungen \ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen:eq:Wahrscheinlichkeit_NF} und \ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen:eq:Wahrscheinlichkeit_ND} zuerst zur Gleichung~\ref{subsec:ACO_-_Metaheuristik_Nach:eq:Probabilistik_Rule} erweitert, wobei \(V'\) die Menge der Städte ist, die noch nicht besucht wurden, danach zur Gleichung~\ref{subsec:ACO_-_Metaheuristik_Nach:eq:Extended_Probabilistik_Rule}. Dabei hat \(\alpha\) die selbe Funktion, wie in den Gleichungen \ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen:eq:Wahrscheinlichkeit_NF} und \ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen:eq:Wahrscheinlichkeit_ND} und \(\beta\) ist ein Parameter, der bestimmt, wie viel Einfluss die Heuristik \(\eta\) hat. Die Gleichung~\ref{subsec:ACO_-_Metaheuristik_Nach:eq:Extended_Probabilistik_Rule} ist schließlich die Gleichung, welche beim Algorithmus~\ref{subsec:ACO_Metaheuristik:alg:ACO} im Schritt \glqq CreateSolution(SCE)\grqq{} verwendet wird. In diesem Schritt wird eine Ameise zunächst auf einen zufällig ausgewählten Knoten gesetzt und von diesem Knoten aus wird dann mithilfe der Gleichung~\ref{subsec:ACO_-_Metaheuristik_Nach:eq:Extended_Probabilistik_Rule} der nächste Knoten gewählt. Dies wird solange wiederholt, bis \(V' = \emptyset\) gilt. \hfill\newline
+	Wie in \textit{Dorigo et al.}\cite{dorigo1996ant} beschrieben werden bei der Anwendung der ACO-Metaheuristik auf das TSP die Gleichungen \ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen:eq:Wahrscheinlichkeit_NF} und \ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen:eq:Wahrscheinlichkeit_ND} zuerst zur Gleichung~\ref{subsec:ACO_-_Metaheuristik_Nach:eq:Probabilistik_Rule} erweitert, wobei \(V'\) die Menge der Städte ist, die noch nicht besucht wurden, danach zur Gleichung~\ref{subsec:ACO_-_Metaheuristik_Nach:eq:Extended_Probabilistik_Rule}. Dabei hat \(\alpha\) die selbe Funktion, wie in den Gleichungen \ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen:eq:Wahrscheinlichkeit_NF} und \ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen:eq:Wahrscheinlichkeit_ND} und \(\beta\) ist ein Parameter, der bestimmt, wie viel Einfluss die Heuristik \(\eta\) hat. Die Gleichung~\ref{subsec:ACO_-_Metaheuristik_Nach:eq:Extended_Probabilistik_Rule} ist schließlich die Gleichung, welche beim Algorithmus~\ref{subsec:ACO_Metaheuristik:alg:ACO} im Schritt \glqq CreateSolution(ant)\grqq{} verwendet wird. In diesem Schritt wird eine Ameise zunächst auf einen zufällig ausgewählten Knoten gesetzt und von diesem Knoten aus wird dann mithilfe der Gleichung~\ref{subsec:ACO_-_Metaheuristik_Nach:eq:Extended_Probabilistik_Rule} der nächste Knoten gewählt. Dies wird solange wiederholt, bis \(V' = \emptyset\) gilt. \hfill\newline
 	
 	%TODO rausfinden, welche Werte für beta sind
 	
@@ -366,9 +366,9 @@ within=section,
 			\Repeat
 			
 				%\State test
-				\For {\(\acs{sce} \in \mathcal{E}\)}
+				\For {\(ant \in \mathcal{E}\)}
 				
-					\State CreateSolution(SCE)
+					\State CreateSolution(ant)
 				
 				\EndFor
 				
@@ -552,17 +552,17 @@ within=section,
 	%TODO fragen, ob d_min angeben werden soll? nein
 	%TODO Braucht man eine Unterscheidung zwischen Sigma und feasable Sigma? Nein, da feasable gleich eingeschränkten Suchraum aber erwähnen sollte man es
 	
-	\section{Grundlagen} %TODO besseren Titel überlegen
+	%\section{Grundlagen} %TODO besseren Titel überlegen
 	
 	%TODO ACO_R nochmal definieren?
 	
-	Das dieser Arbeit beiliegende Programm ist ein Intervallauswertungsalgorithmus. Wie in der Einleitung motiviert, fragen wir uns, ob komplexe Lösungsfindungsmethoden wirklich nötig sind, um gute Lösungen zu finden, unabhängig davon, ob wir bereits vorhandene Lösungen zu Neuen zusammensetzen oder komplett neue Lösungen auf eine andere Art und Weise generieren.\hfill\newline
+	%Das dieser Arbeit beiliegende Programm ist ein Intervallauswertungsalgorithmus. Wie in der Einleitung motiviert, fragen wir uns, ob komplexe Lösungsfindungsmethoden wirklich nötig sind, um gute Lösungen zu finden, unabhängig davon, ob wir bereits vorhandene Lösungen zu Neuen zusammensetzen oder komplett neue Lösungen auf eine andere Art und Weise generieren.\hfill\newline
 	
-	Deswegen, anstatt wie \textit{Socha und Dorigo}~\cite{socha2008ant}, wo eine Funktion über einem Intervall aufgebaut und dann ausgewertet wird, nehmen wir einfach das Intervall und werten in gewisser Weise nur das Intervall selbst aus. Dabei nehmen wir einen zufällig bestimmten Punkt aus dem Intervall und nennen dies Auswerten. Daher auch Intervallauswertungsalgorithmus.\hfill\newline
+	%Deswegen, anstatt wie \textit{Socha und Dorigo}~\cite{socha2008ant}, wo eine Funktion über einem Intervall aufgebaut und dann ausgewertet wird, nehmen wir einfach das Intervall und werten in gewisser Weise nur das Intervall selbst aus. Dabei nehmen wir einen zufällig bestimmten Punkt aus dem Intervall und nennen dies Auswerten. Daher auch Intervallauswertungsalgorithmus.\hfill\newline
 	
-	Insbesondere sei hier festgehalten, dass dies als Variante der Lösungserzeugung interpretiert wird, also dass wir ein Intervall nehmen und dann daraus einen zufälligen Punkt und nicht die Methode mit der wir das Intervall berechnen, davon gibt es nämlich zwei. Die andere Variante ist das Aufbauen einer Funktion über einem Intervall und anschließend das Auswerten dieser Funktion, was in \cite{socha2008ant} durch ACO\(_{\mathbb{R}}\) getan wird. Daher auch der Titel dieser Bachelorarbeit -- es werden zwei Varianten der Lösungserzeugung verglichen, nicht Algorithmen.\hfill\newline
+	%Insbesondere sei hier festgehalten, dass dies als Variante der Lösungserzeugung interpretiert wird, also dass wir ein Intervall nehmen und dann daraus einen zufälligen Punkt und nicht die Methode mit der wir das Intervall berechnen, davon gibt es nämlich zwei. Die andere Variante ist das Aufbauen einer Funktion über einem Intervall und anschließend das Auswerten dieser Funktion, was in \cite{socha2008ant} durch ACO\(_{\mathbb{R}}\) getan wird. Daher auch der Titel dieser Bachelorarbeit -- es werden zwei Varianten der Lösungserzeugung verglichen, nicht Algorithmen.\hfill\newline
 	
-	Die Variante zur Lösungserzeugung, durch das Auswerten einer Funktion, wird im Abschnitt~\ref{ACO_R} beschrieben. Die Variante zur Lösungserzeugung durch das Auswerten eines Intervalls folgt, realisiert durch die beiden Algorithmen ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple, in den Abschnitten~\ref{ACO_R_simple} und~\ref{subsec:ACO_R_very_simple}.\hfill\newline
+	%Die Variante zur Lösungserzeugung, durch das Auswerten einer Funktion, wird im Abschnitt~\ref{ACO_R} beschrieben. Die Variante zur Lösungserzeugung durch das Auswerten eines Intervalls folgt, realisiert durch die beiden Algorithmen ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple, in den Abschnitten~\ref{ACO_R_simple} und~\ref{subsec:ACO_R_very_simple}.\hfill\newline
 	
 	\subsection{ACO\(_{\mathbb{R}}\)} \label{subsec:ACO_R}
 	
@@ -630,7 +630,7 @@ within=section,
 	
 	Die vier Konzepte, die aus ACO\(_{\mathbb{R}}\) übernommen wurden, ist die Verwendung eines Lösungsarchivs \(\mathcal{P}_c\), die Zuweisung jeder Lösung im Archiv eines Gewichts \(w_i\), dass mit der Gleichung~\ref{subsec:ACO_R_-_simple:eq:omega} berechnet und zum Aufbau einer Wahrscheinlichkeitsverteilung mithilfe der Gleichung~\ref{subsec:ACO_R_-_simple:eq:Probability_Distribution} benutzt wird und somit wie eine Lösung \(s_i\) aus dem Archiv gewählt wird, die Art wie die Abweichung in Gleichung~\ref{subsec:ACO_R_-_simple:eq:Linear_Deviation} berechnet wird, sowie die Verwendung der Parameter \(q\) und \(\xi\). Bei der Berechnung der Abweichung in Gleichung~\ref{subsec:ACO_R_-_simple:eq:Linear_Deviation} wird aber, aufgrund der Art und Weise wie die Abweichung späteren verwendet wird, explizit die lineare Abweichung gewollt.\hfill\newline
 	
-	Im Gegensatz zu ACO\(_\mathbb{R}\) gilt in ACO\(_{\mathbb{R}}\)-simple aber \(|\mathcal{P}| = k = 100\), \(q = 0.95\) und \(\xi = 0.95\).¨Die Archivgröße wurde verdoppelt, da der Algorithmus viel einfacher ist als ACO\(_\mathbb{R}\), wodurch ich schlussfolgerte, dass eine größere Archivgröße ACO\(_{\mathbb{R}}\)-simple erlaubt auch vom momentanen Bestwert weiter entferntere Lösungen im Suchraum zu erforschen. Das ist auch der selbe Grund, wieso \(q = 0.85\) gesetzt wurde. Auf der anderen Seite wurde \(\xi = 0.95\) gesetzt, damit das Suchintervall in Gleichung~\ref{subsec:ACO_R_-_simple:eq:Suchintervall} möglichst erhalten bleibt. Es gab auch die Möglichkeit \(\xi = 1.0\) zu setzten aber im Sinne der Einfachheit habe ich mich dazu entschlossen \(q = \xi = 0.95\) zu setzten. Im Bestreben nach Einfachheit habe ich auch \(|\mathcal{E}| = 1\) gesetzt, da ich den Selektionsdruck, der durch das Verwalten des Lösungsarchivs nach dem \glqq best in worst out\grqq Prinzip entsteht, für bereits ausreichend hielt. Demnach können wir ACO\(_{\mathbb{R}}\)-simple als Tupel \((\Sigma, \mathcal{B}, \mathcal{E}, \mathcal{P}_c, f, \mathcal{I}, \mathcal{S})\) angeben. Der größte Unterschied zu ACO\(_\mathbb{R}\) liegt aber darin wie ACO\(_{\mathbb{R}}\)-simple eine neue Lösung erzeugt. Denn nachdem die lineare Abweichung in jeder Dimension in Gleichung~\ref{subsec:ACO_R_-_simple:eq:Linear_Deviation} berechnet wurde, wird nur noch ein Intervall in jeder Dimension \(d, d \in \{1, \dots, n\}\) des Problems mithilfe der linearen Abweichung aufgebaut und dann wird aus jedem der Intervalle ein zufälliger Punkt als Komponente der neuen Lösung gewählt.
+	Im Gegensatz zu ACO\(_\mathbb{R}\) gilt in ACO\(_{\mathbb{R}}\)-simple aber \(|\mathcal{P}| = k = 100\), \(q = 0.95\) und \(\xi = 0.95\). Die Archivgröße wurde verdoppelt, da der Algorithmus viel einfacher ist als ACO\(_\mathbb{R}\), wodurch ich schlussfolgerte, dass eine größere Archivgröße ACO\(_{\mathbb{R}}\)-simple erlaubt auch vom momentanen Bestwert weiter entferntere Lösungen im Suchraum zu erforschen. Das ist auch der selbe Grund, wieso \(q = 0.85\) gesetzt wurde. Auf der anderen Seite wurde \(\xi = 0.95\) gesetzt, damit das Suchintervall in Gleichung~\ref{subsec:ACO_R_-_simple:eq:Suchintervall} möglichst erhalten bleibt. Es gab auch die Möglichkeit \(\xi = 1.0\) zu setzten aber im Sinne der Einfachheit habe ich mich dazu entschlossen \(q = \xi = 0.95\) zu setzten. Im Bestreben nach Einfachheit habe ich auch \(|\mathcal{E}| = 1\) gesetzt, da ich den Selektionsdruck, der durch das Verwalten des Lösungsarchivs nach dem \glqq best in worst out\grqq Prinzip entsteht, für bereits ausreichend hielt. Demnach können wir ACO\(_{\mathbb{R}}\)-simple als Tupel \((\Sigma, \mathcal{B}, \mathcal{E}, \mathcal{P}_c, f, \mathcal{I}, \mathcal{S})\) angeben. Der größte Unterschied zu ACO\(_\mathbb{R}\) liegt aber darin wie ACO\(_{\mathbb{R}}\)-simple eine neue Lösung erzeugt. Denn nachdem die lineare Abweichung in jeder Dimension \(d, d \in \{1, \dots, n\}\) des \(n\)-dimensionalen Problems in Gleichung~\ref{subsec:ACO_R_-_simple:eq:Linear_Deviation} berechnet wurde, wird nur noch ein Intervall in Gleichung~\ref{subsec:ACO_R_-_simple:eq:Suchintervall} in jeder Dimension \(d, d \in \{1, \dots, n\}\) des Problems mithilfe der linearen Abweichung aufgebaut und dann wird aus jedem der Intervalle ein zufälliger Punkt als Komponente der neuen Lösung gewählt.
 	
 	%TODO schlussfolgerte ok so oder anderes Wort?
 	
@@ -695,27 +695,29 @@ within=section,
 	
 	%TODO 100 da Algorithmus einfacher und er damit braucht mehr Information/Lösungsinformation
 	
-	\subsection{ACO\(_{\mathbb{R}}\)-very-simple} \label{subsec:ACO_R_-_very_-_simple}
+	\subsection{\acl{acorvs}} \label{subsec:ACO_R_-_very_-_simple}
 	
-	Der zweite dieser Arbeit beiliegende Algorithmus ACO\(_{\mathbb{R}}\)-very-simple, nutzt ebenfalls das Lösungsarchiv wie ACO\(_{\mathbb{R}}\), jedoch setzt es die vorhandenen Lösungen noch einfacher, geradezu trivial, zu einer neuen Lösung zusammen -- deswegen very-simple, also sehr einfach.\hfill\newline
+	Wie in meiner Bachelorarbeit~\cite{FCM_2019} beschrieben, baut der Algorithmus \ac{acorvs} auf ACO\(_{\mathbb{R}}\)-simple auf, indem er ACO\(_{\mathbb{R}}\)-simple weiter vereinfacht -- deswegen very-simple, also sehr einfach. Jedoch sind die Algorithmen sich noch hinreichend ähnlich, dass wir \ac{acorvs} als Tupel \((\Sigma, \mathcal{B}, \mathcal{E}, \mathcal{P}_c, f, \mathcal{I}, \mathcal{S})\) angeben können. Die Vereinfachung besteht darin, dass, anstatt eine Lösung aus dem Archiv nach einer Wahrscheinlichkeitsverteilung auszuwählen, immer die erste und damit beste Lösung \(s_1\) im Archiv zur Lösungsgenerierung gewählt wird. Damit entfallen die Pendants zu den Gleichungen \ref{subsec:ACO_R_-_simple:eq:omega} und \ref{subsec:ACO_R_-_simple:eq:Probability_Distribution} und es kann direkt die Gleichung~\ref{subsec:ACO_R_-_very_-_simple:eq:interval} berechnet werden. Danach wird in \ac{acorvs}, genau wie in ACO\(_{\mathbb{R}}\)-simple, in jeder Dimension \(d, d \in \{1, \dots, n\}\) des \(n\)-dimensionalen Problems, mithilfe der Gleichung~\ref{subsec:ACO_R_-_very_-_simple:eq:interval}, ein Intervall aufgebaut und dann wird aus jedem dieser Intervalle ein zufälliger Punkt als Komponente der Lösung gewählt.
 	
-	\noindent Bei diesem Algorithmus wird immer nur die erste, also die beste Lösung aus dem Archiv zur Intervallberechnung benutzt, also entfällt alles, bis auf die Intervallberechnung und das Bestimmen eines zufälligen Punktes aus dem errechneten Intervall. Das heißt, die Gewichtung der Lösungen entfällt, genau wie das Berechnen der Wahrscheinlichkeitsverteilung für das Auswählen einer Lösung aus dem Lösungsarchiv.\hfill\newline
+	%Der zweite dieser Arbeit beiliegende Algorithmus ACO\(_{\mathbb{R}}\)-very-simple, nutzt ebenfalls das Lösungsarchiv wie ACO\(_{\mathbb{R}}\), jedoch setzt es die vorhandenen Lösungen noch einfacher, geradezu trivial, zu einer neuen Lösung zusammen -- deswegen very-simple, also sehr einfach.\hfill\newline
 	
-	\noindent Es wird also, wie oben erwähnt, immer nur die erste Lösung \(s_1\) aus dem Lösungsarchiv gewählt. Danach wird die lineare Abweichung in der d-ten Dimension zu dieser Lösung mit der Gleichung~(\ref{eq:ACO_R_very_simple_linear_distribution}) berechnet.
+	%\noindent Bei diesem Algorithmus wird immer nur die erste, also die beste Lösung aus dem Archiv zur Intervallberechnung benutzt, also entfällt alles, bis auf die Intervallberechnung und das Bestimmen eines zufälligen Punktes aus dem errechneten Intervall. Das heißt, die Gewichtung der Lösungen entfällt, genau wie das Berechnen der Wahrscheinlichkeitsverteilung für das Auswählen einer Lösung aus dem Lösungsarchiv.\hfill\newline
 	
-	\begin{equation} \label{eq:ACO_R_very_simple_linear_distribution}
+	%\noindent Es wird also, wie oben erwähnt, immer nur die erste Lösung \(s_1\) aus dem Lösungsarchiv gewählt. Danach wird die lineare Abweichung in der d-ten Dimension zu dieser Lösung mit der Gleichung~(\ref{eq:ACO_R_very_simple_linear_distribution}) berechnet.
+	
+	\begin{equation} \label{subsec:ACO_R_-_very_-_simple:eq:Linear_Diviation}
 		\delta_d = \xi\sum_{j=1}^{k} \frac{|s_{j\_d}-s_{1\_d}|}{k-1}, ~ j \in \{1, ..., k\}, ~ d \in \{1, ..., n\},
 	\end{equation}
 	
-	\noindent Dabei ist \(n\) die Anzahl der Dimensionen des Problems.\hfill\newline
+	%\noindent Dabei ist \(n\) die Anzahl der Dimensionen des Problems.\hfill\newline
 	
-	\noindent Anschließend wird für jede Dimension wieder ein zufälliger Punkt aus dem Intervall
+	%\noindent Anschließend wird für jede Dimension wieder ein zufälliger Punkt aus dem Intervall
 	
-	\begin{equation} \label{eq:ACO_R_very_simple:interval}
+	\begin{equation} \label{subsec:ACO_R_-_very_-_simple:eq:interval}
 		[s_d - \delta_d, s_d + \delta_d], ~ d \in \{1, ..., n\},
 	\end{equation}
 	
-	\noindent genommen. Damit haben wir auch hier, ausgehen von einem Lösungsarchiv, eine neue Lösung gewonnen.\hfill\newline
+	%\noindent genommen. Damit haben wir auch hier, ausgehen von einem Lösungsarchiv, eine neue Lösung gewonnen.\hfill\newline
 	
 	\noindent Die Standardeinstellungen der Parameter sind, wie in Tabelle~\ref{ACO_R_very_simple_Parametereinstellungen} zu sehen ist.
 	
@@ -724,7 +726,7 @@ within=section,
 	\begin{table}[H]
 		\fontsize{10pt}{12pt}
 		
-		\caption{Parametereinstellungen ACO\(_{\mathbb{R}}\)-very-simple}
+		\caption{Parametereinstellungen \ac{acorvs}}
 		\label{ACO_R_very_simple_Parametereinstellungen}
 		
 		\begin{tabularx}{\textwidth}{l|r|r}
@@ -744,21 +746,27 @@ within=section,
 		
 	\end{table}
 	
-	\noindent Da ACO\(_{\mathbb{R}}\)-simple den Lösungfindungsprozess zwar deutlich vereinfacht, jedoch einen integralen Bestandteil, das Generieren von neuen Lösungen ausgehend von weniger guten Lösungen beibehält, also anstatt nur stur nach der besten Lösung zu gehen, auch in anderen Gebieten nach vielversprechenden Ergebnissen sucht, ist dieser Algorithmus, gemäß unserer Intuition, der Favorit zwischen den beiden Algorithmen zur Intervallsauswertung.
+	%\noindent Da ACO\(_{\mathbb{R}}\)-simple den Lösungfindungsprozess zwar deutlich vereinfacht, jedoch einen integralen Bestandteil, das Generieren von neuen Lösungen ausgehend von weniger guten Lösungen beibehält, also anstatt nur stur nach der besten Lösung zu gehen, auch in anderen Gebieten nach vielversprechenden Ergebnissen sucht, ist dieser Algorithmus, gemäß unserer Intuition, der Favorit zwischen den beiden Algorithmen zur Intervallsauswertung.
 	
-	\subsection{Erweiterung von ACO\(_\mathbb{R}\)-very-simple für Probleme mit nicht-stetigen Variablen}
+	\subsection{Erweiterung von \acl{acorvs} für Probleme mit diskreten Variablen}
 	
 	%TODO passt dieser Name?
 	
-	Da ACO\(_\mathbb{R}\)-VS ursprünglich für Funktionsoptimierung von stetigen Problemen entwickelt wurde, muss die ACO\(_\mathbb{R}\)-VS-Metaheuristik für diskrete/ordinale Probleme und für Probleme mit gemischten Variablen angepasst werden.
+	Da ACO\(_\mathbb{R}\)-VS ursprünglich für Funktionsoptimierung von stetigen Problemen entwickelt wurde, muss die ACO\(_\mathbb{R}\)-VS-Metaheuristik für diskrete Probleme und für Probleme mit gemischten Variablen angepasst werden.\hfill\newline
 	
 	%TODO besser Beschreibung als gemischte Variablen
 	
-	Um ACO\(_\mathbb{R}\)-VS anzupassen werden nicht-stetige Probleme als stetige Probleme behandelt. Das heißt, es wird mit nicht-stetigen Werten gerechnet als wären sie stetig. Es wird also bis zur Gleichung~\ref{eq:ACO_R_very_simple:interval} genauso verfahren, wie im Abschnitt~\ref{subsec:ACO_R_very_simple}, um einen neuen, stetigen Wert zu erhalten. Nachdem man einen neuen stetigen Wert gewonnen hat, betrachtet man die nicht-stetigen Werte zwischen denen der stetige Wert liegt und wählt dann als Ergebnis, den nicht-stetigen Wert, an dem der Stetige am nächsten liegt.
+	Um ACO\(_\mathbb{R}\)-VS anzupassen werden nicht-stetige Probleme als stetige Probleme behandelt. Das heißt, es wird mit nicht-stetigen Werten gerechnet als wären sie stetig. Es wird also bis zur Gleichung~\ref{subsec:ACO_R_-_very_-_simple:eq:interval} genauso verfahren, wie im Abschnitt~\ref{subsec:ACO_R_-_very_-_simple}, um einen neuen, stetigen Wert zu erhalten. Nachdem man einen neuen stetigen Wert gewonnen hat, betrachtet man die nicht-stetigen Werte zwischen denen der stetige Wert liegt und wählt dann als Ergebnis, den nicht-stetigen Wert, an dem der Stetige am nächsten liegt.
 	
 	%TODO reicht das oder Pseudocode hinzufügen?
 	
+	\subsection{Erweiterung von ACO\(_\mathbb{R}\) für Probleme mit diskreten Variablen}
+	
+	%TODO hier oder früher?
+	
 	\section{SPPBO-Schema} \label{sec:SPPBO_Schema}
+	
+	%TODO SPPBO-Schema noch Grundlagen?
 	
 	Wie in \cite{lin2015simple} beschrieben, besteht das SPPBO-Scheme aus 6 Teilen. Diese sind der Suchraum \(\Sigma\), die Menge der lösungskreierenden Entitäten \(\mathcal{E}\), die Menge der Populationen bzw. Archive von Lösungen \(\mathcal{P}\), die Heuristik \(\eta\), die Initialisierungsmethode \(\mathcal{I}\) und das Stoppkriterium \(\mathcal{S}\). Also kann das SPPBO-Scheme beschrieben werden durch das Tupel \((\Sigma, \mathcal{E}, \mathcal{P}, \eta, \mathcal{I}, \mathcal{S})\). Im Folgenden werden die lösungskreierenden Entitäten als \ac{sce} (\acl{sce}) bezeichnet.\hfill\newline
 	
@@ -862,36 +870,40 @@ within=section,
 		
 	\end{algorithm}
 	
-	\section{Formulierung Von ACO\(_\mathbb{R}\)-VS Im HSPPBO-Schema}
+	\section{Formulierung von \acl{acorvs} im HSPPBO-Schema}
 	
-	\section{Kombinieren des HSPPBO-Schemas mit ACO\(_\mathbb{R}\)-very-simple}
+	\section{Kombinieren des HSPPBO-Schemas mit \acl{acorvs}}
 	
-	\subsection{Hom-HPB-ACO\(_\mathbb{R}\)-very-simple} \label{subsec:Homogen_HPB_ACO_R_very_simple}
+	\subsection{Hom-HPB-\ac{acorvs}} \label{subsec:Homogen_HPB_ACO_R_very_simple}
 	
-	\noindent Die einfachste Kombination aus dem HSPPBO-Schema und ACO\(_\mathbb{R}\)-very-simple ergibt Hom-HPB-ACO\(_\mathbb{R}\)-very-simple. Dabei führt jede \ac{sce}, nach der Initialisierung, den ACO\(_\mathbb{R}\)-very-simple Algorithmus aus. Das Archiv, welches bei der Ausführung von ACO\(_\mathbb{R}\)-very-simple notwendig ist, hat diesmal statt 100 Lösungen nur 4. Diese 4 Lösungen sind die 3 Populationen, die jede der SCE mitführt plus die Population, welche die beste bis dato gefunden Lösung hält, wie in Abschnitt~\ref{sec:HSPPBO_Schema} erläutert. Der Mechanismus, welcher das Tauschen von Populationen steuert, wenn eine Eltern-SCE eine schlechtere Lösungen oder eine Kind-SCE eine bessere Lösung findet, wie ebenfalls im Abschnitt~\ref{sec:HSPPBO_Schema} dargelegt, bleibt der gleiche. Dies führt zur Bezeichnung Hierarchical Population-Based ACO\(_\mathbb{R}\)-very-simple oder kurz HPB-ACO\(_\mathbb{R}\)-VS. Was wir noch nicht aufgegriffen haben und wovon in \cite{kupfer2021hierarchical}, über das Tauschen der Knoten im Baum hinaus, kein weiterer Gebraucht gemacht wird, ist, dass die SCEs, abhängig von ihrer Position im Baum, nicht exakt denselben Algorithmus ausführen müssen. Weil aber die erste Iteration der Kombination des HSPPBO-Schemes mit dem ACO\(_\mathbb{R}\)-very-simple Algorithmus dies ebenfalls nicht ausnutzt, bezeichnen wir diese Iteration Homogen-HPB-ACO\(_\mathbb{R}\)-VS oder kurz Hom-HPB-ACO\(_\mathbb{R}\)-VS.\hfill\newline
+	%TODO Hom HPB ACOR-VS oder Hom-HPB-ACOR-VS?
 	
-	Im HPB-ACO\(_\mathbb{R}\)-VS 
+	\noindent Die einfachste Kombination aus dem HSPPBO-Schema und \ac{acorvs} ergibt Homogen Hierarchical Population-Based \ac{acorvs}, Hom-HPB-\ac{acorvs}. Dabei führt jede \ac{sce}, nach der Initialisierung, den \ac{acorvs} Algorithmus aus. Das Archiv, welches bei der Ausführung von \ac{acorvs} notwendig ist, hat diesmal statt 100 Lösungen nur 4. Diese 4 Lösungen sind die 3 Populationen, die jede der SCE mitführt plus die Population, welche die beste bis dato gefunden Lösung hält, wie in Abschnitt~\ref{sec:HSPPBO_Schema} erläutert. Der Mechanismus, welcher das Tauschen von Populationen steuert, wenn eine Eltern-SCE eine schlechtere Lösungen oder eine Kind-SCE eine bessere Lösung findet, wie ebenfalls im Abschnitt~\ref{sec:HSPPBO_Schema} dargelegt, bleibt der gleiche. Dies führt zur Bezeichnung Hierarchical Population-Based ACO\(_\mathbb{R}\)-very-simple oder kurz HPB-ACO\(_\mathbb{R}\)-VS. Was wir noch nicht aufgegriffen haben und wovon in \cite{kupfer2021hierarchical}, über das Tauschen der Knoten im Baum hinaus, kein weiterer Gebraucht gemacht wird, ist, dass die SCEs, abhängig von ihrer Position im Baum, nicht exakt denselben Algorithmus ausführen müssen. Weil aber die erste Iteration der Kombination des HSPPBO-Schemes mit dem \ac{acorvs} Algorithmus dies ebenfalls nicht ausnutzt, bezeichnen wir diese Iteration Homogen-HPB-\ac{acorvs} oder kurz Hom-HPB-\ac{acorvs}.\hfill\newline
 	
+	%Im HPB-ACO\(_\mathbb{R}\)-VS 
 	
+	%TODO überall Algorithmen angeben?
+	
+	%TODO überall Algorithmen einfühgen?
 	
 	%TODO einarbeiten, dass Archive sehr klein sind und es trotzdem funktioniert
 	%TODO fragen ob Überschrift Hom-HPB-ACO sein soll oder Hom-Hierarchical Population-Based Aco
 	
-	\subsection{Het-HPB-ACO\(_\mathbb{R}\)-very-simple} \label{subsec:Heterogen_HPB_ACO_R_very_simple}
+	\subsection{Het-HPB-\ac{acorvs}} \label{subsec:Heterogen_HPB_ACO_R_very_simple}
 	
-	ACO\(_\mathbb{R}\)-Very-Simple hat in seiner Definition im Abschnitt~\ref{subsec:ACO_R_very_simple}, Gleichung~\ref{eq:ACO_R_very_simple_linear_d} einen Parameter, der sich anbietet, um, abhängig von der Position der SCE im tertiären Baum, mit der Höhe im Baum zu variieren. Dieser Parameter ist \(\xi\). Wir greifen die Gleichung~\ref{eq:ACO_R_very_simple_linear_d} auf.
+	\ac{acorvs} hat in seiner Definition im Abschnitt~\ref{subsec:ACO_R_-_very_-_simple}, Gleichung~\ref{subsec:ACO_R_-_very_-_simple:eq:Linear_Diviation} einen Parameter, der sich anbietet, um, abhängig von der Position der SCE im tertiären Baum, mit der Höhe im Baum zu variieren. Dieser Parameter ist \(\xi\). Wir greifen die Gleichung~\ref{subsec:ACO_R_-_very_-_simple:eq:Linear_Diviation} auf und benutzen sie hier als Gleichung~\ref{subsec:Heterogen_HPB_ACO_R_very_simple:eq:Linear_Deviation}. Dabei hängt \(\xi_{depth}\) von der Tiefe des \ac{sce} im Baum ab.
 	
-	\begin{equation} \label{eq:ACO_R_very_simple_linear_d}
-		\delta_d = \xi\sum_{j=1}^{k} \frac{|s_{j\_d}-s_{1\_d}|}{k-1}, ~ j \in \{1, ..., k\}, ~ d \in \{1, ..., n\},
+	\begin{equation} \label{subsec:Heterogen_HPB_ACO_R_very_simple:eq:Linear_Deviation}
+		\delta_{dim} = \xi_{depth}\sum_{j=1}^{k} \frac{|s_{j\_d}-s_{1\_d}|}{k-1}, ~ j \in \{1, ..., k\}, ~ d \in \{1, ..., n\},
 	\end{equation}
 	
 	\noindent Für die Tiefe \(0\), also die Wurzel, setzten wir \(\xi = 0.7\), für die Tiefe \(1\) setzen wir \(\xi = 1.0\), für die Tiefe \(2\) setzen wir \(\xi = 1.3\) und ab der Tiefe \(3\) setzen wir \(\xi = 1.5\).\hfill\newline
 	
-	\noindent Die Entscheidung die initialen Werte von \(\xi\) so zu wählen, ergibt sich aus der Überlegung, dass je höher im Baum sich die SCE sich befindet, desto höher auch die Güte der Lösung dieses SCE. Ferner gilt für viele Optimierungsprobleme, dass in der Nähe schlechter Lösungen sich weitere schlechte Lösungen befinden und in der Nähe guter Lösungen sich weitere gute Lösungen befinden. Daher verkleinert \(\xi\) das Suchintervall für die Tiefe 0, lässt es unverändert für die Tiefe 1 und vergrößert es ab Tiefe 2.\\
+	\noindent Die Entscheidung die initialen Werte von \(\xi\) so zu wählen, ergibt sich aus der Überlegung, dass je höher im Baum sich die SCE sich befindet, desto höher auch die Güte der Lösung dieses SCE. Ferner gilt für viele Optimierungsprobleme, dass in der Nähe schlechter Lösungen sich weitere schlechte Lösungen befinden und in der Nähe guter Lösungen sich weitere gute Lösungen befinden. Daher verkleinert \(\xi\) das Suchintervall für die Tiefe 0, lässt es unverändert für die Tiefe 1 und vergrößert es ab Tiefe 2. Die Werte für \(\xi\) wurden explizit so gewählt, da sie als einfach erschienen und damit im Einklang mit der Idee möglichster Einfachheit hinter \ac{acorvs} sind. Da die Wert für \(\xi_{depth}\) von der Tiefe des \ac{sce} im tertiären Baum abhängt, führen die \ac{sec} abhängig von ihrer Position im tertiären Baum verschiedene Variationen von \ac{acorvs} aus. Deswegen bezeichnen wir diese Iteration der Kombination des HSPPBO-Schemas mit dem \ac{acorvs} Algorithmus als Heterogen-HPB-\ac{acorvs} oder kurz Het-HPB-\ac{acorvs}.\hfill\newline
 	
-	\noindent Wir müssen jetzt jedoch die Generierung des neuen Punktes in Gleichung~\ref{eq:ACO_R_very_simple:interval} anpassen, da für \(\xi > 1.0\) das Intervall größer sein kann als Initialisierungsintervall, was dazu führen kann, dass eine Lösung generiert wird, die nicht im Definitionsraum des Problems liegt und damit ein Optimum angenommen werden kann, dass so nicht existiert. Deswegen ändern wir die Gleichung~\ref{eq:ACO_R_very_simple:interval} zur Gleichung~\ref{eq:Hetero_HPB_ACO_R_very_simple:interval}, wobei \(lg_d\) und \(rg_d\) die respektiven linken bzw. rechten Intervallgrenzen der \(d\)-ten Dimension des Testproblems sind.
+	\noindent Wir müssen jetzt jedoch die Generierung des neuen Punktes in Gleichung~\ref{subsec:ACO_R_-_very_-_simple:eq:interval} anpassen, da für \(\xi > 1.0\) das Intervall größer sein kann als Initialisierungsintervall, was dazu führen kann, dass eine Lösung generiert wird, die nicht im Definitionsraum des Problems liegt und damit ein Optimum angenommen werden kann, dass keine gültige Lösung ist. Deswegen ändern wir die Gleichung~\ref{subsec:ACO_R_-_very_-_simple:eq:interval} zur Gleichung~\ref{subsec:Heterogen_HPB_ACO_R_very_simple:eq:interval}, wobei \(lg_d\) und \(rg_d\) die respektiven linken bzw. rechten Intervallgrenzen der \(d\)-ten Dimension des \(n\)-dimensionalen Testproblems sind.
 	
-	\begin{equation} \label{eq:Hetero_HPB_ACO_R_very_simple:interval}
+	\begin{equation} \label{subsec:Heterogen_HPB_ACO_R_very_simple:eq:interval}
 		[max(s_d - \delta_d, lg_d), min(s_d + \delta_d, rg_d)], ~ d \in \{1, ..., n\},
 	\end{equation}
 	
@@ -905,26 +917,24 @@ within=section,
 	
 	\subsection{Het-HSPPB-ACO\(_\mathbb{R}\)-very-simple} \label{subsec:Heterogen_HSPPB_ACO_R_very_simple}
 	
-	\noindent Schließlich wird noch die Zufallskomponente in Hetero-HPB-ACO\(_\mathbb{R}\)-very-simple eingearbeitet. Auch hier bietet es sich an, abhängig von der Position der SCE im Baum, die Wahrscheinlichkeit mit der die Zufallskomponente verwendet wird, zu verändern. Die Zufallskomponente für die sich entschieden wurde, ist das Verwenden einer zufälligen Lösung aus dem Initialisierungsraum, anstatt der Lösungskonstruktion in Gleichung~\ref{eq:ACO_R_very_simple_linear_d}. Diese zufällige Lösung wird in der Tiefe \(0\) mit der Wahrscheinlichkeit \(0\%\) genommen, in der Tiefe \(1\) mit \(10\%\), in der Tiefe \(2\) mit \(15\%\) und in der Tiefe \(3\) mit der Wahrscheinlichkeit \(20\%\).
+	\noindent Schließlich wird noch die Zufallskomponente in Hetero-HPB-\ac{acorvs} eingearbeitet. Auch hier bietet es sich an, abhängig von der Position der SCE im Baum, die Wahrscheinlichkeit mit der die Zufallskomponente verwendet wird, zu verändern. Die Zufallskomponente für die sich entschieden wurde, ist das Verwenden einer zufälligen Lösung aus dem Initialisierungsraum, anstatt der Lösungskonstruktion in Gleichung~\ref{subsec:Heterogen_HPB_ACO_R_very_simple:eq:interval}. Diese zufällige Lösung wird in der Tiefe \(0\) mit der Wahrscheinlichkeit \(0\%\) genommen, in der Tiefe \(1\) mit \(10\%\), in der Tiefe \(2\) mit \(15\%\) und in der Tiefe \(3\) mit der Wahrscheinlichkeit \(20\%\). Auch hier wurden die Werte für die Wahrscheinlichkeiten explizit so gewählt, da sie als einfach erschienen und damit im Einklang mit der Idee möglichster Einfachheit hinter \ac{acorvs} sind. Da in diese Iteration der Kombination des HSPPBO-Schemas mit dem \ac{acorvs} Algorithmus eine einfache probabilistische Komponente eingebaut wurde, bezeichnen wie diese Iteration als Heterogen-HSPPB-\ac{acorvs} oder kurz Het-HSPPB-\ac{acorvs}.
 	
 	%TODO ist es immernoch simple wenn die Wahrscheinlichkeit mit der Höhe des Baumes variiert wird
 	%TODO Code? Ja, aber Pseudocode
 	
 	\section{Testfunktionen} \label{sec:Testfunktionen}
 	
-	Aufbauend auf meiner Bachelorarbeit~\cite{FCM_2019}, erweitern wir die Art der Testfunktionen, anhand derer wir die Güte der hier vorlegten Erweiterungen von ACO\(_\mathbb{R}\)-VS beurteilen. Wo ACO\(_{\mathbb{R}}\)-VS nur auf stetigen Testfunktionen getestet wurde, werden die Erweiterungen von ACO\(_{\mathbb{R}}\)-VS auf stetigen Testfunktionen getestet, auf Testfunktionen mit diskreten/ordinalen Variablen und auf Testfunktionen mit gemischten Variablen.\hfill\newline
+	Aufbauend auf meiner Bachelorarbeit~\cite{FCM_2019}, erweitern wir die Art der Testfunktionen, anhand derer wir die Güte der hier vorlegten Erweiterungen von ACO\(_\mathbb{R}\)-VS beurteilen. Wo ACO\(_{\mathbb{R}}\)-VS nur auf stetigen Testfunktionen getestet wurde, werden die Erweiterungen von ACO\(_{\mathbb{R}}\)-VS auf stetigen Testfunktionen getestet, auf Testfunktionen mit diskreten Variablen und auf Testfunktionen mit gemischten Variablen.\hfill\newline
 	
-	Da in meiner Bachelorarbeit die Testfunktionen in ihren Dimensionen nicht variiert haben, Intervallgrenzen keine Rolle spielten und alle Funktionen über stetigen, zusammenhängenden Definitionsbereichen definiert waren, brauchte es keiner standardisierten, abstrakten Definition. In dieser Arbeit aber betrachten wir stetige und diskrete/ordinale Testfunktionen, sowie Testfunktionen mit gemischten Variablen. Ferner liegen 5 der Testprobleme mit gemischten Variablen in drei verschiedenen Dimensionen dar, nämlich \(n \in \{2, 5, 10\}\). Deswegen war eine überarbeitete Definition der Testprobleme notwendig. Die einfachste Definition mit dem neuen Standard ist im Code-Snipped~\ref{sec:Testfunktionen:abb:JSON:Paraboloid10DimCont} zu sehen.\hfill\newline
+	Da in meiner Bachelorarbeit die Testfunktionen in ihren Dimensionen nicht variiert haben, Intervallgrenzen keine Rolle spielten und alle Funktionen über stetigen, zusammenhängenden Definitionsbereichen definiert waren, brauchte es keiner standardisierten, abstrakten Definition. In dieser Arbeit aber betrachten wir stetige und diskrete Testfunktionen, sowie Testfunktionen mit gemischten Variablen. Ferner liegen 5 der Testprobleme mit gemischten Variablen in drei verschiedenen Dimensionen dar, nämlich \(n \in \{2, 5, 10\}\). Deswegen war eine überarbeitete Definition der Testprobleme notwendig. Die einfachste Definition mit dem neuen Standard ist im Code-Snipped~\ref{sec:Testfunktionen:JSON:Paraboloid10DimCont} zu sehen.
 	
 	%TODO Testfunktion oder Testproblem? Testprobleme
 	
 	%TODO ist es Abbildung, Liste oder Pseudo Code
-
-\newpage
 	
 	%TODO Listing auf Deutsch schreiben? nein. Codefragment.
 	
-	\begin{lstlisting}[language=json, caption=Parabolid 10 Dim stetiger Definitionsbereich, label=sec:Testfunktionen:abb:JSON:Paraboloid10DimCont]
+	\begin{lstlisting}[language=json, caption=Parabolid 10 Dim stetiger Definitionsbereich, label=sec:Testfunktionen:JSON:Paraboloid10DimCont]
 {
 	"name": "Paraboloid",
 	"comment": "standard paraboloid problem",
@@ -951,11 +961,11 @@ within=section,
 	
 	\hfill\newline
 
-	Wie im Code-Snipped~\ref{sec:Testfunktionen:abb:JSON:Paraboloid10DimCont} zu sehen, besteht die neue, abstrakte Definition u.a. aus \glqq variable\_boundaries\grqq{}. Dies ist ein neuer Eintrag, der notwendig geworden ist, da für das Problem im Abschnitt~\ref{subsubsec:Coil_Spring_Design_Problem} die Intervallgrenzen zugleich Beschränkungen der Suchintervalle sind. Ein weiterer Grund das JSON-Format zu nehmen, ist, dass alle Einträge als Wörterbücher (Dictionary) ausgelesen werden können, was die Definition von neuen abstrakten Einträger leicht macht, da die Anordnung, im Vergleich zu einem Feld, bei einem Wörterbuch keine Rolle spielt.\hfill\newline
+	Wie im Code-Snipped~\ref{sec:Testfunktionen:JSON:Paraboloid10DimCont} zu sehen, besteht die neue, abstrakte Definition u.a. aus \glqq variable\_boundaries\grqq{}. Dies ist ein neuer Eintrag, der notwendig geworden ist, da für das Problem im Abschnitt~\ref{subsubsec:Coil_Spring_Design_Problem} die Intervallgrenzen zugleich Beschränkungen der Suchintervalle sind. Ein weiterer Grund das JSON-Format zu nehmen, ist, dass alle Einträge als Wörterbücher (Dictionary) ausgelesen werden können, was die Definition von neuen abstrakten Einträger leicht macht, da die Anordnung, im Vergleich zu einem Feld, bei einem Wörterbuch keine Rolle spielt.\hfill\newline
 	
-	Weitere Einträge, die notwendig wurden, sind \glqq dimension\grqq, \glqq optimum\grqq, \glqq discrete\_values\grqq{} und \glqq magnitudes\_of\_categorical\_variables\grqq. Da ein weiteres Ziel war, dass, neben der Abstraktion, Automatisation implementiert werden sollte, wurden die JSON-Dateien so konzipiert, dass statische Werte einer Testfunktion, ohne Nutzereingabe, zum Start des Algorithmus ausgelesen werden konnten. Dabei bezeichnet \glqq dimension\grqq die Dimension des Problems. In Kombination mit den \glqq variable\_boundaries\grqq{} ergibt dies für den Code-Snipped~\ref{sec:Testfunktionen:abb:JSON:Paraboloid10DimCont} den Definitionsbereich \([-3, 7]^{10}\). Der Eintrag \glqq optimum\_argument\grqq{} definiert das zum Optimum gehörige Argument, also die notwendige Belegung der unabhängigen Variablen, um das Optimum der Testfunktion zu erhalten, welches im Eintrag \glqq optimum\grqq{} ausgelesen werden kann. Die Intervallgrenzen für den Definitionsbereich einer Testfunktion sind unter \glqq variable\_blundaries\grqq{} hinterlegt und definieren sowohl die Intervalle, in denen eine Lösung liegen muss, um eine gültige Lösung zu sein, als auch die Intervalle, aus denen Initiallösungen während der Initialisierungsmethode \(\mathcal{I}\) gezogen werden, wie diese im Abschnitt~\ref{sec:HSPPBO_Schema} definiert wurde. Der Eintrag \glqq discrete\_values\grqq{} listet alle diskreten/ordinalen Werte auf, welche die Testfunktion annehmen kann\hfill\newline
+	Weitere Einträge, die notwendig wurden, sind \glqq dimension\grqq, \glqq optimum\grqq, \glqq discrete\_values\grqq{} und \glqq magnitudes\_of\_categorical\_variables\grqq. Da ein weiteres Ziel war, dass, neben der Abstraktion, Automatisation implementiert werden sollte, wurden die JSON-Dateien so konzipiert, dass statische Werte einer Testfunktion, ohne Nutzereingabe, zum Start des Algorithmus ausgelesen werden konnten. Dabei bezeichnet \glqq dimension\grqq die Dimension des Problems. In Kombination mit den \glqq variable\_boundaries\grqq{} ergibt dies für den Code-Snipped~\ref{sec:Testfunktionen:JSON:Paraboloid10DimCont} den Definitionsbereich \([-3, 7]^{10}\). Der Eintrag \glqq optimum\_argument\grqq{} definiert das zum Optimum gehörige Argument, also die notwendige Belegung der unabhängigen Variablen, um das Optimum der Testfunktion zu erhalten, welches im Eintrag \glqq optimum\grqq{} ausgelesen werden kann. Die Intervallgrenzen für den Definitionsbereich einer Testfunktion sind unter \glqq variable\_blundaries\grqq{} hinterlegt und definieren sowohl die Intervalle, in denen eine Lösung liegen muss, um eine gültige Lösung zu sein, als auch die Intervalle, aus denen Initiallösungen während der Initialisierungsmethode \(\mathcal{I}\) gezogen werden, wie diese im Abschnitt~\ref{sec:HSPPBO_Schema} definiert wurde. Der Eintrag \glqq discrete\_values\grqq{} listet alle diskreten/ordinalen Werte auf, welche die Testfunktion annehmen kann\hfill\newline
 	
-	Der letzte Grund, warum das JSON-Format gewählt wurde, wie im Code-Snipped~\ref{sec:Testfunktionen:abb:JSON:Paraboloid10DimCont} zu sehen, kann das JSON-Format jede Art von Eintrag aufnehmen und somit jede Form von abstrakter Variable beherbergen und damit einen hohen Abstraktionsgrad liefern, der, für auf dieser Arbeit aufbauende Forschung, notwendig ist.
+	Der letzte Grund, warum das JSON-Format gewählt wurde, wie im Code-Snipped~\ref{sec:Testfunktionen:JSON:Paraboloid10DimCont} zu sehen, kann das JSON-Format jede Art von Eintrag aufnehmen und somit jede Form von abstrakter Variable beherbergen und damit einen hohen Abstraktionsgrad liefern, der, für auf dieser Arbeit aufbauende Forschung, notwendig ist.
 	
 	%TODO jeden Eintrag erklären?
 	
@@ -974,7 +984,7 @@ within=section,
 		\subsection{Stetige Testfunktionen} \label{subsec:Stetige_Testfunktionen} %wichtig
 		
 		%wie in Bachelorarbeit
-		%TODO nachfragen, ob Querformat für Testfunktionen verwendet werden darf - ja nur
+		%TODO nachfragen, ob Querformat für Testfunktionen verwendet werden darf - ja nur nicht so viel
 		
 		Aufbauend auf meiner Bachelorarbeit~\cite{FCM_2019} werden die Erweiterungen von \ac{acorvs} auf denselben stetigen Testfunktionen getestet, wie der ursprüngliche Algorithmus \ac{acorvs}. Diese sind Testfunktion zum Vergleich mit Algorithmen, die probabilistisches Lernen einsetzten in Tabelle~\ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} und Testfunktionen zum Vergleich mit anderen mit Ameisenalgorithmen verwandten Methoden und Metaheuristiken, die für stetige Probleme adaptiert wurden, in Tabellen \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt}, \ref{subsec:Stetige_Testfunktionen:tab:Teil_2_1_Stet_Adapt} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_2_2_Stet_Adapt}.\hfill\newline
 		
@@ -1061,7 +1071,7 @@ within=section,
 		Wenn es Nebenbedingungen/Constrains gibt, kann das vollständige Initialisierungsintervall sich vom Initialisierungsintervall, das durch Anwenden der Nebenbedingungen entsteht, stark unterscheiden, wie im Abschnitt~\ref{subsubsec:Coil_Spring_Design_Problem}. Ein solchen Intervall wird hier als gefiltert bezeichnet.\hfill\newline 
 		%TODO stetige Funktionen finden und schauen, ob es wie beim CSD einen Unterschied gibt zwischen Initialisierung über dem Gesamtbereich und Initialisierung über den filtrierten Initial. durch Nebenbedingungen
 		
-		Genau wie in meiner Bachelorarbeit bezeichnen wir die Initialisierungsintervalle hier als Definitionsbereiche. Das liegt daran, dass die Funktionen, sowohl initial über diesen Intervallen definiert sind, als auch die Intervallgrenzen definieren, was gültige Lösungen sind. Der Suchraum für die Funktionen aus den Tabellen \ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen}, \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt}, \ref{subsec:Stetige_Testfunktionen:tab:Teil_2_1_Stet_Adapt} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_2_2_Stet_Adapt} ist zwar \(\Sigma = \mathbb{R}^n\), wobei \(n \in \mathbb{N}\) von Testfunktion abhängt, aber die Beschränkungen \(\mathcal{B}\) sind die Definitionsbereiche, die für die verschiedenen Testfunktionen abhängig von der Testfunktion definiert sind, z.B. für die Testfunktion \glqq Paraboloid\grqq{} gilt \(\mathcal{B}_1 = \ldots = \mathcal{B}_n = [-3,7]\)\hfill\newline
+		Genau wie in meiner Bachelorarbeit~\cite{FCM_2019} bezeichnen wir die Initialisierungsintervalle hier als Definitionsbereiche. Das liegt daran, dass die Funktionen, sowohl initial über diesen Intervallen definiert sind, als auch die Intervallgrenzen definieren, was gültige Lösungen sind. Der Suchraum für die Funktionen aus den Tabellen \ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen}, \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt}, \ref{subsec:Stetige_Testfunktionen:tab:Teil_2_1_Stet_Adapt} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_2_2_Stet_Adapt} ist zwar \(\Sigma = \mathbb{R}^n\), wobei \(n \in \mathbb{N}\) von Testfunktion abhängt, aber die Beschränkungen \(\mathcal{B}\) sind die Definitionsbereiche, die für die verschiedenen Testfunktionen abhängig von der Testfunktion definiert sind, z.B. für die Testfunktion \glqq Paraboloid\grqq{} gilt \(\mathcal{B}_1 = \ldots = \mathcal{B}_n = [-3,7]\)\hfill\newline
 		
 		Schließlich betrachten wir 6 ausgewählte Testfunktionen in den Abschnitten \ref{subsubsec:Stetige_Testfunktionen:Testfunktion_-_Paraboloid} bis \ref{subsubsec:Stetige_Testfunktionen:Testfunktion_-_Shekel} genauer. Diese Testfunktionen haben sich nicht nur durch besondere Herausforderungen, die sie an einen Optimierungsalgorithmus stellen, herausgetan, sondern auch dadurch, dass die Herausforderung, die bieten, singulär ist, sie also den Algorithmus auf nur eine Weise fordern und damit sich eignen den Algorithmus auf eine Stärke oder eine Schwäche zu testen und werden deswegen näher betrachtet.
 		
@@ -1413,7 +1423,7 @@ within=section,
 		
 		\subsubsection{Diskrete Testfunktionen mit gleichverteiltem Definitionsbereich} \label{subsubsec:Ordinale_Testfunktionen_Mit_Gleichverteiltem_Definitionsbereich}
 		
-		Die einfachste Art diskrete/ordinale Testfunktionen zu erhalten, ist die Diskretisierung von stetigen Testfunktionen. Dabei nimmt man \(m \in \mathbb{N}\) Punkte aus dem Definitionsbereich einer stetigen Funktion und bildet aus diesen Punkten einen neuen diskreten Definitionsbereich. Zum Beispiel ist die Funktion \glqq Paraboloid\grqq{} aus Tabelle~\ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} über dem stetigen Definitionsbereich \( D = [-3,7]^n, n = 10\) definiert. Wir nehmen diesen Definitionsbereich und zerlegen ihn in \(m = 11\) gleichverteilte diskrete Punkte. Dies Ergibt \(D = [-3, -2, -1, 0, 1, 2, 3 , 4, 5, 6, 7]^n, n = 10\). Analog gewinnen wir anderen diskreten Testfunktionen. Wir nehmen die stetigen Testfunktionen aus den Tabellen \ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt} mit \(m \in \{11, 21, 51\}\). Damit erhalten wir für jede stetige Funktion 3 ordinale/diskrete Testfunktionen. Die Definitionen der Funktionsterme, Optima und Argumente der Optima bleiben gleich, weswegen hier auf eine Doppelung der Tabellen \ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt} verzichtet wird. Wie im Abschnitt~\ref{subsec:ACO_R} hat das Initialisierungsintervall großen Einfluss auf das Verhalten des Algorithmus aber da wir eine gleichverteilte Diskretisierung genommen haben, um die neuen Definitionsbereiche zu erlangen, ist zu erwarten, dass sich das Lösungsverhalten für die ordinalen/diskreten Testfunktionen nicht signifikant von denen in den Tabellen \ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt} unterscheiden wird.
+		Die einfachste Art diskrete Testfunktionen zu erhalten, ist die Diskretisierung von stetigen Testfunktionen. Dabei nimmt man \(m \in \mathbb{N}\) Punkte aus dem Definitionsbereich einer stetigen Funktion und bildet aus diesen Punkten einen neuen diskreten Definitionsbereich. Zum Beispiel ist die Funktion \glqq Paraboloid\grqq{} aus Tabelle~\ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} über dem stetigen Definitionsbereich \( D = [-3,7]^n, n = 10\) definiert. Wir nehmen diesen Definitionsbereich und zerlegen ihn in \(m = 11\) gleichverteilte diskrete Punkte. Dies Ergibt \(D = [-3, -2, -1, 0, 1, 2, 3 , 4, 5, 6, 7]^n, n = 10\). Analog gewinnen wir anderen diskreten Testfunktionen. Wir nehmen die stetigen Testfunktionen aus den Tabellen \ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt} mit \(m \in \{11, 21, 51\}\). Damit erhalten wir für jede stetige Funktion 3 diskrete Testfunktionen. Die Definitionen der Funktionsterme, Optima und Argumente der Optima bleiben gleich, weswegen hier auf eine Doppelung der Tabellen \ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt} verzichtet wird. Wie im Abschnitt~\ref{subsec:ACO_R} hat das Initialisierungsintervall großen Einfluss auf das Verhalten des Algorithmus aber da wir eine gleichverteilte Diskretisierung genommen haben, um die neuen Definitionsbereiche zu erlangen, ist zu erwarten, dass sich das Lösungsverhalten für die ordinalen/diskreten Testfunktionen nicht signifikant von denen in den Tabellen \ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt} unterscheiden wird.
 		
 		%\begin{table}[H]
 			
@@ -1469,13 +1479,14 @@ within=section,
 		
 		\subsubsection{Diskrete Testfunktionen mit asymmetrischem Definitionsbereich}
 		
-		Wie in Abschnitt~\ref{subsec:ACO_R} geschildert, hat das Initialisierungsintervall großen Einfluss auf das Verhalten des Algorithmus. Zusätzlich, wie in \cite{ACO_2003_simiple_problems} beschrieben, kann das Betrachten von einfachen Testfunktionen zu unerwarteten Ergebnissen führen. Deswegen definieren wir in diesem Abschnitt explizit diskrete Funktionen, die einfach sind aber einen nicht-Standarddefinitionsbereich haben. Wir wählen, wie im Abschnitt~\ref{subsubsec:Ordinale_Testfunktionen_Mit_Gleichverteiltem_Definitionsbereich}, \(m \in \{11, 21, 51\}\) aber diesmal ist der Definitionsbereich asymmetrisch verteilt mit \(3\) Clustern. Zum Beispiel transformiert dies den stetigen Definitionsbereich der Testfunktion \glqq Paraboloid\grqq{} von \(D = [-3, 7]^{10}\) zu \(D = [-3, -2.8, -2.6, -0.4, -0.2, 0.0, 0.2, 0.4, 6.6, 6.8, 7.0]^{10}\). Im JSON-Format wird dies wie im Code-Snipped~\ref{JSON:Paraboloid2Dim11OrdAsymm} angezeigt.
+		Wie in Abschnitt~\ref{subsec:ACO_R} geschildert, hat das Initialisierungsintervall großen Einfluss auf das Verhalten des Algorithmus. Zusätzlich, wie in \textit{Merkle und Middendorf} \cite{ACO_2003_simiple_problems} beschrieben, kann das Betrachten von einfachen Testfunktionen zu unerwarteten Ergebnissen führen. Deswegen definieren wir in diesem Abschnitt explizit diskrete Funktionen, die einfach sind aber einen nicht-Standarddefinitionsbereich haben. Wir wählen, wie im Abschnitt~\ref{subsubsec:Ordinale_Testfunktionen_Mit_Gleichverteiltem_Definitionsbereich}, \(m \in \{11, 21, 51\}\) aber diesmal ist der Definitionsbereich asymmetrisch verteilt mit \(3\) Clustern. Zum Beispiel transformiert dies den stetigen Definitionsbereich der Testfunktion \glqq Paraboloid\grqq{} von \(D = [-3, 7]^{10}\) zu\\
+		\(D = [-3, -2.8, -2.6, -0.4, -0.2, 0.0, 0.2, 0.4, 6.6, 6.8, 7.0]^{10}\) für \(m = 11\). Im JSON-Format wird dies wie im Code-Snipped~\ref{subsubsec:Testfunktionen:Diskrete_Testfunktionen_mit_asymmetrischem_Definitionsbereich:JSON:Paraboloid2Dim11OrdAsymm} angezeigt.
 		
-		\begin{lstlisting}[language=json, caption=Paraboloid 2Dim ordinal asymmetrischer Definitionsbereich, label=JSON:Paraboloid2Dim11OrdAsymm]
+		\begin{lstlisting}[language=json, caption=Paraboloid 2 Dim discreter asymmetrischer Definitionsbereich, label=subsubsec:Testfunktionen:Diskrete_Testfunktionen_mit_asymmetrischem_Definitionsbereich:JSON:Paraboloid2Dim11OrdAsymm]
 {
-	"name": "Paraboloid_2_11_Ord_Asymm",
-	"comment": "artificial ordinal variable problem",
-	"type": "ordinal variable problems",
+	"name": "Paraboloid_2_11_Discrete_Asymm",
+	"comment": "artificial discrete variable problem",
+	"type": "discrete variable problems",
 	"continuous_dimension": 0,
 	"discrete_dimension": 2,
 	"dimension": 2,
@@ -1500,7 +1511,40 @@ within=section,
 		
 		\subsection{Testfunktionen mit gemischten Variablem} \label{subsec:Mixed_Variable}
 		
-		\subsubsection{Konstruierte Probleme} \label{subsubsec:Konstruierte_Probleme}
+		\subsubsection{Konstruierte Testfunktionen} \label{subsubsec:Konstruierte_Probleme}
+		
+		Neue Testfunktionen mit gemischten Variablen wurden erzeugt, indem die stetigen Testfunktionen aus Tabelle~\ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} genommen wurden und ein Teil ihrer Dimensionen zu diskreten Dimensionen transformiert wurde. Im JSON-Format wird dies wie im Code-Snipped~\ref{subsubsec:Testfunktionen:Konstruierte_Testfunktionen:JSON:Paraboloid2Dim11MV} angezeigt.
+		
+		%TODO besser Dimensionen Formulieren
+		
+		\begin{lstlisting}[language=json, caption=Paraboloid 2 Dim gemischte Variablen, label=subsubsec:Testfunktionen:Konstruierte_Testfunktionen:JSON:Paraboloid2Dim11MV]
+{
+	"name": "Paraboloid_2_11_MV",
+	"comment": "artificial mixed_variable problem",
+	"type": "mixed variable problems",
+	"continuous_dimension": 1,
+	"discrete_dimension": 1,
+	"dimension": 2,
+	"optimum_argument": [[0.0], [0.0]],
+	"optimum": [0.0],
+	
+	"variable_boundaries": {
+		"natural_numbers": [],
+		"discrete": [[-3, 7]],
+		"continuous": [[-3, 7]],
+		"ordinal": [],
+		"categorical": []
+	},
+	
+	"discrete_values": [-3.0, -2.0, -1.0, 0.0, 1.0,
+	2.0, 3.0, 4.0 ,5.0, 6.0,
+	7.0],
+	
+	"magnitudes_of_categorical_variables": []
+}
+		\end{lstlisting}
+		
+		Es wurden die Testfunktionen \glqq Cigar\grqq, \glqq Ellipsoid\grqq{} und \glqq Paraboloid\grqq{} aus Tabelle~\ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} und die Testfunktionen \glqq Rosenbrock(5)\grqq{} und \glqq Zakharov(5)\grqq{} genommen, da ihre Dimensionen \(n = 5\) bzw. \(n = 10\) waren und somit verschiedene Kombinationen von stetigen und diskreten Dimensionen getestet werden konnten. Die Funktionen, deren Dimension \(n = 5\) ist, sind durch eine \glqq (5)\grqq{} gekennzeichnet. Die Funktionen, deren Dimension \(n = 10\) ist, haben keine gesonderte Kennzeichnung.
 		
 		\subsubsection{Coil Spring Design Problem (CSD)} \label{subsubsec:Coil_Spring_Design_Problem}
 		
@@ -1708,7 +1752,7 @@ within=section,
 		
 		\paragraph{Vollständiger Raum als Initialisierungsintervall}\mbox{}\\%TODO fragen, ob 5.5.1.1 gut ist?
 		\newline
-		\noindent Wie bereits im Abschnitt~\ref{subsec:Definition_ACO_R} beschrieben, hat das Initialisierungsintervall großen Einfluss auf den Erfolg %die Güte?
+		\noindent Wie bereits im Abschnitt~\ref{sec:Testfunktionen} beschrieben, hat das Initialisierungsintervall großen Einfluss auf den Erfolg %die Güte?
 		des Algorithmus. So können für das CSD Anfangslösungen aus dem gesamten Raum \(\{3 \cdot d_{min}, 3.0\} \times \{d_{min}, 0.5000\} \times \{1, 70\}\) oder dem gefilterten Raum gezogen werden, was für das CSD einen Unterschied macht. Nimmt man den gesamten Raum als Grundlage, so findet ACO\(_\mathbb{R}\)-VS das Optimum nicht oder nur nach mehreren tausend Iterationen, wie in der Abbildung~\ref{fig:box_plot:ACO_R-VS_CSD_penalty_perform} zu sehen.\\%TODO besser formulieren
 		
 		Nimmt man den gesamten Raum zum ziehen der Initiallösungen, so ändert sich die Zielfunktion von der Formel~\ref{eq:CSD_material} zu der Formel~\ref{eq:CSD_penalty}, wie in \cite{ACO_2013} definiert.
