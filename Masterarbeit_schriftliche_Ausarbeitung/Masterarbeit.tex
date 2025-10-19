@@ -191,6 +191,7 @@ within=section,
 	
 	\begin{acronym}[Masterarbeit]
 		\acro{acorvs}[ACO\(_{\mathbb{R}}\)-VS]{ACO\(_\mathbb{R}\)-very-simple}
+		\acro{acorvsmv}[ACO\(_{\mathbb{R}}\)-VS-MV]{ACO\(_\mathbb{R}\)-very-simple-mixed-variable}
 		\acro{csd}[CSD Problem]{Coil Spring Design Problem}
 		\acro{sce}[SCE]{solution creating entities}
 		\acro{tsp}[TSP]{Traveling Salesperson Problem}
@@ -748,11 +749,11 @@ within=section,
 	
 	%\noindent Da ACO\(_{\mathbb{R}}\)-simple den Lösungfindungsprozess zwar deutlich vereinfacht, jedoch einen integralen Bestandteil, das Generieren von neuen Lösungen ausgehend von weniger guten Lösungen beibehält, also anstatt nur stur nach der besten Lösung zu gehen, auch in anderen Gebieten nach vielversprechenden Ergebnissen sucht, ist dieser Algorithmus, gemäß unserer Intuition, der Favorit zwischen den beiden Algorithmen zur Intervallsauswertung.
 	
-	\subsection{Erweiterung von \acl{acorvs} für Probleme mit diskreten Variablen}
+	\subsection{Erweiterung von \acl{acorvs} zu \acl{acorvsmv} für Probleme mit diskreten Variablen}
 	
 	%TODO passt dieser Name?
 	
-	Da ACO\(_\mathbb{R}\)-VS ursprünglich für Funktionsoptimierung von stetigen Problemen entwickelt wurde, muss die ACO\(_\mathbb{R}\)-VS-Metaheuristik für diskrete Probleme und für Probleme mit gemischten Variablen angepasst werden.\hfill\newline
+	Da ACO\(_\mathbb{R}\)-VS ursprünglich für Funktionsoptimierung von stetigen Problemen entwickelt wurde, muss die ACO\(_\mathbb{R}\)-VS-Metaheuristik für diskrete Probleme angepasst werden.\hfill\newline
 	
 	%TODO besser Beschreibung als gemischte Variablen
 	
@@ -760,9 +761,15 @@ within=section,
 	
 	%TODO reicht das oder Pseudocode hinzufügen?
 	
-	\subsection{Erweiterung von ACO\(_\mathbb{R}\) für Probleme mit diskreten Variablen}
+	\subsection{Erweiterung von ACO\(_\mathbb{R}\) zu ACO\(_\text{MV}\) für Probleme mit diskreten Variablen}
+	
+	Die Erweiterung von ACO\(_\mathbb{R}\) zu ACO\(_\text{MV}\) ist ähnlich zu der Erweiterung von \acl{acorvs} zu \acl{acorvsmv}. Wie in \textit{Socha}~\cite{socha2009ant} beschrieben, damit ACO\(_\text{MV}\) mit diskreten Variablen umgehen kann, rechnet ACO\(_\text{MV}\) mit den Indizes der diskreten Werte in Form von reellen Zahlen, anstatt mit den diskreten Werten selbst. Weiter rechnet ACO\(_\text{MV}\) wie ACO\(_\mathbb{R}\). Am Ende werden dann die gewonnen Werte für die diskreten Werte an die Indizes gerundet, die am nächsten an den neuen diskreten Werten liegen.
+	
+	%TODO besser Beschreibung als gemischte Variablen
 	
 	%TODO hier oder früher?
+	
+	%TODO auch für kategorische Variablen oder reicht das?
 	
 	\section{SPPBO-Schema} \label{sec:SPPBO_Schema}
 	
@@ -816,13 +823,13 @@ within=section,
 	
 	%TODO besserer Funktionsname als Update
 	
-	Das HSPPBO-Schema zeichnet sich dadurch aus, dass die \ac{sce} in einer Baumstruktur angeordnet sind. Dadurch wird eine Nachbarschaftstopologie ermöglicht, welche die \ac{sce} gemäß der Güte ihrer Lösung ordnet. In \cite{kupfer2021hierarchical} wurde sich für eine tertiäre Baumstruktur mit 13 Knoten entschieden, die wir hier übernehmen. Wie beschrieben ordnet \(\mathcal{R}\) jeder der \ac{sce} drei Populationen zu, die alle nur eine Lösung haben. Von diesen Populationen ist für die Funktion \(\mathcal{U}\) nur die Population \(P^{SCE}_{persbest}\) entscheidend. Stellt der Algorithmus fest, dass \(P^{SCE}_{persbest} > P^{parent(SCE)}_{persbest}\) gilt, werden die \ac{sce} im Baum getauscht. Die Prüfung, ob dies gilt, wird \glqq top-down\grqq{} durchgeführt. Wie in \cite{kupfer2021hierarchical} beobachtet, lässt dieses Vorgehen schlechte Lösungen schnell im Baum sich nach unten bewegen, während gute Lösungen hinreichend lange gut bleiben müssen, um im Baum nach oben zu wandern. Wird festgestellt, dass die Anzahl der Vertauschung im Baum im Verhältnis zur Gesamtanzahl an \ac{sce} im Baum einen Threshold \(\theta\) übersteigt, wird die Funktion \(\mathcal{H}\) aufgerufen. Nach \cite{kupfer2021hierarchical} gilt für den Threshold \(\theta \in \{0.1, 0.25, 0.5\}\). Im Code ist \(\theta = 0.25\) eingestellt. Die Einstellung wurde beibehalten. Wird der Threshold überschritten, greift \(\mathcal{H}\). Nach \cite{kupfer2021hierarchical} gibt es drei Einstellungen für \(\mathcal{H}\), nämlich \(\mathcal{H}_{full}\), \(\mathcal{H}_{partial}\) und \(\mathcal{H}_{none}\).  Ist \(\mathcal{H}_{full}\) eingestellt, werden beim überschreiten des Thresholds alle Populationen \(P^{SCE}_{persbest}\) gelöscht. Das entspricht einem kompletten Vergessen der \ac{sce} und ist äquivalent zum Neustart des Algorithmus. Ist \(\mathcal{H}_{partial}\) eingestellt, werden nur die Population \(P^{SCE}_{persbest}\) der \ac{sce} ab der Tiefe 3 und abwärts gelöscht. Ist \(\mathcal{H}_{none}\) eingestellt, gibt es keine Veränderungen an den Populationen. Im Code ist \(\mathcal{H}_{partial}\) eingestellt. Die Einstellung wurde beibehalten.
+	Das HSPPBO-Schema zeichnet sich dadurch aus, dass die \ac{sce} in einer Baumstruktur angeordnet sind. Dadurch wird eine Nachbarschaftstopologie ermöglicht, welche die \ac{sce} gemäß der Güte ihrer Lösung ordnet. In \cite{kupfer2021hierarchical} wurde sich für eine tertiäre Baumstruktur mit 13 Knoten entschieden, die wir hier übernehmen. Wie beschrieben ordnet \(\mathcal{R}\) jeder der \ac{sce} drei Populationen zu, die alle nur eine Lösung haben. Von diesen Populationen ist für die Funktion \(\mathcal{U}\) nur die Population \(P^{SCE}_{persbest}\) entscheidend. Stellt der Algorithmus fest, dass \(P^{SCE}_{persbest} > P^{parent(SCE)}_{persbest}\) gilt, werden die \ac{sce} im Baum getauscht. Die Prüfung, ob dies gilt, wird \glqq top-down\grqq{} durchgeführt. Wie in \cite{kupfer2021hierarchical} beobachtet, lässt dieses Vorgehen schlechte Lösungen schnell im Baum sich nach unten bewegen, während gute Lösungen hinreichend lange gut bleiben müssen, um im Baum nach oben zu wandern. Wird festgestellt, dass die Anzahl der Vertauschung im Baum im Verhältnis zur Gesamtanzahl an \ac{sce} im Baum einen Threshold \(\theta\) übersteigt, wird die Funktion \(\mathcal{H}\) aufgerufen. Nach \cite{kupfer2021hierarchical} gilt für den Threshold \(\theta \in \{0.1, 0.25, 0.5\}\). Im Code ist \(\theta = 0.25\) eingestellt. Die Einstellung wurde beibehalten. Wird der Threshold überschritten, greift \(\mathcal{H}\). Nach \cite{kupfer2021hierarchical} gibt es drei Einstellungen für \(\mathcal{H}\), nämlich \(\mathcal{H}_{full}\), \(\mathcal{H}_{partial}\) und \(\mathcal{H}_{none}\).  Ist \(\mathcal{H}_{full}\) eingestellt, werden beim überschreiten des Thresholds alle Populationen \(P^{SCE}_{persbest}\) gelöscht. Das entspricht einem kompletten Vergessen der \ac{sce} und ist äquivalent zum Neustart des Algorithmus. Ist \(\mathcal{H}_{partial}\) eingestellt, werden nur die Population \(P^{SCE}_{persbest}\) der \ac{sce} ab der Tiefe 3 und abwärts gelöscht. Ist \(\mathcal{H}_{none}\) eingestellt, gibt es keine Veränderungen an den Populationen. Im Code ist \(\mathcal{H}_{partial}\) eingestellt. Die Einstellung wurde beibehalten.\hfill\newline
 	
 	%TODO andere Baumstrukturen als offene Forschungsfrage?
 	
 	Algorithmus~\ref{sec:HSPPBO_Schema:alg:HSPPBO} zeigt nochmal den Ablauf des HSPPBO-Schema in Pseudocode.
 	
-	\begin{algorithm}
+	\begin{algorithm}[H]
 		
 		\caption{HSPPBO}\label{sec:HSPPBO_Schema:alg:HSPPBO}
 		
@@ -870,15 +877,15 @@ within=section,
 		
 	\end{algorithm}
 	
-	\section{Formulierung von \acl{acorvs} im HSPPBO-Schema}
+	\section{Formulierung von \acl{acorvsmv} im HSPPBO-Schema}
 	
-	\section{Kombinieren des HSPPBO-Schemas mit \acl{acorvs}}
+	\section{Kombinieren des HSPPBO-Schemas mit \acl{acorvsmv}}
 	
-	\subsection{Hom-HPB-\ac{acorvs}} \label{subsec:Homogen_HPB_ACO_R_very_simple}
+	\subsection{Hom-HPB-\ac{acorvsmv}} \label{subsec:Homogen_HPB_ACO_R_very_simple}
 	
 	%TODO Hom HPB ACOR-VS oder Hom-HPB-ACOR-VS?
 	
-	\noindent Die einfachste Kombination aus dem HSPPBO-Schema und \ac{acorvs} ergibt Homogen Hierarchical Population-Based \ac{acorvs}, Hom-HPB-\ac{acorvs}. Dabei führt jede \ac{sce}, nach der Initialisierung, den \ac{acorvs} Algorithmus aus. Das Archiv, welches bei der Ausführung von \ac{acorvs} notwendig ist, hat diesmal statt 100 Lösungen nur 4. Diese 4 Lösungen sind die 3 Populationen, die jede der SCE mitführt plus die Population, welche die beste bis dato gefunden Lösung hält, wie in Abschnitt~\ref{sec:HSPPBO_Schema} erläutert. Der Mechanismus, welcher das Tauschen von Populationen steuert, wenn eine Eltern-SCE eine schlechtere Lösungen oder eine Kind-SCE eine bessere Lösung findet, wie ebenfalls im Abschnitt~\ref{sec:HSPPBO_Schema} dargelegt, bleibt der gleiche. Dies führt zur Bezeichnung Hierarchical Population-Based ACO\(_\mathbb{R}\)-very-simple oder kurz HPB-ACO\(_\mathbb{R}\)-VS. Was wir noch nicht aufgegriffen haben und wovon in \cite{kupfer2021hierarchical}, über das Tauschen der Knoten im Baum hinaus, kein weiterer Gebraucht gemacht wird, ist, dass die SCEs, abhängig von ihrer Position im Baum, nicht exakt denselben Algorithmus ausführen müssen. Weil aber die erste Iteration der Kombination des HSPPBO-Schemes mit dem \ac{acorvs} Algorithmus dies ebenfalls nicht ausnutzt, bezeichnen wir diese Iteration Homogen-HPB-\ac{acorvs} oder kurz Hom-HPB-\ac{acorvs}.\hfill\newline
+	\noindent Die einfachste Kombination aus dem HSPPBO-Schema und \ac{acorvs} ergibt Homogen Hierarchical Population-Based \ac{acorvs}, Hom-HPB-\ac{acorvs}. Dabei führt jede \ac{sce}, nach der Initialisierung, den \ac{acorvs} Algorithmus aus. Das Archiv, welches bei der Ausführung von \ac{acorvs} notwendig ist, hat diesmal statt 100 Lösungen nur 4. Diese 4 Lösungen sind die 3 Populationen, die jede der SCE mitführt plus die Population, welche die beste bis dato gefunden Lösung hält, wie in Abschnitt~\ref{sec:HSPPBO_Schema} erläutert. Der Mechanismus, welcher das Tauschen von Populationen steuert, wenn eine Eltern-SCE eine schlechtere Lösungen oder eine Kind-SCE eine bessere Lösung findet, wie ebenfalls im Abschnitt~\ref{sec:HSPPBO_Schema} dargelegt, bleibt der gleiche. Dies führt zur Bezeichnung Hierarchical Population-Based \acl{acorvsmv} oder kurz HPB-\ac{acorvsmv}. Was wir noch nicht aufgegriffen haben und wovon in \cite{kupfer2021hierarchical}, über das Tauschen der Knoten im Baum hinaus, kein weiterer Gebraucht gemacht wird, ist, dass die \acp{sec}, abhängig von ihrer Position im Baum, nicht exakt denselben Algorithmus ausführen müssen. Weil aber die erste Iteration der Kombination des HSPPBO-Schemes mit dem \ac{acorvsmv} Algorithmus dies ebenfalls nicht ausnutzt, bezeichnen wir diese Iteration Homogen-HPB-\ac{acorvsmv} oder kurz Hom-HPB-\ac{acorvs}.\hfill\newline
 	
 	%Im HPB-ACO\(_\mathbb{R}\)-VS 
 	
@@ -889,7 +896,7 @@ within=section,
 	%TODO einarbeiten, dass Archive sehr klein sind und es trotzdem funktioniert
 	%TODO fragen ob Überschrift Hom-HPB-ACO sein soll oder Hom-Hierarchical Population-Based Aco
 	
-	\subsection{Het-HPB-\ac{acorvs}} \label{subsec:Heterogen_HPB_ACO_R_very_simple}
+	\subsection{Het-HPB-\ac{acorvsmv}} \label{subsec:Heterogen_HPB_ACO_R_very_simple}
 	
 	\ac{acorvs} hat in seiner Definition im Abschnitt~\ref{subsec:ACO_R_-_very_-_simple}, Gleichung~\ref{subsec:ACO_R_-_very_-_simple:eq:Linear_Diviation} einen Parameter, der sich anbietet, um, abhängig von der Position der SCE im tertiären Baum, mit der Höhe im Baum zu variieren. Dieser Parameter ist \(\xi\). Wir greifen die Gleichung~\ref{subsec:ACO_R_-_very_-_simple:eq:Linear_Diviation} auf und benutzen sie hier als Gleichung~\ref{subsec:Heterogen_HPB_ACO_R_very_simple:eq:Linear_Deviation}. Dabei hängt \(\xi_{depth}\) von der Tiefe des \ac{sce} im Baum ab.
 	
@@ -915,7 +922,7 @@ within=section,
 	
 	%TODO Homo-HSPPB-ACO?
 	
-	\subsection{Het-HSPPB-ACO\(_\mathbb{R}\)-very-simple} \label{subsec:Heterogen_HSPPB_ACO_R_very_simple}
+	\subsection{Het-HSPPB-\ac{acorvsmv}} \label{subsec:Heterogen_HSPPB_ACO_R_very_simple}
 	
 	\noindent Schließlich wird noch die Zufallskomponente in Hetero-HPB-\ac{acorvs} eingearbeitet. Auch hier bietet es sich an, abhängig von der Position der SCE im Baum, die Wahrscheinlichkeit mit der die Zufallskomponente verwendet wird, zu verändern. Die Zufallskomponente für die sich entschieden wurde, ist das Verwenden einer zufälligen Lösung aus dem Initialisierungsraum, anstatt der Lösungskonstruktion in Gleichung~\ref{subsec:Heterogen_HPB_ACO_R_very_simple:eq:interval}. Diese zufällige Lösung wird in der Tiefe \(0\) mit der Wahrscheinlichkeit \(0\%\) genommen, in der Tiefe \(1\) mit \(10\%\), in der Tiefe \(2\) mit \(15\%\) und in der Tiefe \(3\) mit der Wahrscheinlichkeit \(20\%\). Auch hier wurden die Werte für die Wahrscheinlichkeiten explizit so gewählt, da sie als einfach erschienen und damit im Einklang mit der Idee möglichster Einfachheit hinter \ac{acorvs} sind. Da in diese Iteration der Kombination des HSPPBO-Schemas mit dem \ac{acorvs} Algorithmus eine einfache probabilistische Komponente eingebaut wurde, bezeichnen wie diese Iteration als Heterogen-HSPPB-\ac{acorvs} oder kurz Het-HSPPB-\ac{acorvs}.
 	
@@ -1047,7 +1054,7 @@ within=section,
 		%Positiv aufgefallen ist aber, dass bei der Suche nach den Fehlern die Algorithmen die berechneten Optima selbst dann fanden, wenn die Angegebenen als Ziel verwendet wurden. Die Verfahren brachen nur nicht ab, weil das Ziel eben eines war, was nicht erreicht werden konnte.\hfill\newline
 		
 		Die Testfunktionen, welche in den Tabellen \ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen}, \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt}, \ref{subsec:Stetige_Testfunktionen:tab:Teil_2_1_Stet_Adapt} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_2_2_Stet_Adapt} gelistet sind, unterscheiden sich nicht nur darin, für welche Vergleiche sie herangezogen werden, sondern auch welches Abbruchkriterium beim Vergleich genutzt wird. Für Testfunktionen aus Tabelle~\ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} gilt das Abbruchkriterium \(|f - f^*| < \varepsilon, \, \varepsilon = 10^{-10}\) und für Testfunktionen aus den Tabellen~\ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt}, \ref{subsec:Stetige_Testfunktionen:tab:Teil_2_1_Stet_Adapt} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_2_2_Stet_Adapt} gilt das Abbruchkriterium \(|f - f^*| < |\varepsilon_1 f| + \varepsilon_2, \, \varepsilon_1 = \varepsilon_2 = 10^{-4}\). Dabei ist \(\varepsilon_1\) der relative Fehler und \(\varepsilon_2\) der absolute Fehler. In beiden Abbruchkriterien steht \(f\) für den momentanen Funktionswert und \(f^*\) für das bekannte Optimum. Das zweite Abbruchkriterium wird in \cite{socha2008ant} und \cite{socha2009ant} als \(|f - f^*| < \varepsilon_1 f + \varepsilon_2, \varepsilon_1 = \varepsilon_2 = 10^{-
-		4}\) angegeben, aber es musste zu der jetzigen Form verändert werden, da sonst negative Optima nicht erreicht werden können. So wird z.B. das Optimum \(f^* = -3.32237\) der Testfunktion Hartmann(6,4) nicht erreicht, da, für einen an das Optimum hinreichend nahen, Funktionswert \(f = -3.32237 + \varepsilon_3\), mit \(\varepsilon_3 > 10^{-4}\), gilt \(|-3.32237 - (f + \varepsilon_3)| = |\varepsilon_3| = \varepsilon_3 > \varepsilon_1 \cdot (-3.32237) + \varepsilon_2\). Ein weitere Herausforderung des Abbruchkriteriums \(|f - f^*| < \varepsilon_1 f + \varepsilon_2, \, \varepsilon_1 = \varepsilon_2 = 10^{-4}\), ist die Tatsache, dass 6 der in diesem Abschnitt vorgestellten 20 Testfunktionen Optima haben, die mehr als 4 Nachkommastellen besitzen, weswegen, bei der Benutzungen des zweiten Abbruchkriteriums, die Güte eines Algorithmus, der auf diesen 6 Testfunktionen getestet wird, besser ausgewertet wird, als sie ist. Denn bei dem zweiten Abbruchkriterium muss der Algorithmus z.B. für \(f^* = -3.32237\) nur \(f = -3.3223 \dots\) erreichen und gerade die letzte Nachkommastelle oder sogar Nachkommastellen, wenn es mehrere sind, können darüber entscheiden, wie viele Iterationen ein Algorithmus braucht, um das Optimum zu erreichen und ob das Optimum überhaupt gefunden wurde oder nur ein Wert, der nahe dem Optimum ist.\hfill\newline
+		4}\) angegeben, aber es musste zu der jetzigen Form verändert werden, da sonst negative Optima nicht erreicht werden können. So wird z.B. das Optimum \(f^* = -3.32237\) der Testfunktion Hartmann(6,4) nicht erreicht, da, für einen an das Optimum hinreichend nahen, Funktionswert \(f = -3.32237 + \varepsilon_3\), mit \(\varepsilon_3 > 10^{-4}\), gilt \(|-3.32237 - (f + \varepsilon_3)| = |\varepsilon_3| = \varepsilon_3 > \varepsilon_1 \cdot (-3.32237) + \varepsilon_2\). Ein weitere Herausforderung des Abbruchkriteriums \(|f - f^*| < \varepsilon_1 f + \varepsilon_2, \, \varepsilon_1 = \varepsilon_2 = 10^{-4}\), ist die Tatsache, dass 6 der in diesem Abschnitt vorgestellten 20 Testfunktionen Optima haben, die mehr als 4 Nachkommastellen besitzen, weswegen, bei der Benutzungen des zweiten Abbruchkriteriums, die Güte eines Algorithmus, der auf diesen 6 Testfunktionen getestet wird, besser ausgewertet wird, als sie ist. Denn bei dem zweiten Abbruchkriterium muss der Algorithmus z.B. für \(f^* = -3.32237\) nur \(f = -3.3223 \dots\) erreichen und gerade die letzte Nachkommastelle oder Nachkommastellen, wenn es mehrere sind, können darüber entscheiden, wie viele Iterationen ein Algorithmus braucht, um das Optimum zu erreichen bzw. ob das Optimum überhaupt gefunden wurde oder nur ein Wert, der nahe dem Optimum ist.\hfill\newline
 		
 		%Fernen wurde das Abbruchkriterium für alle Testfunktionen, außer für die Maximierungsprobleme \glqq Plane\grqq \hspace{.16667em} und \glqq Diagonal Plane\grqq, aus Tabelle~\ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} auf\\
 		%\(|f-f^*|<\epsilon, \epsilon = 10^{-10}\) gesetzt, dabei ist \(f\) der momentane Funktionswert und \(f^*\) das bekannte Optimum. Für die Maximierungsprobleme wurde das Abbruchkriterium \(f>\epsilon\) gesetzt, mit \(\epsilon=10^{10}\).\hfill\newline
@@ -1855,143 +1862,143 @@ within=section,
 		
 		%TODO boxplots für die Laufzeit der Algorithmen
 	
-		\subsubsection{Thermal Insulation System Design Problem (TISD)} \label{subsubsec:TISD}
+		%\subsubsection{Thermal Insulation System Design Problem (TISD)} \label{subsubsec:TISD}
 		
-		Das klassische nicht-konstruierte Testproblem, mit kategorischen Variablen, ist das Thermal Insulation System Design Problem (TISD). In der Literatur, wie in \cite{ACO_2013} beschrieben
+		%Das klassische nicht-konstruierte Testproblem, mit kategorischen Variablen, ist das Thermal Insulation System Design Problem (TISD). In der Literatur, wie in \cite{ACO_2013} beschrieben
 		
-		\begin{figure}[H] %TODO Abbildung nachmalen
-			\centering
-			\includegraphics[scale=0.5]{TISD_Sheme.png}
-			\caption{Schematische Zeichnung des TISD, wie dargestellt in \cite{ACO_2013}} %TODOgenaue Seitenzahl referenzieren?
-			\label{pic:TISD}
-		\end{figure}
+		%\begin{figure}[H] %TODO Abbildung nachmalen
+		%	\centering
+		%	\includegraphics[scale=0.5]{TISD_Sheme.png}
+		%	\caption{Schematische Zeichnung des TISD, wie dargestellt in \cite{ACO_2013}} %TODOgenaue Seitenzahl referenzieren?
+		%	\label{pic:TISD}
+		%\end{figure}
 	
-		\subsubsection{Traveling Spice Salesperson Problem (TSSP)} \label{subsubsec:TSSP}
+		%\subsubsection{Traveling Spice Salesperson Problem (TSSP)} \label{subsubsec:TSSP}
 			
 	\section{Herausforderung}
 	
 	%TODO auflisten, wo schlechte Notationen oder ´Fehler in Papern waren
 	
-	\section{Einfluss der Parameter}
+	%\section{Einfluss der Parameter}
 	
-	Bevor wir ACO\(_{\mathbb{R}}\), ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple mit einander vergleichen, betrachten wir den Einfluss der Parameter in ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple. Die dieser Arbeit beiliegenden Algorithmen sind von zwei bzw. drei Parametern beeinflusst. Im Fall  ACO\(_{\mathbb{R}}\)-simple sind es \textit{q}, \textit{k} und \(\xi\) und im Fall von ACO\(_{\mathbb{R}}\)-very-simple sind es \textit{k} und \(\xi\), wie respektive in den Gleichungen~(\ref{ACO_R_simple_weights}) und (\ref{ACO_R_simple_linear_distribution}) bzw. der Gleichung~(\ref{ACO_R_very_simple_linear_distribution}) zu sehen ist --  zumindest nach Konstruktion. Tests haben jedoch gezeigt, dass es vier bzw. drei Parameter sind, nämlich, dass die Anzahl der Ameisen auch eine wesentliche Rolle spielt.\hfill\newline
+	%Bevor wir ACO\(_{\mathbb{R}}\), ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple mit einander vergleichen, betrachten wir den Einfluss der Parameter in ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple. Die dieser Arbeit beiliegenden Algorithmen sind von zwei bzw. drei Parametern beeinflusst. Im Fall  ACO\(_{\mathbb{R}}\)-simple sind es \textit{q}, \textit{k} und \(\xi\) und im Fall von ACO\(_{\mathbb{R}}\)-very-simple sind es \textit{k} und \(\xi\), wie respektive in den Gleichungen~(\ref{ACO_R_simple_weights}) und (\ref{ACO_R_simple_linear_distribution}) bzw. der Gleichung~(\ref{ACO_R_very_simple_linear_distribution}) zu sehen ist --  zumindest nach Konstruktion. Tests haben jedoch gezeigt, dass es vier bzw. drei Parameter sind, nämlich, dass die Anzahl der Ameisen auch eine wesentliche Rolle spielt.\hfill\newline
 	
-	Der Einfluss der Parameter wird außerdem geprüft, da es sich bei ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple lediglich um Intervallauswertungsmethoden handelt und hier der Einfluss der Parameter anders sein kann, als bei ACO\(_{\mathbb{R}}\), wir also zuerst überprüfen, ob er gleich ist oder nicht. Es besteht nämlich die Möglichkeit, dass aufgrund der zum Teil radikalen Einfachheit, vor allem von ACO\(_{\mathbb{R}}\)-very-simple, gegenüber ACO\(_{\mathbb{R}}\), der Einfluss der Parameter, im Vergleich zu ACO\(_{\mathbb{R}}\), einen anderen Charakter annimmt.\hfill\newline
+	%Der Einfluss der Parameter wird außerdem geprüft, da es sich bei ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple lediglich um Intervallauswertungsmethoden handelt und hier der Einfluss der Parameter anders sein kann, als bei ACO\(_{\mathbb{R}}\), wir also zuerst überprüfen, ob er gleich ist oder nicht. Es besteht nämlich die Möglichkeit, dass aufgrund der zum Teil radikalen Einfachheit, vor allem von ACO\(_{\mathbb{R}}\)-very-simple, gegenüber ACO\(_{\mathbb{R}}\), der Einfluss der Parameter, im Vergleich zu ACO\(_{\mathbb{R}}\), einen anderen Charakter annimmt.\hfill\newline
 	
-	Es wird jedoch davon ausgegangen, da sich alle Methoden doch ähneln, dass der Einfluss vergleichbar oder sogar der gleiche ist.\hfill\newline
+	%Es wird jedoch davon ausgegangen, da sich alle Methoden doch ähneln, dass der Einfluss vergleichbar oder sogar der gleiche ist.\hfill\newline
 	
-	Abschließend ist noch festzustellen, dass durch die Betrachtung der Einflüsse der Parameter auf ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple, eine Art Parameteroptimierung bzw. Parameter Tuning durchgeführt wird. Das ist zwar nicht das Ziel der Betrachtung, aber wenn wir die Einflüsse verschiedener Parameterwerte auf die Leistungsfähigkeit der Algorithmen untersuchen, untersuchen wir auch gleichzeitig die Güte der Wahl der Parameterwerte. Es wird jedoch an dieser Stelle nochmal betont, dass das Ziel der Betrachtung, der Einflüsse der Parameter, die Untersuchung der Ähnlichkeit der Varianten zur Lösungserzeugung ist.
+	%Abschließend ist noch festzustellen, dass durch die Betrachtung der Einflüsse der Parameter auf ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple, eine Art Parameteroptimierung bzw. Parameter Tuning durchgeführt wird. Das ist zwar nicht das Ziel der Betrachtung, aber wenn wir die Einflüsse verschiedener Parameterwerte auf die Leistungsfähigkeit der Algorithmen untersuchen, untersuchen wir auch gleichzeitig die Güte der Wahl der Parameterwerte. Es wird jedoch an dieser Stelle nochmal betont, dass das Ziel der Betrachtung, der Einflüsse der Parameter, die Untersuchung der Ähnlichkeit der Varianten zur Lösungserzeugung ist.
 	
-	\subsection{Einfluss der Anzahl der Ameisen}
+	%\subsection{Einfluss der Anzahl der Ameisen}
 	
-	Normalerweise wird bei einem Ameisenalgorithmus die Anzahl der Ameisen klein gehalten, aber sie erreicht niemals eins. ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple arbeiten jedoch, wie in der Abbildung~\ref{Ellipsoid_compare_m}, Abbildung~\ref{Cigar_compare_m}, Abbildung~\ref{Paraboloid_compare_m} und Abbildung~\ref{Tablet_compare_m} zu sehen, am besten mit nur einer einzigen Ameise, also wenn \textit{m}=1.
+	%Normalerweise wird bei einem Ameisenalgorithmus die Anzahl der Ameisen klein gehalten, aber sie erreicht niemals eins. ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple arbeiten jedoch, wie in der Abbildung~\ref{Ellipsoid_compare_m}, Abbildung~\ref{Cigar_compare_m}, Abbildung~\ref{Paraboloid_compare_m} und Abbildung~\ref{Tablet_compare_m} zu sehen, am besten mit nur einer einzigen Ameise, also wenn \textit{m}=1.
 	
-	\begin{figure}[H]
-		\centering
-		\subfloat[][ACO\(_{\mathbb{R}}\)-simple]{\includegraphics[width=0.4\linewidth]{Abbildungen/ACO_R_simple_Ellipsoid_m_compare_n=10_g_q=0_95_xi=0_95_k=100_restarts=0_acc=1e-10.png}}
-		\qquad
-		\subfloat[][ACO\(_{\mathbb{R}}\)-very-simple]{\includegraphics[width=0.4\linewidth]{Abbildungen/ACO_R_very_simple_Ellipsoid_m_compare_n=10_g_q=0_95_xi=0_95_k=100_restarts=0_acc=1e-10.png}}
-		\caption{Ellipsoid Verglich m}
-		\label{Ellipsoid_compare_m}
-	\end{figure}
+	%\begin{figure}[H]
+	%	\centering
+	%	\subfloat[][ACO\(_{\mathbb{R}}\)-simple]{\includegraphics[width=0.4\linewidth]{Abbildungen/ACO_R_simple_Ellipsoid_m_compare_n=10_g_q=0_95_xi=0_95_k=100_restarts=0_acc=1e-10.png}}
+	%	\qquad
+	%	\subfloat[][ACO\(_{\mathbb{R}}\)-very-simple]{\includegraphics[width=0.4\linewidth]{Abbildungen/ACO_R_very_simple_Ellipsoid_m_compare_n=10_g_q=0_95_xi=0_95_k=100_restarts=0_acc=1e-10.png}}
+	%	\caption{Ellipsoid Verglich m}
+	%	\label{Ellipsoid_compare_m}
+	%\end{figure}
 	
-	\noindent Da in ACO\(_{\mathbb{R}}\), \textit{m} kein Parameter war und dort somit nicht diskutiert wurde, können wir leider keine Aussage darüber treffen, ob die Algorithmen ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple in ihrem Verhalten bzgl. des Parameters \textit{m} ähnlich zu ACO\(_{\mathbb{R}}\) sind.
+	%\noindent Da in ACO\(_{\mathbb{R}}\), \textit{m} kein Parameter war und dort somit nicht diskutiert wurde, können wir leider keine Aussage darüber treffen, ob die Algorithmen ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple in ihrem Verhalten bzgl. des Parameters \textit{m} ähnlich zu ACO\(_{\mathbb{R}}\) sind.
 	
-	\subsection{Einfluss des Parameters \textit{q}}
+	%\subsection{Einfluss des Parameters \textit{q}}
 	
-	Wie in ACO\(_{\mathbb{R}}\), erwarten wir in ACO\(_{\mathbb{R}}\)-simple, dass \textit{q} die Lokalität der Suche steuert - je kleiner \textit{q}, desto mehr werden die besseren Lösungen zum Generieren neuer Lösungen bevorzugt, desto schneller konvergiert der Algorithmus. Dies ist auch der Fall, was anhand von Abbildung~\ref{Ellipsoid_compare_q}, Abbildung~\ref{Cigar_q_compare}, Abbildung~\ref{Paraboloid_q_compare} und Abbildung~\ref{Tablet_q_compare} zu sehen ist.
+	%Wie in ACO\(_{\mathbb{R}}\), erwarten wir in ACO\(_{\mathbb{R}}\)-simple, dass \textit{q} die Lokalität der Suche steuert - je kleiner \textit{q}, desto mehr werden die besseren Lösungen zum Generieren neuer Lösungen bevorzugt, desto schneller konvergiert der Algorithmus. Dies ist auch der Fall, was anhand von Abbildung~\ref{Ellipsoid_compare_q}, Abbildung~\ref{Cigar_q_compare}, Abbildung~\ref{Paraboloid_q_compare} und Abbildung~\ref{Tablet_q_compare} zu sehen ist.
 	
-	\begin{figure}[H]
-		\centering
-		\includegraphics[scale=0.8]{Abbildungen/ACO_R_simple_Ellipsoid_g_q_compare_m=1_xi=0_95_k=100_restarts=0_acc=1e-10.png}
-		\caption{Ellipsoid Vergleich \textit{q}}
-		\label{Ellipsoid_compare_q}
-	\end{figure}
+	%\begin{figure}[H]
+	%	\centering
+	%	\includegraphics[scale=0.8]{Abbildungen/ACO_R_simple_Ellipsoid_g_q_compare_m=1_xi=0_95_k=100_restarts=0_acc=1e-10.png}
+	%	\caption{Ellipsoid Vergleich \textit{q}}
+	%	\label{Ellipsoid_compare_q}
+	%\end{figure}
 	
-	Der Algorithmus ist also in seinem Verhalten bzgl. des Parameters \textit{q} ähnlich zu ACO\(_{\mathbb{R}}\).\hfill\newline
+	%Der Algorithmus ist also in seinem Verhalten bzgl. des Parameters \textit{q} ähnlich zu ACO\(_{\mathbb{R}}\).\hfill\newline
 	
-	Für ACO\(_{\mathbb{R}}\)-very-simple gibt es keine Abbildungen bzgl. des Einflusses des Parameters \textit{q}, da dieser Parameter bei ACO\(_{\mathbb{R}}\)-very-simple entfällt. Jedoch stellen wir fest, dass der Algorithmus sehr schnell konvergiert, viel schneller als ACO\(_{\mathbb{R}}\)-simple, wie in Tabelle~\ref{VerglelichACORSimpleundACORVerySimple} zu sehen. Ferner können wir die Abwesenheit des Parameters \textit{q} mit einem hinreichend kleinen \textit{q} gleichstellen, da, wenn \textit{q} sehr klein ist, nur die erste, also beste Lösung als Ausgangspunkt für die folgende Lösungserzeugung dient und ACO\(_{\mathbb{R}}\)-simple selbst viel schneller konvergiert, als beim Standartwert \textit{q}=0.95. Wir interpretieren also die schnelle Konvergenz von ACO\(_{\mathbb{R}}\)-very-simple als den Einfluss eines hinreichend kleinen \textit{q}.\hfill\newline
+	%Für ACO\(_{\mathbb{R}}\)-very-simple gibt es keine Abbildungen bzgl. des Einflusses des Parameters \textit{q}, da dieser Parameter bei ACO\(_{\mathbb{R}}\)-very-simple entfällt. Jedoch stellen wir fest, dass der Algorithmus sehr schnell konvergiert, viel schneller als ACO\(_{\mathbb{R}}\)-simple, wie in Tabelle~\ref{VerglelichACORSimpleundACORVerySimple} zu sehen. Ferner können wir die Abwesenheit des Parameters \textit{q} mit einem hinreichend kleinen \textit{q} gleichstellen, da, wenn \textit{q} sehr klein ist, nur die erste, also beste Lösung als Ausgangspunkt für die folgende Lösungserzeugung dient und ACO\(_{\mathbb{R}}\)-simple selbst viel schneller konvergiert, als beim Standartwert \textit{q}=0.95. Wir interpretieren also die schnelle Konvergenz von ACO\(_{\mathbb{R}}\)-very-simple als den Einfluss eines hinreichend kleinen \textit{q}.\hfill\newline
 	
-	Beide Algorithmen, ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple, sind also in ihrem Verhalten bzgl. des Parameters \textit{q} ähnlich zu ACO\(_{\mathbb{R}}\).
+	%Beide Algorithmen, ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple, sind also in ihrem Verhalten bzgl. des Parameters \textit{q} ähnlich zu ACO\(_{\mathbb{R}}\).
 	
-	\subsection{Einfluss des Parameters \textit{k}}
+	%\subsection{Einfluss des Parameters \textit{k}}
 	
-	Wie zu erwarten war, funktionieren beide Algorithmen, ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple, mit größeren \textit{k} besser. Es wurde für alle späteren Durchläufe \textit{k}=100 gesetzt.\hfill\newline
+	%Wie zu erwarten war, funktionieren beide Algorithmen, ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple, mit größeren \textit{k} besser. Es wurde für alle späteren Durchläufe \textit{k}=100 gesetzt.\hfill\newline
 	
-	\noindent Da in ACO\(_{\mathbb{R}}\), \textit{k} kein Parameter war und dort somit nicht diskutiert wurde, können wir leider keine Aussage darüber treffen, ob die Algorithmen ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple in ihrem Verhalten bzgl. des Parameters \textit{k} ähnlich zu ACO\(_{\mathbb{R}}\) sind.
+	%\noindent Da in ACO\(_{\mathbb{R}}\), \textit{k} kein Parameter war und dort somit nicht diskutiert wurde, können wir leider keine Aussage darüber treffen, ob die Algorithmen ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple in ihrem Verhalten bzgl. des Parameters \textit{k} ähnlich zu ACO\(_{\mathbb{R}}\) sind.
 	
-	\subsection{Einfluss des Parameters \(\xi\)}
+	%\subsection{Einfluss des Parameters \(\xi\)}
 	
-	In ACO\(_{\mathbb{R}}\) hat der Parameter \(\xi\) eine ähnliche Wirkung wie die Verdunstungsrate des Pheromons. Je größer \(\xi\), desto langsamer konvergiert der Algorithmus. In ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple vergrößert \(\xi\) das Suchintervall direkt, wodurch es einen noch stärkeren Einfluss auf die Konvergenz des Algorithmus haben sollte, jedoch stellt sich heraus, dass \(\xi\) nur einen geringen Einfluss, bei ACO\(_{\mathbb{R}}\)-simple, auf die Testfunktion \glqq Ellipsoid\grqq \hspace{.16667em} hat, wie Abbildung~\ref{Ellipsoid_compare_xi} zeigt.\hfill\newline
+	%In ACO\(_{\mathbb{R}}\) hat der Parameter \(\xi\) eine ähnliche Wirkung wie die Verdunstungsrate des Pheromons. Je größer \(\xi\), desto langsamer konvergiert der Algorithmus. In ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple vergrößert \(\xi\) das Suchintervall direkt, wodurch es einen noch stärkeren Einfluss auf die Konvergenz des Algorithmus haben sollte, jedoch stellt sich heraus, dass \(\xi\) nur einen geringen Einfluss, bei ACO\(_{\mathbb{R}}\)-simple, auf die Testfunktion \glqq Ellipsoid\grqq \hspace{.16667em} hat, wie Abbildung~\ref{Ellipsoid_compare_xi} zeigt.\hfill\newline
 	
-	Für die Testfunktionen \glqq Cigar\grqq, \glqq Paraboloid\grqq \hspace{.16667em} und \glqq Tablet\grqq \hspace{.16667em} wurde das Ziel jedoch nur bei \(\xi = 0.95\) und \(\xi = 1.5 \) erreicht. Was wiederum einen sehr starker Einfluss nahelegt.\hfill\newline
+	%Für die Testfunktionen \glqq Cigar\grqq, \glqq Paraboloid\grqq \hspace{.16667em} und \glqq Tablet\grqq \hspace{.16667em} wurde das Ziel jedoch nur bei \(\xi = 0.95\) und \(\xi = 1.5 \) erreicht. Was wiederum einen sehr starker Einfluss nahelegt.\hfill\newline
 	
-	Diese Beobachtung lässt sich dadurch erklären, dass \glqq Ellipsoid\grqq \hspace{.16667em} die Testfunktion ist, für welche ACO\(_{\mathbb{R}}\)-simple mit großen Abstand die besten Werte liefert, die Leistung des Algorithmus also für diese Testfunktion vom ausgewählten Parameter wenig beeinflusst wird. Somit betrachten wir, wie der Algorithmus sich bei anderen Testfunktionen verhält.
+	%Diese Beobachtung lässt sich dadurch erklären, dass \glqq Ellipsoid\grqq \hspace{.16667em} die Testfunktion ist, für welche ACO\(_{\mathbb{R}}\)-simple mit großen Abstand die besten Werte liefert, die Leistung des Algorithmus also für diese Testfunktion vom ausgewählten Parameter wenig beeinflusst wird. Somit betrachten wir, wie der Algorithmus sich bei anderen Testfunktionen verhält.
 	
-	\begin{figure}[H]
-		\centering
-		\subfloat[][ACO\(_{\mathbb{R}}\)-simple]{\includegraphics[width=0.4\linewidth]{Abbildungen/ACO_R_simple_Ellipsoid_xi_compare_m=1_n=10_g_q=0_95_k=100_restarts=0_acc=1e-10.png}}
-		\qquad
-		\subfloat[][ACO\(_{\mathbb{R}}\)-very-simple]{\includegraphics[width=0.4\linewidth]{Abbildungen/ACO_R_very_simple_Ellipsoid_xi_compare_m=1_n=10_g_q=0_95_k=100_restarts=0_acc=1e-10.png}}
-		\caption{Ellipsoid Vergleich \(\xi\)}
-		\label{Ellipsoid_compare_xi}
-	\end{figure}
+	%\begin{figure}[H]
+	%	\centering
+	%	\subfloat[][ACO\(_{\mathbb{R}}\)-simple]{\includegraphics[width=0.4\linewidth]{Abbildungen/ACO_R_simple_Ellipsoid_xi_compare_m=1_n=10_g_q=0_95_k=100_restarts=0_acc=1e-10.png}}
+	%	\qquad
+	%	\subfloat[][ACO\(_{\mathbb{R}}\)-very-simple]{\includegraphics[width=0.4\linewidth]{Abbildungen/ACO_R_very_simple_Ellipsoid_xi_compare_m=1_n=10_g_q=0_95_k=100_restarts=0_acc=1e-10.png}}
+	%	\caption{Ellipsoid Vergleich \(\xi\)}
+	%	\label{Ellipsoid_compare_xi}
+	%\end{figure}
 	
-	Wenn wir also das Verhalten von ACO\(_{\mathbb{R}}\)-simple bei der Testfunktion \glqq Ellipsoid\grqq \hspace{.16667em} als Eigenheit des Algorithmus ausklammern und uns auf die restlichen Ergebnisse konzentrieren, stellen wir fest, dass beide Algorithmen, sowohl ACO\(_{\mathbb{R}}\)-simple als auch ACO\(_{\mathbb{R}}\)-very-simple, bei kleinerem \(\xi\) nicht konvergieren und bei größerem \(\xi\) langsamer konvergieren, wie Abbildung~\ref{Cigar_compare_xi}, Abbildung~\ref{Paraboloid_compare_xi} und Abbildung~\ref{Tablet_compare_xi} zeigen. Beide Algorithmen sind also in ihrem Verhalten bzgl. des Parameters \(\xi\) ähnlich zu ACO\(_{\mathbb{R}}\).
+	%Wenn wir also das Verhalten von ACO\(_{\mathbb{R}}\)-simple bei der Testfunktion \glqq Ellipsoid\grqq \hspace{.16667em} als Eigenheit des Algorithmus ausklammern und uns auf die restlichen Ergebnisse konzentrieren, stellen wir fest, dass beide Algorithmen, sowohl ACO\(_{\mathbb{R}}\)-simple als auch ACO\(_{\mathbb{R}}\)-very-simple, bei kleinerem \(\xi\) nicht konvergieren und bei größerem \(\xi\) langsamer konvergieren, wie Abbildung~\ref{Cigar_compare_xi}, Abbildung~\ref{Paraboloid_compare_xi} und Abbildung~\ref{Tablet_compare_xi} zeigen. Beide Algorithmen sind also in ihrem Verhalten bzgl. des Parameters \(\xi\) ähnlich zu ACO\(_{\mathbb{R}}\).
 	
-	\subsection{Auswertung der Einflüsse der Parameter}
+	%\subsection{Auswertung der Einflüsse der Parameter}
 	
-	Wir stellen fest, dass die Einflüsse der Parameter \textit{q} und \(\xi\) in ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple ähnlich sind, wie die Einflüsse dieser Parameter in ACO\(_{\mathbb{R}}\), wie wir es erwartet haben.\hfill\newline
+	%Wir stellen fest, dass die Einflüsse der Parameter \textit{q} und \(\xi\) in ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple ähnlich sind, wie die Einflüsse dieser Parameter in ACO\(_{\mathbb{R}}\), wie wir es erwartet haben.\hfill\newline
 	
-	Die Einflüsse sind jedoch nur gleich für den Parameter \textit{q}. Für den Parameter \(\xi\) sind sie verschieden, wie Abbildungen~\ref{Ellipsoid_compare_xi}, \ref{Cigar_compare_xi}, \ref{Paraboloid_compare_xi} und~\ref{Tablet_compare_xi} zeigen. Denn wie wir den Abbildungen entnehmen können, konvergieren weder ACO\(_{\mathbb{R}}\)-simple noch ACO\(_{\mathbb{R}}\)-very-simple für kleine \(\xi\), während wir davon ausgehen, dass dies bei ACO\(_{\mathbb{R}}\) nicht der Fall ist, da in \textit{Socha und Dorigo}~\cite{socha2008ant} erwähnt wurde, dass ACO\(_{\mathbb{R}}\) für größere \(\xi\) langsamer konvergiert. Wir gehen also davon aus, dass ACO\(_{\mathbb{R}}\) für kleinere \(\xi\) nur schneller konvergiert und dies einfach nicht genauer untersucht wurde.\hfill\newline
+	%Die Einflüsse sind jedoch nur gleich für den Parameter \textit{q}. Für den Parameter \(\xi\) sind sie verschieden, wie Abbildungen~\ref{Ellipsoid_compare_xi}, \ref{Cigar_compare_xi}, \ref{Paraboloid_compare_xi} und~\ref{Tablet_compare_xi} zeigen. Denn wie wir den Abbildungen entnehmen können, konvergieren weder ACO\(_{\mathbb{R}}\)-simple noch ACO\(_{\mathbb{R}}\)-very-simple für kleine \(\xi\), während wir davon ausgehen, dass dies bei ACO\(_{\mathbb{R}}\) nicht der Fall ist, da in \textit{Socha und Dorigo}~\cite{socha2008ant} erwähnt wurde, dass ACO\(_{\mathbb{R}}\) für größere \(\xi\) langsamer konvergiert. Wir gehen also davon aus, dass ACO\(_{\mathbb{R}}\) für kleinere \(\xi\) nur schneller konvergiert und dies einfach nicht genauer untersucht wurde.\hfill\newline
 	
-	Zum Schluss stellen wir noch fest, dass der Parameter \(\xi\) erstaunlicherweise optimal gewählt wurde, der Parameter \textit{q} sollte allerdings möglichst klein sein. Es war zwar nicht das Ziel der Betrachtung eine Parameteroptimierung durchzuführen, jedoch ist dies ein Nebenprodukt, dass bei einer Diskussion der Parameter unweigerlich entsteht.\hfill\newline
+	%Zum Schluss stellen wir noch fest, dass der Parameter \(\xi\) erstaunlicherweise optimal gewählt wurde, der Parameter \textit{q} sollte allerdings möglichst klein sein. Es war zwar nicht das Ziel der Betrachtung eine Parameteroptimierung durchzuführen, jedoch ist dies ein Nebenprodukt, dass bei einer Diskussion der Parameter unweigerlich entsteht.\hfill\newline
 	
-	Da wir jedoch ausdrücklich die Algorithmen ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple in ihrer original konzipierten Fassung untersuchen wollen und zudem der einzige Unterschied zwischen den beiden die Größe des Parameters \textit{q} ist, bei ACO\(_{\mathbb{R}}\)-very-simple können wir sagen, \textit{q} ist sehr klein, müssen wir das Nebenprodukt der Untersuchung der Parametereinflüsse ignorieren. Denn wenn wir es mit einarbeiten, stellen wir fest, dass ein kleineres \textit{q} besser ist, wir ACO\(_{\mathbb{R}}\)-very-simple also zweimal untersuchen und hier gerade die Unterschiede zwischen ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple von Interesse sind.
+	%Da wir jedoch ausdrücklich die Algorithmen ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple in ihrer original konzipierten Fassung untersuchen wollen und zudem der einzige Unterschied zwischen den beiden die Größe des Parameters \textit{q} ist, bei ACO\(_{\mathbb{R}}\)-very-simple können wir sagen, \textit{q} ist sehr klein, müssen wir das Nebenprodukt der Untersuchung der Parametereinflüsse ignorieren. Denn wenn wir es mit einarbeiten, stellen wir fest, dass ein kleineres \textit{q} besser ist, wir ACO\(_{\mathbb{R}}\)-very-simple also zweimal untersuchen und hier gerade die Unterschiede zwischen ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple von Interesse sind.
 	
-	\section{Vergleich zweier Intervallberechnungen für ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple}
+	%\section{Vergleich zweier Intervallberechnungen für ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple}
 	
 	%TODO Vorgestellte Ergebnisse
 	
-	Nun gilt es, den Begriff der Distanzberechnung zu untersuchen. Da es Unstimmigkeiten bzgl. der Benennung der Intervallberechnung gab, werden diese im folgenden geklärt. In \textit{Socha und Dorigo}~\cite{socha2008ant} wurde
+	%Nun gilt es, den Begriff der Distanzberechnung zu untersuchen. Da es Unstimmigkeiten bzgl. der Benennung der Intervallberechnung gab, werden diese im folgenden geklärt. In \textit{Socha und Dorigo}~\cite{socha2008ant} wurde
 	
-	\begin{equation} \label{linear_diviation}
-		\delta_d = \xi\sum_{j=1}^{k} \frac{|s_j^d-s_i^d|}{k-1}, ~ j \in \{1, ..., k\}, ~ d \in \{1, ..., n\},
-	\end{equation}
+	%\begin{equation} \label{linear_diviation}
+	%	\delta_d = \xi\sum_{j=1}^{k} \frac{|s_j^d-s_i^d|}{k-1}, ~ j \in \{1, ..., k\}, ~ d \in \{1, ..., n\},
+	%\end{equation}
 	
-	\noindent als Standardabweichung bezeichnet. Dies ist jedoch als lineare Abweichung bekannt. Wir untersuchen also im Folgenden, ob es bessere Ergebnisse liefert, statt der linearen Abweichung, Gleichung~(\ref{linear_diviation}), die Standardabweichung, Gleichung~(\ref{stadard_diviation}) zu nehmen.
+	%\noindent als Standardabweichung bezeichnet. Dies ist jedoch als lineare Abweichung bekannt. Wir untersuchen also im Folgenden, ob es bessere Ergebnisse liefert, statt der linearen Abweichung, Gleichung~(\ref{linear_diviation}), die Standardabweichung, Gleichung~(\ref{stadard_diviation}) zu nehmen.
 	
-	\begin{equation} \label{stadard_diviation}
-		\delta_d = \xi \sqrt{\sum_{j=1}^{k} \frac{|s_j^d-s_i^d|}{k-1}}, ~ j \in \{1, ..., k\}, ~ d \in \{1, ..., n\},
-	\end{equation}
+	%\begin{equation} \label{stadard_diviation}
+	%	\delta_d = \xi \sqrt{\sum_{j=1}^{k} \frac{|s_j^d-s_i^d|}{k-1}}, ~ j \in \{1, ..., k\}, ~ d \in \{1, ..., n\},
+	%\end{equation}
 	
-	\noindent Es stellt sich heraus, dass die Intervalle, welche die lineare Abweichung liefert, also die Berechnung anhand Gleichung~(\ref{linear_diviation}), die besseren sind, wie Abbildung~\ref{ACO_R_simple_Ellipsoid_search_pattern_compare} und Abbildung~\ref{ACO_R_very_simple_Ellipsoid_search_pattern_compare} verdeutlichen.
+	%\noindent Es stellt sich heraus, dass die Intervalle, welche die lineare Abweichung liefert, also die Berechnung anhand Gleichung~(\ref{linear_diviation}), die besseren sind, wie Abbildung~\ref{ACO_R_simple_Ellipsoid_search_pattern_compare} und Abbildung~\ref{ACO_R_very_simple_Ellipsoid_search_pattern_compare} verdeutlichen.
 	
-	\begin{figure}[H]
-		\centering
-		\subfloat[][ACO\(_{\mathbb{R}}\)-simple]{\includegraphics[width=0.4\linewidth]{Abbildungen/ACO_R_simple_Ellipsoid_m=1_n=10_g_q=0_95_xi=0_95_k=100_restarts=0_acc=1e-10}}
-		\qquad
-		\subfloat[][ACO\(_{\mathbb{R}}\)-simple]{\includegraphics[width=0.4\linewidth]{Abbildungen/ACO_R_STD_simple_Ellipsoid_m=1_n=10_g_q=0_95_xi=0_95_k=100_restarts=0_acc=1e-10}}
-		\caption{Vergleich zwischen linearer und Standardabweichung (Ellipsoid)}
-		\label{ACO_R_simple_Ellipsoid_search_pattern_compare}
-	\end{figure}
+	%\begin{figure}[H]
+	%	\centering
+	%	\subfloat[][ACO\(_{\mathbb{R}}\)-simple]{\includegraphics[width=0.4\linewidth]{Abbildungen/ACO_R_simple_Ellipsoid_m=1_n=10_g_q=0_95_xi=0_95_k=100_restarts=0_acc=1e-10}}
+	%	\qquad
+	%	\subfloat[][ACO\(_{\mathbb{R}}\)-simple]{\includegraphics[width=0.4\linewidth]{Abbildungen/ACO_R_STD_simple_Ellipsoid_m=1_n=10_g_q=0_95_xi=0_95_k=100_restarts=0_acc=1e-10}}
+	%	\caption{Vergleich zwischen linearer und Standardabweichung (Ellipsoid)}
+	%	\label{ACO_R_simple_Ellipsoid_search_pattern_compare}
+	%\end{figure}
 	
-	\begin{figure}[H]
-		\centering
-		\subfloat[][ACO\(_{\mathbb{R}}\)-very-simple]{\includegraphics[width=0.4\linewidth]{Abbildungen/ACO_R_very_simple_Ellipsoid_m=1_n=10_g_q=0_95_xi=0_95_k=100_restarts=0_acc=1e-10}}
-		\qquad
-		\subfloat[][ACO\(_{\mathbb{R}}\)-very-simple]{\includegraphics[width=0.4\linewidth]{Abbildungen/ACO_R_STD_very_simple_Ellipsoid_m=1_n=10_g_q=0_95_xi=0_95_k=100_restarts=0_acc=1e-10}}
-		\caption{Vergleich zwischen linearer und Standardabweichung (Ellipsoid)}
-		\label{ACO_R_very_simple_Ellipsoid_search_pattern_compare}
-	\end{figure}
+	%\begin{figure}[H]
+	%	\centering
+	%	\subfloat[][ACO\(_{\mathbb{R}}\)-very-simple]{\includegraphics[width=0.4\linewidth]{Abbildungen/ACO_R_very_simple_Ellipsoid_m=1_n=10_g_q=0_95_xi=0_95_k=100_restarts=0_acc=1e-10}}
+	%	\qquad
+	%	\subfloat[][ACO\(_{\mathbb{R}}\)-very-simple]{\includegraphics[width=0.4\linewidth]{Abbildungen/ACO_R_STD_very_simple_Ellipsoid_m=1_n=10_g_q=0_95_xi=0_95_k=100_restarts=0_acc=1e-10}}
+	%	\caption{Vergleich zwischen linearer und Standardabweichung (Ellipsoid)}
+	%	\label{ACO_R_very_simple_Ellipsoid_search_pattern_compare}
+	%\end{figure}
 	
-	Dabei zeigt der linke Boxplot (a) immer die Anzahl der notwendigen Funktionsauswertungen, mit linearer Abweichung, um das bekannte Ergebnis zu erreichen und der rechte Boxplot (b), die mit Standardabweichung.\hfill\newline
+	%Dabei zeigt der linke Boxplot (a) immer die Anzahl der notwendigen Funktionsauswertungen, mit linearer Abweichung, um das bekannte Ergebnis zu erreichen und der rechte Boxplot (b), die mit Standardabweichung.\hfill\newline
 	
-	Abbildungen~\ref{ACO_R_simple_Ellipsoid_search_pattern_compare} und~\ref{ACO_R_very_simple_Ellipsoid_search_pattern_compare} sind auch leider die einzigen Abbildungen, welche als Vergleichsmöglichkeit für lineare und Standardabweichung für Funktionen aus Tabelle~\ref{einfacheTestfunktionen} herangezogen werden können, da beide Algorithmen, ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple, für Testfunktionen aus Tabelle~\ref{einfacheTestfunktionen}, außer für \glqq Ellipsoid\grqq, mit der Standardabweichung als Invervallauswertung nicht konvergierte.\hfill\newline
+	%Abbildungen~\ref{ACO_R_simple_Ellipsoid_search_pattern_compare} und~\ref{ACO_R_very_simple_Ellipsoid_search_pattern_compare} sind auch leider die einzigen Abbildungen, welche als Vergleichsmöglichkeit für lineare und Standardabweichung für Funktionen aus Tabelle~\ref{einfacheTestfunktionen} herangezogen werden können, da beide Algorithmen, ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple, für Testfunktionen aus Tabelle~\ref{einfacheTestfunktionen}, außer für \glqq Ellipsoid\grqq, mit der Standardabweichung als Invervallauswertung nicht konvergierte.\hfill\newline
 	
-	Andere Funktionen wurden nach diesen Ergebnisses nicht mehr getestet, da die Funktionen aus Tabelle~\ref{einfacheTestfunktionen} die einfachen Funktionen aus den verfügbaren Testproblemen darstellen und wenn für diese Funktionen keine Konvergenz zu beobachten ist, dann wird für die anderen erst recht keine zu beobachten sein.\hfill\newline
+	%Andere Funktionen wurden nach diesen Ergebnisses nicht mehr getestet, da die Funktionen aus Tabelle~\ref{einfacheTestfunktionen} die einfachen Funktionen aus den verfügbaren Testproblemen darstellen und wenn für diese Funktionen keine Konvergenz zu beobachten ist, dann wird für die anderen erst recht keine zu beobachten sein.\hfill\newline
 	
-	Somit kann geschlussfolgert werden, dass die Intervallberechnung anhand Formel~(\ref{linear_diviation}), also der linearen Abweichung, die bessere ist.
+	%Somit kann geschlussfolgert werden, dass die Intervallberechnung anhand Formel~(\ref{linear_diviation}), also der linearen Abweichung, die bessere ist.
 	
 	\section{Vergleich von ACO\(_{\mathbb{R}}\), ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple} \label{VergleichACORundACORSimpleundACORVerySimple}
 	
