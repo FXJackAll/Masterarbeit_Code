@@ -31,22 +31,23 @@
 \contentsline {subsubsection}{\numberline {7.1.1}Traveling Salesperson Problem (TSP)}{21}{}%
 \contentsline {subsubsection}{\numberline {7.1.2}Quadratic Assigment Problem (QAP)}{21}{}%
 \contentsline {subsection}{\numberline {7.2}Stetige Testfunktionen}{21}{}%
-\contentsline {subsubsection}{\numberline {7.2.1}Testfunktion - Paraboloid}{26}{}%
-\contentsline {subsubsection}{\numberline {7.2.2}Testfunktion - Easom}{27}{}%
-\contentsline {subsubsection}{\numberline {7.2.3}Testfunktion - Griewangk}{28}{}%
-\contentsline {subsubsection}{\numberline {7.2.4}Testfunktion - Rosenbrock}{28}{}%
-\contentsline {subsubsection}{\numberline {7.2.5}Testfunktion - Hartmann}{29}{}%
-\contentsline {subsubsection}{\numberline {7.2.6}Testfunktion - Shekel}{30}{}%
-\contentsline {subsection}{\numberline {7.3}Diskrete Testfunktionen}{30}{}%
-\contentsline {subsubsection}{\numberline {7.3.1}Diskrete Testfunktionen mit gleichverteiltem Definitionsbereich}{30}{}%
-\contentsline {subsubsection}{\numberline {7.3.2}Diskrete Testfunktionen mit asymmetrischem Definitionsbereich}{30}{}%
-\contentsline {subsection}{\numberline {7.4}Testfunktionen mit gemischten Variablem}{31}{}%
-\contentsline {subsubsection}{\numberline {7.4.1}Konstruierte Testfunktionen}{31}{}%
-\contentsline {subsubsection}{\numberline {7.4.2}Coil Spring Design Problem (CSD)}{32}{}%
-\contentsline {paragraph}{\numberline {7.4.2.1}Vollständiger Raum als Initialisierungsintervall}{35}{}%
-\contentsline {paragraph}{\numberline {7.4.2.2}Gefilterter Raum als Initialisierungsintervall}{35}{}%
-\contentsline {section}{\numberline {8}Herausforderung}{37}{}%
-\contentsline {section}{\numberline {9}Vergleich von ACO\(_{\mathbb {R}}\), ACO\(_{\mathbb {R}}\)-simple und ACO\(_{\mathbb {R}}\)-very-simple}{37}{}%
+\contentsline {subsubsection}{\numberline {7.2.1}Testfunktion - Paraboloid}{27}{}%
+\contentsline {subsubsection}{\numberline {7.2.2}Testfunktion - Easom}{28}{}%
+\contentsline {subsubsection}{\numberline {7.2.3}Testfunktion - Griewangk}{29}{}%
+\contentsline {subsubsection}{\numberline {7.2.4}Testfunktion - Rosenbrock}{29}{}%
+\contentsline {subsubsection}{\numberline {7.2.5}Testfunktion - Hartmann}{30}{}%
+\contentsline {subsubsection}{\numberline {7.2.6}Testfunktion - Shekel}{31}{}%
+\contentsline {subsection}{\numberline {7.3}Diskrete Testfunktionen}{31}{}%
+\contentsline {subsubsection}{\numberline {7.3.1}Diskrete Testfunktionen mit gleichverteiltem Definitionsbereich}{31}{}%
+\contentsline {subsubsection}{\numberline {7.3.2}Diskrete Testfunktionen mit asymmetrischem Definitionsbereich}{31}{}%
+\contentsline {subsection}{\numberline {7.4}Testfunktionen mit gemischten Variablem}{32}{}%
+\contentsline {subsubsection}{\numberline {7.4.1}Konstruierte Testfunktionen}{32}{}%
+\contentsline {subsubsection}{\numberline {7.4.2}Coil Spring Design Problem (CSD)}{33}{}%
+\contentsline {paragraph}{\numberline {7.4.2.1}Vollständiger Raum als Initialisierungsintervall}{36}{}%
+\contentsline {paragraph}{\numberline {7.4.2.2}Gefilterter Raum als Initialisierungsintervall}{36}{}%
+\contentsline {section}{\numberline {8}Herausforderung}{38}{}%
+\contentsline {section}{\numberline {9}Vergleich von ACO\(_{\mathbb {R}}\), ACO\(_\text {MV}\), \acl {acorvs} und den Iteration von \acl {acorvs}}{38}{}%
+\contentsline {subsection}{\numberline {9.1}Vergleich bzgl. stetiger Funktionen}{38}{}%
 \contentsline {section}{\numberline {10}Konvergenzbetrachtung}{44}{}%
 \contentsline {subsection}{\numberline {10.1}Rosenbrock}{45}{}%
 \contentsline {section}{\numberline {11}Kurzzusammenfassung}{46}{}%

@@ -631,7 +631,7 @@ within=section,
 	
 	Die vier Konzepte, die aus ACO\(_{\mathbb{R}}\) übernommen wurden, ist die Verwendung eines Lösungsarchivs \(\mathcal{P}_c\), die Zuweisung jeder Lösung im Archiv eines Gewichts \(w_i\), dass mit der Gleichung~\ref{subsec:ACO_R_-_simple:eq:omega} berechnet und zum Aufbau einer Wahrscheinlichkeitsverteilung mithilfe der Gleichung~\ref{subsec:ACO_R_-_simple:eq:Probability_Distribution} benutzt wird und somit wie eine Lösung \(s_i\) aus dem Archiv gewählt wird, die Art wie die Abweichung in Gleichung~\ref{subsec:ACO_R_-_simple:eq:Linear_Deviation} berechnet wird, sowie die Verwendung der Parameter \(q\) und \(\xi\). Bei der Berechnung der Abweichung in Gleichung~\ref{subsec:ACO_R_-_simple:eq:Linear_Deviation} wird aber, aufgrund der Art und Weise wie die Abweichung späteren verwendet wird, explizit die lineare Abweichung gewollt.\hfill\newline
 	
-	Im Gegensatz zu ACO\(_\mathbb{R}\) gilt in ACO\(_{\mathbb{R}}\)-simple aber \(|\mathcal{P}| = k = 100\), \(q = 0.95\) und \(\xi = 0.95\). Die Archivgröße wurde verdoppelt, da der Algorithmus viel einfacher ist als ACO\(_\mathbb{R}\), wodurch ich schlussfolgerte, dass eine größere Archivgröße ACO\(_{\mathbb{R}}\)-simple erlaubt auch vom momentanen Bestwert weiter entferntere Lösungen im Suchraum zu erforschen. Das ist auch der selbe Grund, wieso \(q = 0.85\) gesetzt wurde. Auf der anderen Seite wurde \(\xi = 0.95\) gesetzt, damit das Suchintervall in Gleichung~\ref{subsec:ACO_R_-_simple:eq:Suchintervall} möglichst erhalten bleibt. Es gab auch die Möglichkeit \(\xi = 1.0\) zu setzten aber im Sinne der Einfachheit habe ich mich dazu entschlossen \(q = \xi = 0.95\) zu setzten. Im Bestreben nach Einfachheit habe ich auch \(|\mathcal{E}| = 1\) gesetzt, da ich den Selektionsdruck, der durch das Verwalten des Lösungsarchivs nach dem \glqq best in worst out\grqq Prinzip entsteht, für bereits ausreichend hielt. Demnach können wir ACO\(_{\mathbb{R}}\)-simple als Tupel \((\Sigma, \mathcal{B}, \mathcal{E}, \mathcal{P}_c, f, \mathcal{I}, \mathcal{S})\) angeben. Der größte Unterschied zu ACO\(_\mathbb{R}\) liegt aber darin wie ACO\(_{\mathbb{R}}\)-simple eine neue Lösung erzeugt. Denn nachdem die lineare Abweichung in jeder Dimension \(d, d \in \{1, \dots, n\}\) des \(n\)-dimensionalen Problems in Gleichung~\ref{subsec:ACO_R_-_simple:eq:Linear_Deviation} berechnet wurde, wird nur noch ein Intervall in Gleichung~\ref{subsec:ACO_R_-_simple:eq:Suchintervall} in jeder Dimension \(d, d \in \{1, \dots, n\}\) des Problems mithilfe der linearen Abweichung aufgebaut und dann wird aus jedem der Intervalle ein zufälliger Punkt als Komponente der neuen Lösung gewählt.
+	Im Gegensatz zu ACO\(_\mathbb{R}\) gilt in ACO\(_{\mathbb{R}}\)-simple aber \(|\mathcal{P}| = k = 100\), \(q = 0.95\) und \(\xi = 0.95\). Die Archivgröße wurde verdoppelt, da der Algorithmus viel einfacher ist als ACO\(_\mathbb{R}\), wodurch ich schlussfolgerte, dass eine größere Archivgröße ACO\(_{\mathbb{R}}\)-simple erlaubt auch vom momentanen Bestwert weiter entferntere Lösungen im Suchraum zu erforschen. Das ist auch der selbe Grund, wieso \(q = 0.95\) gesetzt wurde. Auf der anderen Seite wurde \(\xi = 0.95\) gesetzt, damit das Suchintervall in Gleichung~\ref{subsec:ACO_R_-_simple:eq:Suchintervall} möglichst erhalten bleibt. Es gab auch die Möglichkeit \(\xi = 1.0\) zu setzten aber im Sinne der Einfachheit habe ich mich dazu entschlossen \(q = \xi = 0.95\) zu setzten. Im Bestreben nach Einfachheit habe ich auch \(|\mathcal{E}| = 1\) gesetzt, da ich den Selektionsdruck, der durch das Verwalten des Lösungsarchivs nach dem \glqq best in worst out\grqq Prinzip entsteht, für bereits ausreichend hielt. Demnach können wir ACO\(_{\mathbb{R}}\)-simple als Tupel \((\Sigma, \mathcal{B}, \mathcal{E}, \mathcal{P}_c, f, \mathcal{I}, \mathcal{S})\) angeben. Der größte Unterschied zu ACO\(_\mathbb{R}\) liegt aber darin wie ACO\(_{\mathbb{R}}\)-simple eine neue Lösung erzeugt. Denn nachdem die lineare Abweichung in jeder Dimension \(d, d \in \{1, \dots, n\}\) des \(n\)-dimensionalen Problems in Gleichung~\ref{subsec:ACO_R_-_simple:eq:Linear_Deviation} berechnet wurde, wird nur noch ein Intervall in Gleichung~\ref{subsec:ACO_R_-_simple:eq:Suchintervall} in jeder Dimension \(d, d \in \{1, \dots, n\}\) des Problems mithilfe der linearen Abweichung aufgebaut und dann wird aus jedem der Intervalle ein zufälliger Punkt als Komponente der neuen Lösung gewählt.
 	
 	%TODO schlussfolgerte ok so oder anderes Wort?
 	
@@ -757,7 +757,32 @@ within=section,
 	
 	%TODO besser Beschreibung als gemischte Variablen
 	
-	Um ACO\(_\mathbb{R}\)-VS anzupassen werden nicht-stetige Probleme als stetige Probleme behandelt. Das heißt, es wird mit nicht-stetigen Werten gerechnet als wären sie stetig. Es wird also bis zur Gleichung~\ref{subsec:ACO_R_-_very_-_simple:eq:interval} genauso verfahren, wie im Abschnitt~\ref{subsec:ACO_R_-_very_-_simple}, um einen neuen, stetigen Wert zu erhalten. Nachdem man einen neuen stetigen Wert gewonnen hat, betrachtet man die nicht-stetigen Werte zwischen denen der stetige Wert liegt und wählt dann als Ergebnis, den nicht-stetigen Wert, an dem der Stetige am nächsten liegt.
+	Um ACO\(_\mathbb{R}\)-VS anzupassen werden nicht-stetige Probleme als stetige Probleme behandelt. Das heißt, es wird mit nicht-stetigen Werten gerechnet als wären sie stetig. Es wird also bis zur Gleichung~\ref{subsec:ACO_R_-_very_-_simple:eq:interval} genauso verfahren, wie im Abschnitt~\ref{subsec:ACO_R_-_very_-_simple}, um einen neuen, stetigen Wert zu erhalten. Nachdem man einen neuen stetigen Wert gewonnen hat, betrachtet man die nicht-stetigen Werte zwischen denen der stetige Wert liegt und wählt dann als Ergebnis, den nicht-stetigen Wert, an dem der Stetige am nächsten liegt.\hfill\newline
+	
+	Schließlich wird \ac{acorvs} um eine Neustartfunktion erweitert. Der Algorithmus kann entweder eine fixe Anzahl an Neustarts ausführen oder adaptiv neu starten. Wenn adaptiv gewählt wurde, startet der Algorithmus neu, wenn eine Periode von \(\gamma\) Lösungen hintereinander sich um weniger als ein Threshold \(\varepsilon_{th}\) unterscheiden. Ich habe \(\gamma = 7\) und \(\varepsilon_{th} = 10^{-10}\) gesetzt. 
+	
+	%TODO periode?
+	
+	\begin{table}[H]
+		\fontsize{10pt}{12pt}
+		
+		\caption{Parametereinstellungen \ac{acorvsmv}}
+		\label{subsec:Grundlagen:tab:ACO_R_VS_MV_Parametereinstellungen}
+		
+		\begin{tabularx}{\textwidth}{l|r|r}
+			
+			\rule{4.6cm}{0.4pt} & \rule{4.6cm}{0.4pt}& \rule{4.6cm}{0.4pt}\\
+			
+			Parameter & Symbol & Wert\\
+			
+			\rule{4.6cm}{0.4pt} & \rule{4.6cm}{0.4pt}& \rule{4.6cm}{0.4pt}\\
+			
+			Periode & \(\gamma\) & 7\\
+			Threshold & \(\varepsilon_{th}\) & \(10^{-10}\)
+			
+		\end{tabularx}
+		
+	\end{table}
 	
 	%TODO reicht das oder Pseudocode hinzufügen?
 	
@@ -933,7 +958,7 @@ within=section,
 	
 	Aufbauend auf meiner Bachelorarbeit~\cite{FCM_2019}, erweitern wir die Art der Testfunktionen, anhand derer wir die Güte der hier vorlegten Erweiterungen von ACO\(_\mathbb{R}\)-VS beurteilen. Wo ACO\(_{\mathbb{R}}\)-VS nur auf stetigen Testfunktionen getestet wurde, werden die Erweiterungen von ACO\(_{\mathbb{R}}\)-VS auf stetigen Testfunktionen getestet, auf Testfunktionen mit diskreten Variablen und auf Testfunktionen mit gemischten Variablen.\hfill\newline
 	
-	Da in meiner Bachelorarbeit die Testfunktionen in ihren Dimensionen nicht variiert haben, Intervallgrenzen keine Rolle spielten und alle Funktionen über stetigen, zusammenhängenden Definitionsbereichen definiert waren, brauchte es keiner standardisierten, abstrakten Definition. In dieser Arbeit aber betrachten wir stetige und diskrete Testfunktionen, sowie Testfunktionen mit gemischten Variablen. Ferner liegen 5 der Testprobleme mit gemischten Variablen in drei verschiedenen Dimensionen dar, nämlich \(n \in \{2, 5, 10\}\). Deswegen war eine überarbeitete Definition der Testprobleme notwendig. Die einfachste Definition mit dem neuen Standard ist im Code-Snipped~\ref{sec:Testfunktionen:JSON:Paraboloid10DimCont} zu sehen.
+	Da in meiner Bachelorarbeit~\cite{FCM_2019} die Testfunktionen in ihren Dimensionen nicht variiert haben, Intervallgrenzen keine Rolle spielten und alle Funktionen über stetigen, zusammenhängenden Definitionsbereichen definiert waren, brauchte es keiner standardisierten, abstrakten Definition. In dieser Arbeit aber betrachten wir stetige und diskrete Testfunktionen, sowie Testfunktionen mit gemischten Variablen. Ferner liegen 5 der Testprobleme mit gemischten Variablen in drei verschiedenen Dimensionen dar, nämlich \(n \in \{2, 5, 10\}\). Deswegen war eine überarbeitete Definition der Testprobleme notwendig. Die einfachste Definition mit dem neuen Standard ist im Code-Snipped~\ref{sec:Testfunktionen:JSON:Paraboloid10DimCont} zu sehen.
 	
 	%TODO Testfunktion oder Testproblem? Testprobleme
 	
@@ -1071,7 +1096,7 @@ within=section,
 		% TODO Konvergenz betrachten, wie bei Rosenbrock, welche das Optimum nicht erreicht haben
 		
 		
-		Ferner müssen wir noch auf das Initialisierungsintervall eingehen. Das Initialisierungsintervall ist das Intervall aus dem, bei der Initialisierung des Algorithmus, die ersten \(k \in \mathbb{N}\) zufälligen Lösungen gezogen werden aus denen dann andere Lösungen konstruiert werden. Dabei kann \(k = 13\) sein, wie bei der Initialisierung des HSPPBO-Schema in Abschnitt~\ref{sec:HSPPBO_Schema}, \(k = 50\), wie bei der Initialisierung von ACO\(_\mathbb{R}\) in Abschnitt~\ref{subsec:Definition_ACO_R} oder \(k = 100\) bei der Initialisierung von \ac{acorvs} im Abschnitt~\ref{subsec:ACO_R_very_simple}. Auch wenn das Initialisierungsintervall bei ACO\(_\mathbb{R}\) und ACO\(_\mathbb{R}\)-MV nach der Initialisierung nicht mehr verwendet wird, ist es trotzdem wichtig, da, wenn es schlecht gewählt wurde, die Initiallösungen so liegen, dass die Algorithmusleistung zum negativen oder zum positiven verzerrt wird.  Wir müssen die Initialisierungsintervalle für die Testfunktionen aus den Tabellen \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt}, \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt}, \ref{subsec:Stetige_Testfunktionen:tab:Teil_2_1_Stet_Adapt} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_2_2_Stet_Adapt} aber nicht näher betrachten, da mit den Initialisierungsintervallen für diese Testfunktionen sich schon in \cite{socha2008ant} und \cite{socha2009ant} auseinander gesetzt wurde. Deswegen können wir sie übernehmen. Eine offene Forschungsfrage ist, wie Optimierungsalgorithmen auf nicht zusammenhängende Definitionsbereiche regieren. \hfill\newline
+		Ferner müssen wir noch auf das Initialisierungsintervall eingehen. Das Initialisierungsintervall ist das Intervall aus dem, bei der Initialisierung des Algorithmus, die ersten \(k \in \mathbb{N}\) zufälligen Lösungen gezogen werden aus denen dann andere Lösungen konstruiert werden. Dabei kann \(k = 13\) sein, wie bei der Initialisierung des HSPPBO-Schema in Abschnitt~\ref{sec:HSPPBO_Schema}, \(k = 50\), wie bei der Initialisierung von ACO\(_\mathbb{R}\) in Abschnitt~\ref{subsec:ACO_R} oder \(k = 100\) bei der Initialisierung von \ac{acorvs} im Abschnitt~\ref{subsec:ACO_R_-_very_-_simple}. Auch wenn das Initialisierungsintervall bei ACO\(_\mathbb{R}\) und ACO\(_\mathbb{R}\)-MV nach der Initialisierung nicht mehr verwendet wird, ist es trotzdem wichtig, da, wenn es schlecht gewählt wurde, die Initiallösungen so liegen, dass die Algorithmusleistung zum negativen oder zum positiven verzerrt wird.  Wir müssen die Initialisierungsintervalle für die Testfunktionen aus den Tabellen \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt}, \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt}, \ref{subsec:Stetige_Testfunktionen:tab:Teil_2_1_Stet_Adapt} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_2_2_Stet_Adapt} aber nicht näher betrachten, da mit den Initialisierungsintervallen für diese Testfunktionen sich schon in \cite{socha2008ant} und \cite{socha2009ant} auseinander gesetzt wurde. Deswegen können wir sie übernehmen. Eine offene Forschungsfrage ist, wie Optimierungsalgorithmen auf nicht zusammenhängende Definitionsbereiche regieren. \hfill\newline
 		
 		%Es ist noch zu bemerken, dass das Initialisierungsintervall, also das Intervall aus dem die ersten zufälligen \textit{k} Lösungen entnommen werden, um das Lösungsarchiv zu füllen, von entscheidender Bedeutung ist. Wenn es unglücklich gewählt ist, liegen die Lösungen so um das Optimum, dass bei bestimmten Testproblemen die Algorithmusleistung stark zum positiven verzerrt wird. Ein so wichtiger Punkt wird hier für die gegeben stetige Testfunktionen nur deswegen nebensächlich erwähnt, da in \textit{Socha und Dorigo}~\cite{socha2008ant} darauf bereits eingegangen wurde, die Initialisierungsintervalle, wie sie dort aufgeführt sind, für gut befunden wurden und wir diese lediglich nur übernehmen müssen.\hfill\newline
 		
@@ -2000,87 +2025,98 @@ within=section,
 	
 	%Somit kann geschlussfolgert werden, dass die Intervallberechnung anhand Formel~(\ref{linear_diviation}), also der linearen Abweichung, die bessere ist.
 	
-	\section{Vergleich von ACO\(_{\mathbb{R}}\), ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple} \label{VergleichACORundACORSimpleundACORVerySimple}
+	\section{Vergleich von ACO\(_{\mathbb{R}}\), ACO\(_\text{MV}\), \acl{acorvs} und den Iteration von \acl{acorvs}} \label{sec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Den_Iterationen_Von_ACO_R_Very_Simple}
 	
-	Wie in der Betrachtung der Einflüsse der Parameter auf ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple sich bereits abgezeichnet hat, gehen wir davon aus, dass ACO\(_{\mathbb{R}}\)-very-simple bei einfachen Testproblemen der bessere Algorithmus ist, da wenn eine Funktion hinreichend einfach ist, es nicht notwendig ist, bereits gefundene gute Lösungen zu einer noch besseren Lösung aufwendig zu verbinden und kann man zu einfacheren Mitteln der Lösungsfindung greifen. Deswegen gehen wir davon aus, dass ACO\(_{\mathbb{R}}\)-very-simple im Vergleich in den Tabellen~\ref{VerglelichACORundACORSimple} und~\ref{VerglelichACORundACORVerySimple} als der bessere Algorithmus hervorgehen wird.\hfill\newline
+	%TODO geht der Titel so?
 	
-	In den Tabellen dieses Abschnittes werden ferner als Bestwert immer die Bestwerte aller Algorithmen aus \textit{Socha und Dorigo}~\cite{socha2008ant} betrachtet und zusätzlich der Algorithmen ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple, wie sie in den Tabellen aufgeführt werden, weswegen in Tabelle~\ref{VerglelichACORundACORSimple} und Tabelle~\ref{VerglelichACORundACORVerySimple} verschiedene Bestwerte zu sehen sind, da in Tabelle~\ref{VerglelichACORundACORSimple} ACO\(_{\mathbb{R}}\)-very-simple nicht gelistet ist und somit seine Bestwerte in den Vergleich nicht einfließen.
+	\subsection{Vergleich bzgl. stetiger Funktionen}
+	
+	Da in \textit{Socha}~\cite{socha2009ant} ACO\(_\text{MV}\) erst dann eingeführt wird, wenn Testfunktionen mit gemischten Variablen eingeführt werden, kann in diesem Abschnitt nur mit ACO\(_\mathbb{R}\) aus \cite{socha2009ant} verglichen werden. Ferner werden bei in diesem Abschnitt nur Minimierungsprobleme betrachtet, also Probleme, bei denn das globale Minimum gesucht ist, da die Iterationen von \ac{acorvs} nicht mit Maximierungsproblemen umgehen können. Damit entfallen die beiden Maximierungsprobleme \glqq Diagonale Plane\grqq{} und \glqq Plane\grqq.
+	
+	%Wie in der Betrachtung der Einflüsse der Parameter auf ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple sich bereits abgezeichnet hat, gehen wir davon aus, dass ACO\(_{\mathbb{R}}\)-very-simple bei einfachen Testproblemen der bessere Algorithmus ist, da wenn eine Funktion hinreichend einfach ist, es nicht notwendig ist, bereits gefundene gute Lösungen zu einer noch besseren Lösung aufwendig zu verbinden und kann man zu einfacheren Mitteln der Lösungsfindung greifen. Deswegen gehen wir davon aus, dass ACO\(_{\mathbb{R}}\)-very-simple im Vergleich in den Tabellen~\ref{VerglelichACORundACORSimple} und~\ref{VerglelichACORundACORVerySimple} als der bessere Algorithmus hervorgehen wird.\hfill\newline
+	
+	%In den Tabellen dieses Abschnittes werden ferner als Bestwert immer die Bestwerte aller Algorithmen aus \textit{Socha und Dorigo}~\cite{socha2008ant} betrachtet und zusätzlich der Algorithmen ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple, wie sie in den Tabellen aufgeführt werden, weswegen in Tabelle~\ref{VerglelichACORundACORSimple} und Tabelle~\ref{VerglelichACORundACORVerySimple} verschiedene Bestwerte zu sehen sind, da in Tabelle~\ref{VerglelichACORundACORSimple} ACO\(_{\mathbb{R}}\)-very-simple nicht gelistet ist und somit seine Bestwerte in den Vergleich nicht einfließen.
+	
+	%TODO Rosenbrock ist so schwer, weil in der Nähe des Optimums Dynamitk(Rosenbrock) < c in R, c klein
+	
+	%\begin{table}[H]
+		
+	%	\fontsize{10pt}{12pt}
+		
+	%	\caption{Vergleich der Ergebnisse zwischen ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\) basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant} und damit auch auf \textit{Kern et al., 2004}~\cite{kern2004learning}}
+		
+	%	\label{VerglelichACORundACORSimple}
+		
+	%	\begin{tabularx}{\textwidth}{l|l|l|l}
+			
+	%		\rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt}\\
+			
+	%		Testfunktion & ACO\(_{\mathbb{R}}\)-simple & ACO\(_{\mathbb{R}}\) & Bestwert\\
+			
+	%		\rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt}\\
+			
+	%		Cigar & 3.5 (13516) & 1.4 (5376) & \textbf{1.0} (3840)\\
+			
+	%		Diagonal Plane & 50.2 (8531) & \textbf{1.0} (170) & \textbf{1.0} (170)\\
+			
+	%		Ellipsoid & \textbf{1.0} (947) & 12.2 (11570) & \textbf{1.0} (947)\\
+			
+	%		Paraboloid & 7.3 (10041) & 1.1 (1570) & \textbf{1.0} (1370)\\
+			
+	%		Plane & 63.9 (11176) & \textbf{1.0} (175) & \textbf{1.0} (175)\\
+			
+	%		Rosenbrock & \(\infty\) & *1.1 (7909) & \textbf{1.0} (7190)\\
+			
+	%		Tablet & 4.2 (10812) & \textbf{1.0} (2567) & \textbf{1.0} (2567)
+			
+	%	\end{tabularx}
+		
+	%	\smallskip
+		
+	%	Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Bei Ergebnissen, wo ein * steht, wurde die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht, und dort wo \(\infty\) steht wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht.\hfill\newline
+		
+	%\end{table}
+	
+	%Wie in Tabelle~\ref{VerglelichACORundACORSimple} zu sehen, ist ACO\(_{\mathbb{R}}\) der bessere Algorithmus. ACO\(_{\mathbb{R}}\)-simple mag zwar bei einer Testfunktion vorne liegen, jedoch ist ACO\(_{\mathbb{R}}\)-simple zu schlecht bei den Maximierungsproblemen und auch nicht so gut bei den anderen Testfunktionen, vor allem bei \glqq Rosenbrock\grqq, wo der Algorithmus das Optimum gar nicht findet.
 	
 	\begin{table}[H]
 		
-		\fontsize{10pt}{12pt}
+		%\fontsize{6pt}{6pt}
 		
-		\caption{Vergleich der Ergebnisse zwischen ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\) basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant} und damit auch auf \textit{Kern et al., 2004}~\cite{kern2004learning}}
+		\caption{Vergleich der Ergebnisse zwischen ACO\(_{\mathbb{R}}\), ACO\(_{\mathbb{R}}\)-very-simple und den Iterationen von ACO\(_{\mathbb{R}}\)-very-simple basierend auf meiner Bachelorarbeit~\cite{FCM_2019}, \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}}
 		
-		\label{VerglelichACORundACORSimple}
-		
-		\begin{tabularx}{\textwidth}{l|l|l|l}
-			
-			\rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt}\\
-			
-			Testfunktion & ACO\(_{\mathbb{R}}\)-simple & ACO\(_{\mathbb{R}}\) & Bestwert\\
-			
-			\rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt}\\
-			
-			Cigar & 3.5 (13516) & 1.4 (5376) & \textbf{1.0} (3840)\\
-			
-			Diagonal Plane & 50.2 (8531) & \textbf{1.0} (170) & \textbf{1.0} (170)\\
-			
-			Ellipsoid & \textbf{1.0} (947) & 12.2 (11570) & \textbf{1.0} (947)\\
-			
-			Paraboloid & 7.3 (10041) & 1.1 (1570) & \textbf{1.0} (1370)\\
-			
-			Plane & 63.9 (11176) & \textbf{1.0} (175) & \textbf{1.0} (175)\\
-			
-			Rosenbrock & \(\infty\) & *1.1 (7909) & \textbf{1.0} (7190)\\
-			
-			Tablet & 4.2 (10812) & \textbf{1.0} (2567) & \textbf{1.0} (2567)
-			
-		\end{tabularx}
-		
-		\smallskip
-		
-		Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Bei Ergebnissen, wo ein * steht, wurde die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht, und dort wo \(\infty\) steht wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht.\hfill\newline
-		
-	\end{table}
-	
-	Wie in Tabelle~\ref{VerglelichACORundACORSimple} zu sehen, ist ACO\(_{\mathbb{R}}\) der bessere Algorithmus. ACO\(_{\mathbb{R}}\)-simple mag zwar bei einer Testfunktion vorne liegen, jedoch ist ACO\(_{\mathbb{R}}\)-simple zu schlecht bei den Maximierungsproblemen und auch nicht so gut bei den anderen Testfunktionen, vor allem bei \glqq Rosenbrock\grqq, wo der Algorithmus das Optimum gar nicht findet.
-	
-	\begin{table}[H]
-		
-		\fontsize{10pt}{12pt}
-		
-		\caption{Vergleich der Ergebnisse zwischen ACO\(_{\mathbb{R}}\)-very-simple und ACO\(_{\mathbb{R}}\) basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant} und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}}
+		%TODO wie viele zitieren?
 		
 		\label{VerglelichACORundACORVerySimple}
 		
-		\begin{tabularx}{\textwidth}{l|l|l|l}
+		\scriptsize
+		
+		\begin{tabularx}{\linewidth}{l|l|l|l|l}
 			
-			\rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt}\\
+			\rule{2cm}{0.4pt} & \rule{2cm}{0.4pt} & \rule{2cm}{0.4pt} & \rule{2cm}{0.4pt} & \rule{2cm}{0.4pt}\\
 			
-			Testfunktion & ACO\(_{\mathbb{R}}\)-very-simple & ACO\(_{\mathbb{R}}\) & Bestwert\\
+			Testfunktion & ACO\(_{\mathbb{R}}\) & ACO\(_{\mathbb{R}}\)-VS & Hom-HPB- & Bestwert\\
+			 			 &						&						  & ACO\(_\mathbb{R}\)-VS-MV		 &\\
 			
-			\rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt}\\
+			\rule{2cm}{0.4pt} & \rule{2cm}{0.4pt} & \rule{2cm}{0.4pt} & \rule{2cm}{0.4pt} & \rule{2cm}{0.4pt}\\
 			
-			Cigar & \textbf{1.0} (2037) & 2.6 (5376) & \textbf{1.0} (2037)\\
+			Cigar & 2.6 (5376) & \textbf{1.0} (2037) & (35774) & \textbf{1.0} (2037)\\
 			
-			Diagonal Plane & \textbf{1.0} (148) & 1.1 (170) & \textbf{1.0} (148)\\
+			Ellipsoid & 18 (11570) & \textbf{1.0} (644) & (11279) & \textbf{1.0} (644)\\
 			
-			Ellipsoid & \textbf{1.0} (644) & 18 (11570) & \textbf{1.0} (644)\\
+			Paraboloid & 1.1 (1570) & 1.1 (1483) & (4834) & \textbf{1.0} (1370)\\
 			
-			Paraboloid & 1.1 (1483) & 1.1 (1570) & \textbf{1.0} (1370)\\
+			Rosenbrock & *1.1 (7909) & \(\infty\) & \(\infty\) & \textbf{1.0} (7190)\\
 			
-			Plane & \textbf{1.0} (131) & 1.3 (175) & \textbf{1.0} (131)\\
-			
-			Rosenbrock & \(\infty\) & *1.1 (7909) & \textbf{1.0} (7190)\\
-			
-			Tablet & \textbf{1.0} (1751) & 1.5 (2567) & \textbf{1.0} (1751)
+			Tablet & 1.5 (2567) & \textbf{1.0} (1751) & (6653) & \textbf{1.0} (1751)
 			
 		\end{tabularx}
 		
 		\smallskip
 		
 		Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Bei Ergebnissen, wo ein * steht, wurde die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht und dort wo \(\infty\) steht wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht.\hfill\newline
+		
+		%TODO kann auch ein längerer Absatzt beibehalten werden
 		
 	\end{table}
 	
