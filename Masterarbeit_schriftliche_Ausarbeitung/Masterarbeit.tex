@@ -17,6 +17,7 @@
 \usepackage{tabularx}
 \usepackage{subfig}
 \usepackage{caption, booktabs}
+\usepackage{lscape}
 
 \usepackage{listings}
 \renewcommand{\lstlistingname}{Code-Snipped}
@@ -2083,32 +2084,72 @@ within=section,
 		
 		%\fontsize{6pt}{6pt}
 		
-		\caption{Vergleich der Ergebnisse zwischen ACO\(_{\mathbb{R}}\), ACO\(_{\mathbb{R}}\)-very-simple und den Iterationen von ACO\(_{\mathbb{R}}\)-very-simple basierend auf meiner Bachelorarbeit~\cite{FCM_2019}, \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}}
+		\caption{Vergleich der Ergebnisse zwischen Algorithmen, die probabilistisches Lernen einsetzten auf Testfunktionen, die zum Vergleich zwischen Algorithmen, die probabilistisches Lernen einsetzten, benutzt werden, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning} Teil 2}
 		
 		%TODO wie viele zitieren?
 		
-		\label{VerglelichACORundACORVerySimple}
+		\label{sec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Teil_1}
 		
 		\scriptsize
 		
-		\begin{tabularx}{\linewidth}{l|l|l|l|l}
+		\begin{tabularx}{\linewidth}{l|l|l|l|l|l|l}
 			
-			\rule{2cm}{0.4pt} & \rule{2cm}{0.4pt} & \rule{2cm}{0.4pt} & \rule{2cm}{0.4pt} & \rule{2cm}{0.4pt}\\
+			\rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt}\\
 			
-			Testfunktion & ACO\(_{\mathbb{R}}\) & ACO\(_{\mathbb{R}}\)-VS & Hom-HPB- & Bestwert\\
-			 			 &						&						  & ACO\(_\mathbb{R}\)-VS-MV		 &\\
+			Testfunktion & (1 + 1)ES & CSA-ES & CMA-ES & IDEA & MBOA & Bestwert\\
 			
-			\rule{2cm}{0.4pt} & \rule{2cm}{0.4pt} & \rule{2cm}{0.4pt} & \rule{2cm}{0.4pt} & \rule{2cm}{0.4pt}\\
+			\rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt}\\
 			
-			Cigar & 2.6 (5376) & \textbf{1.0} (2037) & (35774) & \textbf{1.0} (2037)\\
+			Cigar & 1149,9(2342400) & 1508,1 (3072000) & 1.9 (3840) & 8.7 (17664) & 22.6 (46080) & \textbf{1.0} (2037)\\
 			
-			Ellipsoid & 18 (11570) & \textbf{1.0} (644) & (11279) & \textbf{1.0} (644)\\
+			Ellipsoid &  & \textbf{1.0} (644) & (11279) & & & \textbf{1.0} (644)\\
 			
-			Paraboloid & 1.1 (1570) & 1.1 (1483) & (4834) & \textbf{1.0} (1370)\\
+			Paraboloid & 1.1 (1570) & 1.1 (1483) & (4834) & & & \textbf{1.0} (1370)\\
 			
-			Rosenbrock & *1.1 (7909) & \(\infty\) & \(\infty\) & \textbf{1.0} (7190)\\
+			Rosenbrock & *1.1 (7909) & \(\infty\) & \(\infty\) & & & \textbf{1.0} (7190)\\
 			
-			Tablet & 1.5 (2567) & \textbf{1.0} (1751) & (6653) & \textbf{1.0} (1751)
+			Tablet & 1.5 (2567) & \textbf{1.0} (1751) & (6653) & & & \textbf{1.0} (1751)
+			
+		\end{tabularx}
+		
+		\smallskip
+		
+		Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Bei Ergebnissen, wo ein * steht, wurde die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht und dort wo \(\infty\) steht wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht.\hfill\newline
+		
+		%TODO kann auch ein längerer Absatzt beibehalten werden
+		
+	\end{table}
+	
+	\begin{table}[H]
+		
+		%\fontsize{6pt}{6pt}
+		
+		\caption{Vergleich der Ergebnisse zwischen ACO\(_{\mathbb{R}}\), ACO\(_{\mathbb{R}}\)-very-simple und den Iterationen von ACO\(_{\mathbb{R}}\)-very-simple auf Testfunktionen, die zum Vergleich zwischen Algorithmen, die probabilistisches einsetzen, benutzt werden, basierend auf meiner Bachelorarbeit~\cite{FCM_2019}, \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning} Teil 2}
+		
+		%TODO wie viele zitieren?
+		
+		\label{sec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Teil_2}
+		
+		\scriptsize
+		
+		\begin{tabularx}{\linewidth}{l|l|l|l|l|l|l}
+			
+			\rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt}\\
+			
+			Testfunktion & ACO\(_{\mathbb{R}}\) & ACO\(_{\mathbb{R}}\)-VS & Hom-HPB- & Het-HPB- & Het-HSPPB- & Bestwert\\
+			 			 &						&						  & ACO\(_\mathbb{R}\)-VS-MV & ACO\(_\mathbb{R}\)-VS-MV & ACO\(_\mathbb{R}\)-VS-MV & \\
+			
+			\rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt}\\
+			
+			Cigar & 2.6 (5376) & \textbf{1.0} (2037) & 17.6 (35774) & & & \textbf{1.0} (2037)\\
+			
+			Ellipsoid & 18 (11570) & \textbf{1.0} (644) & (11279) & & & \textbf{1.0} (644)\\
+			
+			Paraboloid & 1.1 (1570) & 1.1 (1483) & (4834) & & & \textbf{1.0} (1370)\\
+			
+			Rosenbrock & *1.1 (7909) & \(\infty\) & \(\infty\) & & & \textbf{1.0} (7190)\\
+			
+			Tablet & 1.5 (2567) & \textbf{1.0} (1751) & (6653) & & & \textbf{1.0} (1751)
 			
 		\end{tabularx}
 		
