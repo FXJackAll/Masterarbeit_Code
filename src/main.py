@@ -60,11 +60,11 @@ def user_input():
     #                    help='Name of the problem instance, e.g. the TSPLIB names like "rat195"')
 
 
-    parser.add_argument('-p', '--problem', type=str, default='paraboloid_6',
+    parser.add_argument('-p', '--problem', type=str, default='tablet_10',
                         help='Name of the problem instance, e.g. TISD names like "tisd10" or TSPLIB names like "rat195"')
     # parser.add_argument('-pt', '--problem-type', type=str, default='TSP',
     #                    help='Type of the problem, e.g. TSP (standard, symmetric TSP), ATSP (asymmetric TSP), QAP, TISD')
-    parser.add_argument('-pt', '--problem-type', type=str, default='Paraboloid',
+    parser.add_argument('-pt', '--problem-type', type=str, default='Tablet',
                         help='Type of the problem, e.g. TSP (standard, symmetric TSP), ATSP (asymmetric TSP), QAP, TISD')
 
 
@@ -83,12 +83,12 @@ def user_input():
 
 
     # TODO implement accuracy
-    parser.add_argument('-acc', '--accuracy', type=str, choices=['absolute', 'relative'], default='relative',
+    parser.add_argument('-acc', '--accuracy', type=str, choices=['absolute', 'relative'], default='absolute',
                         help='Accuracy at which the algorithm;'
                              'absolute: |f - f*| < Term, relative: |f - f*| < |Term * f| + Term')
-    parser.add_argument('-absa', '--absolute_accuracy_term', type=float, default=10**(-10),
+    parser.add_argument('-abs', '--absolute_accuracy_term', type=float, default=10**(-10),
                         help='Absolute accuracy at which the algorithm;')
-    parser.add_argument('-rela', '--relative_accuracy_term', type=float, default=10**(-4),
+    parser.add_argument('-rel', '--relative_accuracy_term', type=float, default=10**(-4),
                         help='Relative accuracy at which the algorithm;')
 
 

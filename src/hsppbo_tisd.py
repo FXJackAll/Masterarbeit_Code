@@ -202,9 +202,13 @@ class HSPPBO_TISD:
             # print("in hsppbo_tisd execute: " + str(best_solution_quality))
             self._logger.log_iteration(i, self._sce_count * (i + 1), swap_count, detection_pause_count == 0, best_solution_quality, best_solution)
 
+            # print("In HSSPBO_TISD accuracy: " + str(self._accuracy))
+
             match self._accuracy:
 
                 case 'absolute':
+
+                    # print("in HSPPBO_TISD execute: klappt")
 
                     # print("in HSPPBO_TISD execute: " + str(best_solution_quality))
 

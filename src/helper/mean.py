@@ -1,7 +1,7 @@
 from math import ceil
 
-read_data_path = "/home/user/Schreibtisch/Masterarbeit_Code/src/performance_data/H_Hom_ACO_R_Very_Simple/continuous_performance_data/10_10/tablet_10_fixed_continuous_10.txt"
-save_data_path = "/home/user/Schreibtisch/Masterarbeit_Code/src/performance_data/H_Hom_ACO_R_Very_Simple/continuous_performance_data/10_10/tablet_10_fixed_continuous_10_mean.txt"
+read_data_path = "/home/user/Schreibtisch/Masterarbeit_Code/src/performance_data/H_Het_P_ACO_R_Very_Simple/continuous_performance_data/10_10/cigar_10_fixed_continuous_10.txt"
+save_data_path = "/home/user/Schreibtisch/Masterarbeit_Code/src/performance_data/H_Het_P_ACO_R_Very_Simple/continuous_performance_data/10_10/cigar_10_fixed_continuous_10_mean.txt"
 
 with open(read_data_path, "r") as performance_data:
 
