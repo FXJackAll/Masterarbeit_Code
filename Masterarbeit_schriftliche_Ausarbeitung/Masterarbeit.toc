@@ -48,12 +48,12 @@
 \contentsline {section}{\numberline {8}Herausforderung}{38}{}%
 \contentsline {section}{\numberline {9}Vergleich von ACO\(_{\mathbb {R}}\), ACO\(_\text {MV}\), \acl {acorvs} und den Iteration von \acl {acorvs}}{38}{}%
 \contentsline {subsection}{\numberline {9.1}Vergleich bzgl. stetiger Funktionen}{38}{}%
-\contentsline {section}{\numberline {10}Konvergenzbetrachtung}{43}{}%
-\contentsline {subsection}{\numberline {10.1}Rosenbrock}{44}{}%
-\contentsline {section}{\numberline {11}Kurzzusammenfassung}{45}{}%
-\contentsline {section}{Literaturverzeichnis}{46}{}%
-\contentsline {section}{Tabellenverzeichnis}{48}{}%
-\contentsline {section}{Abbildungsverzeichnis}{48}{}%
+\contentsline {section}{\numberline {10}Konvergenzbetrachtung}{44}{}%
+\contentsline {subsection}{\numberline {10.1}Rosenbrock}{45}{}%
+\contentsline {section}{\numberline {11}Kurzzusammenfassung}{46}{}%
+\contentsline {section}{Literaturverzeichnis}{47}{}%
+\contentsline {section}{Tabellenverzeichnis}{49}{}%
+\contentsline {section}{Abbildungsverzeichnis}{49}{}%
 \contentsline {part}{\nonumberline Anlagen}{I}{}%
 \contentsline {section}{\numberline {A}Einfluss der Anzahl der Ameisen}{I}{}%
 \contentsline {section}{\numberline {B}Einfluss des Parameters \textit {q}}{II}{}%
