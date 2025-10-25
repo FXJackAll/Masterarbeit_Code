@@ -845,6 +845,8 @@ within=section,
 	
 	\section{HSPPBO-Schema} \label{sec:HSPPBO_Schema}
 	
+	%TODO XF-OPT/META verwenden?
+	
 	Das HSPPBO-Schema steht für Hierarchical Simple Probabilistic Populations-Based Optimization-Schema. Es ist die hierarchische Version des SPBBO-Schema~\cite{lin2015simple}. Das HSPPBO-Schema, wie in \cite{kupfer2021hierarchical} beschrieben, besteht aus 11 Teilen, den 6 Teilen aus dem SPPBO-Schema und einer Hierarchie- bzw. Baumstruktur \(\mathcal{B}\), einer Funktion \textit{range} \(\mathcal{R}\), welche jeder \(\ac{sce} \in \mathcal{E}\) eine Menge von Populationen \(P \in \mathcal{P}\) zuweist, also \(range(A) \subseteq \mathcal{P}\), eine Funktion \textit{update} \(\mathcal{U}\), welche bestimmt, wie Knoten getauscht werden, wenn ein Kindknoten eine bessere Lösung findet, als der Elternknoten, einem Threshold \(\theta\), der bestimmt, wann der Algorithmus auf Veränderungen im \ac{sce}-Baum reagiert und eine Funktion \textit{handling} \(\mathcal{H}\), welche bestimmt, wie der Algorithmus auf Veränderungen reagiert. Demnach kann das HSPPBO-Schema beschrieben werden durch das Tupel \((\Sigma, \mathcal{E}, \mathcal{B}, \mathcal{R}, \mathcal{U}, \theta, \mathcal{H}, \mathcal{P}, \eta, \mathcal{I}, \mathcal{S})\). In der Ausführung in \cite{kupfer2021hierarchical} weist \(\mathcal{R}\) jeder \(\ac{sce} \in \mathcal{E}\) drei Populationen zu. Eine Population \(P^{SCE}_{persprev}\) hält die von der \ac{sce} als letztes berechnete Lösung des Optimierungsproblems, eine Population \(P^{SCE}_{persbest}\) hält die bis dato beste berechnete Lösung des \ac{sce} und eine Population \(P^{SEC}_{parentbest}\) hält bis dato beste berechnete Lösung der Eltern-\ac{sce}. Es gilt also \(P^{SEC}_{parentbest} = P^{parent(SEC)}_{persbest}\). Im Fall der Wurzel-\ac{sce} sind die letzten beiden Populationen identisch. Damit gibt es implizit eine globale beste Lösung, da die Population \(P^{SCE^*}_{persbest}\) der Wurzel \ac{sce}* ausgelesen werden kann.\hfill\newline
 	
 	%TODO besserer Funktionsname als Update
@@ -2032,7 +2034,7 @@ within=section,
 	
 	\subsection{Vergleich bzgl. stetiger Funktionen}
 	
-	Da in \textit{Socha}~\cite{socha2009ant} ACO\(_\text{MV}\) erst dann eingeführt wird, wenn Testfunktionen mit gemischten Variablen eingeführt werden, kann in diesem Abschnitt nur mit ACO\(_\mathbb{R}\) aus \cite{socha2009ant} verglichen werden. Ferner werden bei in diesem Abschnitt nur Minimierungsprobleme betrachtet, also Probleme, bei denn das globale Minimum gesucht ist, da die Iterationen von \ac{acorvs} nicht mit Maximierungsproblemen umgehen können. Damit entfallen die beiden Maximierungsprobleme \glqq Diagonale Plane\grqq{} und \glqq Plane\grqq.
+	Da in \textit{Socha}~\cite{socha2009ant} ACO\(_\text{MV}\) erst dann eingeführt wird, wenn Testfunktionen mit gemischten Variablen eingeführt werden, kann in diesem Abschnitt nur mit ACO\(_\mathbb{R}\) aus \cite{socha2009ant} verglichen werden. Ferner werden bei in diesem Abschnitt nur Minimierungsprobleme betrachtet, also Probleme, bei denn das globale Minimum gesucht ist, da die Iterationen von \ac{acorvs} nicht mit Maximierungsproblemen umgehen können. Damit entfallen die beiden Maximierungsprobleme \glqq Diagonale Plane\grqq{} und \glqq Plane\grqq. Alle Testprobleme wurden 50 mal durchlaufen.
 	
 	%Wie in der Betrachtung der Einflüsse der Parameter auf ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple sich bereits abgezeichnet hat, gehen wir davon aus, dass ACO\(_{\mathbb{R}}\)-very-simple bei einfachen Testproblemen der bessere Algorithmus ist, da wenn eine Funktion hinreichend einfach ist, es nicht notwendig ist, bereits gefundene gute Lösungen zu einer noch besseren Lösung aufwendig zu verbinden und kann man zu einfacheren Mitteln der Lösungsfindung greifen. Deswegen gehen wir davon aus, dass ACO\(_{\mathbb{R}}\)-very-simple im Vergleich in den Tabellen~\ref{VerglelichACORundACORSimple} und~\ref{VerglelichACORundACORVerySimple} als der bessere Algorithmus hervorgehen wird.\hfill\newline
 	
@@ -2306,11 +2308,13 @@ within=section,
 		
 		%\fontsize{10pt}{12pt}
 		
-		\caption{Zweiter Teil des Vergleiches der Ergebnisse zwischen ACO\(_{\mathbb{R}}\)-very-simple und ACO\(_{\mathbb{R}}\) basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant} und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}}
+		\caption{ACO\(_\mathbb{R}\)-VS fixed Zweiter Teil des Vergleiches der Ergebnisse zwischen ACO\(_{\mathbb{R}}\)-very-simple und ACO\(_{\mathbb{R}}\) basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant} und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}}
 		
 		\label{sec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Mit_Ameisenalgorithmen_Verwandten_Methoden}
 		
 		\scriptsize
+		
+		%TODO explizit nochmal ACO_R-VS und Iteratioinen untereinander in separater Tabelle vergleichen?
 		
 		\begin{tabularx}{\linewidth}{ l l l l l l l l l l l}
 			
@@ -2329,21 +2333,21 @@ within=section,
 			
 			\midrule
 			
-			\(B_2\) & \textbf{1.0} (430) & - & - & - & 1.3 (544) & 1.7 (747) & & & & \textbf{1.0} (430)\\
+			\(B_2\) & 1.1 (430) & - & - & - & 1.4 (544) & 1.9 (747) & \textbf{1.0} [98\%]  & 1.2 [98\%] & 1.3 (499) & \textbf{1.0} (389)\\
+			
+			 & & & & & & & (389) & (471) & & \\
+			
+			Branin RCOS & 2.5 (613) & \textbf{1.0} (245) & - & - & 3.5 (858) & 3.0 (747) & 1.1 (268) & 1.1 (277) & 1.6 (392) & \textbf{1.0} (245)\\
 			
 			 & & & & & & & & & & \\
-			
-			Branin RCOS & 2.5 (613) & \textbf{1.0} (245) & - & - & 3.5 (858) & 3.0 (747) & & & & \textbf{1.0} (245)\\
-			
+			 
+			De Jong & 2.8 (745) & - & - & 1.5 (392) & 1.5 (\(\sim\)392) & 1.2 (319) & & & & \textbf{1.0} (268)\\
+			 
 			 & & & & & & & & & & \\
 			
 			Easom & 1.9 (1467) & - & - & - &  \textbf{1.0} [98\%] & - & & & & \textbf{1.0} (772)\\
 			
 			 & & & & & & (772) & & & & \\
-			
-			De Jong & 2.3 (745) & - & - & 1.2 (392) & 1.2 (\(\sim\)392) & \textbf{1.0} (319) & & & & \textbf{1.0} (319)\\
-			
-			 & & & & & & & & & & \\
 			
 			Goldstein & 1.8 (416) & \textbf{1.0} (231) & 3.4 (785) & - & 1.7 (393) & 1.5 (344) & & & & \textbf{1.0} (231)\\
 			
