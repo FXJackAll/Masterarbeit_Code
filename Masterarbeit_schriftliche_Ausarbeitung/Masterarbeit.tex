@@ -1438,6 +1438,8 @@ within=section,
 		
 		Die Familie der Shekel-Testfunktionen ist die schwerere der beiden komplexen Testfunktionfamilien, die in dieser Arbeit betrachtet werden. Sie ist multimodal und hat 5 lokale Minima im Fall von Shekel(4,5), 7 lokale Minima im Fall von Shekel(4,7) und respektive 10 lokale Minima im Fall von Shekel(4,10).
 		
+		%TODO mitte und rechts Bild sehen gleich aus
+		
 		\begin{figure}[H]
 			
 			\centering
@@ -1515,11 +1517,13 @@ within=section,
 		\subsubsection{Diskrete Testfunktionen mit asymmetrischem Definitionsbereich}
 		
 		Wie in Abschnitt~\ref{subsec:ACO_R} geschildert, hat das Initialisierungsintervall großen Einfluss auf das Verhalten des Algorithmus. Zusätzlich, wie in \textit{Merkle und Middendorf} \cite{ACO_2003_simiple_problems} beschrieben, kann das Betrachten von einfachen Testfunktionen zu unerwarteten Ergebnissen führen. Deswegen definieren wir in diesem Abschnitt explizit diskrete Funktionen, die einfach sind aber einen nicht-Standarddefinitionsbereich haben. Wir wählen, wie im Abschnitt~\ref{subsubsec:Ordinale_Testfunktionen_Mit_Gleichverteiltem_Definitionsbereich}, \(m \in \{11, 21, 51\}\) aber diesmal ist der Definitionsbereich asymmetrisch verteilt mit \(3\) Clustern. Zum Beispiel transformiert dies den stetigen Definitionsbereich der Testfunktion \glqq Paraboloid\grqq{} von \(D = [-3, 7]^{10}\) zu\\
-		\(D = [-3, -2.8, -2.6, -0.4, -0.2, 0.0, 0.2, 0.4, 6.6, 6.8, 7.0]^{10}\) für \(m = 11\). Im JSON-Format wird dies wie im Code-Snipped~\ref{subsubsec:Testfunktionen:Diskrete_Testfunktionen_mit_asymmetrischem_Definitionsbereich:JSON:Paraboloid2Dim11OrdAsymm} angezeigt.
+		\(D = [-3, -2.8, -2.6, -0.4, -0.2, 0.0, 0.2, 0.4, 6.6, 6.8, 7.0]^{10}\) für \(m = 11\). Im JSON-Format wird dies wie im Code-Snipped~\ref{subsubsec:Testfunktionen:Diskrete_Testfunktionen_mit_geclustertem_Definitionsbereich:JSON:Paraboloid2Dim11OrdAsymm} angezeigt.
 		
-		\begin{lstlisting}[language=json, caption=Paraboloid 2 Dim discreter asymmetrischer Definitionsbereich, label=subsubsec:Testfunktionen:Diskrete_Testfunktionen_mit_asymmetrischem_Definitionsbereich:JSON:Paraboloid2Dim11OrdAsymm]
+		%TODO geclustert korrekt als Wort?
+		
+		\begin{lstlisting}[language=json, caption=Paraboloid 2 Dim discreter geclusteter Definitionsbereich, label=subsubsec:Testfunktionen:Diskrete_Testfunktionen_mit_geclustertem_Definitionsbereich:JSON:Paraboloid2Dim11OrdAsymm]
 {
-	"name": "Paraboloid_2_11_Discrete_Asymm",
+	"name": "Paraboloid_2_11_Discrete_Clustered",
 	"comment": "artificial discrete variable problem",
 	"type": "discrete variable problems",
 	"continuous_dimension": 0,
@@ -2032,9 +2036,11 @@ within=section,
 	
 	%TODO geht der Titel so?
 	
-	\subsection{Vergleich bzgl. stetiger Funktionen}
+	\subsection{Vergleich bzgl. stetiger Testfunktionen} \label{subsec:Vergleich_Algorithmen:Vergleich_Auf_Stetigen_Testfunktionen}
 	
-	Da in \textit{Socha}~\cite{socha2009ant} ACO\(_\text{MV}\) erst dann eingeführt wird, wenn Testfunktionen mit gemischten Variablen eingeführt werden, kann in diesem Abschnitt nur mit ACO\(_\mathbb{R}\) aus \cite{socha2009ant} verglichen werden. Ferner werden bei in diesem Abschnitt nur Minimierungsprobleme betrachtet, also Probleme, bei denn das globale Minimum gesucht ist, da die Iterationen von \ac{acorvs} nicht mit Maximierungsproblemen umgehen können. Damit entfallen die beiden Maximierungsprobleme \glqq Diagonale Plane\grqq{} und \glqq Plane\grqq. Alle Testprobleme wurden 50 mal durchlaufen.
+	Da in \textit{Socha}~\cite{socha2009ant} ACO\(_\text{MV}\) erst dann eingeführt wird, wenn Testfunktionen mit gemischten Variablen eingeführt werden, kann in diesem Abschnitt nur mit ACO\(_\mathbb{R}\) aus \cite{socha2009ant} verglichen werden. Ferner werden in diesem Abschnitt nur Minimierungsprobleme betrachtet, also Probleme, bei denn das globale Minimum gesucht ist, da die Iterationen von \ac{acorvs} nicht mit Maximierungsproblemen umgehen können. Damit entfallen die beiden Maximierungsprobleme \glqq Diagonale Plane\grqq{} und \glqq Plane\grqq. Alle Testprobleme wurden 50 mal durchlaufen.
+	
+	%TODO 50 mal durchlaufen besser?
 	
 	%Wie in der Betrachtung der Einflüsse der Parameter auf ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple sich bereits abgezeichnet hat, gehen wir davon aus, dass ACO\(_{\mathbb{R}}\)-very-simple bei einfachen Testproblemen der bessere Algorithmus ist, da wenn eine Funktion hinreichend einfach ist, es nicht notwendig ist, bereits gefundene gute Lösungen zu einer noch besseren Lösung aufwendig zu verbinden und kann man zu einfacheren Mitteln der Lösungsfindung greifen. Deswegen gehen wir davon aus, dass ACO\(_{\mathbb{R}}\)-very-simple im Vergleich in den Tabellen~\ref{VerglelichACORundACORSimple} und~\ref{VerglelichACORundACORVerySimple} als der bessere Algorithmus hervorgehen wird.\hfill\newline
 	
@@ -2116,7 +2122,7 @@ within=section,
 			
 			Ellipsoid & 456.1 (293700) & 760.1 (489500) & 6.9 (4450) & 11.1 (7120) & 96.7 (62300) & \textbf{1.0} (644)\\
 			
-			Paraboloid & \textbf{1.0} (1370)  & 1.6 (2192) & 1.3 (1781) & 5.0 (6850) & 48 (65760)  & \textbf{1.0} (1370)\\
+			Paraboloid & \textbf{1.0} (1370) & 1.6 (2192) & 1.3 (1781) & 5.0 (6850) & 48 (65760)  & \textbf{1.0} (1370)\\
 			
 			Rosenbrock & *51 (366690) & 180 (1294200) & \textbf{1.0} (7190) & *210 (1509900) & *1100 (7909000) & \textbf{1.0} (7190)\\
 			
@@ -2148,7 +2154,7 @@ within=section,
 		
 		\scriptsize
 		
-		\begin{tabularx}{\linewidth}{l l l l l l l}
+		\begin{tabularx}{\linewidth}{X X X X X X X}
 			
 			%\rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt}\\
 			
@@ -2159,7 +2165,7 @@ within=section,
 			%TODO nicht klar ob beide Ameisen 5376 Durchläufe gebracht haben oder nur eine
 			
 			Testfunktion & ACO\(_{\mathbb{R}}\) & ACO\(_{\mathbb{R}}\)-VS & Hom-HPB- & Het-HPB- & Het-HSPPB- & Bestwert\\
-			 			 &						&						  & ACO\(_\mathbb{R}\)-VS-MV & ACO\(_\mathbb{R}\)-VS-MV & ACO\(_\mathbb{R}\)-VS-MV & \\
+			 			 &						&						  & ACO\(_\mathbb{R}\)-VS & ACO\(_\mathbb{R}\)-VS & ACO\(_\mathbb{R}\)-VS & \\
 			
 			%\rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt}\\
 			
@@ -2493,6 +2499,146 @@ within=section,
 	\end{table}
 	
 	Wie in Tabelle~\ref{VerglelichACORSimpleundACORVerySimpleTeil2} nochmal deutlich zu sehen, ist ACO\(_{\mathbb{R}}\)-very-simple, auch bei schwereren Testproblemen, der bessere Algorithmus.\hfill\newline
+	
+	\subsection{Vergleich bzgl. diskreter Testfunktionen} \label{subsec:Vergleich_Algorithmen:Vergleich_Auf_Diskreten_Testfunktionen}
+	
+	\subsection{Vergleich bzgl. Testfunktionen mit gemischten Variablen} \label{subsec:Vergleich_Testfunktionen_Gemischte_Variablen}
+	
+	\subsubsection{Vergleich bzgl. konstruierter Testfunktionen mit gemischten Variablen} \label{subsubsec:Vergleich_Algorithmen:Vergleich_Auf_Konstruierten_Testfunktionen_Mit_Gemischten_Variablen}
+	
+	\begin{table}[H]
+		
+		%\fontsize{6pt}{6pt}
+		
+		%\caption{Vergleich der Ergebnisse zwischen Algorithmen, die probabilistisches Lernen einsetzten auf Testfunktionen, die zum Vergleich zwischen Algorithmen, die probabilistisches Lernen einsetzten, benutzt werden, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning} Teil 1}
+		
+		\caption{fixed und adaptiv, äquidistant Vergleich der Ergebnisse zwischen Algorithmen, die probabilistisches Lernen einsetzten, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}}
+		
+		%TODO wie viele zitieren?
+		
+		\label{sec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Funktionen_Mit_Gemischten_Variablen}
+		
+		\scriptsize
+		
+		\begin{tabularx}{\linewidth}{X X X X X X X X}
+			
+			%\rule{1.6cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{1.3cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.4cm}{0.4pt}\\
+			
+			\toprule
+			
+			%\Tstrut
+			
+			%TODO erklären was (1 + 1)ES, CSA-ES und sind?
+			
+			Testfunktion & Hom-HPB- & Het-HPB- & Het-HSPPB- & Hom-HPB- & Het-HPB- & Het-HSPPB- & Bestwert\\
+			
+			& ACO\(_\mathbb{R}\)-VS & ACO\(_\mathbb{R}\)-VS & ACO\(_\mathbb{R}\)-VS & ACO\(_\mathbb{R}\)-VS & ACO\(_\mathbb{R}\)-VS & ACO\(_\mathbb{R}\)-VS & \\
+			
+			%\rule{1.6cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{1.3cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.4cm}{0.4pt}\\
+			
+			\midrule
+			
+			Cigar(2,11) & & & & & & & \\
+			
+			Cigar(2,21) & & & & & & & \\
+			
+			Cigar(2,51) & & & & & & & \\
+			
+			Cigar(5,11) & & & & & & & \\
+			
+			Cigar(5,21) & & & & & & & \\
+			
+			Cigar(5,51) & & & & & & & \\
+			
+			Cigar(10,10) & & & & & & & \\
+			
+			Cigar(10,10) & & & & & & & \\
+			
+			Cigar(10,10) & & & & & & & \\
+			
+			Ellipsoid(2,11) & & & & & & & \\
+			
+			Ellipsoid(2,21) & & & & & & & \\
+			
+			Ellipsoid(2,51) & & & & & & & \\
+			
+			Ellipsoid(5,11) & & & & & & & \\
+			
+			Ellipsoid(5,21) & & & & & & & \\
+
+			Ellipsoid(5,51) & & & & & & & \\
+			
+			Ellipsoid(10,11) & & & & & & & \\
+			
+			Ellipsoid(10,21) & & & & & & & \\
+			
+			Ellipsoid(10,51) & & & & & & & \\
+			
+			Paraboloid(2,11) & & & & & & & \\
+			
+			Paraboloid(2,21) & & & & & & & \\
+			
+			Paraboloid(2,51) & & & & & & & \\
+			
+			Paraboloid(5,11) & & & & & & & \\
+			
+			Paraboloid(5,21) & & & & & & & \\
+			
+			Paraboloid(5,51) & & & & & & & \\
+			
+			Paraboloid(10,11) & & & & & & & \\
+			
+			Paraboloid(10,21) & & & & & & & \\
+			
+			Paraboloid(10,51) & & & & & & & \\
+			
+			Rosenbrock(2,11) & & & & & & & \\
+			
+			Rosenbrock(2,21) & & & & & & & \\
+			
+			Rosenbrock(2,51) & & & & & & & \\
+			
+			Rosenbrock(5,11) & & & & & & & \\
+			
+			Rosenbrock(5,21) & & & & & & & \\
+			
+			Rosenbrock(5,51) & & & & & & & \\
+			
+			Rosenbrock(10,11) & & & & & & & \\
+			
+			Rosenbrock(10,21) & & & & & & & \\
+			
+			Rosenbrock(10,51) & & & & & & & \\
+			
+			Tablet(2,11) & & & & & & & \\
+			
+			Tablet(2,21) & & & & & & & \\
+			
+			Tablet(2,51) & & & & & & & \\
+			
+			Tablet(5,11) & & & & & & & \\
+			
+			Tablet(5,21) & & & & & & & \\
+			
+			Tablet(5,51) & & & & & & & \\
+			
+			Tablet(10,11) & & & & & & & \\
+			
+			Tablet(10,21) & & & & & & & \\
+			
+			Tablet(10,51) & & & & & & & \\
+			
+			\bottomrule
+			
+		\end{tabularx}
+		
+		\smallskip
+		
+		Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Bei Ergebnissen, wo ein * steht, wurde die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht und dort wo \(\infty\) steht wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht.\hfill\newline
+		
+		%TODO kann auch ein längerer Absatzt beibehalten werden
+		
+	\end{table}
 	
 	\section{Konvergenzbetrachtung} \label{Konvergenzbetrachtung}
 	

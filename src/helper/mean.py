@@ -1,7 +1,7 @@
 from math import ceil
 
-read_data_path = "/home/user/Schreibtisch/Masterarbeit_Code/src/performance_data/H_Het_P_ACO_R_Very_Simple/continuous_performance_data/10_4_10_4/zakharov_5_fixed_0_continuous_10_4_10_4.txt"
-save_data_path = "/home/user/Schreibtisch/Masterarbeit_Code/src/performance_data/H_Het_P_ACO_R_Very_Simple/continuous_performance_data/10_4_10_4/zakharov_5_fixed_0_continuous_10_4_10_4_mean.txt"
+read_data_path = "/home/user/Schreibtisch/Masterarbeit_Code/src/performance_data/H_Hom_ACO_R_Very_Simple/artificial_mixed_variable_performance_data/tablet_10_51_mv_fixed_mixed_variable.txt"
+save_data_path = "/home/user/Schreibtisch/Masterarbeit_Code/src/performance_data/H_Hom_ACO_R_Very_Simple/artificial_mixed_variable_performance_data/tablet_10_51_mv_fixed_mixed_variable_mean.txt"
 
 with open(read_data_path, "r") as performance_data:
 
@@ -20,10 +20,10 @@ with open(read_data_path, "r") as performance_data:
 
         split_line = line.split()
 
-        if split_line[2] != "130000":
+        if split_line[1] != "130000":
 
             # gathering all data in a list
-            sum += int(split_line[2])
+            sum += int(split_line[1])
             number_of_entries += 1
 
             # print(split_line[2])

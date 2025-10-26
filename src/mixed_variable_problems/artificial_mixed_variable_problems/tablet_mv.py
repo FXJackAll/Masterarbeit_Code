@@ -12,7 +12,7 @@ class Tablet_MV(Problem):
     """
 
     def __init__(self, artificial_mixed_variable_pr_name: str,
-                 problem_path="../problems/mixed_variable/artificial_mixed_variable_problems",
+                 problem_path="../problems/mixed_variable_problems/artificial_mixed_variable_problems",
                  load_instance=True) -> None:
         self._problem_type = 'artificial_mixed_variable_problem'
         self._artificial_mixed_variable_pr_name = artificial_mixed_variable_pr_name
@@ -105,6 +105,8 @@ class Tablet_MV(Problem):
 
         value = [choice(self._discrete_values) for i in range(self._discrete_dimension)]
 
+        # print(value)
+
         solution = {'natural_numbers': [],
                     'discrete': [value],
                     'continuous': [rand_point],
@@ -137,7 +139,11 @@ class Tablet_MV(Problem):
 
             continuous_function_value += continuous_variables[i + 1] ** 2
 
+        # print(discrete_variables)
+
         for j in range(self._discrete_dimension):
+
+            # print(j)
 
             discrete_function_value += discrete_variables[j] ** 2
 

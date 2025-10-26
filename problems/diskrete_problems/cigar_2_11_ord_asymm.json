@@ -1,7 +1,7 @@
 {
-  "name": "Cigar_2_11_Ord_Eq_Distr",
-  "comment": "artificial ordinal variable problem",
-  "type": "ordinal variable problems",
+  "name": "Cigar_2_11_Discrete_Asymm",
+  "comment": "artificial discrete variable problem",
+  "type": "diskrete variable problems",
   "continuous_dimension": 0,
   "discrete_dimension": 2,
   "dimension": 2,
@@ -16,9 +16,9 @@
     "categorical": []
   },
 
-  "discrete_values": [-3.0, -2.0, -1.0, 0.0, 1.0,
-                      2.0, 3.0, 4.0 ,5.0, 6.0,
-                      7.0],
+  "discrete_values": [-3, -2.8, -2.6,
+                      -0.4, -0.2, 0.0, 0.2, 0.4,
+                      6.6, 6.8, 7.0],
 
   "magnitudes_of_categorical_variables": []
 }
