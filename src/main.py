@@ -13,6 +13,7 @@ from optimizer import Optimizer
 from mixed_variable_problems.artificial_mixed_variable_problems.cigar_mv import Cigar_MV
 from mixed_variable_problems.artificial_mixed_variable_problems.ellipsoid_mv import Ellipsoid_MV
 from mixed_variable_problems.artificial_mixed_variable_problems.paraboloid_mv import Paraboloid_MV
+from mixed_variable_problems.artificial_mixed_variable_problems.rosenbrock_mv import Rosenbrock_MV
 from mixed_variable_problems.artificial_mixed_variable_problems.tablet_mv import Tablet_MV
 from mixed_variable_problems.csd_with_exact_term import CSD_exact
 from mixed_variable_problems.csd_with_penalty_term import CSD_penalty
@@ -72,9 +73,9 @@ def user_input():
                         help='enables random rotation of the given test function')
 
 
-    parser.add_argument('-salg', '--search_algorithm', type=str, default='h_hom_aco_r_very_simple',
+    parser.add_argument('-salg', '--search_algorithm', type=str, default='h_het_aco_r_very_simple',
                         help='Type of the search algorithm, e.g. random_search or aco_r_very_simple')
-    parser.add_argument('-salgn', '--search_algorithm_name', type=str, default='H_Hom_ACO_R_Very_Simple',
+    parser.add_argument('-salgn', '--search_algorithm_name', type=str, default='H_Het_ACO_R_Very_Simple',
                         help='Name of the search algorithm, e.g. Random_Search or ACO_R_Very_Simple')
     parser.add_argument('-mitc', '--max_iteration_count', type=int, default=10000,
                         help='Maximum number of iterations (not function evaluations) to run the search algorithm')
@@ -223,6 +224,9 @@ def main():
 
         case 'Paraboloid_MV':
             problem = Paraboloid_MV(artificial_mixed_variable_pr_name=args.problem)
+
+        case 'Rosenbrock_MV':
+            problem = Rosenbrock_MV(artificial_mixed_variable_pr_name=args.problem)
 
         case 'Tablet_MV':
             problem = Tablet_MV(artificial_mixed_variable_pr_name=args.problem)

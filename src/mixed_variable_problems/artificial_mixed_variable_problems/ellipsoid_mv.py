@@ -12,7 +12,7 @@ class Ellipsoid_MV(Problem):
     """
 
     def __init__(self, artificial_mixed_variable_pr_name: str,
-                 problem_path="../problems/mixed_variable/artificial_mixed_variable_problems",
+                 problem_path="../problems/mixed_variable_problems/artificial_mixed_variable_problems",
                  load_instance=True) -> None:
         self._problem_type = 'artificial_mixed_variable_problem'
         self._artificial_mixed_variable_pr_name = artificial_mixed_variable_pr_name

@@ -2,26 +2,27 @@ import os
 from functools import reduce
 import json
 from src.problem import Problem
-from random import uniform
+from random import choice, uniform
 import numpy as np
 
 
-class Rosenbrock(Problem):
-    TYPE = 'continuous_problem'
+class Rosenbrock_MV(Problem):
+    TYPE = 'artificial_mixed_variable_problem'
     """
     """
 
-    def __init__(self, con_pr_name: str,
-                 problem_path="../problems/continuous_problems/",
+    def __init__(self, artificial_mixed_variable_pr_name: str,
+                 problem_path="../problems/mixed_variable_problems/artificial_mixed_variable_problems",
                  load_instance=True) -> None:
-        self._con_pr_name = con_pr_name
+        self._problem_type = 'artificial_mixed_variable_problem'
+        self._artificial_mixed_variable_pr_name = artificial_mixed_variable_pr_name
         self._problem_path = problem_path
 
         if load_instance:
-
-            with open(os.path.join(self._problem_path, self._con_pr_name + ".json")) as f:
+            with open(os.path.join(self._problem_path, self._artificial_mixed_variable_pr_name + ".json")) as f:
                 self._instance = json.load(f)
-                self._dimension = self._instance["dimension"]
+                self._continuous_dimension = self._instance["continuous_dimension"]
+                self._discrete_dimension = self._instance["discrete_dimension"]
                 self._variable_boundaries = self._instance["variable_boundaries"]
                 self._left_search_space_boundary = self._variable_boundaries["continuous"][0][0]
                 self._right_search_space_boundary = self._variable_boundaries["continuous"][0][1]
@@ -79,10 +80,12 @@ class Rosenbrock(Problem):
 
         # random point in R^n:
         rand_point = tuple([uniform(self._left_search_space_boundary, self._right_search_space_boundary)
-                            for i in range(self._dimension)])
+                            for i in range(self._continuous_dimension)])
+
+        value = [choice(self._discrete_values) for i in range(self._discrete_dimension)]
 
         solution = {'natural_numbers': [],
-                    'discrete': [],
+                    'discrete': [value],
                     'continuous': [rand_point],
                     'ordinal': [],
                     'categorical': []
@@ -97,12 +100,20 @@ class Rosenbrock(Problem):
         Get the solution quality for the given possible solution.
         """
 
+        continuous_variables = solution['continuous'][0]
+        discrete_variables = solution['discrete'][0]
+
         dimension = len(solution)
         # print(solution)
-        continuous_variables = solution['continuous'][0]
+        # continuous_variables = solution['continuous'][0]
 
-        function_value = reduce(lambda a, b: a + b, list(map(lambda x, y: 100 * (x ** 2 - y) ** 2 + (x - 1) ** 2,
-                                                             continuous_variables[0:dimension - 1], continuous_variables[1:dimension])))
+        continuous_function_value = reduce(lambda a, b: a + b, list(map(lambda x, y: 100 * (x ** 2 - y) ** 2 + (x - 1) ** 2,
+                                                                        continuous_variables[0:self._continuous_dimension - 1], continuous_variables[1:self._continuous_dimension])))
+
+        discrete_function_value = reduce(lambda a, b: a + b, list(map(lambda x, y: 100 * (x ** 2 - y) ** 2 + (x - 1) ** 2,
+                                                                      discrete_variables[0:self._discrete_dimension - 1], discrete_variables[1:self._discrete_dimension])))
+
+        function_value = continuous_function_value + discrete_function_value
 
         return function_value, True
 
@@ -149,7 +160,9 @@ class Rosenbrock(Problem):
     @property
     def dimension(self):
 
-        return self._dimension
+        dimension = self._discrete_dimension + self._continuous_dimension
+
+        return dimension
 
     @dimension.setter
     def dimension(self, value):

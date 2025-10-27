@@ -20,10 +20,10 @@ with open(read_data_path, "r") as performance_data:
 
         split_line = line.split()
 
-        if split_line[1] != "130000":
+        if split_line[2] != "130000":
 
             # gathering all data in a list
-            sum += int(split_line[1])
+            sum += int(split_line[2])
             number_of_entries += 1
 
             # print(split_line[2])
