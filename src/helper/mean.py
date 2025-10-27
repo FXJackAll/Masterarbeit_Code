@@ -1,7 +1,7 @@
 from math import ceil
 
-read_data_path = "/home/user/Schreibtisch/Masterarbeit_Code/src/performance_data/H_Hom_ACO_R_Very_Simple/artificial_mixed_variable_performance_data/tablet_10_51_mv_fixed_mixed_variable.txt"
-save_data_path = "/home/user/Schreibtisch/Masterarbeit_Code/src/performance_data/H_Hom_ACO_R_Very_Simple/artificial_mixed_variable_performance_data/tablet_10_51_mv_fixed_mixed_variable_mean.txt"
+read_data_path = "/home/user/Schreibtisch/Masterarbeit_Code/src/performance_data/H_Het_P_ACO_R_Very_Simple/artificial_mixed_variable_performance_data/cigar_2_51_mv_fixed_continuous.txt"
+save_data_path = "/home/user/Schreibtisch/Masterarbeit_Code/src/performance_data/H_Het_P_ACO_R_Very_Simple/artificial_mixed_variable_performance_data/cigar_2_51_mv_fixed_continuous_mean.txt"
 
 with open(read_data_path, "r") as performance_data:
 

@@ -198,8 +198,13 @@ class H_Het_P_ACO_R_Very_Simple(Search_Algorithm):
 
                 case 'random':
 
-                    random_discrete_value = random.choice(discrete_values)
-                    new_discrete_solution_coordinates[variable].append(random_discrete_value)
+                    #random_discrete_value = [random.choice(discrete_values) for i in range(len(linear_div_inflated_discrete))]
+
+                    for i in range(len(linear_div_inflated_discrete)):
+
+                        random_discrete_value = random.choice(discrete_values)
+
+                        new_discrete_solution_coordinates[variable].append(random_discrete_value)
 
                 case _:
 

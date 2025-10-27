@@ -61,11 +61,11 @@ def user_input():
     #                    help='Name of the problem instance, e.g. the TSPLIB names like "rat195"')
 
 
-    parser.add_argument('-p', '--problem', type=str, default='tablet_10_51_mv',
+    parser.add_argument('-p', '--problem', type=str, default='cigar_5_21_mv',
                         help='Name of the problem instance, e.g. TISD names like "tisd10" or TSPLIB names like "rat195"')
     # parser.add_argument('-pt', '--problem-type', type=str, default='TSP',
     #                    help='Type of the problem, e.g. TSP (standard, symmetric TSP), ATSP (asymmetric TSP), QAP, TISD')
-    parser.add_argument('-pt', '--problem-type', type=str, default='Tablet_MV',
+    parser.add_argument('-pt', '--problem-type', type=str, default='Cigar_MV',
                         help='Type of the problem, e.g. TSP (standard, symmetric TSP), ATSP (asymmetric TSP), QAP, TISD')
 
 
@@ -73,9 +73,9 @@ def user_input():
                         help='enables random rotation of the given test function')
 
 
-    parser.add_argument('-salg', '--search_algorithm', type=str, default='h_het_aco_r_very_simple',
+    parser.add_argument('-salg', '--search_algorithm', type=str, default='h_het_p_aco_r_very_simple',
                         help='Type of the search algorithm, e.g. random_search or aco_r_very_simple')
-    parser.add_argument('-salgn', '--search_algorithm_name', type=str, default='H_Het_ACO_R_Very_Simple',
+    parser.add_argument('-salgn', '--search_algorithm_name', type=str, default='H_Het_P_ACO_R_Very_Simple',
                         help='Name of the search algorithm, e.g. Random_Search or ACO_R_Very_Simple')
     parser.add_argument('-mitc', '--max_iteration_count', type=int, default=10000,
                         help='Maximum number of iterations (not function evaluations) to run the search algorithm')
