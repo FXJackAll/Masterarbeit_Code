@@ -44,7 +44,7 @@
 \contentsline {subsubsection}{\numberline {7.4.1}Konstruierte Testfunktionen}{32}{}%
 \contentsline {subsubsection}{\numberline {7.4.2}Coil Spring Design Problem (CSD)}{33}{}%
 \contentsline {paragraph}{\numberline {7.4.2.1}Vollständiger Raum als Initialisierungsintervall}{36}{}%
-\contentsline {paragraph}{\numberline {7.4.2.2}Gefilterter Raum als Initialisierungsintervall}{36}{}%
+\contentsline {paragraph}{\numberline {7.4.2.2}Gefilterter Raum als Initialisierungsintervall}{37}{}%
 \contentsline {section}{\numberline {8}Herausforderung}{38}{}%
 \contentsline {section}{\numberline {9}Vergleich von ACO\(_{\mathbb {R}}\), ACO\(_\text {MV}\), \acl {acorvs} und den Iteration von \acl {acorvs}}{38}{}%
 \contentsline {subsection}{\numberline {9.1}Vergleich bzgl. stetiger Testfunktionen}{38}{}%

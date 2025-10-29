@@ -11,7 +11,7 @@ for file in os.listdir(directory):
 
     file_path = directory + "/" + str(file)
 
-    if "_mean" not in file_path:
+    if "_mean" not in file_path and "adaptive" in file_path:
 
         file_path_without_txt = os.path.splitext(file_path)[0]
 
