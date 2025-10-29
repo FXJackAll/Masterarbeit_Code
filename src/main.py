@@ -61,11 +61,11 @@ def user_input():
     #                    help='Name of the problem instance, e.g. the TSPLIB names like "rat195"')
 
 
-    parser.add_argument('-p', '--problem', type=str, default='cigar_5_21_mv',
+    parser.add_argument('-p', '--problem', type=str, default='tablet_10_11_mv',
                         help='Name of the problem instance, e.g. TISD names like "tisd10" or TSPLIB names like "rat195"')
     # parser.add_argument('-pt', '--problem-type', type=str, default='TSP',
     #                    help='Type of the problem, e.g. TSP (standard, symmetric TSP), ATSP (asymmetric TSP), QAP, TISD')
-    parser.add_argument('-pt', '--problem-type', type=str, default='Cigar_MV',
+    parser.add_argument('-pt', '--problem-type', type=str, default='Tablet_MV',
                         help='Type of the problem, e.g. TSP (standard, symmetric TSP), ATSP (asymmetric TSP), QAP, TISD')
 
 
@@ -73,9 +73,9 @@ def user_input():
                         help='enables random rotation of the given test function')
 
 
-    parser.add_argument('-salg', '--search_algorithm', type=str, default='h_het_p_aco_r_very_simple',
+    parser.add_argument('-salg', '--search_algorithm', type=str, default='h_hom_aco_r_very_simple',
                         help='Type of the search algorithm, e.g. random_search or aco_r_very_simple')
-    parser.add_argument('-salgn', '--search_algorithm_name', type=str, default='H_Het_P_ACO_R_Very_Simple',
+    parser.add_argument('-salgn', '--search_algorithm_name', type=str, default='H_Hom_ACO_R_Very_Simple',
                         help='Name of the search algorithm, e.g. Random_Search or ACO_R_Very_Simple')
     parser.add_argument('-mitc', '--max_iteration_count', type=int, default=10000,
                         help='Maximum number of iterations (not function evaluations) to run the search algorithm')
@@ -94,7 +94,7 @@ def user_input():
 
 
     parser.add_argument('-rsb', '--restart_behaviour', type=str, choices=['fixed', 'absolute', 'adaptive'],
-                        default='fixed', help='Algorithm restarts a fixed amount of times,'
+                        default='adaptive', help='Algorithm restarts a fixed amount of times,'
                                                  'after an absolut number of iterations'
                                                  'or when the difference between solutions is under a certain threshold')
     parser.add_argument('-per', '--period', type=int, default=7,
@@ -511,7 +511,7 @@ def main():
 
                 # print(abs_path)
 
-                with open(os.path.join(abs_path, "performance_data/{}".format(args.problem) + "_" + args.restart_behaviour + "_" + "continuous" + ".txt"), "a+") as performance_data:
+                with open(os.path.join(abs_path, "performance_data/{}".format(args.problem) + "_" + args.restart_behaviour + "_" + "mixed_variable_10" + ".txt"), "a+") as performance_data:
 
                     # perform_data_string = str(best_solution[0][0]["required_restarts"]) + " " + str(best_solution[1] * 13 + best_solution[0][0]["so_far"]) + " " + str(best_solution[0][1]) + str("\n")
                     perform_data_string = str(best_solution[0][0]["required_restarts"]) + " " + str(best_solution[1]) + " " + str(best_solution[1] * 13) + " " + str(best_solution[0][1]) + " " + str(timeit.default_timer() - starttime) + " " + str(best_solution[0][0]['continuous'][0]) + str("\n") # for continuous problems
