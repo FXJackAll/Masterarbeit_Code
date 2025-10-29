@@ -2506,7 +2506,7 @@ within=section,
 	
 	\subsubsection{Vergleich bzgl. konstruierter Testfunktionen mit gemischten Variablen} \label{subsubsec:Vergleich_Algorithmen:Vergleich_Auf_Konstruierten_Testfunktionen_Mit_Gemischten_Variablen}
 	
-	Es wurden nur diese Funktionen gewählt, da sie die einzigen waren, die sowohl für verschiedene Dimensionen definiert werden konnten, als auch wo die Algorithmen konvergierten
+	Für den Vergleich wurden die Funktionen \glqq Cigar\grqq, \glqq Ellipsoid\grqq, \glqq Paraboloid\grqq und \glqq Tablet\grqq{} gewählt, da sie die einzigen waren, die sowohl für verschiedene Dimensionen definiert werden konnten, als auch wo die Algorithmen konvergierten.
 	
 	\begin{table}[H]
 		
@@ -2618,33 +2618,35 @@ within=section,
 			
 			 & [98\%] & & & [12\%] \(\{123\}\) & & & \\
 			
-			Tablet(2,11) & (510) & (344) & (519) & & & & \\
+			Tablet(2,11) & (510) & (344) & (519) & (727) \(\{3\}\) & & & \\
 			
 			 & & [92\%] & & & & & \\
 			
-			Tablet(2,21) & (412) & (355) & (472) & & & & \\
+			Tablet(2,21) & (412) & (355) & (472) & (796) \(\{3\}\) & & & \\
 			
 			 & & [94\%] & & & & & \\
 			
-			Tablet(2,51) & (535) & (3093) & (543) &  & & & \\
+			Tablet(2,51) & (535) & (3093) & (543) & (793) \(\{3\}\) & & & \\
 			
-			Tablet(5,11) & (3490) & (3327) & (1919) & & & & \\
+			Tablet(5,11) & (3490) & (3327) & (1919) & (41127) & & & \\
 			
-			 & & [98\%] & & & & & \\
+			 & & [98\%] & & [98\%] \(\{81\}\) & & & \\
 			
-			Tablet(5,21) & (1883) & (1659) & (1977) & & & & \\
+			Tablet(5,21) & (1883) & (1659) & (1977) & (34135) & & & \\
 			
-			Tablet(5,51) & (1925) & (1726) & (2006) & & & & \\
+			 & & & & [98\%] \(\{66\}\) & & & \\
 			
-			 & & [94\%] & & & & & \\
+			Tablet(5,51) & (1925) & (1726) & (2006) & (45325) & & & \\
 			
-			Tablet(10,11) & (3649) & (4928) & (4441) & & & & \\
+			 & & [94\%] & & [92\%] \(\{85\}\) & & & \\
 			
-			 & & [98\%] & & & & & \\
+			Tablet(10,11) & (3649) & (4928) & (4441) & (9984) & & & \\
 			
-			Tablet(10,21) & (3861) & (3975) & (3928) & & & & \\
+			 & & [98\%] & & [2\%] \(\{14\}\) & & & \\
 			
-			Tablet(10,51) & (5692) & (5711) & (4247) & & & & \\
+			Tablet(10,21) & (3861) & (3975) & (3928) & \(\infty\) & & & \\
+			
+			Tablet(10,51) & (5692) & (5711) & (4247) & \(\infty\) & & & \\
 			
 			 & & [98\%] & & & & & \\
 			
@@ -2654,7 +2656,7 @@ within=section,
 		
 		\smallskip
 		
-		Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Bei Ergebnissen, wo die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht wurde, ist der Anteil der erfolgreichen Durchläufe in Prozent in eckigen Klammern angegeben, wo \(\infty\) steht, wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht.
+		Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Bei Ergebnissen, wo die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht wurde, ist der Anteil der erfolgreichen Durchläufe in Prozent in eckigen Klammern angegeben, wo \(\infty\) steht, wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht. Bei den Algorithmen, welche \glqq adaptive\grqq{} als Neustartstrategie anwendetet, steht die durchschnittliche Anzahl an Neustarts in geschweiften Klammern.
 		
 		%TODO kann auch ein längerer Absatzt beibehalten werden
 		

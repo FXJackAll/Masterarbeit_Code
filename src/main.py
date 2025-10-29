@@ -61,7 +61,7 @@ def user_input():
     #                    help='Name of the problem instance, e.g. the TSPLIB names like "rat195"')
 
 
-    parser.add_argument('-p', '--problem', type=str, default='tablet_10_11_mv',
+    parser.add_argument('-p', '--problem', type=str, default='tablet_10_51_mv',
                         help='Name of the problem instance, e.g. TISD names like "tisd10" or TSPLIB names like "rat195"')
     # parser.add_argument('-pt', '--problem-type', type=str, default='TSP',
     #                    help='Type of the problem, e.g. TSP (standard, symmetric TSP), ATSP (asymmetric TSP), QAP, TISD')
