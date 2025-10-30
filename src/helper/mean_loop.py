@@ -3,7 +3,7 @@ from math import ceil
 
 from src.helper.mean import save_data_path
 
-directory = "/home/user/Schreibtisch/Masterarbeit_Code/src/performance_data/H_Hom_ACO_R_Very_Simple/artificial_mixed_variable_performance_data"
+directory = "/home/user/Schreibtisch/Masterarbeit_Code/src/performance_data/H_Het_ACO_R_Very_Simple/artificial_mixed_variable_performance_data"
 
 # print(directory)
 
@@ -41,12 +41,12 @@ for file in os.listdir(directory):
 
                 # print(split_line)
 
-                if split_line[1] != "130000":
+                if split_line[2] != "130000":
 
                     sum_of_restarts += int(split_line[0])
 
                     # gathering all data in a list
-                    sum_of_iterations += int(split_line[1])
+                    sum_of_iterations += int(split_line[2])
 
                     number_of_entries += 1
 

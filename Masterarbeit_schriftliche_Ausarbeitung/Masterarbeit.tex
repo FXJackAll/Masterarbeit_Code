@@ -1460,7 +1460,7 @@ within=section,
 		
 		\subsubsection{Diskrete Testfunktionen mit gleichverteiltem Definitionsbereich} \label{subsubsec:Ordinale_Testfunktionen_Mit_Gleichverteiltem_Definitionsbereich}
 		
-		Die einfachste Art diskrete Testfunktionen zu erhalten, ist die Diskretisierung von stetigen Testfunktionen. Dabei nimmt man \(m \in \mathbb{N}\) Punkte aus dem Definitionsbereich einer stetigen Funktion und bildet aus diesen Punkten einen neuen diskreten Definitionsbereich. Zum Beispiel ist die Funktion \glqq Paraboloid\grqq{} aus Tabelle~\ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} über dem stetigen Definitionsbereich \( D = [-3,7]^n, n = 10\) definiert. Wir nehmen diesen Definitionsbereich und zerlegen ihn in \(m = 11\) gleichverteilte diskrete Punkte. Dies Ergibt \(D = [-3, -2, -1, 0, 1, 2, 3 , 4, 5, 6, 7]^n, n = 10\). Analog gewinnen wir anderen diskreten Testfunktionen. Wir nehmen die stetigen Testfunktionen aus den Tabellen \ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt} mit \(m \in \{11, 21, 51\}\). Damit erhalten wir für jede stetige Funktion 3 diskrete Testfunktionen. Die Definitionen der Funktionsterme, Optima und Argumente der Optima bleiben gleich, weswegen hier auf eine Doppelung der Tabellen \ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt} verzichtet wird. Wie im Abschnitt~\ref{subsec:ACO_R} hat das Initialisierungsintervall großen Einfluss auf das Verhalten des Algorithmus aber da wir eine gleichverteilte Diskretisierung genommen haben, um die neuen Definitionsbereiche zu erlangen, ist zu erwarten, dass sich das Lösungsverhalten für die ordinalen/diskreten Testfunktionen nicht signifikant von denen in den Tabellen \ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt} unterscheiden wird.
+		Die einfachste Art diskrete Testfunktionen zu erhalten, ist die Diskretisierung von stetigen Testfunktionen. Dabei nimmt man \(m \in \mathbb{N}\) Punkte aus dem Definitionsbereich einer stetigen Funktion und bildet aus diesen Punkten einen neuen diskreten Definitionsbereich. Zum Beispiel ist die Funktion \glqq Paraboloid\grqq{} aus Tabelle~\ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} über dem stetigen Definitionsbereich \( D = [-3,7]^n, n = 10\), definiert. Wir nehmen diesen Definitionsbereich und zerlegen ihn in \(m = 11\) gleichverteilte diskrete Punkte. Dies Ergibt \(D = [-3, -2, -1, 0, 1, 2, 3 , 4, 5, 6, 7]^n, n = 10\). Analog gewinnen wir anderen diskreten Testfunktionen. Wir nehmen die stetigen Testfunktionen aus den Tabellen \ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt} mit \(m \in \{11, 21, 51\}\). Damit erhalten wir für jede stetige Funktion 3 diskrete Testfunktionen. Die Definitionen der Funktionsterme, Optima und Argumente der Optima bleiben gleich, weswegen hier auf eine Doppelung der Tabellen \ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt} verzichtet wird. Wie im Abschnitt~\ref{subsec:ACO_R} beschrieben, hat das Initialisierungsintervall großen Einfluss auf das Verhalten des Algorithmus aber da wir eine gleichverteilte Diskretisierung genommen haben, um die neuen Definitionsbereiche zu erlangen, ist zu erwarten, dass sich das Lösungsverhalten für die so gewonnenen diskreten Testfunktionen nicht signifikant von denen in den Tabellen \ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt} unterscheiden wird.
 		
 		%\begin{table}[H]
 			
@@ -1552,19 +1552,19 @@ within=section,
 		
 		\subsubsection{Konstruierte Testfunktionen} \label{subsubsec:Konstruierte_Probleme}
 		
-		Neue Testfunktionen mit gemischten Variablen wurden erzeugt, indem die stetigen Testfunktionen aus Tabelle~\ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} genommen wurden und ein Teil ihrer Dimensionen zu diskreten Dimensionen transformiert wurde. Im JSON-Format wird dies wie im Code-Snipped~\ref{subsubsec:Testfunktionen:Konstruierte_Testfunktionen:JSON:Paraboloid2Dim11MV} angezeigt.
+		Neue Testfunktionen mit gemischten Variablen wurden erzeugt, indem die stetigen Testfunktionen aus Tabelle~\ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen}, außer \glqq Rosenbrock\grqq, genommen wurden und ein Teil ihrer Dimensionen zu diskreten Dimensionen transformiert wurde. Im JSON-Format wird dies wie im Code-Snipped~\ref{subsubsec:Testfunktionen:Konstruierte_Testfunktionen:JSON:Paraboloid5Dim11MV} angezeigt.
 		
 		%TODO besser Dimensionen Formulieren
 		
-		\begin{lstlisting}[language=json, caption=Paraboloid 2 Dim gemischte Variablen, label=subsubsec:Testfunktionen:Konstruierte_Testfunktionen:JSON:Paraboloid2Dim11MV]
+		\begin{lstlisting}[language=json, caption=Paraboloid 5 Dim gemischte Variablen, label=subsubsec:Testfunktionen:Konstruierte_Testfunktionen:JSON:Paraboloid5Dim11MV]
 {
-	"name": "Paraboloid_2_11_MV",
+	"name": "Paraboloid_5_11_MV",
 	"comment": "artificial mixed_variable problem",
 	"type": "mixed variable problems",
-	"continuous_dimension": 1,
-	"discrete_dimension": 1,
-	"dimension": 2,
-	"optimum_argument": [[0.0], [0.0]],
+	"continuous_dimension": 3,
+	"discrete_dimension": 2,
+	"dimension": 5,
+	"optimum_argument": [[0.0], [0.0], [0.0], [0.0], [0.0]],
 	"optimum": [0.0],
 	
 	"variable_boundaries": {
@@ -1583,7 +1583,7 @@ within=section,
 }
 		\end{lstlisting}
 		
-		Es wurden die Testfunktionen \glqq Cigar\grqq, \glqq Ellipsoid\grqq, \glqq Paraboloid\grqq{} und \glqq Tablet\grqq{} aus Tabelle~\ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} gewählt, da sie sowohl für verschiedene Dimensionen, diskret und stetig, definiert werden konnten, als auch wo die Algorithmen, bis auf wenige Ausnahmen, konvergierten. Im Vergleich werden Kombination aus verschiedenen Anzahlen an Dimensionen und verschiedenen Anzahlen diskreten Punkten untersucht. Jede der Testfunktionen wird mit den Dimensionen \(n = \{2, 5, 10\}\) getestet und mit der Anzahl an diskreten Punkten \(m \in \{11, 21, 51\}\).
+		Es wurden die Testfunktionen \glqq Cigar\grqq, \glqq Ellipsoid\grqq, \glqq Paraboloid\grqq{} und \glqq Tablet\grqq{} aus Tabelle~\ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} gewählt, da sie sowohl für verschiedene Dimensionen, diskret und stetig, definiert werden konnten, als auch wo die Algorithmen, bis auf wenige Ausnahmen, konvergierten. Im Vergleich werden Kombination aus verschiedenen Anzahlen an Dimensionen und verschiedenen Anzahlen diskreten Punkten untersucht. Jede der Testfunktionen wird mit den Dimensionen \(n = \{2, 5, 10\}\) und mit der Anzahl an diskreten Punkten \(m \in \{11, 21, 51\}\) getestet. Dabei wird jede der Dimensionen mit allen Anzahlen an diskreten Punkten getestet, also ergeben sich \((2,11), (2,21), (2,51), \dots, (10, 11), (10,21), (10,51)\) als 9 Kombinationen. Testfunktionen, deren Dimension \(5\) ist, haben als stetige Dimensionen \(3\) und als diskrete Dimensionen \(2\). Die Dimension von Testfunktionen, deren Dimension gerade ist, also \(2\) oder \(10\), setzt sich zusammen aus Hälfte diskreter Dimensionen und aus Hälfte stetiger Dimensionen.
 		
 		%TODO besser formulieren?
 		
@@ -2310,13 +2310,73 @@ within=section,
 	
 	Damit lässt sich die geringe Anforderung an die Genauigkeit als Quelle des Effektes feststellen. Auf der anderen Seite ist das Ergebnis einfach zu gut, um lediglich mit einer geringen Anforderung an die Genauigkeit erklärt werden zu können. Ich gehe davon aus, dass es noch andere Faktoren gibt und führe das Ergebnis in der Tabelle~\ref{VerglelichACORundACORSimpleTeil2} nicht auf.
 	
+	\begin{table}[H]
+		
+		%\fontsize{6pt}{6pt}
+		
+		%\caption{Vergleich der Ergebnisse zwischen Algorithmen, die probabilistisches Lernen einsetzten auf Testfunktionen, die zum Vergleich zwischen Algorithmen, die probabilistisches Lernen einsetzten, benutzt werden, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning} Teil 1}
+		
+		\caption{Vergleich der Ergebnisse zwischen Algorithmen, die verwandt zu Ameisenalgorithmen sind, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}}
+		
+		%TODO Besserer Titel
+		
+		%TODO wie viele zitieren?
+		
+		\label{sec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Zu_Ameisen_Verwandte_Algorithmen_Teil_1}
+		
+		\scriptsize
+		
+		\begin{tabularx}{\linewidth}{X X X X X}
+			
+			%\rule{1.6cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{1.3cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.4cm}{0.4pt}\\
+			
+			\toprule
+			
+			%\Tstrut
+			
+			%TODO erklären was (1 + 1)ES, CSA-ES und sind?
+			
+			Testfunktion & CACO & API & CIAC & Bestwert\\
+			
+			%\rule{1.6cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{1.3cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.4cm}{0.4pt}\\
+			
+			\midrule
+			
+			\(B_2\) & (544) & & & \textbf{1.0} (2037)\\
+			
+			Goldstein and Price & (384) & & & \textbf{1.0} (644)\\
+			
+			Griewangk & \textbf{1.0} [61\%] (1390) & & & \textbf{1.0} (1390)\\
+			
+			Martin and Gaddy & & & & \textbf{1.0} (7190)\\
+			
+			Praboloid(6) & & & & \\
+			
+			Rosenbrock(2) & & & & \textbf{1.0} (1751)\\
+			
+			Rosenbrock(5) & & & & \\
+			
+			Shekel(4,5) & & & & \\
+			
+			\bottomrule
+			
+		\end{tabularx}
+		
+		\smallskip
+		
+		Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Bei Ergebnissen, wo ein * steht, wurde die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht und dort wo \(\infty\) steht wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht.\hfill\newline
+		
+		%TODO kann auch ein längerer Absatzt beibehalten werden
+		
+	\end{table}
+	
 	\begin{landscape}
 	
 	\begin{table}[H]
 		
 		%\fontsize{10pt}{12pt}
 		
-		\caption{ACO\(_\mathbb{R}\)-VS fixed Zweiter Teil des Vergleiches der Ergebnisse zwischen ACO\(_{\mathbb{R}}\)-very-simple und ACO\(_{\mathbb{R}}\) basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant} und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}}
+		\caption{Vergleich zwischen ACO\(_{\mathbb{R}}\), ACO\(_\mathbb{R}\)-VS, Iterationen von \ac{acorvsmv} und anderen Meta-Heuristiken, die für stetige Probleme adaptiert wurden. fixed Zweiter Teil, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant} und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}}
 		
 		\label{sec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Mit_Ameisenalgorithmen_Verwandten_Methoden}
 		
@@ -2504,6 +2564,314 @@ within=section,
 	
 	\subsection{Vergleich bzgl. diskreter Testfunktionen} \label{subsec:Vergleich_Algorithmen:Vergleich_Auf_Diskreten_Testfunktionen}
 	
+	\begin{table}[H]
+		
+		%\fontsize{6pt}{6pt}
+		
+		%\caption{Vergleich der Ergebnisse zwischen Algorithmen, die probabilistisches Lernen einsetzten auf Testfunktionen, die zum Vergleich zwischen Algorithmen, die probabilistisches Lernen einsetzten, benutzt werden, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning} Teil 1}
+		
+		\caption{fixed und adaptiv, äquidistant und clusered Vergleich der Ergebnisse zwischen \acl{acorvsmv} und Iterationen, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}, Teil 1}
+		
+		%TODO wie viele zitieren?
+		
+		%TODO mehr als mean(restatrs) (min, max) angeben?
+		
+		\label{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Funktionen_Mit_Gemischten_Variablen_Teil_1}
+		
+		\scriptsize
+		
+		\begin{tabularx}{\linewidth}{X X X X X}
+			
+			%TODO muss die Tabelle einheitlich sein?
+			
+			%\rule{1.6cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{1.3cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.4cm}{0.4pt}\\
+			
+			\toprule
+			
+			%\Tstrut
+			
+			%TODO erklären was (1 + 1)ES, CSA-ES und sind?
+			
+			Testfunktion & Hom-HPB- & Het-HPB- & Het-HSPPB- & Bestwert\\
+			
+			& ACO\(_\mathbb{R}\)-VS & ACO\(_\mathbb{R}\)-VS & ACO\(_\mathbb{R}\)-VS & \\
+			
+			%\rule{1.6cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{1.3cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.4cm}{0.4pt}\\
+			
+			\midrule
+			
+			Cigar(2,11) & (219) & (218) & (263) & \\
+			
+			Cigar(2,21) & (269) & (240) & (272) & \\
+			
+			Cigar(2,51) & (280) & (266) & (416) & \\
+			
+			Cigar(5,11) & (2681) & (1661) & (2114) & \\
+			
+			& & & & \\
+			
+			Cigar(5,21) & (2447) & (1766) & 2259 & \\
+			
+			& & & & \\
+			
+			Cigar(5,51) & (2845) & (1993) & (2357) & \\
+			
+			& & & & \\
+			
+			Cigar(10,11) & (8045) & (5293) & (5609) & \\
+			
+			Cigar(10,21) & (10023) & (5395) & (5395) & \\
+			
+			Cigar(10,51) & (11927) & (5900) & (6033) & \\
+			
+			Ellipsoid(2,11) & (204) & (225) & (1417) & \\
+			
+			Ellipsoid(2,21) & (218) & (230) & (548) & \\
+			
+			Ellipsoid(2,51) & (255) & (263) & (301) & \\
+			
+			Ellipsoid(5,11) & (1218) & (1203) & (1433) & \\
+			
+			Ellipsoid(5,21) & (2933) & (1247) & (1485) & \\
+			
+			Ellipsoid(5,51) & (1475) & (1371) & (1555) & \\
+			
+			Ellipsoid(10,11) & (2939) & (2692) & (3054) & \\
+			
+			& [98\%] & & & \\
+			
+			Ellipsoid(10,21) & (3107) & (2923) & (3297) & \\
+			
+			& & & & \\
+			
+			Ellipsoid(10,51) & (3661) & (3281) & (3746)  &\\
+			
+			Paraboloid(2,11) & (238) & (300) & (361) & \\
+			
+			Paraboloid(2,21) & (241) & (240) & (286) & \\
+			
+			Paraboloid(2,51) & (248) & (240) & (286) & \\
+			
+			Paraboloid(5,11) & (1012) & (1020) & (1175) & \\
+			
+			& [94\%] & & & \\
+			
+			Paraboloid(5,21) & (990) & (1020) & (1197) & \\
+			
+			Paraboloid(5,51) & (1011) & (1121) & (1333) & \\
+			
+			& [96\%] & & & \\
+			
+			Paraboloid(10,11) & (2848) & (2326) & (2624) & \\
+			
+			& & & & \\
+			
+			Paraboloid(10,21) & (2396) & (2505) & (2813) & \\
+			
+			& & & & \\
+			
+			Paraboloid(10,51) & (2419) & (2594) & (2917) & \\
+			
+			& [98\%] & & & \\
+			
+			Tablet(2,11) & (510) & (344) & (519) & \\
+			
+			& & [92\%] & & \\
+			
+			Tablet(2,21) & (412) & (355) & (472) & \\
+			
+			& & [94\%] & & \\
+			
+			Tablet(2,51) & (535) & (3093) & (543) & \\
+			
+			Tablet(5,11) & (3490) & (3327) & (1919) & \\
+			
+			& & [98\%] & & \\
+			
+			Tablet(5,21) & (1883) & (1659) & (1977) & \\
+			
+			& & & & \\
+			
+			Tablet(5,51) & (1925) & (1726) & (2006) & \\
+			
+			& & [94\%] & & \\
+			
+			Tablet(10,11) & (3649) & (4928) & (4441) & \\
+			
+			& & [98\%] & &\\
+			
+			Tablet(10,21) & (3861) & (3975) & (3928) & \\
+			
+			Tablet(10,51) & (5692) & (5711) & (4247) & \\
+			
+			& & [98\%] & & \\
+			
+			\bottomrule
+			
+		\end{tabularx}
+		
+		\smallskip
+		
+		Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Bei Ergebnissen, wo die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht wurde, ist der Anteil der erfolgreichen Durchläufe in Prozent in eckigen Klammern angegeben, wo \(\infty\) steht, wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht. Bei den Algorithmen, welche \glqq adaptive\grqq{} als Neustartstrategie anwendetet, steht die durchschnittliche Anzahl an Neustarts in geschweiften Klammern.
+		
+		%TODO kann auch ein längerer Absatzt beibehalten werden
+		
+	\end{table}
+	
+	\begin{table}[H]
+		
+		%\fontsize{6pt}{6pt}
+		
+		%\caption{Vergleich der Ergebnisse zwischen Algorithmen, die probabilistisches Lernen einsetzten auf Testfunktionen, die zum Vergleich zwischen Algorithmen, die probabilistisches Lernen einsetzten, benutzt werden, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning} Teil 1}
+		
+		\caption{fixed und adaptiv, äquidistant und clusered Vergleich der Ergebnisse zwischen \acl{acorvsmv} und Iterationen, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}, Teil 2}
+		
+		%TODO wie viele zitieren?
+		
+		%TODO mehr als mean(restatrs) (min, max) angeben?
+		
+		\label{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Funktionen_Mit_Gemischten_Variablen_Teil_2}
+		
+		\scriptsize
+		
+		\begin{tabularx}{\linewidth}{l l l l l}
+			
+			%TODO muss die Tabelle einheitlich sein?
+			
+			%\rule{1.6cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{1.3cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.4cm}{0.4pt}\\
+			
+			\toprule
+			
+			%\Tstrut
+			
+			%TODO erklären was (1 + 1)ES, CSA-ES und sind?
+			
+			Testfunktion & Hom-HPB- & Het-HPB- & Het-HSPPB- & Bestwert\\
+			
+			& ACO\(_\mathbb{R}\)-VS & ACO\(_\mathbb{R}\)-VS & ACO\(_\mathbb{R}\)-VS & \\
+			
+			%\rule{1.6cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{1.3cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.4cm}{0.4pt}\\
+			
+			\midrule
+			
+			Cigar(2,11) & & & & \\
+			
+			Cigar(2,21) & & & & \\
+			
+			Cigar(2,51) & & & & \\
+			
+			Cigar(5,11) & & & & \\
+			
+			 & & & & \\
+			
+			Cigar(5,21) & & & & \\
+			
+			 & & & & \\
+			
+			Cigar(5,51) & & & & \\
+			
+			 & & & & \\
+			
+			Cigar(10,11) & & & & \\
+			
+			Cigar(10,21) & & & & \\
+			
+			Cigar(10,51) & & & & \\
+			
+			Ellipsoid(2,11) & & & & \\
+			
+			Ellipsoid(2,21) & & & & \\
+			
+			Ellipsoid(2,51) & & & & \\
+			
+			Ellipsoid(5,11) & & & & \\
+			
+			Ellipsoid(5,21) & & & & \\
+			
+			Ellipsoid(5,51) & & & & \\
+			
+			Ellipsoid(10,11) & & & & \\
+			
+			 & & & & \\
+			
+			Ellipsoid(10,21) & & & & \\
+			
+			 & & & & \\
+			
+			Ellipsoid(10,51) & & & & \\
+			
+			Paraboloid(2,11) & & & & \\
+			
+			Paraboloid(2,21) & & & & \\
+			
+			Paraboloid(2,51) & & & & \\
+			
+			Paraboloid(5,11) & & & & \\
+			
+			 & & & & \\
+			
+			Paraboloid(5,21) & & & & \\
+			
+			Paraboloid(5,51) & & & & \\
+			
+			 & & & & \\
+			
+			Paraboloid(10,11) & & & & \\
+			
+			 & & & & \\
+			
+			Paraboloid(10,21 & & & & \\
+			
+			 & & & & \\
+			
+			Paraboloid(10,51) & & & & \\
+			
+			 & & & & \\
+			
+			Tablet(2,11) & & & & \\
+			
+			 & & & & \\
+			
+			Tablet(2,21) & & & & \\
+			
+			 & & & & \\
+			
+			Tablet(2,51) & & & & \\
+			
+			Tablet(5,11) & & & & \\
+			
+			 & & & & \\
+			
+			Tablet(5,21) & & & & \\
+			
+			 & & & & \\
+			
+			Tablet(5,51) & & & & \\
+			
+			 & & & & \\
+			
+			Tablet(10,11) & & & & \\
+			
+			 & & & & \\
+			
+			Tablet(10,21) & & & & \\
+			
+			Tablet(10,51) & & & & \\
+			
+			 & & & & \\
+			
+			\bottomrule
+			
+		\end{tabularx}
+		
+		\smallskip
+		
+		Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Bei Ergebnissen, wo die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht wurde, ist der Anteil der erfolgreichen Durchläufe in Prozent in eckigen Klammern angegeben, wo \(\infty\) steht, wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht. Bei den Algorithmen, welche \glqq adaptive\grqq{} als Neustartstrategie anwendetet, steht die durchschnittliche Anzahl an Neustarts in geschweiften Klammern.
+		
+		%TODO kann auch ein längerer Absatzt beibehalten werden
+		
+	\end{table}
+	
 	\subsection{Vergleich bzgl. Testfunktionen mit gemischten Variablen} \label{subsec:Vergleich_Testfunktionen_Gemischte_Variablen}
 	
 	\subsubsection{Vergleich bzgl. konstruierter Testfunktionen mit gemischten Variablen} \label{subsubsec:Vergleich_Algorithmen:Vergleich_Auf_Konstruierten_Testfunktionen_Mit_Gemischten_Variablen}
@@ -2663,6 +3031,8 @@ within=section,
 		%TODO kann auch ein längerer Absatzt beibehalten werden
 		
 	\end{table}
+	
+	\subsubsection{Vergleich bzgl. dem Coil Spring Design Problem (CSD)} \label{subsubsec:Vergleich_Algorithmen:Vergleich_Auf_Dem_Coil_Spring_Design_Problem}
 	
 	\section{Konvergenzbetrachtung} \label{Konvergenzbetrachtung}
 	
