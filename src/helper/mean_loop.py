@@ -3,7 +3,7 @@ from math import ceil
 
 from src.helper.mean import save_data_path
 
-directory = "/home/user/Schreibtisch/Masterarbeit_Code/src/performance_data/H_Het_P_ACO_R_Very_Simple/artificial_mixed_variable_performance_data"
+directory = "/home/user/Schreibtisch/Masterarbeit_Code/src/performance_data/H_Hom_ACO_R_Very_Simple/continuous_performance_data/10_4_10_4"
 
 # print(directory)
 
@@ -11,7 +11,8 @@ for file in os.listdir(directory):
 
     file_path = directory + "/" + str(file)
 
-    if "_mean" not in file_path and "adaptive" in file_path:
+    # if "_mean" not in file_path and "adaptive" in file_path:
+    if "_mean" not in file_path:
 
         file_path_without_txt = os.path.splitext(file_path)[0]
 

@@ -2316,11 +2316,13 @@ within=section,
 		
 		%\caption{Vergleich der Ergebnisse zwischen Algorithmen, die probabilistisches Lernen einsetzten auf Testfunktionen, die zum Vergleich zwischen Algorithmen, die probabilistisches Lernen einsetzten, benutzt werden, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning} Teil 1}
 		
-		\caption{Vergleich der Ergebnisse zwischen Algorithmen, die verwandt zu Ameisenalgorithmen sind, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}}
+		\caption{Vergleich der Ergebnisse zwischen Algorithmen, die verwandt zu Ameisenalgorithmen sind, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}, Teil 1}
 		
 		%TODO Besserer Titel
 		
 		%TODO wie viele zitieren?
+		
+		%TODO (Iterationen)[Erfolgsrate] oder andersrum?
 		
 		\label{sec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Zu_Ameisen_Verwandte_Algorithmen_Teil_1}
 		
@@ -2342,21 +2344,156 @@ within=section,
 			
 			\midrule
 			
-			\(B_2\) & (544) & & & \textbf{1.0} (2037)\\
+			\(B_2\) & - & - & 30.8 (11968) & \textbf{1.0} (389)\\
 			
-			Goldstein and Price & (384) & & & \textbf{1.0} (644)\\
+			Goldstein and Price & 15.6 (5376) & - & 68.1 (23424) [56\%] & \textbf{1.0} (344)\\
 			
-			Griewangk & \textbf{1.0} [61\%] (1390) & & & \textbf{1.0} (1390)\\
+			Griewangk & 36 (50040) & - & 36 (50040) [52\%]  & \textbf{1.0} (1390)\\
 			
-			Martin and Gaddy & & & & \textbf{1.0} (7190)\\
+			Martin and Gaddy & 5.5 (1725) & - & 37.7 (11730) [20\%] & \textbf{1.0} (311)\\
 			
-			Praboloid(6) & & & & \\
+			Praboloid(6) & 44.6 (21868) & 20.7 (10153) & 102.0 (49984) & \textbf{1.0} (490)\\
 			
-			Rosenbrock(2) & & & & \textbf{1.0} (1751)\\
+			Rosenbrock(2) & 8.3 (6806) & 12.0 (9840) & 14.0 (11480) & \textbf{1.0} (820)\\
 			
-			Rosenbrock(5) & & & & \\
+			Rosenbrock(5) & - & - & 16.0 (39792) [90\%] & \textbf{1.0} (2487)\\
 			
-			Shekel(4,5) & & & & \\
+			Shekel(4,5) & - & - & 88.4 (39350) & \textbf{1.0} (445)\\
+			
+			\bottomrule
+			
+		\end{tabularx}
+		
+		\smallskip
+		
+		Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Bei Ergebnissen, wo ein * steht, wurde die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht und dort wo \(\infty\) steht wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht.\hfill\newline
+		
+		%TODO kann auch ein längerer Absatzt beibehalten werden
+		
+	\end{table}
+	
+	\begin{table}[H]
+		
+		%\fontsize{6pt}{6pt}
+		
+		%\caption{Vergleich der Ergebnisse zwischen Algorithmen, die probabilistisches Lernen einsetzten auf Testfunktionen, die zum Vergleich zwischen Algorithmen, die probabilistisches Lernen einsetzten, benutzt werden, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning} Teil 1}
+		
+		\caption{Vergleich der Ergebnisse zwischen Algorithmen, die verwandt zu Ameisenalgorithmen sind, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}, Teil 2, fixed}
+		
+		%TODO fixed 0
+		
+		%TODO so formatierung ok?
+		
+		%TODO Besserer Titel, z.B. wie Vergleich zwischen ACO_R, ..., auf Testfunktionen, die zum Vergleich zwischen ALgorithmen, ..., Ameisenverwanten
+		
+		%TODO wie viele zitieren?
+		
+		\label{sec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Zu_Ameisen_Verwandte_Algorithmen_Teil_2}
+		
+		\scriptsize
+		
+		\begin{tabularx}{\linewidth}{l X X X X X X}
+			
+			%\rule{1.6cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{1.3cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.4cm}{0.4pt}\\
+			
+			\toprule
+			
+			%\Tstrut
+			
+			%TODO erklären was (1 + 1)ES, CSA-ES und sind?
+			
+			Testfunktion & ACO\(_{\mathbb{R}}\) & ACO\(_{\mathbb{R}}\)-VS & Hom-HPB- & Het-HPB- & Het-HSPPB- & Bestwert\\
+			&						&						  & ACO\(_\mathbb{R}\)-VS & ACO\(_\mathbb{R}\)-VS & ACO\(_\mathbb{R}\)-VS & \\
+			
+			%\rule{1.6cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{1.3cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.4cm}{0.4pt}\\
+			
+			\midrule
+			
+			\(B_2\) & 1.4 (544) & 1.9 (747) & \textbf{1.0} (389) [98\%] & 1.2 (471) [98\%] & 1.3 (499) & \textbf{1.0} (389)\\
+			
+			Goldstein & 1.1 (384) & \textbf{1.0} (344) & 1.0 (354) [94\%] & 1.3 (443) [96\%] & (390) & \textbf{1.0} (344)\\
+			and Price & & & & & & \\
+			
+			Griewangk & \textbf{1.0} (1390) [61\%] & 12.3 (17062) [44\%] & - & - & - & \textbf{1.0} (1390)\\
+			
+			Martin & 1.1 (345) & 1.1 (356) & \textbf{1.0} (311) & 1.1 (328) & 1.2 (364) & \textbf{1.0} (311)\\
+			and Gaddy & & & & & & \\
+			
+			Praboloid(6) & 1.6 (781) & \textbf{1.0} (490) & 3.2 (1544) & 3.3 (1622) & 3.9 (1918) & \text{1.0} (490)\\
+			
+			Rosenbrock(2) & \textbf{1.0} (820) & 1.5 (1195) & 1.5 (1237) & 1.9 (1522) & 1.6 (1351) & \textbf{1.0} (820)\\
+			
+			Rosenbrock(5) & \textbf{1.0} (2487) [97\%] & 15.8 (39345) [54\%] & - & 27.1 (67340) [2\%] & - & \textbf{1.0} (2487)\\
+			
+			Shekel(4,5) & 1.8 (787) [57\%] & \textbf{1.0} (445) & 1.2 (517) [34\%] & 1.3 (593) [42\%] & 58.1 (25860) [48\%] & \textbf{1.0} (445)\\
+			
+			\bottomrule
+			
+		\end{tabularx}
+		
+		\smallskip
+		
+		Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Bei Ergebnissen, wo ein * steht, wurde die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht und dort wo \(\infty\) steht wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht.\hfill\newline
+		
+		%TODO kann auch ein längerer Absatzt beibehalten werden
+		
+	\end{table}
+	
+	\begin{table}[H]
+		
+		%\fontsize{6pt}{6pt}
+		
+		%\caption{Vergleich der Ergebnisse zwischen Algorithmen, die probabilistisches Lernen einsetzten auf Testfunktionen, die zum Vergleich zwischen Algorithmen, die probabilistisches Lernen einsetzten, benutzt werden, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning} Teil 1}
+		
+		\caption{Vergleich der Ergebnisse zwischen Algorithmen, die verwandt zu Ameisenalgorithmen sind, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}, Teil 3, adaptive}
+		
+		%TODO adaptive
+		
+		%TODO Formatierung do ok?
+		
+		%TODO Besserer Titel, z.B. wie Vergleich zwischen ACO_R, ..., auf Testfunktionen, die zum Vergleich zwischen ALgorithmen, ..., Ameisenverwanten
+		
+		%TODO wie viele zitieren?
+		
+		
+		\label{sec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Zu_Ameisen_Verwandte_Algorithmen_Teil_3}
+		
+		\scriptsize
+		
+		\begin{tabularx}{\linewidth}{l X X X X X X}
+			
+			%\rule{1.6cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{1.3cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.4cm}{0.4pt}\\
+			
+			\toprule
+			
+			%\Tstrut
+			
+			%TODO erklären was (1 + 1)ES, CSA-ES und sind?
+			
+			Testfunktion & ACO\(_{\mathbb{R}}\) & ACO\(_{\mathbb{R}}\)-VS & Hom-HPB- & Het-HPB- & Het-HSPPB- & Bestwert\\
+			&						&						  & ACO\(_\mathbb{R}\)-VS & ACO\(_\mathbb{R}\)-VS & ACO\(_\mathbb{R}\)-VS & \\
+			
+			%\rule{1.6cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{1.3cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.4cm}{0.4pt}\\
+			
+			\midrule
+			
+			\(B_2\) & 1.4 (544) & 1.9 (747) & 1.6 (638) \(\{2\}\) & 1.8 (683) \(\{2\}\) & 3.7 (1458) \(\{6\}\) & \textbf{1.0} (389)\\
+			
+			Goldstein & 1.1 (384) & \textbf{1.0} (344) & 1.6 (563) \(\{2\}\) & 1.7 (595) \(\{3\}\) & 2.4 (827) \(\{4\}\) & \textbf{1.0} (344)\\
+			and Price & & & & & & \\
+			
+			Griewangk & \textbf{1.0} (1390) [61\%] & 12.3 (17062) [44\%] & - & - & - & \textbf{1.0} (1390)\\
+			
+			Martin & 1.1 (345) & 1.1 (356) & 1.3 (419) & 1.7 (522) \(\{2\}\) & 2.1 (665) \(\{3\}\) & \textbf{1.0} (311)\\
+			and Gaddy & & & & & & \\
+			
+			Praboloid(6) & 1.6 (781) & \textbf{1.0} (490) & 22.4 (10977) \(\{22\}\) & 44.0 (21546) \(\{55\}\) & 107.5 (52675) [52\%] \(\{164\}\) & \textbf{1.0} (490)\\
+			
+			Rosenbrock(2) & \textbf{1.0} (820) & 1.5 (1195) & 19.7 (16117) \(\{76\}\) & 28.8 (23618) \(\{129\}\) & 48.7 (39916) [94\%] \(\{243\}\) & \textbf{1.0} (820)\\
+			
+			Rosenbrock(5) & \textbf{1.0} (2487) [97\%] & 15.8 (39345) [54\%] & 30.2 (75218) [2\%] \(\{174\}\) & 15.0 (37414) [2\%] \(\{105\}\) & - & \textbf{1.0} (2487)\\
+			
+			Shekel(4,5) & 1.8 (787) [57\%] & \textbf{1.0} (445) & 8.0 (3566) \(\{9\}\) & 11.0 (4913) \(\{15\}\) & 18.8 (8348) \(\{30\}\) & \textbf{1.0} (445)\\
 			
 			\bottomrule
 			

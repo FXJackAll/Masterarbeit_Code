@@ -60,11 +60,11 @@ def user_input():
     # parser.add_argument('-p', '--problem', type=str, default='rat195',
     #                    help='Name of the problem instance, e.g. the TSPLIB names like "rat195"')
 
-    parser.add_argument('-p', '--problem', type=str, default='tablet_10_51_mv',
+    parser.add_argument('-p', '--problem', type=str, default='martin_and_gaddy_2',
                         help='Name of the problem instance, e.g. TISD names like "tisd10" or TSPLIB names like "rat195"')
     # parser.add_argument('-pt', '--problem-type', type=str, default='TSP',
     #                    help='Type of the problem, e.g. TSP (standard, symmetric TSP), ATSP (asymmetric TSP), QAP, TISD')
-    parser.add_argument('-pt', '--problem-type', type=str, default='Tablet_MV',
+    parser.add_argument('-pt', '--problem-type', type=str, default='Martin_and_Gaddy',
                         help='Type of the problem, e.g. TSP (standard, symmetric TSP), ATSP (asymmetric TSP), QAP, TISD')
 
 
@@ -83,7 +83,7 @@ def user_input():
 
 
     # TODO implement accuracy
-    parser.add_argument('-acc', '--accuracy', type=str, choices=['absolute', 'relative'], default='absolute',
+    parser.add_argument('-acc', '--accuracy', type=str, choices=['absolute', 'relative'], default='relative',
                         help='Accuracy at which the algorithm;'
                              'absolute: |f - f*| < Term, relative: |f - f*| < |Term * f| + Term')
     parser.add_argument('-abs', '--absolute_accuracy_term', type=float, default=10**(-10),
@@ -93,7 +93,7 @@ def user_input():
 
 
     parser.add_argument('-rsb', '--restart_behaviour', type=str, choices=['fixed', 'absolute', 'adaptive'],
-                        default='adaptive', help='Algorithm restarts a fixed amount of times,'
+                        default='fixed', help='Algorithm restarts a fixed amount of times,'
                                                  'after an absolut number of iterations'
                                                  'or when the difference between solutions is under a certain threshold')
     parser.add_argument('-per', '--period', type=int, default=7,
