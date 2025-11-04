@@ -180,8 +180,8 @@ within=section,
 	\tableofcontents
 	\newpage
 	
-	%TODO Inhaltverzeichnis im Inhaltsverzeichnis anzeigen?
-	%TODO römische Seitenzahlen für Inhaltsverzeichnis und Anlagen?
+	%TODO Inhaltverzeichnis im Inhaltsverzeichnis anzeigen? nein
+	%TODO römische Seitenzahlen für Inhaltsverzeichnis und Anlagen? ja
 	
 	\addcontentsline{toc}{section}{Abkürzungsverzeichnis}
 	
@@ -233,7 +233,7 @@ within=section,
 	
 	\subsubsection{Mathematische Beschreibung der Nahrungssuche von Ameisen} \label{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen}
 	
-	%TODO ist das schon die ACO-Metaheuristik?
+	%TODO ist das schon die ACO-Metaheuristik? Nein
 	
 	In diesem Abschnitt betrachten wir ein ideales Futter, also ein Futter, dass in Quantität und Qualität konstant bleibt, und  ideale Ameisen, also Ameisen, die mit konstanter Geschwindigkeit sich geradlinig bewegen. Wir müssen diese Annahmen treffen, da, wie im Abschnitt~\ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Biologische_Beschreibung_Der_Nahrungssuche_Von_Ameisen} beschrieben, die Menge des auf einem Weg hinterlassenen Pheromons von der Quantität und Qualität des Futters abhängt und wie in \textit{Camazine et al.}\cite{camazineself} beschrieben, reale Ameisen auf einem Weg umdrehen können und wieder zurücklaufen von woher sie kamen. Ferner, in Anlehnung an \textit{Dorigo und Stützle}~\cite{dorigo2018ant} und \textit{Engelbrecht}~\cite{brecht2005fundamentals}, betrachten wir eine ideale Experimentaufstellung in Form eines Tupels (\(\Sigma, \mathcal{E}, \Delta, \mathcal{M}, f, \mathcal{I}, \mathcal{S}\)).\hfill\newline
 	
@@ -265,7 +265,7 @@ within=section,
 	
 	Weiter, in Anlehnung an \textit{Dorigo und Stützle}~\cite{dorigo2018ant} und wie in meiner Bachelorarbeit~\cite{FCM_2019} beschrieben, ergibt sich die Wahrscheinlichkeit, dass sich eine Ameise für das Begehen der Weges zwischen N und F entscheidet, aus der Gleichung~\ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen:eq:Wahrscheinlichkeit_NF} und die Wahrscheinlichkeit, dass eine Ameise sich für das Begehen des Weges zwischen N und D entscheidet, aus Gleichung~\ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen:eq:Wahrscheinlichkeit_ND}. Gleichung~\ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen:eq:Verdunstung} beschreibt die Verdunstung des bereits vorhandenen Pheromons auf einem Weg nach dem eine Zeiteinheit verstrichen ist. Dabei ist \(\nu\) die Verdunstungskonstante, welche bestimmt, wie schnell Pheromon nach jedem Zeitschritt verdunstet, und \(\alpha\) ein Parameter, der bestimmt, wie viel Einfluss das auf einem Weg liegende Pheromon hat. Für Werte für \(\alpha\), nach \cite{dorigo2018ant}, gilt \(\alpha \in [0, 2]\). Wie viel Pheromon auf einem Weg liegt, also die Pheromoninformation, wird nach jedem Zeitschritt aktualisiert. Auf den Kanten, für die sich die Ameise entschieden hat, wir Pheromon abgelegt gemäß Gleichung~\ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen_eq:Pheromonablage}. 
 	
-	%TODO Werte für alpha rausfinden
+	%TODO Werte für alpha rausfinden nochmal nachschauen
 	
 	\begin{equation} \label{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen:eq:Wahrscheinlichkeit_NF}
 		prob_{NF} = \frac{\rho_{NF}^\alpha}{\rho_{NF}^\alpha+\rho_{ND}^\alpha}
@@ -478,7 +478,7 @@ within=section,
 	
 	%Diese Verbesserung ist auch ein wesentlicher Schritt in Richtung der Algorithmen, welche dieser Arbeit beiliegen und auch des Algorithmus mit dem der Vergleich in dieser Arbeit gezogen wird.\hfill\newline
 	
-	%TODO fragen, ob für PACO auch der Algorithmus angegeben werden soll, obwohl er identisch ist zu ACO
+	%TODO fragen, ob für PACO auch der Algorithmus angegeben werden soll, obwohl er identisch ist zu ACO? nur für ausgewählte
 	
 	\subsection{Alternative Verwaltung für ein Lösungsarchiv} \label{subsec:Alternative_Verwaltungen_Fuer_Ein_Loesunsarchiv}
 	
@@ -620,7 +620,7 @@ within=section,
 	
 	Der Parameter \(q\) steuert, wie stark bessere Lösungen im Archiv bei der Konstruktion einer neuen Lösung bevorzugt werden. Je kleiner \(q\), desto stärker werden bessere Lösungen bevorzugt. Der Parameter \(\xi\) steuer, wie schnell der Algorithmus konvergiert. Je größer \(\xi\), desto langsamer konvergiert der Algorithmus. In \cite{socha2008ant} gilt \(q = 10^{-4}\), \(\xi = 0.85\).\hfill\newline
 	
-	%TODO reicht die Angabe q = 10^-4 und xi = 0.85 oder kleine Tabelle?
+	%TODO reicht die Angabe q = 10^-4 und xi = 0.85 oder kleine Tabelle? Angabe im Text reicht
 	
 	%\noindent Abschließend wird in Schritt \textit{i} die Gaußfunktion \(g^i_l\) ausgewertet. Dies kann u.a. durch einen Zufallszahlengenerator geschehen, der Zufallszahlen gemäß einer parametrisierten Normalverteilung generieren kann. \hfill\newline
 	
@@ -795,7 +795,7 @@ within=section,
 	
 	%TODO hier oder früher?
 	
-	%TODO auch für kategorische Variablen oder reicht das?
+	%TODO auch für kategorische Variablen oder reicht das? reicht so
 	
 	\section{SPPBO-Schema} \label{sec:SPPBO_Schema}
 	
@@ -839,7 +839,7 @@ within=section,
 	%TODO fragen, ob erklärt werden muss, was a_i sind
 	%TODO zeigen, wo SELECT+COPY und RANDOM im ACO_R-VS benutzt werden
 	
-	%TODO fragen ob Pseudoceod in Deutsch oder Englisch geschrieben sein muss
+	%TODO fragen ob Pseudoceod in Deutsch oder Englisch geschrieben sein muss? mir überlassen
 	
 	%TODO While oder For; For so ok? ist ok.
 	
@@ -1519,7 +1519,7 @@ within=section,
 		Wie in Abschnitt~\ref{subsec:ACO_R} geschildert, hat das Initialisierungsintervall großen Einfluss auf das Verhalten des Algorithmus. Zusätzlich, wie in \textit{Merkle und Middendorf} \cite{ACO_2003_simiple_problems} beschrieben, kann das Betrachten von einfachen Testfunktionen zu unerwarteten Ergebnissen führen. Deswegen definieren wir in diesem Abschnitt explizit diskrete Funktionen, die einfach sind aber einen nicht-Standarddefinitionsbereich haben. Wir wählen, wie im Abschnitt~\ref{subsubsec:Ordinale_Testfunktionen_Mit_Gleichverteiltem_Definitionsbereich}, \(m \in \{11, 21, 51\}\) aber diesmal ist der Definitionsbereich asymmetrisch verteilt mit \(3\) Clustern. Zum Beispiel transformiert dies den stetigen Definitionsbereich der Testfunktion \glqq Paraboloid\grqq{} von \(D = [-3, 7]^{10}\) zu\\
 		\(D = [-3, -2.8, -2.6, -0.4, -0.2, 0.0, 0.2, 0.4, 6.6, 6.8, 7.0]^{10}\) für \(m = 11\). Im JSON-Format wird dies wie im Code-Snipped~\ref{subsubsec:Testfunktionen:Diskrete_Testfunktionen_mit_geclustertem_Definitionsbereich:JSON:Paraboloid2Dim11OrdAsymm} angezeigt.
 		
-		%TODO geclustert korrekt als Wort?
+		%TODO geclustert korrekt als Wort? ja
 		
 		\begin{lstlisting}[language=json, caption=Paraboloid 2 Dim discreter geclusteter Definitionsbereich, label=subsubsec:Testfunktionen:Diskrete_Testfunktionen_mit_geclustertem_Definitionsbereich:JSON:Paraboloid2Dim11OrdAsymm]
 {
@@ -1824,7 +1824,7 @@ within=section,
 			
 			\caption{Gewichte}
 			
-			\label{table:CSD_penalty_weights} %TODO fragen, ob diese Tabelle mit table:variable_restrict kombiniert werden soll
+			\label{table:CSD_penalty_weights} %TODO fragen, ob diese Tabelle mit table:variable_restrict kombiniert werden soll? Nein´
 			
 			\begin{center}
 				
@@ -2322,7 +2322,7 @@ within=section,
 		
 		%TODO wie viele zitieren?
 		
-		%TODO (Iterationen)[Erfolgsrate] oder andersrum?
+		%TODO (Iterationen)[Erfolgsrate] oder andersrum? (Iterationen)[Erfolgsrate]
 		
 		\label{sec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Zu_Ameisen_Verwandte_Algorithmen_Teil_1}
 		
@@ -2435,7 +2435,7 @@ within=section,
 		
 		Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Bei Ergebnissen, wo ein * steht, wurde die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht und dort wo \(\infty\) steht wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht.\hfill\newline
 		
-		%TODO kann auch ein längerer Absatzt beibehalten werden
+		%TODO kann auch ein längerer Absatzt beibehalten werden? Ja
 		
 	\end{table}
 	
@@ -2449,11 +2449,11 @@ within=section,
 		
 		%TODO adaptive
 		
-		%TODO Formatierung do ok?
+		%TODO Formatierung do ok? Ja
 		
 		%TODO Besserer Titel, z.B. wie Vergleich zwischen ACO_R, ..., auf Testfunktionen, die zum Vergleich zwischen ALgorithmen, ..., Ameisenverwanten
 		
-		%TODO wie viele zitieren?
+		%TODO wie viele zitieren? Socha und Dorigo und Kern et al reicht´
 		
 		
 		\label{sec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Zu_Ameisen_Verwandte_Algorithmen_Teil_3}
@@ -2468,7 +2468,7 @@ within=section,
 			
 			%\Tstrut
 			
-			%TODO erklären was (1 + 1)ES, CSA-ES und sind?
+			%TODO erklären was (1 + 1)ES, CSA-ES und sind? Kurz erklären, ja, in Grundlagen "Vergleichalgorithmen"
 			
 			Testfunktion & ACO\(_{\mathbb{R}}\) & ACO\(_{\mathbb{R}}\)-VS & Hom-HPB- & Het-HPB- & Het-HSPPB- & Bestwert\\
 			&						&						  & ACO\(_\mathbb{R}\)-VS & ACO\(_\mathbb{R}\)-VS & ACO\(_\mathbb{R}\)-VS & \\
@@ -2503,7 +2503,7 @@ within=section,
 		
 		Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Bei Ergebnissen, wo ein * steht, wurde die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht und dort wo \(\infty\) steht wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht.\hfill\newline
 		
-		%TODO kann auch ein längerer Absatzt beibehalten werden
+		%TODO kann auch ein längerer Absatzt beibehalten werden? Ja
 		
 	\end{table}
 	
@@ -2519,7 +2519,7 @@ within=section,
 		
 		\scriptsize
 		
-		%TODO explizit nochmal ACO_R-VS und Iteratioinen untereinander in separater Tabelle vergleichen?
+		%TODO explizit nochmal ACO_R-VS und Iteratioinen untereinander in separater Tabelle vergleichen? Ja
 		
 		%TODO hinschreiben, dass in dieser Tabelle restarts = 0 ist?
 		
@@ -2527,7 +2527,7 @@ within=section,
 			
 			%\rule{3,55cm}{0.4pt} & \rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt}\\
 			
-			%TODO überall zwei Zeilen Platz lassen oder nur dort, wo gebraucht
+			%TODO überall zwei Zeilen Platz lassen oder nur dort, wo gebraucht? Nur dort, wo ebraucht oder überall, wenn oft genug auch so gebraucht
 			
 			\toprule
 			
@@ -2711,7 +2711,7 @@ within=section,
 		
 		%TODO wie viele zitieren?
 		
-		%TODO mehr als mean(restatrs) (min, max) angeben?
+		%TODO mehr als mean(restatrs) (min, max) angeben? (min, max) höchstens im Text erwähnen, wenn signifikant
 		
 		\label{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Funktionen_Mit_Gemischten_Variablen_Teil_1}
 		
@@ -2719,7 +2719,7 @@ within=section,
 		
 		\begin{tabularx}{\linewidth}{X X X X X}
 			
-			%TODO muss die Tabelle einheitlich sein?
+			%TODO muss die Tabelle einheitlich sein? nein?
 			
 			%\rule{1.6cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{1.3cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.4cm}{0.4pt}\\
 			
@@ -3161,7 +3161,7 @@ within=section,
 	
 	\listoffigures
 	
-	%TODO List of Algorithms anhäften
+	%TODO List of Algorithms anhäften? nein
 	
 	%TODO Für weitere Quellen in der Masterarbeit nachschauen
 	
