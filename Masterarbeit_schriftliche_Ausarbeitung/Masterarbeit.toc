@@ -48,16 +48,16 @@
 \contentsline {section}{\numberline {8}Herausforderung}{38}{}%
 \contentsline {section}{\numberline {9}Vergleich von ACO\(_{\mathbb {R}}\), ACO\(_\text {MV}\), \acl {acorvs} und den Iteration von \acl {acorvs}}{38}{}%
 \contentsline {subsection}{\numberline {9.1}Vergleich bzgl. stetiger Testfunktionen}{38}{}%
-\contentsline {subsection}{\numberline {9.2}Vergleich bzgl. diskreter Testfunktionen}{46}{}%
-\contentsline {subsection}{\numberline {9.3}Vergleich bzgl. Testfunktionen mit gemischten Variablen}{47}{}%
-\contentsline {subsubsection}{\numberline {9.3.1}Vergleich bzgl. konstruierter Testfunktionen mit gemischten Variablen}{47}{}%
-\contentsline {subsubsection}{\numberline {9.3.2}Vergleich bzgl. dem Coil Spring Design Problem (CSD)}{49}{}%
-\contentsline {section}{\numberline {10}Konvergenzbetrachtung}{49}{}%
-\contentsline {subsection}{\numberline {10.1}Rosenbrock}{50}{}%
-\contentsline {section}{\numberline {11}Kurzzusammenfassung}{50}{}%
-\contentsline {section}{Literaturverzeichnis}{52}{}%
-\contentsline {section}{Tabellenverzeichnis}{54}{}%
-\contentsline {section}{Abbildungsverzeichnis}{54}{}%
+\contentsline {subsection}{\numberline {9.2}Vergleich bzgl. diskreter Testfunktionen}{47}{}%
+\contentsline {subsection}{\numberline {9.3}Vergleich bzgl. Testfunktionen mit gemischten Variablen}{48}{}%
+\contentsline {subsubsection}{\numberline {9.3.1}Vergleich bzgl. konstruierter Testfunktionen mit gemischten Variablen}{48}{}%
+\contentsline {subsubsection}{\numberline {9.3.2}Vergleich bzgl. dem Coil Spring Design Problem (CSD)}{50}{}%
+\contentsline {section}{\numberline {10}Konvergenzbetrachtung}{50}{}%
+\contentsline {subsection}{\numberline {10.1}Rosenbrock}{51}{}%
+\contentsline {section}{\numberline {11}Kurzzusammenfassung}{51}{}%
+\contentsline {section}{Literaturverzeichnis}{53}{}%
+\contentsline {section}{Tabellenverzeichnis}{55}{}%
+\contentsline {section}{Abbildungsverzeichnis}{55}{}%
 \contentsline {part}{\nonumberline Anlagen}{I}{}%
 \contentsline {section}{\numberline {A}Einfluss der Anzahl der Ameisen}{I}{}%
 \contentsline {section}{\numberline {B}Einfluss des Parameters \textit {q}}{II}{}%
