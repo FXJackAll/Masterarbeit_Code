@@ -3,7 +3,7 @@ from math import ceil
 
 from src.helper.mean import save_data_path
 
-directory = "/home/user/Schreibtisch/Masterarbeit_Code/src/performance_data/H_Hom_ACO_R_Very_Simple/continuous_performance_data/10_4_10_4"
+directory = "/home/user/Schreibtisch/Masterarbeit_Code/src/performance_data/H_Het_ACO_R_Very_Simple/continuous_performance_data/10_4_10_4"
 
 # print(directory)
 

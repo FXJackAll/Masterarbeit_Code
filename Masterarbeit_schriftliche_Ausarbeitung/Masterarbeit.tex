@@ -2507,8 +2507,6 @@ within=section,
 		
 	\end{table}
 	
-	\begin{landscape}
-	
 	\begin{table}[H]
 		
 		%\fontsize{10pt}{12pt}
@@ -2523,7 +2521,7 @@ within=section,
 		
 		%TODO hinschreiben, dass in dieser Tabelle restarts = 0 ist?
 		
-		\begin{tabularx}{\linewidth}{ l l l l l l l l l l l}
+		\begin{tabularx}{\linewidth}{ l X X X X X}
 			
 			%\rule{3,55cm}{0.4pt} & \rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt}\\
 			
@@ -2533,44 +2531,27 @@ within=section,
 			
 			%\Tstrut
 			
-			Testfunktion & CGA & ECTS & ESA & DE & ACO\(_{\mathbb{R}}\) & ACO\(_{\mathbb{R}}\)-VS & Hom-HPB- & Het-HPB- & Het-HSPPB- & Bestwert\\
-			 & & & & & & &  ACO\(_\mathbb{R}\)-VS-MV & ACO\(_\mathbb{R}\)-VS-MV & ACO\(_\mathbb{R}\)-VS-MV & \\
+			Testfunktion & CGA & ECTS & ESA & DE & Bestwert\\
 			
 			%\rule{3,55cm}{0.4pt} & \rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt}\\
 			
 			\midrule
 			
-			\(B_2\) & 1.1 (430) & - & - & - & 1.4 (544) & 1.9 (747) & \textbf{1.0} [98\%]  & 1.2 [98\%] & 1.3 (499) & \textbf{1.0} (389)\\
+			\(B_2\) & 1.1 (430) & - & - & - & \textbf{1.0} (389)\\
 			
-			 & & & & & & & (389) & (471) & & \\
-			
-			Branin RCOS & 2.5 (613) & \textbf{1.0} (245) & - & - & 3.5 (858) & 3.0 (747) & 1.1 (268) & 1.1 (277) & 1.6 (392) & \textbf{1.0} (245)\\
-			
-			 & & & & & & & & & & \\
+			Branin RCOS & 2.5 (613) & \textbf{1.0} (245) & - & - & \textbf{1.0} (245)\\
 			 
-			De Jong & 2.3 (745) & - & - & 1.2 (392) & 1.2 (\(\sim\)392) & \textbf{1.0} (319) & 1.1 (355) & 1.4 (457) & 1.1 (340) & \textbf{1.0} (319)\\
-			 
-			 & & & & & & & & & & \\
+			De Jong & 2.3 (745) & - & - & 1.2 (392) & \textbf{1.0} (319)\\
 			
-			Easom & 4.2 (1467) & - & - & - &  2.2 [98\%] & - & \textbf{1.0} (353) & 3.9 (1390) & 1.3 (460) & \textbf{1.0} (353)\\
+			Easom & 4.2 (1467) & - & - & - & \textbf{1.0} (353)\\
 			
-			 & & & & & & (772) & & & & \\
+			Goldstein & 1.8 (416) & \textbf{1.0} (231) & 3.4 (785) & - & \textbf{1.0} (231)\\
 			
-			Goldstein & 1.8 (416) & \textbf{1.0} (231) & 3.4 (785) & - & 1.7 (393) & 1.5 (344) & 1.5 [94\%] & 1.9 [96\%] & 1.7 (390) & \textbf{1.0} (231)\\
+			Griewangk & - & - & - & 9.2 (12788) & \textbf{1.0} (1390)\\
 			
-			and Price & & & & & & & (354) & (443) & & \\
+			Hartmann(3,4) & 2.5 (581) & 2.3 (547) & 2.9 (684) & - & \textbf{1.0} (234)\\
 			
-			Griewangk & - & - & - & 9.2 (12788) & \textbf{1.0} [61\%] & 12.3 [44\%] & \(\infty\) & \(\infty\) & \(\infty\) & \textbf{1.0} (1390)\\
-			
-			 & & & & & (1390) & (17062) & & & & \\
-			
-			Hartmann(3,4) & 2.5 (581) & 2.3 (547) & 2.9 (684) & - & 1.5 (342) & - & 1.1 (251) & \textbf{1.0} (234) & 1.4 (323) & \textbf{1.0} (234)\\
-			
-			 & & & & & & & & & & \\
-			
-			Hartmann(6,4) & 2.5 (939) & 4.0 (1516) & 7.1 (2671) & - & 1.9 (722) & \textbf{1.0} (377) & 1.5 [64\%] & 1.5 [52\%] & 1.9 [56\%] & \textbf{1.0} (377)\\
-			
-			 & & & & & & & (557) & (550) & (703) & \\
+			Hartmann(6,4) & 2.5 (939) & 4.0 (1516) & 7.1 (2671) & - & \textbf{1.0} (377)\\
 			
 			%Martin & & & & & \textbf{1.0} (345) & 1.0 (356) & & & & \textbf{1.0} (345)\\
 			
@@ -2582,31 +2563,25 @@ within=section,
 
 			 % & & & & & & & & & & \\
 			
-			Rosenbrock(2) & 2.0 (960) & \textbf{1.0} (480) & 1.7 (820) & 1.3 (624) & 1.7 (820) & 2.5 (1195) & 2.6 (1237) & 3.2 (1522) & 2.8 (1351) & \textbf{1.0} (480)\\
+			Rosenbrock(2) & 2.0 (960) & \textbf{1.0} (480) & 1.7 (820) & 1.3 (624) & \textbf{1.0} (480)\\
 			
-			 & & & & & & & & & & \\
+			Rosenbrock(5) & 1.9 (4070) & \textbf{1.0} (2142) & 2.5 (5355) & - & \textbf{1.0} (2142)\\
 			
-			Rosenbrock(5) & 1.9 (4070) & \textbf{1.0} (2142) & 2.5 (5355) & - & 1.2 [97\%] & 18.4 [54\%] & \(\infty\) & 31.4 [2\%] & \(\infty\) & \textbf{1.0} (2142)\\
+			Shekel(4,5) & 1.4 [76\%] & 1.9 [75\%] & 2.6 [54\%] & - & \textbf{1.0} (445) \\
 			
-			 & & & & & (2487) & (39345) & & (67340) & & \\
+			 & (610) & (854) & (1159) & & \\
 			
-			Shekel(4,5) & 1.4 [76\%] & 1.9 [75\%] & 2.6 [54\%] & - & 1.8 [57\%] & \textbf{1.0} (445) & 1.2 [34\%] & 1.3 [42\%] & 58.1 [48\%] & \textbf{1.0} (445) \\
+			Shekel(4,7) & 1.5 [83\%] & 2.0 [80\%]  & 2.8 [54\%] & - & \textbf{1.0} (444) \\
 			
-			 & (610) & (854) & (1159) & & (787) & & (517) & (593) & (25860) & \\
+			 & (680) & (884) & (1224) & & \\
 			
-			Shekel(4,7) & 1.5 [83\%] & 2.0 [80\%]  & 2.8 [54\%] & - & 1.8 [79\%] & \textbf{1.0} (444) & 1.2 [34\%] & 1.3 [28\%] & 82.4 [64\%] & \textbf{1.0} (444) \\
+			Shekel(4,10) & 1.5 [83\%] & 2.1 [80\%] & 2.6 [50\%] & - & \textbf{1.0} (443) \\
 			
-			 & (680) & (884) & (1224) & & (748) & & (545) & (583) & (36606) & \\
+			 & (650) & (910) & (1170) & & \\
 			
-			Shekel(4,10) & 1.5 [83\%] & 2.1 [80\%] & 2.6 [50\%] & - & 1.6 [81\%] & \textbf{1.0} (443) & 1.6 [28\%] & 3.4 [20\%] & 58.6 [72\%] & \textbf{1.0} (443) \\
+			Zakharov(2) & 3.2 (624) & \textbf{1.0} (195) & 81 (15795) & - & \textbf{1.0} (195) \\
 			
-			 & (650) & (910) & (1170) & & (715) & & (541) & (1512) & (25942) & \\
-			
-			Zakharov(2) & 3.2 (624) & \textbf{1.0} (195) & 81 (15795) & - & 1.5 (293) & 1.7 (332) & 1.2 (238) & 1.0 (201) & 1.3 (252) & \textbf{1.0} (195) \\
-			
-			 & & & & & & & & & & \\
-			
-			Zakharov(5) & 2.0 (1381) & 3.2 (2254) & 100.6 (69792) & - & 1.7 (727) & \textbf{1.0} (694) & 2.0 (1402) & 1.9 (1352) & 2.5 (1760) & \textbf{1.0} (694)\\
+			Zakharov(5) & 2.0 (1381) & 3.2 (2254) & 100.6 (69792) & - & \textbf{1.0} (694)\\
 			
 			\bottomrule
 			
@@ -2618,8 +2593,6 @@ within=section,
 		Bei der Funktion \glqq De Jong\grqq{} konnte für ACO\(_{\mathbb{R}}\) die genaue Anzahl an Funktionsauswertungen nicht ermittelt werden.\hfill\newline
 		
 	\end{table}
-	
-	\end{landscape}
 	
 	\begin{table}[H]
 		
@@ -2722,6 +2695,91 @@ within=section,
 		
 	\end{table}
 	
+	\begin{table}[H]
+		
+		%\fontsize{10pt}{12pt}
+		
+		\caption{Vergleich zwischen ACO\(_{\mathbb{R}}\), ACO\(_\mathbb{R}\)-VS, Iterationen von \ac{acorvsmv} und anderen Meta-Heuristiken, die für stetige Probleme adaptiert wurden. adaptive Zweiter Teil, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant} und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}, Teil 3}
+		
+		\label{sec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Mit_Meta_-_Heuristiken_Adaptiert_Fuer_Stetige_Probleme_Teil_3}
+		
+		\scriptsize
+		
+		%TODO explizit nochmal ACO_R-VS und Iteratioinen untereinander in separater Tabelle vergleichen? Ja
+		
+		%TODO hinschreiben, dass in dieser Tabelle restarts = 0 ist?
+		
+		\begin{tabularx}{\linewidth}{ l X X X X X X}
+			
+			%\rule{3,55cm}{0.4pt} & \rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt}\\
+			
+			%TODO überall zwei Zeilen Platz lassen oder nur dort, wo gebraucht? Nur dort, wo ebraucht oder überall, wenn oft genug auch so gebraucht
+			
+			\toprule
+			
+			%\Tstrut
+			
+			Testfunktion & ACO\(_{\mathbb{R}}\) & ACO\(_{\mathbb{R}}\)-VS & Hom-HPB- & Het-HPB- & Het-HSPPB- & Bestwert\\
+			& & & ACO\(_\mathbb{R}\)-VS-MV & ACO\(_\mathbb{R}\)-VS-MV & ACO\(_\mathbb{R}\)-VS-MV & \\
+			
+			%\rule{3,55cm}{0.4pt} & \rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt}\\
+			
+			\midrule
+			
+			\(B_2\) &  1.4 (544) & 1.9 (747) & 1.6 (638) \(\{2\}\) & 1.8 (683) \(\{2\}\) & 3.7 (1458) \(\{6\}\) & \textbf{1.0} (389)\\
+			
+			Branin RCOS & 3.5 (858) & 3.0 (747) & 1.3 (308) \(\{1\}\) & 1.5 (373) \(\{2\}\) & 2.1 (509) \(\{2\}\) & \textbf{1.0} (245)\\
+			
+			De Jong & 1.2 (\(\sim\)392) & \textbf{1.0} (319) & 1.3 (401) \(\{1\}\) & 1.4 (457) \(\{2\}\) & 2.0 (625) \(\{2\}\) & \textbf{1.0} (319)\\
+			
+			
+			Easom & 2.2 (777) [98\%] & - & 3.3 (1173) \(\{10\}\) & 3.9 (1390) \(\{12\}\) & 6.3 (2207) \(\{19\}\) & \textbf{1.0} (353)\\
+			
+			Goldstein & 1.7 (393) & 1.5 (344) & 2.4 (563) \(\{2\}\) & 2.6 (595) \(\{3\}\) & 3.6 (827) \(\{4\}\) & \textbf{1.0} (231)\\
+			
+			and Price & & & & & & \\
+			
+			Griewangk & \textbf{1.0} (1390) [61\%] & 12.3 (17062) [44\%] & \(\infty\) & \(\infty\) & \(\infty\) & \textbf{1.0} (1390)\\
+			
+			Hartmann(3,4) & 1.5 (342) & - & 1.2 (277) \(\{1\}\) & 1.2 (290) \(\{1\}\) & 1.5 (340) \(\{1\}\) & \textbf{1.0} (234)\\
+			
+			Hartmann(6,4) & 1.9 (722) & \textbf{1.0} (377) & 5.0 (1880) \(\{4\}\) & 7.4 (2808) \(\{7\}\) & 8.7 (3280) \(\{10\}\) & \textbf{1.0} (377)\\
+			
+			%Martin & & & & & \textbf{1.0} (345) & 1.0 (356) & & & & \textbf{1.0} (345)\\
+			
+			%and Gaddy & & & & & & & & & & \\
+			
+			%& & & & & & & & & & \\
+			
+			% Paraboloid(6) & & & & & 1.6 (781) & \textbf{1.0} (490) & & & & \textbf{1.0} (490)\\
+			
+			% & & & & & & & & & & \\
+			
+			Rosenbrock(2) & 1.7 (820) & 2.5 (1195) & 19.2 (16117) \(\{76\}\) & 28.1 (23618) \(\{129\}\) & 47.5 (39916) [94\%] \(\{243\}\) & \textbf{1.0} (480)\\
+			
+			Rosenbrock(5) & 1.2 (2487) [97\%] & 18.4 (39345) [54\%] & 35.1 (75218) \(\{174\}\) & (37414) [2\%] \(\{105\}\) & \(\infty\) & \textbf{1.0} (2142)\\
+			
+			Shekel(4,5) & 1.8 (787) [57\%] & \textbf{1.0} (445) & 8.0 (3566) \(\{9\}\) & 11.0 (4913) \(\{15\}\) & 18.8 (8348) \(\{30\}\) & \textbf{1.0} (445) \\
+	
+			Shekel(4,7) & 1.8 (748) [79\%] & \textbf{1.0} (444) & 6.7 (2993) \(\{8\}\) & 9.5 (4237) \(\{12\}\) & 14.7 (6523) \(\{25\}\) & \textbf{1.0} (444) \\
+			
+			Shekel(4,10) & 1.6 (715) [81\%] & \textbf{1.0} (443) & 9.0 (3976) \(\{10\}\) & 15.6 (6913) \(\{21\}\) & 24.5 (10869) \(\{40\}\) & \textbf{1.0} (443) \\
+			
+			Zakharov(2) & 1.5 (293) & 1.7 (332) & 1.2 (233) \(\{1\}\) & 1.4 (270) \(\{1\}\) & 2.0 (387) \(\{2\}\) & \textbf{1.0} (195) \\
+			
+			Zakharov(5) & 1.7 (727) & \textbf{1.0} (694) & 11.3 (7853) \(\{21\}\) & 22.0 (15273) \(\{53\}\) & 60.0 (41606) [96\%] \(\{178\}\) & \textbf{1.0} (694)\\
+			
+			\bottomrule
+			
+		\end{tabularx}
+		
+		\smallskip
+		
+		Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Bei Ergebnissen, wo die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht wurde, ist der Anteil der erfolgreichen Durchläufe in Prozent in eckigen Klammern angegeben, wo \(\infty\) steht, wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht.\\
+		Bei der Funktion \glqq De Jong\grqq{} konnte für ACO\(_{\mathbb{R}}\) die genaue Anzahl an Funktionsauswertungen nicht ermittelt werden.\hfill\newline
+		
+	\end{table}
+	
 	Wie in Tabelle~\ref{VerglelichACORundACORVerySimpleTeil2} zu sehen, ist es nicht mehr klar, welcher der Algorithmen vorzuziehen ist. ACO\(_{\mathbb{R}}\) ist bei vier Testfunktionen der beste Algorithmus, während ACO\(_{\mathbb{R}}\)-very-simple bei Sieben. Beide Algorithmen sind jedoch bei einem Teil der Testfunktionen schlechter als das Optimum.\hfill\newline
 	
 	Die Easom-Testfunktion konnte leider nicht angegeben werden, da bei den Initialisierungsintervall zu große Werte für den Algorithmus auftreten und es zu einem Überlauf kommt. Bei kleineren Initialisierungsintervallen konvergiert der Algorithmus jedoch sehr schnell.\hfill\newline
@@ -2802,13 +2860,20 @@ within=section,
 	
 	\subsection{Vergleich bzgl. diskreter Testfunktionen} \label{subsec:Vergleich_Algorithmen:Vergleich_Auf_Diskreten_Testfunktionen}
 	
+	
+	
+	\subsection{Vergleich bzgl. Testfunktionen mit gemischten Variablen} \label{subsec:Vergleich_Testfunktionen_Gemischte_Variablen}
+	
+	\subsubsection{Vergleich bzgl. konstruierter Testfunktionen mit gemischten Variablen} \label{subsubsec:Vergleich_Algorithmen:Vergleich_Auf_Konstruierten_Testfunktionen_Mit_Gemischten_Variablen}
+	
+	Für den Vergleich wurden die Funktionen \glqq Cigar\grqq, \glqq Ellipsoid\grqq, \glqq Paraboloid\grqq{} und \glqq Tablet\grqq{} gewählt, da sie sowohl für verschiedene Dimensionen definiert werden konnten, als auch wo die Algorithmen, bis auf wenige Ausnahmen, konvergierten. Im Vergleich
 	\begin{table}[H]
 		
 		%\fontsize{6pt}{6pt}
 		
 		%\caption{Vergleich der Ergebnisse zwischen Algorithmen, die probabilistisches Lernen einsetzten auf Testfunktionen, die zum Vergleich zwischen Algorithmen, die probabilistisches Lernen einsetzten, benutzt werden, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning} Teil 1}
 		
-		\caption{fixed und adaptiv, äquidistant und clusered Vergleich der Ergebnisse zwischen \acl{acorvsmv} und Iterationen, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}, Teil 1}
+		\caption{fixed, äquidistant, Testfunktionen mit gemischten Variablen Vergleich der Ergebnisse zwischen \acl{acorvsmv} und Iterationen, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}, Teil 1}
 		
 		%TODO wie viele zitieren?
 		
@@ -2926,7 +2991,7 @@ within=section,
 		
 		%\caption{Vergleich der Ergebnisse zwischen Algorithmen, die probabilistisches Lernen einsetzten auf Testfunktionen, die zum Vergleich zwischen Algorithmen, die probabilistisches Lernen einsetzten, benutzt werden, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning} Teil 1}
 		
-		\caption{fixed und adaptiv, äquidistant und clusered Vergleich der Ergebnisse zwischen \acl{acorvsmv} und Iterationen, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}, Teil 2}
+		\caption{adaptiv, äquidistant, Testfunktionen mit gemischten Variablen Vergleich der Ergebnisse zwischen \acl{acorvsmv} und Iterationen, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}, Teil 2}
 		
 		%TODO wie viele zitieren?
 		
@@ -3039,12 +3104,6 @@ within=section,
 		%TODO kann auch ein längerer Absatzt beibehalten werden
 		
 	\end{table}
-	
-	\subsection{Vergleich bzgl. Testfunktionen mit gemischten Variablen} \label{subsec:Vergleich_Testfunktionen_Gemischte_Variablen}
-	
-	\subsubsection{Vergleich bzgl. konstruierter Testfunktionen mit gemischten Variablen} \label{subsubsec:Vergleich_Algorithmen:Vergleich_Auf_Konstruierten_Testfunktionen_Mit_Gemischten_Variablen}
-	
-	Für den Vergleich wurden die Funktionen \glqq Cigar\grqq, \glqq Ellipsoid\grqq, \glqq Paraboloid\grqq{} und \glqq Tablet\grqq{} gewählt, da sie sowohl für verschiedene Dimensionen definiert werden konnten, als auch wo die Algorithmen, bis auf wenige Ausnahmen, konvergierten. Im Vergleich
 	
 	\begin{table}[H]
 		
