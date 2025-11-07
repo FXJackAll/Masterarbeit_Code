@@ -19,45 +19,61 @@
 \contentsline {subsection}{\numberline {2.11}\acl {acorvs}}{13}{}%
 \contentsline {subsection}{\numberline {2.12}Erweiterung von \acl {acorvs} zu \acl {acorvsmv} für Probleme mit diskreten Variablen}{14}{}%
 \contentsline {subsection}{\numberline {2.13}Erweiterung von ACO\(_\mathbb {R}\) zu ACO\(_\text {MV}\) für Probleme mit diskreten Variablen}{14}{}%
-\contentsline {section}{\numberline {3}SPPBO-Schema}{14}{}%
-\contentsline {section}{\numberline {4}HSPPBO-Schema}{15}{}%
-\contentsline {section}{\numberline {5}Formulierung von \acl {acorvsmv} im HSPPBO-Schema}{17}{}%
-\contentsline {section}{\numberline {6}Kombinieren des HSPPBO-Schemas mit \acl {acorvsmv}}{17}{}%
-\contentsline {subsection}{\numberline {6.1}Hom-HPB-\ac {acorvsmv}}{17}{}%
-\contentsline {subsection}{\numberline {6.2}Het-HPB-\ac {acorvsmv}}{18}{}%
-\contentsline {subsection}{\numberline {6.3}Het-HSPPB-\ac {acorvsmv}}{19}{}%
-\contentsline {section}{\numberline {7}Testfunktionen}{19}{}%
-\contentsline {subsection}{\numberline {7.1}Permutationsprobleme Testfunktionen}{21}{}%
-\contentsline {subsubsection}{\numberline {7.1.1}Traveling Salesperson Problem (TSP)}{21}{}%
-\contentsline {subsubsection}{\numberline {7.1.2}Quadratic Assigment Problem (QAP)}{21}{}%
-\contentsline {subsection}{\numberline {7.2}Stetige Testfunktionen}{21}{}%
-\contentsline {subsubsection}{\numberline {7.2.1}Testfunktion - Paraboloid}{27}{}%
-\contentsline {subsubsection}{\numberline {7.2.2}Testfunktion - Easom}{28}{}%
-\contentsline {subsubsection}{\numberline {7.2.3}Testfunktion - Griewangk}{29}{}%
-\contentsline {subsubsection}{\numberline {7.2.4}Testfunktion - Rosenbrock}{29}{}%
-\contentsline {subsubsection}{\numberline {7.2.5}Testfunktion - Hartmann}{30}{}%
-\contentsline {subsubsection}{\numberline {7.2.6}Testfunktion - Shekel}{31}{}%
-\contentsline {subsection}{\numberline {7.3}Diskrete Testfunktionen}{31}{}%
-\contentsline {subsubsection}{\numberline {7.3.1}Diskrete Testfunktionen mit gleichverteiltem Definitionsbereich}{31}{}%
-\contentsline {subsubsection}{\numberline {7.3.2}Diskrete Testfunktionen mit asymmetrischem Definitionsbereich}{31}{}%
-\contentsline {subsection}{\numberline {7.4}Testfunktionen mit gemischten Variablem}{32}{}%
-\contentsline {subsubsection}{\numberline {7.4.1}Konstruierte Testfunktionen}{32}{}%
-\contentsline {subsubsection}{\numberline {7.4.2}Coil Spring Design Problem (CSD)}{33}{}%
-\contentsline {paragraph}{\numberline {7.4.2.1}Vollständiger Raum als Initialisierungsintervall}{36}{}%
-\contentsline {paragraph}{\numberline {7.4.2.2}Gefilterter Raum als Initialisierungsintervall}{37}{}%
-\contentsline {section}{\numberline {8}Herausforderung}{38}{}%
-\contentsline {section}{\numberline {9}Vergleich von ACO\(_{\mathbb {R}}\), ACO\(_\text {MV}\), \acl {acorvs} und den Iteration von \acl {acorvs}}{38}{}%
-\contentsline {subsection}{\numberline {9.1}Vergleich bzgl. stetiger Testfunktionen}{38}{}%
-\contentsline {subsection}{\numberline {9.2}Vergleich bzgl. diskreter Testfunktionen}{47}{}%
-\contentsline {subsection}{\numberline {9.3}Vergleich bzgl. Testfunktionen mit gemischten Variablen}{47}{}%
-\contentsline {subsubsection}{\numberline {9.3.1}Vergleich bzgl. konstruierter Testfunktionen mit gemischten Variablen}{47}{}%
-\contentsline {subsubsection}{\numberline {9.3.2}Vergleich bzgl. dem Coil Spring Design Problem (CSD)}{51}{}%
-\contentsline {section}{\numberline {10}Konvergenzbetrachtung}{51}{}%
-\contentsline {subsection}{\numberline {10.1}Rosenbrock}{52}{}%
-\contentsline {section}{\numberline {11}Kurzzusammenfassung}{52}{}%
-\contentsline {section}{Literaturverzeichnis}{54}{}%
-\contentsline {section}{Tabellenverzeichnis}{56}{}%
-\contentsline {section}{Abbildungsverzeichnis}{56}{}%
+\contentsline {subsection}{\numberline {2.14}Vergleichsalgorithmen}{14}{}%
+\contentsline {subsubsection}{\numberline {2.14.1}Algorithmen, die probabilistisches Lernen einsetzten}{15}{}%
+\contentsline {paragraph}{\numberline {2.14.1.1}(1 + 1)ES}{15}{}%
+\contentsline {paragraph}{\numberline {2.14.1.2}CSA-ES}{15}{}%
+\contentsline {paragraph}{\numberline {2.14.1.3}CMA-ES}{15}{}%
+\contentsline {paragraph}{\numberline {2.14.1.4}IDEA}{15}{}%
+\contentsline {paragraph}{\numberline {2.14.1.5}MBOA}{15}{}%
+\contentsline {subsubsection}{\numberline {2.14.2}Algorithmen, die verwandt zu Ameisenalgorithmen sind}{15}{}%
+\contentsline {paragraph}{\numberline {2.14.2.1}CACO}{15}{}%
+\contentsline {paragraph}{\numberline {2.14.2.2}API}{15}{}%
+\contentsline {paragraph}{\numberline {2.14.2.3}CIAC}{15}{}%
+\contentsline {subsubsection}{\numberline {2.14.3}Meta-Heuristiken, die für stetige Probleme adaptiert wurden}{16}{}%
+\contentsline {paragraph}{\numberline {2.14.3.1}CGA}{16}{}%
+\contentsline {paragraph}{\numberline {2.14.3.2}ECTS}{16}{}%
+\contentsline {paragraph}{\numberline {2.14.3.3}ESA}{16}{}%
+\contentsline {paragraph}{\numberline {2.14.3.4}DE}{16}{}%
+\contentsline {section}{\numberline {3}SPPBO-Schema}{16}{}%
+\contentsline {section}{\numberline {4}HSPPBO-Schema}{17}{}%
+\contentsline {section}{\numberline {5}Formulierung von \acl {acorvsmv} im HSPPBO-Schema}{19}{}%
+\contentsline {section}{\numberline {6}Kombinieren des HSPPBO-Schemas mit \acl {acorvsmv}}{19}{}%
+\contentsline {subsection}{\numberline {6.1}Hom-HPB-\ac {acorvsmv}}{19}{}%
+\contentsline {subsection}{\numberline {6.2}Het-HPB-\ac {acorvsmv}}{20}{}%
+\contentsline {subsection}{\numberline {6.3}Het-HSPPB-\ac {acorvsmv}}{21}{}%
+\contentsline {section}{\numberline {7}Testfunktionen}{21}{}%
+\contentsline {subsection}{\numberline {7.1}Permutationsprobleme Testfunktionen}{23}{}%
+\contentsline {subsubsection}{\numberline {7.1.1}Traveling Salesperson Problem (TSP)}{23}{}%
+\contentsline {subsubsection}{\numberline {7.1.2}Quadratic Assigment Problem (QAP)}{23}{}%
+\contentsline {subsection}{\numberline {7.2}Stetige Testfunktionen}{23}{}%
+\contentsline {subsubsection}{\numberline {7.2.1}Testfunktion - Paraboloid}{28}{}%
+\contentsline {subsubsection}{\numberline {7.2.2}Testfunktion - Easom}{29}{}%
+\contentsline {subsubsection}{\numberline {7.2.3}Testfunktion - Griewangk}{30}{}%
+\contentsline {subsubsection}{\numberline {7.2.4}Testfunktion - Rosenbrock}{30}{}%
+\contentsline {subsubsection}{\numberline {7.2.5}Testfunktion - Hartmann}{31}{}%
+\contentsline {subsubsection}{\numberline {7.2.6}Testfunktion - Shekel}{32}{}%
+\contentsline {subsection}{\numberline {7.3}Diskrete Testfunktionen}{32}{}%
+\contentsline {subsubsection}{\numberline {7.3.1}Diskrete Testfunktionen mit gleichverteiltem Definitionsbereich}{32}{}%
+\contentsline {subsubsection}{\numberline {7.3.2}Diskrete Testfunktionen mit asymmetrischem Definitionsbereich}{32}{}%
+\contentsline {subsection}{\numberline {7.4}Testfunktionen mit gemischten Variablem}{33}{}%
+\contentsline {subsubsection}{\numberline {7.4.1}Konstruierte Testfunktionen}{33}{}%
+\contentsline {subsubsection}{\numberline {7.4.2}Coil Spring Design Problem (CSD)}{34}{}%
+\contentsline {paragraph}{\numberline {7.4.2.1}Vollständiger Raum als Initialisierungsintervall}{37}{}%
+\contentsline {paragraph}{\numberline {7.4.2.2}Gefilterter Raum als Initialisierungsintervall}{38}{}%
+\contentsline {section}{\numberline {8}Herausforderung}{39}{}%
+\contentsline {section}{\numberline {9}Vergleich von ACO\(_{\mathbb {R}}\), ACO\(_\text {MV}\), \acl {acorvs} und den Iteration von \acl {acorvs}}{39}{}%
+\contentsline {subsection}{\numberline {9.1}Vergleich bzgl. stetiger Testfunktionen}{39}{}%
+\contentsline {subsection}{\numberline {9.2}Vergleich bzgl. diskreter Testfunktionen}{48}{}%
+\contentsline {subsection}{\numberline {9.3}Vergleich bzgl. Testfunktionen mit gemischten Variablen}{48}{}%
+\contentsline {subsubsection}{\numberline {9.3.1}Vergleich bzgl. konstruierter Testfunktionen mit gemischten Variablen}{48}{}%
+\contentsline {subsubsection}{\numberline {9.3.2}Vergleich bzgl. dem Coil Spring Design Problem (CSD)}{52}{}%
+\contentsline {section}{\numberline {10}Konvergenzbetrachtung}{52}{}%
+\contentsline {subsection}{\numberline {10.1}Rosenbrock}{53}{}%
+\contentsline {section}{\numberline {11}Kurzzusammenfassung}{53}{}%
+\contentsline {section}{Literaturverzeichnis}{55}{}%
+\contentsline {section}{Tabellenverzeichnis}{57}{}%
+\contentsline {section}{Abbildungsverzeichnis}{57}{}%
 \contentsline {part}{\nonumberline Anlagen}{I}{}%
 \contentsline {section}{\numberline {A}Einfluss der Anzahl der Ameisen}{I}{}%
 \contentsline {section}{\numberline {B}Einfluss des Parameters \textit {q}}{II}{}%

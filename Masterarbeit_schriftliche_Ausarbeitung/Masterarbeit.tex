@@ -13,6 +13,9 @@
 
 \usepackage{amsmath}
 
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+
 \usepackage{tabulary}
 \usepackage{tabularx}
 \usepackage{subfig}
@@ -797,11 +800,55 @@ within=section,
 	
 	%TODO auch für kategorische Variablen oder reicht das? reicht so
 	
+	\subsection{Vergleichsalgorithmen} \label{Grundlagen:Vergleichsalgorithmen}
+	
+	Neben dem Algorithmus ACO\(_\mathbb{R}\) selbst, gibt es noch drei Gruppen von Algorithmen, mit denen sich \ac{acorvs}, \ac{acorvsmv} und die Iterationen von \ac{acorvsmv} vergleichen. Die Algorithmen dieser Gruppen sind in den Abschnitten \ref{subsubsec:Grundlagen:Vergleichsalgorithmen:Alg_prob_Lernen}, \ref{subsubsec:Grundlagen:Vergleichsalgorithmen:Alg_verwandt_Ameisenalg} und \ref{subsubsec:Grundlagen:Vergleichsalgorithmen:Meta_-_Heuristiken_stetige_Probleme} vorgestellt.
+	
+	\subsubsection{Algorithmen, die probabilistisches Lernen einsetzten} \label{subsubsec:Grundlagen:Vergleichsalgorithmen:Alg_prob_Lernen}
+	
+	\paragraph{(1 + 1)ES}\mbox{}\\
+	
+	\paragraph{CSA-ES}\mbox{}\\
+	
+	\paragraph{CMA-ES}\mbox{}\\
+	
+	\paragraph{IDEA}\mbox{}\\
+	
+	\paragraph{MBOA}\mbox{}\\
+	
+	\subsubsection{Algorithmen, die verwandt zu Ameisenalgorithmen sind} \label{subsubsec:Grundlagen:Vergleichsalgorithmen:Alg_verwandt_Ameisenalg}
+	
+	\paragraph{CACO}\mbox{}\\
+	
+	Die folgende Beschreibung ist nach \textit{Bilchev und Parmee}~\cite{bilchev1995ant}.\\
+	
+	CACO steht für Continuous ACO. In CACO startet der Algorithmus mit einem Punkt im Suchraum. Dieser Punkt wird \glqq Nest\grqq{} bezeichnet. Gute Lösungen werden als Vektoren, ausgehen vom Nest, gespeichert. Danach wird probabilistisch ein Vektor gewählt und sein Ende wird zum neuen Nest. Danach wird der Algorithmus wiederholt.
+	
+	%TODO was sind "Gute Lösungen"? Wie viele Lösungen werden gespeichert?
+	
+	\paragraph{API}\mbox{}\\
+	
+	Die folgende Beschreibung ist nach \textit{Monmarché et al.}~\cite{monmarche2000pachycondyla}.\\
+	
+	API ist nach der \glqq Pachycondyla apicalis\grqq-Ameise benannt -- \glqq Pachycondyla \textbf{API}calis\grqq{} -- und der Algorithmus API ist der Nahrungssuche dieser Ameise nachempfunden.
+	
+	\paragraph{CIAC}\mbox{}\\
+	
+	\subsubsection{Meta-Heuristiken, die für stetige Probleme adaptiert wurden} \label{subsubsec:Grundlagen:Vergleichsalgorithmen:Meta_-_Heuristiken_stetige_Probleme}
+	
+	\paragraph{CGA}\mbox{}\\
+	
+	\paragraph{ECTS}\mbox{}\\
+	
+	\paragraph{ESA}\mbox{}\\
+	
+	\paragraph{DE}\mbox{}\\
+	
 	\section{SPPBO-Schema} \label{sec:SPPBO_Schema}
 	
 	%TODO SPPBO-Schema noch Grundlagen?
 	
-	Wie in \cite{lin2015simple} beschrieben, besteht das SPPBO-Scheme aus 6 Teilen. Diese sind der Suchraum \(\Sigma\), die Menge der lösungskreierenden Entitäten \(\mathcal{E}\), die Menge der Populationen bzw. Archive von Lösungen \(\mathcal{P}\), die Heuristik \(\eta\), die Initialisierungsmethode \(\mathcal{I}\) und das Stoppkriterium \(\mathcal{S}\). Also kann das SPPBO-Scheme beschrieben werden durch das Tupel \((\Sigma, \mathcal{E}, \mathcal{P}, \eta, \mathcal{I}, \mathcal{S})\). Im Folgenden werden die lösungskreierenden Entitäten als \ac{sce} (\acl{sce}) bezeichnet.\hfill\newline
+	Das SPPBO-Schema steht für Simple Probabilistic Populations-Based Optimization-Schema und wie in \cite{lin2015simple} beschrieben, besteht es aus 6 Teilen. Diese sind der Suchraum \(\Sigma\), die Menge der lösungskreierenden Entitäten \(\mathcal{E}\), die Menge der Populationen bzw. Archive von Lösungen \(\mathcal{P}\), die Heuristik \(\eta\), die Initialisierungsmethode \(\mathcal{I}\) und das Stoppkriterium \(\mathcal{S}\). Also kann das SPPBO-Scheme beschrieben werden durch das Tupel \((\Sigma, \mathcal{E}, \mathcal{P}, \eta, \mathcal{I}, \mathcal{S})\). Im Folgenden werden die lösungskreierenden Entitäten als \ac{sce} (\acl{sce}) bezeichnet.\hfill\newline
 	
 	\noindent Der Suchraum \(\Sigma\) kann \(\Sigma=\{a_1, \dots, a_n\}\) sein, für das TSP, wobei die \(a_i, i \in \{1, \dots, \mathbb{N}\}\) die Positionen der Städte sind, \(\mathbb{R}^n, n \in \mathbb{N}\) für stetige Funktionen, wie der Paraboloidfunktion, wie sie in Tabelle~\ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} definiert ist oder eine Zusammensetzung von Intervallen über verschiedenen Skalenniveaus, wie es in Abschnitt~\ref{subsubsec:Coil_Spring_Design_Problem} für das CSD ist, wo \(\Sigma\) sich aus einem stetigem, einem ordinalen und einem Intervall über den natürlichen Zahlen zusammensetzt. Im SPPBO-Schema kann \(\mathcal{E}\) aus 2 Ameisen, wie in ACO~\cite{blum2005ant} oder PACO~\cite{guntsch2002population}, bestehen oder auch nur einer Ameise, wie in ACO\(_\mathbb{R}\)-VS~\cite{FCM_2019}, oder \(N \in \mathbb{N}\) Partikeln, wie im Set-Based Discrete PSO~\cite{chen2012set}. Die Menge der Populationen \(\mathcal{P}\) im SPPBO-Schema, wie es in \cite{lin2015simple} definiert ist, besteht aus zwei Populationen, die jede \ac{sce} mitführt, einer Persönlichen \(P^{SCE}_{pers}\) und einer Globalen \(P^{SCE}_{best}\). Die persönliche Population \(p_{pers}\) besteht aus der besten Lösung, welche die jeweilige SCE bis einschließlich der letzten Iteration des Algorithmus gefunden hat. Die globale Population \(P^{SCE}_{best}\) besteht aus der besten Lösung, die alle SCE bis einschließlich der letzten Iteration gefunden haben. Wenn es jedoch nur eine Population, wie in ACO\(_\mathbb{R}\)-VS~\cite{FCM_2019}, gibt, dann kann diese \(n \in \mathbb{N}\) Lösungen haben, wobei \(n = 100\) in \cite{FCM_2019} gewählt wurde.\hfill\newline
 	
