@@ -20,7 +20,7 @@
 \contentsline {subsection}{\numberline {2.12}Erweiterung von \acl {acorvs} zu \acl {acorvsmv} für Probleme mit diskreten Variablen}{14}{}%
 \contentsline {subsection}{\numberline {2.13}Erweiterung von ACO\(_\mathbb {R}\) zu ACO\(_\text {MV}\) für Probleme mit diskreten Variablen}{14}{}%
 \contentsline {subsection}{\numberline {2.14}Vergleichsalgorithmen}{14}{}%
-\contentsline {subsubsection}{\numberline {2.14.1}Algorithmen, die probabilistisches Lernen einsetzten}{15}{}%
+\contentsline {subsubsection}{\numberline {2.14.1}Algorithmen, die probabilistisches Lernen einsetzen}{15}{}%
 \contentsline {paragraph}{\numberline {2.14.1.1}(1 + 1)ES}{15}{}%
 \contentsline {paragraph}{\numberline {2.14.1.2}CSA-ES}{15}{}%
 \contentsline {paragraph}{\numberline {2.14.1.3}CMA-ES}{15}{}%
@@ -29,7 +29,7 @@
 \contentsline {subsubsection}{\numberline {2.14.2}Algorithmen, die verwandt zu Ameisenalgorithmen sind}{15}{}%
 \contentsline {paragraph}{\numberline {2.14.2.1}CACO}{15}{}%
 \contentsline {paragraph}{\numberline {2.14.2.2}API}{15}{}%
-\contentsline {paragraph}{\numberline {2.14.2.3}CIAC}{15}{}%
+\contentsline {paragraph}{\numberline {2.14.2.3}CIAC}{16}{}%
 \contentsline {subsubsection}{\numberline {2.14.3}Meta-Heuristiken, die für stetige Probleme adaptiert wurden}{16}{}%
 \contentsline {paragraph}{\numberline {2.14.3.1}CGA}{16}{}%
 \contentsline {paragraph}{\numberline {2.14.3.2}ECTS}{16}{}%

@@ -804,7 +804,7 @@ within=section,
 	
 	Neben dem Algorithmus ACO\(_\mathbb{R}\) selbst, gibt es noch drei Gruppen von Algorithmen, mit denen sich \ac{acorvs}, \ac{acorvsmv} und die Iterationen von \ac{acorvsmv} vergleichen. Die Algorithmen dieser Gruppen sind in den Abschnitten \ref{subsubsec:Grundlagen:Vergleichsalgorithmen:Alg_prob_Lernen}, \ref{subsubsec:Grundlagen:Vergleichsalgorithmen:Alg_verwandt_Ameisenalg} und \ref{subsubsec:Grundlagen:Vergleichsalgorithmen:Meta_-_Heuristiken_stetige_Probleme} vorgestellt.
 	
-	\subsubsection{Algorithmen, die probabilistisches Lernen einsetzten} \label{subsubsec:Grundlagen:Vergleichsalgorithmen:Alg_prob_Lernen}
+	\subsubsection{Algorithmen, die probabilistisches Lernen einsetzen} \label{subsubsec:Grundlagen:Vergleichsalgorithmen:Alg_prob_Lernen}
 	
 	\paragraph{(1 + 1)ES}\mbox{}\\
 	
@@ -822,17 +822,23 @@ within=section,
 	
 	Die folgende Beschreibung ist nach \textit{Bilchev und Parmee}~\cite{bilchev1995ant}.\\
 	
-	CACO steht für Continuous ACO. In CACO startet der Algorithmus mit einem Punkt im Suchraum. Dieser Punkt wird \glqq Nest\grqq{} bezeichnet. Gute Lösungen werden als Vektoren, ausgehen vom Nest, gespeichert. Danach wird probabilistisch ein Vektor gewählt und sein Ende wird zum neuen Nest. Danach wird der Algorithmus wiederholt.
+	CACO steht für Continuous ACO. In CACO startet der Algorithmus mit einem zufälligen Punkt \(\mathcal{N}\) im Suchraum. Dieser Punkt wird \glqq Nest\grqq{} bezeichnet. Gute Lösungen werden als Vektoren, ausgehen vom Nest, gespeichert. Danach wird probabilistisch ein Vektor gewählt und sein Ende wird zum neuen Nest. Danach wird der Algorithmus wiederholt.
 	
 	%TODO was sind "Gute Lösungen"? Wie viele Lösungen werden gespeichert?
+	
+	%TODO asuführlicher beschreiben?
 	
 	\paragraph{API}\mbox{}\\
 	
 	Die folgende Beschreibung ist nach \textit{Monmarché et al.}~\cite{monmarche2000pachycondyla}.\\
 	
-	API ist nach der \glqq Pachycondyla apicalis\grqq-Ameise benannt -- \glqq Pachycondyla \textbf{API}calis\grqq{} -- und der Algorithmus API ist der Nahrungssuche dieser Ameise nachempfunden.
+	API ist nach der \glqq Pachycondyla apicalis\grqq-Ameise benannt -- \glqq Pachycondyla \textbf{API}calis\grqq{} -- und der Algorithmus API ist der Nahrungssuche dieser Ameise nachempfunden. Dabei startet auch API mit einem zufälligen Punkt \(\mathcal{N}\), der Nest bezeichnet wird, im Suchraum. Ausgehend von \(\mathcal{N}\) etablieren \(n\) Ameisen Jagdgründe innerhalb eines Kreises um \(\mathcal{N}\) mit dem Radius \(R = 20 \, LE\), \(LE = L"angeneinheit\). In \cite{monmarche2000pachycondyla} wird \(n = 20\) gesetzt. Jeder Jagdgrund hat selbst einen Grenzkreis von \(r = 2 \, LE\). Jede Ameise kann sich \(p\) Jagdgründe merken. In \cite{monmarche2000pachycondyla} wird \(p = 2\) gesetzt. Jede Ameise führt dann eine Suche in einem von ihr gemerkten Jagdgründe aus. Wenn in einem Jagdgrund \(P\)-mal keine bessere Lösung, als die von der jeweiligen Ameise bis dato gefundene Lösung, gefunden wurde, wird der Jagdgrund vergessen. In der Wildnis gilt für die echten Ameisen \(1 \, LE = 1 \, Meter\). Nach \(T\) Iterationen, wobei in \cite{monmarche2000pachycondyla} \(T = 50\) gesetzt wird, wird das Nest \(\mathcal{N}\) an den bis dato besten gefunden Punkt gesetzt. Es wurde in \cite{monmarche2000pachycondyla} \(P = T\) gesetzt, damit ein Jagdgrund erst dann vergessen wird, wenn das Nest \(\mathcal{N}\) bewegt wird.
 	
 	\paragraph{CIAC}\mbox{}\\
+	
+	Die folgende Beschreibung ist nach \textit{Dréo and Siarry}~\cite{dreo2002new}.
+	
+	
 	
 	\subsubsection{Meta-Heuristiken, die für stetige Probleme adaptiert wurden} \label{subsubsec:Grundlagen:Vergleichsalgorithmen:Meta_-_Heuristiken_stetige_Probleme}
 	
