@@ -8,51 +8,44 @@ Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: Master_Arbeit_Literatur.bib
-I was expecting a `,' or a `}'---line 43 of file Master_Arbeit_Literatur.bib
- :  
- :  publisher={New Jersey, USA Princeton University Press}
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-Warning--there's a number but no series in bonabeau1999swarm
-You've used 32 entries,
+You've used 34 entries,
             4332 wiz_defined-function locations,
-            1006 strings with 11105 characters,
-and the built_in function-call counts, 17094 in all, are:
-= -- 1747
-> -- 484
-< -- 449
-+ -- 545
-- -- 164
-* -- 1162
-:= -- 3045
-add.period$ -- 32
-call.type$ -- 32
-change.case$ -- 141
+            1018 strings with 11459 characters,
+and the built_in function-call counts, 18056 in all, are:
+= -- 1840
+> -- 510
+< -- 473
++ -- 574
+- -- 173
+* -- 1222
+:= -- 3212
+add.period$ -- 34
+call.type$ -- 34
+change.case$ -- 149
 chr.to.int$ -- 0
-cite$ -- 33
-duplicate$ -- 490
-empty$ -- 1297
-format.name$ -- 316
-if$ -- 3428
+cite$ -- 34
+duplicate$ -- 519
+empty$ -- 1377
+format.name$ -- 332
+if$ -- 3623
 int.to.chr$ -- 0
-int.to.str$ -- 32
-missing$ -- 137
-newline$ -- 170
-num.names$ -- 64
-pop$ -- 230
+int.to.str$ -- 34
+missing$ -- 146
+newline$ -- 180
+num.names$ -- 68
+pop$ -- 246
 preamble$ -- 1
-purify$ -- 141
+purify$ -- 149
 quote$ -- 0
-skip$ -- 817
+skip$ -- 869
 stack$ -- 0
-substring$ -- 1144
-swap$ -- 150
-text.length$ -- 99
+substring$ -- 1210
+swap$ -- 157
+text.length$ -- 104
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 125
-warning$ -- 1
-while$ -- 182
-width$ -- 34
-write$ -- 402
-(There was 1 error message)
+type$ -- 133
+warning$ -- 0
+while$ -- 192
+width$ -- 36
+write$ -- 425

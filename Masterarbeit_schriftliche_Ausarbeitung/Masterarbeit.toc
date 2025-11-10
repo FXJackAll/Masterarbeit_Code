@@ -24,29 +24,29 @@
 \contentsline {paragraph}{\numberline {2.14.1.1}(1 + 1)-ES}{15}{}%
 \contentsline {paragraph}{\numberline {2.14.1.2}CSA-ES}{15}{}%
 \contentsline {paragraph}{\numberline {2.14.1.3}CMA-ES}{15}{}%
-\contentsline {paragraph}{\numberline {2.14.1.4}IDEA}{15}{}%
-\contentsline {paragraph}{\numberline {2.14.1.5}MBOA}{15}{}%
-\contentsline {subsubsection}{\numberline {2.14.2}Algorithmen, die verwandt zu Ameisenalgorithmen sind}{15}{}%
-\contentsline {paragraph}{\numberline {2.14.2.1}CACO}{15}{}%
+\contentsline {paragraph}{\numberline {2.14.1.4}IDEA}{16}{}%
+\contentsline {paragraph}{\numberline {2.14.1.5}MBOA}{16}{}%
+\contentsline {subsubsection}{\numberline {2.14.2}Algorithmen, die verwandt zu Ameisenalgorithmen sind}{16}{}%
+\contentsline {paragraph}{\numberline {2.14.2.1}CACO}{16}{}%
 \contentsline {paragraph}{\numberline {2.14.2.2}API}{16}{}%
 \contentsline {paragraph}{\numberline {2.14.2.3}CIAC}{16}{}%
-\contentsline {subsubsection}{\numberline {2.14.3}Meta-Heuristiken, die für stetige Probleme adaptiert wurden}{16}{}%
-\contentsline {paragraph}{\numberline {2.14.3.1}CGA}{16}{}%
-\contentsline {paragraph}{\numberline {2.14.3.2}ECTS}{16}{}%
-\contentsline {paragraph}{\numberline {2.14.3.3}ESA}{16}{}%
-\contentsline {paragraph}{\numberline {2.14.3.4}DE}{16}{}%
+\contentsline {subsubsection}{\numberline {2.14.3}Meta-Heuristiken, die für stetige Probleme adaptiert wurden}{17}{}%
+\contentsline {paragraph}{\numberline {2.14.3.1}CGA}{17}{}%
+\contentsline {paragraph}{\numberline {2.14.3.2}ECTS}{17}{}%
+\contentsline {paragraph}{\numberline {2.14.3.3}ESA}{17}{}%
+\contentsline {paragraph}{\numberline {2.14.3.4}DE}{17}{}%
 \contentsline {section}{\numberline {3}SPPBO-Schema}{17}{}%
 \contentsline {section}{\numberline {4}HSPPBO-Schema}{18}{}%
-\contentsline {section}{\numberline {5}Formulierung von \acl {acorvsmv} im HSPPBO-Schema}{19}{}%
-\contentsline {section}{\numberline {6}Kombinieren des HSPPBO-Schemas mit \acl {acorvsmv}}{19}{}%
-\contentsline {subsection}{\numberline {6.1}Hom-HPB-\ac {acorvsmv}}{19}{}%
-\contentsline {subsection}{\numberline {6.2}Het-HPB-\ac {acorvsmv}}{20}{}%
-\contentsline {subsection}{\numberline {6.3}Het-HSPPB-\ac {acorvsmv}}{21}{}%
-\contentsline {section}{\numberline {7}Testfunktionen}{21}{}%
-\contentsline {subsection}{\numberline {7.1}Permutationsprobleme Testfunktionen}{23}{}%
-\contentsline {subsubsection}{\numberline {7.1.1}Traveling Salesperson Problem (TSP)}{23}{}%
-\contentsline {subsubsection}{\numberline {7.1.2}Quadratic Assigment Problem (QAP)}{23}{}%
-\contentsline {subsection}{\numberline {7.2}Stetige Testfunktionen}{23}{}%
+\contentsline {section}{\numberline {5}Formulierung von \acl {acorvsmv} im HSPPBO-Schema}{20}{}%
+\contentsline {section}{\numberline {6}Kombinieren des HSPPBO-Schemas mit \acl {acorvsmv}}{20}{}%
+\contentsline {subsection}{\numberline {6.1}Hom-HPB-\ac {acorvsmv}}{20}{}%
+\contentsline {subsection}{\numberline {6.2}Het-HPB-\ac {acorvsmv}}{21}{}%
+\contentsline {subsection}{\numberline {6.3}Het-HSPPB-\ac {acorvsmv}}{22}{}%
+\contentsline {section}{\numberline {7}Testfunktionen}{22}{}%
+\contentsline {subsection}{\numberline {7.1}Permutationsprobleme Testfunktionen}{24}{}%
+\contentsline {subsubsection}{\numberline {7.1.1}Traveling Salesperson Problem (TSP)}{24}{}%
+\contentsline {subsubsection}{\numberline {7.1.2}Quadratic Assigment Problem (QAP)}{24}{}%
+\contentsline {subsection}{\numberline {7.2}Stetige Testfunktionen}{24}{}%
 \contentsline {subsubsection}{\numberline {7.2.1}Testfunktion - Paraboloid}{29}{}%
 \contentsline {subsubsection}{\numberline {7.2.2}Testfunktion - Easom}{30}{}%
 \contentsline {subsubsection}{\numberline {7.2.3}Testfunktion - Griewangk}{31}{}%

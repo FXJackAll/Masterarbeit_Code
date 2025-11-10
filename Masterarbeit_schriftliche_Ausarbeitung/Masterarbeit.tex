@@ -810,9 +810,19 @@ within=section,
 	
 	Die folgende Beschreibung ist nach \textit{Rechenberg}~\cite{rechenberg1973evolutionsstrategie}.\hfill\newline
 	
-	ES steht für Evolution Strategies. (1 + 1)-ES ist eines der ersten ES, die für Optimierung von stetigen Funktionen \(f\) vorgeschlagen wurden. In (1 + 1)-ES wird mit einem einzigen Elter (parent) begonnen und in jeder Iteration gibt es nur ein Kind (offspring). Die zugrunde liegende Population besteht also, in jeder Generation \(g\), nur aus dem Elter und dem Kind, wie in der Gleichung 
+	%TODO Elter?
 	
-	\begin{equation}
+	ES steht für Evolution Strategies. (1 + 1)-ES ist eines der ersten ES, die für Optimierung von stetigen Funktionen \(f\) vorgeschlagen wurden. In (1 + 1)-ES wird mit einem einzigen Elter (parent) begonnen und in jeder Iteration gibt es nur ein Kind (offspring), deswegen (1 + 1). Die zugrunde liegende Population besteht also, in jeder Generation \(g, g \in \{0, 1, 2, \dots\}\), nur aus dem Elter und dem Kind. Nach der Initialisierung des Elter \(x^{(g)}_{parent}\), wird das Kind \(x^{(g + 1)}_{offspring}\) in der Gleichung~\ref{subsubsubpar:Grundlagen:Vergleichsalgorithmen:1_und_1_-_ES:Offspring} gewonnen, wobei \(I\) die Einheitsmatrix ist und \(\sigma\) die Verteilungsvarianz ist und als \glqq Step Size\grqq{} bezeichnet wird.
+	
+	\begin{equation} \label{subsubsubpar:Grundlagen:Vergleichsalgorithmen:1_und_1_-_ES:Offspring}
+		x^{(g + 1)}_{offspring} = z, \, z \sim \mathcal{N}(x^{(g)}_{parent}, \sigma^{(g)^2}I)
+	\end{equation}
+	
+	%TODO muss ich erklären, was und N ist?
+	
+	 Weiter wird mit der Gleichung~\ref{subsubsubpar:Grundlagen:Vergleichsalgorithmen:eq:1_und_1_-_ES} verfahren und das so gewonnene Kind wird zum neuen Elter.
+	
+	\begin{equation} \label{subsubsubpar:Grundlagen:Vergleichsalgorithmen:eq:1_und_1_-_ES}
 		x^{(g + 1)}_{offspring} =
 			\begin{cases}
 				x^{(g + 1)}_{offspring} &\text{, wenn } f(x^{(g + 1)}) \leq f(x^{(g)}_{parent})\\
@@ -825,15 +835,29 @@ within=section,
 	
 	%TODO mehr oder weniger Platzt zwischen den Möglichkeiten
 	
-	%TODO passt es so, dass bei verschiedenen Teilen verschieden viel steht?`
+	%TODO passt es so, dass bei verschiedenen Teilen verschieden viel steht?
 	
 	\paragraph{CSA-ES}\mbox{}\\
 	
-	Die folgende Beschreibung ist nach \textit{Ostermeier et al.}~\cite{ostermeier1994step}.
+	Die folgende Beschreibung ist nach \textit{Ostermeier et al.}~\cite{ostermeier1994step}.\hfill\newline
+	
+	%TODO Evolutionary Strategy with Cumulative Step SIze in Anführungszeichen?
+	
+	CSA-ES steht für Evolutionary Strategy with Cumulative Step Size Adaptation und ist eine Weiterentwicklung von (1 + 1)-ES. Die Weiterentwicklung besteht darin, dass die Step Size \(\sigma\) adaptiv ist und in Abhängigkeit des Weges, welcher von den letzten \(n, n \in \mathbb{N}\), Generationen gewählt wurde, geändert wird.
 	
 	\paragraph{CMA-ES}\mbox{}\\
 	
+	Die folgende Beschreibung ist nach \textit{Hansen und Ostermeier}~\cite{hansen2001completely}.\hfill\newline
+	
+	CMA-ES steht für ES with Covariance Matrix Adaptation. Es ist die Weiterentwicklung von CSA-ES, bei der \(\sigma\) von einer Kovarianzmatrix beeinflusst wird.
+	
+	%TODO mehr ausführlich erklären?
+	
 	\paragraph{IDEA}\mbox{}\\
+	
+	Die folgende Beschreibung ist nach \textit{Bosman und Thierens}\cite{bosman2000continuous}.\hfill\newline
+	
+	IDEA steht für das IDEA-Framework, was wiederum für \textbf{I}terated \textbf{D}ensity Estimation \textbf{E}volutionaty \textbf{A}lgorithms-Framework steht. Algorithmen, die mit dem IDEA-Framework entworfen wurden, bauen probabilistische Modelle und schätzen Wahrscheinlichkeitsdichten, gegeben einiger Anfangspunkte.
 	
 	\paragraph{MBOA}\mbox{}\\
 	
