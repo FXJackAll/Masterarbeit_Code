@@ -14,45 +14,45 @@ I was expecting a `,' or a `}'---line 43 of file Master_Arbeit_Literatur.bib
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--there's a number but no series in bonabeau1999swarm
-You've used 30 entries,
+You've used 32 entries,
             4332 wiz_defined-function locations,
-            994 strings with 10687 characters,
-and the built_in function-call counts, 16139 in all, are:
-= -- 1641
-> -- 459
-< -- 428
-+ -- 519
-- -- 156
-* -- 1102
-:= -- 2871
-add.period$ -- 30
-call.type$ -- 30
-change.case$ -- 133
+            1006 strings with 11105 characters,
+and the built_in function-call counts, 17094 in all, are:
+= -- 1747
+> -- 484
+< -- 449
++ -- 545
+- -- 164
+* -- 1162
+:= -- 3045
+add.period$ -- 32
+call.type$ -- 32
+change.case$ -- 141
 chr.to.int$ -- 0
-cite$ -- 31
-duplicate$ -- 462
-empty$ -- 1222
-format.name$ -- 300
-if$ -- 3229
+cite$ -- 33
+duplicate$ -- 490
+empty$ -- 1297
+format.name$ -- 316
+if$ -- 3428
 int.to.chr$ -- 0
-int.to.str$ -- 30
-missing$ -- 131
-newline$ -- 160
-num.names$ -- 60
-pop$ -- 219
+int.to.str$ -- 32
+missing$ -- 137
+newline$ -- 170
+num.names$ -- 64
+pop$ -- 230
 preamble$ -- 1
-purify$ -- 133
+purify$ -- 141
 quote$ -- 0
-skip$ -- 775
+skip$ -- 817
 stack$ -- 0
-substring$ -- 1083
-swap$ -- 142
-text.length$ -- 94
+substring$ -- 1144
+swap$ -- 150
+text.length$ -- 99
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 117
+type$ -- 125
 warning$ -- 1
-while$ -- 172
-width$ -- 32
-write$ -- 376
+while$ -- 182
+width$ -- 34
+write$ -- 402
 (There was 1 error message)

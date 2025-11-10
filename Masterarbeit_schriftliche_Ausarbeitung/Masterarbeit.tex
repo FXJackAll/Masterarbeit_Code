@@ -806,9 +806,30 @@ within=section,
 	
 	\subsubsection{Algorithmen, die probabilistisches Lernen einsetzen} \label{subsubsec:Grundlagen:Vergleichsalgorithmen:Alg_prob_Lernen}
 	
-	\paragraph{(1 + 1)ES}\mbox{}\\
+	\paragraph{(1 + 1)-ES}\mbox{}\\
+	
+	Die folgende Beschreibung ist nach \textit{Rechenberg}~\cite{rechenberg1973evolutionsstrategie}.\hfill\newline
+	
+	ES steht für Evolution Strategies. (1 + 1)-ES ist eines der ersten ES, die für Optimierung von stetigen Funktionen \(f\) vorgeschlagen wurden. In (1 + 1)-ES wird mit einem einzigen Elter (parent) begonnen und in jeder Iteration gibt es nur ein Kind (offspring). Die zugrunde liegende Population besteht also, in jeder Generation \(g\), nur aus dem Elter und dem Kind, wie in der Gleichung 
+	
+	\begin{equation}
+		x^{(g + 1)}_{offspring} =
+			\begin{cases}
+				x^{(g + 1)}_{offspring} &\text{, wenn } f(x^{(g + 1)}) \leq f(x^{(g)}_{parent})\\
+				\\
+				x^{(g)}_{parent} 		&\text{, sonst.}
+			\end{cases}
+	\end{equation}
+	
+	%TODO "einem einzigen" oder nur "einem
+	
+	%TODO mehr oder weniger Platzt zwischen den Möglichkeiten
+	
+	%TODO passt es so, dass bei verschiedenen Teilen verschieden viel steht?`
 	
 	\paragraph{CSA-ES}\mbox{}\\
+	
+	Die folgende Beschreibung ist nach \textit{Ostermeier et al.}~\cite{ostermeier1994step}.
 	
 	\paragraph{CMA-ES}\mbox{}\\
 	
@@ -820,9 +841,9 @@ within=section,
 	
 	\paragraph{CACO}\mbox{}\\
 	
-	Die folgende Beschreibung ist nach \textit{Bilchev und Parmee}~\cite{bilchev1995ant}.\\
+	Die folgende Beschreibung ist nach \textit{Bilchev und Parmee}~\cite{bilchev1995ant}.\hfill\newline
 	
-	CACO steht für Continuous ACO. In CACO startet der Algorithmus mit einem zufälligen Punkt \(\mathcal{N}\) im Suchraum. Dieser Punkt wird \glqq Nest\grqq{} bezeichnet. Gute Lösungen werden als Vektoren, ausgehen vom Nest, gespeichert. Danach wird probabilistisch ein Vektor gewählt und sein Ende wird zum neuen Nest. Danach wird der Algorithmus wiederholt.
+	CACO steht für Continuous ACO. In CACO startet der Algorithmus mit einem zufälligen Punkt \(\mathcal{N}\) im Suchraum. Dieser Punkt wird \glqq Nest\grqq{} bezeichnet. Gute Lösungen werden als Vektoren, ausgehend vom Nest, gespeichert. Danach wird probabilistisch ein Vektor gewählt und sein Ende wird zum neuen Nest. Danach wird der Algorithmus wiederholt.
 	
 	%TODO was sind "Gute Lösungen"? Wie viele Lösungen werden gespeichert?
 	
@@ -830,15 +851,15 @@ within=section,
 	
 	\paragraph{API}\mbox{}\\
 	
-	Die folgende Beschreibung ist nach \textit{Monmarché et al.}~\cite{monmarche2000pachycondyla}.\\
+	Die folgende Beschreibung ist nach \textit{Monmarché et al.}~\cite{monmarche2000pachycondyla}.\hfill\newline
 	
 	API ist nach der \glqq Pachycondyla apicalis\grqq-Ameise benannt -- \glqq Pachycondyla \textbf{API}calis\grqq{} -- und der Algorithmus API ist der Nahrungssuche dieser Ameise nachempfunden. Dabei startet auch API mit einem zufälligen Punkt \(\mathcal{N}\), der Nest bezeichnet wird, im Suchraum. Ausgehend von \(\mathcal{N}\) etablieren \(n\) Ameisen Jagdgründe innerhalb eines Kreises um \(\mathcal{N}\) mit dem Radius \(R = 20 \, LE\), \(LE = L"angeneinheit\). In \cite{monmarche2000pachycondyla} wird \(n = 20\) gesetzt. Jeder Jagdgrund hat selbst einen Grenzkreis von \(r = 2 \, LE\). Jede Ameise kann sich \(p\) Jagdgründe merken. In \cite{monmarche2000pachycondyla} wird \(p = 2\) gesetzt. Jede Ameise führt dann eine Suche in einem von ihr gemerkten Jagdgründe aus. Wenn in einem Jagdgrund \(P\)-mal keine bessere Lösung, als die von der jeweiligen Ameise bis dato gefundene Lösung, gefunden wurde, wird der Jagdgrund vergessen. In der Wildnis gilt für die echten Ameisen \(1 \, LE = 1 \, Meter\). Nach \(T\) Iterationen, wobei in \cite{monmarche2000pachycondyla} \(T = 50\) gesetzt wird, wird das Nest \(\mathcal{N}\) an den bis dato besten gefunden Punkt gesetzt. Es wurde in \cite{monmarche2000pachycondyla} \(P = T\) gesetzt, damit ein Jagdgrund erst dann vergessen wird, wenn das Nest \(\mathcal{N}\) bewegt wird.
 	
 	\paragraph{CIAC}\mbox{}\\
 	
-	Die folgende Beschreibung ist nach \textit{Dréo and Siarry}~\cite{dreo2002new}.
+	Die folgende Beschreibung ist nach \textit{Dréo and Siarry}~\cite{dreo2002new}.\hfill\newline
 	
-	
+	CIAC steht für Continuous Interacting Ant Colony. In CIAC kommunizieren die Ameisen auf zwei Wegen, indirekt über Pheromon und direkt über Nachrichten. Nachrichten bestehen wiederum aus zwei Komponenten, die Position des Senders und dem Funktionswert der Zielfunktion an seiner Position.
 	
 	\subsubsection{Meta-Heuristiken, die für stetige Probleme adaptiert wurden} \label{subsubsec:Grundlagen:Vergleichsalgorithmen:Meta_-_Heuristiken_stetige_Probleme}
 	

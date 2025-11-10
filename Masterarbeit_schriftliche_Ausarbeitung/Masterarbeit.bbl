@@ -129,64 +129,76 @@
 \newblock {In: }\emph{Future generation computer systems} 16 (2000), Nr. 8, S.
   937--946
 
-\bibitem[21]{pohlheim2007examples}
+\bibitem[21]{ostermeier1994step}
+\textsc{Ostermeier}, A.  ; \textsc{Gawelczyk}, A.   ; \textsc{Hansen}, N. :
+\newblock Step-size adaptation based on non-local use of selection information.
+\newblock {In: }\emph{International Conference on Parallel Problem Solving from
+  Nature} Springer, 1994, S. 189--198
+
+\bibitem[22]{pohlheim2007examples}
 \textsc{Pohlheim}, H. :
 \newblock Examples of objective functions.
 \newblock {In: }\emph{Retrieved} 4 (2007), Nr. 10, S. 2012
 
-\bibitem[22]{sandgren1990nonlinear}
+\bibitem[23]{rechenberg1973evolutionsstrategie}
+\textsc{Rechenberg}, I. :
+\newblock Evolutionsstrategie: Optimierung technischer systeme nach prinzipien
+  der biologischen evolution, frommann--holzboog.
+\newblock {In: }\emph{Stuttgart-Bad Cannstatt} 47 (1973)
+
+\bibitem[24]{sandgren1990nonlinear}
 \textsc{Sandgren}, E. :
 \newblock Nonlinear integer and discrete programming in mechanical design
   optimization.
 \newblock   (1990), S. 223--229
 
-\bibitem[23]{socha2009ant}
+\bibitem[25]{socha2009ant}
 \textsc{Socha}, K. :
 \newblock \emph{Ant colony optimisation for continuous and mixed-variable
   domains}.
 \newblock VDM Publishing Saarbr{\"u}cken, 2009
 
-\bibitem[24]{socha2008ant}
+\bibitem[26]{socha2008ant}
 \textsc{Socha}, K.  ; \textsc{Dorigo}, M. :
 \newblock Ant colony optimization for continuous domains.
 \newblock {In: }\emph{European journal of operational research} 185 (2008), Nr.
   3, S. 1155--1173
 
-\bibitem[25]{stutzle1999aco}
+\bibitem[27]{stutzle1999aco}
 \textsc{St{\"u}tzle}, T.  ; \textsc{Dorigo}, M.   u.\,a.:
 \newblock ACO algorithms for the traveling salesman problem.
 \newblock {In: }\emph{Evolutionary algorithms in engineering and computer
   science} 4 (1999), S. 163--183
 
-\bibitem[26]{testFunctionHartmann3}
+\bibitem[28]{testFunctionHartmann3}
 \textsc{Surjanovic}, S.  ; \textsc{Bingham}, D. :
 \newblock Virtual Library of Simulation Experiments: Test Function and
   Datasets.
 \newblock {In: }\emph{https://www.sfu.ca/$\sim$ssurjano/hart3.html}  (abgerufen
   am 17.08.2019)
 
-\bibitem[27]{testFunctionHartmann6}
+\bibitem[29]{testFunctionHartmann6}
 \textsc{Surjanovic}, S.  ; \textsc{Bingham}, D. :
 \newblock Virtual Library of Simulation Experiments: Test Function and
   Datasets.
 \newblock {In: }\emph{https://www.sfu.ca/$\sim$ssurjano/hart6.html}  (abgerufen
   am 17.08.2019)
 
-\bibitem[28]{testFunctionShekel}
+\bibitem[30]{testFunctionShekel}
 \textsc{Surjanovic}, S.  ; \textsc{Bingham}, D. :
 \newblock Virtual Library of Simulation Experiments: Test Function and
   Datasets.
 \newblock {In: }\emph{https://www.sfu.ca/$\sim$ssurjano/shekel.html}
   (abgerufen am 17.08.2019)
 
-\bibitem[29]{testFunctionBranin}
+\bibitem[31]{testFunctionBranin}
 \textsc{Surjanovic}, S.  ; \textsc{Bingham}, D. :
 \newblock Virtual Library of Simulation Experiments: Test Function and
   Datasets.
 \newblock {In: }\emph{https://www.sfu.ca/$\sim$ssurjano/branin.html}
   (abgerufen am 19.08.2019)
 
-\bibitem[30]{testFunctionGoldsteinandPrice}
+\bibitem[32]{testFunctionGoldsteinandPrice}
 \textsc{Surjanovic}, S.  ; \textsc{Bingham}, D. :
 \newblock Virtual Library of Simulation Experiments: Test Function and
   Datasets.
