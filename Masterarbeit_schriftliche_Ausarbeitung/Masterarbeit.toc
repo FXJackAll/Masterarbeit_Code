@@ -29,14 +29,14 @@
 \contentsline {subsubsection}{\numberline {2.14.2}Algorithmen, die verwandt zu Ameisenalgorithmen sind}{16}{}%
 \contentsline {paragraph}{\numberline {2.14.2.1}CACO}{16}{}%
 \contentsline {paragraph}{\numberline {2.14.2.2}API}{16}{}%
-\contentsline {paragraph}{\numberline {2.14.2.3}CIAC}{16}{}%
+\contentsline {paragraph}{\numberline {2.14.2.3}CIAC}{17}{}%
 \contentsline {subsubsection}{\numberline {2.14.3}Meta-Heuristiken, die für stetige Probleme adaptiert wurden}{17}{}%
 \contentsline {paragraph}{\numberline {2.14.3.1}CGA}{17}{}%
 \contentsline {paragraph}{\numberline {2.14.3.2}ECTS}{17}{}%
 \contentsline {paragraph}{\numberline {2.14.3.3}ESA}{17}{}%
 \contentsline {paragraph}{\numberline {2.14.3.4}DE}{17}{}%
 \contentsline {section}{\numberline {3}SPPBO-Schema}{17}{}%
-\contentsline {section}{\numberline {4}HSPPBO-Schema}{18}{}%
+\contentsline {section}{\numberline {4}HSPPBO-Schema}{19}{}%
 \contentsline {section}{\numberline {5}Formulierung von \acl {acorvsmv} im HSPPBO-Schema}{20}{}%
 \contentsline {section}{\numberline {6}Kombinieren des HSPPBO-Schemas mit \acl {acorvsmv}}{20}{}%
 \contentsline {subsection}{\numberline {6.1}Hom-HPB-\ac {acorvsmv}}{20}{}%

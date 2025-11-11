@@ -812,7 +812,7 @@ within=section,
 	
 	%TODO Elter?
 	
-	ES steht für Evolution Strategies. (1 + 1)-ES ist eines der ersten ES, die für Optimierung von stetigen Funktionen \(f\) vorgeschlagen wurden. In (1 + 1)-ES wird mit einem einzigen Elter (parent) begonnen und in jeder Iteration gibt es nur ein Kind (offspring), deswegen (1 + 1). Die zugrunde liegende Population besteht also, in jeder Generation \(g, g \in \{0, 1, 2, \dots\}\), nur aus dem Elter und dem Kind. Nach der Initialisierung des Elter \(x^{(g)}_{parent}\), wird das Kind \(x^{(g + 1)}_{offspring}\) in der Gleichung~\ref{subsubsubpar:Grundlagen:Vergleichsalgorithmen:1_und_1_-_ES:Offspring} gewonnen, wobei \(I\) die Einheitsmatrix ist und \(\sigma\) die Verteilungsvarianz ist und als \glqq Step Size\grqq{} bezeichnet wird.
+	ES steht für \textbf{E}volution \textbf{S}trategies. (1 + 1)-ES ist eines der ersten ES, die für Optimierung von stetigen Funktionen \(f\) vorgeschlagen wurden. In (1 + 1)-ES wird mit einem einzigen Elter (parent) begonnen und in jeder Iteration gibt es nur ein Kind (offspring), deswegen (1 + 1). Die zugrunde liegende Population besteht also, in jeder Generation \(g, g \in \{0, 1, 2, \dots\}\), nur aus dem Elter und dem Kind. Nach der Initialisierung des Elter \(x^{(g)}_{parent}\), wird das Kind \(x^{(g + 1)}_{offspring}\) in der Gleichung~\ref{subsubsubpar:Grundlagen:Vergleichsalgorithmen:1_und_1_-_ES:Offspring} gewonnen, wobei \(I\) die Einheitsmatrix ist und \(\sigma\) die Verteilungsvarianz ist und als \glqq Step Size\grqq{} bezeichnet wird.
 	
 	\begin{equation} \label{subsubsubpar:Grundlagen:Vergleichsalgorithmen:1_und_1_-_ES:Offspring}
 		x^{(g + 1)}_{offspring} = z, \, z \sim \mathcal{N}(x^{(g)}_{parent}, \sigma^{(g)^2}I)
@@ -843,13 +843,13 @@ within=section,
 	
 	%TODO Evolutionary Strategy with Cumulative Step SIze in Anführungszeichen?
 	
-	CSA-ES steht für Evolutionary Strategy with Cumulative Step Size Adaptation und ist eine Weiterentwicklung von (1 + 1)-ES. Die Weiterentwicklung besteht darin, dass die Step Size \(\sigma\) adaptiv ist und in Abhängigkeit des Weges, welcher von den letzten \(n, n \in \mathbb{N}\), Generationen gewählt wurde, geändert wird.
+	CSA-ES steht für \textbf{E}volutionary \textbf{S}trategy with \textbf{C}umulative \textbf{S}tep Size \textbf{A}daptation und ist eine Weiterentwicklung von (1 + 1)-ES. Die Weiterentwicklung besteht darin, dass die Step Size \(\sigma\) adaptiv ist und in Abhängigkeit des Weges, welcher von den letzten \(n, n \in \mathbb{N}\), Generationen gewählt wurde, geändert wird.
 	
 	\paragraph{CMA-ES}\mbox{}\\
 	
 	Die folgende Beschreibung ist nach \textit{Hansen und Ostermeier}~\cite{hansen2001completely}.\hfill\newline
 	
-	CMA-ES steht für ES with Covariance Matrix Adaptation. Es ist die Weiterentwicklung von CSA-ES, bei der \(\sigma\) von einer Kovarianzmatrix beeinflusst wird.
+	CMA-ES steht für \textbf{E}volutionary \textbf{S}trategy with \textbf{C}ovariance \textbf{M}atrix \textbf{A}daptation. Es ist die Weiterentwicklung von CSA-ES, bei der \(\sigma\) von einer Kovarianzmatrix beeinflusst wird.
 	
 	%TODO mehr ausführlich erklären?
 	
@@ -861,13 +861,17 @@ within=section,
 	
 	\paragraph{MBOA}\mbox{}\\
 	
+	Die folgende Beschreibung ist nach \textit{Očenášek und Schwarz}~\cite{ocenavsek2002estimation}.\hfill\newline
+	
+	MBOA steht für \textbf{M}ixed \textbf{B}ayesian \textbf{O}ptimization \textbf{A}lgorithm. Es ist die Weiterentwicklung von hBOA, das wiederum für \textbf{h}ierarchical \textbf{B}ayesian \textbf{O}ptimization \textbf{A}lgorithm. Nach \cite{pelikan2001bayesian} ist hBOA der erste Estimation of Distribution Algorithm (EDA), der Bayessche Netze mit Entscheidungsbäumen kombinierte. MBOA ist eine Erweiterung von hBOA, die auch mit gemischten Variablen, diskret und stetig, umgehen kann.
+	
 	\subsubsection{Algorithmen, die verwandt zu Ameisenalgorithmen sind} \label{subsubsec:Grundlagen:Vergleichsalgorithmen:Alg_verwandt_Ameisenalg}
 	
 	\paragraph{CACO}\mbox{}\\
 	
 	Die folgende Beschreibung ist nach \textit{Bilchev und Parmee}~\cite{bilchev1995ant}.\hfill\newline
 	
-	CACO steht für Continuous ACO. In CACO startet der Algorithmus mit einem zufälligen Punkt \(\mathcal{N}\) im Suchraum. Dieser Punkt wird \glqq Nest\grqq{} bezeichnet. Gute Lösungen werden als Vektoren, ausgehend vom Nest, gespeichert. Danach wird probabilistisch ein Vektor gewählt und sein Ende wird zum neuen Nest. Danach wird der Algorithmus wiederholt.
+	CACO steht für \textbf{C}ontinuous ACO. In CACO startet der Algorithmus mit einem zufälligen Punkt \(\mathcal{N}\) im Suchraum. Dieser Punkt wird \glqq Nest\grqq{} bezeichnet. Gute Lösungen werden als Vektoren, ausgehend vom Nest, gespeichert. Danach wird probabilistisch ein Vektor gewählt und sein Ende wird zum neuen Nest. Danach wird der Algorithmus wiederholt.
 	
 	%TODO was sind "Gute Lösungen"? Wie viele Lösungen werden gespeichert?
 	
@@ -883,7 +887,7 @@ within=section,
 	
 	Die folgende Beschreibung ist nach \textit{Dréo and Siarry}~\cite{dreo2002new}.\hfill\newline
 	
-	CIAC steht für Continuous Interacting Ant Colony. In CIAC kommunizieren die Ameisen auf zwei Wegen, indirekt über Pheromon und direkt über Nachrichten. Nachrichten bestehen wiederum aus zwei Komponenten, die Position des Senders und dem Funktionswert der Zielfunktion an seiner Position.
+	CIAC steht für \textbf{C}ontinuous \textbf{I}nteracting \textbf{A}nt \textbf{C}olony. In CIAC kommunizieren die Ameisen auf zwei Wegen, indirekt über Pheromon und direkt über Nachrichten. Nachrichten bestehen wiederum aus zwei Komponenten, die Position des Senders und dem Funktionswert der Zielfunktion an seiner Position.
 	
 	\subsubsection{Meta-Heuristiken, die für stetige Probleme adaptiert wurden} \label{subsubsec:Grundlagen:Vergleichsalgorithmen:Meta_-_Heuristiken_stetige_Probleme}
 	
