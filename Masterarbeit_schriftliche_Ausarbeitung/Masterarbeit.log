@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.18)  11 NOV 2025 14:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.18)  11 NOV 2025 16:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -738,7 +738,7 @@ L/cmm/m/it/12 v[]; v[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^T
 
 
 Overfull \hbox (0.70258pt too wide) in paragraph at lines 349--350
-[]\T1/cmr/m/n/12 Wie in \T1/cmr/m/it/12 Do-ri-go et al. \T1/cmr/m/n/12 [8] be-s
+[]\T1/cmr/m/n/12 Wie in \T1/cmr/m/it/12 Do-ri-go et al. \T1/cmr/m/n/12 [9] be-s
 chrie-ben wer-den bei der An-wen-dung der ACO-Metaheuristik
  []
 
@@ -952,152 +952,157 @@ Underfull \hbox (badness 10000) in paragraph at lines 896--897
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 898--899
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 900--901
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 906--907
+Underfull \hbox (badness 10000) in paragraph at lines 902--903
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 908--909
+Underfull \hbox (badness 10000) in paragraph at lines 904--905
 
  []
 
-[17]
+
 Underfull \hbox (badness 10000) in paragraph at lines 910--911
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 952--953
+Underfull \hbox (badness 10000) in paragraph at lines 912--913
+
+ []
+
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 914--915
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 956--957
 
  []
 
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 956--957
+Underfull \hbox (badness 10000) in paragraph at lines 960--961
 
  []
 
 [19]
 Package acronym Info: Label `acro:sec' newly defined as it shall be overridden
-although it is yet undefined on input line 1018.
+although it is yet undefined on input line 1022.
 
 
-Package acronym Warning: Acronym `sec' is not defined on input line 1018.
+Package acronym Warning: Acronym `sec' is not defined on input line 1022.
 
 
-Package acronym Warning: Acronym `sec' is not defined on input line 1018.
+Package acronym Warning: Acronym `sec' is not defined on input line 1022.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1018--1019
+Underfull \hbox (badness 10000) in paragraph at lines 1022--1023
 
  []
 
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 1037--1038
+Underfull \hbox (badness 10000) in paragraph at lines 1041--1042
 
  []
 
 
-Package acronym Warning: Acronym `sec' is not defined on input line 1039.
+Package acronym Warning: Acronym `sec' is not defined on input line 1043.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1039--1040
+Underfull \hbox (badness 10000) in paragraph at lines 1043--1044
 
  []
 
 [21]
-Underfull \hbox (badness 10000) in paragraph at lines 1064--1065
+Underfull \hbox (badness 10000) in paragraph at lines 1068--1069
 
  []
 
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 1099--1100
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1101--1102
-
- []
-
-
-Overfull \hbox (7.81984pt too wide) in paragraph at lines 1103--1104
-[]\T1/cmr/m/n/12 Weitere Ein-trä-ge, die not-wen-dig wur-den, sind ^^Rdi-men-si
--on^^P, ^^Rop-ti-mum^^P, ^^Rdis-crete_values^^P
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 1103--1104
 
  []
 
 
-Overfull \hbox (2.96037pt too wide) in paragraph at lines 1126--1127
+Underfull \hbox (badness 10000) in paragraph at lines 1105--1106
+
+ []
+
+
+Overfull \hbox (7.81984pt too wide) in paragraph at lines 1107--1108
+[]\T1/cmr/m/n/12 Weitere Ein-trä-ge, die not-wen-dig wur-den, sind ^^Rdi-men-si
+-on^^P, ^^Rop-ti-mum^^P, ^^Rdis-crete_values^^P
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1107--1108
+
+ []
+
+
+Overfull \hbox (2.96037pt too wide) in paragraph at lines 1130--1131
 \T1/cmr/m/n/12 den-sel-ben ste-ti-gen Test-funk-tio-nen ge-tes-tet, wie der ur-
 sprüng-li-che Al-go-rith-mus [][].
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1126--1127
+Underfull \hbox (badness 10000) in paragraph at lines 1130--1131
 
  []
 
 [23]
-Underfull \hbox (badness 10000) in paragraph at lines 1132--1133
+Underfull \hbox (badness 10000) in paragraph at lines 1136--1137
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1134--1135
+Underfull \hbox (badness 10000) in paragraph at lines 1138--1139
 
  []
 
 [24]
-Underfull \hbox (badness 10000) in paragraph at lines 1186--1188
+Underfull \hbox (badness 10000) in paragraph at lines 1190--1192
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1204--1205
+Underfull \hbox (badness 10000) in paragraph at lines 1208--1209
 
  []
 
 [25]
-Underfull \hbox (badness 10000) in paragraph at lines 1208--1210
+Underfull \hbox (badness 10000) in paragraph at lines 1212--1214
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1211--1212
+Underfull \hbox (badness 10000) in paragraph at lines 1215--1216
 
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 1258--1258
+Underfull \hbox (badness 10000) in alignment at lines 1262--1262
 [][] 
  []
 
 
-Overfull \hbox (3.46674pt too wide) in alignment at lines 1320--1320
+Overfull \hbox (3.46674pt too wide) in alignment at lines 1324--1324
 [][] 
  []
 
 [26]
-Overfull \hbox (3.0604pt too wide) in alignment at lines 1421--1421
+Overfull \hbox (3.0604pt too wide) in alignment at lines 1425--1425
 [][] 
  []
 
 [27]
-Underfull \hbox (badness 10000) in alignment at lines 1455--1455
+Underfull \hbox (badness 10000) in alignment at lines 1459--1459
 [][] 
  []
 
@@ -1109,7 +1114,7 @@ m.png Graphic file (type png)
 <use Abbildungen/3D_Visualisationen/3D_visualization_paraboloid_2_-3_7_coolwarm
 .png>
 Package pdftex.def Info: Abbildungen/3D_Visualisationen/3D_visualization_parabo
-loid_2_-3_7_coolwarm.png  used on input line 1471.
+loid_2_-3_7_coolwarm.png  used on input line 1475.
 (pdftex.def)             Requested size: 370.02289pt x 277.51717pt.
  [29]
 <Abbildungen/3D_Visualisationen/3D_visualization_easom_2_-100_100_coolwarm.png,
@@ -1119,7 +1124,7 @@ File: Abbildungen/3D_Visualisationen/3D_visualization_easom_2_-100_100_coolwarm
 <use Abbildungen/3D_Visualisationen/3D_visualization_easom_2_-100_100_coolwarm.
 png>
 Package pdftex.def Info: Abbildungen/3D_Visualisationen/3D_visualization_easom_
-2_-100_100_coolwarm.png  used on input line 1486.
+2_-100_100_coolwarm.png  used on input line 1490.
 (pdftex.def)             Requested size: 224.06548pt x 168.0485pt.
 <Abbildungen/3D_Visualisationen/3D_visualization_easom_2_1_5_coolwarm.png, id=1
 52, 462.528pt x 346.896pt>
@@ -1127,7 +1132,7 @@ File: Abbildungen/3D_Visualisationen/3D_visualization_easom_2_1_5_coolwarm.png
 Graphic file (type png)
 <use Abbildungen/3D_Visualisationen/3D_visualization_easom_2_1_5_coolwarm.png>
 Package pdftex.def Info: Abbildungen/3D_Visualisationen/3D_visualization_easom_
-2_1_5_coolwarm.png  used on input line 1487.
+2_1_5_coolwarm.png  used on input line 1491.
 (pdftex.def)             Requested size: 224.06548pt x 168.0485pt.
  [30 <./Abbildungen/3D_Visualisationen/3D_visualization_paraboloid_2_-3_7_coolw
 arm.png> <./Abbildungen/3D_Visualisationen/3D_visualization_easom_2_-100_100_co
@@ -1140,7 +1145,7 @@ warm.png Graphic file (type png)
 <use Abbildungen/3D_Visualisationen/3D_visualization_griewangk_2_-600_600_coolw
 arm.png>
 Package pdftex.def Info: Abbildungen/3D_Visualisationen/3D_visualization_griewa
-ngk_2_-600_600_coolwarm.png  used on input line 1501.
+ngk_2_-600_600_coolwarm.png  used on input line 1505.
 (pdftex.def)             Requested size: 134.44064pt x 100.83015pt.
 <Abbildungen/3D_Visualisationen/3D_visualization_griewangk_2_-10_10_coolwarm.pn
 g, id=160, 462.528pt x 346.896pt>
@@ -1149,7 +1154,7 @@ rm.png Graphic file (type png)
 <use Abbildungen/3D_Visualisationen/3D_visualization_griewangk_2_-10_10_coolwar
 m.png>
 Package pdftex.def Info: Abbildungen/3D_Visualisationen/3D_visualization_griewa
-ngk_2_-10_10_coolwarm.png  used on input line 1502.
+ngk_2_-10_10_coolwarm.png  used on input line 1506.
 (pdftex.def)             Requested size: 134.44064pt x 100.83015pt.
 <Abbildungen/3D_Visualisationen/3D_visualization_griewangk_2_-4_4_coolwarm.png,
  id=161, 462.528pt x 346.896pt>
@@ -1158,7 +1163,7 @@ File: Abbildungen/3D_Visualisationen/3D_visualization_griewangk_2_-4_4_coolwarm
 <use Abbildungen/3D_Visualisationen/3D_visualization_griewangk_2_-4_4_coolwarm.
 png>
 Package pdftex.def Info: Abbildungen/3D_Visualisationen/3D_visualization_griewa
-ngk_2_-4_4_coolwarm.png  used on input line 1503.
+ngk_2_-4_4_coolwarm.png  used on input line 1507.
 (pdftex.def)             Requested size: 134.44064pt x 100.83015pt.
 <Abbildungen/3D_Visualisationen/3D_visualization_rosenbrock_2_-2_2_coolwarm.png
 , id=162, 462.528pt x 346.896pt>
@@ -1167,7 +1172,7 @@ m.png Graphic file (type png)
 <use Abbildungen/3D_Visualisationen/3D_visualization_rosenbrock_2_-2_2_coolwarm
 .png>
 Package pdftex.def Info: Abbildungen/3D_Visualisationen/3D_visualization_rosenb
-rock_2_-2_2_coolwarm.png  used on input line 1518.
+rock_2_-2_2_coolwarm.png  used on input line 1522.
 (pdftex.def)             Requested size: 370.02289pt x 277.51717pt.
  [31 <./Abbildungen/3D_Visualisationen/3D_visualization_griewangk_2_-600_600_co
 olwarm.png> <./Abbildungen/3D_Visualisationen/3D_visualization_griewangk_2_-10_
@@ -1180,7 +1185,7 @@ olwarm.png Graphic file (type png)
 <use Abbildungen/3D_Visualisationen/3D_visualization_hartmann_not_3_2_4_0_1_coo
 lwarm.png>
 Package pdftex.def Info: Abbildungen/3D_Visualisationen/3D_visualization_hartma
-nn_not_3_2_4_0_1_coolwarm.png  used on input line 1531.
+nn_not_3_2_4_0_1_coolwarm.png  used on input line 1535.
 (pdftex.def)             Requested size: 224.06548pt x 168.0485pt.
 <Abbildungen/3D_Visualisationen/3D_visualization_hartmann_not_6_2_4_0_1_coolwar
 m.png, id=170, 462.528pt x 346.896pt>
@@ -1189,10 +1194,10 @@ olwarm.png Graphic file (type png)
 <use Abbildungen/3D_Visualisationen/3D_visualization_hartmann_not_6_2_4_0_1_coo
 lwarm.png>
 Package pdftex.def Info: Abbildungen/3D_Visualisationen/3D_visualization_hartma
-nn_not_6_2_4_0_1_coolwarm.png  used on input line 1532.
+nn_not_6_2_4_0_1_coolwarm.png  used on input line 1536.
 (pdftex.def)             Requested size: 224.06548pt x 168.0485pt.
 
-Underfull \hbox (badness 1478) in paragraph at lines 1534--1534
+Underfull \hbox (badness 1478) in paragraph at lines 1538--1538
 [][][]|\T1/cmr/m/n/12 Hartmann-Testfunktionen: Hart-mann(2,4) (links) und Hart-
 mann(2,6)
  []
@@ -1208,7 +1213,7 @@ File: Abbildungen/3D_Visualisationen/3D_visualization_shekel_2_5_-0_10_coolwarm
 <use Abbildungen/3D_Visualisationen/3D_visualization_shekel_2_5_-0_10_coolwarm.
 png>
 Package pdftex.def Info: Abbildungen/3D_Visualisationen/3D_visualization_shekel
-_2_5_-0_10_coolwarm.png  used on input line 1548.
+_2_5_-0_10_coolwarm.png  used on input line 1552.
 (pdftex.def)             Requested size: 134.44064pt x 100.83015pt.
 <Abbildungen/3D_Visualisationen/3D_visualization_shekel_2_7_-0_10_coolwarm.png,
  id=179, 462.528pt x 346.896pt>
@@ -1217,7 +1222,7 @@ File: Abbildungen/3D_Visualisationen/3D_visualization_shekel_2_7_-0_10_coolwarm
 <use Abbildungen/3D_Visualisationen/3D_visualization_shekel_2_7_-0_10_coolwarm.
 png>
 Package pdftex.def Info: Abbildungen/3D_Visualisationen/3D_visualization_shekel
-_2_7_-0_10_coolwarm.png  used on input line 1549.
+_2_7_-0_10_coolwarm.png  used on input line 1553.
 (pdftex.def)             Requested size: 134.44064pt x 100.83015pt.
 <Abbildungen/3D_Visualisationen/3D_visualization_shekel_2_10_-0_10_coolwarm.png
 , id=180, 462.528pt x 346.896pt>
@@ -1226,10 +1231,10 @@ m.png Graphic file (type png)
 <use Abbildungen/3D_Visualisationen/3D_visualization_shekel_2_10_-0_10_coolwarm
 .png>
 Package pdftex.def Info: Abbildungen/3D_Visualisationen/3D_visualization_shekel
-_2_10_-0_10_coolwarm.png  used on input line 1550.
+_2_10_-0_10_coolwarm.png  used on input line 1554.
 (pdftex.def)             Requested size: 134.44064pt x 100.83015pt.
 
-Overfull \hbox (0.6381pt too wide) in paragraph at lines 1621--1623
+Overfull \hbox (0.6381pt too wide) in paragraph at lines 1625--1627
 \OML/cmm/m/it/12 D \OT1/cmr/m/n/12 = [\OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 3\OML
 /cmm/m/it/12 ; \OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 2\OML/cmm/m/it/12 :\OT1/cmr/
 m/n/12 8\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 2\OML/cmm/m/it/1
@@ -1249,56 +1254,56 @@ m JSON-Format
 m.png> <./Abbildungen/3D_Visualisationen/3D_visualization_shekel_2_7_-0_10_cool
 warm.png> <./Abbildungen/3D_Visualisationen/3D_visualization_shekel_2_10_-0_10_
 coolwarm.png>] [34]
-Underfull \hbox (badness 10000) in paragraph at lines 1694--1696
+Underfull \hbox (badness 10000) in paragraph at lines 1698--1700
 
  []
 
 [35]
-Underfull \hbox (badness 10000) in paragraph at lines 1697--1699
+Underfull \hbox (badness 10000) in paragraph at lines 1701--1703
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1700--1701
+Underfull \hbox (badness 10000) in paragraph at lines 1704--1705
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1788--1789
+Underfull \hbox (badness 10000) in paragraph at lines 1792--1793
 
  []
 
 [36]
-Underfull \hbox (badness 10000) in paragraph at lines 1832--1833
+Underfull \hbox (badness 10000) in paragraph at lines 1836--1837
 
  []
 
 [37]
 
 LaTeX Warning: Reference `eq:coil_spring_material' on page 38 undefined on inpu
-t line 1890.
+t line 1894.
 
 
 LaTeX Warning: Reference `fig:box_plot:ACO_R-VS_CSD_penalty_perform' on page 38
- undefined on input line 1899.
+ undefined on input line 1903.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1896--1900
+Underfull \hbox (badness 10000) in paragraph at lines 1900--1904
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1896--1900
+Underfull \hbox (badness 10000) in paragraph at lines 1900--1904
 
  []
 
 [38]
 
 LaTeX Warning: Reference `fig:box_plot:ACO_R-VS_CSD_exact_perform' on page 39 u
-ndefined on input line 1979.
+ndefined on input line 1983.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1977--1980
+Underfull \hbox (badness 10000) in paragraph at lines 1981--1984
 
  []
 
@@ -1308,7 +1313,7 @@ File: Abbildungen/3D_Visualisationen/3D_visualization_CSD_filtered_space.png Gr
 aphic file (type png)
 <use Abbildungen/3D_Visualisationen/3D_visualization_CSD_filtered_space.png>
 Package pdftex.def Info: Abbildungen/3D_Visualisationen/3D_visualization_CSD_fi
-ltered_space.png  used on input line 1983.
+ltered_space.png  used on input line 1987.
 (pdftex.def)             Requested size: 179.24963pt x 134.43668pt.
 <Abbildungen/3D_Visualisationen/3D_visualization_CSD_unfiltered_space.png, id=2
 04, 462.528pt x 346.896pt>
@@ -1316,7 +1321,7 @@ File: Abbildungen/3D_Visualisationen/3D_visualization_CSD_unfiltered_space.png
 Graphic file (type png)
 <use Abbildungen/3D_Visualisationen/3D_visualization_CSD_unfiltered_space.png>
 Package pdftex.def Info: Abbildungen/3D_Visualisationen/3D_visualization_CSD_un
-filtered_space.png  used on input line 1985.
+filtered_space.png  used on input line 1989.
 (pdftex.def)             Requested size: 179.24963pt x 134.43668pt.
 <Abbildungen/3D_Visualisationen/3D_visualization_CSD_unfiltered_and_filtered_sp
 ace.png, id=205, 462.528pt x 346.896pt>
@@ -1325,21 +1330,21 @@ ed_space.png Graphic file (type png)
 <use Abbildungen/3D_Visualisationen/3D_visualization_CSD_unfiltered_and_filtere
 d_space.png>
 Package pdftex.def Info: Abbildungen/3D_Visualisationen/3D_visualization_CSD_un
-filtered_and_filtered_space.png  used on input line 1994.
+filtered_and_filtered_space.png  used on input line 1998.
 (pdftex.def)             Requested size: 231.26343pt x 173.44757pt.
 [39 <./Abbildungen/3D_Visualisationen/3D_visualization_CSD_filtered_space.png> 
 <./Abbildungen/3D_Visualisationen/3D_visualization_CSD_unfiltered_space.png>]
-Overfull \hbox (2.99617pt too wide) in alignment at lines 2237--2237
+Overfull \hbox (2.99617pt too wide) in alignment at lines 2241--2241
 [][][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2241--2242
+Underfull \hbox (badness 10000) in paragraph at lines 2245--2246
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2294--2295
+Underfull \hbox (badness 10000) in paragraph at lines 2298--2299
 
  []
 
@@ -1347,57 +1352,47 @@ Underfull \hbox (badness 10000) in paragraph at lines 2294--2295
 red_space.png>]
 
 LaTeX Warning: Reference `VerglelichACORundACORVerySimple' on page 41 undefined
- on input line 2300.
+ on input line 2304.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2300--2301
+Underfull \hbox (badness 10000) in paragraph at lines 2304--2305
 
  []
 
 
 LaTeX Warning: Reference `VerglelichACORundACORSimple' on page 41 undefined on 
-input line 2302.
+input line 2306.
 
 
 LaTeX Warning: Reference `VerglelichACORundACORVerySimple' on page 41 undefined
- on input line 2302.
+ on input line 2306.
 
 
-Underfull \hbox (badness 10000) in alignment at lines 2334--2334
+Underfull \hbox (badness 10000) in alignment at lines 2338--2338
 [][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2338--2339
+Underfull \hbox (badness 10000) in paragraph at lines 2342--2343
 
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 2394--2394
+Underfull \hbox (badness 10000) in alignment at lines 2398--2398
 [][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2398--2400
+Underfull \hbox (badness 10000) in paragraph at lines 2402--2404
 
  []
 
 [41]
-Underfull \hbox (badness 10000) in paragraph at lines 2403--2404
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2405--2406
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 2407--2408
 
  []
 
-[42]
+
 Underfull \hbox (badness 10000) in paragraph at lines 2409--2410
 
  []
@@ -1407,347 +1402,347 @@ Underfull \hbox (badness 10000) in paragraph at lines 2411--2412
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 2471--2472
+[42]
+Underfull \hbox (badness 10000) in paragraph at lines 2413--2414
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2534--2534
+Underfull \hbox (badness 10000) in paragraph at lines 2415--2416
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2475--2476
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2538--2538
 []|\T1/cmr/bx/n/8 1.0 \T1/cmr/m/n/8 (389)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2534--2534
+Underfull \hbox (badness 10000) in paragraph at lines 2538--2538
 []|\T1/cmr/m/n/8 1.2 (471)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2534--2534
+Underfull \hbox (badness 10000) in paragraph at lines 2538--2538
 []|\T1/cmr/m/n/8 1.0 (354)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2534--2534
+Underfull \hbox (badness 10000) in paragraph at lines 2538--2538
 []|\T1/cmr/m/n/8 1.3 (443)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2534--2534
+Underfull \hbox (badness 10000) in paragraph at lines 2538--2538
 []|\T1/cmr/bx/n/8 1.0 \T1/cmr/m/n/8 (1390)
  []
 
 
-Underfull \hbox (badness 7486) in paragraph at lines 2534--2534
+Underfull \hbox (badness 7486) in paragraph at lines 2538--2538
 []|\T1/cmr/m/n/8 12.3 (17062)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2534--2534
+Underfull \hbox (badness 10000) in paragraph at lines 2538--2538
 []|\T1/cmr/bx/n/8 1.0 \T1/cmr/m/n/8 (2487)
  []
 
 
-Underfull \hbox (badness 7486) in paragraph at lines 2534--2534
+Underfull \hbox (badness 7486) in paragraph at lines 2538--2538
 []|\T1/cmr/m/n/8 15.8 (39345)
  []
 
 
-Underfull \hbox (badness 7486) in paragraph at lines 2534--2534
+Underfull \hbox (badness 7486) in paragraph at lines 2538--2538
 []|\T1/cmr/m/n/8 27.1 (67340)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2534--2534
+Underfull \hbox (badness 10000) in paragraph at lines 2538--2538
 []|\T1/cmr/m/n/8 1.8 (787)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2534--2534
+Underfull \hbox (badness 10000) in paragraph at lines 2538--2538
 []|\T1/cmr/m/n/8 1.2 (517)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2534--2534
+Underfull \hbox (badness 10000) in paragraph at lines 2538--2538
 []|\T1/cmr/m/n/8 1.3 (593)
  []
 
 
-Underfull \hbox (badness 7486) in paragraph at lines 2534--2534
+Underfull \hbox (badness 7486) in paragraph at lines 2538--2538
 []|\T1/cmr/m/n/8 58.1 (25860)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2538--2539
+Underfull \hbox (badness 10000) in paragraph at lines 2542--2543
 
  []
 
 [43]
-Underfull \hbox (badness 10000) in paragraph at lines 2602--2602
+Underfull \hbox (badness 10000) in paragraph at lines 2606--2606
 []|\T1/cmr/bx/n/8 1.0 \T1/cmr/m/n/8 (1390)
  []
 
 
-Underfull \hbox (badness 7486) in paragraph at lines 2602--2602
+Underfull \hbox (badness 7486) in paragraph at lines 2606--2606
 []|\T1/cmr/m/n/8 12.3 (17062)
  []
 
 
-Underfull \hbox (badness 7486) in paragraph at lines 2602--2602
+Underfull \hbox (badness 7486) in paragraph at lines 2606--2606
 []|\T1/cmr/m/n/8 22.4 (10977)
  []
 
 
-Underfull \hbox (badness 7486) in paragraph at lines 2602--2602
+Underfull \hbox (badness 7486) in paragraph at lines 2606--2606
 []|\T1/cmr/m/n/8 44.0 (21546)
  []
 
 
-Underfull \hbox (badness 7486) in paragraph at lines 2602--2602
+Underfull \hbox (badness 7486) in paragraph at lines 2606--2606
 []|\T1/cmr/m/n/8 19.7 (16117)
  []
 
 
-Underfull \hbox (badness 7486) in paragraph at lines 2602--2602
+Underfull \hbox (badness 7486) in paragraph at lines 2606--2606
 []|\T1/cmr/m/n/8 28.8 (23618)
  []
 
 
-Underfull \hbox (badness 7486) in paragraph at lines 2602--2602
+Underfull \hbox (badness 7486) in paragraph at lines 2606--2606
 []|\T1/cmr/m/n/8 48.7 (39916)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2602--2602
+Underfull \hbox (badness 10000) in paragraph at lines 2606--2606
 []|\T1/cmr/bx/n/8 1.0 \T1/cmr/m/n/8 (2487)
  []
 
 
-Underfull \hbox (badness 7486) in paragraph at lines 2602--2602
+Underfull \hbox (badness 7486) in paragraph at lines 2606--2606
 []|\T1/cmr/m/n/8 15.8 (39345)
  []
 
 
-Underfull \hbox (badness 7486) in paragraph at lines 2602--2602
+Underfull \hbox (badness 7486) in paragraph at lines 2606--2606
 []|\T1/cmr/m/n/8 30.2 (75218)
  []
 
 
-Underfull \hbox (badness 7486) in paragraph at lines 2602--2602
+Underfull \hbox (badness 7486) in paragraph at lines 2606--2606
 []|\T1/cmr/m/n/8 15.0 (37414)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2602--2602
+Underfull \hbox (badness 10000) in paragraph at lines 2606--2606
 []|\T1/cmr/m/n/8 1.8 (787)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2602--2602
+Underfull \hbox (badness 10000) in paragraph at lines 2606--2606
 []|\T1/cmr/m/n/8 11.0 (4913)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2602--2602
+Underfull \hbox (badness 10000) in paragraph at lines 2606--2606
 []|\T1/cmr/m/n/8 18.8 (8348)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2606--2607
+Underfull \hbox (badness 10000) in paragraph at lines 2610--2611
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2694--2696
+Underfull \hbox (badness 10000) in paragraph at lines 2698--2700
 
  []
 
 [44]
-Underfull \hbox (badness 10000) in alignment at lines 2791--2791
+Underfull \hbox (badness 10000) in alignment at lines 2795--2795
 [][][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2795--2797
+Underfull \hbox (badness 10000) in paragraph at lines 2799--2801
 
  []
 
 [45]
-Underfull \hbox (badness 10000) in paragraph at lines 2876--2876
+Underfull \hbox (badness 10000) in paragraph at lines 2880--2880
 []|\T1/cmr/m/n/8 ACO$[]$-VS-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2876--2876
+Underfull \hbox (badness 10000) in paragraph at lines 2880--2880
 []|\T1/cmr/m/n/8 ACO$[]$-VS-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2876--2876
+Underfull \hbox (badness 10000) in paragraph at lines 2880--2880
 []|\T1/cmr/m/n/8 ACO$[]$-VS-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2876--2876
+Underfull \hbox (badness 10000) in paragraph at lines 2880--2880
 []|\T1/cmr/m/n/8 2.2 (777)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2876--2876
+Underfull \hbox (badness 10000) in paragraph at lines 2880--2880
 []|\T1/cmr/m/n/8 3.3 (1173)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2876--2876
+Underfull \hbox (badness 10000) in paragraph at lines 2880--2880
 []|\T1/cmr/m/n/8 3.9 (1390)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2876--2876
+Underfull \hbox (badness 10000) in paragraph at lines 2880--2880
 []|\T1/cmr/m/n/8 6.3 (2207)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2876--2876
+Underfull \hbox (badness 10000) in paragraph at lines 2880--2880
 []|\T1/cmr/bx/n/8 1.0 \T1/cmr/m/n/8 (1390)
  []
 
 
-Underfull \hbox (badness 6332) in paragraph at lines 2876--2876
+Underfull \hbox (badness 6332) in paragraph at lines 2880--2880
 []|\T1/cmr/m/n/8 12.3 (17062)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2876--2876
+Underfull \hbox (badness 10000) in paragraph at lines 2880--2880
 []|\T1/cmr/m/n/8 8.7 (3280)
  []
 
 
-Underfull \hbox (badness 6332) in paragraph at lines 2876--2876
+Underfull \hbox (badness 6332) in paragraph at lines 2880--2880
 []|\T1/cmr/m/n/8 19.2 (16117)
  []
 
 
-Underfull \hbox (badness 6332) in paragraph at lines 2876--2876
+Underfull \hbox (badness 6332) in paragraph at lines 2880--2880
 []|\T1/cmr/m/n/8 28.1 (23618)
  []
 
 
-Underfull \hbox (badness 6332) in paragraph at lines 2876--2876
+Underfull \hbox (badness 6332) in paragraph at lines 2880--2880
 []|\T1/cmr/m/n/8 47.5 (39916)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2876--2876
+Underfull \hbox (badness 10000) in paragraph at lines 2880--2880
 []|\T1/cmr/m/n/8 1.2 (2487)
  []
 
 
-Underfull \hbox (badness 6332) in paragraph at lines 2876--2876
+Underfull \hbox (badness 6332) in paragraph at lines 2880--2880
 []|\T1/cmr/m/n/8 18.4 (39345)
  []
 
 
-Underfull \hbox (badness 6332) in paragraph at lines 2876--2876
+Underfull \hbox (badness 6332) in paragraph at lines 2880--2880
 []|\T1/cmr/m/n/8 35.1 (75218)
  []
 
 
-Underfull \hbox (badness 3657) in paragraph at lines 2876--2876
+Underfull \hbox (badness 3657) in paragraph at lines 2880--2880
 []|\T1/cmr/m/n/8 (37414) [2%]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2876--2876
+Underfull \hbox (badness 10000) in paragraph at lines 2880--2880
 []|\T1/cmr/m/n/8 1.8 (787)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2876--2876
+Underfull \hbox (badness 10000) in paragraph at lines 2880--2880
 []|\T1/cmr/m/n/8 11.0 (4913)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2876--2876
+Underfull \hbox (badness 10000) in paragraph at lines 2880--2880
 []|\T1/cmr/m/n/8 18.8 (8348)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2876--2876
+Underfull \hbox (badness 10000) in paragraph at lines 2880--2880
 []|\T1/cmr/m/n/8 1.8 (748)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2876--2876
+Underfull \hbox (badness 10000) in paragraph at lines 2880--2880
 []|\T1/cmr/m/n/8 9.5 (4237)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2876--2876
+Underfull \hbox (badness 10000) in paragraph at lines 2880--2880
 []|\T1/cmr/m/n/8 14.7 (6523)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2876--2876
+Underfull \hbox (badness 10000) in paragraph at lines 2880--2880
 []|\T1/cmr/m/n/8 1.6 (715)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2876--2876
+Underfull \hbox (badness 10000) in paragraph at lines 2880--2880
 []|\T1/cmr/m/n/8 9.0 (3976)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2876--2876
+Underfull \hbox (badness 10000) in paragraph at lines 2880--2880
 []|\T1/cmr/m/n/8 15.6 (6913)
  []
 
 
-Underfull \hbox (badness 6332) in paragraph at lines 2876--2876
+Underfull \hbox (badness 6332) in paragraph at lines 2880--2880
 []|\T1/cmr/m/n/8 24.5 (10869)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2876--2876
+Underfull \hbox (badness 10000) in paragraph at lines 2880--2880
 []|\T1/cmr/m/n/8 11.3 (7853)
  []
 
 
-Underfull \hbox (badness 6332) in paragraph at lines 2876--2876
+Underfull \hbox (badness 6332) in paragraph at lines 2880--2880
 []|\T1/cmr/m/n/8 22.0 (15273)
  []
 
 
-Underfull \hbox (badness 6332) in paragraph at lines 2876--2876
+Underfull \hbox (badness 6332) in paragraph at lines 2880--2880
 []|\T1/cmr/m/n/8 60.0 (41606)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2880--2882
+Underfull \hbox (badness 10000) in paragraph at lines 2884--2886
 
  []
 
 [46]
 
 LaTeX Warning: Reference `VerglelichACORundACORVerySimpleTeil2' on page 47 unde
-fined on input line 2885.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2885--2886
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2887--2888
-
- []
+fined on input line 2889.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 2889--2890
 
  []
 
-[47]
+
 Underfull \hbox (badness 10000) in paragraph at lines 2891--2892
 
  []
@@ -1757,31 +1752,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 2893--2894
 
  []
 
-
-LaTeX Warning: Reference `VerglelichACORundACORVerySimpleTeil2' on page 48 unde
-fined on input line 2895.
-
-
+[47]
 Underfull \hbox (badness 10000) in paragraph at lines 2895--2896
 
  []
 
 
-LaTeX Warning: Reference `VerglelichACORundACORVerySimple' on page 48 undefined
- on input line 2897.
-
-
-LaTeX Warning: Reference `VerglelichACORundACORVerySimpleTeil2' on page 48 unde
-fined on input line 2897.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 2897--2898
 
  []
-
-
-LaTeX Warning: Reference `VerglelichACORundACORVerySimple' on page 48 undefined
- on input line 2899.
 
 
 LaTeX Warning: Reference `VerglelichACORundACORVerySimpleTeil2' on page 48 unde
@@ -1793,27 +1772,53 @@ Underfull \hbox (badness 10000) in paragraph at lines 2899--2900
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 2953--2953
+LaTeX Warning: Reference `VerglelichACORundACORVerySimple' on page 48 undefined
+ on input line 2901.
+
+
+LaTeX Warning: Reference `VerglelichACORundACORVerySimpleTeil2' on page 48 unde
+fined on input line 2901.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2901--2902
+
+ []
+
+
+LaTeX Warning: Reference `VerglelichACORundACORVerySimple' on page 48 undefined
+ on input line 2903.
+
+
+LaTeX Warning: Reference `VerglelichACORundACORVerySimpleTeil2' on page 48 unde
+fined on input line 2903.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2903--2904
+
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 2957--2957
 [][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2957--2958
-
- []
-
-[48]
 Underfull \hbox (badness 10000) in paragraph at lines 2961--2962
 
  []
 
+[48]
+Underfull \hbox (badness 10000) in paragraph at lines 2965--2966
+
+ []
+
 [49]
-Underfull \hbox (badness 10000) in alignment at lines 3200--3200
+Underfull \hbox (badness 10000) in alignment at lines 3204--3204
 [][][][][] 
  []
 
 [50]
-Overfull \hbox (6.59933pt too wide) in alignment at lines 3354--3354
+Overfull \hbox (6.59933pt too wide) in alignment at lines 3358--3358
 [][][][][][][][] 
  []
 
@@ -1824,17 +1829,7 @@ Overfull \vbox (3.87822pt too high) has occurred while \output is active []
 [52]
 
 LaTeX Warning: Reference `VerglelichACORundACORVerySimpleTeil2' on page 53 unde
-fined on input line 3368.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3368--3369
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3370--3371
-
- []
+fined on input line 3372.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 3372--3373
@@ -1852,7 +1847,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 3376--3377
  []
 
 
-Overfull \hbox (9.5597pt too wide) in paragraph at lines 3382--3383
+Underfull \hbox (badness 10000) in paragraph at lines 3378--3379
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3380--3381
+
+ []
+
+
+Overfull \hbox (9.5597pt too wide) in paragraph at lines 3386--3387
 \T1/cmr/m/n/12 Die Ro-sen-brock-funk-ti-on nimmt ih-ren Op-ti-mal-wert y=0 an b
 ei $[] \OT1/cmr/m/n/12 = [1\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 1\OML/cmm/m/it/12
  ; \OT1/cmr/m/n/12 1\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 1\OML/cmm/m/it/12 ; \OT1
@@ -1862,27 +1867,17 @@ OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 1]$\T1/cmr/m/n/12 .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3382--3383
-
- []
-
-[53]
-Underfull \hbox (badness 10000) in paragraph at lines 3384--3385
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 3386--3387
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 3393--3394
+[53]
+Underfull \hbox (badness 10000) in paragraph at lines 3388--3389
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3395--3396
+Underfull \hbox (badness 10000) in paragraph at lines 3390--3391
 
  []
 
@@ -1892,17 +1887,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 3397--3398
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3402--3403
+Underfull \hbox (badness 10000) in paragraph at lines 3399--3400
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3404--3405
+Underfull \hbox (badness 10000) in paragraph at lines 3401--3402
 
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 3406--3407
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3408--3409
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3410--3411
 
  []
 
@@ -1930,7 +1935,7 @@ arts=0_acc=1e-10.png Graphic file (type png)
 <use Abbildungen/ACO_R_simple_Cigar_m_compare_n=10_g_q=0_95_xi=0_95_k=100_resta
 rts=0_acc=1e-10.png>
 Package pdftex.def Info: Abbildungen/ACO_R_simple_Cigar_m_compare_n=10_g_q=0_95
-_xi=0_95_k=100_restarts=0_acc=1e-10.png  used on input line 3442.
+_xi=0_95_k=100_restarts=0_acc=1e-10.png  used on input line 3446.
 (pdftex.def)             Requested size: 179.24963pt x 134.43668pt.
 <Abbildungen/ACO_R_very_simple_Cigar_m_compare_n=10_g_q=0_95_xi=0_95_k=100_rest
 arts=0_acc=1e-10.png, id=287, 462.528pt x 346.896pt>
@@ -1939,7 +1944,7 @@ _restarts=0_acc=1e-10.png Graphic file (type png)
 <use Abbildungen/ACO_R_very_simple_Cigar_m_compare_n=10_g_q=0_95_xi=0_95_k=100_
 restarts=0_acc=1e-10.png>
 Package pdftex.def Info: Abbildungen/ACO_R_very_simple_Cigar_m_compare_n=10_g_q
-=0_95_xi=0_95_k=100_restarts=0_acc=1e-10.png  used on input line 3444.
+=0_95_xi=0_95_k=100_restarts=0_acc=1e-10.png  used on input line 3448.
 (pdftex.def)             Requested size: 179.24963pt x 134.43668pt.
 <Abbildungen/ACO_R_simple_Paraboloid_m_compare_n=10_g_q=0_95_xi=0_95_k=100_rest
 arts=0_acc=1e-10.png, id=288, 462.528pt x 346.896pt>
@@ -1948,7 +1953,7 @@ _restarts=0_acc=1e-10.png Graphic file (type png)
 <use Abbildungen/ACO_R_simple_Paraboloid_m_compare_n=10_g_q=0_95_xi=0_95_k=100_
 restarts=0_acc=1e-10.png>
 Package pdftex.def Info: Abbildungen/ACO_R_simple_Paraboloid_m_compare_n=10_g_q
-=0_95_xi=0_95_k=100_restarts=0_acc=1e-10.png  used on input line 3451.
+=0_95_xi=0_95_k=100_restarts=0_acc=1e-10.png  used on input line 3455.
 (pdftex.def)             Requested size: 179.24963pt x 134.43668pt.
 <Abbildungen/ACO_R_very_simple_Paraboloid_m_compare_n=10_g_q=0_95_xi=0_95_k=100
 _restarts=0_acc=1e-10.png, id=289, 462.528pt x 346.896pt>
@@ -1957,7 +1962,7 @@ k=100_restarts=0_acc=1e-10.png Graphic file (type png)
 <use Abbildungen/ACO_R_very_simple_Paraboloid_m_compare_n=10_g_q=0_95_xi=0_95_k
 =100_restarts=0_acc=1e-10.png>
 Package pdftex.def Info: Abbildungen/ACO_R_very_simple_Paraboloid_m_compare_n=1
-0_g_q=0_95_xi=0_95_k=100_restarts=0_acc=1e-10.png  used on input line 3453.
+0_g_q=0_95_xi=0_95_k=100_restarts=0_acc=1e-10.png  used on input line 3457.
 (pdftex.def)             Requested size: 179.24963pt x 134.43668pt.
 <Abbildungen/ACO_R_simple_Tablet_m_compare_n=10_g_q=0_95_xi=0_95_k=100_restarts
 =0_acc=1e-10.png, id=290, 462.528pt x 346.896pt>
@@ -1966,7 +1971,7 @@ tarts=0_acc=1e-10.png Graphic file (type png)
 <use Abbildungen/ACO_R_simple_Tablet_m_compare_n=10_g_q=0_95_xi=0_95_k=100_rest
 arts=0_acc=1e-10.png>
 Package pdftex.def Info: Abbildungen/ACO_R_simple_Tablet_m_compare_n=10_g_q=0_9
-5_xi=0_95_k=100_restarts=0_acc=1e-10.png  used on input line 3460.
+5_xi=0_95_k=100_restarts=0_acc=1e-10.png  used on input line 3464.
 (pdftex.def)             Requested size: 179.24963pt x 134.43668pt.
 <Abbildungen/ACO_R_very_simple_Tablet_m_compare_n=10_g_q=0_95_xi=0_95_k=100_res
 tarts=0_acc=1e-10.png, id=291, 462.528pt x 346.896pt>
@@ -1975,7 +1980,7 @@ File: Abbildungen/ACO_R_very_simple_Tablet_m_compare_n=10_g_q=0_95_xi=0_95_k=10
 <use Abbildungen/ACO_R_very_simple_Tablet_m_compare_n=10_g_q=0_95_xi=0_95_k=100
 _restarts=0_acc=1e-10.png>
 Package pdftex.def Info: Abbildungen/ACO_R_very_simple_Tablet_m_compare_n=10_g_
-q=0_95_xi=0_95_k=100_restarts=0_acc=1e-10.png  used on input line 3462.
+q=0_95_xi=0_95_k=100_restarts=0_acc=1e-10.png  used on input line 3466.
 (pdftex.def)             Requested size: 179.24963pt x 134.43668pt.
 [1 <./Abbildungen/ACO_R_simple_Cigar_m_compare_n=10_g_q=0_95_xi=0_95_k=100_rest
 arts=0_acc=1e-10.png> <./Abbildungen/ACO_R_very_simple_Cigar_m_compare_n=10_g_q
@@ -1990,7 +1995,7 @@ cc=1e-10.png Graphic file (type png)
 <use Abbildungen/ACO_R_simple_Cigar_g_q_compare_m=1_xi=0_95_k=100_restarts=0_ac
 c=1e-10.png>
 Package pdftex.def Info: Abbildungen/ACO_R_simple_Cigar_g_q_compare_m=1_xi=0_95
-_k=100_restarts=0_acc=1e-10.png  used on input line 3473.
+_k=100_restarts=0_acc=1e-10.png  used on input line 3477.
 (pdftex.def)             Requested size: 277.51894pt x 208.13919pt.
 <Abbildungen/ACO_R_simple_Paraboloid_g_q_compare_m=1_xi=0_95_k=100_restarts=0_a
 cc=1e-10.png, id=302, 462.528pt x 346.896pt>
@@ -1999,7 +2004,7 @@ s=0_acc=1e-10.png Graphic file (type png)
 <use Abbildungen/ACO_R_simple_Paraboloid_g_q_compare_m=1_xi=0_95_k=100_restarts
 =0_acc=1e-10.png>
 Package pdftex.def Info: Abbildungen/ACO_R_simple_Paraboloid_g_q_compare_m=1_xi
-=0_95_k=100_restarts=0_acc=1e-10.png  used on input line 3480.
+=0_95_k=100_restarts=0_acc=1e-10.png  used on input line 3484.
 (pdftex.def)             Requested size: 277.51894pt x 208.13919pt.
  [2 <./Abbildungen/ACO_R_simple_Tablet_m_compare_n=10_g_q=0_95_xi=0_95_k=100_re
 starts=0_acc=1e-10.png> <./Abbildungen/ACO_R_very_simple_Tablet_m_compare_n=10_
@@ -2012,7 +2017,7 @@ acc=1e-10.png Graphic file (type png)
 <use Abbildungen/ACO_R_simple_Tablet_g_q_compare_m=1_xi=0_95_k=100_restarts=0_a
 cc=1e-10.png>
 Package pdftex.def Info: Abbildungen/ACO_R_simple_Tablet_g_q_compare_m=1_xi=0_9
-5_k=100_restarts=0_acc=1e-10.png  used on input line 3487.
+5_k=100_restarts=0_acc=1e-10.png  used on input line 3491.
 (pdftex.def)             Requested size: 277.51894pt x 208.13919pt.
 <Abbildungen/ACO_R_simple_Cigar_xi_compare_m=1_n=10_g_q=0_95_k=100_restarts=0_a
 cc=1e-10.png, id=311, 462.528pt x 346.896pt>
@@ -2021,7 +2026,7 @@ s=0_acc=1e-10.png Graphic file (type png)
 <use Abbildungen/ACO_R_simple_Cigar_xi_compare_m=1_n=10_g_q=0_95_k=100_restarts
 =0_acc=1e-10.png>
 Package pdftex.def Info: Abbildungen/ACO_R_simple_Cigar_xi_compare_m=1_n=10_g_q
-=0_95_k=100_restarts=0_acc=1e-10.png  used on input line 3498.
+=0_95_k=100_restarts=0_acc=1e-10.png  used on input line 3502.
 (pdftex.def)             Requested size: 179.24963pt x 134.43668pt.
 <Abbildungen/ACO_R_very_simple_Cigar_xi_compare_m=1_n=10_g_q=0_95_k=100_restart
 s=0_acc=1e-10.png, id=312, 462.528pt x 346.896pt>
@@ -2030,7 +2035,7 @@ starts=0_acc=1e-10.png Graphic file (type png)
 <use Abbildungen/ACO_R_very_simple_Cigar_xi_compare_m=1_n=10_g_q=0_95_k=100_res
 tarts=0_acc=1e-10.png>
 Package pdftex.def Info: Abbildungen/ACO_R_very_simple_Cigar_xi_compare_m=1_n=1
-0_g_q=0_95_k=100_restarts=0_acc=1e-10.png  used on input line 3500.
+0_g_q=0_95_k=100_restarts=0_acc=1e-10.png  used on input line 3504.
 (pdftex.def)             Requested size: 179.24963pt x 134.43668pt.
  [3 <./Abbildungen/ACO_R_simple_Paraboloid_g_q_compare_m=1_xi=0_95_k=100_restar
 ts=0_acc=1e-10.png> <./Abbildungen/ACO_R_simple_Tablet_g_q_compare_m=1_xi=0_95_
@@ -2042,7 +2047,7 @@ starts=0_acc=1e-10.png Graphic file (type png)
 <use Abbildungen/ACO_R_simple_Paraboloid_xi_compare_m=1_n=10_g_q=0_95_k=100_res
 tarts=0_acc=1e-10.png>
 Package pdftex.def Info: Abbildungen/ACO_R_simple_Paraboloid_xi_compare_m=1_n=1
-0_g_q=0_95_k=100_restarts=0_acc=1e-10.png  used on input line 3507.
+0_g_q=0_95_k=100_restarts=0_acc=1e-10.png  used on input line 3511.
 (pdftex.def)             Requested size: 179.24963pt x 134.43668pt.
 <Abbildungen/ACO_R_very_simple_Paraboloid_xi_compare_m=1_n=10_g_q=0_95_k=100_re
 starts=0_acc=1e-10.png, id=319, 462.528pt x 346.896pt>
@@ -2051,7 +2056,7 @@ File: Abbildungen/ACO_R_very_simple_Paraboloid_xi_compare_m=1_n=10_g_q=0_95_k=1
 <use Abbildungen/ACO_R_very_simple_Paraboloid_xi_compare_m=1_n=10_g_q=0_95_k=10
 0_restarts=0_acc=1e-10.png>
 Package pdftex.def Info: Abbildungen/ACO_R_very_simple_Paraboloid_xi_compare_m=
-1_n=10_g_q=0_95_k=100_restarts=0_acc=1e-10.png  used on input line 3509.
+1_n=10_g_q=0_95_k=100_restarts=0_acc=1e-10.png  used on input line 3513.
 (pdftex.def)             Requested size: 179.24963pt x 134.43668pt.
 <Abbildungen/ACO_R_simple_Tablet_xi_compare_m=1_n=10_g_q=0_95_k=100_restarts=0_
 acc=1e-10.png, id=320, 462.528pt x 346.896pt>
@@ -2060,7 +2065,7 @@ ts=0_acc=1e-10.png Graphic file (type png)
 <use Abbildungen/ACO_R_simple_Tablet_xi_compare_m=1_n=10_g_q=0_95_k=100_restart
 s=0_acc=1e-10.png>
 Package pdftex.def Info: Abbildungen/ACO_R_simple_Tablet_xi_compare_m=1_n=10_g_
-q=0_95_k=100_restarts=0_acc=1e-10.png  used on input line 3516.
+q=0_95_k=100_restarts=0_acc=1e-10.png  used on input line 3520.
 (pdftex.def)             Requested size: 179.24963pt x 134.43668pt.
 <Abbildungen/ACO_R_very_simple_Tablet_xi_compare_m=1_n=10_g_q=0_95_k=100_restar
 ts=0_acc=1e-10.png, id=321, 462.528pt x 346.896pt>
@@ -2069,7 +2074,7 @@ estarts=0_acc=1e-10.png Graphic file (type png)
 <use Abbildungen/ACO_R_very_simple_Tablet_xi_compare_m=1_n=10_g_q=0_95_k=100_re
 starts=0_acc=1e-10.png>
 Package pdftex.def Info: Abbildungen/ACO_R_very_simple_Tablet_xi_compare_m=1_n=
-10_g_q=0_95_k=100_restarts=0_acc=1e-10.png  used on input line 3518.
+10_g_q=0_95_k=100_restarts=0_acc=1e-10.png  used on input line 3522.
 (pdftex.def)             Requested size: 179.24963pt x 134.43668pt.
  [4 <./Abbildungen/ACO_R_simple_Cigar_xi_compare_m=1_n=10_g_q=0_95_k=100_restar
 ts=0_acc=1e-10.png> <./Abbildungen/ACO_R_very_simple_Cigar_xi_compare_m=1_n=10_
@@ -2079,12 +2084,12 @@ O_R_very_simple_Paraboloid_xi_compare_m=1_n=10_g_q=0_95_k=100_restarts=0_acc=1e
 -10.png> <./Abbildungen/ACO_R_simple_Tablet_xi_compare_m=1_n=10_g_q=0_95_k=100_
 restarts=0_acc=1e-10.png> <./Abbildungen/ACO_R_very_simple_Tablet_xi_compare_m=
 1_n=10_g_q=0_95_k=100_restarts=0_acc=1e-10.png>]
-Overfull \hbox (12.59427pt too wide) in paragraph at lines 3547--3548
+Overfull \hbox (12.59427pt too wide) in paragraph at lines 3551--3552
  $[]$  $[]$  $[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3547--3548
+Underfull \hbox (badness 10000) in paragraph at lines 3551--3552
 
  []
 
@@ -2103,10 +2108,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 15180 strings out of 474222
- 293969 string characters out of 5748732
- 2053975 words of memory out of 5000000
- 37179 multiletter control sequences out of 15000+600000
+ 15181 strings out of 474222
+ 293993 string characters out of 5748732
+ 2052975 words of memory out of 5000000
+ 37180 multiletter control sequences out of 15000+600000
  587306 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,22n,107p,10934b,1713s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2146,7 +2151,7 @@ ic/cm-super/sfsx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx1728
 mf/fonts/type1/public/cm-super/sfti1000.pfb></usr/share/texmf/fonts/type1/publi
 c/cm-super/sfti1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.
 pfb>
-Output written on Masterarbeit.pdf (71 pages, 1792499 bytes).
+Output written on Masterarbeit.pdf (71 pages, 1792965 bytes).
 PDF statistics:
  512 PDF objects out of 1000 (max. 8388607)
  289 compressed objects within 3 object streams
