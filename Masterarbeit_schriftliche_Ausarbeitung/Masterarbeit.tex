@@ -903,11 +903,24 @@ within=section,
 	
 	Die folgende Beschreibung ist nach \textit{Chelouah und Siarry}~\cite{chelouah1999enhanced}.\hfill\newline
 	
-	ECTS steht für \textbf{E}nhanced \textbf{C}ontinuous \textbf{T}abu \textbf{S}earch. Nach \cite{glover1986future} werden bei Tabu Search Tabulisten erzeugt, welche die letzten \(m\) Züge des Suchalgorithmus speichern. Die so gespeicherten Züge sind verboten bzw. tabu. Dies soll das Zurückverfolgen von bereits gegangenen Schritten ausschließen. Wenn also ein Suchalgorithmus von 3 zu 4 gegangen ist, darf er für eine gewisse Zeit nicht mehr von 4 zu 3 gehen.
+	ECTS steht für \textbf{E}nhanced \textbf{C}ontinuous \textbf{T}abu \textbf{S}earch. Nach \cite{glover1986future} werden bei Tabu Search Tabulisten erzeugt, welche die letzten \(m\) Züge des Suchalgorithmus speichern, wobei \(m\) eine  Die so gespeicherten Züge sind verboten bzw. tabu. Dies soll das Zurückverfolgen von bereits gegangenen Schritten ausschließen. Wenn also ein Suchalgorithmus von 3 zu 4 gegangen ist, darf er für eine gewisse Zeit nicht mehr von 4 zu 3 gehen. Enhanced Continuous Tabu Search ist eine Erweiterung von Tabu Search, die auch mit stetigen Variablen umgehen kann.
+	
+	%TODO näher beschreiben, was Tabu Search und Enhanced Continuous Tabu Search ist?
+	%TODO ist es ok, dass die Beschreibung nach "Chelouah und Siarry" steht aber dann zuerst was anderes kommt?
 	
 	\paragraph{ESA}\mbox{}\\
 	
+	Die folgende ist Beschreibung ist nach \textit{Siarry et al.}~\cite{siarry1997enhanced}.\hfill\newline
+	
+	ESA steht für \textbf{E}nhanced \textbf{S}imulated \textbf{A}nnealing. Nach \cite{kirkpatrick1983optimization} wird bei Simulated Annealing eine Temperatur \(T \in \mathbb{R}\) eingeführt. Die Temperatur/Variable \(T\) steuert, wie stark der Zufall in die Lösungssuche eingeht. Es wird zunächst mit einem hohen \(T\) begonnen, was einen hohen Einfluss von Zufall bedeutet. Danach wird \(T\), bis zu einem Threshold, langsam verringert. Wenn der Threshold erreicht ist, wird \(T\) wieder erhöht aber nicht so hoch, wie beim Anfang. Dies sorgt dafür, dass ein gefundenes lokales Minima wieder verlassen werden kann, was für Simulated Annealing wichtig ist, da Simulated Annealing für hochdimensionale Probleme mit vielen lokalen Minima entwickelt wurde. Wie weit in einer Iteration, gegeben eines Startpunktes, gegangen werden kann, wird durch einen Step Vector geregelt. Enhanced Simulated Annealing zeichnet sich durch eine optimierte Temperaturänderungsstrategie und Step Vector-Kontrolle aus, sowie bessere Stopkriterien.
+	
+	%TODO Einfluss von Zufall besser formulieren?
+	
 	\paragraph{DE}\mbox{}\\
+	
+	Die folgende Beschreibung ist nach \textit{Storn und Price}~\cite{storn1997differential}.\hfill\newline
+	
+	DE steht für \textbf{D}ifferential \textbf{E}volution.
 	
 	\section{SPPBO-Schema} \label{sec:SPPBO_Schema}
 	

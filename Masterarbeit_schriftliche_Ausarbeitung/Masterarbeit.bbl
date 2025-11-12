@@ -127,7 +127,13 @@
   algorithms--a comparative review.
 \newblock {In: }\emph{Natural Computing} 3 (2004), Nr. 1, S. 77--112
 
-\bibitem[21]{kupfer2021hierarchical}
+\bibitem[21]{kirkpatrick1983optimization}
+\textsc{Kirkpatrick}, S.  ; \textsc{Gelatt~Jr}, C.~D.  ; \textsc{Vecchi},
+  M.~P.:
+\newblock Optimization by simulated annealing.
+\newblock {In: }\emph{science} 220 (1983), Nr. 4598, S. 671--680
+
+\bibitem[22]{kupfer2021hierarchical}
 \textsc{Kupfer}, E.  ; \textsc{Le}, H.~T. ; \textsc{Zitt}, J.  ; \textsc{Lin},
   Y.-C.   ; \textsc{Middendorf}, M. :
 \newblock A Hierarchical Simple Probabilistic Population-Based Algorithm
@@ -135,125 +141,140 @@
 \newblock {In: }\emph{2021 IEEE Symposium Series on Computational Intelligence
   (SSCI)} IEEE, 2021, S. 1--8
 
-\bibitem[22]{ACO_2013}
+\bibitem[23]{ACO_2013}
 \textsc{Liao}, T.  ; \textsc{Socha}, K.  ; \textsc{Oca}, M. A.~M. ;
   \textsc{St{\"u}tzle}, T.   ; \textsc{Dorigo}, M. :
 \newblock Ant colony optimization for mixed-variable optimization problems.
 \newblock {In: }\emph{IEEE Transactions on evolutionary computation} 18 (2013),
   Nr. 4, S. 503--518
 
-\bibitem[23]{lin2015simple}
+\bibitem[24]{lin2015simple}
 \textsc{Lin}, Y.-C.  ; \textsc{Clauss}, M.   ; \textsc{Middendorf}, M. :
 \newblock Simple probabilistic population-based optimization.
 \newblock {In: }\emph{IEEE Transactions on Evolutionary Computation} 20 (2015),
   Nr. 2, S. 245--262
 
-\bibitem[24]{FCM_2019}
+\bibitem[25]{FCM_2019}
 \textsc{Madorskiy}, F.~C.:
 \newblock \emph{Vergleich zweier Varianten der L{\"o}sungserzeugung von
   Ameisenalgorithmen zur Funktionsoptimierung}, Universit{\"a}t Leipzig,
   Bachelorarbeit, 2002
 
-\bibitem[25]{ACO_2003_simiple_problems}
+\bibitem[26]{ACO_2003_simiple_problems}
 \textsc{Merkle}, D.  ; \textsc{Middendorf}, M. :
 \newblock On the behavior of ACO algorithms: Studies on simple problems.
 \newblock {In: }\emph{Metaheuristics: computer decision-making}.
 \newblock Springer, 2003, S. 465--480
 
-\bibitem[26]{molga2005test}
+\bibitem[27]{molga2005test}
 \textsc{Molga}, M.  ; \textsc{Smutnicki}, C. :
 \newblock Test functions for optimization needs.
 \newblock {In: }\emph{Test functions for optimization needs} 101 (2005)
 
-\bibitem[27]{monmarche2000pachycondyla}
+\bibitem[28]{monmarche2000pachycondyla}
 \textsc{Monmarch{\'e}}, N.  ; \textsc{Venturini}, G.   ; \textsc{Slimane}, M. :
 \newblock On how Pachycondyla apicalis ants suggest a new search algorithm.
 \newblock {In: }\emph{Future generation computer systems} 16 (2000), Nr. 8, S.
   937--946
 
-\bibitem[28]{ocenavsek2002estimation}
+\bibitem[29]{ocenavsek2002estimation}
 \textsc{Ocen{\'a}{\v{s}}ek}, J.  ; \textsc{Schwarz}, J. :
 \newblock Estimation distribution algorithm for mixed continuous-discrete
   optimization problems.
 \newblock {In: }\emph{2nd Euro-International Symposium on Computational
   Intelligence} IOS Press Kosice, 2002, S. 227--232
 
-\bibitem[29]{ostermeier1994step}
+\bibitem[30]{ostermeier1994step}
 \textsc{Ostermeier}, A.  ; \textsc{Gawelczyk}, A.   ; \textsc{Hansen}, N. :
 \newblock Step-size adaptation based on non-local use of selection information.
 \newblock {In: }\emph{International Conference on Parallel Problem Solving from
   Nature} Springer, 1994, S. 189--198
 
-\bibitem[30]{pelikan2001bayesian}
+\bibitem[31]{pelikan2001bayesian}
 \textsc{Pelikan}, M.  ; \textsc{Goldberg}, D.~E.  ; \textsc{Sastry}, K. :
 \newblock Bayesian optimization algorithm, decision graphs, and Occam's razor.
 \newblock {In: }\emph{Proceedings of the 3rd Annual Conference on Genetic and
   Evolutionary Computation}, 2001, S. 519--526
 
-\bibitem[31]{pohlheim2007examples}
+\bibitem[32]{pohlheim2007examples}
 \textsc{Pohlheim}, H. :
 \newblock Examples of objective functions.
 \newblock {In: }\emph{Retrieved} 4 (2007), Nr. 10, S. 2012
 
-\bibitem[32]{rechenberg1973evolutionsstrategie}
+\bibitem[33]{rechenberg1973evolutionsstrategie}
 \textsc{Rechenberg}, I. :
 \newblock Evolutionsstrategie: Optimierung technischer systeme nach prinzipien
   der biologischen evolution, frommann--holzboog.
 \newblock {In: }\emph{Stuttgart-Bad Cannstatt} 47 (1973)
 
-\bibitem[33]{sandgren1990nonlinear}
+\bibitem[34]{sandgren1990nonlinear}
 \textsc{Sandgren}, E. :
 \newblock Nonlinear integer and discrete programming in mechanical design
   optimization.
 \newblock   (1990), S. 223--229
 
-\bibitem[34]{socha2009ant}
+\bibitem[35]{siarry1997enhanced}
+\textsc{Siarry}, P.  ; \textsc{Berthiau}, G.  ; \textsc{Durdin}, F.   ;
+  \textsc{Haussy}, J. :
+\newblock Enhanced simulated annealing for globally minimizing functions of
+  many-continuous variables.
+\newblock {In: }\emph{ACM Transactions on Mathematical Software (TOMS)} 23
+  (1997), Nr. 2, S. 209--228
+
+\bibitem[36]{socha2009ant}
 \textsc{Socha}, K. :
 \newblock \emph{Ant colony optimisation for continuous and mixed-variable
   domains}.
 \newblock VDM Publishing Saarbr{\"u}cken, 2009
 
-\bibitem[35]{socha2008ant}
+\bibitem[37]{socha2008ant}
 \textsc{Socha}, K.  ; \textsc{Dorigo}, M. :
 \newblock Ant colony optimization for continuous domains.
 \newblock {In: }\emph{European journal of operational research} 185 (2008), Nr.
   3, S. 1155--1173
 
-\bibitem[36]{stutzle1999aco}
+\bibitem[38]{storn1997differential}
+\textsc{Storn}, R.  ; \textsc{Price}, K. :
+\newblock Differential evolution--a simple and efficient heuristic for global
+  optimization over continuous spaces.
+\newblock {In: }\emph{Journal of global optimization} 11 (1997), Nr. 4, S.
+  341--359
+
+\bibitem[39]{stutzle1999aco}
 \textsc{St{\"u}tzle}, T.  ; \textsc{Dorigo}, M.   u.\,a.:
 \newblock ACO algorithms for the traveling salesman problem.
 \newblock {In: }\emph{Evolutionary algorithms in engineering and computer
   science} 4 (1999), S. 163--183
 
-\bibitem[37]{testFunctionHartmann3}
+\bibitem[40]{testFunctionHartmann3}
 \textsc{Surjanovic}, S.  ; \textsc{Bingham}, D. :
 \newblock Virtual Library of Simulation Experiments: Test Function and
   Datasets.
 \newblock {In: }\emph{https://www.sfu.ca/$\sim$ssurjano/hart3.html}  (abgerufen
   am 17.08.2019)
 
-\bibitem[38]{testFunctionHartmann6}
+\bibitem[41]{testFunctionHartmann6}
 \textsc{Surjanovic}, S.  ; \textsc{Bingham}, D. :
 \newblock Virtual Library of Simulation Experiments: Test Function and
   Datasets.
 \newblock {In: }\emph{https://www.sfu.ca/$\sim$ssurjano/hart6.html}  (abgerufen
   am 17.08.2019)
 
-\bibitem[39]{testFunctionShekel}
+\bibitem[42]{testFunctionShekel}
 \textsc{Surjanovic}, S.  ; \textsc{Bingham}, D. :
 \newblock Virtual Library of Simulation Experiments: Test Function and
   Datasets.
 \newblock {In: }\emph{https://www.sfu.ca/$\sim$ssurjano/shekel.html}
   (abgerufen am 17.08.2019)
 
-\bibitem[40]{testFunctionBranin}
+\bibitem[43]{testFunctionBranin}
 \textsc{Surjanovic}, S.  ; \textsc{Bingham}, D. :
 \newblock Virtual Library of Simulation Experiments: Test Function and
   Datasets.
 \newblock {In: }\emph{https://www.sfu.ca/$\sim$ssurjano/branin.html}
   (abgerufen am 19.08.2019)
 
-\bibitem[41]{testFunctionGoldsteinandPrice}
+\bibitem[44]{testFunctionGoldsteinandPrice}
 \textsc{Surjanovic}, S.  ; \textsc{Bingham}, D. :
 \newblock Virtual Library of Simulation Experiments: Test Function and
   Datasets.
