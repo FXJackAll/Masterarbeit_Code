@@ -14,7 +14,7 @@ class CSD_exact(Problem):
     """
     """
 
-    def __init__(self, csd_name: str, problem_path="../problems/mixed_variable/", load_instance=True) -> None:
+    def __init__(self, csd_name: str, problem_path="../problems/mixed_variable_problems/", load_instance=True) -> None:
         self._problem_type = 'CSD'
         self._csd_name = csd_name
         self._problem_path = problem_path
@@ -138,7 +138,7 @@ class CSD_exact(Problem):
         # print("außerhalb der Schleife: " + str(solution))
 
         self._additionally_required_iterations += additionally_required_iterations
-
+        # print("in CSD_exact init_solution: " + str(self._additionally_required_iterations))
         solution["so_far"] = self._additionally_required_iterations
 
         # return insulators, delta_x, temperatures, c, self.get_solution_quality(solution)

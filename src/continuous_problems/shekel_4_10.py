@@ -150,6 +150,14 @@ class Shekel_4_10(Problem):
         """
         pass
 
+    def req_iterations(self) -> int:
+
+        return 0
+
+    def add_req_iterations(self, additionally_required_iterations) -> None:
+
+        pass
+
     @property
     def type(self) -> str:
 

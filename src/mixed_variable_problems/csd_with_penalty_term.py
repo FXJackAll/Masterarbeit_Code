@@ -20,7 +20,7 @@ class CSD_penalty(Problem):
     _t_p = "total refrigeration power required"
     """
 
-    def __init__(self, csd_name: str, problem_path="../problems/mixed_variable/", load_instance=True) -> None:
+    def __init__(self, csd_name: str, problem_path="../problems/mixed_variable_problems/", load_instance=True) -> None:
         self._problem_type = 'CSD'
         self._csd_name = csd_name
         self._problem_path = problem_path

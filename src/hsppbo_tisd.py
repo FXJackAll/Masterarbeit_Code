@@ -445,7 +445,7 @@ class HSPPBO_TISD:
             case 'penalty-term':
 
                 next_solution = self._search_algorithm.construct_solution(self, search_parameter)
-                next_solution["so_far"] = 0
+                next_solution["so_far"] = self._problem.req_iterations()
                 # print("in HSPPBO_TISD find_next_solution: " + str(next_solution))
 
             case _:

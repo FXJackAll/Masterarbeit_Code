@@ -763,9 +763,11 @@ within=section,
 	
 	Um ACO\(_\mathbb{R}\)-VS anzupassen werden nicht-stetige Probleme als stetige Probleme behandelt. Das heißt, es wird mit nicht-stetigen Werten gerechnet als wären sie stetig. Es wird also bis zur Gleichung~\ref{subsec:ACO_R_-_very_-_simple:eq:interval} genauso verfahren, wie im Abschnitt~\ref{subsec:ACO_R_-_very_-_simple}, um einen neuen, stetigen Wert zu erhalten. Nachdem man einen neuen stetigen Wert gewonnen hat, betrachtet man die nicht-stetigen Werte zwischen denen der stetige Wert liegt und wählt dann als Ergebnis, den nicht-stetigen Wert, an dem der Stetige am nächsten liegt.\hfill\newline
 	
-	Schließlich wird \ac{acorvs} um eine Neustartfunktion erweitert. Der Algorithmus kann entweder eine fixe Anzahl an Neustarts ausführen oder adaptiv neu starten. Wenn adaptiv gewählt wurde, startet der Algorithmus neu, wenn eine Periode von \(\gamma\) Lösungen hintereinander sich um weniger als ein Threshold \(\varepsilon_{th}\) unterscheiden. Ich habe \(\gamma = 7\) und \(\varepsilon_{th} = 10^{-10}\) gesetzt. 
+	Schließlich wird \ac{acorvs} um eine Neustartfunktion erweitert. Der Algorithmus kann entweder eine fixe Anzahl an Neustarts ausführen oder adaptiv neu starten.  Wenn adaptiv gewählt wurde, startet der Algorithmus neu, wenn eine Periode von \(\gamma\) Lösungen hintereinander sich um weniger als ein Threshold \(\varepsilon_{th}\) unterscheiden. Ich habe als intuitiven Start \(\gamma = 7\) und \(\varepsilon_{th} = 10^{-10}\) gesetzt. 
 	
 	%TODO periode?
+	
+	%TODO fixed als Parameter aufführen?
 	
 	\begin{table}[H]
 		\fontsize{10pt}{12pt}
@@ -811,6 +813,7 @@ within=section,
 	Die folgende Beschreibung ist nach \textit{Rechenberg}~\cite{rechenberg1973evolutionsstrategie}.\hfill\newline
 	
 	%TODO Elter?
+	%TODO Anfangsbuchstaben hervorheben?
 	
 	ES steht für \textbf{E}volution \textbf{S}trategies. (1 + 1)-ES ist eines der ersten ES, die für Optimierung von stetigen Funktionen \(f\) vorgeschlagen wurden. In (1 + 1)-ES wird mit einem einzigen Elter (parent) begonnen und in jeder Iteration gibt es nur ein Kind (offspring), deswegen (1 + 1). Die zugrunde liegende Population besteht also, in jeder Generation \(g, g \in \{0, 1, 2, \dots\}\), nur aus dem Elter und dem Kind. Nach der Initialisierung des Elter \(x^{(g)}_{parent}\), wird das Kind \(x^{(g + 1)}_{offspring}\) in der Gleichung~\ref{subsubsubpar:Grundlagen:Vergleichsalgorithmen:1_und_1_-_ES:Offspring} gewonnen, wobei \(I\) die Einheitsmatrix ist und \(\sigma\) die Verteilungsvarianz ist und als \glqq Step Size\grqq{} bezeichnet wird.
 	
@@ -920,7 +923,7 @@ within=section,
 	
 	Die folgende Beschreibung ist nach \textit{Storn und Price}~\cite{storn1997differential}.\hfill\newline
 	
-	DE steht für \textbf{D}ifferential \textbf{E}volution.
+	DE steht für \textbf{D}ifferential \textbf{E}volution. DE wendet Selektion, Crossover und Mutation, um ein Minimum einer gegebenen Zielfunktion zu finden. Diese Meta-Heuristik heißt differential, da in der mathematischen Definition eine Differenz zentrale Bedeutung hat.
 	
 	\section{SPPBO-Schema} \label{sec:SPPBO_Schema}
 	
@@ -1910,28 +1913,30 @@ within=section,
 			
 		\end{table}
 		
-		\noindent Der Materialbedarf und damit die Zielfunktion wird mit Hilfe der Formel~\ref{eq:coil_spring_material} berechnet.
+		\noindent Der Materialbedarf und damit die Zielfunktion wird mit Hilfe der Formel~\ref{subsubsec:Testfunktionen:CSD:eq:CSD_material} berechnet.
 		
-		\begin{equation} \label{eq:CSD_material}
+		\begin{equation} \label{subsubsec:Testfunktionen:CSD:eq:CSD_material}
 			f(N, D, d) = \frac{\pi^2 D d^2 (N + 2)}{4}
 		\end{equation}
 		
 		\paragraph{Vollständiger Raum als Initialisierungsintervall}\mbox{}\\%TODO fragen, ob 5.5.1.1 gut ist?
 		\newline
 		\noindent Wie bereits im Abschnitt~\ref{sec:Testfunktionen} beschrieben, hat das Initialisierungsintervall großen Einfluss auf den Erfolg %die Güte?
-		des Algorithmus. So können für das CSD Anfangslösungen aus dem gesamten Raum \(\{3 \cdot d_{min}, 3.0\} \times \{d_{min}, 0.5000\} \times \{1, 70\}\) oder dem gefilterten Raum gezogen werden, was für das CSD einen Unterschied macht. Nimmt man den gesamten Raum als Grundlage, so findet ACO\(_\mathbb{R}\)-VS das Optimum nicht oder nur nach mehreren tausend Iterationen, wie in der Abbildung~\ref{fig:box_plot:ACO_R-VS_CSD_penalty_perform} zu sehen.\\%TODO besser formulieren
+		des Algorithmus. So können für das CSD Anfangslösungen aus dem gesamten Raum \(\{3 \cdot d_{min}, 3.0\} \times \{d_{min}, 0.5000\} \times \{1, 70\}\) oder dem gefilterten Raum gezogen werden.\\%TODO besser formulieren
 		
-		Nimmt man den gesamten Raum zum ziehen der Initiallösungen, so ändert sich die Zielfunktion von der Formel~\ref{eq:CSD_material} zu der Formel~\ref{eq:CSD_penalty}, wie in \cite{ACO_2013} definiert.
+		%TODO  was für das CSD einen Unterschied macht. Nimmt man den gesamten Raum als Grundlage, so findet \ac{acorvsmv} das Optimum nicht oder nur nach mehreren tausend Iterationen, wie in der Abbildung~\ref{fig:box_plot:ACO_R-VS_CSD_penalty_perform} zu sehen
 		
-		\begin{equation} \label{eq:CSD_penalty}
+		Nimmt man den gesamten Raum zum ziehen der Initiallösungen, so ändert sich die Zielfunktion von der Formel~\ref{subsubsec:Testfunktionen:CSD:eq:CSD_material} zu der Formel~\ref{subsubsec:Testfunktionen:CSD:eq:CSD_penalty}, wie in \cite{ACO_2013} definiert.
+		
+		\begin{equation} \label{subsubsec:Testfunktionen:CSD:eq:CSD_penalty}
 			\hat{f} = f \prod_{i = 1}^{8} \hat{c_i}^3 
 		\end{equation}
 		
 		%TODO hier Kritik einbauen oder eigenen Abschnitt dafür machen
 		
-		Dabei werden die \(\hat{c_i}\)'s in der Formel~\ref{eq:CSD_c_i} definiert.
+		Dabei werden die \(\hat{c_i}\)'s in der Formel~\ref{subsubsec:Testfunktionen:CSD:eq:CSD_c_i} definiert.
 		
-		\begin{equation} \label{eq:CSD_c_i}
+		\begin{equation} \label{subsubsec:Testfunktionen:CSD:eq:CSD_c_i}
 			\hat{c_i} =
 			\begin{cases}
 				\begin{aligned}
@@ -1999,7 +2004,11 @@ within=section,
 		
 		\paragraph{Gefilterter Raum als Initialisierungsintervall}\mbox{}\\
 		\newline
-		\noindent Wenn der gefilterte Raum genommen wird, konvergiert der Algorithmus sehr viel schneller, findet aber auch die selben lokalen Minima, anstatt des globalen Minima. Ferner werden mehrere tausend Iterationen für die Initialisierung gebraucht, da Punkte, welche die Constrains verletzen, gefiltert werden. Benutzt man den gefilterten Raum, kann die Formel~\ref{eq:CSD_material} ohne Veränderungen beibehalten werden. Abbildung~\ref{fig:box_plot:ACO_R-VS_CSD_exact_perform} zeigt, wie viele Iterationen bei gefiltertem Raum, für die Initialisierung und für die Lösungssuche selbst, notwendig waren und Abbildung~\ref{fig:3D_plot:CSD:filtered_and_unfiltered_search_spaces} zeigt, wie stark sich der Initialisierungsraum verkleinert und damit die Lösungssuche erleichtert wird, wenn der Initialisierungsraum vor dem Ausführen des Algorithmus nach gültigen Lösungen gefiltert wird. Wie zu sehen verkleinert sich der Initialisierungsraum um mehr als das achtfache.%TODO 3D-Plot vom gefliterten Raum einfügen
+		
+		\noindent Benutzt man den gefilterten Raum, kann die Formel~\ref{subsubsec:Testfunktionen:CSD:eq:CSD_material} ohne Veränderungen beibehalten werden. Abbildung~\ref{fig:3D_plot:CSD:filtered_and_unfiltered_search_spaces} zeigt, wie stark sich der Initialisierungsraum verkleinert und damit die Lösungssuche erleichtert wird, wenn der Initialisierungsraum vor dem Ausführen des Algorithmus nach gültigen Lösungen gefiltert wird. Wie zu sehen verkleinert sich der Initialisierungsraum um mehr als das achtfache.%TODO 3D-Plot vom gefliterten Raum einfügen
+		
+		%TODO Wenn der gefilterte Raum genommen wird, konvergiert der Algorithmus sehr viel schneller, findet aber auch die selben lokalen Minima, anstatt des globalen Minima. Ferner werden mehrere tausend Iterationen für die Initialisierung gebraucht, da Punkte, welche die Constrains verletzen, gefiltert werden
+		%TODO Abbildung~\ref{fig:box_plot:ACO_R-VS_CSD_exact_perform} zeigt, wie viele Iterationen bei gefiltertem Raum, für die Initialisierung und für die Lösungssuche selbst, notwendig waren und
 		
 		\begin{figure}[H]
 			\centering
@@ -2010,7 +2019,7 @@ within=section,
 			\label{fig:3D_plot:CSD:filtered_and_unfiltered_search_spaces}
 		\end{figure}
 		
-		\noindent Um zu zeigen, wie stark der Initialisierungsraum sich verkleinert, werden die beiden Initialisierungsräume wie in Abbildung~\ref{fig:3D_plot:CSD:filtered_and_unfiltered_search_spaces}
+		\noindent Um zu zeigen, wie stark der Initialisierungsraum sich verkleinert, werden die beiden Initialisierungsräume, wie in Abbildung~\ref{fig:3D_plot:CSD:filtered_and_unfiltered_search_spaces_combined}, übereinander gelegt.
 		
 		\begin{figure}[H] %TODO Abbildung nachmalen
 			\centering
@@ -3385,6 +3394,122 @@ within=section,
 	\end{table}
 	
 	\subsubsection{Vergleich bzgl. dem Coil Spring Design Problem (CSD)} \label{subsubsec:Vergleich_Algorithmen:Vergleich_Auf_Dem_Coil_Spring_Design_Problem}
+	
+	%TODO viel vom Code ist nicht von mir. Wie?
+	
+	\begin{table}[H]
+		
+		%\fontsize{6pt}{6pt}
+		
+		%\caption{Vergleich der Ergebnisse zwischen Algorithmen, die probabilistisches Lernen einsetzten auf Testfunktionen, die zum Vergleich zwischen Algorithmen, die probabilistisches Lernen einsetzten, benutzt werden, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning} Teil 1}
+		
+		\caption{Vergleich der Ergebnisse zwischen \ac{acorvsmv} und Iterationen mit Neustartstrategie \(fixed = 0\)}
+		
+		%TODO fixed 0
+		
+		%TODO so formatierung ok?
+		
+		%TODO Besserer Titel, z.B. wie Vergleich zwischen ACO_R, ..., auf Testfunktionen, die zum Vergleich zwischen ALgorithmen, ..., Ameisenverwanten
+		
+		%TODO wie viele zitieren?
+		
+		\label{sec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_CSD_fixed}
+		
+		\scriptsize
+		
+		\begin{tabularx}{\linewidth}{l X X X X}
+			
+			%\rule{1.6cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{1.3cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.4cm}{0.4pt}\\
+			
+			\toprule
+			
+			%\Tstrut
+			
+			%TODO erklären was (1 + 1)ES, CSA-ES und sind?
+			
+			Testfunktion &  Hom-HPB- & Het-HPB- & Het-HSPPB- & Bestwert\\
+						 & ACO\(_\mathbb{R}\)-VS & ACO\(_\mathbb{R}\)-VS & ACO\(_\mathbb{R}\)-VS & \\
+			
+			%\rule{1.6cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{1.3cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.4cm}{0.4pt}\\
+			
+			\midrule
+			
+			exakt-exakt & \textbf{1.0} (389) [98\%] & 1.2 (471) [98\%] & 1.3 (499) & \textbf{1.0} (389)\\
+			
+			exakt-penalty & 1.0 (354) [94\%] & 1.3 (443) [96\%] & (390) & \textbf{1.0} (344)\\
+			
+			penalty-exakt & - & - & - & \textbf{1.0} (1390)\\
+			
+			penalty-penalty & & 1.1 (328) & 1.2 (364) & \textbf{1.0} (311)\\
+			
+			\bottomrule
+			
+		\end{tabularx}
+		
+		\smallskip
+		
+		Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Bei Ergebnissen, wo die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht wurde, ist der Anteil der erfolgreichen Durchläufe in Prozent in eckigen Klammern angegeben, wo \(\infty\) steht, wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht.\hfill\newline
+		
+		%TODO kann auch ein längerer Absatzt beibehalten werden? Ja
+		
+	\end{table}
+	
+	\begin{table}[H]
+		
+		%\fontsize{6pt}{6pt}
+		
+		%\caption{Vergleich der Ergebnisse zwischen Algorithmen, die probabilistisches Lernen einsetzten auf Testfunktionen, die zum Vergleich zwischen Algorithmen, die probabilistisches Lernen einsetzten, benutzt werden, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning} Teil 1}
+		
+		\caption{Vergleich der Ergebnisse zwischen \ac{acorvsmv} und Iterationen mit Neustartstrategie \(adaptive\)}
+		
+		%TODO fixed 0
+		
+		%TODO so formatierung ok?
+		
+		%TODO Besserer Titel, z.B. wie Vergleich zwischen ACO_R, ..., auf Testfunktionen, die zum Vergleich zwischen ALgorithmen, ..., Ameisenverwanten
+		
+		%TODO wie viele zitieren?
+		
+		\label{sec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_CSD_adaptive}
+		
+		\scriptsize
+		
+		\begin{tabularx}{\linewidth}{l X X X X}
+			
+			%\rule{1.6cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{1.3cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.4cm}{0.4pt}\\
+			
+			\toprule
+			
+			%\Tstrut
+			
+			%TODO erklären was (1 + 1)ES, CSA-ES und sind?
+			
+			Testfunktion &  Hom-HPB- & Het-HPB- & Het-HSPPB- & Bestwert\\
+			& ACO\(_\mathbb{R}\)-VS & ACO\(_\mathbb{R}\)-VS & ACO\(_\mathbb{R}\)-VS & \\
+			
+			%\rule{1.6cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{1.3cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.4cm}{0.4pt}\\
+			
+			\midrule
+			
+			exakt-exakt & \textbf{1.0} (389) [98\%] & 1.2 (471) [98\%] & 1.3 (499) & \textbf{1.0} (389)\\
+			
+			exakt-penalty & 1.0 (354) [94\%] & 1.3 (443) [96\%] & (390) & \textbf{1.0} (344)\\
+			
+			penalty-exakt & - & - & - & \textbf{1.0} (1390)\\
+			
+			penalty-penalty & & 1.1 (328) & 1.2 (364) & \textbf{1.0} (311)\\
+			
+			\bottomrule
+			
+		\end{tabularx}
+		
+		\smallskip
+		
+		Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Bei Ergebnissen, wo die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht wurde, ist der Anteil der erfolgreichen Durchläufe in Prozent in eckigen Klammern angegeben, wo \(\infty\) steht, wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht.\hfill\newline
+		
+		%TODO kann auch ein längerer Absatzt beibehalten werden? Ja
+		
+	\end{table}
 	
 	\section{Konvergenzbetrachtung} \label{Konvergenzbetrachtung}
 	

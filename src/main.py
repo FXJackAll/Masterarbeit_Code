@@ -60,12 +60,14 @@ def user_input():
     # parser.add_argument('-p', '--problem', type=str, default='rat195',
     #                    help='Name of the problem instance, e.g. the TSPLIB names like "rat195"')
 
-    parser.add_argument('-p', '--problem', type=str, default='martin_and_gaddy_2',
+    parser.add_argument('-p', '--problem', type=str, default='csd_3',
                         help='Name of the problem instance, e.g. TISD names like "tisd10" or TSPLIB names like "rat195"')
     # parser.add_argument('-pt', '--problem-type', type=str, default='TSP',
     #                    help='Type of the problem, e.g. TSP (standard, symmetric TSP), ATSP (asymmetric TSP), QAP, TISD')
-    parser.add_argument('-pt', '--problem-type', type=str, default='Martin_and_Gaddy',
+    parser.add_argument('-pt', '--problem-type', type=str, default='CSD_penalty',
                         help='Type of the problem, e.g. TSP (standard, symmetric TSP), ATSP (asymmetric TSP), QAP, TISD')
+    parser.add_argument('-ps', '--problem_specification', type=str, default='penalty',
+                        help='specification of the problem, e.g. exact or penalty given')
 
 
     parser.add_argument('-rot', '--rotation', action=argparse.BooleanOptionalAction, default=False,
@@ -88,7 +90,7 @@ def user_input():
                              'absolute: |f - f*| < Term, relative: |f - f*| < |Term * f| + Term')
     parser.add_argument('-abs', '--absolute_accuracy_term', type=float, default=10**(-10),
                         help='Absolute accuracy at which the algorithm;')
-    parser.add_argument('-rel', '--relative_accuracy_term', type=float, default=10**(-4),
+    parser.add_argument('-rel', '--relative_accuracy_term', type=float, default=10**(-6),
                         help='Relative accuracy at which the algorithm;')
 
 
@@ -104,7 +106,7 @@ def user_input():
                         help='The number of fixed restarts the algorithm performs')
     parser.add_argument('-noi', '--number_of_iterations_per_run', type=int, default=8000,
                         help='The number of iterations per run')
-    parser.add_argument('-po', '--problem_optimum', type=float, default=0,
+    parser.add_argument('-po', '--problem_optimum', type=float, default=2.658559,
                         help='the known optimum of the problem')
     parser.add_argument('-as', '--accepted_solutions', type=str, choices=['exact-term', 'penalty-term'], default='penalty-term',
                         help='The way initial solutions are calculated; exact-term means only initial solutions that fit the constrains'
@@ -510,10 +512,11 @@ def main():
 
                 # print(abs_path)
 
-                with open(os.path.join(abs_path, "performance_data/{}".format(args.problem) + "_" + args.restart_behaviour + "_" + "mixed_variable_10" + ".txt"), "a+") as performance_data:
+                with (open(os.path.join(abs_path, "performance_data/{}".format(args.problem) + "_" + args.accepted_solutions + "_" + args.problem_specification + "_" + args.restart_behaviour + "_" + "mixed_variable_10_6" + ".txt"), "a+") as performance_data):
 
                     # perform_data_string = str(best_solution[0][0]["required_restarts"]) + " " + str(best_solution[1] * 13 + best_solution[0][0]["so_far"]) + " " + str(best_solution[0][1]) + str("\n")
-                    perform_data_string = str(best_solution[0][0]["required_restarts"]) + " " + str(best_solution[1]) + " " + str(best_solution[1] * 13) + " " + str(best_solution[0][1]) + " " + str(timeit.default_timer() - starttime) + " " + str(best_solution[0][0]['continuous'][0]) + str("\n") # for continuous problems
+                    # perform_data_string = str(best_solution[0][0]["required_restarts"]) + " " + str(best_solution[1]) + " " + str(best_solution[1] * 13) + " " + str(best_solution[0][1]) + " " + str(timeit.default_timer() - starttime) + " " + str(best_solution[0][0]['continuous'][0]) + str("\n") # for continuous problems
+                    perform_data_string = str(best_solution[0][0]["required_restarts"]) + " " + str(best_solution[0][0]["so_far"]) + " " + str(best_solution[1]) + " " + str(best_solution[1] * 13 + best_solution[0][0]["so_far"]) + " " + str(best_solution[0][1]) + " " + str(timeit.default_timer() - starttime) + " " + str(best_solution[0][0]['continuous']) + " " + str(best_solution[0][0]['discrete']) + " " + str(best_solution[0][0]['natural_numbers']) + str("\n") # for CSD
 
                     performance_data.write(perform_data_string)
 
