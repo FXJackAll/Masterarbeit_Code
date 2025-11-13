@@ -26,6 +26,7 @@ class CSD_exact(Problem):
             with open(os.path.join(self._problem_path, self._csd_name + ".json")) as f:
                 self._instance = json.load(f)
                 self._dimension = self._instance["dimension"]
+                self._additionally_required_pre_iterations = 0
                 self._additionally_required_iterations = 0
                 self._variable_boundaries = self._instance["variable_boundaries"]
                 self._N_min = self._variable_boundaries["natural_numbers"][0][0] # minimum number of spring coils
@@ -137,9 +138,9 @@ class CSD_exact(Problem):
 
         # print("außerhalb der Schleife: " + str(solution))
 
-        self._additionally_required_iterations += additionally_required_iterations
+        self._additionally_required_pre_iterations += additionally_required_iterations
         # print("in CSD_exact init_solution: " + str(self._additionally_required_iterations))
-        solution["so_far"] = self._additionally_required_iterations
+        solution["so_far"] = self._additionally_required_pre_iterations
 
         # return insulators, delta_x, temperatures, c, self.get_solution_quality(solution)
         return [solution, self.get_solution_quality(solution)]
@@ -228,6 +229,14 @@ class CSD_exact(Problem):
     def visualize(self, solution=None, interactive=True, filepath=".", ) -> None:
 
         pass
+
+    def req_pre_iterations(self) -> int:
+
+        return self._additionally_required_pre_iterations
+
+    def add_req_pre_iterations(self, additionally_req_pre_iterations) -> None:
+
+        self._additionally_required_pre_iterations += additionally_req_pre_iterations
 
     def req_iterations(self) -> int:
 

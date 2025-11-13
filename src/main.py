@@ -71,9 +71,9 @@ def user_input():
                         help='enables random rotation of the given test function')
 
 
-    parser.add_argument('-salg', '--search_algorithm', type=str, default='h_het_aco_r_very_simple',
+    parser.add_argument('-salg', '--search_algorithm', type=str, default='h_hom_aco_r_very_simple',
                         help='Type of the search algorithm, e.g. random_search or aco_r_very_simple')
-    parser.add_argument('-salgn', '--search_algorithm_name', type=str, default='H_Het_ACO_R_Very_Simple',
+    parser.add_argument('-salgn', '--search_algorithm_name', type=str, default='H_Hom_ACO_R_Very_Simple',
                         help='Name of the search algorithm, e.g. Random_Search or ACO_R_Very_Simple')
     parser.add_argument('-mitc', '--max_iteration_count', type=int, default=10000,
                         help='Maximum number of iterations (not function evaluations) to run the search algorithm')
@@ -92,7 +92,7 @@ def user_input():
 
 
     parser.add_argument('-rsb', '--restart_behaviour', type=str, choices=['fixed', 'absolute', 'adaptive'],
-                        default='adaptive', help='Algorithm restarts a fixed amount of times,'
+                        default='fixed', help='Algorithm restarts a fixed amount of times,'
                                                  'after an absolut number of iterations'
                                                  'or when the difference between solutions is under a certain threshold')
     parser.add_argument('-per', '--period', type=int, default=7,
@@ -105,7 +105,7 @@ def user_input():
                         help='The number of iterations per run')
     parser.add_argument('-po', '--problem_optimum', type=float, default=2.658559,
                         help='the known optimum of the problem')
-    parser.add_argument('-as', '--accepted_solutions', type=str, choices=['exact-term', 'penalty-term'], default='penalty-term',
+    parser.add_argument('-as', '--accepted_solutions', type=str, choices=['exact-term', 'penalty-term'], default='exact-term',
                         help='The way initial solutions are calculated; exact-term means only initial solutions that fit the constrains'
                              'are allowed; penalty-term means all solutions are allowed, regardless if they fail the requirements')
 
@@ -489,10 +489,11 @@ def main():
                 logger.close_run_logger()
                 print("Solution:", best_solution)
                 print('Required pre iterations:', best_solution[0][0]["so_far"])
+                print("Required add iterations:", best_solution[0][0]["add_it"])
                 print('Required iterations:', best_solution[1])
                 print("Required restarts", best_solution[0][0]["required_restarts"])
                 print('Required total iterations:', best_solution[1] + best_solution[0][0]["so_far"])
-                print('Required function evaluations:', best_solution[1] * 13 + best_solution[0][0]["so_far"])
+                print('Required function evaluations:', best_solution[1] * 13 + best_solution[0][0]["so_far"] + best_solution[0][0]["add_it"])
                 print("Solution:", best_solution[0][0])
                 print("Solution quality:", best_solution[0][1])
                 print("Total execution time:", timeit.default_timer() - starttime)
@@ -513,7 +514,7 @@ def main():
 
                     # perform_data_string = str(best_solution[0][0]["required_restarts"]) + " " + str(best_solution[1] * 13 + best_solution[0][0]["so_far"]) + " " + str(best_solution[0][1]) + str("\n")
                     # perform_data_string = str(best_solution[0][0]["required_restarts"]) + " " + str(best_solution[1]) + " " + str(best_solution[1] * 13) + " " + str(best_solution[0][1]) + " " + str(timeit.default_timer() - starttime) + " " + str(best_solution[0][0]['continuous'][0]) + str("\n") # for continuous problems
-                    perform_data_string = str(best_solution[0][0]["required_restarts"]) + " " + str(best_solution[0][0]["so_far"]) + " " + str(best_solution[1]) + " " + str(best_solution[1] * 13 + best_solution[0][0]["so_far"]) + " " + str(best_solution[0][1]) + " " + str(timeit.default_timer() - starttime) + " " + str(best_solution[0][0]['continuous']) + " " + str(best_solution[0][0]['discrete']) + " " + str(best_solution[0][0]['natural_numbers']) + str("\n") # for CSD
+                    perform_data_string = str(best_solution[0][0]["required_restarts"]) + " " + str(best_solution[0][0]["so_far"]) + " " + str(best_solution[0][0]["add_it"]) + " " + str(best_solution[1]) + " " + str(best_solution[1] * 13 + best_solution[0][0]["so_far"] + best_solution[0][0]["add_it"]) + " " + str(best_solution[0][1]) + " " + str(timeit.default_timer() - starttime) + " " + str(best_solution[0][0]['continuous']) + " " + str(best_solution[0][0]['discrete']) + " " + str(best_solution[0][0]['natural_numbers']) + str("\n") # for CSD
 
                     performance_data.write(perform_data_string)
 

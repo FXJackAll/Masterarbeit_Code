@@ -229,6 +229,9 @@ class HSPPBO_TISD:
 
                            # best_solution["so_far"] = self._problem.req_iterations()
 
+                        best_solution[0]["so_far"] = self._problem.req_pre_iterations()
+                        best_solution[0]["add_it"] = self._problem.req_iterations()
+
                         return [best_solution, i]
 
                 case 'relative':
@@ -255,6 +258,11 @@ class HSPPBO_TISD:
                         # if "so_far" not in best_solution[0][0]:
 
                           #  best_solution[0][0]["so_far"] = self._problem.req_iterations()
+
+                        print(best_solution)
+
+                        best_solution[0]["so_far"] = self._problem.req_pre_iterations()
+                        best_solution[0]["add_it"] = self._problem.req_iterations()
 
                         return [best_solution, i]
 
@@ -291,6 +299,9 @@ class HSPPBO_TISD:
         # if "so_far" not in best_solution[0][0]:
 
           #  best_solution[0][0]["so_far"] = self._problem.req_iterations()
+
+        best_solution[0]["so_far"] = self._problem.req_pre_iterations()
+        best_solution[0]["add_it"] = self._problem.req_iterations()
 
         return [best_solution, self._max_iteration_count]
 
@@ -384,7 +395,7 @@ class HSPPBO_TISD:
         # next_solution = random.choices(possible_solutions, random_distribution)
 
         # TODO muss früher passieren
-        additionally_so_far = 0
+        additional_iterations = 0
 
         # print("in HSSPBO_TISD find_next_solution: " + str(self._tree.get_solution(0)))
 
@@ -433,19 +444,19 @@ class HSPPBO_TISD:
 
                 while not condition:
 
-                    additionally_so_far += 1
+                    additional_iterations += 1
 
                     next_solution = self._search_algorithm.construct_solution(self, search_parameter)
                     condition = self._problem.get_solution_quality(next_solution)[1]
 
-                self._problem.add_req_iterations(additionally_so_far)
+                self._problem.add_req_iterations(additional_iterations)
 
-                next_solution["so_far"] = self._problem.req_iterations()
+                next_solution["add_it"] = self._problem.req_iterations()
 
             case 'penalty-term':
 
                 next_solution = self._search_algorithm.construct_solution(self, search_parameter)
-                next_solution["so_far"] = self._problem.req_iterations()
+                next_solution["so_far"] = self._problem.req_pre_iterations()
                 # print("in HSPPBO_TISD find_next_solution: " + str(next_solution))
 
             case _:
