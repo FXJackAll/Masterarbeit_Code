@@ -58,22 +58,23 @@
 \contentsline {subsubsection}{\numberline {7.3.2}Diskrete Testfunktionen mit asymmetrischem Definitionsbereich}{34}{}%
 \contentsline {subsection}{\numberline {7.4}Testfunktionen mit gemischten Variablem}{35}{}%
 \contentsline {subsubsection}{\numberline {7.4.1}Konstruierte Testfunktionen}{35}{}%
-\contentsline {subsubsection}{\numberline {7.4.2}Coil Spring Design Problem (CSD)}{36}{}%
+\contentsline {subsubsection}{\numberline {7.4.2}Coil Spring Design Problem (CSD)}{37}{}%
 \contentsline {paragraph}{\numberline {7.4.2.1}Vollständiger Raum als Initialisierungsintervall}{39}{}%
 \contentsline {paragraph}{\numberline {7.4.2.2}Gefilterter Raum als Initialisierungsintervall}{40}{}%
+\contentsline {paragraph}{\numberline {7.4.2.3}Resultierende Testkombinationen für das \ac {csd}}{41}{}%
 \contentsline {section}{\numberline {8}Herausforderung}{41}{}%
 \contentsline {section}{\numberline {9}Vergleich von ACO\(_{\mathbb {R}}\), ACO\(_\text {MV}\), \acl {acorvs} und den Iteration von \acl {acorvs}}{41}{}%
 \contentsline {subsection}{\numberline {9.1}Vergleich bzgl. stetiger Testfunktionen}{41}{}%
-\contentsline {subsection}{\numberline {9.2}Vergleich bzgl. diskreter Testfunktionen}{50}{}%
-\contentsline {subsection}{\numberline {9.3}Vergleich bzgl. Testfunktionen mit gemischten Variablen}{50}{}%
-\contentsline {subsubsection}{\numberline {9.3.1}Vergleich bzgl. konstruierter Testfunktionen mit gemischten Variablen}{50}{}%
-\contentsline {subsubsection}{\numberline {9.3.2}Vergleich bzgl. dem Coil Spring Design Problem (CSD)}{54}{}%
-\contentsline {section}{\numberline {10}Konvergenzbetrachtung}{54}{}%
-\contentsline {subsection}{\numberline {10.1}Rosenbrock}{55}{}%
-\contentsline {section}{\numberline {11}Kurzzusammenfassung}{55}{}%
-\contentsline {section}{Literaturverzeichnis}{57}{}%
-\contentsline {section}{Tabellenverzeichnis}{60}{}%
-\contentsline {section}{Abbildungsverzeichnis}{60}{}%
+\contentsline {subsection}{\numberline {9.2}Vergleich bzgl. diskreter Testfunktionen}{51}{}%
+\contentsline {subsection}{\numberline {9.3}Vergleich bzgl. Testfunktionen mit gemischten Variablen}{51}{}%
+\contentsline {subsubsection}{\numberline {9.3.1}Vergleich bzgl. konstruierter Testfunktionen mit gemischten Variablen}{51}{}%
+\contentsline {subsubsection}{\numberline {9.3.2}Vergleich bzgl. dem Coil Spring Design Problem (CSD)}{55}{}%
+\contentsline {section}{\numberline {10}Konvergenzbetrachtung}{55}{}%
+\contentsline {subsection}{\numberline {10.1}Rosenbrock}{56}{}%
+\contentsline {section}{\numberline {11}Kurzzusammenfassung}{56}{}%
+\contentsline {section}{Literaturverzeichnis}{58}{}%
+\contentsline {section}{Tabellenverzeichnis}{61}{}%
+\contentsline {section}{Abbildungsverzeichnis}{61}{}%
 \contentsline {part}{\nonumberline Anlagen}{I}{}%
 \contentsline {section}{\numberline {A}Einfluss der Anzahl der Ameisen}{I}{}%
 \contentsline {section}{\numberline {B}Einfluss des Parameters \textit {q}}{II}{}%

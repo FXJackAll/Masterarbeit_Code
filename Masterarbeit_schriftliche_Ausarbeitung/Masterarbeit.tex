@@ -1711,7 +1711,7 @@ within=section,
 }
 		\end{lstlisting}
 		
-		Es wurden die Testfunktionen \glqq Cigar\grqq, \glqq Ellipsoid\grqq, \glqq Paraboloid\grqq{} und \glqq Tablet\grqq{} aus Tabelle~\ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} gewählt, da sie sowohl für verschiedene Dimensionen, diskret und stetig, definiert werden konnten, als auch wo die Algorithmen, bis auf wenige Ausnahmen, konvergierten. Im Vergleich werden Kombination aus verschiedenen Anzahlen an Dimensionen und verschiedenen Anzahlen diskreten Punkten untersucht. Jede der Testfunktionen wird mit den Dimensionen \(n = \{2, 5, 10\}\) und mit der Anzahl an diskreten Punkten \(m \in \{11, 21, 51\}\) getestet. Dabei wird jede der Dimensionen mit allen Anzahlen an diskreten Punkten getestet, also ergeben sich \((2,11), (2,21), (2,51), \dots, (10, 11), (10,21), (10,51)\) als 9 Kombinationen. Testfunktionen, deren Dimension \(5\) ist, haben als stetige Dimensionen \(3\) und als diskrete Dimensionen \(2\). Die Dimension von Testfunktionen, deren Dimension gerade ist, also \(2\) oder \(10\), setzt sich zusammen aus Hälfte diskreter Dimensionen und aus Hälfte stetiger Dimensionen.
+		Es wurden die Testfunktionen \glqq Cigar\grqq, \glqq Ellipsoid\grqq, \glqq Paraboloid\grqq{} und \glqq Tablet\grqq{} aus Tabelle~\ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} gewählt, da sie sowohl für verschiedene Dimensionen, diskret und stetig, definiert werden konnten, als auch wo die Algorithmen, bis auf wenige Ausnahmen, konvergierten. Im Vergleich werden Kombination aus verschiedenen Anzahlen an Dimensionen und verschiedenen Anzahlen diskreten Punkten untersucht. Jede der Testfunktionen wird mit den Dimensionen \(n = \{2, 5, 10\}\) und mit der Anzahl an diskreten Punkten \(m \in \{11, 21, 51\}\) getestet. Dabei wird jede der Dimensionen mit allen Anzahlen an diskreten Punkten getestet, also ergeben sich \((2,11), (2,21), (2,51), \dots, (10, 11), (10,21), (10,51)\) als Kombinationen pro Testfunktion. Zusätzlich wird jede Funktion mit den beiden Neustartstrategien \(fixed = n, n \in \mathbb{N}\) und \(adaptive\) getestet, wobei \(n = 0\) gesetzt wurde. Damit ergeben sich 72 konstruierte Testfunktionen, wie in den Tabellen \ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Funktionen_Mit_Gemischten_Variablen_Teil_1} und \ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Funktionen_Mit_Gemischten_Variablen_Teil_2} zu sehen. Testfunktionen, deren Dimension \(5\) ist, haben als stetige Dimensionen \(3\) und als diskrete Dimensionen \(2\). Die Dimension von Testfunktionen, deren Dimension gerade ist, also \(2\) oder \(10\), setzt sich zusammen aus Hälfte diskreter Dimensionen und aus Hälfte stetiger Dimensionen.
 		
 		%TODO besser formulieren?
 		
@@ -2042,7 +2042,11 @@ within=section,
 		%\end{figure}
 	
 		%\subsubsection{Traveling Spice Salesperson Problem (TSSP)} \label{subsubsec:TSSP}
-			
+
+		\paragraph{Resultierende Testkombinationen für das \ac{csd}}\mbox{}\\
+		
+		Wie wir gesehen haben, kann der Suchraum genommen werden ohne Filterung und mit Filterung. Zusätzlich kann die Zielfunktion exakt formuliert werden, wie in Gleichung~\ref{subsubsec:Testfunktionen:CSD:eq:CSD_material} und mit Straftermen, wie in Gleichung~\ref{subsubsec:Testfunktionen:CSD:eq:CSD_penalty}. Schließlich betrachten wir noch zwei Neustartstrategien, \(fixed = 0\) und \(adaptvie\). Damit ergeben sich 8 Kombinationen und damit 8 Testfunktionen, wie in den Tabellen \ref{subsubsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_CSD_fixed} und \ref{subsubsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_CSD_adaptive} zu sehen.
+
 	\section{Herausforderung}
 	
 	%TODO auflisten, wo schlechte Notationen oder ´Fehler in Papern waren
@@ -3413,7 +3417,7 @@ within=section,
 		
 		%TODO wie viele zitieren?
 		
-		\label{sec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_CSD_fixed}
+		\label{subsubsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_CSD_fixed}
 		
 		\scriptsize
 		
@@ -3470,7 +3474,7 @@ within=section,
 		
 		%TODO wie viele zitieren?
 		
-		\label{sec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_CSD_adaptive}
+		\label{subsubsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_CSD_adaptive}
 		
 		\scriptsize
 		
