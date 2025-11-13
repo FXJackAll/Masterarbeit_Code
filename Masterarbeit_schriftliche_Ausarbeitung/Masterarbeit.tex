@@ -1586,6 +1586,8 @@ within=section,
 		
 		%TODO Probleme ausdenken
 		
+		%TODO braucht man diskrete Testfunktionen
+		
 		\subsubsection{Diskrete Testfunktionen mit gleichverteiltem Definitionsbereich} \label{subsubsec:Ordinale_Testfunktionen_Mit_Gleichverteiltem_Definitionsbereich}
 		
 		Die einfachste Art diskrete Testfunktionen zu erhalten, ist die Diskretisierung von stetigen Testfunktionen. Dabei nimmt man \(m \in \mathbb{N}\) Punkte aus dem Definitionsbereich einer stetigen Funktion und bildet aus diesen Punkten einen neuen diskreten Definitionsbereich. Zum Beispiel ist die Funktion \glqq Paraboloid\grqq{} aus Tabelle~\ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} über dem stetigen Definitionsbereich \( D = [-3,7]^n, n = 10\), definiert. Wir nehmen diesen Definitionsbereich und zerlegen ihn in \(m = 11\) gleichverteilte diskrete Punkte. Dies Ergibt \(D = [-3, -2, -1, 0, 1, 2, 3 , 4, 5, 6, 7]^n, n = 10\). Analog gewinnen wir anderen diskreten Testfunktionen. Wir nehmen die stetigen Testfunktionen aus den Tabellen \ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt} mit \(m \in \{11, 21, 51\}\). Damit erhalten wir für jede stetige Funktion 3 diskrete Testfunktionen. Die Definitionen der Funktionsterme, Optima und Argumente der Optima bleiben gleich, weswegen hier auf eine Doppelung der Tabellen \ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt} verzichtet wird. Wie im Abschnitt~\ref{subsec:ACO_R} beschrieben, hat das Initialisierungsintervall großen Einfluss auf das Verhalten des Algorithmus aber da wir eine gleichverteilte Diskretisierung genommen haben, um die neuen Definitionsbereiche zu erlangen, ist zu erwarten, dass sich das Lösungsverhalten für die so gewonnenen diskreten Testfunktionen nicht signifikant von denen in den Tabellen \ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt} unterscheiden wird.
@@ -2238,7 +2240,7 @@ within=section,
 		
 		%TODO wie viele zitieren?
 		
-		\label{sec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Teil_1}
+		\label{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Teil_1}
 		
 		\scriptsize
 		
@@ -2286,11 +2288,11 @@ within=section,
 		
 		%\caption{Vergleich der Ergebnisse zwischen ACO\(_{\mathbb{R}}\), ACO\(_{\mathbb{R}}\)-very-simple und den Iterationen von ACO\(_{\mathbb{R}}\)-very-simple auf Testfunktionen, die zum Vergleich zwischen Algorithmen, die probabilistisches einsetzen, benutzt werden, basierend auf meiner Bachelorarbeit~\cite{FCM_2019}, \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning} Teil 2}
 		
-		\caption{Vergleich der Ergebnisse zwischen ACO\(_{\mathbb{R}}\), ACO\(_{\mathbb{R}}\)-very-simple und den Iterationen von ACO\(_{\mathbb{R}}\)-very-simple auf Testfunktionen, die zum Vergleich zwischen Algorithmen, die probabilistisches einsetzen, benutzt werden, basierend auf meiner Bachelorarbeit~\cite{FCM_2019}, \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}}
+		\caption{Vergleich der Ergebnisse zwischen ACO\(_{\mathbb{R}}\), ACO\(_{\mathbb{R}}\)-very-simple und den Iterationen von ACO\(_{\mathbb{R}}\)-very-simple auf Testfunktionen, die zum Vergleich zwischen Algorithmen, die probabilistisches einsetzen, benutzt werden, basierend auf meiner Bachelorarbeit~\cite{FCM_2019}, \textit{Socha und Dorigo}~\cite{socha2008ant} und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}}
 		
 		%TODO wie viele zitieren?
 		
-		\label{sec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Teil_2}
+		\label{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Teil_2}
 		
 		\scriptsize
 		
@@ -2333,108 +2335,110 @@ within=section,
 		
 	\end{table}
 	
+	Wie in den Tabellen \ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Teil_1}\hfill\newline
+	
 	Wie in Tabelle~\ref{VerglelichACORundACORVerySimple} zu sehen, ist ACO\(_{\mathbb{R}}\)-very-simple, bei einfachen Testproblemen, der bessere Algorithmus in allen Testproblemen, bis auf \glqq Rosenbrock\grqq. Hätte ACO\(_{\mathbb{R}}\)-very-simple auch bei diesem Problem eine Lösung gefunden, wäre er, für einfache Testprobleme, der klare Favorit gewesen. So aber kann man sagen, dass die Algorithmen, bei einfachen Testproblemen, ebenbürtig sind, besonders, da ACO\(_{\mathbb{R}}\) bei den anderen Testfunktionen nur wenig schlechter ist, außer \glqq Ellipsoid\grqq.\hfill\newline
 	
 	Auch wenn aus den Tabellen~\ref{VerglelichACORundACORSimple} und~\ref{VerglelichACORundACORVerySimple} bereits entnommen werden kann, dass von den beiden Algorithmen ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple, ACO\(_{\mathbb{R}}\)-very-simple der bessere ist, betrachten wir in Tabelle~\ref{VerglelichACORSimpleundACORVerySimple} nochmal eine direkte Gegenüberstellung, um ein noch klareres Ergebnis zu erhalten.
 	
-	\begin{table}[H]
+	%\begin{table}[H]
 		
-		\fontsize{10pt}{12pt}
+	%	\fontsize{10pt}{12pt}
 		
-		\caption{Vergleich der Ergebnisse zwischen ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple}
+	%	\caption{Vergleich der Ergebnisse zwischen ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple}
 		
-		\label{VerglelichACORSimpleundACORVerySimple}
+	%	\label{VerglelichACORSimpleundACORVerySimple}
 		
-		\begin{tabularx}{\textwidth}{l|l|l}
+	%	\begin{tabularx}{\textwidth}{l|l|l}
 			
-			\rule{4.8cm}{0.4pt} & \rule{4.8cm}{0.4pt} & \rule{4.8cm}{0.4pt}\\
+	%		\rule{4.8cm}{0.4pt} & \rule{4.8cm}{0.4pt} & \rule{4.8cm}{0.4pt}\\
 			
-			Testfunktion & ACO\(_{\mathbb{R}}\)-simple & ACO\(_{\mathbb{R}}\)-very-simple\\
+	%		Testfunktion & ACO\(_{\mathbb{R}}\)-simple & ACO\(_{\mathbb{R}}\)-very-simple\\
 			
-			\rule{4.8cm}{0.4pt} & \rule{4.8cm}{0.4pt} & \rule{4.8cm}{0.4pt}\\
+	%		\rule{4.8cm}{0.4pt} & \rule{4.8cm}{0.4pt} & \rule{4.8cm}{0.4pt}\\
 			
-			Cigar & 6.6 (13516) & \textbf{1.0} (2037) \\
+	%		Cigar & 6.6 (13516) & \textbf{1.0} (2037) \\
 			
-			Diagonal Plane & 57.6 (8531) & \textbf{1.0} (148) \\
+	%		Diagonal Plane & 57.6 (8531) & \textbf{1.0} (148) \\
 			
-			Ellipsoid & 1.5 (947) & \textbf{1.0} (644) \\
+	%		Ellipsoid & 1.5 (947) & \textbf{1.0} (644) \\
 			
-			Paraboloid & 6.8 (10041) & \textbf{1.0} (1483) \\
+	%		Paraboloid & 6.8 (10041) & \textbf{1.0} (1483) \\
 			
-			Plane & 85.3 (11176) & \textbf{1.0} (131) \\
+	%		Plane & 85.3 (11176) & \textbf{1.0} (131) \\
 			
-			Rosenbrock & \(\infty\) & \(\infty\)\\
+	%		Rosenbrock & \(\infty\) & \(\infty\)\\
 			
-			Tablet & 6.2 (10812) & \textbf{1.0} (1751) 
+	%		Tablet & 6.2 (10812) & \textbf{1.0} (1751) 
 			
-		\end{tabularx}
+	%	\end{tabularx}
 		
-		\smallskip
+	%	\smallskip
 		
-		Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Dort, wo \(\infty\) steht, wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht.\hfill\newline
+	%	Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Dort, wo \(\infty\) steht, wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht.\hfill\newline
 		
-	\end{table}
+	%4\end{table}
 	
 	Wie in Tabelle~\ref{VerglelichACORSimpleundACORVerySimple} nochmal deutlich zu sehen ist, ist ACO\(_{\mathbb{R}}\)-very-simple, bei einfach Testproblemen, der bessere Algorithmus.
 	
-	\begin{table}[H]
+	%\begin{table}[H]
 		
 		%\fontsize{10pt}{12pt}
 		
-		\caption{Zweiter Teil des Vergleiches der Ergebnisse zwischen ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\) basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant} und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}}
+		%\caption{Zweiter Teil des Vergleiches der Ergebnisse zwischen ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\) basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant} und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}}
 		
-		\label{VerglelichACORundACORSimpleTeil2}
+		%\label{VerglelichACORundACORSimpleTeil2}
 		
-		\begin{tabularx}{\textwidth}{l|l|l|l}
+		%\begin{tabularx}{\textwidth}{l|l|l|l}
 			
-			\rule{3,55cm}{0.4pt} & \rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt}\\
+		%	\rule{3,55cm}{0.4pt} & \rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt}\\
 			
-			Testfunktion & ACO\(_{\mathbb{R}}\)-simple & ACO\(_{\mathbb{R}}\) & Bestwert\\
+		%	Testfunktion & ACO\(_{\mathbb{R}}\)-simple & ACO\(_{\mathbb{R}}\) & Bestwert\\
 			
-			\rule{3,55cm}{0.4pt} & \rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt}\\
+		%	\rule{3,55cm}{0.4pt} & \rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt}\\
 			
-			\(B_2\) & 5.3 (2272) & 1.3 (544) & \textbf{1.0} (430)\\
+		%	\(B_2\) & 5.3 (2272) & 1.3 (544) & \textbf{1.0} (430)\\
 			
-			Branin RCOS & 6.5 (1600) & 3.5 (858) & \textbf{1.0} (245)\\
+		%	Branin RCOS & 6.5 (1600) & 3.5 (858) & \textbf{1.0} (245)\\
 			
-			Easom & - & \textbf{1.0} [98\%] (772) & \textbf{1.0} (772)\\
+		%	Easom & - & \textbf{1.0} [98\%] (772) & \textbf{1.0} (772)\\
 			
-			De Jong & 2.9 (965) & 1.0 ($\sim$ 392) & \textbf{1.0} (329)\\
+		%	De Jong & 2.9 (965) & 1.0 ($\sim$ 392) & \textbf{1.0} (329)\\
 			
-			Goldstein and Price & 4.0 (917) & 1.7 (384) & \textbf{1.0} (231)\\
+		%	Goldstein and Price & 4.0 (917) & 1.7 (384) & \textbf{1.0} (231)\\
 			
-			Griewangk & \(\infty\) & \textbf{1.0} [61\%] (1390) & \textbf{1.0} (1390)\\
+		%	Griewangk & \(\infty\) & \textbf{1.0} [61\%] (1390) & \textbf{1.0} (1390)\\
 			
-			Hartmann(3,4) & - & \textbf{1.0} (342) & \textbf{1.0} (342)\\
+		%	Hartmann(3,4) & - & \textbf{1.0} (342) & \textbf{1.0} (342)\\
 			
-			Hartmann(6,4) & 2.3 (1714) & \textbf{1.0} (722) & \textbf{1.0} (722)\\
+		%	Hartmann(6,4) & 2.3 (1714) & \textbf{1.0} (722) & \textbf{1.0} (722)\\
 			
-			Martin and Gaddy & 2.8 (974) & \textbf{1.0} (345) & \textbf{1.0} (345)\\
+		%	Martin and Gaddy & 2.8 (974) & \textbf{1.0} (345) & \textbf{1.0} (345)\\
 			
-			Paraboloid(6) & 3.0 (2308) & 1.6 (781) & \textbf{1.0} (781)\\
+		%	Paraboloid(6) & 3.0 (2308) & 1.6 (781) & \textbf{1.0} (781)\\
 			
-			Rosenbrock(2) & 15.2 (7317) & 1.7 (820) & \textbf{1.0} (480)\\
+		%	Rosenbrock(2) & 15.2 (7317) & 1.7 (820) & \textbf{1.0} (480)\\
 			
-			Rosenbrock(5) & \(\infty\) & 1.2 [97\%] (2487) & \textbf{1.0} (2142)\\
+		%	Rosenbrock(5) & \(\infty\) & 1.2 [97\%] (2487) & \textbf{1.0} (2142)\\
 			
-			Shekel(4,5) & 2.7 (1642) & 1.3 [57\%] (787) & \textbf{1.0} [76\%] (610)\\
+		%	Shekel(4,5) & 2.7 (1642) & 1.3 [57\%] (787) & \textbf{1.0} [76\%] (610)\\
 			
-			Shekel(4,7) & 2.3 (1595) & 1.1 [79\%] (748) & \textbf{1.0} [83\%] (680)\\
+		%	Shekel(4,7) & 2.3 (1595) & 1.1 [79\%] (748) & \textbf{1.0} [83\%] (680)\\
 			
-			Shekel(4,10) & 2.4 (1559) & 1.1 [81\%] (715) & \textbf{1.0} [83\%] (650)\\
+		%	Shekel(4,10) & 2.4 (1559) & 1.1 [81\%] (715) & \textbf{1.0} [83\%] (650)\\
 			
-			Zakharov(2) & 3.4 (664) & 1.7 (332) & \textbf{1.0} (195)\\
+		%	Zakharov(2) & 3.4 (664) & 1.7 (332) & \textbf{1.0} (195)\\
 			
-			Zakharov(5) & 5.7 (4157) & \textbf{1.0} (727) & \textbf{1.0} (727)\\
+		%	Zakharov(5) & 5.7 (4157) & \textbf{1.0} (727) & \textbf{1.0} (727)\\
 			
-		\end{tabularx}
+		%\end{tabularx}
 		
-		\smallskip
+		%\smallskip
 		
-		Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Bei Ergebnissen, wo die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht wurde, ist der Anteil der erfolgreichen Durchläufe in Prozent in eckigen Klammern angegeben, wo \(\infty\) steht, wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht.\\
-		Bei der Funktion \glqq De Jong\grqq \hspace{.16667em} konnte für ACO\(_{\mathbb{R}}\) die genaue Anzahl an Funktionsauswertungen nicht ermittelt werden.\hfill\newline
+		%Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Bei Ergebnissen, wo die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht wurde, ist der Anteil der erfolgreichen Durchläufe in Prozent in eckigen Klammern angegeben, wo \(\infty\) steht, wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht.\\
+		%Bei der Funktion \glqq De Jong\grqq \hspace{.16667em} konnte für ACO\(_{\mathbb{R}}\) die genaue Anzahl an Funktionsauswertungen nicht ermittelt werden.\hfill\newline
 		
-	\end{table}
+	%\end{table}
 	
 	\noindent Wie in Tabelle~\ref{VerglelichACORundACORSimpleTeil2} zu sehen, ist ACO\(_{\mathbb{R}}\)-simple der schlechtere Algorithmus, er ist sogar bei einer Funktion viel schlechter als ACO\(_{\mathbb{R}}\).\hfill\newline
 	
@@ -2504,7 +2508,7 @@ within=section,
 		
 		\smallskip
 		
-		Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Bei Ergebnissen, wo ein * steht, wurde die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht und dort wo \(\infty\) steht wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht.\hfill\newline
+		Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Bei Ergebnissen, wo die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht wurde, ist der Anteil der erfolgreichen Durchläufe in Prozent in eckigen Klammern angegeben, wo \(\infty\) steht, wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht.\hfill\newline
 		
 		%TODO kann auch ein längerer Absatzt beibehalten werden
 		
@@ -2571,7 +2575,7 @@ within=section,
 		
 		\smallskip
 		
-		Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Bei Ergebnissen, wo ein * steht, wurde die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht und dort wo \(\infty\) steht wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht.\hfill\newline
+		Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Bei Ergebnissen, wo die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht wurde, ist der Anteil der erfolgreichen Durchläufe in Prozent in eckigen Klammern angegeben, wo \(\infty\) steht, wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht.\hfill\newline
 		
 		%TODO kann auch ein längerer Absatzt beibehalten werden? Ja
 		
@@ -2639,7 +2643,7 @@ within=section,
 		
 		\smallskip
 		
-		Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Bei Ergebnissen, wo ein * steht, wurde die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht und dort wo \(\infty\) steht wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht.\hfill\newline
+		Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Bei Ergebnissen, wo die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht wurde, ist der Anteil der erfolgreichen Durchläufe in Prozent in eckigen Klammern angegeben, wo \(\infty\) steht, wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht.\hfill\newline
 		
 		%TODO kann auch ein längerer Absatzt beibehalten werden? Ja
 		
@@ -2727,8 +2731,7 @@ within=section,
 		
 		\smallskip
 		
-		Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Bei Ergebnissen, wo die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht wurde, ist der Anteil der erfolgreichen Durchläufe in Prozent in eckigen Klammern angegeben, wo \(\infty\) steht, wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht.\\
-		Bei der Funktion \glqq De Jong\grqq{} konnte für ACO\(_{\mathbb{R}}\) die genaue Anzahl an Funktionsauswertungen nicht ermittelt werden.\hfill\newline
+		Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Bei Ergebnissen, wo die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht wurde, ist der Anteil der erfolgreichen Durchläufe in Prozent in eckigen Klammern angegeben, wo \(\infty\) steht, wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht. Bei der Funktion \glqq De Jong\grqq{} konnte für ACO\(_{\mathbb{R}}\) die genaue Anzahl an Funktionsauswertungen nicht ermittelt werden.\hfill\newline
 		
 	\end{table}
 	
@@ -3421,7 +3424,7 @@ within=section,
 		
 		\scriptsize
 		
-		\begin{tabularx}{\linewidth}{l X X X X}
+		\begin{tabularx}{\linewidth}{l X X X X X}
 			
 			%\rule{1.6cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{1.3cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.4cm}{0.4pt}\\
 			
@@ -3431,20 +3434,20 @@ within=section,
 			
 			%TODO erklären was (1 + 1)ES, CSA-ES und sind?
 			
-			Testfunktion &  Hom-HPB- & Het-HPB- & Het-HSPPB- & Bestwert\\
-						 & ACO\(_\mathbb{R}\)-VS & ACO\(_\mathbb{R}\)-VS & ACO\(_\mathbb{R}\)-VS & \\
+			Testfunktion & ACO\(_{\text{MV}}\) & Hom-HPB- & Het-HPB- & Het-HSPPB- & Bestwert\\
+						 &				& ACO\(_\mathbb{R}\)-VS & ACO\(_\mathbb{R}\)-VS & ACO\(_\mathbb{R}\)-VS & \\
 			
 			%\rule{1.6cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{1.3cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.4cm}{0.4pt}\\
 			
 			\midrule
 			
-			exakt-exakt & \textbf{1.0} (389) [98\%] & 1.2 (471) [98\%] & 1.3 (499) & \textbf{1.0} (389)\\
+			exakt-exakt & & \textbf{1.0} (389) [98\%] & 1.2 (471) [98\%] & 1.3 (499) & \textbf{1.0} (389)\\
 			
-			exakt-penalty & 1.0 (354) [94\%] & 1.3 (443) [96\%] & (390) & \textbf{1.0} (344)\\
+			exakt-penalty & & 1.0 (354) [94\%] & 1.3 (443) [96\%] & (390) & \textbf{1.0} (344)\\
 			
-			penalty-exakt & - & - & - & \textbf{1.0} (1390)\\
+			penalty-exakt & & - & - & - & \textbf{1.0} (1390)\\
 			
-			penalty-penalty & & 1.1 (328) & 1.2 (364) & \textbf{1.0} (311)\\
+			penalty-penalty & & & 1.1 (328) & 1.2 (364) & \textbf{1.0} (311)\\
 			
 			\bottomrule
 			
@@ -3478,7 +3481,7 @@ within=section,
 		
 		\scriptsize
 		
-		\begin{tabularx}{\linewidth}{l X X X X}
+		\begin{tabularx}{\linewidth}{l X X X X X}
 			
 			%\rule{1.6cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{1.3cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.4cm}{0.4pt}\\
 			
@@ -3488,20 +3491,20 @@ within=section,
 			
 			%TODO erklären was (1 + 1)ES, CSA-ES und sind?
 			
-			Testfunktion &  Hom-HPB- & Het-HPB- & Het-HSPPB- & Bestwert\\
-			& ACO\(_\mathbb{R}\)-VS & ACO\(_\mathbb{R}\)-VS & ACO\(_\mathbb{R}\)-VS & \\
+			Testfunktion & ACO\(_{\text{MV}}\) & Hom-HPB- & Het-HPB- & Het-HSPPB- & Bestwert\\
+						 &				& ACO\(_\mathbb{R}\)-VS & ACO\(_\mathbb{R}\)-VS & ACO\(_\mathbb{R}\)-VS & \\
 			
 			%\rule{1.6cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{1.3cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.4cm}{0.4pt}\\
 			
 			\midrule
 			
-			exakt-exakt & \textbf{1.0} (389) [98\%] & 1.2 (471) [98\%] & 1.3 (499) & \textbf{1.0} (389)\\
+			exakt-exakt & & \textbf{1.0} (389) [98\%] & 1.2 (471) [98\%] & 1.3 (499) & \textbf{1.0} (389)\\
 			
-			exakt-penalty & 1.0 (354) [94\%] & 1.3 (443) [96\%] & (390) & \textbf{1.0} (344)\\
+			exakt-penalty & & 1.0 (354) [94\%] & 1.3 (443) [96\%] & (390) & \textbf{1.0} (344)\\
 			
-			penalty-exakt & - & - & - & \textbf{1.0} (1390)\\
+			penalty-exakt & & - & - & - & \textbf{1.0} (1390)\\
 			
-			penalty-penalty & & 1.1 (328) & 1.2 (364) & \textbf{1.0} (311)\\
+			penalty-penalty & & & 1.1 (328) & 1.2 (364) & \textbf{1.0} (311)\\
 			
 			\bottomrule
 			

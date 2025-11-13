@@ -64,19 +64,16 @@ def user_input():
                         help='Name of the problem instance, e.g. TISD names like "tisd10" or TSPLIB names like "rat195"')
     # parser.add_argument('-pt', '--problem-type', type=str, default='TSP',
     #                    help='Type of the problem, e.g. TSP (standard, symmetric TSP), ATSP (asymmetric TSP), QAP, TISD')
-    parser.add_argument('-pt', '--problem-type', type=str, default='CSD_penalty',
+    parser.add_argument('-pt', '--problem-type', type=str, default='CSD_exact',
                         help='Type of the problem, e.g. TSP (standard, symmetric TSP), ATSP (asymmetric TSP), QAP, TISD')
-    # parser.add_argument('-ps', '--problem_specification', type=str, default='penalty',
-    #                    help='specification of the problem, e.g. exact or penalty given')
-
 
     parser.add_argument('-rot', '--rotation', action=argparse.BooleanOptionalAction, default=False,
                         help='enables random rotation of the given test function')
 
 
-    parser.add_argument('-salg', '--search_algorithm', type=str, default='h_hom_aco_r_very_simple',
+    parser.add_argument('-salg', '--search_algorithm', type=str, default='h_het_aco_r_very_simple',
                         help='Type of the search algorithm, e.g. random_search or aco_r_very_simple')
-    parser.add_argument('-salgn', '--search_algorithm_name', type=str, default='H_Hom_ACO_R_Very_Simple',
+    parser.add_argument('-salgn', '--search_algorithm_name', type=str, default='H_Het_ACO_R_Very_Simple',
                         help='Name of the search algorithm, e.g. Random_Search or ACO_R_Very_Simple')
     parser.add_argument('-mitc', '--max_iteration_count', type=int, default=10000,
                         help='Maximum number of iterations (not function evaluations) to run the search algorithm')
@@ -108,7 +105,7 @@ def user_input():
                         help='The number of iterations per run')
     parser.add_argument('-po', '--problem_optimum', type=float, default=2.658559,
                         help='the known optimum of the problem')
-    parser.add_argument('-as', '--accepted_solutions', type=str, choices=['exact-term', 'penalty-term'], default='exact-term',
+    parser.add_argument('-as', '--accepted_solutions', type=str, choices=['exact-term', 'penalty-term'], default='penalty-term',
                         help='The way initial solutions are calculated; exact-term means only initial solutions that fit the constrains'
                              'are allowed; penalty-term means all solutions are allowed, regardless if they fail the requirements')
 
