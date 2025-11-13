@@ -64,7 +64,7 @@ def user_input():
                         help='Name of the problem instance, e.g. TISD names like "tisd10" or TSPLIB names like "rat195"')
     # parser.add_argument('-pt', '--problem-type', type=str, default='TSP',
     #                    help='Type of the problem, e.g. TSP (standard, symmetric TSP), ATSP (asymmetric TSP), QAP, TISD')
-    parser.add_argument('-pt', '--problem-type', type=str, default='CSD_exact',
+    parser.add_argument('-pt', '--problem-type', type=str, default='CSD_penalty',
                         help='Type of the problem, e.g. TSP (standard, symmetric TSP), ATSP (asymmetric TSP), QAP, TISD')
 
     parser.add_argument('-rot', '--rotation', action=argparse.BooleanOptionalAction, default=False,
@@ -492,7 +492,7 @@ def main():
                 print("Required add iterations:", best_solution[0][0]["add_it"])
                 print('Required iterations:', best_solution[1])
                 print("Required restarts", best_solution[0][0]["required_restarts"])
-                print('Required total iterations:', best_solution[1] + best_solution[0][0]["so_far"])
+                print('Required total iterations:', best_solution[1])
                 print('Required function evaluations:', best_solution[1] * 13 + best_solution[0][0]["so_far"] + best_solution[0][0]["add_it"])
                 print("Solution:", best_solution[0][0])
                 print("Solution quality:", best_solution[0][1])

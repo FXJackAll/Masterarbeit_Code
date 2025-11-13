@@ -53,6 +53,8 @@ class CSD_exact(Problem):
         """
 
         self.init_solution()
+        self._additionally_required_pre_iterations = 0
+        self._additionally_required_iterations = 0
 
         pass
 
@@ -139,6 +141,7 @@ class CSD_exact(Problem):
         # print("außerhalb der Schleife: " + str(solution))
 
         self._additionally_required_pre_iterations += additionally_required_iterations
+
         # print("in CSD_exact init_solution: " + str(self._additionally_required_iterations))
         solution["so_far"] = self._additionally_required_pre_iterations
 

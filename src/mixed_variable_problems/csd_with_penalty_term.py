@@ -32,6 +32,7 @@ class CSD_penalty(Problem):
             with open(os.path.join(self._problem_path, self._csd_name + ".json")) as f:
                 self._instance = json.load(f)
                 self._dimension = self._instance["dimension"]
+                self._additionally_required_pre_iterations = 0
                 self._additionally_required_iterations = 0
                 self._variable_boundaries = self._instance["variable_boundaries"]
                 self._N_min = self._variable_boundaries["natural_numbers"][0][0] # minimum number of spring coils
@@ -59,6 +60,8 @@ class CSD_penalty(Problem):
         """
 
         self.init_solution()
+        self._additionally_required_pre_iterations = 0
+        self._additionally_required_iterations = 0
 
         pass
 
@@ -127,7 +130,7 @@ class CSD_penalty(Problem):
                     'ordinal': [],
                     'categorical': []}
 
-        solution["so_far"] = 0
+        # solution["so_far"] = 0
 
         # print("in Schleife: " + str(solution))
         # print('in tisd init_solution: ' + str(self._t_p))
@@ -232,13 +235,25 @@ class CSD_penalty(Problem):
 
         pass
 
+    def req_pre_iterations(self) -> int:
+
+        return self._additionally_required_pre_iterations
+
+    def add_req_pre_iterations(self, additionally_req_pre_iterations) -> None:
+
+        # self._additionally_required_pre_iterations += additionally_req_pre_iterations
+
+        self._additionally_required_pre_iterations += additionally_req_pre_iterations
+
     def req_iterations(self) -> int:
 
         return self._additionally_required_iterations
 
     def add_req_iterations(self, additionally_req_iterations) -> None:
 
-        self._additionally_required_iterations += additionally_req_iterations
+        # self._additionally_required_iterations += additionally_req_iterations
+
+        pass
 
     @property
     def type(self) -> str:

@@ -115,6 +115,7 @@ class HSPPBO_TISD:
     def reset_problem(self):
 
         self._required_restarts = 0
+        self._problem.reset()
 
     def execute(self, verbose=False) -> (dict, int):
         """
@@ -259,7 +260,7 @@ class HSPPBO_TISD:
 
                           #  best_solution[0][0]["so_far"] = self._problem.req_iterations()
 
-                        print(best_solution)
+                        # print(best_solution)
 
                         best_solution[0]["so_far"] = self._problem.req_pre_iterations()
                         best_solution[0]["add_it"] = self._problem.req_iterations()
@@ -451,12 +452,12 @@ class HSPPBO_TISD:
 
                 self._problem.add_req_iterations(additional_iterations)
 
-                next_solution["add_it"] = self._problem.req_iterations()
+                next_solution["so_far"] = self._problem.req_iterations()
 
             case 'penalty-term':
 
                 next_solution = self._search_algorithm.construct_solution(self, search_parameter)
-                next_solution["so_far"] = self._problem.req_pre_iterations()
+                next_solution["so_far"] = 0
                 # print("in HSPPBO_TISD find_next_solution: " + str(next_solution))
 
             case _:
