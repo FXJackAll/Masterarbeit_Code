@@ -58,7 +58,7 @@ class HSPPBO_TISD:
         self._w_parent_best = HSPPBO_parameters['SCE_parameters']['w_parent_best']
 
         self._w_rand = 1 / (self._problem.dimension - 1)
-        self._accepted_solutions = HSPPBO_parameters['accepted_solutions']
+        # self._accepted_solutions = HSPPBO_parameters['accepted_solutions']
         self._solution_creating_behaviour = HSPPBO_parameters['solution_creating_behaviour']
         self._linear_div_inflations = HSPPBO_parameters['linear_div_inflations']
         self._h_probabilities = HSPPBO_parameters['h_probabilities']
@@ -231,7 +231,7 @@ class HSPPBO_TISD:
                            # best_solution["so_far"] = self._problem.req_iterations()
 
                         best_solution[0]["so_far"] = self._problem.req_pre_iterations()
-                        best_solution[0]["add_it"] = self._problem.additional_req_iterations() - i
+                        best_solution[0]["add_it"] = self._problem.additional_req_iterations()
 
                         return [best_solution, i]
 
@@ -263,7 +263,7 @@ class HSPPBO_TISD:
                         # print(best_solution)
 
                         best_solution[0]["so_far"] = self._problem.req_pre_iterations()
-                        best_solution[0]["add_it"] = self._problem.additional_req_iterations() - i
+                        best_solution[0]["add_it"] = self._problem.additional_req_iterations()
 
                         return [best_solution, i]
 
@@ -302,7 +302,7 @@ class HSPPBO_TISD:
           #  best_solution[0][0]["so_far"] = self._problem.req_iterations()
 
         best_solution[0]["so_far"] = self._problem.req_pre_iterations()
-        best_solution[0]["add_it"] = self._problem.additional_req_iterations() - self._max_iteration_count
+        best_solution[0]["add_it"] = self._problem.additional_req_iterations()
 
         return [best_solution, self._max_iteration_count]
 
@@ -445,12 +445,24 @@ class HSPPBO_TISD:
 
         while not condition:
 
-            additional_iterations += 1
+            # print("in find_next_solution: klappt")
+
+            # print("in find_next_solution additional iterations: " + str(additional_iterations))
 
             next_solution = self._search_algorithm.construct_solution(self, search_parameter)
             condition = self._problem.get_solution_quality(next_solution)[1]
 
-        self._problem.add_additional_req_iterations(additional_iterations)
+            additional_iterations += 1
+
+            # print("in find_next_solution condition: " + str(condition))
+
+            # if condition:
+
+            #    break
+
+        # print("in find_next_solution additional iterations: " + str(additional_iterations))
+
+        self._problem.add_additional_req_iterations(additional_iterations - 1)
 
         # next_solution["add_it"] = self._problem.additional_req_iterations()
 

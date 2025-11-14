@@ -142,7 +142,7 @@ class CSD(Problem):
                                 'ordinal': [],
                                 'categorical': []}
 
-                    result = self.get_solution_quality(solution)
+                    result = self.get_init_solution_quality(solution)
                     condition = result[1]
                     # print("in Schleife: " + str(solution))
                     # print('in tisd init_solution: ' + str(self._t_p))
@@ -182,8 +182,139 @@ class CSD(Problem):
         solution["so_far"] = self._additionally_required_pre_iterations
 
         # return insulators, delta_x, temperatures, c, self.get_solution_quality(solution)
-        return [solution, self.get_solution_quality(solution)]
+        return [solution, self.get_init_solution_quality(solution)]
         # return self.get_solution_quality(solution)
+
+    def get_init_solution_quality(self, solution: dict) -> (float, bool):
+
+        """
+        Args:
+            solution:
+
+        Returns: float: volume of the steel wire required to make the spring coil
+        """
+
+        # number of spring coils N
+        N = solution['natural_numbers'][0][0]
+        # outside diameter of the spring D
+        D = solution['continuous'][0][0]
+        # spring wire diameter d
+        d = solution['discrete'][0][0]
+
+        C_f = (4 * D / d - 1) / (4 * D / d - 4) + (0.615 * d) / D
+        K = (self._G * d ** 4) / (8 * N * D ** 3)
+        sigma_p = self._F_p / K
+        l_f = self._F_max / K + 1.05 * (N + 2) * d
+
+        # volume of the steel wire V
+        V = 1 / 4 * pi ** 2 * D * d ** 2 * (N + 2)
+
+        g_1 = (8 * C_f * self._F_max * D) / (pi * d ** 3) - self._S
+        g_2 = l_f - self._l_max
+        g_3 = self._d_min - d
+        g_4 = D - self._D_max
+        g_5 = 3 - D / d
+        g_6 = sigma_p - self._sigma_pm
+        g_7 = sigma_p + (self._F_max - self._F_p) / K + 1.05 * (N + 2) * d - l_f
+        g_8 = self._sigma_w - (self._F_max - self._F_p) / K
+
+        match self._initialization_behaviour:
+
+            case "exact":
+
+                if g_1 > 0:
+                    # print('in get_solution_quality: test')
+
+                    return [V, False]
+
+                if g_2 > 0:
+                    # print('in get_solution_quality: test2')
+
+                    return [V, False]
+
+                if g_3 > 0:
+                    # print('in get_solution_quality: test3')
+
+                    return [V, False]
+
+                if g_5 > 0:
+                    # print('in get_solution_quality: test4')
+                    # print('in get_solution_quality D: ' + str(D))
+                    # print('in get_solution_quality d: ' + str(d))
+                    # print('in get_solution_quality D/d: ' + str(D/d))
+
+                    return [V, False]
+
+                if g_6 > 0:
+                    # print('in get_solution_quality: test5')
+
+                    return [V, False]
+
+                if g_7 > 0:
+                    # print('in get_solution_quality: test6')
+
+                    return [V, False]
+
+                if g_8 > 0:
+                    # print('in get_solution_quality: test7')
+
+                    return [V, False]
+
+                    # )print('in get_solution_quality:')
+
+                return [V, True]
+
+            case "penalty":
+
+                # print("in get_solution_quality: klappt")
+
+                self._constraints = [1, 1, 1, 1, 1, 1, 1, 1]
+
+                if g_1 > 0:
+                    # print("in csd_with_penalty_term g_1: " + str(g_1))
+
+                    self._constraints[0] = (self._constraints[0] + 10 ** (-5) * g_1) ** 3
+
+                if g_2 > 0:
+                    # print("in csd_with_penalty_term g_2: " + str(g_2))
+
+                    self._constraints[1] = (self._constraints[1] + 1 * g_2) ** 3
+
+                if g_3 > 0:
+                    self._constraints[2] = (self._constraints[2] + 10 ** 2 * g_3) ** 3
+
+                if g_4 > 0:
+                    self._constraints[3] = (self._constraints[3] + 1 * g_4) ** 3
+
+                if g_5 > 0:
+                    self._constraints[4] = (self._constraints[4] + 10 ** 2 * g_5) ** 3
+
+                if g_6 > 0:
+                    self._constraints[5] = (self._constraints[5] + 1 * g_6) ** 3
+
+                if g_7 > 0:
+                    self._constraints[6] = (self._constraints[6] + 10 ** 2 * g_7) ** 3
+
+                if g_8 > 0:
+                    self._constraints[7] = (self._constraints[7] + 10 ** 2 * g_8) ** 3
+
+                    # )print('in get_solution_quality:')
+
+                V_c = 1 / 4 * pi ** 2 * D * d ** 2 * (N + 2)
+
+                # for i in range(len(self._constraints)):
+
+                #    V = V * self._constraints[i]
+
+                V = V_c * reduce(mul, self._constraints)
+
+                # print("in csd_with_penalty_term get_solution_quality: " + str(V))
+
+                return [V, True]
+
+            case _:
+
+                pass
 
     def get_solution_quality(self, solution: dict) -> (float, bool):
         """
@@ -220,6 +351,8 @@ class CSD(Problem):
         match self._accepted_solutions:
 
             case "exact":
+
+                # print("in get_solution_quality exact klappt")
 
                 if g_1 > 0:
 
@@ -272,11 +405,15 @@ class CSD(Problem):
 
             case "penalty":
 
+                # print("in get_solution_quality: klappt")
+
+                self._constraints = [1, 1, 1, 1, 1, 1, 1, 1]
+
                 if g_1 > 0:
 
                     # print("in csd_with_penalty_term g_1: " + str(g_1))
 
-                    self._constraints[0] = (self._constraints[0] + 10 ** (-5) * g_1) ** 3
+                    self._constraints[0] = (self._constraints[0] + 10**(-5) * g_1) ** 3
 
                 if g_2 > 0:
 
@@ -324,8 +461,6 @@ class CSD(Problem):
             case _:
 
                 pass
-
-
 
     def get_heuristic_component(self, i: int, j: int) -> float:
 

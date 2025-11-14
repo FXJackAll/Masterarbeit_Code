@@ -3404,6 +3404,62 @@ within=section,
 	
 	%TODO viel vom Code ist nicht von mir. Wie?
 	
+		\begin{table}[H]
+		
+		%\fontsize{6pt}{6pt}
+		
+		%\caption{Vergleich der Ergebnisse zwischen Algorithmen, die probabilistisches Lernen einsetzten auf Testfunktionen, die zum Vergleich zwischen Algorithmen, die probabilistisches Lernen einsetzten, benutzt werden, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning} Teil 1}
+		
+		\caption{Vergleich der Ergebnisse zwischen \ac{acorvsmv} und Iterationen mit Neustartstrategie \(adaptive\)}
+		
+		%TODO fixed 0
+		
+		%TODO so formatierung ok?
+		
+		%TODO Besserer Titel, z.B. wie Vergleich zwischen ACO_R, ..., auf Testfunktionen, die zum Vergleich zwischen ALgorithmen, ..., Ameisenverwanten
+		
+		%TODO wie viele zitieren?
+		
+		\label{subsubsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_CSD}
+		
+		\scriptsize
+		
+		\begin{tabularx}{\linewidth}{l X X X X X X}
+			
+			%\rule{1.6cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{1.3cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.4cm}{0.4pt}\\
+			
+			\toprule
+			
+			%\Tstrut
+			
+			%TODO erklären was (1 + 1)ES, CSA-ES und sind?
+			
+			Testfunktion & ACO\(_\mathbb{R}\) & ACO\(_{\text{MV}}\) & NLIDP & GA & DE & Bestwert\\
+			
+			%\rule{1.6cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{1.3cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.4cm}{0.4pt}\\
+			
+			\midrule
+			
+			exakt-exakt & - & - & - & - & - & \textbf{1.0} (389)\\
+			
+			exakt-penalty & - & - & - & - & - & \textbf{1.0} (344)\\
+			
+			penalty-exakt & - & - & - & - & - & \textbf{1.0} (1390)\\
+			
+			penalty-penalty & 8000 [82.0\%] & 8000 [39.0\%] & - [100.0\%] & - [95.3\%] & 8000 [95.0\%] & \textbf{1.0} (311)\\
+			
+			\bottomrule
+			
+		\end{tabularx}
+		
+		\smallskip
+		
+		Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Sofern es keine Angaben zu der Anzahl an Funktionsauswertungen gibt aber die Erfolgsrate angegeben ist, wird die Erfolgsrate nach einem Strich angegeben. Bei Ergebnissen, wo die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht wurde, ist der Anteil der erfolgreichen Durchläufe in Prozent in eckigen Klammern angegeben, wo \(\infty\) steht, wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht.\hfill\newline
+		
+		%TODO kann auch ein längerer Absatzt beibehalten werden? Ja
+		
+	\end{table}
+	
 	\begin{table}[H]
 		
 		%\fontsize{6pt}{6pt}
@@ -3424,7 +3480,7 @@ within=section,
 		
 		\scriptsize
 		
-		\begin{tabularx}{\linewidth}{l l l l l l}
+		\begin{tabularx}{\linewidth}{l l l l l l l}
 			
 			%\rule{1.6cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{1.3cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.4cm}{0.4pt}\\
 			
@@ -3434,22 +3490,22 @@ within=section,
 			
 			%TODO erklären was (1 + 1)ES, CSA-ES und sind?
 			
-			Testfunktion & ACO\(_{\text{MV}}\) & Hom-HPB- & Het-HPB- & Het-HSPPB- & Bestwert\\
-						 &				& ACO\(_\mathbb{R}\)-VS & ACO\(_\mathbb{R}\)-VS & ACO\(_\mathbb{R}\)-VS & \\
+			Testfunktion & ACO\(_\mathbb{R}\) & ACO\(_{\text{MV}}\) & Hom-HPB- & Het-HPB- & Het-HSPPB- & Bestwert\\
+						 & 					  &						& ACO\(_\mathbb{R}\)-VS & ACO\(_\mathbb{R}\)-VS & ACO\(_\mathbb{R}\)-VS & \\
 			
 			%\rule{1.6cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{1.3cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.4cm}{0.4pt}\\
 			
 			\midrule
 			
-			exakt-exakt & - & \textbf{1.0} (389) [98\%] & 1.2 (471) [98\%] & 1.3 (499) & \textbf{1.0} (389)\\
+			exakt-exakt & - & - & \textbf{1.0} (389) [98\%] & 1.2 (471) [98\%] & 1.3 (499) & \textbf{1.0} (389)\\
 			
-			exakt-penalty & - & 1.0 (354) [94\%]   & 1.3 (443) [96\%] & (390) & \textbf{1.0} (344)\\
+			exakt-penalty & - & - & 1.0 (354) [94\%]   & 1.3 (443) [96\%] & (390) & \textbf{1.0} (344)\\
 			
-			 & &  (1000) (1000) & & & \\
+			 & & &  (1000) (1000) & & & \\
 			
-			penalty-exakt & - & - & - & - & \textbf{1.0} (1390)\\
+			penalty-exakt & - & - & \(\infty\) & \(\infty\) & \(\infty\) & \textbf{1.0} (1390)\\
 			
-			penalty-penalty & & & 1.1 (328) & 1.2 (364) & \textbf{1.0} (311)\\
+			penalty-penalty & 8000 & 8000 & & 1.1 (328) & 1.2 (364) & \textbf{1.0} (311)\\
 			
 			\bottomrule
 			
@@ -3483,7 +3539,7 @@ within=section,
 		
 		\scriptsize
 		
-		\begin{tabularx}{\linewidth}{l l l l l l}
+		\begin{tabularx}{\linewidth}{l l l l l l l}
 			
 			%\rule{1.6cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{1.3cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.4cm}{0.4pt}\\
 			
@@ -3493,20 +3549,20 @@ within=section,
 			
 			%TODO erklären was (1 + 1)ES, CSA-ES und sind?
 			
-			Testfunktion & ACO\(_{\text{MV}}\) & Hom-HPB- & Het-HPB- & Het-HSPPB- & Bestwert\\
-						 &				& ACO\(_\mathbb{R}\)-VS & ACO\(_\mathbb{R}\)-VS & ACO\(_\mathbb{R}\)-VS & \\
+			Testfunktion & ACO\(_\mathbb{R}\) & ACO\(_{\text{MV}}\) & Hom-HPB- & Het-HPB- & Het-HSPPB- & Bestwert\\
+						 & 					  &						& ACO\(_\mathbb{R}\)-VS & ACO\(_\mathbb{R}\)-VS & ACO\(_\mathbb{R}\)-VS & \\
 			
 			%\rule{1.6cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{1.3cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.4cm}{0.4pt}\\
 			
 			\midrule
 			
-			exakt-exakt & - & \textbf{1.0} (389) [98\%] \(\{\}\) & 1.2 (471) [98\%] \(\{\}\) & 1.3 (499) \(\{\}\) & \textbf{1.0} (389)\\
+			exakt-exakt & - & - & \textbf{1.0} (389) [98\%] \(\{\}\) & 1.2 (471) [98\%] \(\{\}\) & 1.3 (499) \(\{\}\) & \textbf{1.0} (389)\\
 			
-			exakt-penalty & - & 1.0 (354) [94\%] \(\{\}\) & 1.3 (443) [96\%] ( )\(\{\}\) & (390) \(\{\}\) & \textbf{1.0} (344)\\
+			exakt-penalty & - & - & 1.0 (354) [94\%] \(\{\}\) & 1.3 (443) [96\%] ( )\(\{\}\) & (390) \(\{\}\) & \textbf{1.0} (344)\\
 			
-			penalty-exakt & - & () \(\{\}\) & () \(\{\}\) & () \(\{\}\) & \textbf{1.0} (1390)\\
+			penalty-exakt & - & - & \(\infty\) & \(\infty\) & \(\infty\) & \textbf{1.0} (1390)\\
 			
-			penalty-penalty & & () \(\{\}\) & 1.1 (328) \(\{\}\) & 1.2 (364) \(\{\}\) & \textbf{1.0} (311)\\
+			penalty-penalty & 8000 & 8000 & () \(\{\}\) & 1.1 (328) \(\{\}\) & 1.2 (364) \(\{\}\) & \textbf{1.0} (311)\\
 			
 			\bottomrule
 			
