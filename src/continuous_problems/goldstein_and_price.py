@@ -145,7 +145,7 @@ class Goldstein_and_Price(Problem):
 
         return 0
 
-    def add_req_iterations(self, additionally_required_iterations) -> None:
+    def add_additional_req_iterations(self, additionally_required_iterations) -> None:
 
         return 0
 

@@ -17,6 +17,7 @@ from mixed_variable_problems.artificial_mixed_variable_problems.rosenbrock_mv im
 from mixed_variable_problems.artificial_mixed_variable_problems.tablet_mv import Tablet_MV
 from mixed_variable_problems.csd_with_exact_term import CSD_exact
 from mixed_variable_problems.csd_with_penalty_term import CSD_penalty
+from mixed_variable_problems.csd import CSD
 from combinatorial_problems.tsp import TSP
 from mixed_variable_problems.tisd import TISD
 from continuous_problems.simple_continuous_problems.cigar import Cigar
@@ -60,11 +61,11 @@ def user_input():
     # parser.add_argument('-p', '--problem', type=str, default='rat195',
     #                    help='Name of the problem instance, e.g. the TSPLIB names like "rat195"')
 
-    parser.add_argument('-p', '--problem', type=str, default='csd_3',
+    parser.add_argument('-p', '--problem', type=str, default='csd_3_exact_exact',
                         help='Name of the problem instance, e.g. TISD names like "tisd10" or TSPLIB names like "rat195"')
     # parser.add_argument('-pt', '--problem-type', type=str, default='TSP',
     #                    help='Type of the problem, e.g. TSP (standard, symmetric TSP), ATSP (asymmetric TSP), QAP, TISD')
-    parser.add_argument('-pt', '--problem-type', type=str, default='CSD_penalty',
+    parser.add_argument('-pt', '--problem-type', type=str, default='CSD',
                         help='Type of the problem, e.g. TSP (standard, symmetric TSP), ATSP (asymmetric TSP), QAP, TISD')
 
     parser.add_argument('-rot', '--rotation', action=argparse.BooleanOptionalAction, default=False,
@@ -234,6 +235,9 @@ def main():
 
         case 'CSD_penalty':
             problem = CSD_penalty(csd_name=args.problem)
+
+        case 'CSD':
+            problem = CSD(csd_name=args.problem)
 
         case 'TISD':
             problem = TISD(tisd_name=args.problem)
@@ -492,7 +496,7 @@ def main():
                 print("Required add iterations:", best_solution[0][0]["add_it"])
                 print('Required iterations:', best_solution[1])
                 print("Required restarts", best_solution[0][0]["required_restarts"])
-                print('Required total iterations:', best_solution[1])
+                # print('Required total iterations:', best_solution[1])
                 print('Required function evaluations:', best_solution[1] * 13 + best_solution[0][0]["so_far"] + best_solution[0][0]["add_it"])
                 print("Solution:", best_solution[0][0])
                 print("Solution quality:", best_solution[0][1])
@@ -510,7 +514,7 @@ def main():
 
                 # print(abs_path)
 
-                with (open(os.path.join(abs_path, "performance_data/{}".format(args.problem) + "_" + args.accepted_solutions + "_" + args.problem_type + "_" + args.restart_behaviour + "_" + "mixed_variable_10_6" + ".txt"), "a+") as performance_data):
+                with (open(os.path.join(abs_path, "performance_data/{}".format(args.problem) + "_" + args.problem_type + "_" + args.restart_behaviour + "_" + "mixed_variable_10_6" + ".txt"), "a+") as performance_data):
 
                     # perform_data_string = str(best_solution[0][0]["required_restarts"]) + " " + str(best_solution[1] * 13 + best_solution[0][0]["so_far"]) + " " + str(best_solution[0][1]) + str("\n")
                     # perform_data_string = str(best_solution[0][0]["required_restarts"]) + " " + str(best_solution[1]) + " " + str(best_solution[1] * 13) + " " + str(best_solution[0][1]) + " " + str(timeit.default_timer() - starttime) + " " + str(best_solution[0][0]['continuous'][0]) + str("\n") # for continuous problems

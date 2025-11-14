@@ -1,5 +1,7 @@
 import sys
 import os
+from functools import reduce
+from operator import mul
 import json
 # from collections.abc import set_iterator
 
@@ -9,7 +11,7 @@ from random import choice, randint, uniform
 import numpy as np
 from numpy import pi
 
-class CSD_exact(Problem):
+class CSD(Problem):
     TYPE = 'CSD'
     """
     """
@@ -18,12 +20,14 @@ class CSD_exact(Problem):
         self._problem_type = 'CSD'
         self._csd_name = csd_name
         self._problem_path = problem_path
+
         if load_instance:
 
             with open(os.path.join(self._problem_path, self._csd_name + ".json")) as f:
                 self._instance = json.load(f)
                 self._dimension = self._instance["dimension"]
-                self._initialization_behaviour = self._instance["initialization_behaviour"]
+                self._initialization_behaviour = self._instance["initialisation_behaviour"]
+                self._accepted_solutions = self._instance["accepted_solutions"]
                 self._additionally_required_pre_iterations = 0
                 self._additionally_required_iterations = 0
                 self._variable_boundaries = self._instance["variable_boundaries"]
@@ -44,6 +48,8 @@ class CSD_exact(Problem):
                 self._magnitudes_of_categorical_variables = self._instance["magnitudes_of_categorical_variables"]
 
             self._rng = np.random
+
+        self._constraints = [1, 1, 1, 1, 1, 1, 1, 1]
 
     def reset(self) -> None:
         """
@@ -164,6 +170,10 @@ class CSD_exact(Problem):
                             'ordinal': [],
                             'categorical': []}
 
+            case _:
+
+                pass
+
         # print("außerhalb der Schleife: " + str(solution))
 
         # self._additionally_required_pre_iterations += additionally_required_pre_iterations
@@ -198,54 +208,124 @@ class CSD_exact(Problem):
         # volume of the steel wire V
         V = 1/4 * pi**2 * D * d**2 * (N + 2)
 
-        if (8 * C_f * self._F_max * D)/(pi * d**3) - self._S > 0:
+        g_1 = (8 * C_f * self._F_max * D)/(pi * d ** 3) - self._S
+        g_2 = l_f - self._l_max
+        g_3 = self._d_min - d
+        g_4 = D - self._D_max
+        g_5 = 3 - D/d
+        g_6 = sigma_p - self._sigma_pm
+        g_7 = sigma_p + (self._F_max - self._F_p)/K + 1.05 *(N + 2)*d - l_f
+        g_8 = self._sigma_w - (self._F_max - self._F_p)/K
 
-            # print('in get_solution_quality: test')
+        match self._accepted_solutions:
 
-            return [V, False]
+            case "exact":
 
-        if l_f - self._l_max > 0:
+                if g_1 > 0:
 
-            # print('in get_solution_quality: test2')
+                    # print('in get_solution_quality: test')
 
-            return [V, False]
+                    return [V, False]
 
-        if D - self._D_max > 0:
+                if g_2 > 0:
 
-            # print('in get_solution_quality: test3')
+                    # print('in get_solution_quality: test2')
 
-            return [V, False]
+                    return [V, False]
 
-        if 3 - D/d > 0:
+                if g_3 > 0:
 
-            # print('in get_solution_quality: test4')
-            # print('in get_solution_quality D: ' + str(D))
-            # print('in get_solution_quality d: ' + str(d))
-            # print('in get_solution_quality D/d: ' + str(D/d))
+                    # print('in get_solution_quality: test3')
 
-            return [V, False]
+                    return [V, False]
 
-        if sigma_p - self._sigma_pm > 0:
+                if g_5 > 0:
 
-            # print('in get_solution_quality: test5')
+                    # print('in get_solution_quality: test4')
+                    # print('in get_solution_quality D: ' + str(D))
+                    # print('in get_solution_quality d: ' + str(d))
+                    # print('in get_solution_quality D/d: ' + str(D/d))
 
-            return [V, False]
+                    return [V, False]
 
-        if sigma_p + (self._F_max - self._F_p)/K + 1.05*(N + 2)*d - l_f > 0:
+                if g_6 > 0:
 
-            # print('in get_solution_quality: test6')
+                    # print('in get_solution_quality: test5')
 
-            return [V, False]
+                    return [V, False]
 
-        if self._sigma_w - (self._F_max - self._F_p)/K > 0:
+                if g_7 > 0:
 
-            # print('in get_solution_quality: test7')
+                    # print('in get_solution_quality: test6')
 
-            return [V, False]
+                    return [V, False]
 
-        # )print('in get_solution_quality:')
+                if g_8 > 0:
 
-        return [V, True]
+                    # print('in get_solution_quality: test7')
+
+                    return [V, False]
+
+                    # )print('in get_solution_quality:')
+
+                return [V, True]
+
+            case "penalty":
+
+                if g_1 > 0:
+
+                    # print("in csd_with_penalty_term g_1: " + str(g_1))
+
+                    self._constraints[0] = (self._constraints[0] + 10 ** (-5) * g_1) ** 3
+
+                if g_2 > 0:
+
+                    # print("in csd_with_penalty_term g_2: " + str(g_2))
+
+                    self._constraints[1] = (self._constraints[1] + 1 * g_2) ** 3
+
+                if g_3 > 0:
+                    self._constraints[2] = (self._constraints[2] + 10 ** 2 * g_3) ** 3
+
+                if g_4 > 0:
+
+                    self._constraints[3] = (self._constraints[3] + 1 * g_4) ** 3
+
+                if g_5 > 0:
+
+                    self._constraints[4] = (self._constraints[4] + 10 ** 2 * g_5) ** 3
+
+                if g_6 > 0:
+
+                    self._constraints[5] = (self._constraints[5] + 1 * g_6) ** 3
+
+                if g_7 > 0:
+
+                    self._constraints[6] = (self._constraints[6] + 10 ** 2 * g_7) ** 3
+
+                if g_8 > 0:
+
+                    self._constraints[7] = (self._constraints[7] + 10 ** 2 * g_8) ** 3
+
+                    # )print('in get_solution_quality:')
+
+                V_c = 1 / 4 * pi ** 2 * D * d ** 2 * (N + 2)
+
+                # for i in range(len(self._constraints)):
+
+                #    V = V * self._constraints[i]
+
+                V = V_c * reduce(mul, self._constraints)
+
+                # print("in csd_with_penalty_term get_solution_quality: " + str(V))
+
+                return [V, True]
+
+            case _:
+
+                pass
+
+
 
     def get_heuristic_component(self, i: int, j: int) -> float:
 
