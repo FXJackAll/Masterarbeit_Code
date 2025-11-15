@@ -72,9 +72,9 @@ def user_input():
                         help='enables random rotation of the given test function')
 
 
-    parser.add_argument('-salg', '--search_algorithm', type=str, default='h_het_aco_r_very_simple',
+    parser.add_argument('-salg', '--search_algorithm', type=str, default='h_het_p_aco_r_very_simple',
                         help='Type of the search algorithm, e.g. random_search or aco_r_very_simple')
-    parser.add_argument('-salgn', '--search_algorithm_name', type=str, default='H_Het_ACO_R_Very_Simple',
+    parser.add_argument('-salgn', '--search_algorithm_name', type=str, default='H_Het_P_ACO_R_Very_Simple',
                         help='Name of the search algorithm, e.g. Random_Search or ACO_R_Very_Simple')
     parser.add_argument('-mitc', '--max_iteration_count', type=int, default=10000,
                         help='Maximum number of iterations (not function evaluations) to run the search algorithm')

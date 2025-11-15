@@ -925,6 +925,12 @@ within=section,
 	
 	DE steht für \textbf{D}ifferential \textbf{E}volution. DE wendet Selektion, Crossover und Mutation, um ein Minimum einer gegebenen Zielfunktion zu finden. Diese Meta-Heuristik heißt differential, da in der mathematischen Definition eine Differenz zentrale Bedeutung hat.
 	
+	\subsubsection{Algorithmen, die für Probleme mit gemischten Variablen entwickelt wurden}
+	
+	\paragraph{NLIDP}\mbox{}\\
+	
+	\paragraph{GA}\mbox{}\\
+	
 	\section{SPPBO-Schema} \label{sec:SPPBO_Schema}
 	
 	%TODO SPPBO-Schema noch Grundlagen?
@@ -2534,7 +2540,7 @@ within=section,
 		
 		\scriptsize
 		
-		\begin{tabularx}{\linewidth}{l X X X X X X}
+		\begin{tabularx}{\linewidth}{X X X X X X X}
 			
 			%\rule{1.6cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{1.3cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.4cm}{0.4pt}\\
 			
@@ -2553,10 +2559,9 @@ within=section,
 			
 			\(B_2\) & 1.4 (544) & 1.9 (747) & \textbf{1.0} (389) [98\%] & 1.2 (471) [98\%] & 1.3 (499) & \textbf{1.0} (389)\\
 			
-			Goldstein & 1.1 (384) & \textbf{1.0} (344) & 1.0 (354) [94\%] & 1.3 (443) [96\%] & (390) & \textbf{1.0} (344)\\
-			and Price & & & & & & \\
+			Goldstein and Price & 1.1 (384) & \textbf{1.0} (344) & 1.0 (354) [94\%] & 1.3 (443) [96\%] & 1.1 (390) & \textbf{1.0} (344)\\
 			
-			Griewangk & \textbf{1.0} (1390) [61\%] & 12.3 (17062) [44\%] & - & - & - & \textbf{1.0} (1390)\\
+			Griewangk & \textbf{1.0} (1390) [61\%] & 12.3 (17062) [44\%] & \(\infty\) & \(\infty\) & \(\infty\) & \textbf{1.0} (1390)\\
 			
 			Martin & 1.1 (345) & 1.1 (356) & \textbf{1.0} (311) & 1.1 (328) & 1.2 (364) & \textbf{1.0} (311)\\
 			and Gaddy & & & & & & \\
@@ -2565,7 +2570,7 @@ within=section,
 			
 			Rosenbrock(2) & \textbf{1.0} (820) & 1.5 (1195) & 1.5 (1237) & 1.9 (1522) & 1.6 (1351) & \textbf{1.0} (820)\\
 			
-			Rosenbrock(5) & \textbf{1.0} (2487) [97\%] & 15.8 (39345) [54\%] & - & 27.1 (67340) [2\%] & - & \textbf{1.0} (2487)\\
+			Rosenbrock(5) & \textbf{1.0} (2487) [97\%] & 15.8 (39345) [54\%] & \(\infty\) & 27.1 (67340) [2\%] & \(\infty\) & \textbf{1.0} (2487)\\
 			
 			Shekel(4,5) & 1.8 (787) [57\%] & \textbf{1.0} (445) & 1.2 (517) [34\%] & 1.3 (593) [42\%] & 58.1 (25860) [48\%] & \textbf{1.0} (445)\\
 			
@@ -2624,7 +2629,7 @@ within=section,
 			Goldstein & 1.1 (384) & \textbf{1.0} (344) & 1.6 (563) \(\{2\}\) & 1.7 (595) \(\{3\}\) & 2.4 (827) \(\{4\}\) & \textbf{1.0} (344)\\
 			and Price & & & & & & \\
 			
-			Griewangk & \textbf{1.0} (1390) [61\%] & 12.3 (17062) [44\%] & - & - & - & \textbf{1.0} (1390)\\
+			Griewangk & \textbf{1.0} (1390) [61\%] & 12.3 (17062) [44\%] & \(\infty\) & \(\infty\) & \(\infty\) & \textbf{1.0} (1390)\\
 			
 			Martin & 1.1 (345) & 1.1 (356) & 1.3 (419) & 1.7 (522) \(\{2\}\) & 2.1 (665) \(\{3\}\) & \textbf{1.0} (311)\\
 			and Gaddy & & & & & & \\
@@ -2633,7 +2638,7 @@ within=section,
 			
 			Rosenbrock(2) & \textbf{1.0} (820) & 1.5 (1195) & 19.7 (16117) \(\{76\}\) & 28.8 (23618) \(\{129\}\) & 48.7 (39916) [94\%] \(\{243\}\) & \textbf{1.0} (820)\\
 			
-			Rosenbrock(5) & \textbf{1.0} (2487) [97\%] & 15.8 (39345) [54\%] & 30.2 (75218) [2\%] \(\{174\}\) & 15.0 (37414) [2\%] \(\{105\}\) & - & \textbf{1.0} (2487)\\
+			Rosenbrock(5) & \textbf{1.0} (2487) [97\%] & 15.8 (39345) [54\%] & 30.2 (75218) [2\%] \(\{174\}\) & 15.0 (37414) [2\%] \(\{105\}\) & \(\infty\) & \textbf{1.0} (2487)\\
 			
 			Shekel(4,5) & 1.8 (787) [57\%] & \textbf{1.0} (445) & 8.0 (3566) \(\{9\}\) & 11.0 (4913) \(\{15\}\) & 18.8 (8348) \(\{30\}\) & \textbf{1.0} (445)\\
 			
@@ -3404,6 +3409,14 @@ within=section,
 	
 	%TODO viel vom Code ist nicht von mir. Wie?
 	
+	%TODO Boxplots für min und max veranschaulichen
+	
+	Dies ist der letzte Vergleich, den wir in dieser Arbeit betrachten. In Abschnitt~\ref{subsec:Vergleich_Algorithmen:Vergleich_Auf_Stetigen_Testfunktionen} haben wir gesehen Abschnitt~\ref{subsubsec:Vergleich_Algorithmen:Vergleich_Auf_Konstruierten_Testfunktionen_Mit_Gemischten_Variablen} haben wir bereits gesehen, dass \ac{acorvsmv} und Iterationen mit konstruierten Testfunktionen mit gemischten Variablen umgehen können. Jetzt wollen wir untersuchen, ob \ac{acorvsmv} und Iterationen auch mit realen Problemen umgehen können. 
+	
+	Hier wurde von \textit{Socha}~\cite{socha2009ant}, im Gegenteil zu anderen Vergleichen wo ganze Zahlen verwendet, die Erfolgsrate von Algorithmen in Prozent auf Zehntel genau angegeben, weswegen wir in den Tabellen in diesem Abschnitt auch die Erfolgsrate von \ac{acorvsmv} und Iterationen auf Zehntel genau angeben.
+	
+	%TODO ist bei Iterationen klar, dass es die Iterationen von ACO_R-VS-MV sind?
+	
 		\begin{table}[H]
 		
 		%\fontsize{6pt}{6pt}
@@ -3440,13 +3453,13 @@ within=section,
 			
 			\midrule
 			
-			exakt-exakt & - & - & - & - & - & \textbf{1.0} (389)\\
+			exakt-exakt & - & - & - & - & - & - \\
 			
-			exakt-penalty & - & - & - & - & - & \textbf{1.0} (344)\\
+			exakt-penalty & - & - & - & - & - & - \\
 			
-			penalty-exakt & - & - & - & - & - & \textbf{1.0} (1390)\\
+			penalty-exakt & - & - & - & - & - & - \\
 			
-			penalty-penalty & 8000 [82.0\%] & 8000 [39.0\%] & - [100.0\%] & - [95.3\%] & 8000 [95.0\%] & \textbf{1.0} (311)\\
+			penalty-penalty & 12.9 (8000) [82.0\%] & 12.9 (8000) [39.0\%] & - [100.0\%] & - [95.3\%] & 8000 [95.0\%] & \textbf{1.0} (619)\\
 			
 			\bottomrule
 			
@@ -3454,7 +3467,7 @@ within=section,
 		
 		\smallskip
 		
-		Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Sofern es keine Angaben zu der Anzahl an Funktionsauswertungen gibt aber die Erfolgsrate angegeben ist, wird die Erfolgsrate nach einem Strich angegeben. Bei Ergebnissen, wo die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht wurde, ist der Anteil der erfolgreichen Durchläufe in Prozent in eckigen Klammern angegeben, wo \(\infty\) steht, wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht.\hfill\newline
+		Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Bei Ergebnissen, wo die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht wurde, ist der Anteil der erfolgreichen Durchläufe in Prozent in eckigen Klammern angegeben, auch wenn die Anzahl an Funktionsauswertungen nicht bekannt ist, wo \(\infty\) steht, wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht.\hfill\newline
 		
 		%TODO kann auch ein längerer Absatzt beibehalten werden? Ja
 		
@@ -3480,7 +3493,7 @@ within=section,
 		
 		\scriptsize
 		
-		\begin{tabularx}{\linewidth}{l l l l l l l}
+		\begin{tabularx}{\linewidth}{l X X X X X X}
 			
 			%\rule{1.6cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{1.3cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.4cm}{0.4pt}\\
 			
@@ -3490,6 +3503,8 @@ within=section,
 			
 			%TODO erklären was (1 + 1)ES, CSA-ES und sind?
 			
+			%TODO hinschreiben, wie viele Funktionsauswertung nur während der Algorithmusausführung gebrauch wurden?
+			
 			Testfunktion & ACO\(_\mathbb{R}\) & ACO\(_{\text{MV}}\) & Hom-HPB- & Het-HPB- & Het-HSPPB- & Bestwert\\
 						 & 					  &						& ACO\(_\mathbb{R}\)-VS & ACO\(_\mathbb{R}\)-VS & ACO\(_\mathbb{R}\)-VS & \\
 			
@@ -3497,15 +3512,13 @@ within=section,
 			
 			\midrule
 			
-			exakt-exakt & - & - & \textbf{1.0} (389) [98\%] & 1.2 (471) [98\%] & 1.3 (499) & \textbf{1.0} (389)\\
+			exakt-exakt & - & - & \textbf{1.0} (144575) [22.0\%] (142931) (1285) & 1.1 (152564) [18.0\%] (149447) (2367) & 1.2 (174319) [46.0\%] (158855) (7016) & \textbf{1.0} (144575)\\
+
+			exakt-penalty & - & - & 1.2 (133910) [20.0\%] (132922) (0) & 1.0 (116594) [28.0\%] (111652) (0) & \textbf{1.0} (112408) [58\%] (90549) (0) & \textbf{1.0} (112408)\\
 			
-			exakt-penalty & - & - & 1.0 (354) [94\%]   & 1.3 (443) [96\%] & (390) & \textbf{1.0} (344)\\
+			penalty-exakt & - & - & \(\infty\) & \(\infty\) & \(\infty\) & - \\
 			
-			 & & &  (1000) (1000) & & & \\
-			
-			penalty-exakt & - & - & \(\infty\) & \(\infty\) & \(\infty\) & \textbf{1.0} (1390)\\
-			
-			penalty-penalty & 8000 & 8000 & & 1.1 (328) & 1.2 (364) & \textbf{1.0} (311)\\
+			penalty-penalty & 12.9 (8000) [82.0\%] & 12.9 (8000) [39.0\%] & 1.3 (783) [10.0\%] (0) (0) & \textbf{1.0} (619) [22.0\%] (0) (0) & 30.0 (18587) [66.0\%] (0) (0) & \textbf{1.0} (619)\\
 			
 			\bottomrule
 			
@@ -3513,7 +3526,7 @@ within=section,
 		
 		\smallskip
 		
-		Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Bei Ergebnissen, wo die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht wurde, ist der Anteil der erfolgreichen Durchläufe in Prozent in eckigen Klammern angegeben, wo \(\infty\) steht, wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht.\hfill\newline
+		Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Bei Ergebnissen, wo die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht wurde, ist der Anteil der erfolgreichen Durchläufe in Prozent in eckigen Klammern angegeben, danach sind in Klammern die Anzahl an Iteration angegeben, die notwendig waren, um gefilterte Ausgangslösungen zu erhalten, und die Anzahl an Iterationen, um gefilterte Lösungen während der Algorithmenausführung zu erhalten, wo \(\infty\) steht, wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht.\hfill\newline
 		
 		%TODO kann auch ein längerer Absatzt beibehalten werden? Ja
 		
@@ -3539,7 +3552,7 @@ within=section,
 		
 		\scriptsize
 		
-		\begin{tabularx}{\linewidth}{l l l l l l l}
+		\begin{tabularx}{\linewidth}{l X X X X X X}
 			
 			%\rule{1.6cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{1.3cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.4cm}{0.4pt}\\
 			
@@ -3556,13 +3569,13 @@ within=section,
 			
 			\midrule
 			
-			exakt-exakt & - & - & \textbf{1.0} (389) [98\%] \(\{\}\) & 1.2 (471) [98\%] \(\{\}\) & 1.3 (499) \(\{\}\) & \textbf{1.0} (389)\\
+			exakt-exakt & - & - & \textbf{1.0} (988021) \(\{9\}\) (979734) (5847) & 1.4 (1385402) \(\{14\}\) (1371913) (9940) & 1.3 (1313269) \(\{14\}\) (1298758) (11020) & \textbf{1.0} (988021)\\
 			
-			exakt-penalty & - & - & 1.0 (354) [94\%] \(\{\}\) & 1.3 (443) [96\%] ( )\(\{\}\) & (390) \(\{\}\) & \textbf{1.0} (344)\\
+			exakt-penalty & - & - & \textbf{1.0} (3600212) \(\{45\}\) (3591069) (0) & 1.8 (6491284) \(\{87\}\) (6475082) (0) & 3.3 (11791721) \(\{166\}\) (11764326) (0) & \textbf{1.0} (3600212)\\
 			
-			penalty-exakt & - & - & \(\infty\) & \(\infty\) & \(\infty\) & \textbf{1.0} (1390)\\
+			penalty-exakt & - & - & \(\infty\) & \(\infty\) & \(\infty\) & - \\
 			
-			penalty-penalty & 8000 & 8000 & () \(\{\}\) & 1.1 (328) \(\{\}\) & 1.2 (364) \(\{\}\) & \textbf{1.0} (311)\\
+			penalty-penalty & \textbf{1.0} (8000) [82.0\%] & \textbf{1.0} (8000) [39.0\%] & 1.0 (8358) \(\{31\}\) (0) (0) & 1.3 (10393) \(\{43\}\) (0) (0) & 3.1 (24552) [98.0\%] \(\{116\}\) (0) (0) & \textbf{1.0} (8000)\\
 			
 			\bottomrule
 			
@@ -3570,7 +3583,7 @@ within=section,
 		
 		\smallskip
 		
-		Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Bei Ergebnissen, wo die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht wurde, ist der Anteil der erfolgreichen Durchläufe in Prozent in eckigen Klammern angegeben, wo \(\infty\) steht, wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht.\hfill\newline
+		Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Bei Ergebnissen, wo die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht wurde, ist der Anteil der erfolgreichen Durchläufe in Prozent in eckigen Klammern angegeben. Bei den Algorithmen, welche \glqq adaptive\grqq{} als Neustartstrategie anwendetet, steht die durchschnittliche Anzahl an Neustarts in geschweiften Klammern, danach sind in Klammern die Anzahl an Iteration angegeben, die notwendig waren, um gefilterte Ausgangslösungen zu erhalten, und die Anzahl an Iterationen, um gefilterte Lösungen während der Algorithmenausführung zu erhalten, wo \(\infty\) steht, wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht.\hfill\newline
 		
 		%TODO kann auch ein längerer Absatzt beibehalten werden? Ja
 		

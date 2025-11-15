@@ -1,0 +1,7 @@
+mean_of_restarts: 0
+mean_of_pre_iterations: 111652
+mean_of_add_iterations: 0
+mean_of_iterations: 116594
+success_rate: 28.000000000000004%
+mean_of_time: 0.27104434771445085
+
