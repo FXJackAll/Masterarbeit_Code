@@ -135,11 +135,19 @@ class Branin_RCOS(Problem):
         """
         pass
 
-    def req_iterations(self) -> int:
+    def req_pre_iterations(self) -> int:
 
         return 0
 
-    def add_req_iterations(self, additionally_required_iterations) -> None:
+    def add_req_pre_iterations(self, additionally_req_pre_iterations) -> None:
+
+        pass
+
+    def additional_req_iterations(self) -> int:
+
+        return 0
+
+    def add_additional_req_iterations(self, additionally_req_iterations) -> None:
 
         pass
 

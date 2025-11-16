@@ -82,6 +82,22 @@ class Problem(ABC):
         """
         pass
 
+    def req_pre_iterations(self) -> int:
+
+        pass
+
+    def add_req_pre_iterations(self, additionally_req_pre_iterations) -> None:
+
+        pass
+
+    def additional_req_iterations(self) -> int:
+
+        pass
+
+    def add_additional_req_iterations(self, additionally_req_iterations) -> None:
+
+        pass
+
     @property
     @abstractmethod
     def dimension(self):
