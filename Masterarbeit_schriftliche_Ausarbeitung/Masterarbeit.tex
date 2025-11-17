@@ -931,7 +931,15 @@ within=section,
 	
 	\paragraph{NLIDP}\mbox{}\\
 	
+	Die folgende Beschreibung ist nach \textit{Sandgren}~\cite{sandgren1990nonlinear}.\hfill\newline
+	
+	NLIDP steht für \textbf{n}on\textbf{l}inear \textbf{i}nteger and \textbf{d}iscrete \textbf{p}rogramming.
+	
 	\paragraph{GA}\mbox{}\\
+	
+	Die folgende Beschreibung ist nach \textit{Wu und Chow}~\cite{wu1995genetic}.\hfill\newline
+	
+	GA steht für \textbf{G}enetic \textbf{A}lgorithm.
 	
 	\section{SPPBO-Schema} \label{sec:SPPBO_Schema}
 	
@@ -1144,13 +1152,13 @@ within=section,
 	
 	%TODO beibehalten, dass es nur zwei der drei sind? explizit auf diskreten testen, weil das sonst niemand tut
 	
-		\subsection{Permutationsprobleme Testfunktionen}
+		%\subsection{Permutationsprobleme Testfunktionen}
 		
 		%TODO fragen, ob kurz beschrieben was permutatioinsprobleme sind oder ganz weglassen
 		
-			\subsubsection{Traveling Salesperson Problem (TSP)} \label{subsubsec:TSP} %in Experimenten weglassen
+		%	\subsubsection{Traveling Salesperson Problem (TSP)} \label{subsubsec:TSP} %in Experimenten weglassen
 			
-			\subsubsection{Quadratic Assigment Problem (QAP)} \label{subsubsec:QAP}
+		%	\subsubsection{Quadratic Assigment Problem (QAP)} \label{subsubsec:QAP}
 	
 		\subsection{Stetige Testfunktionen} \label{subsec:Stetige_Testfunktionen} %wichtig
 		
@@ -1588,7 +1596,7 @@ within=section,
 			
 		\end{figure}
 		
-		\subsection{Diskrete Testfunktionen} \label{subsec:Ordinale_Testfunktionen} %wichtig
+		%\subsection{Diskrete Testfunktionen} \label{subsec:Ordinale_Testfunktionen} %wichtig
 		
 		%TODO soll es ordinale oder diskrete Testfunktionen heißen? Diskrete
 		
@@ -1596,9 +1604,9 @@ within=section,
 		
 		%TODO braucht man diskrete Testfunktionen? Nein.
 		
-		\subsubsection{Diskrete Testfunktionen mit gleichverteiltem Definitionsbereich} \label{subsubsec:Ordinale_Testfunktionen_Mit_Gleichverteiltem_Definitionsbereich}
+		%\subsubsection{Diskrete Testfunktionen mit gleichverteiltem Definitionsbereich} \label{subsubsec:Ordinale_Testfunktionen_Mit_Gleichverteiltem_Definitionsbereich}
 		
-		Die einfachste Art diskrete Testfunktionen zu erhalten, ist die Diskretisierung von stetigen Testfunktionen. Dabei nimmt man \(m \in \mathbb{N}\) Punkte aus dem Definitionsbereich einer stetigen Funktion und bildet aus diesen Punkten einen neuen diskreten Definitionsbereich. Zum Beispiel ist die Funktion \glqq Paraboloid\grqq{} aus Tabelle~\ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} über dem stetigen Definitionsbereich \( D = [-3,7]^n, n = 10\), definiert. Wir nehmen diesen Definitionsbereich und zerlegen ihn in \(m = 11\) gleichverteilte diskrete Punkte. Dies Ergibt \(D = [-3, -2, -1, 0, 1, 2, 3 , 4, 5, 6, 7]^n, n = 10\). Analog gewinnen wir anderen diskreten Testfunktionen. Wir nehmen die stetigen Testfunktionen aus den Tabellen \ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt} mit \(m \in \{11, 21, 51\}\). Damit erhalten wir für jede stetige Funktion 3 diskrete Testfunktionen. Die Definitionen der Funktionsterme, Optima und Argumente der Optima bleiben gleich, weswegen hier auf eine Doppelung der Tabellen \ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt} verzichtet wird. Wie im Abschnitt~\ref{subsec:ACO_R} beschrieben, hat das Initialisierungsintervall großen Einfluss auf das Verhalten des Algorithmus aber da wir eine gleichverteilte Diskretisierung genommen haben, um die neuen Definitionsbereiche zu erlangen, ist zu erwarten, dass sich das Lösungsverhalten für die so gewonnenen diskreten Testfunktionen nicht signifikant von denen in den Tabellen \ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt} unterscheiden wird.
+		%Die einfachste Art diskrete Testfunktionen zu erhalten, ist die Diskretisierung von stetigen Testfunktionen. Dabei nimmt man \(m \in \mathbb{N}\) Punkte aus dem Definitionsbereich einer stetigen Funktion und bildet aus diesen Punkten einen neuen diskreten Definitionsbereich. Zum Beispiel ist die Funktion \glqq Paraboloid\grqq{} aus Tabelle~\ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} über dem stetigen Definitionsbereich \( D = [-3,7]^n, n = 10\), definiert. Wir nehmen diesen Definitionsbereich und zerlegen ihn in \(m = 11\) gleichverteilte diskrete Punkte. Dies Ergibt \(D = [-3, -2, -1, 0, 1, 2, 3 , 4, 5, 6, 7]^n, n = 10\). Analog gewinnen wir anderen diskreten Testfunktionen. Wir nehmen die stetigen Testfunktionen aus den Tabellen \ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt} mit \(m \in \{11, 21, 51\}\). Damit erhalten wir für jede stetige Funktion 3 diskrete Testfunktionen. Die Definitionen der Funktionsterme, Optima und Argumente der Optima bleiben gleich, weswegen hier auf eine Doppelung der Tabellen \ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt} verzichtet wird. Wie im Abschnitt~\ref{subsec:ACO_R} beschrieben, hat das Initialisierungsintervall großen Einfluss auf das Verhalten des Algorithmus aber da wir eine gleichverteilte Diskretisierung genommen haben, um die neuen Definitionsbereiche zu erlangen, ist zu erwarten, dass sich das Lösungsverhalten für die so gewonnenen diskreten Testfunktionen nicht signifikant von denen in den Tabellen \ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt} unterscheiden wird.
 		
 		%\begin{table}[H]
 			
@@ -1652,39 +1660,39 @@ within=section,
 		
 		%TODO Probleme mit nur diskreten Variablen nehmen, statt einer diskret und einer stetigen
 		
-		\subsubsection{Diskrete Testfunktionen mit asymmetrischem Definitionsbereich}
+		%\subsubsection{Diskrete Testfunktionen mit asymmetrischem Definitionsbereich}
 		
-		Wie in Abschnitt~\ref{subsec:ACO_R} geschildert, hat das Initialisierungsintervall großen Einfluss auf das Verhalten des Algorithmus. Zusätzlich, wie in \textit{Merkle und Middendorf} \cite{ACO_2003_simiple_problems} beschrieben, kann das Betrachten von einfachen Testfunktionen zu unerwarteten Ergebnissen führen. Deswegen definieren wir in diesem Abschnitt explizit diskrete Funktionen, die einfach sind aber einen nicht-Standarddefinitionsbereich haben. Wir wählen, wie im Abschnitt~\ref{subsubsec:Ordinale_Testfunktionen_Mit_Gleichverteiltem_Definitionsbereich}, \(m \in \{11, 21, 51\}\) aber diesmal ist der Definitionsbereich asymmetrisch verteilt mit \(3\) Clustern. Zum Beispiel transformiert dies den stetigen Definitionsbereich der Testfunktion \glqq Paraboloid\grqq{} von \(D = [-3, 7]^{10}\) zu\\
-		\(D = [-3, -2.8, -2.6, -0.4, -0.2, 0.0, 0.2, 0.4, 6.6, 6.8, 7.0]^{10}\) für \(m = 11\). Im JSON-Format wird dies wie im Code-Snipped~\ref{subsubsec:Testfunktionen:Diskrete_Testfunktionen_mit_geclustertem_Definitionsbereich:JSON:Paraboloid2Dim11OrdAsymm} angezeigt.
+		%Wie in Abschnitt~\ref{subsec:ACO_R} geschildert, hat das Initialisierungsintervall großen Einfluss auf das Verhalten des Algorithmus. Zusätzlich, wie in \textit{Merkle und Middendorf} \cite{ACO_2003_simiple_problems} beschrieben, kann das Betrachten von einfachen Testfunktionen zu unerwarteten Ergebnissen führen. Deswegen definieren wir in diesem Abschnitt explizit diskrete Funktionen, die einfach sind aber einen nicht-Standarddefinitionsbereich haben. Wir wählen, wie im Abschnitt~\ref{subsubsec:Ordinale_Testfunktionen_Mit_Gleichverteiltem_Definitionsbereich}, \(m \in \{11, 21, 51\}\) aber diesmal ist der Definitionsbereich asymmetrisch verteilt mit \(3\) Clustern. Zum Beispiel transformiert dies den stetigen Definitionsbereich der Testfunktion \glqq Paraboloid\grqq{} von \(D = [-3, 7]^{10}\) zu\\
+		%\(D = [-3, -2.8, -2.6, -0.4, -0.2, 0.0, 0.2, 0.4, 6.6, 6.8, 7.0]^{10}\) für \(m = 11\). Im JSON-Format wird dies wie im Code-Snipped~\ref{subsubsec:Testfunktionen:Diskrete_Testfunktionen_mit_geclustertem_Definitionsbereich:JSON:Paraboloid2Dim11OrdAsymm} angezeigt.
 		
 		%TODO geclustert korrekt als Wort? ja
 		
-		\begin{lstlisting}[language=json, caption=Paraboloid 2 Dim discreter geclusteter Definitionsbereich, label=subsubsec:Testfunktionen:Diskrete_Testfunktionen_mit_geclustertem_Definitionsbereich:JSON:Paraboloid2Dim11OrdAsymm]
-{
-	"name": "Paraboloid_2_11_Discrete_Clustered",
-	"comment": "artificial discrete variable problem",
-	"type": "discrete variable problems",
-	"continuous_dimension": 0,
-	"discrete_dimension": 2,
-	"dimension": 2,
-	"optimum_argument": [[0.0], [0.0]],
-	"optimum": [0.0],
+		%\begin{lstlisting}[language=json, caption=Paraboloid 2 Dim discreter geclusteter Definitionsbereich, label=subsubsec:Testfunktionen:Diskrete_Testfunktionen_mit_geclustertem_Definitionsbereich:JSON:Paraboloid2Dim11OrdAsymm]
+%{
+	%"name": "Paraboloid_2_11_Discrete_Clustered",
+	%"comment": "artificial discrete variable problem",
+	%"type": "discrete variable problems",
+	%"continuous_dimension": 0,
+	%"discrete_dimension": 2,
+	%"dimension": 2,
+	%"optimum_argument": [[0.0], [0.0]],
+	%"optimum": [0.0],
 	
-	"variable_boundaries": {
-		"natural_numbers": [],
-		"discrete": [[-3, 7]],
-		"continuous": [],
-		"ordinal": [],
-		"categorical": []
-	},
+	%"variable_boundaries": {
+	%	"natural_numbers": [],
+	%	"discrete": [[-3, 7]],
+	%	"continuous": [],
+	%	"ordinal": [],
+	%	"categorical": []
+	%},
 	
-	"discrete_values": [-3, -2.8, -2.6,
-			    -0.4, -0.2, 0.0, 0.2, 0.4,
-			    6.6, 6.8, 7.0],
+	%"discrete_values": [-3, -2.8, -2.6,
+	%		    -0.4, -0.2, 0.0, 0.2, 0.4,
+	%		    6.6, 6.8, 7.0],
 	
-	"magnitudes_of_categorical_variables": []
-}
-		\end{lstlisting}
+	%"magnitudes_of_categorical_variables": []
+%}
+		%\end{lstlisting}
 		
 		\subsection{Testfunktionen mit gemischten Variablem} \label{subsec:Mixed_Variable}
 		
@@ -1732,8 +1740,7 @@ within=section,
 		Das Coil Spring Design Problem (CSD) kann auf verschiedene Arten definiert werden, wie in \cite{guo2004swarm}, \cite{ACO_2013}, oder []. In dieser Arbeit verwenden wir die Definition aus \cite{ACO_2013}. %TODO mehr Quellen finden; vllt. die Namen aus ACO_2013 verwenden, statt nur \cite{ACO_2013}
 		Im CSD Problem, wie es in \cite{ACO_2013} definiert wird, wird so nach dem Außendurchmesser \(D\), dem Drahtdurchmesser \(d\) und der Windungszahl \(N\) einer Schraubenfeder (Coil Spring) gesucht, dass der Materialbedarf für die Schraubenfeder minimiert wird, während gleichzeitig die Nebenbedingungen (Constrains) erfüllt werden.\\
 		
-		\noindent Da in \textit{Sandgren}~\cite{sandgren1990nonlinear} das CSD Problem initial in imperialen Maßeinheiten definiert wurde, verwendeten alle Folgestudien %TODO Folgestudien eingügen
-		ebenfalls imperiale Maßeinheiten, um die Ergebnisse vergleichen zu können. Deswegen werden auch in dieser Arbeit hier imperiale Maßeinheiten verwendet.\\
+		\noindent Da in \textit{Sandgren}~\cite{sandgren1990nonlinear} das CSD Problem initial in imperialen Maßeinheiten definiert wurde, verwendeten alle Folgestudien, wie \cite{deb1998flexible}, \cite{Lampinen1999MIXEDIO}, \cite{guo2004swarm} oder \cite{kannan1994augmented}, ebenfalls imperiale Maßeinheiten, um die Ergebnisse vergleichen zu können. Deswegen werden auch in dieser Arbeit imperiale Maßeinheiten verwendet.\\
 		
 		\noindent Das Problem zählt zu Problemen mit gemischten Variablen, da \(D\) eine stetige und \(d\) eine ordinale Variable ist. \(N\) ist eine Variable, die nur natürliche Zahlen als Werte annehmen kann.\\
 		
@@ -1931,7 +1938,9 @@ within=section,
 			f(N, D, d) = \frac{\pi^2 D d^2 (N + 2)}{4}
 		\end{equation}
 
-		Schließlich wählen wir das Abbruchkriterium \(|f - f^*| < |\varepsilon_1 f| + \varepsilon_2, \, \varepsilon_1 = \varepsilon_2 = 10^{-6}\). Wir wählen dieses Abbruchkriterium, da wir davon ausgehen, dass in \textit{Socha}~\cite{socha2009ant} das selbe Kriterium benutzt wurde.
+		Schließlich wählen wir das Abbruchkriterium \(|f - f^*| < |\varepsilon_1 f| + \varepsilon_2, \, \varepsilon_1 = \varepsilon_2 = 10^{-6}\). Wir wählen dieses Abbruchkriterium, da wir davon ausgehen, dass in \textit{Socha}~\cite{socha2009ant} das selbe Kriterium benutzt wurde und es eine natürliche Erweiterung des Abbruchkriteriums \(|f - f^*| < |\varepsilon_1 f| + \varepsilon_2, \, \varepsilon_1 = \varepsilon_2 = 10^{-4}\) ist, welches für den Großteil der stetigen Testfunktionen in dieser Arbeit verwendet wurde. Leider ist in \textit{Socha}~\cite{socha2009ant} das Abbruchkriterium für das \ac{csd} nicht angegeben.
+		
+		%TODO natürliche Erweiterung begründen?
 		
 		\paragraph{Vollständiger Raum als Initialisierungsintervall}\mbox{}\\%TODO fragen, ob 5.5.1.1 gut ist?
 		\newline
@@ -3421,7 +3430,7 @@ within=section,
 	
 	Hier wurde von \textit{Socha}~\cite{socha2009ant}, im Gegenteil zu anderen Vergleichen wo ganze Zahlen verwendet, die Erfolgsrate von Algorithmen in Prozent auf Zehntel genau angegeben, weswegen wir in den Tabellen in diesem Abschnitt auch die Erfolgsrate von \ac{acorvsmv} und Iterationen auf Zehntel genau angeben.\hfill\newline
 	
-	In der Tabelle~\ref{subsubsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_CSD} sind die Ergebnisse von ACO\(_\mathbb{R}\), ACO\(_\text{MV}\) und Vergleichsalgorithmen zu sehen. In den Tabellen \ref{subsubsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_CSD_fixed} und \ref{subsubsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_CSD_adaptive} sind nochmal die Ergebnisse von ACO\(_\mathbb{R}\), ACO\(_\text{MV}\), \ac{acorvsmv} und den Iterationen von \ac{acorvsmv} zu sehen. Leider fehlt für die Algorithmen \textit{NLIDP}, \textit{GA} und \textit{DE} aus \textit{Lampinen und Zelinka}~\cite{Lampinen_and_Zelinka_CSD} die Anzahl an Funktionsauswertungen, welche die Algorithmen gebraucht haben, um das Optimum zu erreichten. Es wird entweder nur die Anzahl an verfügbaren Funktionsauswertungen für die Optimumssuche angegeben, in allen Fällen, wo es angegeben wurde, sind es 8000, und der Anteil der Erfolgreichen Durchläufe in Prozent oder es wird nur der Anteil der erfolgreichen Durchläufe angegeben.
+	In der Tabelle~\ref{subsubsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_CSD} sind die Ergebnisse von ACO\(_\mathbb{R}\), ACO\(_\text{MV}\) und Vergleichsalgorithmen zu sehen. In den Tabellen \ref{subsubsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_CSD_fixed} und \ref{subsubsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_CSD_adaptive} sind nochmal die Ergebnisse von ACO\(_\mathbb{R}\), ACO\(_\text{MV}\) und dann die Ergebnisse von \ac{acorvsmv} und den Iterationen von \ac{acorvsmv} zu sehen. Leider fehlt für die Algorithmen \textit{NLIDP} aus \textit{Sandgren}~\cite{sandgren1990nonlinear}, \textit{GA} aus \textit{Wu und Chow}~\cite{wu1995genetic} und \textit{DE} aus \textit{Lampinen und Zelinka}~\cite{Lampinen_and_Zelinka_CSD} die Anzahl an Funktionsauswertungen, welche die Algorithmen gebraucht haben, um das Optimum zu erreichten, weswegen sie auch in \textit{Socha}~\cite{socha2009ant} fehlen. Es wird entweder nur die Anzahl an verfügbaren Funktionsauswertungen für die Optimumssuche angegeben, in allen Fällen, wo es angegeben wurde, sind es 8000, und der Anteil der Erfolgreichen Durchläufe in Prozent oder es wird nur der Anteil der erfolgreichen Durchläufe in Prozent angegeben. Deswegen können wir auch nicht sagen, ob das Ergebnis von 619 Funktionsausführungen in Tabelle~\ref{subsubsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_CSD_fixed} gut ist, da wir nicht wissen wie viele Funktionsauswertungen andere Algorithmen gebraucht haben. Wir können zwar vermuten, gegeben das für ein anderes Ingenieursproblem, das Pressure Vessel Design Problem, sowohl die maximale zur Verfügung stehende Anzahl an Funktionsauswertungen als auch die Benötigte angegeben werden, dass für das \ac{csd} die 8000 Funktionsauswertungen immer gebraucht wurden aber wir können es leider nicht mit Gewissheit wissen.
 	
 	%TODO ist bei Iterationen klar, dass es die Iterationen von ACO_R-VS-MV sind?
 	
