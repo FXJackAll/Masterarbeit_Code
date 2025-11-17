@@ -925,6 +925,8 @@ within=section,
 	
 	DE steht für \textbf{D}ifferential \textbf{E}volution. DE wendet Selektion, Crossover und Mutation, um ein Minimum einer gegebenen Zielfunktion zu finden. Diese Meta-Heuristik heißt differential, da in der mathematischen Definition eine Differenz zentrale Bedeutung hat.
 	
+	%TODO Differenz kurz erklären
+	
 	\subsubsection{Algorithmen, die für Probleme mit gemischten Variablen entwickelt wurden}
 	
 	\paragraph{NLIDP}\mbox{}\\
@@ -1592,7 +1594,7 @@ within=section,
 		
 		%TODO Probleme ausdenken
 		
-		%TODO braucht man diskrete Testfunktionen
+		%TODO braucht man diskrete Testfunktionen? Nein.
 		
 		\subsubsection{Diskrete Testfunktionen mit gleichverteiltem Definitionsbereich} \label{subsubsec:Ordinale_Testfunktionen_Mit_Gleichverteiltem_Definitionsbereich}
 		
@@ -3415,9 +3417,11 @@ within=section,
 	
 	%TODO Boxplots für min und max veranschaulichen
 	
-	Dies ist der letzte Vergleich, den wir in dieser Arbeit betrachten. In Abschnitt~\ref{subsec:Vergleich_Algorithmen:Vergleich_Auf_Stetigen_Testfunktionen} haben wir gesehen Abschnitt~\ref{subsubsec:Vergleich_Algorithmen:Vergleich_Auf_Konstruierten_Testfunktionen_Mit_Gemischten_Variablen} haben wir bereits gesehen, dass \ac{acorvsmv} und Iterationen mit konstruierten Testfunktionen mit gemischten Variablen umgehen können. Jetzt wollen wir untersuchen, ob \ac{acorvsmv} und Iterationen auch mit realen Problemen umgehen können. 
+	Dies ist der letzte Vergleich, den wir in dieser Arbeit betrachten. In Abschnitt~\ref{subsec:Vergleich_Algorithmen:Vergleich_Auf_Stetigen_Testfunktionen} haben wir gesehen, dass \ac{acorvsmv} und Iterationen mit stetigen Testfunktionen umgehen können und im Abschnitt~\ref{subsubsec:Vergleich_Algorithmen:Vergleich_Auf_Konstruierten_Testfunktionen_Mit_Gemischten_Variablen} haben wir gesehen, dass \ac{acorvsmv} und Iterationen mit konstruierten Testfunktionen mit gemischten Variablen umgehen können. Jetzt wollen wir untersuchen, ob \ac{acorvsmv} und Iterationen auch mit einem realen Problem umgehen können.\hfill\newline 
 	
-	Hier wurde von \textit{Socha}~\cite{socha2009ant}, im Gegenteil zu anderen Vergleichen wo ganze Zahlen verwendet, die Erfolgsrate von Algorithmen in Prozent auf Zehntel genau angegeben, weswegen wir in den Tabellen in diesem Abschnitt auch die Erfolgsrate von \ac{acorvsmv} und Iterationen auf Zehntel genau angeben.
+	Hier wurde von \textit{Socha}~\cite{socha2009ant}, im Gegenteil zu anderen Vergleichen wo ganze Zahlen verwendet, die Erfolgsrate von Algorithmen in Prozent auf Zehntel genau angegeben, weswegen wir in den Tabellen in diesem Abschnitt auch die Erfolgsrate von \ac{acorvsmv} und Iterationen auf Zehntel genau angeben.\hfill\newline
+	
+	In der Tabelle~\ref{subsubsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_CSD} sind die Ergebnisse von ACO\(_\mathbb{R}\), ACO\(_\text{MV}\) und Vergleichsalgorithmen zu sehen. In den Tabellen \ref{subsubsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_CSD_fixed} und \ref{subsubsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_CSD_adaptive} sind nochmal die Ergebnisse von ACO\(_\mathbb{R}\), ACO\(_\text{MV}\), \ac{acorvsmv} und den Iterationen von \ac{acorvsmv} zu sehen. Leider fehlt für die Algorithmen \textit{NLIDP}, \textit{GA} und \textit{DE} aus \textit{Lampinen und Zelinka}~\cite{Lampinen_and_Zelinka_CSD} die Anzahl an Funktionsauswertungen, welche die Algorithmen gebraucht haben, um das Optimum zu erreichten. Es wird entweder nur die Anzahl an verfügbaren Funktionsauswertungen für die Optimumssuche angegeben, in allen Fällen, wo es angegeben wurde, sind es 8000, und der Anteil der Erfolgreichen Durchläufe in Prozent oder es wird nur der Anteil der erfolgreichen Durchläufe angegeben.
 	
 	%TODO ist bei Iterationen klar, dass es die Iterationen von ACO_R-VS-MV sind?
 	
@@ -3463,7 +3467,7 @@ within=section,
 			
 			penalty-exakt & - & - & - & - & - & - \\
 			
-			penalty-penalty & 12.9 (8000) [82.0\%] & 12.9 (8000) [39.0\%] & - [100.0\%] & - [95.3\%] & 8000 [95.0\%] & \textbf{1.0} (619)\\
+			penalty-penalty & 12.9 (\(\leq\)8000) [82.0\%] & 12.9 (\(\leq\)8000) [39.0\%] & - [100.0\%] & - [95.3\%] & 12.9 (\(\leq\)8000) [95.0\%] & \textbf{1.0} (619)\\
 			
 			\bottomrule
 			
@@ -3526,7 +3530,7 @@ within=section,
 			
 			 & & & & & & \\
 			
-			penalty-penalty & 12.9 (8000) [82.0\%] & 12.9 (8000) [39.0\%] & 1.3 (783) [10.0\%] (0) (0) & \textbf{1.0} (619) [22.0\%] (0) (0) & 30.0 (18587) [66.0\%] (0) (0) & \textbf{1.0} (619)\\
+			penalty-penalty & 12.9 (\(\leq\)8000) [82.0\%] & 12.9 (\(\leq\)8000) [39.0\%] & 1.3 (783) [10.0\%] (0) (0) & \textbf{1.0} (619) [22.0\%] (0) (0) & 30.0 (18587) [66.0\%] (0) (0) & \textbf{1.0} (619)\\
 			
 			\bottomrule
 			
@@ -3585,7 +3589,7 @@ within=section,
 			
 			 & & & & & & \\
 			
-			penalty-penalty & \textbf{1.0} (8000) [82.0\%] & \textbf{1.0} (8000) [39.0\%] & 1.0 (8358) \(\{31\}\) (0) (0) & 1.3 (10393) \(\{43\}\) (0) (0) & 3.1 (24552) [98.0\%] \(\{116\}\) (0) (0) & \textbf{1.0} (8000)\\
+			penalty-penalty & \textbf{1.0} (\(\leq\)8000) [82.0\%] & \textbf{1.0} (\(\leq\)8000) [39.0\%] & 1.0 (8358) \(\{31\}\) (0) (0) & 1.3 (10393) \(\{43\}\) (0) (0) & 3.1 (24552) [98.0\%] \(\{116\}\) (0) (0) & \textbf{1.0} (8000)\\
 			
 			\bottomrule
 			
