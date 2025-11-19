@@ -815,9 +815,9 @@ within=section,
 	%TODO Elter?
 	%TODO Anfangsbuchstaben hervorheben?
 	
-	ES steht für \textbf{E}volution \textbf{S}trategies. (1 + 1)-ES ist eines der ersten ES, die für Optimierung von stetigen Funktionen \(f\) vorgeschlagen wurden. In (1 + 1)-ES wird mit einem einzigen Elter (parent) begonnen und in jeder Iteration gibt es nur ein Kind (offspring), deswegen (1 + 1). Die zugrunde liegende Population besteht also, in jeder Generation \(g, g \in \{0, 1, 2, \dots\}\), nur aus dem Elter und dem Kind. Nach der Initialisierung des Elter \(x^{(g)}_{parent}\), wird das Kind \(x^{(g + 1)}_{offspring}\) in der Gleichung~\ref{subsubsubpar:Grundlagen:Vergleichsalgorithmen:1_und_1_-_ES:Offspring} gewonnen, wobei \(I\) die Einheitsmatrix ist und \(\sigma\) die Verteilungsvarianz ist und als \glqq Step Size\grqq{} bezeichnet wird.
+	ES steht für \textbf{E}volution \textbf{S}trategies. (1 + 1)-ES ist eines der ersten ES, die für Optimierung von stetigen Funktionen \(f\) vorgeschlagen wurden. In (1 + 1)-ES wird mit einem einzigen Elter (parent) begonnen und in jeder Iteration gibt es nur ein Kind (offspring), deswegen (1 + 1). Die zugrunde liegende Population besteht also, in jeder Generation \(g, g \in \{0, 1, 2, \dots\}\), nur aus dem Elter und dem Kind. Nach der Initialisierung des Elter \(x^{(g)}_{parent}\), wird das Kind \(x^{(g + 1)}_{offspring}\) in der Gleichung~\ref{subsubsubpar:Grundlagen:Vergleichsalgorithmen:1_und_1_-_ES:eq:Offspring} gewonnen, wobei \(I\) die Einheitsmatrix ist und \(\sigma\) die Verteilungsvarianz ist und als \glqq Step Size\grqq{} bezeichnet wird.
 	
-	\begin{equation} \label{subsubsubpar:Grundlagen:Vergleichsalgorithmen:1_und_1_-_ES:Offspring}
+	\begin{equation} \label{subsubsubpar:Grundlagen:Vergleichsalgorithmen:1_und_1_-_ES:eq:Offspring}
 		x^{(g + 1)}_{offspring} = z, \, z \sim \mathcal{N}(x^{(g)}_{parent}, \sigma^{(g)^2}I)
 	\end{equation}
 	
@@ -933,8 +933,20 @@ within=section,
 	
 	Die folgende Beschreibung ist nach \textit{Sandgren}~\cite{sandgren1990nonlinear}.\hfill\newline
 	
-	NLIDP steht für \textbf{n}on\textbf{l}inear \textbf{i}nteger and \textbf{d}iscrete \textbf{p}rogramming.
+	NLIDP steht für \textbf{N}on\textbf{l}inear \textbf{I}nteger and \textbf{D}iscrete \textbf{P}rogramming. Nach \cite{martin1985reduced} ist Linear Programming (LP) beschrieben durch als die Formulierung eines Problems, bei dem sowohl Zielfunktion als auch Beschränkung linear vorliegen. Abstrakt wird es formuliert in der Gleichung~\ref{subsubsubpar:Grundlagen:Vergleichalgorithmen:NLIDP:eq:LP}.
 	
+	\begin{equation} \label{subsubsubpar:Grundlagen:Vergleichalgorithmen:NLIDP:eq:LP}
+		(LP) \qquad \qquad \qquad
+		\begin{aligned}
+			& min \sum\limits_{i = 1}^n a_i x_i, \, i \in \{1, \dots, N\}, \, N \in \mathbb{N}\\
+			& s.d. \sum\limits_{i = 1}^n b_{ji} x_i \geq c_j, \, j \in \{1, \dots, m\}, \, m \in \mathbb{N}\\
+			& x_i \in \mathbb{R}_{\geq 0}, \, \forall j \in \{1, \dots, N\}\\
+			& a, b, c \in \mathbb{R}
+		\end{aligned}
+	\end{equation}
+	
+	Nonlinear Integer and Discrete Programming ist Linear Programming bei denen die Suchvariablen \(x_i, \, i \in \{1, \dots, N\}, \, N \in \mathbb{N}\) nicht mehr linear vorkommen müssen aber dafür auf die natürlichen Zahlen und auf diskrete Werte beschränkt sind.
+
 	\paragraph{GA}\mbox{}\\
 	
 	Die folgende Beschreibung ist nach \textit{Wu und Chow}~\cite{wu1995genetic}.\hfill\newline
@@ -1737,10 +1749,10 @@ within=section,
 		
 		\subsubsection{Coil Spring Design Problem (CSD)} \label{subsubsec:Coil_Spring_Design_Problem}
 		
-		Das Coil Spring Design Problem (CSD) kann auf verschiedene Arten definiert werden, wie in \cite{guo2004swarm}, \cite{ACO_2013}, oder []. In dieser Arbeit verwenden wir die Definition aus \cite{ACO_2013}. %TODO mehr Quellen finden; vllt. die Namen aus ACO_2013 verwenden, statt nur \cite{ACO_2013}
-		Im CSD Problem, wie es in \cite{ACO_2013} definiert wird, wird so nach dem Außendurchmesser \(D\), dem Drahtdurchmesser \(d\) und der Windungszahl \(N\) einer Schraubenfeder (Coil Spring) gesucht, dass der Materialbedarf für die Schraubenfeder minimiert wird, während gleichzeitig die Nebenbedingungen (Constrains) erfüllt werden.\\
+		Das Coil Spring Design Problem (CSD) kann auf verschiedene Arten definiert werden, wie in \cite{sandgren1990nonlinear}, \cite{guo2004swarm} oder später, aufbauend auf \cite{sandgren1990nonlinear}, in \cite{ACO_2013}. In dieser Arbeit verwenden wir die Definition aus \cite{ACO_2013}. %TODO mehr Quellen finden; vllt. die Namen aus ACO_2013 verwenden, statt nur \cite{ACO_2013}
+		Im CSD Problem, wie es in \cite{} definiert wird, wird so nach dem Außendurchmesser \(D\), dem Drahtdurchmesser \(d\) und der Windungszahl \(N\) einer Schraubenfeder (Coil Spring) gesucht, dass der Materialbedarf für die Schraubenfeder minimiert wird, während gleichzeitig die Nebenbedingungen (Constrains) erfüllt werden.\\
 		
-		\noindent Da in \textit{Sandgren}~\cite{sandgren1990nonlinear} das CSD Problem initial in imperialen Maßeinheiten definiert wurde, verwendeten alle Folgestudien, wie \cite{deb1998flexible}, \cite{Lampinen1999MIXEDIO}, \cite{guo2004swarm} oder \cite{kannan1994augmented}, ebenfalls imperiale Maßeinheiten, um die Ergebnisse vergleichen zu können. Deswegen werden auch in dieser Arbeit imperiale Maßeinheiten verwendet.\\
+		\noindent Da in \textit{Sandgren}~\cite{sandgren1990nonlinear} das CSD Problem initial in imperialen Maßeinheiten definiert wurde, verwendeten alle Folgestudien, wie \cite{deb1998flexible}, \cite{Lampinen1999MIXEDIO}, \cite{guo2004swarm}, \cite{gong2022novel}, \cite{kannan1994augmented} oder \cite{ACO_2013}, ebenfalls imperiale Maßeinheiten, um die Ergebnisse vergleichen zu können. Deswegen werden auch in dieser Arbeit imperiale Maßeinheiten verwendet.\\
 		
 		\noindent Das Problem zählt zu Problemen mit gemischten Variablen, da \(D\) eine stetige und \(d\) eine ordinale Variable ist. \(N\) ist eine Variable, die nur natürliche Zahlen als Werte annehmen kann.\\
 		
@@ -1782,7 +1794,7 @@ within=section,
 			
 		\end{table}
 		
-		\noindent Weiter werden in \cite{ACO_2013} Intervallgrenzen definiert, die in der Tabelle~\ref{table:int_restrict} aufgeführt werden.%TODO bessere Quelle finden
+		\noindent Weiter werden in \cite{ACO_2013} Intervallgrenzen definiert, die in der Tabelle~\ref{table:int_restrict} aufgeführt werden. Es fällt auf, dass durch die Definition der Intervallgrenze \(d_{min}\) = 0.2 Zoll (inch), 31 der 42 möglichen Werte, welche die diskrete Variable \(d\) annehmen kann, wegfallen, aber dies ist so in \textit{Sandgren}~\cite{sandgren1990nonlinear} angegeben und die Folgequellen \cite{deb1998flexible}, \cite{Lampinen1999MIXEDIO}, \cite{guo2004swarm}, \cite{gong2022novel}, \cite{kannan1994augmented} und \cite{ACO_2013} verwenden die Intervallgrenze direkt oder verweisen auf \textit{Sandgren}~\cite{sandgren1990nonlinear}. Keine der Quellen gibt eine Begründung an. Um Vergleichbarkeit zu garantieren, behalten wir \(d_{min}\) = 0.2 bei.
 		
 		\begin{table}[H]
 			

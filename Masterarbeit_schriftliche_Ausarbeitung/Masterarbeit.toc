@@ -37,12 +37,12 @@
 \contentsline {paragraph}{\numberline {2.14.3.4}DE}{18}{}%
 \contentsline {subsubsection}{\numberline {2.14.4}Algorithmen, die für Probleme mit gemischten Variablen entwickelt wurden}{18}{}%
 \contentsline {paragraph}{\numberline {2.14.4.1}NLIDP}{18}{}%
-\contentsline {paragraph}{\numberline {2.14.4.2}GA}{18}{}%
+\contentsline {paragraph}{\numberline {2.14.4.2}GA}{19}{}%
 \contentsline {section}{\numberline {3}SPPBO-Schema}{19}{}%
 \contentsline {section}{\numberline {4}HSPPBO-Schema}{20}{}%
-\contentsline {section}{\numberline {5}Formulierung von \acl {acorvsmv} im HSPPBO-Schema}{21}{}%
-\contentsline {section}{\numberline {6}Kombinieren des HSPPBO-Schemas mit \acl {acorvsmv}}{21}{}%
-\contentsline {subsection}{\numberline {6.1}Hom-HPB-\ac {acorvsmv}}{21}{}%
+\contentsline {section}{\numberline {5}Formulierung von \acl {acorvsmv} im HSPPBO-Schema}{22}{}%
+\contentsline {section}{\numberline {6}Kombinieren des HSPPBO-Schemas mit \acl {acorvsmv}}{22}{}%
+\contentsline {subsection}{\numberline {6.1}Hom-HPB-\ac {acorvsmv}}{22}{}%
 \contentsline {subsection}{\numberline {6.2}Het-HPB-\ac {acorvsmv}}{22}{}%
 \contentsline {subsection}{\numberline {6.3}Het-HSPPB-\ac {acorvsmv}}{23}{}%
 \contentsline {section}{\numberline {7}Testfunktionen}{23}{}%
@@ -58,7 +58,7 @@
 \contentsline {subsubsection}{\numberline {7.2.2}Coil Spring Design Problem (CSD)}{36}{}%
 \contentsline {paragraph}{\numberline {7.2.2.1}Vollständiger Raum als Initialisierungsintervall}{39}{}%
 \contentsline {paragraph}{\numberline {7.2.2.2}Gefilterter Raum als Initialisierungsintervall}{40}{}%
-\contentsline {paragraph}{\numberline {7.2.2.3}Resultierende Testkombinationen für das \ac {csd}}{40}{}%
+\contentsline {paragraph}{\numberline {7.2.2.3}Resultierende Testkombinationen für das \ac {csd}}{41}{}%
 \contentsline {section}{\numberline {8}Herausforderung}{41}{}%
 \contentsline {section}{\numberline {9}Vergleich von ACO\(_{\mathbb {R}}\), ACO\(_\text {MV}\), \acl {acorvs} und den Iteration von \acl {acorvs}}{41}{}%
 \contentsline {subsection}{\numberline {9.1}Vergleich bzgl. stetiger Testfunktionen}{41}{}%
