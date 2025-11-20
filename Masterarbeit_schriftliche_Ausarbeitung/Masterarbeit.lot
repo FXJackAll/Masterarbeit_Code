@@ -22,8 +22,7 @@
 \contentsline {table}{\numberline {21}{\ignorespaces Zweiter Teil des Vergleiches der Ergebnisse zwischen ACO\(_{\mathbb {R}}\)-simple und ACO\(_{\mathbb {R}}\)-very-simple}}{49}{}%
 \contentsline {table}{\numberline {22}{\ignorespaces fixed, äquidistant, Testfunktionen mit gemischten Variablen Vergleich der Ergebnisse zwischen \acl {acorvsmv} und Iterationen, basierend auf \textit {Socha und Dorigo}~\cite {socha2008ant}, und damit auf \textit {Kern et al., 2004}~\cite {kern2004learning}, Teil 1}}{50}{}%
 \contentsline {table}{\numberline {23}{\ignorespaces adaptiv, äquidistant, Testfunktionen mit gemischten Variablen Vergleich der Ergebnisse zwischen \acl {acorvsmv} und Iterationen, basierend auf \textit {Socha und Dorigo}~\cite {socha2008ant}, und damit auf \textit {Kern et al., 2004}~\cite {kern2004learning}, Teil 2}}{51}{}%
-\contentsline {table}{\numberline {24}{\ignorespaces noch zu verwenden fixed und adaptiv, äquidistant Vergleich der Ergebnisse zwischen Algorithmen, die probabilistisches Lernen einsetzten, basierend auf \textit {Socha und Dorigo}~\cite {socha2008ant}, und damit auf \textit {Kern et al., 2004}~\cite {kern2004learning}}}{52}{}%
-\contentsline {table}{\numberline {25}{\ignorespaces Vergleich der Ergebnisse zwischen \ac {acorvsmv} und Iterationen mit Neustartstrategie \(adaptive\)}}{53}{}%
-\contentsline {table}{\numberline {26}{\ignorespaces Vergleich der Ergebnisse zwischen \ac {acorvsmv} und Iterationen mit Neustartstrategie \(fixed = 0\)}}{54}{}%
-\contentsline {table}{\numberline {27}{\ignorespaces Vergleich der Ergebnisse zwischen \ac {acorvsmv} und Iterationen mit Neustartstrategie \(adaptive\)}}{54}{}%
+\contentsline {table}{\numberline {24}{\ignorespaces Vergleich der Ergebnisse zwischen \ac {acorvsmv} und Iterationen mit Neustartstrategie \(adaptive\)}}{52}{}%
+\contentsline {table}{\numberline {25}{\ignorespaces Vergleich der Ergebnisse zwischen \ac {acorvsmv} und Iterationen mit Neustartstrategie \(fixed = 0\)}}{53}{}%
+\contentsline {table}{\numberline {26}{\ignorespaces Vergleich der Ergebnisse zwischen \ac {acorvsmv} und Iterationen mit Neustartstrategie \(adaptive\)}}{53}{}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

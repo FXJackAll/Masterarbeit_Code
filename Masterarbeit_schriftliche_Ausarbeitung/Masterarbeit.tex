@@ -491,6 +491,8 @@ within=section,
 	
 	\subsection{Ameisenalgorithmen mit einem stetigen Lösungsarchiv} \label{subsec:Ameisenalgorithmen_Mit_Einem_Stetigen_Loesungsarchiv}
 	
+	%TODO kann ich es so lassen?
+	
 	Wie in meiner Bachelorarbeit~\cite{FCM_2019} und im Abschnitt~\ref{subsec:Weiterentwicklung_Der_ACO_Metaheuristik_Zu_Der_P_-_ACO_Metaheuristik} beschrieben, kann man, statt die Pheromoninformation von Iterationsschritt zu Iterationsschritt mitzuführen, die Information auch in einer diskreten Matrix speichern und implizit einem diskreten Lösungsarchiv. Dies funktioniert jedoch nur für diskrete Probleme. Um stetige Probleme zu lösen, kann man auf ein Archiv mit stetigen Einträgen zurückgreifen, was dann u.a. eine Liste sein kann.\hfill\newline
 	
 	%TODO umschreiben
@@ -923,7 +925,13 @@ within=section,
 	
 	Die folgende Beschreibung ist nach \textit{Storn und Price}~\cite{storn1997differential}.\hfill\newline
 	
-	DE steht für \textbf{D}ifferential \textbf{E}volution. DE wendet Selektion, Crossover und Mutation, um ein Minimum einer gegebenen Zielfunktion zu finden. Diese Meta-Heuristik heißt differential, da in der mathematischen Definition eine Differenz zentrale Bedeutung hat.
+	DE steht für \textbf{D}ifferential \textbf{E}volution. DE wendet Selektion, Crossover und Mutation, um ein Minimum einer gegebenen Zielfunktion zu finden. Diese Meta-Heuristik heißt differential, da in der mathematischen Definition des Schrittes \glqq Mutation\grqq{} eine Differenz zentrale Bedeutung hat, wie in Gleichung~\ref{subsubsubpar:Grundlagen:Vergleichsalgorithmen:DE:eq:Mutation} zu sehen.
+	
+	\begin{equation} \label{subsubsubpar:Grundlagen:Vergleichsalgorithmen:DE:eq:Mutation}
+		v_{i, G + 1} = x_{r_1, G} + F \cdot (x_{r_2, G} - x_{r_3, G}),
+	\end{equation}
+	
+	wobei die \(x_{i, G}, \, i \in \{1, \dots, N\}, \, N \in \mathbb{N}\) Ausgangsparametervektoren sind, \(r_1, r_2, r_3 \in \{1, \dots, N\}\) Indizes sind, die zufällig gewählt wurden, jedoch verschieden von \(i\) sind, \(F \in [0, 2]\) ist ein konstanter Faktor, der den Einfluss der Differenz \((x_{r_2, G} - x_{r_3, G})\) steuert und \((x_{r_2, G} - x_{r_3, G})\) ist die Differenz nach der die Meta-Heuristik benannt ist. 
 	
 	%TODO Differenz kurz erklären
 	
@@ -945,19 +953,19 @@ within=section,
 		\end{aligned}
 	\end{equation}
 	
-	Nonlinear Integer and Discrete Programming ist Linear Programming bei denen die Suchvariablen \(x_i, \, i \in \{1, \dots, N\}, \, N \in \mathbb{N}\) nicht mehr linear vorkommen müssen aber dafür auf die natürlichen Zahlen und auf diskrete Werte beschränkt sind.
+	Nonlinear Integer and Discrete Programming ist Linear Programming bei der die Suchvariablen \(x_i, \, i \in \{1, \dots, N\}, \, N \in \mathbb{N}\) nicht mehr linear vorkommen müssen aber dafür auf die natürlichen Zahlen und auf diskrete Werte beschränkt sind.
 
 	\paragraph{GA}\mbox{}\\
 	
 	Die folgende Beschreibung ist nach \textit{Wu und Chow}~\cite{wu1995genetic}.\hfill\newline
 	
-	GA steht für \textbf{G}enetic \textbf{A}lgorithm.
+	GA steht für \textbf{G}enetic \textbf{A}lgorithm. In GA werden die Variablen durch Zeichenketten fester oder variabler Länge codiert, welche als Chromosome interpretiert werden. Jede Zeichenkette besteht aus Zeichen, welche als Gene interpretiert werden. Der Wert, den ein Gen kodiert, wird als Allel interpretiert. Jede Zeichenkette ist eine Lösung. In GAs wird eine konstante oder variable Menge an Lösungen in jedem Iterationsschritt geführt, welche als Population interpretiert werden. Die erste Population wird durch eine Initialisierungsmethode generiert und wird als Initialpopulation bezeichnet. Die Güte einer Population wird durch eine Fitnessfunktion gegeben, welche das bestimmen von Kennzahlen der Population ermöglicht, wie die Minimumfitness, Maximumfitness und durchschnittliche Fitness der Chromosome in einer Population, sowie die Summe der Fitness aller Chromosome. Diese Kennzahlen bilden die Basis für die Erzeugung neuer Chromosome durch genetische Operatoren, wie Selektion, Crossover, Mutation, Inversion, Dominanz und Segregation. Danach ersetzt eine Menge der neuen Chromosome eine Menge der alten Chromosome und es entsteht eine Population. Dies wird wiederholt bis das Stoppkriterium erreicht ist.
 	
 	\section{SPPBO-Schema} \label{sec:SPPBO_Schema}
-	
+		
 	%TODO SPPBO-Schema noch Grundlagen?
 	
-	Das SPPBO-Schema steht für Simple Probabilistic Populations-Based Optimization-Schema und wie in \cite{lin2015simple} beschrieben, besteht es aus 6 Teilen. Diese sind der Suchraum \(\Sigma\), die Menge der lösungskreierenden Entitäten \(\mathcal{E}\), die Menge der Populationen bzw. Archive von Lösungen \(\mathcal{P}\), die Heuristik \(\eta\), die Initialisierungsmethode \(\mathcal{I}\) und das Stoppkriterium \(\mathcal{S}\). Also kann das SPPBO-Scheme beschrieben werden durch das Tupel \((\Sigma, \mathcal{E}, \mathcal{P}, \eta, \mathcal{I}, \mathcal{S})\). Im Folgenden werden die lösungskreierenden Entitäten als \ac{sce} (\acl{sce}) bezeichnet.\hfill\newline
+	Das SPPBO-Schema steht für \textbf{S}imple \textbf{P}robabilistic \textbf{P}opulations-\textbf{B}ased \textbf{O}ptimization-Schema und wie in \cite{lin2015simple} beschrieben, besteht es aus 6 Teilen. Diese sind der Suchraum \(\Sigma\), die Menge der lösungskreierenden Entitäten \(\mathcal{E}\), die Menge der Populationen bzw. Archive von Lösungen \(\mathcal{P}\), die Heuristik \(\eta\), die Initialisierungsmethode \(\mathcal{I}\) und das Stoppkriterium \(\mathcal{S}\). Also kann das SPPBO-Scheme beschrieben werden durch das Tupel \((\Sigma, \mathcal{E}, \mathcal{P}, \eta, \mathcal{I}, \mathcal{S})\). Im Folgenden werden die lösungskreierenden Entitäten als \ac{sce} (\acl{sce}) bezeichnet.\hfill\newline
 	
 	\noindent Der Suchraum \(\Sigma\) kann \(\Sigma=\{a_1, \dots, a_n\}\) sein, für das TSP, wobei die \(a_i, i \in \{1, \dots, \mathbb{N}\}\) die Positionen der Städte sind, \(\mathbb{R}^n, n \in \mathbb{N}\) für stetige Funktionen, wie der Paraboloidfunktion, wie sie in Tabelle~\ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} definiert ist oder eine Zusammensetzung von Intervallen über verschiedenen Skalenniveaus, wie es in Abschnitt~\ref{subsubsec:Coil_Spring_Design_Problem} für das CSD ist, wo \(\Sigma\) sich aus einem stetigem, einem ordinalen und einem Intervall über den natürlichen Zahlen zusammensetzt. Im SPPBO-Schema kann \(\mathcal{E}\) aus 2 Ameisen, wie in ACO~\cite{blum2005ant} oder PACO~\cite{guntsch2002population}, bestehen oder auch nur einer Ameise, wie in ACO\(_\mathbb{R}\)-VS~\cite{FCM_2019}, oder \(N \in \mathbb{N}\) Partikeln, wie im Set-Based Discrete PSO~\cite{chen2012set}. Die Menge der Populationen \(\mathcal{P}\) im SPPBO-Schema, wie es in \cite{lin2015simple} definiert ist, besteht aus zwei Populationen, die jede \ac{sce} mitführt, einer Persönlichen \(P^{SCE}_{pers}\) und einer Globalen \(P^{SCE}_{best}\). Die persönliche Population \(p_{pers}\) besteht aus der besten Lösung, welche die jeweilige SCE bis einschließlich der letzten Iteration des Algorithmus gefunden hat. Die globale Population \(P^{SCE}_{best}\) besteht aus der besten Lösung, die alle SCE bis einschließlich der letzten Iteration gefunden haben. Wenn es jedoch nur eine Population, wie in ACO\(_\mathbb{R}\)-VS~\cite{FCM_2019}, gibt, dann kann diese \(n \in \mathbb{N}\) Lösungen haben, wobei \(n = 100\) in \cite{FCM_2019} gewählt wurde.\hfill\newline
 	
@@ -1003,7 +1011,7 @@ within=section,
 	
 	%TODO XF-OPT/META verwenden?
 	
-	Das HSPPBO-Schema steht für Hierarchical Simple Probabilistic Populations-Based Optimization-Schema. Es ist die hierarchische Version des SPBBO-Schema~\cite{lin2015simple}. Das HSPPBO-Schema, wie in \cite{kupfer2021hierarchical} beschrieben, besteht aus 11 Teilen, den 6 Teilen aus dem SPPBO-Schema und einer Hierarchie- bzw. Baumstruktur \(\mathcal{B}\), einer Funktion \textit{range} \(\mathcal{R}\), welche jeder \(\ac{sce} \in \mathcal{E}\) eine Menge von Populationen \(P \in \mathcal{P}\) zuweist, also \(range(A) \subseteq \mathcal{P}\), eine Funktion \textit{update} \(\mathcal{U}\), welche bestimmt, wie Knoten getauscht werden, wenn ein Kindknoten eine bessere Lösung findet, als der Elternknoten, einem Threshold \(\theta\), der bestimmt, wann der Algorithmus auf Veränderungen im \ac{sce}-Baum reagiert und eine Funktion \textit{handling} \(\mathcal{H}\), welche bestimmt, wie der Algorithmus auf Veränderungen reagiert. Demnach kann das HSPPBO-Schema beschrieben werden durch das Tupel \((\Sigma, \mathcal{E}, \mathcal{B}, \mathcal{R}, \mathcal{U}, \theta, \mathcal{H}, \mathcal{P}, \eta, \mathcal{I}, \mathcal{S})\). In der Ausführung in \cite{kupfer2021hierarchical} weist \(\mathcal{R}\) jeder \(\ac{sce} \in \mathcal{E}\) drei Populationen zu. Eine Population \(P^{SCE}_{persprev}\) hält die von der \ac{sce} als letztes berechnete Lösung des Optimierungsproblems, eine Population \(P^{SCE}_{persbest}\) hält die bis dato beste berechnete Lösung des \ac{sce} und eine Population \(P^{SEC}_{parentbest}\) hält bis dato beste berechnete Lösung der Eltern-\ac{sce}. Es gilt also \(P^{SEC}_{parentbest} = P^{parent(SEC)}_{persbest}\). Im Fall der Wurzel-\ac{sce} sind die letzten beiden Populationen identisch. Damit gibt es implizit eine globale beste Lösung, da die Population \(P^{SCE^*}_{persbest}\) der Wurzel \ac{sce}* ausgelesen werden kann.\hfill\newline
+	Das HSPPBO-Schema steht für \textbf{H}ierarchical \textbf{S}imple \textbf{P}robabilistic \textbf{P}opulations-\textbf{B}ased \textbf{O}ptimization-Schema. Es ist die hierarchische Version des SPBBO-Schema~\cite{lin2015simple}. Das HSPPBO-Schema, wie in \cite{kupfer2021hierarchical} beschrieben, besteht aus 11 Teilen, den 6 Teilen aus dem SPPBO-Schema und einer Hierarchie- bzw. Baumstruktur \(\mathcal{B}\), einer Funktion \textit{range} \(\mathcal{R}\), welche jeder \(\ac{sce} \in \mathcal{E}\) eine Menge von Populationen \(P \in \mathcal{P}\) zuweist, also \(range(A) \subseteq \mathcal{P}\), eine Funktion \textit{update} \(\mathcal{U}\), welche bestimmt, wie Knoten getauscht werden, wenn ein Kindknoten eine bessere Lösung findet, als der Elternknoten, einem Threshold \(\theta\), der bestimmt, wann der Algorithmus auf Veränderungen im \ac{sce}-Baum reagiert und eine Funktion \textit{handling} \(\mathcal{H}\), welche bestimmt, wie der Algorithmus auf Veränderungen reagiert. Demnach kann das HSPPBO-Schema beschrieben werden durch das Tupel \((\Sigma, \mathcal{E}, \mathcal{B}, \mathcal{R}, \mathcal{U}, \theta, \mathcal{H}, \mathcal{P}, \eta, \mathcal{I}, \mathcal{S})\). In der Ausführung in \cite{kupfer2021hierarchical} weist \(\mathcal{R}\) jeder \(\ac{sce} \in \mathcal{E}\) drei Populationen zu. Eine Population \(P^{SCE}_{persprev}\) hält die von der \ac{sce} als letztes berechnete Lösung des Optimierungsproblems, eine Population \(P^{SCE}_{persbest}\) hält die bis dato beste berechnete Lösung des \ac{sce} und eine Population \(P^{SEC}_{parentbest}\) hält bis dato beste berechnete Lösung der Eltern-\ac{sce}. Es gilt also \(P^{SEC}_{parentbest} = P^{parent(SEC)}_{persbest}\). Im Fall der Wurzel-\ac{sce} sind die letzten beiden Populationen identisch. Damit gibt es implizit eine globale beste Lösung, da die Population \(P^{SCE^*}_{persbest}\) der Wurzel \ac{sce}* ausgelesen werden kann.\hfill\newline
 	
 	%TODO besserer Funktionsname als Update
 	
@@ -3265,160 +3273,6 @@ within=section,
 			Tablet(10,21) & \(\infty\) & 22.7 (87757) [4\%] \(\{203\}\) & \(\infty\)& \textbf{1.0} (3861)\\
 			
 			Tablet(10,51) & \(\infty\) & 2.7 (11616) [4\%] \(\{22\}\) & \(\infty\)& \textbf{1.0} (4247)\\
-			
-			\bottomrule
-			
-		\end{tabularx}
-		
-		\smallskip
-		
-		Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Bei Ergebnissen, wo die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht wurde, ist der Anteil der erfolgreichen Durchläufe in Prozent in eckigen Klammern angegeben, wo \(\infty\) steht, wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht. Bei den Algorithmen, welche \glqq adaptive\grqq{} als Neustartstrategie anwendetet, steht die durchschnittliche Anzahl an Neustarts in geschweiften Klammern.
-		
-		%TODO kann auch ein längerer Absatzt beibehalten werden
-		
-	\end{table}
-	
-	\begin{table}[H]
-		
-		%\fontsize{6pt}{6pt}
-		
-		%\caption{Vergleich der Ergebnisse zwischen Algorithmen, die probabilistisches Lernen einsetzten auf Testfunktionen, die zum Vergleich zwischen Algorithmen, die probabilistisches Lernen einsetzten, benutzt werden, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning} Teil 1}
-		
-		\caption{noch zu verwenden fixed und adaptiv, äquidistant Vergleich der Ergebnisse zwischen Algorithmen, die probabilistisches Lernen einsetzten, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}}
-		
-		%TODO wie viele zitieren?
-		
-		%TODO mehr als mean(restatrs) (min, max) angeben?
-		
-		\label{sec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Funktionen_Mit_Gemischten_Variablen}
-		
-		\scriptsize
-		
-		\begin{tabularx}{\linewidth}{l l l l l l l l}
-			
-			%TODO muss die Tabelle einheitlich sein?
-			
-			%\rule{1.6cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{1.3cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.4cm}{0.4pt}\\
-			
-			\toprule
-			
-			%\Tstrut
-			
-			%TODO erklären was (1 + 1)ES, CSA-ES und sind?
-			
-			Testfunktion & Hom-HPB- & Het-HPB- & Het-HSPPB- & Hom-HPB- & Het-HPB- & Het-HSPPB- & Bestwert\\
-			
-			& ACO\(_\mathbb{R}\)-VS & ACO\(_\mathbb{R}\)-VS & ACO\(_\mathbb{R}\)-VS & ACO\(_\mathbb{R}\)-VS & ACO\(_\mathbb{R}\)-VS & ACO\(_\mathbb{R}\)-VS & \\
-			
-			%\rule{1.6cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{2.2cm}{0.4pt} & \rule{1.3cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.7cm}{0.4pt} & \rule{1.4cm}{0.4pt}\\
-			
-			\midrule
-			
-			Cigar(2,11) & (219) & (218) & (263) & (304) \(\{1\}\) & & & \\
-			
-			Cigar(2,21) & (269) & (240) & (272) & (338) \(\{1\}\) & & & \\
-			
-			Cigar(2,51) & (280) & (266) & (416) & (403) \(\{2\}\) & & & \\
-			
-			Cigar(5,11) & (2681) & (1661) & (2114) & (54189) & & & \\
-			
-			 & & & & [78\%] \(\{103\}\) & & & \\
-			
-			Cigar(5,21) & (2447) & (1766) & 2259 & (46250) & & & \\
-			
-			 & & & & [76\%] \(\{85\}\) & & & \\
-			
-			Cigar(5,51) & (2845) & (1993) & (2357) & (58299) & & & \\
-			
-			 & & & & [60\%] \(\{103\}\) & & & \\
-			
-			Cigar(10,11) & (8045) & (5293) & (5609) & \(\infty\) & & & \\
-			
-			Cigar(10,21) & (10023) & (5395) & (5395) & \(\infty\) & & & \\
-			
-			Cigar(10,51) & (11927) & (5900) & (6033) & \(\infty\) & & & \\
-			
-			Ellipsoid(2,11) & (204) & (225) & (1417) & (297) \(\{1\}\) & & & \\
-			
-			Ellipsoid(2,21) & (218) & (230) & (548) & (330) \(\{1\}\) & & & \\
-			
-			Ellipsoid(2,51) & (255) & (263) & (301) & (362) \(\{1\}\) & & & \\
-			
-			Ellipsoid(5,11) & (1218) & (1203) & (1433) & (15699) \(\{33\}\) & & & \\
-			
-			Ellipsoid(5,21) & (2933) & (1247) & (1485) & (16222) \(\{33\}\) & & & \\
-
-			Ellipsoid(5,51) & (1475) & (1371) & (1555) & (20717) \(\{41\}\) & & & \\
-			
-			Ellipsoid(10,11) & (2939) & (2692) & (3054) & (30791) & & & \\
-			
-			 & [98\%] & & & [4\%] \(\{47\}\) & & & \\
-			
-			Ellipsoid(10,21) & (3107) & (2923) & (3297) & (25264) & & & \\
-			
-			 & & & & [6\%] \(\{36\}\) & & & \\
-			
-			Ellipsoid(10,51) & (3661) & (3281) & (3746) & \(\infty\) & & & \\
-			
-			Paraboloid(2,11) & (238) & (300) & (361) & (291) \(\{1\}\) & & & \\
-			
-			Paraboloid(2,21) & (241) & (240) & (286) & (325) \(\{1\}\) & & & \\
-			
-			Paraboloid(2,51) & (248) & (240) & (286) & (358) \(\{1\}\) & & & \\
-			
-			Paraboloid(5,11) & (1012) & (1020) & (1175) & (8948) \(\{22\}\) & & & \\
-			
-			 & [94\%] & & & & & & \\
-			
-			Paraboloid(5,21) & (990) & (1020) & (1197) & (11563) \(\{29\}\) & & & \\
-			
-			Paraboloid(5,51) & (1011) & (1121) & (1333) & (10766) \(\{25\}\) & & & \\
-			
-			 & [96\%] & & & & & & \\
-			
-			Paraboloid(10,11) & (2848) & (2326) & (2624) & (66703) & & & \\
-			
-			 & & & & [18\%] \(\{134\}\) & & & \\
-			
-			Paraboloid(10,21) & (2396) & (2505) & (2813) & (79970) & & & \\
-			
-			 & & & & [8\%] \(\{164\}\) & & & \\
-			
-			Paraboloid(10,51) & (2419) & (2594) & (2917) & (61980) & & & \\
-			
-			 & [98\%] & & & [12\%] \(\{123\}\) & & & \\
-			
-			Tablet(2,11) & (510) & (344) & (519) & (727) \(\{3\}\) & & & \\
-			
-			 & & [92\%] & & & & & \\
-			
-			Tablet(2,21) & (412) & (355) & (472) & (796) \(\{3\}\) & & & \\
-			
-			 & & [94\%] & & & & & \\
-			
-			Tablet(2,51) & (535) & (3093) & (543) & (793) \(\{3\}\) & & & \\
-			
-			Tablet(5,11) & (3490) & (3327) & (1919) & (41127) & & & \\
-			
-			 & & [98\%] & & [98\%] \(\{81\}\) & & & \\
-			
-			Tablet(5,21) & (1883) & (1659) & (1977) & (34135) & & & \\
-			
-			 & & & & [98\%] \(\{66\}\) & & & \\
-			
-			Tablet(5,51) & (1925) & (1726) & (2006) & (45325) & & & \\
-			
-			 & & [94\%] & & [92\%] \(\{85\}\) & & & \\
-			
-			Tablet(10,11) & (3649) & (4928) & (4441) & (9984) & & & \\
-			
-			 & & [98\%] & & [2\%] \(\{14\}\) & & & \\
-			
-			Tablet(10,21) & (3861) & (3975) & (3928) & \(\infty\) & & & \\
-			
-			Tablet(10,51) & (5692) & (5711) & (4247) & \(\infty\) & & & \\
-			
-			 & & [98\%] & & & & & \\
 			
 			\bottomrule
 			

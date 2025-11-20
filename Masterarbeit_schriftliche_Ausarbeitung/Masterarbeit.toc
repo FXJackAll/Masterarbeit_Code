@@ -39,14 +39,14 @@
 \contentsline {paragraph}{\numberline {2.14.4.1}NLIDP}{18}{}%
 \contentsline {paragraph}{\numberline {2.14.4.2}GA}{19}{}%
 \contentsline {section}{\numberline {3}SPPBO-Schema}{19}{}%
-\contentsline {section}{\numberline {4}HSPPBO-Schema}{20}{}%
+\contentsline {section}{\numberline {4}HSPPBO-Schema}{21}{}%
 \contentsline {section}{\numberline {5}Formulierung von \acl {acorvsmv} im HSPPBO-Schema}{22}{}%
 \contentsline {section}{\numberline {6}Kombinieren des HSPPBO-Schemas mit \acl {acorvsmv}}{22}{}%
 \contentsline {subsection}{\numberline {6.1}Hom-HPB-\ac {acorvsmv}}{22}{}%
-\contentsline {subsection}{\numberline {6.2}Het-HPB-\ac {acorvsmv}}{22}{}%
-\contentsline {subsection}{\numberline {6.3}Het-HSPPB-\ac {acorvsmv}}{23}{}%
-\contentsline {section}{\numberline {7}Testfunktionen}{23}{}%
-\contentsline {subsection}{\numberline {7.1}Stetige Testfunktionen}{25}{}%
+\contentsline {subsection}{\numberline {6.2}Het-HPB-\ac {acorvsmv}}{23}{}%
+\contentsline {subsection}{\numberline {6.3}Het-HSPPB-\ac {acorvsmv}}{24}{}%
+\contentsline {section}{\numberline {7}Testfunktionen}{24}{}%
+\contentsline {subsection}{\numberline {7.1}Stetige Testfunktionen}{26}{}%
 \contentsline {subsubsection}{\numberline {7.1.1}Testfunktion - Paraboloid}{31}{}%
 \contentsline {subsubsection}{\numberline {7.1.2}Testfunktion - Easom}{32}{}%
 \contentsline {subsubsection}{\numberline {7.1.3}Testfunktion - Griewangk}{33}{}%
@@ -65,13 +65,13 @@
 \contentsline {subsection}{\numberline {9.2}Vergleich bzgl. diskreter Testfunktionen}{49}{}%
 \contentsline {subsection}{\numberline {9.3}Vergleich bzgl. Testfunktionen mit gemischten Variablen}{49}{}%
 \contentsline {subsubsection}{\numberline {9.3.1}Vergleich bzgl. konstruierter Testfunktionen mit gemischten Variablen}{49}{}%
-\contentsline {subsubsection}{\numberline {9.3.2}Vergleich bzgl. dem Coil Spring Design Problem (CSD)}{53}{}%
-\contentsline {section}{\numberline {10}Konvergenzbetrachtung}{54}{}%
-\contentsline {subsection}{\numberline {10.1}Rosenbrock}{55}{}%
-\contentsline {section}{\numberline {11}Kurzzusammenfassung}{56}{}%
-\contentsline {section}{Literaturverzeichnis}{57}{}%
-\contentsline {section}{Tabellenverzeichnis}{60}{}%
-\contentsline {section}{Abbildungsverzeichnis}{60}{}%
+\contentsline {subsubsection}{\numberline {9.3.2}Vergleich bzgl. dem Coil Spring Design Problem (CSD)}{51}{}%
+\contentsline {section}{\numberline {10}Konvergenzbetrachtung}{53}{}%
+\contentsline {subsection}{\numberline {10.1}Rosenbrock}{54}{}%
+\contentsline {section}{\numberline {11}Kurzzusammenfassung}{55}{}%
+\contentsline {section}{Literaturverzeichnis}{56}{}%
+\contentsline {section}{Tabellenverzeichnis}{59}{}%
+\contentsline {section}{Abbildungsverzeichnis}{59}{}%
 \contentsline {part}{\nonumberline Anlagen}{I}{}%
 \contentsline {section}{\numberline {A}Einfluss der Anzahl der Ameisen}{I}{}%
 \contentsline {section}{\numberline {B}Einfluss des Parameters \textit {q}}{II}{}%
