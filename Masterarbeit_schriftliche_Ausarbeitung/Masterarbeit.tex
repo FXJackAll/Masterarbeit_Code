@@ -765,7 +765,7 @@ within=section,
 	
 	Um ACO\(_\mathbb{R}\)-VS anzupassen werden nicht-stetige Probleme als stetige Probleme behandelt. Das heißt, es wird mit nicht-stetigen Werten gerechnet als wären sie stetig. Es wird also bis zur Gleichung~\ref{subsec:ACO_R_-_very_-_simple:eq:interval} genauso verfahren, wie im Abschnitt~\ref{subsec:ACO_R_-_very_-_simple}, um einen neuen, stetigen Wert zu erhalten. Nachdem man einen neuen stetigen Wert gewonnen hat, betrachtet man die nicht-stetigen Werte zwischen denen der stetige Wert liegt und wählt dann als Ergebnis, den nicht-stetigen Wert, an dem der Stetige am nächsten liegt.\hfill\newline
 	
-	Schließlich wird \ac{acorvs} um eine Neustartfunktion erweitert. Der Algorithmus kann entweder eine fixe Anzahl an Neustarts ausführen oder adaptiv neu starten.  Wenn adaptiv gewählt wurde, startet der Algorithmus neu, wenn eine Periode von \(\gamma\) Lösungen hintereinander sich um weniger als ein Threshold \(\varepsilon_{th}\) unterscheiden. Ich habe als intuitiven Start \(\gamma = 7\) und \(\varepsilon_{th} = 10^{-10}\) gesetzt. 
+	Schließlich wird \ac{acorvs} um eine Neustartstrategie erweitert. Der Algorithmus kann entweder eine fixe Anzahl an Neustarts ausführen oder adaptiv neu starten. Für die Neustartstrategie, bei welcher der Algorithmus eine fixe Anzahl neu startet, wird die Anzahl mit \(fixed = n\) angegeben. Ich habe \(n = 0\) gesetzt, um einen Kontrast zu der Neustartstrategie \(adaptvie\) zu haben. Wenn die Neustartstrategie \(adaptiv\) gewählt wurde, startet der Algorithmus neu, wenn eine Periode von \(\gamma\) Lösungen hintereinander sich um weniger als ein Threshold \(\varepsilon_{th}\) unterscheiden. Ich habe als intuitiven Start \(\gamma = 7\) und \(\varepsilon_{th} = 10^{-10}\) gesetzt. 
 	
 	%TODO periode?
 	
@@ -784,9 +784,9 @@ within=section,
 			Parameter & Symbol & Wert\\
 			
 			\rule{4.6cm}{0.4pt} & \rule{4.6cm}{0.4pt}& \rule{4.6cm}{0.4pt}\\
-			
-			Periode & \(\gamma\) & 7\\
-			Threshold & \(\varepsilon_{th}\) & \(10^{-10}\)
+			n 			& n			 & 0\\
+			Periode 	& \(\gamma\) & 7\\
+			Threshold 	& \(\varepsilon_{th}\) & \(10^{-10}\)
 			
 		\end{tabularx}
 		
@@ -2219,7 +2219,7 @@ within=section,
 	
 	%TODO geht der Titel so?
 	
-	Alle Iterationen von \ac{acorvsmv} können mit gemischten Variablen umgehen aber wegen Platzgründen in den Tabellen wurde \glqq -MV\grqq{} weggelassen.
+	Alle Iterationen von \ac{acorvsmv} können mit gemischten Variablen umgehen aber wegen Platzgründen in den Tabellen wurde das \glqq -MV\grqq{} weggelassen.
 	
 	%TODO kann ich das so schreiben?
 	
@@ -2333,7 +2333,7 @@ within=section,
 		
 		%\caption{Vergleich der Ergebnisse zwischen ACO\(_{\mathbb{R}}\), ACO\(_{\mathbb{R}}\)-very-simple und den Iterationen von ACO\(_{\mathbb{R}}\)-very-simple auf Testfunktionen, die zum Vergleich zwischen Algorithmen, die probabilistisches einsetzen, benutzt werden, basierend auf meiner Bachelorarbeit~\cite{FCM_2019}, \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning} Teil 2}
 		
-		\caption{Vergleich der Ergebnisse zwischen ACO\(_{\mathbb{R}}\), ACO\(_{\mathbb{R}}\)-very-simple und den Iterationen von ACO\(_{\mathbb{R}}\)-very-simple-mixed-variable, mit Neustartstrategie \(fixed = 0\), auf Testfunktionen, die zum Vergleich zwischen Algorithmen, die probabilistisches Lernen einsetzen, benutzt werden, basierend auf meiner Bachelorarbeit~\cite{FCM_2019}, \textit{Socha und Dorigo}~\cite{socha2008ant} und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}}
+		\caption{Vergleich der Ergebnisse zwischen ACO\(_{\mathbb{R}}\), ACO\(_{\mathbb{R}}\)-very-simple und den Iterationen von ACO\(_{\mathbb{R}}\)-very-simple-mixed-variable, mit Neustartstrategie \(fixed = 0\) (NSS-f0), auf Testfunktionen, die zum Vergleich zwischen Algorithmen, die probabilistisches Lernen einsetzen, benutzt werden, basierend auf meiner Bachelorarbeit~\cite{FCM_2019}, \textit{Socha und Dorigo}~\cite{socha2008ant} und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}}
 		
 		%TODO wie viele zitieren?
 		
@@ -2380,7 +2380,9 @@ within=section,
 		
 	\end{table}
 	
-	Wie in den Tabellen \ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Teil_1} und \ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Teil_2} zu sehen, ist \ac{acorvs} des beste Algorithmus in 3 von 5 Problemen und sehr gut in Einem. Nur für die Testfunktion \glqq Rosenbrock\grqq{} konvergiert \ac{acorvs} nicht. Die Iterationen von \ac{acorvsmv} mit Neustartstrategie \(fixed = 0\) sind dagegen schlechter oder viel schlechter. Die Iterationen von \ac{acorvsmv} mit Neustartstrategie \(adaptive\) sind nicht aufgeführt, da keine der Iterationen von \ac{acorvsmv} mit der Neustartstrategie \(adaptive\) bei keiner der Testfunktionen aus den Tabellen \ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Teil_1} und \ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Teil_2} konvergierte. Positiv falle zudem die Algorithmen ACO\(_\mathbb{R}\) und CMA-ES auf, da ihre relative Anzahl an Funktionsauswertungen nur wenig schlechter sind, als der Bestwert, außer bei der Testfunktion \glqq Ellipsoid\grqq. Wir schlussfolgern also, dass unter den Algorithmen, die probabilistisches Lernen einsetzten, \ac{acorvs} der bessere Algorithmus ist, knapp gefolgt von ACO\(_\mathbb{R}\) und CMA-ES.\hfill\newline
+	%TODO schlechter und viel schlechter beibehalten oder nur schlehchter
+	
+	Wie in den Tabellen \ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Teil_1} und \ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Teil_2} zu sehen, ist \ac{acorvs} des beste Algorithmus in 3 von 5 Problemen und sehr gut in Einem. Nur für die Testfunktion \glqq Rosenbrock\grqq{} konvergiert \ac{acorvs} nicht. Die Iterationen von \ac{acorvsmv} mit NSS-f0 sind dagegen schlechter oder viel schlechter. Die Iterationen von \ac{acorvsmv} mit NSS-adapt sind nicht aufgeführt, da keine der Iterationen von \ac{acorvsmv} mit NSS-adapt bei keiner der Testfunktionen aus den Tabellen \ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Teil_1} und \ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Teil_2} konvergierte. Positiv fallen zudem die Algorithmen ACO\(_\mathbb{R}\) und CMA-ES auf, da ihre relative Anzahl an Funktionsauswertungen nur wenig schlechter sind, als der Bestwert, außer bei der Testfunktion \glqq Ellipsoid\grqq. Wir schlussfolgern also, dass unter den Algorithmen, die probabilistisches Lernen einsetzten, \ac{acorvs} der bessere Algorithmus ist, knapp gefolgt von ACO\(_\mathbb{R}\) und CMA-ES.\hfill\newline
 	
 	%Wie in Tabelle~\ref{VerglelichACORundACORVerySimple} zu sehen, ist ACO\(_{\mathbb{R}}\)-very-simple, bei einfachen Testproblemen, der bessere Algorithmus in allen Testproblemen, bis auf \glqq Rosenbrock\grqq. Hätte ACO\(_{\mathbb{R}}\)-very-simple auch bei diesem Problem eine Lösung gefunden, wäre er, für einfache Testprobleme, der klare Favorit gewesen. So aber kann man sagen, dass die Algorithmen, bei einfachen Testproblemen, ebenbürtig sind, besonders, da ACO\(_{\mathbb{R}}\) bei den anderen Testfunktionen nur wenig schlechter ist, außer \glqq Ellipsoid\grqq.\hfill\newline
 	
@@ -2511,7 +2513,7 @@ within=section,
 		
 		%TODO (Iterationen)[Erfolgsrate] oder andersrum? (Iterationen)[Erfolgsrate]
 		
-		\label{sec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Zu_Ameisen_Verwandte_Algorithmen_Teil_1}
+		\label{subsec:Vergleich_Von_ACO_R_Und_Iterationen_Von_ACO_R_Very_Simple:tab:Vergleich_Zu_Ameisen_Verwandte_Algorithmen_Teil_1}
 		
 		\scriptsize
 		
@@ -2565,7 +2567,7 @@ within=section,
 		
 		%\caption{Vergleich der Ergebnisse zwischen Algorithmen, die probabilistisches Lernen einsetzten auf Testfunktionen, die zum Vergleich zwischen Algorithmen, die probabilistisches Lernen einsetzten, benutzt werden, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning} Teil 1}
 		
-		\caption{Vergleich der Ergebnisse zwischen Algorithmen, die verwandt zu Ameisenalgorithmen sind, mit Neustartstrategie \(fixed = 0\) für Iterationen von \ac{acorvsmv}, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}, Teil 2}
+		\caption{Vergleich der Ergebnisse zwischen Algorithmen, die verwandt zu Ameisenalgorithmen sind, mit Neustartstrategie \(fixed = 0\) (NSS-f0) für Iterationen von \acl{acorvsmv}, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}, Teil 2}
 		
 		%TODO fixed 0
 		
@@ -2575,7 +2577,7 @@ within=section,
 		
 		%TODO wie viele zitieren?
 		
-		\label{sec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Zu_Ameisen_Verwandte_Algorithmen_Teil_2}
+		\label{subsec:Vergleich_Von_ACO_R_Und_Iterationen_Von_ACO_R_Very_Simple:tab:Vergleich_Zu_Ameisen_Verwandte_Algorithmen_Teil_2}
 		
 		\scriptsize
 		
@@ -2631,7 +2633,7 @@ within=section,
 		
 		%\caption{Vergleich der Ergebnisse zwischen Algorithmen, die probabilistisches Lernen einsetzten auf Testfunktionen, die zum Vergleich zwischen Algorithmen, die probabilistisches Lernen einsetzten, benutzt werden, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning} Teil 1}
 		
-		\caption{Vergleich der Ergebnisse zwischen Algorithmen, die verwandt zu Ameisenalgorithmen sind, mit Neustartstrategie \(adaptive\) für Iterationen von \ac{acorvsmv}, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}, Teil 3, adaptive}
+		\caption{Vergleich der Ergebnisse zwischen Algorithmen, die verwandt zu Ameisenalgorithmen sind, mit Neustartstrategie \(adaptive\) (NSS-adapt) für Iterationen von \acl{acorvsmv}, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}, Teil 3, adaptive}
 		
 		%TODO adaptive
 		
@@ -2642,7 +2644,7 @@ within=section,
 		%TODO wie viele zitieren? Socha und Dorigo und Kern et al reicht´
 		
 		
-		\label{sec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Zu_Ameisen_Verwandte_Algorithmen_Teil_3}
+		\label{subsec:Vergleich_Von_ACO_R_Und_Iterationen_Von_ACO_R_Very_Simple:tab:Vergleich_Zu_Ameisen_Verwandte_Algorithmen_Teil_3}
 		
 		\scriptsize
 		
@@ -2693,15 +2695,17 @@ within=section,
 		
 	\end{table}
 	
-	Im Gegenteil zu den Testfunktionen, die zum Vergleich zwischen Algorithmen, die probabilistisches Lernen einsetzen, benutzt werden, ist es nicht mehr
+	Wie in den Tabellen \ref{subsec:Vergleich_Von_ACO_R_Und_Iterationen_Von_ACO_R_Very_Simple:tab:Vergleich_Zu_Ameisen_Verwandte_Algorithmen_Teil_1}, \ref{subsec:Vergleich_Von_ACO_R_Und_Iterationen_Von_ACO_R_Very_Simple:tab:Vergleich_Zu_Ameisen_Verwandte_Algorithmen_Teil_2} und \ref{subsec:Vergleich_Von_ACO_R_Und_Iterationen_Von_ACO_R_Very_Simple:tab:Vergleich_Zu_Ameisen_Verwandte_Algorithmen_Teil_3} zu sehen, im Gegenteil zu den Testfunktionen, die zum Vergleich zwischen Algorithmen, die probabilistisches Lernen einsetzen, benutzt werden, ist es bei Testfunktionen, die benutzt werden, um Algorithmen, die verwandt zu Ameisenalgorithmen sind, zu testen, nicht mehr eindeutig, welcher Algorithmus der beste ist. So sind ACO\(_\mathbb{R}\) und \ac{acorvs} die besten Algorithmen jeder in jeweils 3 von 8 Probleme und Hom-HPB-ACO\(_\mathbb{R}\)-VS-MV mit NSS-f0 ist der beste Algorithmus in 2 der 8 Probleme. Ferner sind die Algorithmen ACO\(_\mathbb{R}\), \ac{acorvs} und Hom-HPB-ACO\(_\mathbb{R}\)-VS-MV mit NSS-f0 bei den Probleme, wo sie nicht der beste Algorithmus sind, wenn man ihre relative Anzahl an Funktionsauswertungen betrachtet, nahe dem Bestwert, außer bei den Testfunktionen \glqq Griewangk\grqq{} und \glqq Rosenbrock(5)\grqq, wo ACO\(_\mathbb{R}\) viel schlechter ist als ACO\(_\mathbb{R}\) und Hom-HPB-ACO\(_\mathbb{R}\)-VS-MV mit NSS-f0 nicht konvergiert. Auf der anderen Seite kann aus der Tabelle~\ref{subsec:Vergleich_Von_ACO_R_Und_Iterationen_Von_ACO_R_Very_Simple:tab:Vergleich_Zu_Ameisen_Verwandte_Algorithmen_Teil_1} eindeutig entnommen werden, dass die Algorithmen CACO, API und CIAC, dort, wo Ergebnisse in der Literatur berichtet wurden, schlechter bis viel schlechter sind, als die drei genannten Favoriten. Bei den Variationen von \ac{acorvsmv} mit NSS-adapt sind die Ergebnisse gemischt aber da sie bei 4 der 8 Probleme viel schlechter sind, werden sie auch, insgesamt, als schlechter als ACO\(_\mathbb{R}\), \ac{acorvs} und Hom-HPB-ACO\(_\mathbb{R}\)-VS-MV mit Neustartstartstrategie \(fixed = 0\) betrachtet. Wir schlussfolgern also, dass unter den Algorithmen, die verwandt zu Ameisenalgorithmen sind, ACO\(_\mathbb{R}\) der bessere Algorithmus ist, da er nicht nur bei 3 der 8 Probleme der beste Algorithmus ist, sondern auch, dort wo er nicht der beste Algorithmus ist, er, wenn man seine relative Anzahl an Funktionsauswertungen betrachtet, nahe dem Bestwert ist. Besonders hebt sich ACO\(_\mathbb{R}\) bei den Funktionen \glqq Griewangk\grqq{} und \glqq Rosenbrock(5)\grqq{} hervor. Knapp gefolgt wird ACO\(_\mathbb{R}\) von \ac{acorvs} und Hom-HPB-ACO\(_\mathbb{R}\)-VS-MV mit NSS-f0.
+	
+	%TODO ist es ok, dass Probleme und Testfunktion als Sysnonyme interchanging benutzt werden?
 	
 	\begin{table}[H]
 		
 		%\fontsize{10pt}{12pt}
 		
-		\caption{Vergleich zwischen ACO\(_{\mathbb{R}}\), ACO\(_\mathbb{R}\)-VS, Iterationen von \ac{acorvsmv} und anderen Meta-Heuristiken, die für stetige Probleme adaptiert wurden. fixed Erster Teil, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant} und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}, Teil 1}
+		\caption{Vergleich zwischen ACO\(_{\mathbb{R}}\), \acl{acorvs}, Iterationen von \acl{acorvsmv} und anderen Meta-Heuristiken, die für stetige Probleme adaptiert wurden, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant} und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}, Teil 1}
 		
-		\label{sec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Mit_Meta_-_Heuristiken_Adaptiert_Fuer_Stetige_Probleme_Teil_1}
+		\label{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Mit_Meta_-_Heuristiken_Adaptiert_Fuer_Stetige_Probleme_Teil_1}
 		
 		\scriptsize
 		
@@ -2785,9 +2789,9 @@ within=section,
 		
 		%\fontsize{10pt}{12pt}
 		
-		\caption{Vergleich zwischen ACO\(_{\mathbb{R}}\), ACO\(_\mathbb{R}\)-VS, Iterationen von \ac{acorvsmv} und anderen Meta-Heuristiken, die für stetige Probleme adaptiert wurden. fixed Erster Teil, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant} und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}, Teil 2}
+		\caption{Vergleich zwischen ACO\(_{\mathbb{R}}\), \acl{acorvs}, Iterationen von \acl{acorvsmv} mit Neustartstrategie \(fixed = 0\) (NSS-f0) und anderen Meta-Heuristiken, die für stetige Probleme adaptiert wurden, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant} und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}, Teil 2}
 		
-		\label{sec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Mit_Meta_-_Heuristiken_Adaptiert_Fuer_Stetige_Probleme_Teil_2}
+		\label{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Mit_Meta_-_Heuristiken_Adaptiert_Fuer_Stetige_Probleme_Teil_2}
 		
 		\scriptsize
 		
@@ -2806,7 +2810,7 @@ within=section,
 			%\Tstrut
 			
 			Testfunktion & ACO\(_{\mathbb{R}}\) & ACO\(_{\mathbb{R}}\)-VS & Hom-HPB- & Het-HPB- & Het-HSPPB- & Bestwert\\
-			& & & ACO\(_\mathbb{R}\)-VS-MV & ACO\(_\mathbb{R}\)-VS-MV & ACO\(_\mathbb{R}\)-VS-MV & \\
+			& & & ACO\(_\mathbb{R}\)-VS & ACO\(_\mathbb{R}\)-VS & ACO\(_\mathbb{R}\)-VS & \\
 			
 			%\rule{3,55cm}{0.4pt} & \rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt}\\
 			
@@ -2886,9 +2890,9 @@ within=section,
 		
 		%\fontsize{10pt}{12pt}
 		
-		\caption{Vergleich zwischen ACO\(_{\mathbb{R}}\), ACO\(_\mathbb{R}\)-VS, Iterationen von \ac{acorvsmv} und anderen Meta-Heuristiken, die für stetige Probleme adaptiert wurden. adaptive Zweiter Teil, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant} und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}, Teil 3}
+		\caption{Vergleich zwischen ACO\(_{\mathbb{R}}\),\acl{acorvs}, Iterationen von \acl{acorvsmv} mit Neustartstrategie \(adaptive\) (NSS-adapt) und anderen Meta-Heuristiken, die für stetige Probleme adaptiert wurden, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant} und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}, Teil 3}
 		
-		\label{sec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Mit_Meta_-_Heuristiken_Adaptiert_Fuer_Stetige_Probleme_Teil_3}
+		\label{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Mit_Meta_-_Heuristiken_Adaptiert_Fuer_Stetige_Probleme_Teil_3}
 		
 		\scriptsize
 		
@@ -2907,7 +2911,7 @@ within=section,
 			%\Tstrut
 			
 			Testfunktion & ACO\(_{\mathbb{R}}\) & ACO\(_{\mathbb{R}}\)-VS & Hom-HPB- & Het-HPB- & Het-HSPPB- & Bestwert\\
-			& & & ACO\(_\mathbb{R}\)-VS-MV & ACO\(_\mathbb{R}\)-VS-MV & ACO\(_\mathbb{R}\)-VS-MV & \\
+			& & & ACO\(_\mathbb{R}\)-VS & ACO\(_\mathbb{R}\)-VS & ACO\(_\mathbb{R}\)-VS & \\
 			
 			%\rule{3,55cm}{0.4pt} & \rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt}\\
 			
@@ -2962,10 +2966,11 @@ within=section,
 		
 		\smallskip
 		
-		Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Bei Ergebnissen, wo die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht wurde, ist der Anteil der erfolgreichen Durchläufe in Prozent in eckigen Klammern angegeben, wo \(\infty\) steht, wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht.\\
-		Bei der Funktion \glqq De Jong\grqq{} konnte für ACO\(_{\mathbb{R}}\) die genaue Anzahl an Funktionsauswertungen nicht ermittelt werden.\hfill\newline
+		Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Bei Ergebnissen, wo die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht wurde, ist der Anteil der erfolgreichen Durchläufe in Prozent in eckigen Klammern angegeben, wo \(\infty\) steht, wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht. Bei der Funktion \glqq De Jong\grqq{} konnte für ACO\(_{\mathbb{R}}\) die genaue Anzahl an Funktionsauswertungen nicht ermittelt werden.\hfill\newline
 		
 	\end{table}
+	
+	Wie in den Tabellen \ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Mit_Meta_-_Heuristiken_Adaptiert_Fuer_Stetige_Probleme_Teil_1}, \ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Mit_Meta_-_Heuristiken_Adaptiert_Fuer_Stetige_Probleme_Teil_2} und \ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Mit_Meta_-_Heuristiken_Adaptiert_Fuer_Stetige_Probleme_Teil_3} zu sehen, ähnlich wie bei der Betrachtung von Testfunktionen, die benutzt werden, um Algorithmen, die verwandt zu Ameisenalgorithmen sind, zu testen, ist das Bild nicht eindeutig. Zwar ist \ac{acorvs} der beste Algorithmus bei 6 der 15 Probleme aber er ist viel schlechter bei zwei der Probleme, nämlich \glqq Griewangk\grqq{} und \glqq Rosenbrock(5)\grqq und bei den Problemen \glqq Easom\grqq{} und \glqq Hartmann(3,4)\grqq{} konnte für \ac{acorvs} keine Angabe gemacht werden. Auf der anderen Seite ist ACO\(_\mathbb{R}\) nur bei einem der Probleme der beste Algorithmus aber, wenn man seine relative Anzahl an Funktionsauswertungen betrachtet, ist er bei jedem Problem nahe dem Bestwert. Ähnlich ist auch ECTS, ein Algorithmus der bei 5 der 15 Probleme der beste Algorithmus ist, bei den Problemen, wo er nicht der beste ist, nahe am relativen Bestwert. Jedoch fehlen bei ECTS 5 der 15 Probleme, vor allem das Problem \glqq Griewangk\grqq{}, welches sich als schwer herausgestellt hat und die Güte von ECTS bzgl. dieses Problems besonders interessant gewesen wäre. Schließlich ist ECTS bei zwei Problemen sehr schlecht, weswegen dieser Algorithmus insgesamt im Vergleich weniger gut abschneidet.
 	
 	Wie in Tabelle~\ref{VerglelichACORundACORVerySimpleTeil2} zu sehen, ist es nicht mehr klar, welcher der Algorithmen vorzuziehen ist. ACO\(_{\mathbb{R}}\) ist bei vier Testfunktionen der beste Algorithmus, während ACO\(_{\mathbb{R}}\)-very-simple bei Sieben. Beide Algorithmen sind jedoch bei einem Teil der Testfunktionen schlechter als das Optimum.\hfill\newline
 	
@@ -3164,7 +3169,7 @@ within=section,
 		
 		\smallskip
 		
-		Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Bei Ergebnissen, wo die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht wurde, ist der Anteil der erfolgreichen Durchläufe in Prozent in eckigen Klammern angegeben, wo \(\infty\) steht, wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht. Bei den Algorithmen, welche \glqq adaptive\grqq{} als Neustartstrategie anwendetet, steht die durchschnittliche Anzahl an Neustarts in geschweiften Klammern.
+		Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Bei Ergebnissen, wo die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht wurde, ist der Anteil der erfolgreichen Durchläufe in Prozent in eckigen Klammern angegeben, wo \(\infty\) steht, wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht. Bei den Algorithmen, welche \glqq adaptive\grqq{} als Neustartstrategie angewendet haben, steht die durchschnittliche Anzahl an Neustarts in geschweiften Klammern.
 		
 		%TODO kann auch ein längerer Absatzt beibehalten werden
 		
@@ -3284,7 +3289,7 @@ within=section,
 		
 		\smallskip
 		
-		Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Bei Ergebnissen, wo die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht wurde, ist der Anteil der erfolgreichen Durchläufe in Prozent in eckigen Klammern angegeben, wo \(\infty\) steht, wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht. Bei den Algorithmen, welche \glqq adaptive\grqq{} als Neustartstrategie anwendetet, steht die durchschnittliche Anzahl an Neustarts in geschweiften Klammern.
+		Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Bei Ergebnissen, wo die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht wurde, ist der Anteil der erfolgreichen Durchläufe in Prozent in eckigen Klammern angegeben, wo \(\infty\) steht, wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht. Bei den Algorithmen, welche \glqq adaptive\grqq{} als Neustartstrategie angewendet haben, steht die durchschnittliche Anzahl an Neustarts in geschweiften Klammern.
 		
 		%TODO kann auch ein längerer Absatzt beibehalten werden
 		
@@ -3310,7 +3315,7 @@ within=section,
 		
 		%\caption{Vergleich der Ergebnisse zwischen Algorithmen, die probabilistisches Lernen einsetzten auf Testfunktionen, die zum Vergleich zwischen Algorithmen, die probabilistisches Lernen einsetzten, benutzt werden, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning} Teil 1}
 		
-		\caption{Vergleich der Ergebnisse zwischen den Iterationen von \ac{acorvsmv} mit Neustartstrategie \(adaptive\)}
+		\caption{Vergleich der Ergebnisse zwischen den Iterationen von \acl{acorvsmv} mit Neustartstrategie \(adaptive\) (NSS-adapt)}
 		
 		%TODO fixed 0
 		
@@ -3366,7 +3371,7 @@ within=section,
 		
 		%\caption{Vergleich der Ergebnisse zwischen Algorithmen, die probabilistisches Lernen einsetzten auf Testfunktionen, die zum Vergleich zwischen Algorithmen, die probabilistisches Lernen einsetzten, benutzt werden, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning} Teil 1}
 		
-		\caption{Vergleich der Ergebnisse zwischen den Iterationen von \ac{acorvsmv} mit Neustartstrategie \(fixed = 0\)}
+		\caption{Vergleich der Ergebnisse zwischen den Iterationen von \acl{acorvsmv} mit Neustartstrategie \(fixed = 0\) (NSS-f0)}
 		
 		%TODO fixed 0
 		
@@ -3429,7 +3434,7 @@ within=section,
 		
 		%\caption{Vergleich der Ergebnisse zwischen Algorithmen, die probabilistisches Lernen einsetzten auf Testfunktionen, die zum Vergleich zwischen Algorithmen, die probabilistisches Lernen einsetzten, benutzt werden, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning} Teil 1}
 		
-		\caption{Vergleich der Ergebnisse zwischen den Iterationen von \ac{acorvsmv} mit Neustartstrategie \(adaptive\)}
+		\caption{Vergleich der Ergebnisse zwischen den Iterationen von \acl{acorvsmv} mit Neustartstrategie \(adaptive\) (NSS-adapt)}
 		
 		%TODO fixed 0
 		
@@ -3476,7 +3481,7 @@ within=section,
 		
 		\smallskip
 		
-		Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Bei Ergebnissen, wo die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht wurde, ist der Anteil der erfolgreichen Durchläufe in Prozent in eckigen Klammern angegeben. Bei den Algorithmen, welche \glqq adaptive\grqq{} als Neustartstrategie anwendetet, steht die durchschnittliche Anzahl an Neustarts in geschweiften Klammern, danach sind in Klammern die Anzahl an Iteration angegeben, die notwendig waren, um gefilterte Ausgangslösungen zu erhalten, und die Anzahl an Iterationen, um gefilterte Lösungen während der Algorithmenausführung zu erhalten, wo \(\infty\) steht, wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht.\hfill\newline
+		Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Bei Ergebnissen, wo die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht wurde, ist der Anteil der erfolgreichen Durchläufe in Prozent in eckigen Klammern angegeben. Bei den Algorithmen, welche \glqq adaptive\grqq{} als Neustartstrategie angewendet haben, steht die durchschnittliche Anzahl an Neustarts in geschweiften Klammern, danach sind in Klammern die Anzahl an Iteration angegeben, die notwendig waren, um gefilterte Ausgangslösungen zu erhalten, und die Anzahl an Iterationen, um gefilterte Lösungen während der Algorithmenausführung zu erhalten, wo \(\infty\) steht, wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht.\hfill\newline
 		
 		%TODO kann auch ein längerer Absatzt beibehalten werden? Ja
 		
@@ -3655,11 +3660,7 @@ within=section,
 		
 	\end{verbatim}
 	
-	\noindent Ich versichere, dass ich die vorliegende Arbeit selbstständig und nur unter Verwendung der
-	angegebenen Quellen und Hilfsmittel angefertigt habe, insbesondere sind wörtliche oder
-	sinngemäße Zitate als solche gekennzeichnet. Mir ist bekannt, dass Zuwiderhandlung auch
-	nachträglich zur Aberkennung des Abschlusses führen kann.
-	Ich versichere, dass das elektronische Exemplar mit den gedruckten Exemplaren übereinstimmt.
+	\noindent Ich versichere, dass ich die vorliegende Arbeit selbstständig und nur unter Verwendung der angegebenen Quellen und Hilfsmittel angefertigt habe, insbesondere sind wörtliche oder sinngemäße Zitate als solche gekennzeichnet. Mir ist bekannt, dass Zuwiderhandlung auch nachträglich zur Aberkennung des Abschlusses führen kann. Ich versichere, dass das elektronische Exemplar mit den gedruckten Exemplaren übereinstimmt.
 	
 	\bigskip
 	
