@@ -60,8 +60,8 @@
 \contentsline {paragraph}{\numberline {6.2.2.3}Resultierende Testkombinationen für das \ac {csd}}{41}{}%
 \contentsline {section}{\numberline {7}Vergleich von ACO\(_{\mathbb {R}}\), ACO\(_\text {MV}\) und den Iterationen von \acl {acorvsmv}}{41}{}%
 \contentsline {subsection}{\numberline {7.1}Vergleich bzgl. stetiger Testfunktionen}{41}{}%
-\contentsline {subsection}{\numberline {7.2}Vergleich bzgl. Testfunktionen mit gemischten Variablen}{49}{}%
-\contentsline {subsubsection}{\numberline {7.2.1}Vergleich bzgl. konstruierter Testfunktionen mit gemischten Variablen}{49}{}%
+\contentsline {subsection}{\numberline {7.2}Vergleich bzgl. Testfunktionen mit gemischten Variablen}{48}{}%
+\contentsline {subsubsection}{\numberline {7.2.1}Vergleich bzgl. konstruierter Testfunktionen mit gemischten Variablen}{48}{}%
 \contentsline {subsubsection}{\numberline {7.2.2}Vergleich bzgl. dem Coil Spring Design Problem (CSD)}{50}{}%
 \contentsline {section}{\numberline {8}Konvergenzbetrachtung}{52}{}%
 \contentsline {subsection}{\numberline {8.1}Rosenbrock}{53}{}%
