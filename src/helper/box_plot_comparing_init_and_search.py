@@ -6,6 +6,9 @@ import matplotlib
 # matplotlib.use('agg')
 
 import matplotlib.pyplot as plt
+import re
+
+from src.helper.box_plot_comparing_algorithms import algorithm_names
 
 '''
 makes a box plot of the performance data of the given objective function
@@ -21,44 +24,46 @@ objective_function_name = "Paraboloid"
 
 # path where to read the performance data from
 
-read_data_path_1 = "../performance_data/ACO_R_Very_Simple/continuous_performance_data/10_4_10_4/shekel_4_10_fixed_0_continuous_10_4_10_4.txt"
-read_data_path_2 = "../performance_data/H_Hom_ACO_R_Very_Simple/continuous_performance_data/10_4_10_4/shekel_4_10_fixed_0_continuous_10_4_10_4.txt"
-read_data_path_3 = "../performance_data/H_Het_ACO_R_Very_Simple/continuous_performance_data/10_4_10_4/shekel_4_10_fixed_0_continuous_10_4_10_4.txt"
-read_data_path_4 = "../performance_data/H_Het_P_ACO_R_Very_Simple/continuous_performance_data/10_4_10_4/shekel_4_10_fixed_0_continuous_10_4_10_4.txt"
-read_data_paths = [read_data_path_1, read_data_path_2, read_data_path_3, read_data_path_4]
+# read_data_path_1 = "../performance_data/ACO_R_Very_Simple/continuous_performance_data/10_4_10_4/shekel_4_10_fixed_0_continuous_10_4_10_4.txt"
+read_data_path_2 = "../performance_data/H_Hom_ACO_R_Very_Simple/mixed_variable_performance_data/csd_3_exact_exact_CSD_fixed_mixed_variable_10_6.txt"
+read_data_path_3 = "../performance_data/H_Het_ACO_R_Very_Simple/mixed_variable_performance_data/csd_3_exact_exact_CSD_fixed_mixed_variable_10_6.txt"
+read_data_path_4 = "../performance_data/H_Het_P_ACO_R_Very_Simple/mixed_variable_performance_data/csd_3_exact_exact_CSD_fixed_mixed_variable_10_6.txt"
+# read_data_paths = [read_data_path_1, read_data_path_2, read_data_path_3, read_data_path_4]
+read_data_paths = [read_data_path_2, read_data_path_3, read_data_path_4]
 
 # path where to save the box plot
 save_pic_path = "../figures/shekel_4_10_fixed_0_comparing_algorithms.png"
 
-algorithm_names = ['VS', 'H_Hom_VS', 'H_Het_VS', 'H_Het_P_VS']
+# algorithm_names = ['VS', 'H_Hom_VS', 'H_Het_VS', 'H_Het_P_VS']
+algorithm_names = ['Hom-HPB', 'Het-HPB', 'Het-HSPPB']
 
 spread = [0 for i in range(len(read_data_paths))]
-spread_number = 1
+spread_number = 0
 
-with open(read_data_path_1, "r") as performance_data:
+# with open(read_data_path_1, "r") as performance_data:
 
     # reading all the data from file
-    lines_in_data = performance_data.read().splitlines()
+#    lines_in_data = performance_data.read().splitlines()
 
-    temp_spread = [0]
+#    temp_spread = [0]
 
-    for line in lines_in_data:
+#    for line in lines_in_data:
 
-        if not line:
+#        if not line:
 
-            break
+#            break
 
         # print("box_plot_comparing_algorithms line: " + str(line))
 
         # gathering all data in a list
-        temp_spread.append(int(line))
+#        temp_spread.append(int(line))
 
     # removing the first zero from the spread as we started it with zero and then just appended lines
-    temp_spread.pop(0)
+#    temp_spread.pop(0)
 
-    spread[0] = temp_spread
+#    spread[0] = temp_spread
 
-for read_data_path in read_data_paths[1:]:
+for read_data_path in read_data_paths:
 
     # works only for Windows
     with open(read_data_path, "r") as performance_data:
@@ -76,8 +81,10 @@ for read_data_path in read_data_paths[1:]:
 
             split_line = line.split()
 
+            # print(split_line[1])
+
             # gathering all data in a list
-            temp_spread.append(int(split_line[2]))
+            temp_spread.append(int(split_line[1]))
 
         # removing the first zero from the spread as we started it with zero and then just appended lines
         temp_spread.pop(0)
@@ -98,7 +105,7 @@ bp = ax.boxplot(spread)
 
 # costom caption
 # ax.set_title('Variations of ACO$_\mathbb{R}$-Very-Simple')
-ax.set_title('Shekel(4,10) - fixed 0')
+ax.set_title('CSD - exact-exact - fixed 0')
 
 # ax.set_subtitle('Paraboloid(6)')
 
