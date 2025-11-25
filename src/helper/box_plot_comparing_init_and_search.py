@@ -32,7 +32,7 @@ read_data_path_4 = "../performance_data/H_Het_P_ACO_R_Very_Simple/mixed_variable
 read_data_paths = [read_data_path_2, read_data_path_3, read_data_path_4]
 
 # path where to save the box plot
-save_pic_path = "../figures/shekel_4_10_fixed_0_comparing_algorithms.png"
+save_pic_path = "../figures/pre_and_iterations.png"
 
 # algorithm_names = ['VS', 'H_Hom_VS', 'H_Het_VS', 'H_Het_P_VS']
 algorithm_names = ['Hom-HPB', 'Het-HPB', 'Het-HSPPB']
@@ -99,6 +99,8 @@ fig = plt.figure(1)
 # create axes instance
 ax = fig.add_subplot(111)
 
+# spread = [spread, [1, 1]]
+
 # creates box plot
 # it may look like it's not used but it's necessary
 bp = ax.boxplot(spread)
@@ -112,6 +114,9 @@ ax.set_title('CSD - exact-exact - fixed 0')
 # custom x-axis label
 # must be set after box plot is done
 ax.set_xticklabels(algorithm_names)
+
+ax.set_xlabel("pre-, add- und reale Funktionsauswertungen")
+# ax.set_ylabel("Anzahl an Funktionsauswertugen")
 
 # ax.set_ylim(ymin=0)
 
