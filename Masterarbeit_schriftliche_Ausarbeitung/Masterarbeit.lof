@@ -9,13 +9,17 @@
 \contentsline {figure}{\numberline {8}{\ignorespaces Skizze einer Schraubenfeder mit Federdurchmesser (links), Windungszahl (mitte) und Drahtdurchmesser (rechts)¨; das Bild wurde von mir mit einem Zeichenprogramm erstellt und dann mit ChatGPT verbessert}}{37}{}%
 \contentsline {figure}{\numberline {9}{\ignorespaces gefilterter und ungefilterter Suchraum für das CSD-Problem}}{41}{}%
 \contentsline {figure}{\numberline {10}{\ignorespaces gefilterter Raum (orange) und ungefilterter Raum (blau)}}{41}{}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Cigar Verglich m}}{I}{}%
-\contentsline {figure}{\numberline {12}{\ignorespaces Paraboloid Verglich m}}{I}{}%
-\contentsline {figure}{\numberline {13}{\ignorespaces Tablet Verglich m}}{II}{}%
-\contentsline {figure}{\numberline {14}{\ignorespaces Cigar Vergleich \textit {q}}}{II}{}%
-\contentsline {figure}{\numberline {15}{\ignorespaces Paraboloid Vergleich \textit {q}}}{III}{}%
-\contentsline {figure}{\numberline {16}{\ignorespaces Tablet Vergleich \textit {q}}}{III}{}%
-\contentsline {figure}{\numberline {17}{\ignorespaces Cigar Verglich xi}}{IV}{}%
-\contentsline {figure}{\numberline {18}{\ignorespaces Paraboloid Verglich xi}}{IV}{}%
-\contentsline {figure}{\numberline {19}{\ignorespaces Tablet Verglich xi}}{IV}{}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Verhältnis zwischen den benötigten Funktionsauswertungen für Vorfiltern, zusätzlichem Filtern und realen Iterationsschritten der Algorithmen für den Fall \glqq exact-exact\grqq {} und NSS-f0}}{56}{}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Verhältnis zwischen den benötigten Funktionsauswertungen für Vorfiltern, zusätzlichem Filtern und realen Iterationsschritten der Algorithmen für den Fall \glqq exact-exact\grqq {} und NSS-adapt}}{56}{}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Verhältnis zwischen den benötigten Funktionsauswertungen für Vorfiltern, zusätzlichem Filtern und realen Iterationsschritten der Algorithmen für den Fall \glqq exact-penalty\grqq {} und NSS-f0}}{I}{}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Verhältnis zwischen den benötigten Funktionsauswertungen für Vorfiltern, zusätzlichem Filtern und realen Iterationsschritten der Algorithmen für den Fall \glqq exact-penalty\grqq {} und NSS-adapt}}{I}{}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Cigar Verglich m}}{II}{}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Paraboloid Verglich m}}{II}{}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Tablet Verglich m}}{II}{}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Cigar Vergleich \textit {q}}}{III}{}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Paraboloid Vergleich \textit {q}}}{III}{}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Tablet Vergleich \textit {q}}}{IV}{}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Cigar Verglich xi}}{IV}{}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Paraboloid Verglich xi}}{V}{}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Tablet Verglich xi}}{V}{}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

@@ -1272,7 +1272,7 @@ within=section,
 		
 		Genau wie in meiner Bachelorarbeit~\cite{FCM_2019} bezeichnen wir die Initialisierungsintervalle hier als Definitionsbereiche. Das liegt daran, dass die Funktionen, sowohl initial über diesen Intervallen definiert sind, als auch die Intervallgrenzen definieren, was gültige Lösungen sind. Der Suchraum für die Funktionen aus den Tabellen \ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen}, \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt}, \ref{subsec:Stetige_Testfunktionen:tab:Teil_2_1_Stet_Adapt} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_2_2_Stet_Adapt} ist zwar \(\Sigma = \mathbb{R}^n\), wobei \(n \in \mathbb{N}\) von der jeweiligen Testfunktion abhängt, aber die Beschränkungen \(\mathcal{B}\) sind die Definitionsbereiche, die für die verschiedenen Testfunktionen abhängig von der Testfunktion definiert sind, z.B. für die Testfunktion \glqq Paraboloid\grqq{} gilt \(\mathcal{B}_1 = \ldots = \mathcal{B}_n = [-3,7]\)\hfill\newline
 		
-		Schließlich betrachten wir 6 ausgewählte Testfunktionen in den Abschnitten \ref{subsubsec:Stetige_Testfunktionen:Testfunktion_-_Paraboloid} bis \ref{subsubsec:Stetige_Testfunktionen:Testfunktion_-_Shekel} genauer. Diese Testfunktionen haben sich nicht nur durch besondere Herausforderungen, die sie an einen Optimierungsalgorithmus stellen, herausgetan, sondern auch dadurch, dass die Herausforderung, die sie bieten, singulär ist, sie also den Algorithmus auf nur eine Weise fordern und damit sich eignen den Algorithmus auf eine Stärke oder eine Schwäche zu testen und werden deswegen näher betrachtet. Alle Abbildungen in den Abschnitten \ref{subsubsec:Stetige_Testfunktionen:Testfunktion_-_Paraboloid} bis \ref{subsubsec:Stetige_Testfunktionen:Testfunktion_-_Shekel} wurden mit den Python-Bibliotheken \glqq numpy\grqq, \glqq matplotlib\grqq{} und \glqq matplotlib.pyplot\grqq{} erstellt. Es wurde für alle Abbildungen in den Abschnitten \ref{subsubsec:Stetige_Testfunktionen:Testfunktion_-_Paraboloid} bis \ref{subsubsec:Stetige_Testfunktionen:Testfunktion_-_Shekel} die selbe Bildausrichtung, wie in \cite{molga2005test} und die selbe Farbpalette, wie in \cite{kim2020benchmark}, verwendet, da die Kombination von beiden gute Bilder ergeben hat. 
+		Schließlich betrachten wir 6 ausgewählte Testfunktionen in den Abschnitten \ref{subsubsec:Stetige_Testfunktionen:Testfunktion_-_Paraboloid} bis \ref{subsubsec:Stetige_Testfunktionen:Testfunktion_-_Shekel} genauer. Diese Testfunktionen haben sich nicht nur durch besondere Herausforderungen, die sie an einen Optimierungsalgorithmus stellen, herausgetan, sondern auch dadurch, dass die Herausforderung, die sie bieten, singulär ist, sie also den Algorithmus auf nur eine Weise fordern und damit sich eignen den Algorithmus auf eine Stärke oder eine Schwäche zu testen und werden deswegen näher betrachtet. Alle Abbildungen in den Abschnitten \ref{subsubsec:Stetige_Testfunktionen:Testfunktion_-_Paraboloid} bis \ref{subsubsec:Stetige_Testfunktionen:Testfunktion_-_Shekel} wurden von mir mit den Python-Bibliotheken \glqq numpy\grqq, \glqq matplotlib\grqq, \glqq matplotlib.pyplot\grqq{} und \glqq cm\grqq{}, aus \glqq matplotlib\grqq{} erstellt. Ich habe für alle Abbildungen in den Abschnitten \ref{subsubsec:Stetige_Testfunktionen:Testfunktion_-_Paraboloid} bis \ref{subsubsec:Stetige_Testfunktionen:Testfunktion_-_Shekel} die selbe oder eine ähnliche Bildausrichtung, wie in \cite{molga2005test} und die selbe Farbpalette, wie in \cite{kim2020benchmark}, verwendet, da die Kombination von beiden gute Bilder ergeben hat. 
 		
 		%Wir bezeichnen die Initialisierungsintervalle hier jedoch als Definitionsbereiche, da die Funktionen initial über diesen definiert sind und führen sie nach dem Namen der Funktion an oder separat, wie in Tabelle~\ref{schwereTestfunktionenTeil2}.
 		
@@ -2055,7 +2055,9 @@ within=section,
 		\paragraph{Gefilterter Raum als Initialisierungsintervall}\mbox{}\\
 		\newline
 		
-		\noindent Benutzt man den gefilterten Raum, kann die Formel~\ref{subsubsec:Testfunktionen:CSD:eq:CSD_material} ohne Veränderungen beibehalten werden. Abbildung~\ref{subsubsec:Testfunktionen:CSD:fig:3D_plot:CSD:filtered_and_unfiltered_search_spaces} zeigt, wie stark sich der Initialisierungsraum verkleinert und damit die Lösungssuche erleichtert wird, wenn der Initialisierungsraum vor dem Ausführen des Algorithmus nach gültigen Lösungen gefiltert wird. Wie zu sehen verkleinert sich der Initialisierungsraum um mehr als das achtfache.%TODO 3D-Plot vom gefliterten Raum einfügen
+		\noindent Benutzt man den gefilterten Raum, kann die Formel~\ref{subsubsec:Testfunktionen:CSD:eq:CSD_material} ohne Veränderungen beibehalten werden. Abbildung~\ref{subsubsec:Testfunktionen:CSD:fig:3D_plot:CSD:filtered_and_unfiltered_search_spaces} zeigt, wie stark sich der Initialisierungsraum verkleinert und damit die Lösungssuche erleichtert wird, wenn der Initialisierungsraum vor dem Ausführen des Algorithmus nach gültigen Lösungen gefiltert wird. Wie zu sehen verkleinert sich der Initialisierungsraum um mehr als das achtfache. Alle Abbildungen in diesem Abschnitt von mir mit den Python-Bibliotheken \glqq numpy\grqq{} und \glqq matplotlib\grqq{} erstellt.
+		
+		%TODO 3D-Plot vom gefliterten Raum einfügen
 		
 		%TODO Wenn der gefilterte Raum genommen wird, konvergiert der Algorithmus sehr viel schneller, findet aber auch die selben lokalen Minima, anstatt des globalen Minima. Ferner werden mehrere tausend Iterationen für die Initialisierung gebraucht, da Punkte, welche die Constrains verletzen, gefiltert werden
 		%TODO Abbildung~\ref{fig:box_plot:ACO_R-VS_CSD_exact_perform} zeigt, wie viele Iterationen bei gefiltertem Raum, für die Initialisierung und für die Lösungssuche selbst, notwendig waren und
@@ -3519,7 +3521,36 @@ within=section,
 		
 	\end{table}
 	
-	Wir können weiter feststellen, dass bei allen Iterationen von \ac{acorvsmv}, unabhängig der Neustartstrategie, wo die Initiallösungen aus dem gefilterten Raum gezogen wurden, also die Fälle \glqq exact-exact\grqq{} und \glqq exact-penalty\grqq, für das generieren der Initiallösungen die meisten Funktionsauswertungen gebraucht wurden. Deswegen untersuchen wir das Verhältnis zwischen für die Initialisierung und für die Lösungssuche verwendeter Funktionsauswertungen nochmal gesondert.
+	Wir können weiter feststellen, dass bei allen Iterationen von \ac{acorvsmv}, unabhängig der Neustartstrategie, wo die Initiallösungen aus dem gefilterten Raum gezogen wurden, also die Fälle \glqq exact-exact\grqq{} und \glqq exact-penalty\grqq, für das generieren der Initiallösungen die meisten Funktionsauswertungen gebraucht wurden. Deswegen untersuchen wir das Verhältnis zwischen, für die Initialisierung und für die Lösungssuche verwendeter Funktionsauswertungen, nochmal gesondert. Alle Boxplots in diesem Abschnitt und in der Anlage~\ref{anlage:Vergleich_pre_add_und_realen_Funktionsauswertungen} wurden von mir mit der Python-Bibliothek \glqq matplotlib.pyplot\grqq{} erstellt. In allen Abbildungen werden bei \glqq real\grqq{} nur die Funktionsauswertungen von erfolgreichen Durchläufen betrachtet.\hfill\newline
+	
+	Wie in den Abbildungen \ref{subsubsec:Testfunktionen:CSD:fig:hom_het_and_het_p_CSD_pre_add_and_real_iteratoins_exact_exact_f0} und \ref{subsubsec:Testfunktionen:CSD:fig:hom_hpb_CSD_pre_add_and_real_iteratoins_exact_exact_adapt} zu sehen, brauchen alle Iterationen von ACO\(_\mathbb{R}\)-VS-MV, unabhängig der Neustartstrategie, viel mehr Funktionsauswertungen für das Suchen gefilterter Lösungen als für die Konstruktion neuer Lösungen selbst, auch wenn man die, bei der Lösungssuche zusätzlichen Funktionsauswertungen mitzählt. Das gleiche Verhalten kann man in den Tabellen \ref{subsubsec:Testfunktionen:CSD:fig:hom_het_and_het_p_CSD_pre_add_and_real_iteratoins_exact_penalty_f0} und \ref{subsubsec:Testfunktionen:CSD:fig:hom_het_and_het_p_CSD_pre_add_and_real_iteratoins_exact_penalty_adap}, welche sich im Anhang befinden. Auf der anderen Seite können wir beobachten, dass das beste Ergebnis bei dem Fall \glqq penalty-penalty\grqq{} erreicht wurde. Ebenso sehen wir, dass das Hinzufügen von adaptiven Neustarts die Leistung des Algorithmus verschlechtert bzw. sehr verschlechtert. Wir schlussfolgern also, dass, sowohl das Filtern des Raumes vor der Algorithmusausführung allein keinen Mehrwert brachte, als auch das Filtern des Raum von der Algorithmusausführung verbunden mit dem Filtern von Lösungen während der Algorithmusausführung, keinen Mehrwert brachte. 
+	
+	\begin{figure}[H]
+		
+		\centering
+		\includegraphics[width=.3\textwidth]{Abbildungen/Coil_Spring_Design_-_Dateien/hom_hpb_aco_r_vs_mv_pre_add_and_real_iterations_exact_exact_fixed_0.png}\hfill
+		\includegraphics[width=.3\textwidth]{Abbildungen/Coil_Spring_Design_-_Dateien/het_hpb_aco_r_vs_mv_pre_add_and_real_iterations_exact_exact_fixed_0.png}\hfill
+		\includegraphics[width=.3\textwidth]{Abbildungen/Coil_Spring_Design_-_Dateien/het_hsppb_aco_r_vs_mv_pre_add_and_real_iterations_exact_exact_fixed_0.png}
+		
+		\caption{Verhältnis zwischen den benötigten Funktionsauswertungen für Vorfiltern, zusätzlichem Filtern und realen Iterationsschritten der Algorithmen für den Fall \glqq exact-exact\grqq{} und NSS-f0}
+		\label{subsubsec:Testfunktionen:CSD:fig:hom_het_and_het_p_CSD_pre_add_and_real_iteratoins_exact_exact_f0}
+		
+	\end{figure}
+	
+	%TODO passt es, dass ich nur erfolgreiche Durchläufe betrachte? 
+	
+	\begin{figure}[H]
+		
+		\centering
+		\includegraphics[width=.3\textwidth]{Abbildungen/Coil_Spring_Design_-_Dateien/hom_hpb_aco_r_vs_mv_pre_add_and_real_iterations_exact_exact_adaptive.png}\hfill
+		\includegraphics[width=.3\textwidth]{Abbildungen/Coil_Spring_Design_-_Dateien/het_hpb_aco_r_vs_mv_pre_add_and_real_iterations_exact_exact_adaptive.png}\hfill
+		\includegraphics[width=.3\textwidth]{Abbildungen/Coil_Spring_Design_-_Dateien/het_hsppb_aco_r_vs_mv_pre_add_and_real_iterations_exact_exact_adaptive.png}
+		
+		\caption{Verhältnis zwischen den benötigten Funktionsauswertungen für Vorfiltern, zusätzlichem Filtern und realen Iterationsschritten der Algorithmen für den Fall \glqq exact-exact\grqq{} und NSS-adapt}
+		\label{subsubsec:Testfunktionen:CSD:fig:hom_hpb_CSD_pre_add_and_real_iteratoins_exact_exact_adapt}
+		
+	\end{figure}
+	
 	
 	
 	
@@ -3598,6 +3629,32 @@ within=section,
 	\addpart{Anlagen}
 	
 	\pagenumbering{Roman}
+	
+	\section{Vergleich der pre-, add- und realen Funktionsauswertungen} \label{anlage:Vergleich_pre_add_und_realen_Funktionsauswertungen}
+	
+	\begin{figure}[H]
+		
+		\centering
+		\includegraphics[width=.3\textwidth]{Abbildungen/Coil_Spring_Design_-_Dateien/hom_hpb_aco_r_vs_mv_pre_add_and_real_iterations_exact_penalty_fixed_0.png}\hfill
+		\includegraphics[width=.3\textwidth]{Abbildungen/Coil_Spring_Design_-_Dateien/het_hpb_aco_r_vs_mv_pre_add_and_real_iterations_exact_penalty_fixed_0.png}\hfill
+		\includegraphics[width=.3\textwidth]{Abbildungen/Coil_Spring_Design_-_Dateien/het_hsppb_aco_r_vs_mv_pre_add_and_real_iterations_exact_penalty_fixed_0.png}
+		
+		\caption{Verhältnis zwischen den benötigten Funktionsauswertungen für Vorfiltern, zusätzlichem Filtern und realen Iterationsschritten der Algorithmen für den Fall \glqq exact-penalty\grqq{} und NSS-f0}
+		\label{subsubsec:Testfunktionen:CSD:fig:hom_het_and_het_p_CSD_pre_add_and_real_iteratoins_exact_penalty_f0}
+		
+	\end{figure}
+	
+	\begin{figure}[H]
+		
+		\centering
+		\includegraphics[width=.3\textwidth]{Abbildungen/Coil_Spring_Design_-_Dateien/hom_hpb_aco_r_vs_mv_pre_add_and_real_iterations_exact_penalty_adaptive.png}\hfill
+		\includegraphics[width=.3\textwidth]{Abbildungen/Coil_Spring_Design_-_Dateien/het_hpb_aco_r_vs_mv_pre_add_and_real_iterations_exact_penalty_adaptive.png}\hfill
+		\includegraphics[width=.3\textwidth]{Abbildungen/Coil_Spring_Design_-_Dateien/het_hsppb_aco_r_vs_mv_pre_add_and_real_iterations_exact_penalty_adaptive.png}
+		
+		\caption{Verhältnis zwischen den benötigten Funktionsauswertungen für Vorfiltern, zusätzlichem Filtern und realen Iterationsschritten der Algorithmen für den Fall \glqq exact-penalty\grqq{} und NSS-adapt}
+		\label{subsubsec:Testfunktionen:CSD:fig:hom_het_and_het_p_CSD_pre_add_and_real_iteratoins_exact_penalty_adap}
+		
+	\end{figure}
 	
 	\section{Einfluss der Anzahl der Ameisen}
 	
