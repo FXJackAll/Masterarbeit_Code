@@ -240,13 +240,13 @@ within=section,
 	
 	In diesem Abschnitt betrachten wir ein ideales Futter, also ein Futter, dass in Quantität und Qualität konstant bleibt, und  ideale Ameisen, also Ameisen, die mit konstanter Geschwindigkeit sich geradlinig bewegen. Wir müssen diese Annahmen treffen, da, wie im Abschnitt~\ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Biologische_Beschreibung_Der_Nahrungssuche_Von_Ameisen} beschrieben, die Menge des auf einem Weg hinterlassenen Pheromons von der Quantität und Qualität des Futters abhängt und wie in \textit{Camazine et al.}\cite{camazineself} beschrieben, reale Ameisen auf einem Weg umdrehen können und wieder zurücklaufen von woher sie kamen. Ferner, in Anlehnung an \textit{Dorigo und Stützle}~\cite{dorigo2018ant} und \textit{Engelbrecht}~\cite{brecht2005fundamentals}, betrachten wir eine ideale Experimentaufstellung in Form eines Tupels (\(\Sigma, \mathcal{E}, \Delta, \mathcal{M}, f, \mathcal{I}, \mathcal{S}\)).\hfill\newline
 	
-	Dabei ist \(\Sigma\) der Suchraum, welcher hier der ungerichtete Graph \(G(V,E)\) ist, der aus drei Orten/Knoten, an denen sich Ameisen aufhalten können und drei Wegen zwischen diesen Orten, besteht. Der Graph befindet sich in der euklidischen Ebene. Die Orte sind Nest (N), Food (F) und Umweg/Detour (D), also gilt \(V = \{N, F, D\}\). Die Wege verbinden die Orte, wie Abbildung~\ref{fig:Pheromon_Dreieck} zu sehen. Die Wege haben alle die Länge 1 Längeneinheit (LE) und können in beide Richtungen begangen werden, also gilt \(E = \{\{NF\}, \{ND\}, \{DF\}\}\). Zusammengefasst gilt \(G = (\{N, F, D\}, \{\{NF\}, \{ND\}, \{DF\}\})\). Die Menge der idealen Ameisen bzw. der \ac{sce} ist \(\mathcal{E}\). Hier gilt \(|\mathcal{E}| = 1\), es wird also immer wieder eine ideale Ameise in diesem Experiment betrachtet. Die Menge des Pheromons, welches die Ameise auf die von ihr gewählten Wege hinterlässt, ist \(\Delta\). In unserem Experiment, angelehnt an \cite{bonabeau1999swarm} und \cite{christian2008swarm}, gilt \(\Delta = 1\). Die Menge des Pheromons \(\rho\) auf allen Wegen, also die Pheromoninfotmation, wird in der Pheromonmatrix \(\mathcal{M}\) gespeichert. Dabei steht jeder Matrixeintrag für eine Kante im Graph \(G\) und der Wert des Eintrages steht für die Menge von Pheromon, welches auf der Kante liegt. Die Zielfunktion ist \(f\). Die Zielfunktion gibt die Summe der Weglängen der Wege an, zwischen N und F, welche die Ameisen gegangen sind. In unserer idealen Experimentaufstellung gilt also \(f(x) \in \{1, 2\}\), da die Ameisen entweder den direkten Weg \(\{NF\}\) gehen oder den Umweg \(\{ND, DF\}\) gehen kann und damit gilt \(f(\{NF\}) = 1\) oder \(f(\{ND, DF\}) = 2\). Das Begehen eines Weges verbraucht exakt eine Zeiteinheit, also verbraucht der direkte Weg \(\{NF\}\) eine Zeiteinheit und der Weg über den Umweg \(\{ND, DF\}\) Zwei. Das Ergebnis des in diesem Abschnitt beschriebenen Vorgehens, und das Ziel für zukünftige Problemstellungen, ist das finden eines globalen Minimums der Zielfunktion. Bevor die idealen Ameisen mit dem Experiment anfangen können, wird \(\mathcal{M}\) mit der Initialisierungmethode \(\mathcal{I}\) initialisiert. Hier wird jeder Matrixeintrag \((m_{ij})_{i, j = 1, 2, 3}\) der Pheromonmatrix \(\mathcal{M}\) auf \(\Delta\) gesetzt, damit in den Gleichungen \ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen:eq:Wahrscheinlichkeit_NF} und \ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen:eq:Wahrscheinlichkeit_ND} nicht durch 0 geteilt wird. Das Experiment wird beendet, wenn das Stoppkriterium \(\mathcal{S}\) erreicht ist. Das Stopkriterium \(\mathcal{S}\) ist hier, dass das Experiment, nach dem Verstreichen von 200 Zeiteinheiten beendet wird.
+	Dabei ist \(\Sigma\) der Suchraum, welcher hier der ungerichtete Graph \(G(V,E)\) ist, der aus drei Orten/Knoten, an denen sich Ameisen aufhalten können und drei Wegen zwischen diesen Orten, besteht. Der Graph befindet sich in der euklidischen Ebene. Die Orte sind Nest (N), Food (F) und Umweg/Detour (D), also gilt \(V = \{N, F, D\}\). Die Wege verbinden die Orte, wie Abbildung~\ref{fig:Pheromon_Dreieck} zu sehen. Die Wege haben alle die Länge 1 Längeneinheit (LE) und können in beide Richtungen begangen werden, also gilt \(E = \{\{NF\}, \{ND\}, \{DF\}\}\). Zusammengefasst gilt \(G = (\{N, F, D\}, \{\{NF\}, \{ND\}, \{DF\}\})\). Die Menge der idealen Ameisen bzw. der \ac{sce} ist \(\mathcal{E}\). Hier gilt \(|\mathcal{E}| = 1\), es wird also jedem Durchgang eine ideale Ameise in diesem Experiment betrachtet. Die Menge des Pheromons, welches die Ameise auf die von ihr gewählten Wege hinterlässt, ist \(\Delta\). In unserem Experiment, angelehnt an \cite{bonabeau1999swarm} und \cite{christian2008swarm}, gilt \(\Delta = 1\). Die Menge des Pheromons \(\rho\) auf allen Wegen, also die Pheromoninfotmation, wird in der Pheromonmatrix \(\mathcal{M}\) gespeichert. Dabei steht jeder Matrixeintrag für eine Kante im Graph \(G\) und der Wert des Eintrages steht für die Menge von Pheromon, welches auf der Kante liegt. Die Zielfunktion ist \(f\). Die Zielfunktion gibt die Summe der Weglängen der Wege an, zwischen N und F, welche die Ameisen gegangen sind. In unserer idealen Experimentaufstellung gilt also \(f(x) \in \{1, 2\}\), da die Ameisen entweder den direkten Weg \(\{NF\}\) gehen oder den Umweg \(\{ND, DF\}\) gehen kann und damit gilt \(f(\{NF\}) = 1\) oder \(f(\{ND, DF\}) = 2\). Das Begehen eines Weges verbraucht exakt eine Zeiteinheit, also verbraucht der direkte Weg \(\{NF\}\) eine Zeiteinheit und der Weg über den Umweg \(\{ND, DF\}\) Zwei. Das Ergebnis des in diesem Abschnitt beschriebenen Vorgehens, und das Ziel für zukünftige Problemstellungen, ist das finden eines globalen Minimums der Zielfunktion. Bevor die idealen Ameisen mit dem Experiment anfangen können, wird \(\mathcal{M}\) mit der Initialisierungmethode \(\mathcal{I}\) initialisiert. Hier wird jeder Matrixeintrag \((m_{ij})_{i, j = 1, 2, 3}\) der Pheromonmatrix \(\mathcal{M}\) auf \(\Delta\) gesetzt, damit in den Gleichungen \ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen:eq:Wahrscheinlichkeit_NF} und \ref{subsubsec:Einfuehrung_In_Ameisenalgorithmen:Mathematische_Beschreibung_Der_Nahrungssuche_Von_Ameisen:eq:Wahrscheinlichkeit_ND} nicht durch 0 geteilt wird. Das Experiment wird beendet, wenn das Stoppkriterium \(\mathcal{S}\) erreicht ist. Das Stopkriterium \(\mathcal{S}\) ist hier, dass das Experiment, nach dem Verstreichen von 200 Zeiteinheiten beendet wird.
 	
 	%TODO hier auch \mathcal{R}? nein
 	
 	%TODO Grundraum?
 	
-	%TODO immer wieder so ok?
+	%TODO immer wieder so ok? berichtigt
 	
 	%TODO Gewinnerameise oder anderes Wort? Iterationsbeste Ameise
 	
@@ -433,7 +433,7 @@ within=section,
 	
 	P-ACO steht für Population based ACO. Die Unterschiede zu ACO sind, dass in P-ACO die Pheromoninformation nicht mehr in einer stetigen \(n \times n\)-Pheromonmatrix \(\mathcal{M}\), sondern in einer diskreten \(n \times n\)-Pheromonmatrix \(\mathcal{M}_d\) gespeichert wird. Die Matrix \(\mathcal{M}_d\) ist diskret, da ihre Elemente nur endlich viele Werte annehmen können. In P-ACO wird auch zudem eine Liste \(\mathcal{P}\) der Länge \(k, k \in \mathbb{N}\), von Lösungen mitgeführt, wobei in \cite{guntsch2002population} gilt \(k \in \{1, 5, 25\}\). Die in \(P\) gespeicherten Lösungen werden als Populationen interpretiert, daher \glqq P-ACO\grqq{} als Name für diese Erweiterung von \glqq ACO\grqq. Demnach können wir, angelehnt an ACO, die P-ACO-Metaheuristik als Tupel \((\Sigma, \mathcal{B}, \mathcal{E}, \Delta_d, \mathcal{M}_d, \mathcal{P}, \eta, f, \mathcal{I}, \mathcal{S})\) angeben. Nach \cite{guntsch2002population}, gilt \(|\mathcal{E}| = 10\). Dabei wird in \textit{Guntsch und Middendorf}~\cite{guntsch2002population} die Liste der Populationen nach dem Prinzip \glqq first in last out\grqq{} befüllt. Bei diesem Prinzip wird, nachdem die Liste \(\mathcal{P}\) zunächst mit \(k\) Lösungen befüllt wurde, wenn eine neue Lösung generiert wird, die älteste Lösung entfernt, die verbleibenden Lösungen um eine Stelle nach hinten verschoben und die neue Lösung an den ersten Platz in der Liste \(\mathcal{P}\) gespeichert. Ein anderes Prinzip \(\mathcal{P}\) zu verwalten ist das \glqq best in worst out\grqq{} Prinzip. Dieses Prinzip wird im Abschnitt~\ref{subsec:Ameisenalgorithmen_Mit_Einem_Stetigen_Loesungsarchiv} erläutert. Das Befüllen von \(\mathcal{P}\) mit \(k\) Lösungen und dem folgenden Aufbau von \(\mathcal{M}_d\) ist hier die Initialisierungsmethode \(\mathcal{I}\). Ein weiterer Unterschied ist, dass die Pheromonmatrix \(\mathcal{M}_d\) nicht mehr beliebig viel Pheromoninformation enthält, wie \(\mathcal{M}\), sondern jedes Element nur \(k + 1\) verschiedene Werte annehmen kann, wodurch \(\mathcal{M}_d\) diskret ist. Ferner muss bei P-ACO nicht mehr jedes Element der Pheromonmatrix \(\mathcal{M}_d\) bei jeder Iteration betrachtet werden. Nur die Elemente von \(\mathcal{M}_d\), welche in der neuen Lösung, welche in \(\mathcal{P}\) aufgenommen wird, vorkommen und die in der alten Lösung vorkommen, welche aus \(\mathcal{P}\) entfernt wird, und damit verändert werden, müssen betrachtet werden. Beides braucht \(n, n \in \mathbb{N}\) Schritte, also insgesamt \(2n\) Schritte. Damit braucht das Pheromonupdate statt \(\mathcal{O}(n^2)\) Zeit, nur \(\mathcal{O}(n)\). In dieser Tatsache liegt die Errungenschaft von  \textit{Guntsch und Middendorf}~\cite{guntsch2002population}.\hfill\newline
 	
-	%TODO jeder Eintrag nur \(k + 1\) verschiedene Werte: darf das Wort "nur" hier sein?
+	%TODO jeder Eintrag nur \(k + 1\) verschiedene Werte: darf das Wort "nur" hier sein? Ja
 	
 	Genauer, nach \cite{guntsch2002population} und \cite{FCM_2019}, seien \(\Delta > 0\), \(\Delta\) konstant, \(\rho_0 = 1/(n - 1)\). Dann werden die Elemente der Pheromonmatrix \(\mathcal{M}_d\) gemäß Gleichung~\ref{subsec:Weiterentwicklung_Der_ACO_Metaheuristik_Zu_Der_P_-_ACO_Metaheuristik:eq:Pheromone_Initialization} initialisiert. Nach \cite{guntsch2002population} gilt weiter für die Gleichung~\ref{subsec:ACO_-_Metaheuristik_Nach:eq:Extended_Probabilistik_Rule}, \(\alpha = 1\) und \(\beta = 5\). Die Elemente von \(\mathcal{M}_d\) werden dann, wie in Gleichung~\ref{subsec:Weiterentwicklung_Der_ACO_Metaheuristik_Zu_Der_P_-_ACO_Metaheuristik:eq:Pheromone_Update} dargestellt, aktualisiert. Dabei darf, wie zuvor, nur die iterationsbeste Ameise Pheromon legen. Die Tatsache, dass jedes Element von \(\mathcal{M}_d\) nur \(k + 1\) verschiedene Werte annehmen kann, ergibt sich daraus, dass, auf der einen Seite, jedes Element mindestens aus dem Initialisierungswert \(\rho_0\) besteht und, auf der anderen Seite, nur Vielfache von \(\Delta\) hinzugefügt werden können und das nur maximal \(k\)-Mal, da die Menge an Pheromon, welches die iterationsbeste Ameise ablegen kann, konstant \(\Delta\) ist und die Population der Ameisen \(\mathcal{P}\), nach Initialisierung, konstant die Größe \(k\) hat. Somit kann eine Kante \((i,j)\) nur maximal in \(k\) Lösungen vorkommen und damit ergibt sich, dass auf einer Kante nur \(k + 1\) verschiedene Mengen an Pheromon liegen können. Dies wird nochmal in der Gleichung~\ref{subsec:Weiterentwicklung_Der_ACO_Metaheuristik_Zu_Der_P_-_ACO_Metaheuristik:eq:Different_Pheromone_Values} verdeutlicht.
 	
@@ -485,19 +485,22 @@ within=section,
 	
 	\subsection{Alternative Verwaltung für ein Lösungsarchiv} \label{subsec:Alternative_Verwaltungen_Fuer_Ein_Loesunsarchiv}
 	
-	Ein anderes Prinzip ein Lösungsarchiv zu verwalten ist das \glqq best in worst out\grqq{} Prinzip. Bei diesem Prinzip, wie in meiner Bachelorarbeit~\cite{FCM_2019} beschrieben, wird eine Lösung nach ihrer Güte in das Lösungsarchiv einsortiert. Ist die Güte der neu generierte Lösung schlechter als die Güte aller anderen Lösungen im Lösungsarchiv, wird die neue Lösung verworfen. Ist dir Güte der neuen Lösung besser als die Güte einer Lösung im Lösungsarchiv, wird die neue Lösung an die Stelle der schlechteren Lösung gespeichert, die letzte Lösung im Lösungsarchiv wird gelöscht und alle Lösungen, die schlechter sind, als die neue Lösung werden um eine Stelle nach hinten verschoben. Dieses Verwaltungsprinzip wird in allen folgenden Algorithmen in dieser Arbeit verwendet. Dieses Verwaltungsprinzip ist auch eines, dass den Selektionsdruck von den Ameisen auf das Archiv umlegt, weswegen in den folgenden Algorithmen in dieser Arbeit gilt \(|\mathcal{E}| = 2\), wie im Abschnitt~\ref{subsec:ACO_R} oder sogar \(|\mathcal{E}| = 1\), wie in den Abschnitten \ref{subsec:ACO_R_-_simple} und \ref{subsec:ACO_R_-_very_-_simple}.
+	Ein anderes Prinzip ein Lösungsarchiv zu verwalten ist das \glqq best in worst out\grqq{} Prinzip. Bei diesem Prinzip, wie in meiner Bachelorarbeit~\cite{FCM_2019} beschrieben, wird eine Lösung nach ihrer Güte in das Lösungsarchiv einsortiert. Ist die Güte der neu generierte Lösung schlechter als die Güte aller anderen Lösungen im Lösungsarchiv, wird die neue Lösung verworfen. Ist dir Güte der neuen Lösung besser als die Güte einer Lösung im Lösungsarchiv, wird die neue Lösung an die Stelle der schlechteren Lösung gespeichert, die letzte Lösung im Lösungsarchiv wird gelöscht und alle Lösungen, die schlechter sind, als die neue Lösung werden um eine Stelle nach hinten verschoben. Dieses Verwaltungsprinzip wird in allen folgenden Algorithmen in dieser Arbeit verwendet. Dieses Verwaltungsprinzip ist auch eines, dass den Selektionsdruck von den Ameisen auf das Archiv umlegt, weswegen in den folgenden Algorithmen in dieser Arbeit gilt \(|\mathcal{E}| = 2\), wie im Abschnitt~\ref{subsec:ACO_R} oder \(|\mathcal{E}| = 1\), wie in den Abschnitten \ref{subsec:ACO_R_-_simple} und \ref{subsec:ACO_R_-_very_-_simple}.
 	
-	%TODO oder sogar? ist "sogar" ok?
+	%TODO oder sogar? ist "sogar" ok? nein
 	
 	\subsection{Ameisenalgorithmen mit einem stetigen Lösungsarchiv} \label{subsec:Ameisenalgorithmen_Mit_Einem_Stetigen_Loesungsarchiv}
 	
-	%TODO kann ich es so lassen?
+	%TODO kann ich es so lassen? Weil viel wiederholt
 	
 	Wie in meiner Bachelorarbeit~\cite{FCM_2019} und im Abschnitt~\ref{subsec:Weiterentwicklung_Der_ACO_Metaheuristik_Zu_Der_P_-_ACO_Metaheuristik} beschrieben, kann man, statt die Pheromoninformation von Iterationsschritt zu Iterationsschritt mitzuführen, die Information auch in einer diskreten Matrix speichern und implizit einem diskreten Lösungsarchiv. Dies funktioniert jedoch nur für diskrete Probleme. Um stetige Probleme zu lösen, kann man auf ein Archiv mit stetigen Einträgen zurückgreifen, was dann u.a. eine Liste sein kann.\hfill\newline
 	
 	%TODO umschreiben
 	
-	Ameisenalgorithmen mit einem stetigen Lösungsarchiv speichern ihre Lösungen in stetigen Einträgen. Wie genau, hängt von dem jeweiligen Algorithmus ab. Die einfachste Art und Weise dies zu tun, ist jedoch, die Lösungen wie sie generiert werden, nach einer bestimmten Vorschrift bzw. einem bestimmten Prinzip zu speichern, also ein einfaches Lösungsarchiv zu verwenden. Wiederum die einfachsten Vorschriften bzw. Prinzipe zum Speichern von Lösungen sind \glqq first in last out\grqq{} und \glqq best in worst out\grqq.
+	Ameisenalgorithmen mit einem stetigen Lösungsarchiv speichern ihre Lösungen in stetigen Einträgen. Wie genau, hängt von dem jeweiligen Algorithmus ab. Die einfachste Art und Weise dies zu tun, ist jedoch, die Lösungen wie sie generiert werden, nach einer bestimmten Vorschrift bzw. einem bestimmten Prinzip zu speichern, also ein einfaches Lösungsarchiv zu verwenden. Wiederum die einfachsten Vorschriften bzw. Prinzipe zum Speichern von Lösungen sind \glqq first in last out\grqq{} und \glqq best in worst out\grqq.\hfill\newline
+	
+	Bei \glqq best in worst out\grqq{} wird die Lösung nach ihrer
+	Güte einsortiert. Ist bei der Vorschrift \glqq best in worst out\grqq{} die Lösung schlechter als alle anderen im Archiv, wird die Lösung verworfen, ist sie besser als eine gespeicherte Lösung, wird die neue gute Lösung an die Stelle der alten schlechteren Lösung gesetzt, alle Lösungen ab der schlechteren Lösung, die schlechtere Lösung eingeschlossen, werden um einen Platz nach hinten verschoben und die schlechteste Lösung wird aus dem Archiv gelöscht.
 	
 	%Wiederum die einfachsten Vorschriften zum Speichern von Lösungen sind \glqq first in last out\grqq{} und \glqq best in worst out\grqq. Bei der ersten Vorschrift wird die neueste Lösung ins Archiv aufgenommen und die Älteste entfernt und bei der Zweiten wird die Lösung nach ihrer Güte einsortiert. Ist bei der zweiten Vorschrift die Lösung schlechter als alle anderen im Archiv, wird die Lösung verworfen, ist sie besser als eine gespeicherte Lösung, wird die neue gute Lösung an die Stelle der alten schlechteren Lösung gesetzt, alle Lösungen ab der schlechteren Lösung, die schlechtere Lösung eingeschlossen, werden um einen Platz nach hinten verschoben und die dann neue schlechteste Lösung wird aus dem Archiv gelöscht.\hfill\newline
 	
@@ -637,9 +640,9 @@ within=section,
 	
 	Die vier Konzepte, die aus ACO\(_{\mathbb{R}}\) übernommen wurden, ist die Verwendung eines Lösungsarchivs \(\mathcal{P}_c\), die Zuweisung jeder Lösung im Archiv eines Gewichts \(w_i\), dass mit der Gleichung~\ref{subsec:ACO_R_-_simple:eq:omega} berechnet und zum Aufbau einer Wahrscheinlichkeitsverteilung mithilfe der Gleichung~\ref{subsec:ACO_R_-_simple:eq:Probability_Distribution} benutzt wird und somit wie eine Lösung \(s_i\) aus dem Archiv gewählt wird, die Art wie die Abweichung in Gleichung~\ref{subsec:ACO_R_-_simple:eq:Linear_Deviation} berechnet wird, sowie die Verwendung der Parameter \(q\) und \(\xi\). Bei der Berechnung der Abweichung in Gleichung~\ref{subsec:ACO_R_-_simple:eq:Linear_Deviation} wird aber, aufgrund der Art und Weise wie die Abweichung späteren verwendet wird, explizit die lineare Abweichung gewollt.\hfill\newline
 	
-	Im Gegensatz zu ACO\(_\mathbb{R}\) gilt in ACO\(_{\mathbb{R}}\)-simple aber \(|\mathcal{P}| = k = 100\), \(q = 0.95\) und \(\xi = 0.95\). Die Archivgröße wurde verdoppelt, da der Algorithmus viel einfacher ist als ACO\(_\mathbb{R}\), wodurch ich schlussfolgerte, dass eine größere Archivgröße ACO\(_{\mathbb{R}}\)-simple erlaubt auch vom momentanen Bestwert weiter entferntere Lösungen im Suchraum zu erforschen. Das ist auch der selbe Grund, wieso \(q = 0.95\) gesetzt wurde. Auf der anderen Seite wurde \(\xi = 0.95\) gesetzt, damit das Suchintervall in Gleichung~\ref{subsec:ACO_R_-_simple:eq:Suchintervall} möglichst erhalten bleibt. Es gab auch die Möglichkeit \(\xi = 1.0\) zu setzten aber im Sinne der Einfachheit habe ich mich dazu entschlossen \(q = \xi = 0.95\) zu setzten. Im Bestreben nach Einfachheit habe ich auch \(|\mathcal{E}| = 1\) gesetzt, da ich den Selektionsdruck, der durch das Verwalten des Lösungsarchivs nach dem \glqq best in worst out\grqq Prinzip entsteht, für bereits ausreichend hielt. Demnach können wir ACO\(_{\mathbb{R}}\)-simple als Tupel \((\Sigma, \mathcal{B}, \mathcal{E}, \mathcal{P}_c, f, \mathcal{I}, \mathcal{S})\) angeben. Der größte Unterschied zu ACO\(_\mathbb{R}\) liegt aber darin wie ACO\(_{\mathbb{R}}\)-simple eine neue Lösung erzeugt. Denn nachdem die lineare Abweichung in jeder Dimension \(d, d \in \{1, \dots, n\}\) des \(n\)-dimensionalen Problems in Gleichung~\ref{subsec:ACO_R_-_simple:eq:Linear_Deviation} berechnet wurde, wird nur noch ein Intervall in Gleichung~\ref{subsec:ACO_R_-_simple:eq:Suchintervall} in jeder Dimension \(d, d \in \{1, \dots, n\}\) des Problems mithilfe der linearen Abweichung aufgebaut und dann wird aus jedem der Intervalle ein zufälliger Punkt als Komponente der neuen Lösung gewählt.
+	Im Gegensatz zu ACO\(_\mathbb{R}\) gilt in ACO\(_{\mathbb{R}}\)-very-simple aber \(|\mathcal{P}| = k = 100\), \(q = 0.95\) und \(\xi = 0.95\). Die Archivgröße wurde verdoppelt, da der Algorithmus viel einfacher ist als ACO\(_\mathbb{R}\), wodurch ich schlussfolgerte, dass eine größere Archivgröße ACO\(_{\mathbb{R}}\)-very-simple erlaubt auch vom momentanen Bestwert weiter entferntere Lösungen im Suchraum zu erforschen. Das ist auch der selbe Grund, wieso \(q = 0.95\) gesetzt wurde. Auf der anderen Seite wurde \(\xi = 0.95\) gesetzt, damit das Suchintervall in Gleichung~\ref{subsec:ACO_R_-_simple:eq:Suchintervall} möglichst erhalten bleibt. Es gab auch die Möglichkeit \(\xi = 1.0\) zu setzten aber im Sinne der Einfachheit habe ich mich dazu entschlossen \(q = \xi = 0.95\) zu setzten. Im Bestreben nach Einfachheit habe ich auch \(|\mathcal{E}| = 1\) gesetzt, da ich den Selektionsdruck, der durch das Verwalten des Lösungsarchivs nach dem \glqq best in worst out\grqq Prinzip entsteht, für bereits ausreichend hielt. Demnach können wir ACO\(_{\mathbb{R}}\)-simple als Tupel \((\Sigma, \mathcal{B}, \mathcal{E}, \mathcal{P}_c, f, \mathcal{I}, \mathcal{S})\) angeben. Der größte Unterschied zu ACO\(_\mathbb{R}\) liegt aber darin wie ACO\(_{\mathbb{R}}\)-simple eine neue Lösung erzeugt. Denn nachdem die lineare Abweichung in jeder Dimension \(d, d \in \{1, \dots, n\}\) des \(n\)-dimensionalen Problems in Gleichung~\ref{subsec:ACO_R_-_simple:eq:Linear_Deviation} berechnet wurde, wird nur noch ein Intervall in Gleichung~\ref{subsec:ACO_R_-_simple:eq:Suchintervall} in jeder Dimension \(d, d \in \{1, \dots, n\}\) des Problems mithilfe der linearen Abweichung aufgebaut und dann wird aus jedem der Intervalle ein zufälliger Punkt als Komponente der neuen Lösung gewählt.
 	
-	%TODO schlussfolgerte ok so oder anderes Wort?
+	%TODO schlussfolgerte ok so oder anderes Wort? raus, dafür aus diesem Grund
 	
 	%TODO reicht es, wenn s_i im Text erwähnt wird für die spätere Gleichung oder nochmal irgendwo nennen
 	
@@ -815,9 +818,9 @@ within=section,
 	Die folgende Beschreibung ist nach \textit{Rechenberg}~\cite{rechenberg1973evolutionsstrategie}.\hfill\newline
 	
 	%TODO Elter?
-	%TODO Anfangsbuchstaben hervorheben?
+	%TODO Anfangsbuchstaben hervorheben? ist ok
 	
-	ES steht für \textbf{E}volution \textbf{S}trategies. (1 + 1)-ES ist eines der ersten ES, die für Optimierung von stetigen Funktionen \(f\) vorgeschlagen wurden. In (1 + 1)-ES wird mit einem einzigen Elter (parent) begonnen und in jeder Iteration gibt es nur ein Kind (offspring), deswegen (1 + 1). Die zugrunde liegende Population besteht also, in jeder Generation \(g, g \in \{0, 1, 2, \dots\}\), nur aus dem Elter und dem Kind. Nach der Initialisierung des Elter \(x^{(g)}_{parent}\), wird das Kind \(x^{(g + 1)}_{offspring}\) in der Gleichung~\ref{subsubsubpar:Grundlagen:Vergleichsalgorithmen:1_und_1_-_ES:eq:Offspring} gewonnen, wobei \(I\) die Einheitsmatrix ist und \(\sigma\) die Verteilungsvarianz ist und als \glqq Step Size\grqq{} bezeichnet wird.
+	ES steht für \textbf{E}volution \textbf{S}trategies. (1 + 1)-ES ist eines der ersten ES, die für Optimierung von stetigen Funktionen \(f\) vorgeschlagen wurden. In (1 + 1)-ES wird mit einem Elter (parent) begonnen und in jeder Iteration gibt es nur ein Kind (offspring), deswegen (1 + 1). Die zugrunde liegende Population besteht also, in jeder Generation \(g, g \in \{0, 1, 2, \dots\}\), nur aus dem Elter und dem Kind. Nach der Initialisierung des Elter \(x^{(g)}_{parent}\), wird das Kind \(x^{(g + 1)}_{offspring}\) in der Gleichung~\ref{subsubsubpar:Grundlagen:Vergleichsalgorithmen:1_und_1_-_ES:eq:Offspring} gewonnen, wobei \(I\) die Einheitsmatrix ist und \(\sigma\) die Verteilungsvarianz ist und als \glqq Step Size\grqq{} bezeichnet wird.
 	
 	\begin{equation} \label{subsubsubpar:Grundlagen:Vergleichsalgorithmen:1_und_1_-_ES:eq:Offspring}
 		x^{(g + 1)}_{offspring} = z, \, z \sim \mathcal{N}(x^{(g)}_{parent}, \sigma^{(g)^2}I)
@@ -836,7 +839,7 @@ within=section,
 			\end{cases}
 	\end{equation}
 	
-	%TODO "einem einzigen" oder nur "einem
+	%TODO "einem einzigen" oder nur "einem, nur einem
 	
 	%TODO mehr oder weniger Platzt zwischen den Möglichkeiten
 	
@@ -880,7 +883,7 @@ within=section,
 	
 	CACO steht für \textbf{C}ontinuous ACO. In CACO startet der Algorithmus mit einem zufälligen Punkt \(\mathcal{N}\) im Suchraum. Dieser Punkt wird \glqq Nest\grqq{} bezeichnet. Gute Lösungen werden als Vektoren, ausgehend vom Nest, gespeichert. Danach wird probabilistisch ein Vektor gewählt und sein Ende wird zum neuen Nest. Danach wird der Algorithmus wiederholt.
 	
-	%TODO was sind "Gute Lösungen"? Wie viele Lösungen werden gespeichert?
+	%TODO was sind "Gute Lösungen"? Wie viele Lösungen werden gespeichert? passt
 	
 	%TODO asuführlicher beschreiben?
 	
@@ -1965,7 +1968,7 @@ within=section,
 			f(N, D, d) = \frac{\pi^2 D d^2 (N + 2)}{4}
 		\end{equation}
 
-		Schließlich wählen wir das Abbruchkriterium \(|f - f^*| < |\varepsilon_1 f| + \varepsilon_2, \, \varepsilon_1 = \varepsilon_2 = 10^{-6}\). Wir wählen dieses Abbruchkriterium, da wir davon ausgehen, dass in \textit{Socha}~\cite{socha2009ant} das selbe Kriterium benutzt wurde und es eine natürliche Erweiterung des Abbruchkriteriums \(|f - f^*| < |\varepsilon_1 f| + \varepsilon_2, \, \varepsilon_1 = \varepsilon_2 = 10^{-4}\) ist, welches für den Großteil der stetigen Testfunktionen in dieser Arbeit verwendet wurde. Leider ist in \textit{Socha}~\cite{socha2009ant} das Abbruchkriterium für das \ac{csd} nicht angegeben.
+		Schließlich wählen wir das Abbruchkriterium \(|f - f^*| < |\varepsilon_1 f| + \varepsilon_2, \, \varepsilon_1 = \varepsilon_2 = 10^{-6}\). Wir wählen dieses Abbruchkriterium, da wir davon ausgehen, dass in \textit{Socha}~\cite{socha2009ant} das selbe Kriterium benutzt wurde und es eine Erweiterung des Abbruchkriteriums \(|f - f^*| < |\varepsilon_1 f| + \varepsilon_2, \, \varepsilon_1 = \varepsilon_2 = 10^{-4}\) ist, welches für den Großteil der stetigen Testfunktionen in dieser Arbeit verwendet wurde. Leider ist in \textit{Socha}~\cite{socha2009ant} das Abbruchkriterium für das \ac{csd} nicht angegeben.
 		
 		%TODO natürliche Erweiterung begründen?
 		
@@ -2224,11 +2227,11 @@ within=section,
 	
 	%Somit kann geschlussfolgert werden, dass die Intervallberechnung anhand Formel~(\ref{linear_diviation}), also der linearen Abweichung, die bessere ist.
 	
-	\section{Vergleich von ACO\(_{\mathbb{R}}\), ACO\(_\text{MV}\) und den Iterationen von \acl{acorvsmv}} \label{sec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Den_Iterationen_Von_ACO_R_Very_Simple}
+	\section{Vergleich von ACO\(_{\mathbb{R}}\), ACO\(_\text{MV}\) und den Varianten von \acl{acorvsmv}} \label{sec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Den_Iterationen_Von_ACO_R_Very_Simple}
 	
-	%TODO geht der Titel so?
+	%TODO geht der Titel so? Varianten statt Iteration
 	
-	Alle Iterationen von \ac{acorvsmv} können mit gemischten Variablen umgehen aber wegen Platzgründen in den Tabellen wurde das \glqq -MV\grqq{} weggelassen.
+	Alle Iterationen von \ac{acorvsmv} können mit gemischten Variablen umgehen. Aus Platzgründen wurde in den Tabellen wurde das \glqq -MV\grqq{} weggelassen.
 	
 	%TODO kann ich das so schreiben?
 	
@@ -2294,7 +2297,7 @@ within=section,
 		
 		\caption{Vergleich der Ergebnisse zwischen Algorithmen, die probabilistisches Lernen einsetzten, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}}
 		
-		%TODO wie viele zitieren?
+		%TODO wie viele zitieren? lieber zuerst text, wenn möglich
 		
 		\label{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Teil_1}
 		
@@ -2396,7 +2399,7 @@ within=section,
 	%TODO schlechter und viel schlechter beibehalten oder nur schlehchter
 	%TODO generell blumigere Sprache beim Vergleich beibehalten?
 	
-	Wie in den Tabellen \ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Teil_1} und \ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Teil_2} zu sehen, ist \ac{acorvs} des beste Algorithmus in 3 von 5 Problemen und sehr gut in Einem. Nur für die Testfunktion \glqq Rosenbrock\grqq{} konvergiert \ac{acorvs} nicht. Die Iterationen von \ac{acorvsmv} mit NSS-f0 sind dagegen schlechter oder viel schlechter. Die Iterationen von \ac{acorvsmv} mit NSS-adapt sind nicht aufgeführt, da keine der Iterationen von \ac{acorvsmv} mit NSS-adapt bei keiner der Testfunktionen aus den Tabellen \ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Teil_1} und \ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Teil_2} konvergierte. Positiv fallen zudem die Algorithmen ACO\(_\mathbb{R}\) und CMA-ES auf, da ihre relative Anzahl an Funktionsauswertungen nur wenig schlechter sind, als der Bestwert, außer bei der Testfunktion \glqq Ellipsoid\grqq.\hfill\newline
+	Wie in den Tabellen \ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Teil_1} und \ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Teil_2} zu sehen, ist \ac{acorvs} des beste Algorithmus in 3 von 5 Problemen und sehr gut in Einem. Nur für die Testfunktion \glqq Rosenbrock\grqq{} konvergiert \ac{acorvs} nicht. Die Leistung von \ac{acorvsmv} mit NSS-f0 sind dagegen schlechter. Die Iterationen von \ac{acorvsmv} mit NSS-adapt sind nicht aufgeführt, da keine der Iterationen von \ac{acorvsmv} mit NSS-adapt bei keiner der Testfunktionen aus den Tabellen \ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Teil_1} und \ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Teil_2} konvergierte. Positiv fallen zudem die Algorithmen ACO\(_\mathbb{R}\) und CMA-ES auf, da ihre relative Anzahl an Funktionsauswertungen nur wenig schlechter sind, als der Bestwert, außer bei der Testfunktion \glqq Ellipsoid\grqq.\hfill\newline
 	
 	Wir schlussfolgern also, dass unter den Algorithmen, die probabilistisches Lernen einsetzten, \ac{acorvs} der bessere Algorithmus ist, knapp gefolgt von ACO\(_\mathbb{R}\) und CMA-ES. Auf der anderen Seite, gemessen daran, dass die Iterationen von \ac{acorvsmv}, unabhängig der Neustartstrategie, sowohl komplexer als \ac{acorvs} sind, als auch schlechter bzw. viel schlechter, sofern sie konvergieren, schlussfolgern wir, dass die Erweiterung von \ac{acorvs} zu den Iterationen von \ac{acorvsmv}, bei Testfunktionen, welche zum Vergleich für Algorithmen, die probabilistisches Lernen einsetzten, genommen werden, keinen Mehrwert brachte.
 	
@@ -2716,7 +2719,7 @@ within=section,
 	Wir schlussfolgern also, dass unter den Algorithmen, die verwandt zu Ameisenalgorithmen sind, ACO\(_\mathbb{R}\) der bessere Algorithmus ist, da er nicht nur bei 3 der 8 Probleme der beste Algorithmus ist, sondern auch, dort wo er nicht der beste Algorithmus ist, er, wenn man seine relative Anzahl an Funktionsauswertungen betrachtet, nahe dem Bestwert ist. Besonders hebt sich ACO\(_\mathbb{R}\) bei den Funktionen \glqq Griewangk\grqq{} und \glqq Rosenbrock(5)\grqq{} hervor. Knapp gefolgt wird ACO\(_\mathbb{R}\) von \ac{acorvs} und Hom-HPB-ACO\(_\mathbb{R}\)-VS-MV mit NSS-f0. Ferner, gemessen daran, dass die Iterationen von \ac{acorvsmv}, unabhängig der Neustartstrategie, abgesehen von Hom-HPB-ACO\(_\mathbb{R}\)-VS-MV, nicht besser als \ac{acorvs} sind, jedoch komplexer und Hom-HPB-ACO\(_\mathbb{R}\)-VS-MV auch nur, im Durchschnitt, genauso gut ist, wie \ac{acorvs}, aber auch komplexer, schlussfolgern wir, dass die Erweiterung von \ac{acorvs}	zu den Iterationen von \ac{acorvsmv}, bei Testfunktionen, welche zum Vergleich für Algorithmen, die verwandt zu Ameisenalgorithmen sind, genommen werden, keinen Mehrwert brachte.
 	
 	
-	%TODO ist es ok, dass Probleme und Testfunktion als Sysnonyme interchanging benutzt werden?
+	%TODO ist es ok, dass Probleme und Testfunktion als Sysnonyme interchanging benutzt werden? Testfunktionen für Funktionen Problem für CSD
 	
 	\begin{table}[H]
 		
@@ -3081,7 +3084,7 @@ within=section,
 	
 	Für den Vergleich wurden die Funktionen \glqq Cigar\grqq, \glqq Ellipsoid\grqq, \glqq Paraboloid\grqq{} und \glqq Tablet\grqq{} gewählt, da sie sowohl für verschiedene Dimensionen definiert werden konnten, als auch wo die Algorithmen, bis auf wenige Ausnahmen, konvergierten.\hfill\newline
 	
-	Wie in den Tabellen \ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Funktionen_Mit_Gemischten_Variablen_Teil_1} und \ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Funktionen_Mit_Gemischten_Variablen_Teil_2} zu sehen, sind die Unterschiede, in der relativen Anzahl an Funktionsauswertungen der Algorithmen, für Algorithmen, mit der selben Neustartstrategie, gering. So ist zwar Het-HPB-ACO\(_\mathbb{R}\)-VS-MV mit NSS-f0 der beste Algorithmus bei 24 der 36 Probleme aber die anderen beiden Algorithmen Hom-HPB-ACO\(_\mathbb{R}\)-VS-MV mit NSS-f0 und Het-HSPPB-ACO\(_\mathbb{R}\)-VS-MV mit NSS-f0 sind, wenn man ihre relativen Anzahlen an Funktionsauswertungen betrachtet, bis auf zwei Ausreißer, nie schlechter als um den Faktor \(2.0\). Die relative Anzahl an Funktionsauswertungen bei Algorithmen mit der Neustartstrategie \(adaptive\) ist stärker gestreut aber auch hier sind die Anzahlen der relativen Funktionsauswertungen der Algorithmen vergleichbar. Was sich unterscheidet, ist der Faktor, mit dem die relativen Anzahlen an Funktionsauswertungen größer werden. Wenn man die Funktionen aus der Tabelle~\ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Funktionen_Mit_Gemischten_Variablen_Teil_2} betrachtet, so wächst der Faktor, mit dem die relativen Anzahlen an Funktionsauswertungen größer werden, sofern die Funktionen konvergieren, mit zunehmender Dimension überproportional stark, im Vergleich zu den Funktionen aus Tabelle~\ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Funktionen_Mit_Gemischten_Variablen_Teil_1}. Wir schlussfolgern also, dass der Entscheidende Unterschied die Neustartstrategie ist und dass \(fixed = 0\), \(adaptive\) überlegen ist.
+	Wie in den Tabellen \ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Funktionen_Mit_Gemischten_Variablen_Teil_1} und \ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Funktionen_Mit_Gemischten_Variablen_Teil_2} zu sehen, sind die Unterschiede, in der relativen Anzahl an Funktionsauswertungen der Algorithmen, für Algorithmen, mit der selben Neustartstrategie, gering. So ist zwar Het-HPB-ACO\(_\mathbb{R}\)-VS-MV mit NSS-f0 der beste Algorithmus bei 24 der 36 Probleme aber die anderen beiden Algorithmen Hom-HPB-ACO\(_\mathbb{R}\)-VS-MV mit NSS-f0 und Het-HSPPB-ACO\(_\mathbb{R}\)-VS-MV mit NSS-f0 sind, wenn man ihre relativen Anzahlen an Funktionsauswertungen betrachtet, bis auf zwei Ausreißer, nie schlechter als um den Faktor \(2.0\). Die relative Anzahl an Funktionsauswertungen bei Algorithmen mit der Neustartstrategie \(adaptive\) ist stärker gestreut aber auch hier sind die Anzahlen der relativen Funktionsauswertungen der Algorithmen vergleichbar. Was sich unterscheidet, ist der Faktor, mit dem die relativen Anzahlen an Funktionsauswertungen größer werden. Wenn man die Funktionen aus der Tabelle~\ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Funktionen_Mit_Gemischten_Variablen_Teil_2} betrachtet, so wächst der Faktor, mit dem die relativen Anzahlen an Funktionsauswertungen größer werden, sofern die Algorithmen konvergieren, mit zunehmender Dimension überproportional stark, im Vergleich zu den Funktionen aus Tabelle~\ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Funktionen_Mit_Gemischten_Variablen_Teil_1}. Wir schlussfolgern also, dass der Entscheidende Unterschied die Neustartstrategie ist und dass \(fixed = 0\), \(adaptive\) überlegen ist.
 	
 	%TODO kann man das Wort überproportional benutzten?
 	
@@ -3327,7 +3330,7 @@ within=section,
 	
 	\subsubsection{Vergleich bzgl. dem Coil Spring Design Problem (CSD)} \label{subsubsec:Vergleich_Algorithmen:Vergleich_Auf_Dem_Coil_Spring_Design_Problem}
 	
-	%TODO viel vom Code ist nicht von mir. Wie?
+	%TODO viel vom Code ist nicht von mir. Wie? In die elektronische Version Zweizeiler, was nicht von mir ist und was von mir
 	
 	%TODO Boxplots für min und max veranschaulichen
 	
@@ -3540,7 +3543,7 @@ within=section,
 		
 	\end{figure}
 	
-	%TODO passt es, dass ich nur erfolgreiche Durchläufe betrachte? 
+	%TODO passt es, dass ich nur erfolgreiche Durchläufe betrachte? Angeben wie viele es gab und wie viele erfolgreich waren
 	
 	\begin{figure}[H]
 		
@@ -3586,7 +3589,7 @@ within=section,
 	
 	\section{Kurzzusammenfassung}
 	
-	Im Gegenteil zu \acl{acorvs} aus meiner Bachelorarbeit~\cite{FCM_2019}, schneiden die Iterationen von \acl{acorvsmv} zwar akzeptabel ab, aber der Ziel dieser Arbeit war es 
+	Im Gegenteil zu \acl{acorvs} aus meiner Bachelorarbeit~\cite{FCM_2019}, schneiden die Iterationen von \acl{acorvsmv} bei konstruierten Testfunktionen zwar teilweise vergleichbar mit \ac{acorvs} ab, aber das Ziel dieser Arbeit war es herauszufinden, ob eine komplexere Formulierung von \ac{acorvs} zu besseren Ergebnissen führt und, was konstruierte Funktionen angeht, ist dies nicht geschehen. Auf der anderen Seite schneiden die 
 	
 	Es scheint so als ob wir mit \acl{acorvs} aus meiner Bachelorarbeit~\cite{FCM_2019} ein lokales Optimum, was ACO-Metaheuristiken für Funktionsoptimierung angeht, gefunden haben.
 	
@@ -3652,90 +3655,90 @@ within=section,
 		
 	\end{figure}
 	
-	\section{Einfluss der Anzahl der Ameisen}
+	%\section{Einfluss der Anzahl der Ameisen}
 	
-	\begin{figure}[H]
-		\centering
-		\subfloat[][ACO\(_{\mathbb{R}}\)-simple]{\includegraphics[width=0.4\linewidth]{Abbildungen/ACO_R_simple_Cigar_m_compare_n=10_g_q=0_95_xi=0_95_k=100_restarts=0_acc=1e-10.png}}
-		\qquad
-		\subfloat[][ACO\(_{\mathbb{R}}\)-very-simple]{\includegraphics[width=0.4\linewidth]{Abbildungen/ACO_R_very_simple_Cigar_m_compare_n=10_g_q=0_95_xi=0_95_k=100_restarts=0_acc=1e-10.png}}
-		\caption{Cigar Verglich m}
-		\label{Cigar_compare_m}
-	\end{figure}
+	%\begin{figure}[H]
+	%	\centering
+	%	\subfloat[][ACO\(_{\mathbb{R}}\)-simple]{\includegraphics[width=0.4\linewidth]{Abbildungen/ACO_R_simple_Cigar_m_compare_n=10_g_q=0_95_xi=0_95_k=100_restarts=0_acc=1e-10.png}}
+	%	\qquad
+	%	\subfloat[][ACO\(_{\mathbb{R}}\)-very-simple]{\includegraphics[width=0.4\linewidth]{Abbildungen/ACO_R_very_simple_Cigar_m_compare_n=10_g_q=0_95_xi=0_95_k=100_restarts=0_acc=1e-10.png}}
+	%	\caption{Cigar Verglich m}
+	%	\label{Cigar_compare_m}
+	%\end{figure}
 	
-	\begin{figure}[H]
-		\centering
-		\subfloat[][ACO\(_{\mathbb{R}}\)-simple]{\includegraphics[width=0.4\linewidth]{Abbildungen/ACO_R_simple_Paraboloid_m_compare_n=10_g_q=0_95_xi=0_95_k=100_restarts=0_acc=1e-10.png}}
-		\qquad
-		\subfloat[][ACO\(_{\mathbb{R}}\)-very-simple]{\includegraphics[width=0.4\linewidth]{Abbildungen/ACO_R_very_simple_Paraboloid_m_compare_n=10_g_q=0_95_xi=0_95_k=100_restarts=0_acc=1e-10.png}}
-		\caption{Paraboloid Verglich m}
-		\label{Paraboloid_compare_m}
-	\end{figure}
+	%\begin{figure}[H]
+	%	\centering
+	%	\subfloat[][ACO\(_{\mathbb{R}}\)-simple]{\includegraphics[width=0.4\linewidth]{Abbildungen/ACO_R_simple_Paraboloid_m_compare_n=10_g_q=0_95_xi=0_95_k=100_restarts=0_acc=1e-10.png}}
+	%	\qquad
+	%	\subfloat[][ACO\(_{\mathbb{R}}\)-very-simple]{\includegraphics[width=0.4\linewidth]{Abbildungen/ACO_R_very_simple_Paraboloid_m_compare_n=10_g_q=0_95_xi=0_95_k=100_restarts=0_acc=1e-10.png}}
+	%	\caption{Paraboloid Verglich m}
+	%	\label{Paraboloid_compare_m}
+	%\end{figure}
 	
-	\begin{figure}[H]
-		\centering
-		\subfloat[][ACO\(_{\mathbb{R}}\)-simple]{\includegraphics[width=0.4\linewidth]{Abbildungen/ACO_R_simple_Tablet_m_compare_n=10_g_q=0_95_xi=0_95_k=100_restarts=0_acc=1e-10.png}}
-		\qquad
-		\subfloat[][ACO\(_{\mathbb{R}}\)-very-simple]{\includegraphics[width=0.4\linewidth]{Abbildungen/ACO_R_very_simple_Tablet_m_compare_n=10_g_q=0_95_xi=0_95_k=100_restarts=0_acc=1e-10.png}}
-		\caption{Tablet Verglich m}
-		\label{Tablet_compare_m}
-	\end{figure}
+	%\begin{figure}[H]
+	%	\centering
+	%	\subfloat[][ACO\(_{\mathbb{R}}\)-simple]{\includegraphics[width=0.4\linewidth]{Abbildungen/ACO_R_simple_Tablet_m_compare_n=10_g_q=0_95_xi=0_95_k=100_restarts=0_acc=1e-10.png}}
+	%	\qquad
+	%	\subfloat[][ACO\(_{\mathbb{R}}\)-very-simple]{\includegraphics[width=0.4\linewidth]{Abbildungen/ACO_R_very_simple_Tablet_m_compare_n=10_g_q=0_95_xi=0_95_k=100_restarts=0_acc=1e-10.png}}
+	%	\caption{Tablet Verglich m}
+	%	\label{Tablet_compare_m}
+	%\end{figure}
 	
-	\section{Einfluss des Parameters \textit{q}}
+	%\section{Einfluss des Parameters \textit{q}}
 	
-	Da bei ACO\(_{\mathbb{R}}\)-very-simple der Parameter \textit{q} entfällt, beziehen sich alle Abbildungen in diesem Abschnitt nur auf ACO\(_{\mathbb{R}}\)-simple.
+	%Da bei ACO\(_{\mathbb{R}}\)-very-simple der Parameter \textit{q} entfällt, beziehen sich alle Abbildungen in diesem Abschnitt nur auf ACO\(_{\mathbb{R}}\)-simple.
 	
-	\begin{figure}[H]
-		\centering
-		\includegraphics[scale=0.6]{Abbildungen/ACO_R_simple_Cigar_g_q_compare_m=1_xi=0_95_k=100_restarts=0_acc=1e-10.png}
-		\caption{Cigar Vergleich \textit{q}}
-		\label{Cigar_q_compare}
-	\end{figure}
+	%\begin{figure}[H]
+	%	\centering
+	%	\includegraphics[scale=0.6]{Abbildungen/ACO_R_simple_Cigar_g_q_compare_m=1_xi=0_95_k=100_restarts=0_acc=1e-10.png}
+	%	\caption{Cigar Vergleich \textit{q}}
+	%	\label{Cigar_q_compare}
+	%\end{figure}
 	
-	\begin{figure}[H]
-		\centering
-		\includegraphics[scale=0.6]{Abbildungen/ACO_R_simple_Paraboloid_g_q_compare_m=1_xi=0_95_k=100_restarts=0_acc=1e-10}
-		\caption{Paraboloid Vergleich \textit{q}}
-		\label{Paraboloid_q_compare}
-	\end{figure}
+	%\begin{figure}[H]
+	%	\centering
+	%	\includegraphics[scale=0.6]{Abbildungen/ACO_R_simple_Paraboloid_g_q_compare_m=1_xi=0_95_k=100_restarts=0_acc=1e-10}
+	%	\caption{Paraboloid Vergleich \textit{q}}
+	%	\label{Paraboloid_q_compare}
+	%\end{figure}
 	
-	\begin{figure}[H]
-		\centering
-		\includegraphics[scale=0.6]{Abbildungen/ACO_R_simple_Tablet_g_q_compare_m=1_xi=0_95_k=100_restarts=0_acc=1e-10.png}
-		\caption{Tablet Vergleich \textit{q}}
-		\label{Tablet_q_compare}
-	\end{figure}
+	%\begin{figure}[H]
+	%	\centering
+	%	\includegraphics[scale=0.6]{Abbildungen/ACO_R_simple_Tablet_g_q_compare_m=1_xi=0_95_k=100_restarts=0_acc=1e-10.png}
+	%	\caption{Tablet Vergleich \textit{q}}
+	%	\label{Tablet_q_compare}
+	%\end{figure}
 	
-	\section{Einfluss des Parameters \(\xi\)}
+	%\section{Einfluss des Parameters \(\xi\)}
 	
-	Die in diesem Abschnitt enthaltenen Abbildungen haben immer nur zwei Box Plots, da beide Algorithmen für die beiden anderen Testwerte xi=0.3 und xi=0.5 nicht konvergierten.
+	%Die in diesem Abschnitt enthaltenen Abbildungen haben immer nur zwei Box Plots, da beide Algorithmen für die beiden anderen Testwerte xi=0.3 und xi=0.5 nicht konvergierten.
 	
-	\begin{figure}[H]
-		\centering
-		\subfloat[][ACO\(_{\mathbb{R}}\)-simple]{\includegraphics[width=0.4\linewidth]{Abbildungen/ACO_R_simple_Cigar_xi_compare_m=1_n=10_g_q=0_95_k=100_restarts=0_acc=1e-10}}
-		\qquad
-		\subfloat[][ACO\(_{\mathbb{R}}\)-very-simple]{\includegraphics[width=0.4\linewidth]{Abbildungen/ACO_R_very_simple_Cigar_xi_compare_m=1_n=10_g_q=0_95_k=100_restarts=0_acc=1e-10}}
-		\caption{Cigar Verglich xi}
-		\label{Cigar_compare_xi}
-	\end{figure}
+	%\begin{figure}[H]
+	%	\centering
+	%	\subfloat[][ACO\(_{\mathbb{R}}\)-simple]{\includegraphics[width=0.4\linewidth]{Abbildungen/ACO_R_simple_Cigar_xi_compare_m=1_n=10_g_q=0_95_k=100_restarts=0_acc=1e-10}}
+	%	\qquad
+	%	\subfloat[][ACO\(_{\mathbb{R}}\)-very-simple]{\includegraphics[width=0.4\linewidth]{Abbildungen/ACO_R_very_simple_Cigar_xi_compare_m=1_n=10_g_q=0_95_k=100_restarts=0_acc=1e-10}}
+	%	\caption{Cigar Verglich xi}
+	%	\label{Cigar_compare_xi}
+	%\end{figure}
 	
-	\begin{figure}[H]
-		\centering
-		\subfloat[][ACO\(_{\mathbb{R}}\)-simple]{\includegraphics[width=0.4\linewidth]{Abbildungen/ACO_R_simple_Paraboloid_xi_compare_m=1_n=10_g_q=0_95_k=100_restarts=0_acc=1e-10}}
-		\qquad
-		\subfloat[][ACO\(_{\mathbb{R}}\)-very-simple]{\includegraphics[width=0.4\linewidth]{Abbildungen/ACO_R_very_simple_Paraboloid_xi_compare_m=1_n=10_g_q=0_95_k=100_restarts=0_acc=1e-10}}
-		\caption{Paraboloid Verglich xi}
-		\label{Paraboloid_compare_xi}
-	\end{figure}
+	%\begin{figure}[H]
+	%	\centering
+	%	\subfloat[][ACO\(_{\mathbb{R}}\)-simple]{\includegraphics[width=0.4\linewidth]{Abbildungen/ACO_R_simple_Paraboloid_xi_compare_m=1_n=10_g_q=0_95_k=100_restarts=0_acc=1e-10}}
+	%	\qquad
+	%	\subfloat[][ACO\(_{\mathbb{R}}\)-very-simple]{\includegraphics[width=0.4\linewidth]{Abbildungen/ACO_R_very_simple_Paraboloid_xi_compare_m=1_n=10_g_q=0_95_k=100_restarts=0_acc=1e-10}}
+	%	\caption{Paraboloid Verglich xi}
+	%	\label{Paraboloid_compare_xi}
+	%\end{figure}
 	
-	\begin{figure}[H]
-		\centering
-		\subfloat[][ACO\(_{\mathbb{R}}\)-simple]{\includegraphics[width=0.4\linewidth]{Abbildungen/ACO_R_simple_Tablet_xi_compare_m=1_n=10_g_q=0_95_k=100_restarts=0_acc=1e-10}}
-		\qquad
-		\subfloat[][ACO\(_{\mathbb{R}}\)-very-simple]{\includegraphics[width=0.4\linewidth]{Abbildungen/ACO_R_very_simple_Tablet_xi_compare_m=1_n=10_g_q=0_95_k=100_restarts=0_acc=1e-10}}
-		\caption{Tablet Verglich xi}
-		\label{Tablet_compare_xi}
-	\end{figure}
+	%\begin{figure}[H]
+	%	\centering
+	%	\subfloat[][ACO\(_{\mathbb{R}}\)-simple]{\includegraphics[width=0.4\linewidth]{Abbildungen/ACO_R_simple_Tablet_xi_compare_m=1_n=10_g_q=0_95_k=100_restarts=0_acc=1e-10}}
+	%	\qquad
+	%	\subfloat[][ACO\(_{\mathbb{R}}\)-very-simple]{\includegraphics[width=0.4\linewidth]{Abbildungen/ACO_R_very_simple_Tablet_xi_compare_m=1_n=10_g_q=0_95_k=100_restarts=0_acc=1e-10}}
+	%	\caption{Tablet Verglich xi}
+	%	\label{Tablet_compare_xi}
+	%\end{figure}
 	
 	\newpage
 	
