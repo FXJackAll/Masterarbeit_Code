@@ -485,7 +485,7 @@ within=section,
 	
 	\subsection{Alternative Verwaltung für ein Lösungsarchiv} \label{subsec:Alternative_Verwaltungen_Fuer_Ein_Loesunsarchiv}
 	
-	Ein anderes Prinzip ein Lösungsarchiv zu verwalten ist das \glqq best in worst out\grqq{} Prinzip. Bei diesem Prinzip, wie in meiner Bachelorarbeit~\cite{FCM_2019} beschrieben, wird eine Lösung nach ihrer Güte in das Lösungsarchiv einsortiert. Ist die Güte der neu generierte Lösung schlechter als die Güte aller anderen Lösungen im Lösungsarchiv, wird die neue Lösung verworfen. Ist dir Güte der neuen Lösung besser als die Güte einer Lösung im Lösungsarchiv, wird die neue Lösung an die Stelle der schlechteren Lösung gespeichert, die letzte Lösung im Lösungsarchiv wird gelöscht und alle Lösungen, die schlechter sind, als die neue Lösung werden um eine Stelle nach hinten verschoben. Dieses Verwaltungsprinzip wird in allen folgenden Algorithmen in dieser Arbeit verwendet. Dieses Verwaltungsprinzip ist auch eines, dass den Selektionsdruck von den Ameisen auf das Archiv umlegt, weswegen in den folgenden Algorithmen in dieser Arbeit gilt \(|\mathcal{E}| = 2\), wie im Abschnitt~\ref{subsec:ACO_R} oder \(|\mathcal{E}| = 1\), wie in den Abschnitten \ref{subsec:ACO_R_-_simple} und \ref{subsec:ACO_R_-_very_-_simple}.
+	Ein anderes Prinzip ein Lösungsarchiv zu verwalten ist das \glqq best in worst out\grqq{} Prinzip. Bei diesem Prinzip, wie in meiner Bachelorarbeit~\cite{FCM_2019} beschrieben, wird eine Lösung nach ihrer Güte in das Lösungsarchiv einsortiert. Ist die Güte der neu generierte Lösung schlechter als die Güte aller Anderen im Archiv, wird sie ignoriert. Ist dir Güte der neuen Lösung besser als bei einer Anderen, wird die letzte Lösung im Archiv gelöscht und alle Lösungen, die schlechter sind, als die neue Lösung, sofern diese existieren, wandern um eine Position im Archiv nach unten. Wird dieses Verwaltungsprinzip verwendet, legt es den Selektionsdruck von den Ameisen auf das Archiv, weswegen in den folgenden Algorithmen in dieser Arbeit gilt \(|\mathcal{E}| = 2\), wie im Abschnitt~\ref{subsec:ACO_R} oder \(|\mathcal{E}| = 1\), wie in den Abschnitten \ref{subsec:ACO_R_-_simple} und \ref{subsec:ACO_R_-_very_-_simple}. Dieses Verwaltungsprinzip wird in allen folgenden Algorithmen in dieser Arbeit verwendet. 
 	
 	%TODO oder sogar? ist "sogar" ok? nein
 	
@@ -493,14 +493,13 @@ within=section,
 	
 	%TODO kann ich es so lassen? Weil viel wiederholt
 	
-	Wie in meiner Bachelorarbeit~\cite{FCM_2019} und im Abschnitt~\ref{subsec:Weiterentwicklung_Der_ACO_Metaheuristik_Zu_Der_P_-_ACO_Metaheuristik} beschrieben, kann man, statt die Pheromoninformation von Iterationsschritt zu Iterationsschritt mitzuführen, die Information auch in einer diskreten Matrix speichern und implizit einem diskreten Lösungsarchiv. Dies funktioniert jedoch nur für diskrete Probleme. Um stetige Probleme zu lösen, kann man auf ein Archiv mit stetigen Einträgen zurückgreifen, was dann u.a. eine Liste sein kann.\hfill\newline
+	Wie in meiner Bachelorarbeit~\cite{FCM_2019} und im Abschnitt~\ref{subsec:Weiterentwicklung_Der_ACO_Metaheuristik_Zu_Der_P_-_ACO_Metaheuristik} beschrieben, kann man Pheromoninformation in einer diskreten Matrix speichern. Diese Matrix kann dann implizit als ein diskretes Lösungsarchiv interpretiert werden, was nur möglich ist, wenn Testfunktionen oder Probleme diskret sind. Um stetige Testfunktionen und Probleme zu lösen, bedarf es eines Archivs, welche stetigen Einträgen halten kann. Dies kann man erreichen, indem man ein Archiv erstellt, dass stetige Einträge halten kann, wie es vorher für diskrete Einträge gemacht wurde.\hfill\newline
 	
 	%TODO umschreiben
 	
-	Ameisenalgorithmen mit einem stetigen Lösungsarchiv speichern ihre Lösungen in stetigen Einträgen. Wie genau, hängt von dem jeweiligen Algorithmus ab. Die einfachste Art und Weise dies zu tun, ist jedoch, die Lösungen wie sie generiert werden, nach einer bestimmten Vorschrift bzw. einem bestimmten Prinzip zu speichern, also ein einfaches Lösungsarchiv zu verwenden. Wiederum die einfachsten Vorschriften bzw. Prinzipe zum Speichern von Lösungen sind \glqq first in last out\grqq{} und \glqq best in worst out\grqq.\hfill\newline
+	%Ameisenalgorithmen mit einem stetigen Lösungsarchiv speichern ihre Lösungen in stetigen Einträgen. Wie genau, hängt von dem jeweiligen Algorithmus ab. Die einfachste Art und Weise dies zu tun, ist jedoch, die Lösungen wie sie generiert werden, nach einer bestimmten Vorschrift bzw. einem bestimmten Prinzip zu speichern, also ein einfaches Lösungsarchiv zu verwenden. Wiederum die einfachsten Vorschriften bzw. Prinzipe zum Speichern von Lösungen sind \glqq first in last out\grqq{} und \glqq best in worst out\grqq.\hfill\newline
 	
-	Bei \glqq best in worst out\grqq{} wird die Lösung nach ihrer
-	Güte einsortiert. Ist bei der Vorschrift \glqq best in worst out\grqq{} die Lösung schlechter als alle anderen im Archiv, wird die Lösung verworfen, ist sie besser als eine gespeicherte Lösung, wird die neue gute Lösung an die Stelle der alten schlechteren Lösung gesetzt, alle Lösungen ab der schlechteren Lösung, die schlechtere Lösung eingeschlossen, werden um einen Platz nach hinten verschoben und die schlechteste Lösung wird aus dem Archiv gelöscht.
+	% Bei \glqq best in worst out\grqq{} wird die Lösung nach ihrer Güte einsortiert. Ist bei der Vorschrift \glqq best in worst out\grqq{} die Lösung schlechter als alle anderen im Archiv, wird die Lösung verworfen, ist sie besser als eine gespeicherte Lösung, wird die neue gute Lösung an die Stelle der alten schlechteren Lösung gesetzt, alle Lösungen ab der schlechteren Lösung, die schlechtere Lösung eingeschlossen, werden um einen Platz nach hinten verschoben und die schlechteste Lösung wird aus dem Archiv gelöscht.
 	
 	%Wiederum die einfachsten Vorschriften zum Speichern von Lösungen sind \glqq first in last out\grqq{} und \glqq best in worst out\grqq. Bei der ersten Vorschrift wird die neueste Lösung ins Archiv aufgenommen und die Älteste entfernt und bei der Zweiten wird die Lösung nach ihrer Güte einsortiert. Ist bei der zweiten Vorschrift die Lösung schlechter als alle anderen im Archiv, wird die Lösung verworfen, ist sie besser als eine gespeicherte Lösung, wird die neue gute Lösung an die Stelle der alten schlechteren Lösung gesetzt, alle Lösungen ab der schlechteren Lösung, die schlechtere Lösung eingeschlossen, werden um einen Platz nach hinten verschoben und die dann neue schlechteste Lösung wird aus dem Archiv gelöscht.\hfill\newline
 	
@@ -508,7 +507,7 @@ within=section,
 	
 	\subsection{Ameisenalgorithmen Mit Einem Gemischten Lösungsarchiv}
 	
-	Da in dieser Arbeit die Art der Algorithmen, die getestet werden und die Art der Funktionen, die zum Testen benutzt werden, erweitert wird, müssen wir auch den Begriff des Lösungsarchivs erweitern. Gegeben eine Funktion mit gemischten Variablen, wie in den Abschnitten \ref{subsubsec:Konstruierte_Probleme} und \ref{subsubsec:Coil_Spring_Design_Problem} und ein einfaches Lösungsarchiv mit \(n \in \mathbb{N}\) Einträgen, wie es im Abschnitt~\ref{subsec:Ameisenalgorithmen_Mit_Einem_Stetigen_Loesungsarchiv} definiert wurde, dann ist die einfachste Erweiterung für ein einfaches Lösungsarchiv, mehrere einfache Lösungsarchive bzw. Listen zu einem einfachen zusammengesetzten Lösungsarchiv zusammenzufassen. Dabei bilden die Einträge der Unterarchive an der Stelle \(i \in \{1, \dots, n\}\) eine Gesamtlösung. Zum Beispiel kann ein zusammengesetztes einfaches Lösungsarchiv \{\{'diskret': [1], 'stetig': [1.0,1.5]\}, \{'diskret': [2], 'stetig': [2.0,3.0]\}\} sein. Dann ist die \(2.\)te Lösung \{'diskret': [2], 'stetig': [2.0,3.0]\}.
+	Da in dieser Arbeit die Art der Algorithmen, die getestet werden und die Art der Testfunktionen, die zum Testen benutzt werden, erweitert wird, muss auch der Begriff des Lösungsarchivs erweitert werden. Gegeben eine Funktion mit gemischten Variablen, wie in den Abschnitten \ref{subsubsec:Konstruierte_Probleme} und \ref{subsubsec:Coil_Spring_Design_Problem} und ein einfaches Lösungsarchiv mit \(n \in \mathbb{N}\) Einträgen, wie es im Abschnitt~\ref{subsec:Ameisenalgorithmen_Mit_Einem_Stetigen_Loesungsarchiv} definiert wurde, dann ist die einfachste Erweiterung für ein Lösungsarchiv, mehrere Lösungsarchive zu einem zusammengesetzten Lösungsarchiv zusammenzufassen. Dabei bilden die Einträge der Unterarchive an der Stelle \(i \in \{1, \dots, n\}, \, n \in \mathbb{N}\), eine Gesamtlösung. Zum Beispiel kann ein zusammengesetztes einfaches Lösungsarchiv \{\{'diskret': [1], 'stetig': [1.0,1.5]\}, \{'diskret': [2], 'stetig': [2.0,3.0]\}\} sein. Dann ist die \(2.\)te Lösung \{'diskret': [2], 'stetig': [2.0,3.0]\}.
 	
 	%Wie im Abschnitt~\ref{subsec:mixed_variable} beschrieben, können Variablen verschieden Skalenniveaus haben aber wenn 
 	
@@ -547,7 +546,7 @@ within=section,
 	
 	Da wir, im Vergleich zu meiner Bachelorarbeit~\cite{FCM_2019}, in dieser Arbeit die Menge der betrachteten Probleme auf Probleme mit gemischten Variablem erweitern, bietet es sich an, eine abstraktere Definition von Optimierungsproblemen zu etablieren.\hfill\newline
 	
-	Wie an \cite{lin2015simple} angelehnt, definieren wir ein Optimierungsproblem durch 4 Teile. Diese sind der Suchraum \(\Sigma = \{\Sigma_1, \dots, \Sigma_n\}, n \in \mathbb{N}\), die Menge der abstrakten Variablen \(X = \{X_1, \dots, X_n\}, n \in \mathbb{N}\), die Beschränkungen an die Variablen \(\mathcal{B} = \{\mathcal{B}_1, \dots, \mathcal{B}_n\}, n \in \mathbb{N}\) und eine Fitness- bzw. Zielfunktion \(f: \Sigma \to \mathbb{R}^+\), die jeder Lösung \(s \in \Sigma\) einen Wert \(f(s) > 0\) zuordnet, wobei eine Lösung \(s \in \Sigma\) das Belegen aller Variablen \(X_i\) mit den Werten aus \(\Sigma_i\) ist, sodass die Werte den Beschränkungen \(\mathcal{B}_i\) genügen, \(i \in \{1, \dots, n\}\). Damit kann ein Optimierungsproblem definiert werden als das Tupel \((\Sigma, X, \mathcal{B}, f)\). Wenn \(\mathcal{B} = \emptyset\), dann ist das Problem unbeschränkt, sonst ist es beschränkt.\hfill\newline
+	Wie an \cite{lin2015simple} angelehnt, wird ein Optimierungsproblem durch 4 Teile definiert. Diese sind der Suchraum \(\Sigma = \{\Sigma_1, \dots, \Sigma_n\}, n \in \mathbb{N}\), die Menge der abstrakten Variablen \(X = \{X_1, \dots, X_n\}, n \in \mathbb{N}\), die Beschränkungen an die Variablen \(\mathcal{B} = \{\mathcal{B}_1, \dots, \mathcal{B}_n\}, n \in \mathbb{N}\) und eine Fitness- bzw. Zielfunktion \(f: \Sigma \to \mathbb{R}^+\), die jeder Lösung \(s \in \Sigma\) einen Wert \(f(s) > 0\) zuordnet, wobei eine Lösung \(s \in \Sigma\) das Belegen aller Variablen \(X_i\) mit den Werten aus \(\Sigma_i\) ist, sodass die Werte den Beschränkungen \(\mathcal{B}_i\) genügen, \(i \in \{1, \dots, n\}\). Damit kann ein Optimierungsproblem definiert werden als das Tupel \((\Sigma, X, \mathcal{B}, f)\). Wenn \(\mathcal{B} = \emptyset\), dann ist das Problem unbeschränkt, sonst ist es beschränkt.\hfill\newline
 	
 	Eine Population \(\mathcal{P}\) besteht aus mindestens einer Lösung \(s \in \Sigma\). Alle Lösungen \(s \in \Sigma\), die auch in einer Population \(\mathcal{P}\) sind, werden durch \(\Sigma|\mathcal{P}\) beschrieben. Darauf aufbauend, gegeben eine Population \(\mathcal{P}\), beschreibt \(\Sigma|\mathcal{P}_i, i \in \{1, \dots, n\}\), alle Werte in \(\Sigma\) an der Stelle \(i\), die auch in \(\mathcal{P}\) an der Stelle \(i\) auftreten.\hfill\newline
 	
@@ -555,7 +554,7 @@ within=section,
 	
 	Eine Lösung \(s_{opt}\) heißt Optimum, wenn gilt \(f(s_{opt}) \leq f(s) \, \forall s \in \Sigma\). Ein Optimierungsproblem kann mehr als ein \(s_{opt}\) haben. Das Ziel eines Optimierungsproblems ist mindestens ein \(s_{opt}\) zu finden.\hfill\newline
 	
-	Mit dieser nun rigoroseren Definition können wir beispielhaft den Suchraum und die Variablen für das \acl{csd} angeben. Der Suchraum ist \(\Sigma = \{\mathbb{R}, \mathbb{O}, \mathbb{N}_{>0}\}\) und die Variablen sind \(X = \{D, d, N\}\). \(\mathbb{O}\) ist die Menge aller rationalen ordinalen Zahlen. Es ist die Menge der rationalen Zahlen \(\mathbb{Q}\) ohne eine Ordnungsrelation. \(D\) ist eine stetige Variable, \(d\) ist ordinal und N ist natürlich, wobei die Beschränkungen \(D \in \{3 \cdot d_{min}, 3.0\}\), \(d \in \{d_{min}, \dots, 0.5000\}\) und \(N \in \{1, \dots, 70\}\) gelten. Die Beschränkung \(d_{min}\) wird im Abschnitt~\ref{subsubsec:Coil_Spring_Design_Problem} zum \ac{csd} angegeben.
+	Mit dieser Definition kann beispielhaft der Suchraum und die Variablen für das \acl{csd} angegeben werden. Der Suchraum ist \(\Sigma = \{\mathbb{R}, \mathbb{O}, \mathbb{N}_{>0}\}\) und die Variablen sind \(X = \{D, d, N\}\). \(\mathbb{O}\) ist die Menge aller rationalen ordinalen Zahlen. Es ist die Menge der rationalen Zahlen \(\mathbb{Q}\) ohne eine Ordnungsrelation. \(D\) ist eine stetige Variable, \(d\) ist ordinal und N ist natürlich, wobei die Beschränkungen \(D \in \{3 \cdot d_{min}, 3.0\}\), \(d \in \{d_{min}, \dots, 0.5000\}\) und \(N \in \{1, \dots, 70\}\) gelten. Die Beschränkung \(d_{min}\) wird im Abschnitt~\ref{subsubsec:Coil_Spring_Design_Problem} zum \ac{csd} angegeben.
 	
 	%TODO Ordnungsrelaton erstetzen
 	
@@ -578,11 +577,11 @@ within=section,
 	
 	%TODO ACO-R, ACO-R-S und ACO-R-VS nochmal einführen? kurz aber ja
 	
-	In Anlehnung an \textit{Socha und Dorigo}~\cite{socha2008ant} und wie in meiner Bachelorarbeit~\cite{FCM_2019} beschrieben, baut der ACO\(_{\mathbb{R}}\) Algorithmus auf einem stetigen Lösungsarchiv \(\mathcal{P}_c\) der Größe \(k\) auf. Auf eine Pheromonmatrix und damit auf Pheromon, sowie eine problemabhängige Heuristik wird verzichtet. Demnach können wir ACO\(_{\mathbb{R}}\) als Tupel \((\Sigma, \mathcal{B}, \mathcal{E}, \mathcal{P}_c, f, \mathcal{I}, \mathcal{S})\) angeben. In \cite{socha2008ant} gilt \(|\mathcal{E}| = 2\), \(|\mathcal{P}_c| = k = 50\).\hfill\newline
+	In Anlehnung an \textit{Socha und Dorigo}~\cite{socha2008ant} und wie in meiner Bachelorarbeit~\cite{FCM_2019} beschrieben, baut der ACO\(_{\mathbb{R}}\) Algorithmus auf einem stetigen Lösungsarchiv \(\mathcal{P}_c\) der Größe \(k\) auf. Auf eine Pheromonmatrix und damit auf Pheromon, sowie eine problemabhängige Heuristik wird verzichtet. Demnach kann ACO\(_{\mathbb{R}}\) als Tupel \((\Sigma, \mathcal{B}, \mathcal{E}, \mathcal{P}_c, f, \mathcal{I}, \mathcal{S})\) angegeben werden. In \cite{socha2008ant} gilt \(|\mathcal{E}| = 2\), \(|\mathcal{P}_c| = k = 50\).\hfill\newline
 	
 	Die Initialisierungsmethode \(\mathcal{I}\) ist auch hier das Füllen von \(\mathcal{P}_c\) mit Lösungen, wie bei P-ACO. Aber Das Stoppkriterium ist problemabhängig. So kann z.B. \(|f - f^*| < \varepsilon, \varepsilon = 10^{-10}\) sein, wie in Abschnitt~\ref{subsec:Stetige_Testfunktionen}, wobei \(f^*\) das bekannte Optimum einer Testfunktion ist und \(f\) der Momentane Funktionswert, den der Lösungsalgorithmus gefunden hat.\hfill\newline
 	
-	Die Veränderung von P-ACO zu ACO\(_{\mathbb{R}}\), um stetige Probleme lösen zu können, transformiert die Lösungskonstruktion aus Gleichung~\ref{subsec:ACO_-_Metaheuristik_Nach:eq:Extended_Probabilistik_Rule} zur Gleichung~\ref{subsec:ACO_R:eq:Gauss_-_Kern_In_i_-_th_Dimension}. Und es wir nicht mehr betrachtet wie wahrscheinlich das wandern entlang einer Kante \((i,j)\) ist, sondern es wir im \(i\)-ten Konstruktionsschritt ein Gauss-Kernel in der \(i\)-ten Dimension ausgewertet, wobei gilt \(i \in \{1, \dots, n\}\) und \(n\) ist sowohl die Dimension der Testfunktion, als auch die Anzahl der Konstruktionsschritte, die jede Ameise pro Iteration macht.\hfill\newline¨
+	Die Veränderung von P-ACO zu ACO\(_{\mathbb{R}}\), um stetige Probleme lösen zu können, transformiert die Lösungskonstruktion aus Gleichung~\ref{subsec:ACO_-_Metaheuristik_Nach:eq:Extended_Probabilistik_Rule} zur Gleichung~\ref{subsec:ACO_R:eq:Gauss_-_Kern_In_i_-_th_Dimension}. Und es wird nicht mehr betrachtet wie wahrscheinlich das wandern entlang einer Kante \((i,j)\) ist, sondern es wird im \(i\)-ten Konstruktionsschritt ein Gauss-Kernel in der \(i\)-ten Dimension ausgewertet, wobei gilt \(i \in \{1, \dots, n\}\) und \(n\) ist sowohl die Dimension der Testfunktion, als auch die Anzahl der Konstruktionsschritte, die jede Ameise pro Iteration macht.\hfill\newline¨
 	
 	%TODO ist bei "Dimension der Testfunktion" klar, dass es die Anzahl der Dimensionen ist?
 	
@@ -596,7 +595,7 @@ within=section,
 	
 	\noindent Weiter, in Anlehnung an \textit{Socha und Dorigo}~\cite{socha2008ant} gilt für die Vektoren \(\omega\) , \(\mu\) und \(\sigma\), dass ihre Kardinalität gleich der Kardinalität von \(\mathcal{P}\) ist, also gilt \(|\omega| = |\mu| = |\sigma| = |\mathcal{P}| = k = 50\). Die Elemente der Parametervektoren \(\omega\) , \(\mu\) und \(\sigma\) werden in den Gleichungen \ref{subsec:ACO_R:eq:mu}, \ref{subsec:ACO_R:eq:omega} und \ref{subsec:ACO_R:eq:sigma} berechnet. Dabei gilt, dass \(n\) die Anzahl der Dimensionen des Testproblems und \(i\) der Konstruktionsschritt ist. Weiter ist \(s^i_j\) die \(i\)-te Variable der \(j\)-ten Lösung. Der Parametervektor \(\omega\) unterscheidet sich von \(\mu\) und \(\sigma\) darin, dass er nicht zur Erzeugung der nächsten Lösung benutzt wird, sondern er jeder bereits vorhandenen Lösung im Lösungsarchiv \(\mathcal{P}_c\) ein Gewicht \(\omega_l\) zuordnen, welches dazu benutzt wird mithilfe der Gleichung~\ref{subsec:ACO_R:eq:Probability_Distribution} eine Wahrscheinlichkeitsverteilung aufzubauen. Unter Anwendung dieser Wahrscheinlichkeitsverteilung wird dann die \(l\)-te Gaußfunktion gewählt.\hfill\newline
 	
-	Der Term in Gleichung~\ref{subsec:ACO_R:eq:sigma} wird in \textit{Socha und Dorigo}~\cite{socha2008ant} als Standardabweichung bezeichnet, auch wenn in diesem Term keine Wurzel vorhanden ist. Wir verstehen das so, dass der Term zwar aus mathematischer Sicht keine Standardabweichung ist aber als Standardabweichung für den Algorithmus interpretiert wird, da in der Gleichung~\ref{subsec:ACO_R:eq:Gauss_-_Kern_In_i_-_th_Dimension} nach einer Standardabweichung verlangt wird.
+	Der Term in Gleichung~\ref{subsec:ACO_R:eq:sigma} wird in \textit{Socha und Dorigo}~\cite{socha2008ant} als Standardabweichung bezeichnet, auch wenn in diesem Term keine Wurzel vorhanden ist. Dies wird so verstanden, dass der Term zwar aus mathematischer Sicht keine Standardabweichung ist aber als Standardabweichung für den Algorithmus interpretiert wird, da in der Gleichung~\ref{subsec:ACO_R:eq:Gauss_-_Kern_In_i_-_th_Dimension} nach einer Standardabweichung verlangt wird.
 	
 	%\noindent Ferner werden die Parametervektoren \(\omega\) , \(\mu\) und \(\sigma\) folgendermaßen berechnet.
 	
@@ -624,7 +623,7 @@ within=section,
 		l \in \{1, ..., k\}
 	\end{equation}
 	
-	Nachdem die Parametervektoren berechnet wurden, wir im Konstruktionsschritt \(i\) die Gaußfunktion \(g^i_l\) ausgewertet, was durch einen Zufallszahlengenerator, der Zufallszahlen aus einer parametrisierten Normalverteilung erzeugt, passieren kann.\hfill\newline
+	Nachdem die Parametervektoren berechnet wurden, wird im Konstruktionsschritt \(i\) die Gaußfunktion \(g^i_l\) ausgewertet, was durch einen Zufallszahlengenerator, der Zufallszahlen aus einer parametrisierten Normalverteilung erzeugt, passieren kann.\hfill\newline
 	
 	Der Parameter \(q\) steuert, wie stark bessere Lösungen im Archiv bei der Konstruktion einer neuen Lösung bevorzugt werden. Je kleiner \(q\), desto stärker werden bessere Lösungen bevorzugt. Der Parameter \(\xi\) steuer, wie schnell der Algorithmus konvergiert. Je größer \(\xi\), desto langsamer konvergiert der Algorithmus. In \cite{socha2008ant} gilt \(q = 10^{-4}\), \(\xi = 0.85\).\hfill\newline
 	
@@ -640,7 +639,7 @@ within=section,
 	
 	Die vier Konzepte, die aus ACO\(_{\mathbb{R}}\) übernommen wurden, ist die Verwendung eines Lösungsarchivs \(\mathcal{P}_c\), die Zuweisung jeder Lösung im Archiv eines Gewichts \(w_i\), dass mit der Gleichung~\ref{subsec:ACO_R_-_simple:eq:omega} berechnet und zum Aufbau einer Wahrscheinlichkeitsverteilung mithilfe der Gleichung~\ref{subsec:ACO_R_-_simple:eq:Probability_Distribution} benutzt wird und somit wie eine Lösung \(s_i\) aus dem Archiv gewählt wird, die Art wie die Abweichung in Gleichung~\ref{subsec:ACO_R_-_simple:eq:Linear_Deviation} berechnet wird, sowie die Verwendung der Parameter \(q\) und \(\xi\). Bei der Berechnung der Abweichung in Gleichung~\ref{subsec:ACO_R_-_simple:eq:Linear_Deviation} wird aber, aufgrund der Art und Weise wie die Abweichung späteren verwendet wird, explizit die lineare Abweichung gewollt.\hfill\newline
 	
-	Im Gegensatz zu ACO\(_\mathbb{R}\) gilt in ACO\(_{\mathbb{R}}\)-very-simple aber \(|\mathcal{P}| = k = 100\), \(q = 0.95\) und \(\xi = 0.95\). Die Archivgröße wurde verdoppelt, da der Algorithmus viel einfacher ist als ACO\(_\mathbb{R}\), wodurch ich schlussfolgerte, dass eine größere Archivgröße ACO\(_{\mathbb{R}}\)-very-simple erlaubt auch vom momentanen Bestwert weiter entferntere Lösungen im Suchraum zu erforschen. Das ist auch der selbe Grund, wieso \(q = 0.95\) gesetzt wurde. Auf der anderen Seite wurde \(\xi = 0.95\) gesetzt, damit das Suchintervall in Gleichung~\ref{subsec:ACO_R_-_simple:eq:Suchintervall} möglichst erhalten bleibt. Es gab auch die Möglichkeit \(\xi = 1.0\) zu setzten aber im Sinne der Einfachheit habe ich mich dazu entschlossen \(q = \xi = 0.95\) zu setzten. Im Bestreben nach Einfachheit habe ich auch \(|\mathcal{E}| = 1\) gesetzt, da ich den Selektionsdruck, der durch das Verwalten des Lösungsarchivs nach dem \glqq best in worst out\grqq Prinzip entsteht, für bereits ausreichend hielt. Demnach können wir ACO\(_{\mathbb{R}}\)-simple als Tupel \((\Sigma, \mathcal{B}, \mathcal{E}, \mathcal{P}_c, f, \mathcal{I}, \mathcal{S})\) angeben. Der größte Unterschied zu ACO\(_\mathbb{R}\) liegt aber darin wie ACO\(_{\mathbb{R}}\)-simple eine neue Lösung erzeugt. Denn nachdem die lineare Abweichung in jeder Dimension \(d, d \in \{1, \dots, n\}\) des \(n\)-dimensionalen Problems in Gleichung~\ref{subsec:ACO_R_-_simple:eq:Linear_Deviation} berechnet wurde, wird nur noch ein Intervall in Gleichung~\ref{subsec:ACO_R_-_simple:eq:Suchintervall} in jeder Dimension \(d, d \in \{1, \dots, n\}\) des Problems mithilfe der linearen Abweichung aufgebaut und dann wird aus jedem der Intervalle ein zufälliger Punkt als Komponente der neuen Lösung gewählt.
+	Im Gegensatz zu ACO\(_\mathbb{R}\) gilt in ACO\(_{\mathbb{R}}\)-very-simple aber \(|\mathcal{P}| = k = 100\), \(q = 0.95\) und \(\xi = 0.95\). Die Archivgröße wurde verdoppelt, da der Algorithmus viel einfacher ist als ACO\(_\mathbb{R}\) und damit eine größere Archivgröße ACO\(_{\mathbb{R}}\)-very-simple erlaubt auch vom momentanen Bestwert weiter entferntere Lösungen im Suchraum zu erforschen. Das ist auch der selbe Grund, wieso \(q = 0.95\) gesetzt wurde. Auf der anderen Seite wurde \(\xi = 0.95\) gesetzt, damit das Suchintervall in Gleichung~\ref{subsec:ACO_R_-_simple:eq:Suchintervall} möglichst erhalten bleibt. Es gab auch die Möglichkeit \(\xi = 1.0\) zu setzten aber im Sinne der Einfachheit wurde \(q = \xi = 0.95\) gesetzt. Im Bestreben nach Einfachheit habe wurde auch \(|\mathcal{E}| = 1\) gesetzt, da der Selektionsdruck, der durch das Verwalten des Lösungsarchivs nach dem \glqq best in worst out\grqq Prinzip entsteht, für ausreichend gehalten wurde. Demnach kann ACO\(_{\mathbb{R}}\)-simple als Tupel \((\Sigma, \mathcal{B}, \mathcal{E}, \mathcal{P}_c, f, \mathcal{I}, \mathcal{S})\) angeben werden. Der größte Unterschied zu ACO\(_\mathbb{R}\) liegt aber darin wie ACO\(_{\mathbb{R}}\)-simple eine neue Lösung erzeugt. Denn nachdem die lineare Abweichung in jeder Dimension \(d, d \in \{1, \dots, n\}\) des \(n\)-dimensionalen Problems in Gleichung~\ref{subsec:ACO_R_-_simple:eq:Linear_Deviation} berechnet wurde, wird nur noch ein Intervall in Gleichung~\ref{subsec:ACO_R_-_simple:eq:Suchintervall} in jeder Dimension \(d, d \in \{1, \dots, n\}\) des Problems mithilfe der linearen Abweichung aufgebaut und dann wird aus jedem der Intervalle ein zufälliger Punkt als Komponente der neuen Lösung gewählt.
 	
 	%TODO schlussfolgerte ok so oder anderes Wort? raus, dafür aus diesem Grund
 	
@@ -707,7 +706,7 @@ within=section,
 	
 	\subsection{\acl{acorvs}} \label{subsec:ACO_R_-_very_-_simple}
 	
-	Wie in meiner Bachelorarbeit~\cite{FCM_2019} beschrieben, baut der Algorithmus \ac{acorvs} auf ACO\(_{\mathbb{R}}\)-simple auf, indem er ACO\(_{\mathbb{R}}\)-simple weiter vereinfacht -- deswegen very-simple, also sehr einfach. Jedoch sind die Algorithmen sich noch hinreichend ähnlich, dass wir \ac{acorvs} als Tupel \((\Sigma, \mathcal{B}, \mathcal{E}, \mathcal{P}_c, f, \mathcal{I}, \mathcal{S})\) angeben können. Die Vereinfachung besteht darin, dass, anstatt eine Lösung aus dem Archiv nach einer Wahrscheinlichkeitsverteilung auszuwählen, immer die erste und damit beste Lösung \(s_1\) im Archiv zur Lösungsgenerierung gewählt wird. Damit entfallen die Pendants zu den Gleichungen \ref{subsec:ACO_R_-_simple:eq:omega} und \ref{subsec:ACO_R_-_simple:eq:Probability_Distribution} und es kann direkt die Gleichung~\ref{subsec:ACO_R_-_very_-_simple:eq:interval} berechnet werden. Danach wird in \ac{acorvs}, genau wie in ACO\(_{\mathbb{R}}\)-simple, in jeder Dimension \(d, d \in \{1, \dots, n\}\) des \(n\)-dimensionalen Problems, mithilfe der Gleichung~\ref{subsec:ACO_R_-_very_-_simple:eq:interval}, ein Intervall aufgebaut und dann wird aus jedem dieser Intervalle ein zufälliger Punkt als Komponente der Lösung gewählt.
+	Wie in meiner Bachelorarbeit~\cite{FCM_2019} beschrieben, baut der Algorithmus \ac{acorvs} auf ACO\(_{\mathbb{R}}\)-simple auf, indem er ACO\(_{\mathbb{R}}\)-simple weiter vereinfacht -- deswegen very-simple, also sehr einfach. Jedoch sind die Algorithmen sich noch hinreichend ähnlich, dass \ac{acorvs} als Tupel \((\Sigma, \mathcal{B}, \mathcal{E}, \mathcal{P}_c, f, \mathcal{I}, \mathcal{S})\) angegeben werden kann. Die Vereinfachung besteht darin, dass, anstatt eine Lösung aus dem Archiv nach einer Wahrscheinlichkeitsverteilung auszuwählen, immer die erste und damit beste Lösung \(s_1\) im Archiv zur Lösungsgenerierung gewählt wird. Damit entfallen die Pendants zu den Gleichungen \ref{subsec:ACO_R_-_simple:eq:omega} und \ref{subsec:ACO_R_-_simple:eq:Probability_Distribution} und es kann direkt die Gleichung~\ref{subsec:ACO_R_-_very_-_simple:eq:interval} berechnet werden. Danach wird in \ac{acorvs}, genau wie in ACO\(_{\mathbb{R}}\)-simple, in jeder Dimension \(d, d \in \{1, \dots, n\}\) des \(n\)-dimensionalen Problems, mithilfe der Gleichung~\ref{subsec:ACO_R_-_very_-_simple:eq:interval}, ein Intervall aufgebaut und dann wird aus jedem dieser Intervalle ein zufälliger Punkt als Komponente der Lösung gewählt.
 	
 	%Der zweite dieser Arbeit beiliegende Algorithmus ACO\(_{\mathbb{R}}\)-very-simple, nutzt ebenfalls das Lösungsarchiv wie ACO\(_{\mathbb{R}}\), jedoch setzt es die vorhandenen Lösungen noch einfacher, geradezu trivial, zu einer neuen Lösung zusammen -- deswegen very-simple, also sehr einfach.\hfill\newline
 	
@@ -768,7 +767,7 @@ within=section,
 	
 	Um ACO\(_\mathbb{R}\)-VS anzupassen werden nicht-stetige Probleme als stetige Probleme behandelt. Das heißt, es wird mit nicht-stetigen Werten gerechnet als wären sie stetig. Es wird also bis zur Gleichung~\ref{subsec:ACO_R_-_very_-_simple:eq:interval} genauso verfahren, wie im Abschnitt~\ref{subsec:ACO_R_-_very_-_simple}, um einen neuen, stetigen Wert zu erhalten. Nachdem man einen neuen stetigen Wert gewonnen hat, betrachtet man die nicht-stetigen Werte zwischen denen der stetige Wert liegt und wählt dann als Ergebnis, den nicht-stetigen Wert, an dem der Stetige am nächsten liegt.\hfill\newline
 	
-	Schließlich wird \ac{acorvs} um eine Neustartstrategie erweitert. Der Algorithmus kann entweder eine fixe Anzahl an Neustarts ausführen oder adaptiv neu starten. Für die Neustartstrategie, bei welcher der Algorithmus eine fixe Anzahl neu startet, wird die Anzahl mit \(fixed = n\) angegeben. Ich habe \(n = 0\) gesetzt, um einen Kontrast zu der Neustartstrategie \(adaptvie\) zu haben. Wenn die Neustartstrategie \(adaptiv\) gewählt wurde, startet der Algorithmus neu, wenn eine Periode von \(\gamma\) Lösungen hintereinander sich um weniger als ein Threshold \(\varepsilon_{th}\) unterscheiden. Ich habe als intuitiven Start \(\gamma = 7\) und \(\varepsilon_{th} = 10^{-10}\) gesetzt. 
+	Schließlich wird \ac{acorvs} um eine Neustartstrategie erweitert. Der Algorithmus kann entweder eine fixe Anzahl an Neustarts ausführen oder adaptiv neu starten. Für die Neustartstrategie, bei welcher der Algorithmus eine fixe Anzahl neu startet, wird die Anzahl mit \(fixed = n\) angegeben. Es wurde \(n = 0\) gesetzt, um einen Kontrast zu der Neustartstrategie \(adaptvie\) zu haben. Wenn die Neustartstrategie \(adaptiv\) gewählt wurde, startet der Algorithmus neu, wenn eine Periode von \(\gamma\) Lösungen hintereinander sich um weniger als ein Threshold \(\varepsilon_{th}\) unterscheiden. Im Sinne der Einfachheit wurde als Start \(\gamma = 7\) und \(\varepsilon_{th} = 10^{-10}\) gesetzt. 
 	
 	%TODO periode?
 	
@@ -972,7 +971,7 @@ within=section,
 	
 	\noindent Der Suchraum \(\Sigma\) kann \(\Sigma=\{a_1, \dots, a_n\}\) sein, für das TSP, wobei die \(a_i, i \in \{1, \dots, \mathbb{N}\}\) die Positionen der Städte sind, \(\mathbb{R}^n, n \in \mathbb{N}\) für stetige Funktionen, wie der Paraboloidfunktion, wie sie in Tabelle~\ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} definiert ist oder eine Zusammensetzung von Intervallen über verschiedenen Skalenniveaus, wie es in Abschnitt~\ref{subsubsec:Coil_Spring_Design_Problem} für das CSD ist, wo \(\Sigma\) sich aus einem stetigem, einem ordinalen und einem Intervall über den natürlichen Zahlen zusammensetzt. Im SPPBO-Schema kann \(\mathcal{E}\) aus 2 Ameisen, wie in ACO~\cite{blum2005ant} oder PACO~\cite{guntsch2002population}, bestehen oder auch nur einer Ameise, wie in ACO\(_\mathbb{R}\)-VS~\cite{FCM_2019}, oder \(N \in \mathbb{N}\) Partikeln, wie im Set-Based Discrete PSO~\cite{chen2012set}. Die Menge der Populationen \(\mathcal{P}\) im SPPBO-Schema, wie es in \cite{lin2015simple} definiert ist, besteht aus zwei Populationen, die jede \ac{sce} mitführt, einer Persönlichen \(P^{SCE}_{pers}\) und einer Globalen \(P^{SCE}_{best}\). Die persönliche Population \(p_{pers}\) besteht aus der besten Lösung, welche die jeweilige SCE bis einschließlich der letzten Iteration des Algorithmus gefunden hat. Die globale Population \(P^{SCE}_{best}\) besteht aus der besten Lösung, die alle SCE bis einschließlich der letzten Iteration gefunden haben. Wenn es jedoch nur eine Population, wie in ACO\(_\mathbb{R}\)-VS~\cite{FCM_2019}, gibt, dann kann diese \(n \in \mathbb{N}\) Lösungen haben, wobei \(n = 100\) in \cite{FCM_2019} gewählt wurde.\hfill\newline
 	
-	\noindent Beim Ausführen des SPPBO-Scheme werden mit Hilfe der Initialisierungsmethode \(\mathcal{I}\) zunächst Lösungen aus dem Suchraum \(\Sigma\) erzeugt, welche die Initiallösungen der Populationen bilden. Sollte es Einschränkungen/Constrains für \(\Sigma\) geben, wie es für das \ac{csd} ist, können diese gleich beim Erzeugen der Initiallösungen berücksichtigt werden, sodass nur gültige Lösungen aus \(\Sigma\) generiert werden. Sollte sich für dieses Vorgehen entschieden werden, können zusätzliche Iterationen bei der Initialisierung benötigt werden, neben den Iterationen bei der Ausführung der Lösungssuche des Algorithmus. In diesem Fall bezeichnen wir die Initialisierungsmethode als \(\mathcal{I}_{exact}\). Wenn das Filtern des Suchraumes \(\Sigma\) nach gültigen Lösungen bei gegeben Einschränkungen währen der Initialisierung nicht durchgeführt wird, können die Suchvariablen mit Werten aus \(\Sigma\) so belegt werden, dass keine gültigen Lösungen entstehen. Deswegen wird, sollte der Suchraum \(\Sigma\) nicht gefiltert werden, eine Straffunktion eingeführt, welche sich aus der Zielfunktion und Straftermen zusammensetzt. In diesem Fall bezeichnen wir die Initialisierungsmethode als \(\mathcal{I}_{penalty}\). Bei der Anwendung von ACO\(_\mathbb{R}\)-VS auf das \ac{csd} werden beide Vorgehen betrachtet und miteinander verglichen. Algorithmus~\ref{sec:SPPBO_Schema:alg:SPPBO} zeigt nochmal den Ablauf des SPPBO-Schema in Pseudocode.\hfill\newline
+	\noindent Beim Ausführen des SPPBO-Scheme werden mit Hilfe der Initialisierungsmethode \(\mathcal{I}\) zunächst Lösungen aus dem Suchraum \(\Sigma\) erzeugt, welche die Initiallösungen der Populationen bilden. Sollte es Einschränkungen/Constrains für \(\Sigma\) geben, wie es für das \ac{csd} ist, können diese gleich beim Erzeugen der Initiallösungen berücksichtigt werden, sodass nur gültige Lösungen aus \(\Sigma\) generiert werden. Sollte sich für dieses Vorgehen entschieden werden, können zusätzliche Iterationen bei der Initialisierung benötigt werden, neben den Iterationen bei der Ausführung der Lösungssuche des Algorithmus. In diesem Fall wird die Initialisierungsmethode als \(\mathcal{I}_{exact}\) bezeichnet. Wenn das Filtern des Suchraumes \(\Sigma\) nach gültigen Lösungen bei gegeben Einschränkungen währen der Initialisierung nicht durchgeführt wird, können die Suchvariablen mit Werten aus \(\Sigma\) so belegt werden, dass keine gültigen Lösungen entstehen. Deswegen wird, sollte der Suchraum \(\Sigma\) nicht gefiltert werden, eine Straffunktion eingeführt, welche sich aus der Zielfunktion und Straftermen zusammensetzt. In diesem Fall wird die Initialisierungsmethode als \(\mathcal{I}_{penalty}\) bezeichnet. Bei der Anwendung von ACO\(_\mathbb{R}\)-VS auf das \ac{csd} werden beide Vorgehen betrachtet und miteinander verglichen. Algorithmus~\ref{sec:SPPBO_Schema:alg:SPPBO} zeigt nochmal den Ablauf des SPPBO-Schema in Pseudocode.\hfill\newline
 
 	\begin{algorithm}
 		
@@ -1018,7 +1017,7 @@ within=section,
 	
 	%TODO besserer Funktionsname als Update
 	
-	Das HSPPBO-Schema zeichnet sich dadurch aus, dass die \ac{sce} in einer Baumstruktur angeordnet sind. Dadurch wird eine Nachbarschaftstopologie ermöglicht, welche die \ac{sce} gemäß der Güte ihrer Lösung ordnet. In \cite{kupfer2021hierarchical} wurde sich für eine tertiäre Baumstruktur mit 13 Knoten entschieden, die wir hier übernehmen. Wie beschrieben ordnet \(\mathcal{R}\) jeder der \ac{sce} drei Populationen zu, die alle nur eine Lösung haben. Von diesen Populationen ist für die Funktion \(\mathcal{U}\) nur die Population \(P^{SCE}_{persbest}\) entscheidend. Stellt der Algorithmus fest, dass \(P^{SCE}_{persbest} > P^{parent(SCE)}_{persbest}\) gilt, werden die \ac{sce} im Baum getauscht. Die Prüfung, ob dies gilt, wird \glqq top-down\grqq{} durchgeführt. Wie in \cite{kupfer2021hierarchical} beobachtet, lässt dieses Vorgehen schlechte Lösungen schnell im Baum sich nach unten bewegen, während gute Lösungen hinreichend lange gut bleiben müssen, um im Baum nach oben zu wandern. Wird festgestellt, dass die Anzahl der Vertauschung im Baum im Verhältnis zur Gesamtanzahl an \ac{sce} im Baum einen Threshold \(\theta\) übersteigt, wird die Funktion \(\mathcal{H}\) aufgerufen. Nach \cite{kupfer2021hierarchical} gilt für den Threshold \(\theta \in \{0.1, 0.25, 0.5\}\). Im Code ist \(\theta = 0.25\) eingestellt. Die Einstellung wurde beibehalten. Wird der Threshold überschritten, greift \(\mathcal{H}\). Nach \cite{kupfer2021hierarchical} gibt es drei Einstellungen für \(\mathcal{H}\), nämlich \(\mathcal{H}_{full}\), \(\mathcal{H}_{partial}\) und \(\mathcal{H}_{none}\).  Ist \(\mathcal{H}_{full}\) eingestellt, werden beim überschreiten des Thresholds alle Populationen \(P^{SCE}_{persbest}\) gelöscht. Das entspricht einem kompletten Vergessen der \ac{sce} und ist äquivalent zum Neustart des Algorithmus. Ist \(\mathcal{H}_{partial}\) eingestellt, werden nur die Population \(P^{SCE}_{persbest}\) der \ac{sce} ab der Tiefe 3 und abwärts gelöscht. Ist \(\mathcal{H}_{none}\) eingestellt, gibt es keine Veränderungen an den Populationen. Im Code ist \(\mathcal{H}_{partial}\) eingestellt. Die Einstellung wurde beibehalten.\hfill\newline
+	Das HSPPBO-Schema zeichnet sich dadurch aus, dass die \ac{sce} in einer Baumstruktur angeordnet sind. Dadurch wird eine Nachbarschaftstopologie ermöglicht, welche die \ac{sce} gemäß der Güte ihrer Lösung ordnet. In \cite{kupfer2021hierarchical} wurde sich für eine tertiäre Baumstruktur mit 13 Knoten entschieden, die hier übernommen wird. Wie beschrieben ordnet \(\mathcal{R}\) jeder der \ac{sce} drei Populationen zu, die alle nur eine Lösung haben. Von diesen Populationen ist für die Funktion \(\mathcal{U}\) nur die Population \(P^{SCE}_{persbest}\) entscheidend. Stellt der Algorithmus fest, dass \(P^{SCE}_{persbest} > P^{parent(SCE)}_{persbest}\) gilt, werden die \ac{sce} im Baum getauscht. Die Prüfung, ob dies gilt, wird \glqq top-down\grqq{} durchgeführt. Wie in \cite{kupfer2021hierarchical} beobachtet, lässt dieses Vorgehen schlechte Lösungen schnell im Baum sich nach unten bewegen, während gute Lösungen hinreichend lange gut bleiben müssen, um im Baum nach oben zu wandern. Wird festgestellt, dass die Anzahl der Vertauschung im Baum im Verhältnis zur Gesamtanzahl an \ac{sce} im Baum einen Threshold \(\theta\) übersteigt, wird die Funktion \(\mathcal{H}\) aufgerufen. Nach \cite{kupfer2021hierarchical} gilt für den Threshold \(\theta \in \{0.1, 0.25, 0.5\}\). Im Code ist \(\theta = 0.25\) eingestellt. Die Einstellung wurde beibehalten. Wird der Threshold überschritten, greift \(\mathcal{H}\). Nach \cite{kupfer2021hierarchical} gibt es drei Einstellungen für \(\mathcal{H}\), nämlich \(\mathcal{H}_{full}\), \(\mathcal{H}_{partial}\) und \(\mathcal{H}_{none}\).  Ist \(\mathcal{H}_{full}\) eingestellt, werden beim überschreiten des Thresholds alle Populationen \(P^{SCE}_{persbest}\) gelöscht. Das entspricht einem kompletten Vergessen der \ac{sce} und ist äquivalent zum Neustart des Algorithmus. Ist \(\mathcal{H}_{partial}\) eingestellt, werden nur die Population \(P^{SCE}_{persbest}\) der \ac{sce} ab der Tiefe 3 und abwärts gelöscht. Ist \(\mathcal{H}_{none}\) eingestellt, gibt es keine Veränderungen an den Populationen. Im Code ist \(\mathcal{H}_{partial}\) eingestellt. Die Einstellung wurde beibehalten.\hfill\newline
 	
 	%TODO andere Baumstrukturen als offene Forschungsfrage?
 	
@@ -1080,7 +1079,7 @@ within=section,
 	
 	%TODO Hom HPB ACOR-VS oder Hom-HPB-ACOR-VS?
 	
-	\noindent Die einfachste Kombination aus dem HSPPBO-Schema und \ac{acorvs} ergibt Homogen Hierarchical Population-Based \ac{acorvs}, Hom-HPB-\ac{acorvs}. Dabei führt jede \ac{sce}, nach der Initialisierung, den \ac{acorvs} Algorithmus aus. Das Archiv, welches bei der Ausführung von \ac{acorvs} notwendig ist, hat diesmal statt 100 Lösungen nur 4. Diese 4 Lösungen sind die 3 Populationen, die jede der SCE mitführt plus die Population, welche die beste bis dato gefunden Lösung hält, wie in Abschnitt~\ref{sec:HSPPBO_Schema} erläutert. Der Mechanismus, welcher das Tauschen von Populationen steuert, wenn eine Eltern-SCE eine schlechtere Lösungen oder eine Kind-SCE eine bessere Lösung findet, wie ebenfalls im Abschnitt~\ref{sec:HSPPBO_Schema} dargelegt, bleibt der gleiche. Dies führt zur Bezeichnung Hierarchical Population-Based \acl{acorvsmv} oder kurz HPB-\ac{acorvsmv}. Was wir noch nicht aufgegriffen haben und wovon in \cite{kupfer2021hierarchical}, über das Tauschen der Knoten im Baum hinaus, kein weiterer Gebraucht gemacht wird, ist, dass die \acp{sec}, abhängig von ihrer Position im Baum, nicht exakt denselben Algorithmus ausführen müssen. Weil aber die erste Iteration der Kombination des HSPPBO-Schemes mit dem \ac{acorvsmv} Algorithmus dies ebenfalls nicht ausnutzt, bezeichnen wir diese Iteration Homogen-HPB-\ac{acorvsmv} oder kurz Hom-HPB-\ac{acorvs}.\hfill\newline
+	\noindent Die einfachste Kombination aus dem HSPPBO-Schema und \ac{acorvs} ergibt Homogen Hierarchical Population-Based \ac{acorvs}, Hom-HPB-\ac{acorvs}. Dabei führt jede \ac{sce}, nach der Initialisierung, den \ac{acorvs} Algorithmus aus. Das Archiv, welches bei der Ausführung von \ac{acorvs} notwendig ist, hat diesmal statt 100 Lösungen nur 4. Diese 4 Lösungen sind die 3 Populationen, die jede der SCE mitführt plus die Population, welche die beste bis dato gefunden Lösung hält, wie in Abschnitt~\ref{sec:HSPPBO_Schema} erläutert. Der Mechanismus, welcher das Tauschen von Populationen steuert, wenn eine Eltern-SCE eine schlechtere Lösungen oder eine Kind-SCE eine bessere Lösung findet, wie ebenfalls im Abschnitt~\ref{sec:HSPPBO_Schema} dargelegt, bleibt der gleiche. Dies führt zur Bezeichnung Hierarchical Population-Based \acl{acorvsmv} oder kurz HPB-\ac{acorvsmv}. Was noch nicht aufgegriffen wurde und wovon in \cite{kupfer2021hierarchical}, über das Tauschen der Knoten im Baum hinaus, kein weiterer Gebraucht gemacht wird, ist, dass die \acp{sec}, abhängig von ihrer Position im Baum, nicht exakt denselben Algorithmus ausführen müssen. Weil aber die erste Iteration der Kombination des HSPPBO-Schemes mit dem \ac{acorvsmv} Algorithmus dies ebenfalls nicht ausnutzt, wird diese Iteration Homogen-HPB-\ac{acorvsmv} bezeichnet oder kurz Hom-HPB-\ac{acorvs}.\hfill\newline
 	
 	%Im HPB-ACO\(_\mathbb{R}\)-VS 
 	
@@ -1093,17 +1092,17 @@ within=section,
 	
 	\subsection{Het-HPB-\ac{acorvsmv}} \label{subsec:Heterogen_HPB_ACO_R_very_simple}
 	
-	\ac{acorvs} hat in seiner Definition im Abschnitt~\ref{subsec:ACO_R_-_very_-_simple}, Gleichung~\ref{subsec:ACO_R_-_very_-_simple:eq:Linear_Diviation} einen Parameter, der sich anbietet, um, abhängig von der Position der SCE im tertiären Baum, mit der Höhe im Baum zu variieren. Dieser Parameter ist \(\xi\). Wir greifen die Gleichung~\ref{subsec:ACO_R_-_very_-_simple:eq:Linear_Diviation} auf und benutzen sie hier als Gleichung~\ref{subsec:Heterogen_HPB_ACO_R_very_simple:eq:Linear_Deviation}. Dabei hängt \(\xi_{depth}\) von der Tiefe des \ac{sce} im Baum ab.
+	\ac{acorvs} hat in seiner Definition im Abschnitt~\ref{subsec:ACO_R_-_very_-_simple}, Gleichung~\ref{subsec:ACO_R_-_very_-_simple:eq:Linear_Diviation}, einen Parameter, der sich anbietet, um, abhängig von der Position der SCE im tertiären Baum, mit der Höhe im Baum zu variieren. Dieser Parameter ist \(\xi\). Es wird die Gleichung~\ref{subsec:ACO_R_-_very_-_simple:eq:Linear_Diviation} aufgegriffen und hier als Gleichung~\ref{subsec:Heterogen_HPB_ACO_R_very_simple:eq:Linear_Deviation} benutzt. Dabei hängt \(\xi_{depth}\) von der Tiefe des \ac{sce} im Baum ab.
 	
 	\begin{equation} \label{subsec:Heterogen_HPB_ACO_R_very_simple:eq:Linear_Deviation}
 		\delta_{dim} = \xi_{depth}\sum_{j=1}^{k} \frac{|s_{j\_d}-s_{1\_d}|}{k-1}, ~ j \in \{1, ..., k\}, ~ d \in \{1, ..., n\},
 	\end{equation}
 	
-	\noindent Für die Tiefe \(0\), also die Wurzel, setzten wir \(\xi = 0.7\), für die Tiefe \(1\) setzen wir \(\xi = 1.0\), für die Tiefe \(2\) setzen wir \(\xi = 1.3\) und ab der Tiefe \(3\) setzen wir \(\xi = 1.5\).\hfill\newline
+	\noindent Für die Tiefe \(0\), also die Wurzel, wird \(\xi = 0.7\), für die Tiefe \(1\) \(\xi = 1.0\), für die Tiefe \(2\) \(\xi = 1.3\) und ab der Tiefe \(3\) \(\xi = 1.5\) gesetzt.\hfill\newline
 	
-	\noindent Die Entscheidung die initialen Werte von \(\xi\) so zu wählen, ergibt sich aus der Überlegung, dass je höher im Baum sich die SCE sich befindet, desto höher auch die Güte der Lösung dieses SCE. Ferner gilt für viele Optimierungsprobleme, dass in der Nähe schlechter Lösungen sich weitere schlechte Lösungen befinden und in der Nähe guter Lösungen sich weitere gute Lösungen befinden. Daher verkleinert \(\xi\) das Suchintervall für die Tiefe 0, lässt es unverändert für die Tiefe 1 und vergrößert es ab Tiefe 2. Die Werte für \(\xi\) wurden explizit so gewählt, da sie als einfach erschienen und damit im Einklang mit der Idee möglichster Einfachheit hinter \ac{acorvs} sind. Da die Wert für \(\xi_{depth}\) von der Tiefe des \ac{sce} im tertiären Baum abhängt, führen die \ac{sec} abhängig von ihrer Position im tertiären Baum verschiedene Variationen von \ac{acorvs} aus. Deswegen bezeichnen wir diese Iteration der Kombination des HSPPBO-Schemas mit dem \ac{acorvs} Algorithmus als Heterogen-HPB-\ac{acorvs} oder kurz Het-HPB-\ac{acorvs}.\hfill\newline
+	\noindent Die Entscheidung die initialen Werte von \(\xi\) so zu wählen, ergibt sich aus der Überlegung, dass je höher im Baum sich die SCE sich befindet, desto höher auch die Güte der Lösung dieses SCE. Ferner gilt für viele Optimierungsprobleme, dass in der Nähe schlechter Lösungen sich weitere schlechte Lösungen befinden und in der Nähe guter Lösungen sich weitere gute Lösungen befinden. Daher verkleinert \(\xi\) das Suchintervall für die Tiefe 0, lässt es unverändert für die Tiefe 1 und vergrößert es ab Tiefe 2. Die Werte für \(\xi\) wurden explizit so gewählt, da sie als einfach erschienen und damit im Einklang mit der Idee möglichster Einfachheit hinter \ac{acorvs} sind. Da die Wert für \(\xi_{depth}\) von der Tiefe des \ac{sce} im tertiären Baum abhängt, führen die \ac{sec} abhängig von ihrer Position im tertiären Baum verschiedene Variationen von \ac{acorvs} aus. Deswegen wird diese Iteration der Kombination des HSPPBO-Schemas mit dem \ac{acorvs} Algorithmus als Heterogen-HPB-\ac{acorvs} oder kurz Het-HPB-\ac{acorvs} bezeichnet.\hfill\newline
 	
-	\noindent Wir müssen jetzt jedoch die Generierung des neuen Punktes in Gleichung~\ref{subsec:ACO_R_-_very_-_simple:eq:interval} anpassen, da für \(\xi > 1.0\) das Intervall größer sein kann als Initialisierungsintervall, was dazu führen kann, dass eine Lösung generiert wird, die nicht im Definitionsraum des Problems liegt und damit ein Optimum angenommen werden kann, dass keine gültige Lösung ist. Deswegen ändern wir die Gleichung~\ref{subsec:ACO_R_-_very_-_simple:eq:interval} zur Gleichung~\ref{subsec:Heterogen_HPB_ACO_R_very_simple:eq:interval}, wobei \(lg_d\) und \(rg_d\) die respektiven linken bzw. rechten Intervallgrenzen der \(d\)-ten Dimension des \(n\)-dimensionalen Testproblems sind.
+	\noindent Jetzt muss jedoch die Generierung des neuen Punktes in Gleichung~\ref{subsec:ACO_R_-_very_-_simple:eq:interval} anpassen werden, da für \(\xi > 1.0\) das Intervall größer sein kann als Initialisierungsintervall, was dazu führen kann, dass eine Lösung generiert wird, die nicht im Definitionsraum des Problems liegt und damit ein Optimum angenommen werden kann, dass keine gültige Lösung ist. Deswegen wird die Gleichung~\ref{subsec:ACO_R_-_very_-_simple:eq:interval} zur Gleichung~\ref{subsec:Heterogen_HPB_ACO_R_very_simple:eq:interval} geändert, wobei \(lg_d\) und \(rg_d\) die respektiven linken bzw. rechten Intervallgrenzen der \(d\)-ten Dimension des \(n\)-dimensionalen Testproblems sind.
 	
 	\begin{equation} \label{subsec:Heterogen_HPB_ACO_R_very_simple:eq:interval}
 		[max(s_d - \delta_d, lg_d), min(s_d + \delta_d, rg_d)], ~ d \in \{1, ..., n\},
@@ -1126,9 +1125,9 @@ within=section,
 	
 	\section{Testfunktionen} \label{sec:Testfunktionen}
 	
-	Aufbauend auf meiner Bachelorarbeit~\cite{FCM_2019}, erweitern wir die Art der Testfunktionen, anhand derer wir die Güte der hier vorlegten Erweiterungen von ACO\(_\mathbb{R}\)-VS beurteilen. Wo ACO\(_{\mathbb{R}}\)-VS nur auf stetigen Testfunktionen getestet wurde, werden die Erweiterungen von ACO\(_{\mathbb{R}}\)-VS auf stetigen Testfunktionen getestet, auf Testfunktionen mit diskreten Variablen und auf Testfunktionen mit gemischten Variablen.\hfill\newline
+	Aufbauend auf meiner Bachelorarbeit~\cite{FCM_2019}, wird die Art der Testfunktionen, anhand derer die Güte der hier vorlegten Erweiterungen von ACO\(_\mathbb{R}\)-VS beurteilt werden, erweitert. Wo ACO\(_{\mathbb{R}}\)-VS nur auf stetigen Testfunktionen getestet wurde, werden die Erweiterungen von ACO\(_{\mathbb{R}}\)-VS auf stetigen Testfunktionen getestet, auf Testfunktionen mit gemischten Variablen und einem Ingenieur-Benchmark-Problem.\hfill\newline
 	
-	Da in meiner Bachelorarbeit~\cite{FCM_2019} die Testfunktionen in ihren Dimensionen nicht variiert haben, Intervallgrenzen keine Rolle spielten und alle Funktionen über stetigen, zusammenhängenden Definitionsbereichen definiert waren, brauchte es keiner standardisierten, abstrakten Definition. In dieser Arbeit aber betrachten wir stetige und diskrete Testfunktionen, sowie Testfunktionen mit gemischten Variablen. Ferner liegen 5 der Testprobleme mit gemischten Variablen in drei verschiedenen Dimensionen dar, nämlich \(n \in \{2, 5, 10\}\). Deswegen war eine überarbeitete Definition der Testprobleme notwendig. Die einfachste Definition mit dem neuen Standard ist im Code-Snipped~\ref{sec:Testfunktionen:JSON:Paraboloid10DimCont} zu sehen.
+	Da in meiner Bachelorarbeit~\cite{FCM_2019} die Testfunktionen in ihren Dimensionen nicht variiert haben, Intervallgrenzen keine Rolle spielten und alle Funktionen über stetigen, zusammenhängenden Definitionsbereichen definiert wurden, brauchte es keiner standardisierten, abstrakten Definition. In dieser Arbeit aber werden stetige Testfunktionen und Testfunktionen mit gemischten Variablen und ein Ingenieur-Benchmark-Problem mit gemischten Variablen betrachtet. Ferner liegen 5 der Testprobleme mit gemischten Variablen in drei verschiedenen Dimensionen dar, nämlich \(n \in \{2, 5, 10\}\). Deswegen war eine überarbeitete Definition der Testfunktionen notwendig. Die einfachste Definition mit dem neuen Standard ist im Code-Snipped~\ref{sec:Testfunktionen:JSON:Paraboloid10DimCont} zu sehen.
 	
 	%TODO Testfunktion oder Testproblem? Testprobleme
 	
@@ -1196,7 +1195,7 @@ within=section,
 		
 		Die Testfunktionen wurden aus verschiedene Quellen entnommen. Die Branin RCOS-Testfunktion stammt aus \cite{testFunctionBranin}, die Goldstein and Price-Testfunktion aus \cite{testFunctionGoldsteinandPrice} und die Griewangk-Testfunktion aus \cite{molga2005test}. Die Griewangk-Testfunktion wurde auch in den Arbeiten von \textit{Dorigo und Socha}~\cite{socha2008ant} und \textit{Socha}~\cite{socha2009ant} benutzt, auf denen diese Arbeit aufbaut. Aber dort wurde eine andere Version der Griewangk-Testfunktion benutzt, als die Version in anderen Quellen, nämlich \textit{Molga und Smutnicki}~\cite{molga2005test} und \textit{Pohlheim}~\cite{pohlheim2007examples}, die explizit Testfunktionen auflisten, um Algorithmen zu testen. Da in ~\cite{socha2008ant} und \cite{socha2009ant} keine Optima angegeben wurden, wurde in dieser Arbeit sich für die Version der Griewangk-Testfunktion aus \cite{pohlheim2007examples} und \cite{molga2005test} entscheiden. Die Testfunktionen Hartmann stammen aus \cite{testFunctionHartmann3} und \cite{testFunctionHartmann6} und die Shekel-Testfunktionen aus \cite{testFunctionShekel}. Alle anderen Testfunktionen stammen aus \cite{socha2008ant} und \cite{socha2009ant}. Bei der Hartmann(6,4)-Testfunktion haben sich die Quellen in ihrer Definition des Funktionsterms im Matrixeintrag \(a_{15}\) widersprochen. In \cite{socha2008ant} und \cite{socha2009ant} wird \(a_{15} = 1.5\) angegeben während in \cite{testFunctionHartmann6} angegeben wird, dass \(a_{15} = 1.7\). Da nur in \cite{testFunctionHartmann6} das dazugehörige Optimum angegeben wird, wurde in dieser Arbeit sich für die Angabe aus dieser Quelle entschieden. Um zukünftige Forschung zu erleichtern, werden alle Testfunktionen in dieser Arbeit, genau wie in meiner Bachelorarbeit~\cite{FCM_2019}, nicht nur mit Name und Funktionsterm, sondern auch mit Definitionsbereich/Initialisierungsintervall, Optimum und Argument des Optimums angegeben.\hfill\newline
 		
-		In meiner Bachelorarbeit stimmten die von mir berechnete Optima für die Funktionen Hartmann(3,4), Hartmann(6,4), Shekel(4,5), Shekel(4,7) und Shekel(4,10) mit denen in der Literatur nicht überein. Ich konnte den Fehler finden. Ich habe die Funktionsgleichungen der Testprobleme in den Quellen falsch interpretiert, weswegen ich falsche Ergebnisse bekommen hatte. Für Schekel(4,k;k = 5,7,10) lag der Fehler in der Interpretationen der Gleichung~\ref{subsec:Stetige_Testfunktionen:eq:Shekel}. Ich habe die Gleichung so verstanden, we es in der Gleichung~\ref{subsec:Stetige_Testfunktionen:eq:Bachelorinterpretation} geschrieben ist. Aber der Term ist, wie in Gleichung~\ref{subsec:Stetige_Testfunktionen:eq:Masterinterpretation} zu interpretieren.\hfill\newline
+		In meiner Bachelorarbeit stimmten die berechnete Optima für die Funktionen Hartmann(3,4), Hartmann(6,4), Shekel(4,5), Shekel(4,7) und Shekel(4,10) mit denen in der Literatur nicht überein. Der Fehler konnte gefunden werden. Es wurden die Funktionsgleichungen der Testfunktionen in den Quellen falsch interpretiert, weswegen falsche Ergebnisse entstanden. Für Schekel(4,k;k = 5,7,10) lag der Fehler in der Interpretationen der Gleichung~\ref{subsec:Stetige_Testfunktionen:eq:Shekel}. Die Gleichung wurde so interpretiert, wie es in der Gleichung~\ref{subsec:Stetige_Testfunktionen:eq:Bachelorinterpretation} geschrieben ist. Aber der Term ist, wie in Gleichung~\ref{subsec:Stetige_Testfunktionen:eq:Masterinterpretation} zu interpretieren.\hfill\newline
 		
 		\begin{equation} \label{subsec:Stetige_Testfunktionen:eq:Shekel}
 			f(x) = -\sum_{i=1}^{k}(\sum_{j=1}^{4} (x_j - a_{ji})^2 + c_i)^{-1}
@@ -1248,7 +1247,7 @@ within=section,
 		
 		%Positiv aufgefallen ist aber, dass bei der Suche nach den Fehlern die Algorithmen die berechneten Optima selbst dann fanden, wenn die Angegebenen als Ziel verwendet wurden. Die Verfahren brachen nur nicht ab, weil das Ziel eben eines war, was nicht erreicht werden konnte.\hfill\newline
 		
-		Die Testfunktionen, welche in den Tabellen \ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen}, \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt}, \ref{subsec:Stetige_Testfunktionen:tab:Teil_2_1_Stet_Adapt} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_2_2_Stet_Adapt} gelistet sind, unterscheiden sich nicht nur darin, für welche Vergleiche sie herangezogen werden, sondern auch welches Abbruchkriterium beim Vergleich genutzt wird. Wir verwenden hier die selben Abbruchkriterien wie in meiner Bachelorarbeit~\cite{FCM_2019}, sowie wie sie in \textit{Socha und Dorigo}~\cite{socha2008ant} und in \textit{Socha}~\cite{socha2009ant} verwendet werden. Für Testfunktionen aus Tabelle~\ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} gilt das Abbruchkriterium \(|f - f^*| < \varepsilon, \, \varepsilon = 10^{-10}\) und für Testfunktionen aus den Tabellen~\ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt}, \ref{subsec:Stetige_Testfunktionen:tab:Teil_2_1_Stet_Adapt} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_2_2_Stet_Adapt} gilt das Abbruchkriterium \(|f - f^*| < |\varepsilon_1 f| + \varepsilon_2, \, \varepsilon_1 = \varepsilon_2 = 10^{-4}\). Dabei ist \(\varepsilon_1\) der relative Fehler und \(\varepsilon_2\) der absolute Fehler. In beiden Abbruchkriterien steht \(f\) für den momentanen Funktionswert und \(f^*\) für das bekannte Optimum. Das zweite Abbruchkriterium wird in \cite{socha2008ant} und \cite{socha2009ant} als \(|f - f^*| < \varepsilon_1 f + \varepsilon_2, \varepsilon_1 = \varepsilon_2 = 10^{-
+		Die Testfunktionen, welche in den Tabellen \ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen}, \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt}, \ref{subsec:Stetige_Testfunktionen:tab:Teil_2_1_Stet_Adapt} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_2_2_Stet_Adapt} gelistet sind, unterscheiden sich nicht nur darin, für welche Vergleiche sie herangezogen werden, sondern auch welches Abbruchkriterium beim Vergleich genutzt wird. Es werden hier die selben Abbruchkriterien wie in meiner Bachelorarbeit~\cite{FCM_2019}, sowie wie sie in \textit{Socha und Dorigo}~\cite{socha2008ant} und in \textit{Socha}~\cite{socha2009ant} verwendet werden. Für Testfunktionen aus Tabelle~\ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} gilt das Abbruchkriterium \(|f - f^*| < \varepsilon, \, \varepsilon = 10^{-10}\) und für Testfunktionen aus den Tabellen~\ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt}, \ref{subsec:Stetige_Testfunktionen:tab:Teil_2_1_Stet_Adapt} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_2_2_Stet_Adapt} gilt das Abbruchkriterium \(|f - f^*| < |\varepsilon_1 f| + \varepsilon_2, \, \varepsilon_1 = \varepsilon_2 = 10^{-4}\). Dabei ist \(\varepsilon_1\) der relative Fehler und \(\varepsilon_2\) der absolute Fehler. In beiden Abbruchkriterien steht \(f\) für den momentanen Funktionswert und \(f^*\) für das bekannte Optimum. Das zweite Abbruchkriterium wird in \cite{socha2008ant} und \cite{socha2009ant} als \(|f - f^*| < \varepsilon_1 f + \varepsilon_2, \varepsilon_1 = \varepsilon_2 = 10^{-
 		4}\) und im, in \textit{Socha}~\cite{socha2009ant} bereitgestellten, Quellcode als \(|f - f^*| < \varepsilon_1 f^* + \varepsilon_2\) angegeben, aber es musste zu der jetzigen Form verändert werden, da sonst negative Optima nicht erreicht werden können. So wird z.B. das Optimum \(f^* = -3.32237\) der Testfunktion Hartmann(6,4) nicht erreicht, da, für einen an das Optimum hinreichend nahen, Funktionswert \(f = -3.32237 + \varepsilon_3\), mit \(\varepsilon_3 > 10^{-4}\), gilt \(|-3.32237 - (f + \varepsilon_3)| = |\varepsilon_3| = \varepsilon_3 > \varepsilon_1 \cdot (-3.32237) + \varepsilon_2\). Eine weitere Herausforderung des Abbruchkriteriums \(|f - f^*| < \varepsilon_1 f + \varepsilon_2, \, \varepsilon_1 = \varepsilon_2 = 10^{-4}\), ist die Tatsache, dass 6 der in diesem Abschnitt vorgestellten 20 Testfunktionen Optima haben, die mehr als 4 Nachkommastellen besitzen, weswegen, bei der Benutzung des zweiten Abbruchkriteriums, die Güte eines Algorithmus, der auf diesen 6 Testfunktionen getestet wird, besser ausgewertet wird, als sie ist. Denn bei dem zweiten Abbruchkriterium muss der Algorithmus z.B. für \(f^* = -3.32237\) nur \(f = -3.3223 \dots\) erreichen und gerade die letzte Nachkommastelle oder Nachkommastellen, wenn es mehrere sind, können darüber entscheiden, wie viele Iterationen ein Algorithmus braucht, um das Optimum zu erreichen bzw. ob das Optimum überhaupt gefunden wird oder nur ein Wert, der nahe dem Optimum ist.\hfill\newline
 		
 		%Fernen wurde das Abbruchkriterium für alle Testfunktionen, außer für die Maximierungsprobleme \glqq Plane\grqq \hspace{.16667em} und \glqq Diagonal Plane\grqq, aus Tabelle~\ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen} auf\\
@@ -1266,16 +1265,16 @@ within=section,
 		% TODO Konvergenz betrachten, wie bei Rosenbrock, welche das Optimum nicht erreicht haben
 		
 		
-		Ferner müssen wir noch auf das Initialisierungsintervall eingehen. Das Initialisierungsintervall ist das Intervall aus dem, bei der Initialisierung des Algorithmus, die ersten \(k \in \mathbb{N}\) zufälligen Lösungen gezogen werden aus denen dann andere Lösungen konstruiert werden. Dabei kann \(k = 13\) sein, wie bei der Initialisierung des HSPPBO-Schema in Abschnitt~\ref{sec:HSPPBO_Schema}, \(k = 50\), wie bei der Initialisierung von ACO\(_\mathbb{R}\) in Abschnitt~\ref{subsec:ACO_R} oder \(k = 100\), wie bei der Initialisierung von \ac{acorvs} im Abschnitt~\ref{subsec:ACO_R_-_very_-_simple}. Auch wenn das Initialisierungsintervall bei ACO\(_\mathbb{R}\) und ACO\(_\text{MV}\) nach der Initialisierung nicht mehr verwendet wird, ist es trotzdem wichtig, da, wenn es schlecht gewählt wurde, die Initiallösungen so liegen, dass die Algorithmusleistung zum negativen oder zum positiven verzerrt wird.  Wir müssen die Initialisierungsintervalle für die Testfunktionen aus den Tabellen \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt}, \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt}, \ref{subsec:Stetige_Testfunktionen:tab:Teil_2_1_Stet_Adapt} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_2_2_Stet_Adapt} aber nicht näher betrachten, da mit den Initialisierungsintervallen für diese Testfunktionen sich schon in \cite{socha2008ant} und \cite{socha2009ant} auseinander gesetzt wurde. Deswegen können wir sie übernehmen. Eine offene Forschungsfrage ist, wie Optimierungsalgorithmen auf nicht zusammenhängende Definitionsbereiche regieren. \hfill\newline
+		Ferner noch auf das Initialisierungsintervall eingegangen werden. Das Initialisierungsintervall ist das Intervall aus dem, bei der Initialisierung des Algorithmus, die ersten \(k \in \mathbb{N}\) zufälligen Lösungen gezogen werden aus denen dann andere Lösungen konstruiert werden. Dabei kann \(k = 13\) sein, wie bei der Initialisierung des HSPPBO-Schema in Abschnitt~\ref{sec:HSPPBO_Schema}, \(k = 50\), wie bei der Initialisierung von ACO\(_\mathbb{R}\) in Abschnitt~\ref{subsec:ACO_R} oder \(k = 100\), wie bei der Initialisierung von \ac{acorvs} im Abschnitt~\ref{subsec:ACO_R_-_very_-_simple}. Auch wenn das Initialisierungsintervall bei ACO\(_\mathbb{R}\) und ACO\(_\text{MV}\) nach der Initialisierung nicht mehr verwendet wird, ist es trotzdem wichtig, da, wenn es schlecht gewählt wurde, die Initiallösungen so liegen, dass die Algorithmusleistung zum negativen oder zum positiven verzerrt wird. Die Initialisierungsintervalle für die Testfunktionen aus den Tabellen \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt}, \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt}, \ref{subsec:Stetige_Testfunktionen:tab:Teil_2_1_Stet_Adapt} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_2_2_Stet_Adapt} müssen aber nicht näher betrachten werden, da mit den Initialisierungsintervallen für diese Testfunktionen sich schon in \cite{socha2008ant} und \cite{socha2009ant} auseinander gesetzt wurde. Deswegen können sie übernommen werden. Eine offene Forschungsfrage ist, wie Optimierungsalgorithmen auf nicht zusammenhängende Definitionsbereiche regieren. \hfill\newline
 		
 		%Es ist noch zu bemerken, dass das Initialisierungsintervall, also das Intervall aus dem die ersten zufälligen \textit{k} Lösungen entnommen werden, um das Lösungsarchiv zu füllen, von entscheidender Bedeutung ist. Wenn es unglücklich gewählt ist, liegen die Lösungen so um das Optimum, dass bei bestimmten Testproblemen die Algorithmusleistung stark zum positiven verzerrt wird. Ein so wichtiger Punkt wird hier für die gegeben stetige Testfunktionen nur deswegen nebensächlich erwähnt, da in \textit{Socha und Dorigo}~\cite{socha2008ant} darauf bereits eingegangen wurde, die Initialisierungsintervalle, wie sie dort aufgeführt sind, für gut befunden wurden und wir diese lediglich nur übernehmen müssen.\hfill\newline
 		
 		Wenn es Nebenbedingungen/Constrains gibt, kann das vollständige Initialisierungsintervall sich vom Initialisierungsintervall, das durch Anwenden der Nebenbedingungen entsteht, stark unterscheiden, wie im Abschnitt~\ref{subsubsec:Coil_Spring_Design_Problem}. Ein solchen Intervall wird hier als gefiltert bezeichnet.\hfill\newline 
 		%TODO stetige Funktionen finden und schauen, ob es wie beim CSD einen Unterschied gibt zwischen Initialisierung über dem Gesamtbereich und Initialisierung über den filtrierten Initial. durch Nebenbedingungen
 		
-		Genau wie in meiner Bachelorarbeit~\cite{FCM_2019} bezeichnen wir die Initialisierungsintervalle hier als Definitionsbereiche. Das liegt daran, dass die Funktionen, sowohl initial über diesen Intervallen definiert sind, als auch die Intervallgrenzen definieren, was gültige Lösungen sind. Der Suchraum für die Funktionen aus den Tabellen \ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen}, \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt}, \ref{subsec:Stetige_Testfunktionen:tab:Teil_2_1_Stet_Adapt} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_2_2_Stet_Adapt} ist zwar \(\Sigma = \mathbb{R}^n\), wobei \(n \in \mathbb{N}\) von der jeweiligen Testfunktion abhängt, aber die Beschränkungen \(\mathcal{B}\) sind die Definitionsbereiche, die für die verschiedenen Testfunktionen abhängig von der Testfunktion definiert sind, z.B. für die Testfunktion \glqq Paraboloid\grqq{} gilt \(\mathcal{B}_1 = \ldots = \mathcal{B}_n = [-3,7]\)\hfill\newline
+		Genau wie in meiner Bachelorarbeit~\cite{FCM_2019} werden die Initialisierungsintervalle hier als Definitionsbereiche bezeichnet. Das liegt daran, dass die Funktionen, sowohl initial über diesen Intervallen definiert sind, als auch die Intervallgrenzen definieren, was gültige Lösungen sind. Der Suchraum für die Funktionen aus den Tabellen \ref{subsec:Stetige_Testfunktionen:tab:Prob_Lernen}, \ref{subsec:Stetige_Testfunktionen:tab:Teil_1_Stet_Adapt}, \ref{subsec:Stetige_Testfunktionen:tab:Teil_2_1_Stet_Adapt} und \ref{subsec:Stetige_Testfunktionen:tab:Teil_2_2_Stet_Adapt} ist zwar \(\Sigma = \mathbb{R}^n\), wobei \(n \in \mathbb{N}\) von der jeweiligen Testfunktion abhängt, aber die Beschränkungen \(\mathcal{B}\) sind die Definitionsbereiche, die für die verschiedenen Testfunktionen abhängig von der Testfunktion definiert sind, z.B. für die Testfunktion \glqq Paraboloid\grqq{} gilt \(\mathcal{B}_1 = \ldots = \mathcal{B}_n = [-3,7]\)\hfill\newline
 		
-		Schließlich betrachten wir 6 ausgewählte Testfunktionen in den Abschnitten \ref{subsubsec:Stetige_Testfunktionen:Testfunktion_-_Paraboloid} bis \ref{subsubsec:Stetige_Testfunktionen:Testfunktion_-_Shekel} genauer. Diese Testfunktionen haben sich nicht nur durch besondere Herausforderungen, die sie an einen Optimierungsalgorithmus stellen, herausgetan, sondern auch dadurch, dass die Herausforderung, die sie bieten, singulär ist, sie also den Algorithmus auf nur eine Weise fordern und damit sich eignen den Algorithmus auf eine Stärke oder eine Schwäche zu testen und werden deswegen näher betrachtet. Alle Abbildungen in den Abschnitten \ref{subsubsec:Stetige_Testfunktionen:Testfunktion_-_Paraboloid} bis \ref{subsubsec:Stetige_Testfunktionen:Testfunktion_-_Shekel} wurden von mir mit den Python-Bibliotheken \glqq numpy\grqq, \glqq matplotlib\grqq, \glqq matplotlib.pyplot\grqq{} und \glqq cm\grqq{}, aus \glqq matplotlib\grqq{} erstellt. Ich habe für alle Abbildungen in den Abschnitten \ref{subsubsec:Stetige_Testfunktionen:Testfunktion_-_Paraboloid} bis \ref{subsubsec:Stetige_Testfunktionen:Testfunktion_-_Shekel} die selbe oder eine ähnliche Bildausrichtung, wie in \cite{molga2005test} und die selbe Farbpalette, wie in \cite{kim2020benchmark}, verwendet, da die Kombination von beiden gute Bilder ergeben hat. 
+		Schließlich werden noch 6 ausgewählte Testfunktionen in den Abschnitten \ref{subsubsec:Stetige_Testfunktionen:Testfunktion_-_Paraboloid} bis \ref{subsubsec:Stetige_Testfunktionen:Testfunktion_-_Shekel} genauer betrachtet. Diese Testfunktionen haben sich nicht nur durch besondere Herausforderungen, die sie an einen Optimierungsalgorithmus stellen, heraus getan, sondern auch dadurch, dass die Herausforderung, die sie bieten, singulär ist, sie also den Algorithmus auf nur eine Weise fordern und damit sich eignen den Algorithmus auf eine Stärke oder eine Schwäche zu testen und werden deswegen näher betrachtet. Alle Abbildungen in den Abschnitten \ref{subsubsec:Stetige_Testfunktionen:Testfunktion_-_Paraboloid} bis \ref{subsubsec:Stetige_Testfunktionen:Testfunktion_-_Shekel} wurden von mir mit den Python-Bibliotheken \glqq numpy\grqq, \glqq matplotlib\grqq, \glqq matplotlib.pyplot\grqq{} und \glqq cm\grqq{}, aus \glqq matplotlib\grqq{} erstellt. Es wurden für alle Abbildungen in den Abschnitten \ref{subsubsec:Stetige_Testfunktionen:Testfunktion_-_Paraboloid} bis \ref{subsubsec:Stetige_Testfunktionen:Testfunktion_-_Shekel} die selbe oder eine ähnliche Bildausrichtung, wie in \cite{molga2005test} und die selbe Farbpalette, wie in \cite{kim2020benchmark}, verwendet, da die Kombination von beiden gute Bilder ergeben hat. 
 		
 		%Wir bezeichnen die Initialisierungsintervalle hier jedoch als Definitionsbereiche, da die Funktionen initial über diesen definiert sind und führen sie nach dem Namen der Funktion an oder separat, wie in Tabelle~\ref{schwereTestfunktionenTeil2}.
 		
@@ -1760,8 +1759,7 @@ within=section,
 		
 		\subsubsection{Coil Spring Design Problem (CSD)} \label{subsubsec:Coil_Spring_Design_Problem}
 		
-		Das Coil Spring Design Problem (CSD) kann auf verschiedene Arten definiert werden, wie in \cite{sandgren1990nonlinear}, \cite{guo2004swarm} oder später, aufbauend auf \cite{sandgren1990nonlinear}, in \cite{ACO_2013}. In dieser Arbeit verwenden wir die Definition aus \cite{ACO_2013}. %TODO mehr Quellen finden; vllt. die Namen aus ACO_2013 verwenden, statt nur \cite{ACO_2013}
-		Im CSD Problem, wie es in \cite{ACO_2013} definiert wird, wird so nach dem Außendurchmesser \(D\), dem Drahtdurchmesser \(d\) und der Windungszahl \(N\) einer Schraubenfeder (Coil Spring), wie sie in Abbildungen~\ref{subsubsec:Testfunktionen:CSD:fig:CSD_schematical} skizzenhaft dargestellt ist, gesucht, dass der Materialbedarf für die Schraubenfeder minimiert wird, während gleichzeitig die Nebenbedingungen (Constrains) erfüllt werden.\\
+		Das Coil Spring Design Problem (CSD) kann auf verschiedene Arten definiert werden, wie in \cite{sandgren1990nonlinear}, \cite{guo2004swarm} oder später, aufbauend auf \cite{sandgren1990nonlinear}, in \cite{ACO_2013}. In dieser Arbeit wird die Definition aus \cite{ACO_2013} verwendet. Im CSD Problem, wie es in \cite{ACO_2013} definiert wird, wird so nach dem Außendurchmesser \(D\), dem Drahtdurchmesser \(d\) und der Windungszahl \(N\) einer Schraubenfeder (Coil Spring), wie sie in Abbildungen~\ref{subsubsec:Testfunktionen:CSD:fig:CSD_schematical} skizzenhaft dargestellt ist, gesucht, dass der Materialbedarf für die Schraubenfeder minimiert wird, während gleichzeitig die Nebenbedingungen (Constrains) erfüllt werden.\\
 		
 		\begin{figure}[H] %TODO Abbildung nachmalen
 			\centering
@@ -1812,7 +1810,7 @@ within=section,
 			
 		\end{table}
 		
-		\noindent Weiter werden in \cite{ACO_2013} Intervallgrenzen definiert, die in der Tabelle~\ref{table:int_restrict} aufgeführt werden. Es fällt auf, dass durch die Definition der Intervallgrenze \(d_{min}\) = 0.2 Zoll (inch), 31 der 42 möglichen Werte, welche die diskrete Variable \(d\) annehmen kann, wegfallen, aber dies ist so in \textit{Sandgren}~\cite{sandgren1990nonlinear} angegeben und die Folgequellen \cite{deb1998flexible}, \cite{Lampinen1999MIXEDIO}, \cite{guo2004swarm}, \cite{gong2022novel}, \cite{kannan1994augmented} und \cite{ACO_2013} verwenden die Intervallgrenze direkt oder verweisen auf \textit{Sandgren}~\cite{sandgren1990nonlinear}. Keine der Quellen gibt eine Begründung an. Um Vergleichbarkeit zu garantieren, behalten wir \(d_{min}\) = 0.2 bei.
+		\noindent Weiter werden in \cite{ACO_2013} Intervallgrenzen definiert, die in der Tabelle~\ref{table:int_restrict} aufgeführt werden. Es fällt auf, dass durch die Definition der Intervallgrenze \(d_{min}\) = 0.2 Zoll (inch), 31 der 42 möglichen Werte, welche die diskrete Variable \(d\) annehmen kann, wegfallen, aber dies ist so in \textit{Sandgren}~\cite{sandgren1990nonlinear} angegeben und die Folgequellen \cite{deb1998flexible}, \cite{Lampinen1999MIXEDIO}, \cite{guo2004swarm}, \cite{gong2022novel}, \cite{kannan1994augmented} und \cite{ACO_2013} verwenden die Intervallgrenze direkt oder verweisen auf \textit{Sandgren}~\cite{sandgren1990nonlinear}. Keine der Quellen gibt eine Begründung an. Um Vergleichbarkeit zu garantieren, wird \(d_{min}\) = 0.2 beibehalten.
 		
 		\begin{table}[H]
 			
@@ -1968,16 +1966,12 @@ within=section,
 			f(N, D, d) = \frac{\pi^2 D d^2 (N + 2)}{4}
 		\end{equation}
 
-		Schließlich wählen wir das Abbruchkriterium \(|f - f^*| < |\varepsilon_1 f| + \varepsilon_2, \, \varepsilon_1 = \varepsilon_2 = 10^{-6}\). Wir wählen dieses Abbruchkriterium, da wir davon ausgehen, dass in \textit{Socha}~\cite{socha2009ant} das selbe Kriterium benutzt wurde und es eine Erweiterung des Abbruchkriteriums \(|f - f^*| < |\varepsilon_1 f| + \varepsilon_2, \, \varepsilon_1 = \varepsilon_2 = 10^{-4}\) ist, welches für den Großteil der stetigen Testfunktionen in dieser Arbeit verwendet wurde. Leider ist in \textit{Socha}~\cite{socha2009ant} das Abbruchkriterium für das \ac{csd} nicht angegeben.
+		Schließlich wird das Abbruchkriterium als \(|f - f^*| < |\varepsilon_1 f| + \varepsilon_2, \, \varepsilon_1 = \varepsilon_2 = 10^{-6}\) gewählt. Dieses Abbruchkriterium wird gewählt, da davon ausgegangen wird, dass in \textit{Socha}~\cite{socha2009ant} das selbe Kriterium benutzt wurde und es eine Erweiterung des Abbruchkriteriums \(|f - f^*| < |\varepsilon_1 f| + \varepsilon_2, \, \varepsilon_1 = \varepsilon_2 = 10^{-4}\) ist, welches für den Großteil der stetigen Testfunktionen in dieser Arbeit verwendet wurde. Leider ist in \textit{Socha}~\cite{socha2009ant} das Abbruchkriterium für das \ac{csd} nicht angegeben.
 		
-		%TODO natürliche Erweiterung begründen?
-		
-		\paragraph{Vollständiger Raum als Initialisierungsintervall}\mbox{}\\%TODO fragen, ob 5.5.1.1 gut ist?
+		\paragraph{Vollständiger Raum als Initialisierungsintervall}\mbox{}\\
 		\newline
 		\noindent Wie bereits im Abschnitt~\ref{sec:Testfunktionen} beschrieben, hat das Initialisierungsintervall großen Einfluss auf den Erfolg %die Güte?
-		des Algorithmus. So können für das CSD Anfangslösungen aus dem gesamten Raum \(\{3 \cdot d_{min}, 3.0\} \times \{d_{min}, 0.5000\} \times \{1, 70\}\) oder dem gefilterten Raum gezogen werden.\\%TODO besser formulieren
-		
-		%TODO  was für das CSD einen Unterschied macht. Nimmt man den gesamten Raum als Grundlage, so findet \ac{acorvsmv} das Optimum nicht oder nur nach mehreren tausend Iterationen, wie in der Abbildung~\ref{fig:box_plot:ACO_R-VS_CSD_penalty_perform} zu sehen
+		des Algorithmus. So können für das CSD Anfangslösungen aus dem gesamten Raum \(\{3 \cdot d_{min}, 3.0\} \times \{d_{min}, 0.5000\} \times \{1, 70\}\) oder dem gefilterten Raum gezogen werden.\hfill\newline
 		
 		Nimmt man den gesamten Raum zum ziehen der Initiallösungen, so ändert sich die Zielfunktion von der Formel~\ref{subsubsec:Testfunktionen:CSD:eq:CSD_material} zu der Formel~\ref{subsubsec:Testfunktionen:CSD:eq:CSD_penalty}, wie in \cite{ACO_2013} definiert.
 		
@@ -2100,192 +2094,21 @@ within=section,
 
 		\paragraph{Resultierende Testkombinationen für das \ac{csd}}\mbox{}\\
 		
-		Wie wir gesehen haben, kann der Suchraum genommen werden ohne Filterung und mit Filterung. Zusätzlich kann die Zielfunktion exakt formuliert werden, wie in Gleichung~\ref{subsubsec:Testfunktionen:CSD:eq:CSD_material} und mit Straftermen, wie in Gleichung~\ref{subsubsec:Testfunktionen:CSD:eq:CSD_penalty}. Schließlich betrachten wir noch zwei Neustartstrategien, \(fixed = 0\) und \(adaptvie\). Damit ergeben sich 8 Kombinationen die getestet werden, wie in den Tabellen \ref{subsubsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_CSD_fixed} und \ref{subsubsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_CSD_adaptive} zu sehen.
+		Wie dargelegt, kann der Suchraum genommen werden ohne Filterung und mit Filterung. Zusätzlich kann die Zielfunktion exakt formuliert werden, wie in Gleichung~\ref{subsubsec:Testfunktionen:CSD:eq:CSD_material} und mit Straftermen, wie in Gleichung~\ref{subsubsec:Testfunktionen:CSD:eq:CSD_penalty}. Schließlich werden noch zwei Neustartstrategien, \(fixed = 0\) und \(adaptvie\), betrachtet. Damit ergeben sich 8 Kombinationen die getestet werden, wie in den Tabellen \ref{subsubsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_CSD_fixed} und \ref{subsubsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_CSD_adaptive} zu sehen.
 
-	%\section{Herausforderung}
-	
-	%TODO auflisten, wo schlechte Notationen oder ´Fehler in Papern waren
-	
-	%\section{Einfluss der Parameter}
-	
-	%Bevor wir ACO\(_{\mathbb{R}}\), ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple mit einander vergleichen, betrachten wir den Einfluss der Parameter in ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple. Die dieser Arbeit beiliegenden Algorithmen sind von zwei bzw. drei Parametern beeinflusst. Im Fall  ACO\(_{\mathbb{R}}\)-simple sind es \textit{q}, \textit{k} und \(\xi\) und im Fall von ACO\(_{\mathbb{R}}\)-very-simple sind es \textit{k} und \(\xi\), wie respektive in den Gleichungen~(\ref{ACO_R_simple_weights}) und (\ref{ACO_R_simple_linear_distribution}) bzw. der Gleichung~(\ref{ACO_R_very_simple_linear_distribution}) zu sehen ist --  zumindest nach Konstruktion. Tests haben jedoch gezeigt, dass es vier bzw. drei Parameter sind, nämlich, dass die Anzahl der Ameisen auch eine wesentliche Rolle spielt.\hfill\newline
-	
-	%Der Einfluss der Parameter wird außerdem geprüft, da es sich bei ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple lediglich um Intervallauswertungsmethoden handelt und hier der Einfluss der Parameter anders sein kann, als bei ACO\(_{\mathbb{R}}\), wir also zuerst überprüfen, ob er gleich ist oder nicht. Es besteht nämlich die Möglichkeit, dass aufgrund der zum Teil radikalen Einfachheit, vor allem von ACO\(_{\mathbb{R}}\)-very-simple, gegenüber ACO\(_{\mathbb{R}}\), der Einfluss der Parameter, im Vergleich zu ACO\(_{\mathbb{R}}\), einen anderen Charakter annimmt.\hfill\newline
-	
-	%Es wird jedoch davon ausgegangen, da sich alle Methoden doch ähneln, dass der Einfluss vergleichbar oder sogar der gleiche ist.\hfill\newline
-	
-	%Abschließend ist noch festzustellen, dass durch die Betrachtung der Einflüsse der Parameter auf ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple, eine Art Parameteroptimierung bzw. Parameter Tuning durchgeführt wird. Das ist zwar nicht das Ziel der Betrachtung, aber wenn wir die Einflüsse verschiedener Parameterwerte auf die Leistungsfähigkeit der Algorithmen untersuchen, untersuchen wir auch gleichzeitig die Güte der Wahl der Parameterwerte. Es wird jedoch an dieser Stelle nochmal betont, dass das Ziel der Betrachtung, der Einflüsse der Parameter, die Untersuchung der Ähnlichkeit der Varianten zur Lösungserzeugung ist.
-	
-	%\subsection{Einfluss der Anzahl der Ameisen}
-	
-	%Normalerweise wird bei einem Ameisenalgorithmus die Anzahl der Ameisen klein gehalten, aber sie erreicht niemals eins. ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple arbeiten jedoch, wie in der Abbildung~\ref{Ellipsoid_compare_m}, Abbildung~\ref{Cigar_compare_m}, Abbildung~\ref{Paraboloid_compare_m} und Abbildung~\ref{Tablet_compare_m} zu sehen, am besten mit nur einer einzigen Ameise, also wenn \textit{m}=1.
-	
-	%\begin{figure}[H]
-	%	\centering
-	%	\subfloat[][ACO\(_{\mathbb{R}}\)-simple]{\includegraphics[width=0.4\linewidth]{Abbildungen/ACO_R_simple_Ellipsoid_m_compare_n=10_g_q=0_95_xi=0_95_k=100_restarts=0_acc=1e-10.png}}
-	%	\qquad
-	%	\subfloat[][ACO\(_{\mathbb{R}}\)-very-simple]{\includegraphics[width=0.4\linewidth]{Abbildungen/ACO_R_very_simple_Ellipsoid_m_compare_n=10_g_q=0_95_xi=0_95_k=100_restarts=0_acc=1e-10.png}}
-	%	\caption{Ellipsoid Verglich m}
-	%	\label{Ellipsoid_compare_m}
-	%\end{figure}
-	
-	%\noindent Da in ACO\(_{\mathbb{R}}\), \textit{m} kein Parameter war und dort somit nicht diskutiert wurde, können wir leider keine Aussage darüber treffen, ob die Algorithmen ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple in ihrem Verhalten bzgl. des Parameters \textit{m} ähnlich zu ACO\(_{\mathbb{R}}\) sind.
-	
-	%\subsection{Einfluss des Parameters \textit{q}}
-	
-	%Wie in ACO\(_{\mathbb{R}}\), erwarten wir in ACO\(_{\mathbb{R}}\)-simple, dass \textit{q} die Lokalität der Suche steuert - je kleiner \textit{q}, desto mehr werden die besseren Lösungen zum Generieren neuer Lösungen bevorzugt, desto schneller konvergiert der Algorithmus. Dies ist auch der Fall, was anhand von Abbildung~\ref{Ellipsoid_compare_q}, Abbildung~\ref{Cigar_q_compare}, Abbildung~\ref{Paraboloid_q_compare} und Abbildung~\ref{Tablet_q_compare} zu sehen ist.
-	
-	%\begin{figure}[H]
-	%	\centering
-	%	\includegraphics[scale=0.8]{Abbildungen/ACO_R_simple_Ellipsoid_g_q_compare_m=1_xi=0_95_k=100_restarts=0_acc=1e-10.png}
-	%	\caption{Ellipsoid Vergleich \textit{q}}
-	%	\label{Ellipsoid_compare_q}
-	%\end{figure}
-	
-	%Der Algorithmus ist also in seinem Verhalten bzgl. des Parameters \textit{q} ähnlich zu ACO\(_{\mathbb{R}}\).\hfill\newline
-	
-	%Für ACO\(_{\mathbb{R}}\)-very-simple gibt es keine Abbildungen bzgl. des Einflusses des Parameters \textit{q}, da dieser Parameter bei ACO\(_{\mathbb{R}}\)-very-simple entfällt. Jedoch stellen wir fest, dass der Algorithmus sehr schnell konvergiert, viel schneller als ACO\(_{\mathbb{R}}\)-simple, wie in Tabelle~\ref{VerglelichACORSimpleundACORVerySimple} zu sehen. Ferner können wir die Abwesenheit des Parameters \textit{q} mit einem hinreichend kleinen \textit{q} gleichstellen, da, wenn \textit{q} sehr klein ist, nur die erste, also beste Lösung als Ausgangspunkt für die folgende Lösungserzeugung dient und ACO\(_{\mathbb{R}}\)-simple selbst viel schneller konvergiert, als beim Standartwert \textit{q}=0.95. Wir interpretieren also die schnelle Konvergenz von ACO\(_{\mathbb{R}}\)-very-simple als den Einfluss eines hinreichend kleinen \textit{q}.\hfill\newline
-	
-	%Beide Algorithmen, ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple, sind also in ihrem Verhalten bzgl. des Parameters \textit{q} ähnlich zu ACO\(_{\mathbb{R}}\).
-	
-	%\subsection{Einfluss des Parameters \textit{k}}
-	
-	%Wie zu erwarten war, funktionieren beide Algorithmen, ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple, mit größeren \textit{k} besser. Es wurde für alle späteren Durchläufe \textit{k}=100 gesetzt.\hfill\newline
-	
-	%\noindent Da in ACO\(_{\mathbb{R}}\), \textit{k} kein Parameter war und dort somit nicht diskutiert wurde, können wir leider keine Aussage darüber treffen, ob die Algorithmen ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple in ihrem Verhalten bzgl. des Parameters \textit{k} ähnlich zu ACO\(_{\mathbb{R}}\) sind.
-	
-	%\subsection{Einfluss des Parameters \(\xi\)}
-	
-	%In ACO\(_{\mathbb{R}}\) hat der Parameter \(\xi\) eine ähnliche Wirkung wie die Verdunstungsrate des Pheromons. Je größer \(\xi\), desto langsamer konvergiert der Algorithmus. In ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple vergrößert \(\xi\) das Suchintervall direkt, wodurch es einen noch stärkeren Einfluss auf die Konvergenz des Algorithmus haben sollte, jedoch stellt sich heraus, dass \(\xi\) nur einen geringen Einfluss, bei ACO\(_{\mathbb{R}}\)-simple, auf die Testfunktion \glqq Ellipsoid\grqq \hspace{.16667em} hat, wie Abbildung~\ref{Ellipsoid_compare_xi} zeigt.\hfill\newline
-	
-	%Für die Testfunktionen \glqq Cigar\grqq, \glqq Paraboloid\grqq \hspace{.16667em} und \glqq Tablet\grqq \hspace{.16667em} wurde das Ziel jedoch nur bei \(\xi = 0.95\) und \(\xi = 1.5 \) erreicht. Was wiederum einen sehr starker Einfluss nahelegt.\hfill\newline
-	
-	%Diese Beobachtung lässt sich dadurch erklären, dass \glqq Ellipsoid\grqq \hspace{.16667em} die Testfunktion ist, für welche ACO\(_{\mathbb{R}}\)-simple mit großen Abstand die besten Werte liefert, die Leistung des Algorithmus also für diese Testfunktion vom ausgewählten Parameter wenig beeinflusst wird. Somit betrachten wir, wie der Algorithmus sich bei anderen Testfunktionen verhält.
-	
-	%\begin{figure}[H]
-	%	\centering
-	%	\subfloat[][ACO\(_{\mathbb{R}}\)-simple]{\includegraphics[width=0.4\linewidth]{Abbildungen/ACO_R_simple_Ellipsoid_xi_compare_m=1_n=10_g_q=0_95_k=100_restarts=0_acc=1e-10.png}}
-	%	\qquad
-	%	\subfloat[][ACO\(_{\mathbb{R}}\)-very-simple]{\includegraphics[width=0.4\linewidth]{Abbildungen/ACO_R_very_simple_Ellipsoid_xi_compare_m=1_n=10_g_q=0_95_k=100_restarts=0_acc=1e-10.png}}
-	%	\caption{Ellipsoid Vergleich \(\xi\)}
-	%	\label{Ellipsoid_compare_xi}
-	%\end{figure}
-	
-	%Wenn wir also das Verhalten von ACO\(_{\mathbb{R}}\)-simple bei der Testfunktion \glqq Ellipsoid\grqq \hspace{.16667em} als Eigenheit des Algorithmus ausklammern und uns auf die restlichen Ergebnisse konzentrieren, stellen wir fest, dass beide Algorithmen, sowohl ACO\(_{\mathbb{R}}\)-simple als auch ACO\(_{\mathbb{R}}\)-very-simple, bei kleinerem \(\xi\) nicht konvergieren und bei größerem \(\xi\) langsamer konvergieren, wie Abbildung~\ref{Cigar_compare_xi}, Abbildung~\ref{Paraboloid_compare_xi} und Abbildung~\ref{Tablet_compare_xi} zeigen. Beide Algorithmen sind also in ihrem Verhalten bzgl. des Parameters \(\xi\) ähnlich zu ACO\(_{\mathbb{R}}\).
-	
-	%\subsection{Auswertung der Einflüsse der Parameter}
-	
-	%Wir stellen fest, dass die Einflüsse der Parameter \textit{q} und \(\xi\) in ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple ähnlich sind, wie die Einflüsse dieser Parameter in ACO\(_{\mathbb{R}}\), wie wir es erwartet haben.\hfill\newline
-	
-	%Die Einflüsse sind jedoch nur gleich für den Parameter \textit{q}. Für den Parameter \(\xi\) sind sie verschieden, wie Abbildungen~\ref{Ellipsoid_compare_xi}, \ref{Cigar_compare_xi}, \ref{Paraboloid_compare_xi} und~\ref{Tablet_compare_xi} zeigen. Denn wie wir den Abbildungen entnehmen können, konvergieren weder ACO\(_{\mathbb{R}}\)-simple noch ACO\(_{\mathbb{R}}\)-very-simple für kleine \(\xi\), während wir davon ausgehen, dass dies bei ACO\(_{\mathbb{R}}\) nicht der Fall ist, da in \textit{Socha und Dorigo}~\cite{socha2008ant} erwähnt wurde, dass ACO\(_{\mathbb{R}}\) für größere \(\xi\) langsamer konvergiert. Wir gehen also davon aus, dass ACO\(_{\mathbb{R}}\) für kleinere \(\xi\) nur schneller konvergiert und dies einfach nicht genauer untersucht wurde.\hfill\newline
-	
-	%Zum Schluss stellen wir noch fest, dass der Parameter \(\xi\) erstaunlicherweise optimal gewählt wurde, der Parameter \textit{q} sollte allerdings möglichst klein sein. Es war zwar nicht das Ziel der Betrachtung eine Parameteroptimierung durchzuführen, jedoch ist dies ein Nebenprodukt, dass bei einer Diskussion der Parameter unweigerlich entsteht.\hfill\newline
-	
-	%Da wir jedoch ausdrücklich die Algorithmen ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple in ihrer original konzipierten Fassung untersuchen wollen und zudem der einzige Unterschied zwischen den beiden die Größe des Parameters \textit{q} ist, bei ACO\(_{\mathbb{R}}\)-very-simple können wir sagen, \textit{q} ist sehr klein, müssen wir das Nebenprodukt der Untersuchung der Parametereinflüsse ignorieren. Denn wenn wir es mit einarbeiten, stellen wir fest, dass ein kleineres \textit{q} besser ist, wir ACO\(_{\mathbb{R}}\)-very-simple also zweimal untersuchen und hier gerade die Unterschiede zwischen ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple von Interesse sind.
-	
-	%\section{Vergleich zweier Intervallberechnungen für ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple}
-	
-	%TODO Vorgestellte Ergebnisse
-	
-	%Nun gilt es, den Begriff der Distanzberechnung zu untersuchen. Da es Unstimmigkeiten bzgl. der Benennung der Intervallberechnung gab, werden diese im folgenden geklärt. In \textit{Socha und Dorigo}~\cite{socha2008ant} wurde
-	
-	%\begin{equation} \label{linear_diviation}
-	%	\delta_d = \xi\sum_{j=1}^{k} \frac{|s_j^d-s_i^d|}{k-1}, ~ j \in \{1, ..., k\}, ~ d \in \{1, ..., n\},
-	%\end{equation}
-	
-	%\noindent als Standardabweichung bezeichnet. Dies ist jedoch als lineare Abweichung bekannt. Wir untersuchen also im Folgenden, ob es bessere Ergebnisse liefert, statt der linearen Abweichung, Gleichung~(\ref{linear_diviation}), die Standardabweichung, Gleichung~(\ref{stadard_diviation}) zu nehmen.
-	
-	%\begin{equation} \label{stadard_diviation}
-	%	\delta_d = \xi \sqrt{\sum_{j=1}^{k} \frac{|s_j^d-s_i^d|}{k-1}}, ~ j \in \{1, ..., k\}, ~ d \in \{1, ..., n\},
-	%\end{equation}
-	
-	%\noindent Es stellt sich heraus, dass die Intervalle, welche die lineare Abweichung liefert, also die Berechnung anhand Gleichung~(\ref{linear_diviation}), die besseren sind, wie Abbildung~\ref{ACO_R_simple_Ellipsoid_search_pattern_compare} und Abbildung~\ref{ACO_R_very_simple_Ellipsoid_search_pattern_compare} verdeutlichen.
-	
-	%\begin{figure}[H]
-	%	\centering
-	%	\subfloat[][ACO\(_{\mathbb{R}}\)-simple]{\includegraphics[width=0.4\linewidth]{Abbildungen/ACO_R_simple_Ellipsoid_m=1_n=10_g_q=0_95_xi=0_95_k=100_restarts=0_acc=1e-10}}
-	%	\qquad
-	%	\subfloat[][ACO\(_{\mathbb{R}}\)-simple]{\includegraphics[width=0.4\linewidth]{Abbildungen/ACO_R_STD_simple_Ellipsoid_m=1_n=10_g_q=0_95_xi=0_95_k=100_restarts=0_acc=1e-10}}
-	%	\caption{Vergleich zwischen linearer und Standardabweichung (Ellipsoid)}
-	%	\label{ACO_R_simple_Ellipsoid_search_pattern_compare}
-	%\end{figure}
-	
-	%\begin{figure}[H]
-	%	\centering
-	%	\subfloat[][ACO\(_{\mathbb{R}}\)-very-simple]{\includegraphics[width=0.4\linewidth]{Abbildungen/ACO_R_very_simple_Ellipsoid_m=1_n=10_g_q=0_95_xi=0_95_k=100_restarts=0_acc=1e-10}}
-	%	\qquad
-	%	\subfloat[][ACO\(_{\mathbb{R}}\)-very-simple]{\includegraphics[width=0.4\linewidth]{Abbildungen/ACO_R_STD_very_simple_Ellipsoid_m=1_n=10_g_q=0_95_xi=0_95_k=100_restarts=0_acc=1e-10}}
-	%	\caption{Vergleich zwischen linearer und Standardabweichung (Ellipsoid)}
-	%	\label{ACO_R_very_simple_Ellipsoid_search_pattern_compare}
-	%\end{figure}
-	
-	%Dabei zeigt der linke Boxplot (a) immer die Anzahl der notwendigen Funktionsauswertungen, mit linearer Abweichung, um das bekannte Ergebnis zu erreichen und der rechte Boxplot (b), die mit Standardabweichung.\hfill\newline
-	
-	%Abbildungen~\ref{ACO_R_simple_Ellipsoid_search_pattern_compare} und~\ref{ACO_R_very_simple_Ellipsoid_search_pattern_compare} sind auch leider die einzigen Abbildungen, welche als Vergleichsmöglichkeit für lineare und Standardabweichung für Funktionen aus Tabelle~\ref{einfacheTestfunktionen} herangezogen werden können, da beide Algorithmen, ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple, für Testfunktionen aus Tabelle~\ref{einfacheTestfunktionen}, außer für \glqq Ellipsoid\grqq, mit der Standardabweichung als Invervallauswertung nicht konvergierte.\hfill\newline
-	
-	%Andere Funktionen wurden nach diesen Ergebnisses nicht mehr getestet, da die Funktionen aus Tabelle~\ref{einfacheTestfunktionen} die einfachen Funktionen aus den verfügbaren Testproblemen darstellen und wenn für diese Funktionen keine Konvergenz zu beobachten ist, dann wird für die anderen erst recht keine zu beobachten sein.\hfill\newline
-	
-	%Somit kann geschlussfolgert werden, dass die Intervallberechnung anhand Formel~(\ref{linear_diviation}), also der linearen Abweichung, die bessere ist.
-	
 	\section{Vergleich von ACO\(_{\mathbb{R}}\), ACO\(_\text{MV}\) und den Varianten von \acl{acorvsmv}} \label{sec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Den_Iterationen_Von_ACO_R_Very_Simple}
 	
 	%TODO geht der Titel so? Varianten statt Iteration
 	
-	Alle Iterationen von \ac{acorvsmv} können mit gemischten Variablen umgehen. Aus Platzgründen wurde in den Tabellen wurde das \glqq -MV\grqq{} weggelassen.
+	Alle Varianten von \ac{acorvsmv} können mit gemischten Variablen umgehen. Aus Platzgründen wurde in den Tabellen wurde das \glqq -MV\grqq{} weggelassen.
 	
 	%TODO kann ich das so schreiben?
 	
 	\subsection{Vergleich bzgl. stetiger Testfunktionen} \label{subsec:Vergleich_Algorithmen:Vergleich_Auf_Stetigen_Testfunktionen}
 	
-	Da in \textit{Socha}~\cite{socha2009ant} ACO\(_\text{MV}\) erst dann eingeführt wird, wenn Testfunktionen mit gemischten Variablen eingeführt werden, kann in diesem Abschnitt nur mit ACO\(_\mathbb{R}\) aus \cite{socha2009ant} verglichen werden. Ferner werden in diesem Abschnitt nur Minimierungsprobleme betrachtet, also Probleme, bei denn das globale Minimum gesucht ist, da die Iterationen von \ac{acorvsmv} nicht mit Maximierungsproblemen umgehen können. Damit entfallen die beiden Maximierungsprobleme \glqq Diagonale Plane\grqq{} und \glqq Plane\grqq. Alle Testprobleme wurden 50 mal durchlaufen.
+	Da in \textit{Socha}~\cite{socha2009ant} ACO\(_\text{MV}\) erst dann eingeführt wird, wenn Testfunktionen mit gemischten Variablen eingeführt werden, kann in diesem Abschnitt nur mit ACO\(_\mathbb{R}\) aus \cite{socha2009ant} verglichen werden. Ferner werden in diesem Abschnitt nur Minimierungsprobleme betrachtet, also Probleme, bei denn das globale Minimum gesucht ist, da die Varianten von \ac{acorvsmv} nicht mit Maximierungsproblemen umgehen können. Damit entfallen die beiden Maximierungsprobleme \glqq Diagonale Plane\grqq{} und \glqq Plane\grqq. Alle Testprobleme wurden 50 mal durchlaufen.
 	
 	%TODO 50 mal durchlaufen besser?
-	
-	%Wie in der Betrachtung der Einflüsse der Parameter auf ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple sich bereits abgezeichnet hat, gehen wir davon aus, dass ACO\(_{\mathbb{R}}\)-very-simple bei einfachen Testproblemen der bessere Algorithmus ist, da wenn eine Funktion hinreichend einfach ist, es nicht notwendig ist, bereits gefundene gute Lösungen zu einer noch besseren Lösung aufwendig zu verbinden und kann man zu einfacheren Mitteln der Lösungsfindung greifen. Deswegen gehen wir davon aus, dass ACO\(_{\mathbb{R}}\)-very-simple im Vergleich in den Tabellen~\ref{VerglelichACORundACORSimple} und~\ref{VerglelichACORundACORVerySimple} als der bessere Algorithmus hervorgehen wird.\hfill\newline
-	
-	%In den Tabellen dieses Abschnittes werden ferner als Bestwert immer die Bestwerte aller Algorithmen aus \textit{Socha und Dorigo}~\cite{socha2008ant} betrachtet und zusätzlich der Algorithmen ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple, wie sie in den Tabellen aufgeführt werden, weswegen in Tabelle~\ref{VerglelichACORundACORSimple} und Tabelle~\ref{VerglelichACORundACORVerySimple} verschiedene Bestwerte zu sehen sind, da in Tabelle~\ref{VerglelichACORundACORSimple} ACO\(_{\mathbb{R}}\)-very-simple nicht gelistet ist und somit seine Bestwerte in den Vergleich nicht einfließen.
-	
-	%TODO Rosenbrock ist so schwer, weil in der Nähe des Optimums Dynamitk(Rosenbrock) < c in R, c klein
-	
-	%\begin{table}[H]
-		
-	%	\fontsize{10pt}{12pt}
-		
-	%	\caption{Vergleich der Ergebnisse zwischen ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\) basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant} und damit auch auf \textit{Kern et al., 2004}~\cite{kern2004learning}}
-		
-	%	\label{VerglelichACORundACORSimple}
-		
-	%	\begin{tabularx}{\textwidth}{l|l|l|l}
-			
-	%		\rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt}\\
-			
-	%		Testfunktion & ACO\(_{\mathbb{R}}\)-simple & ACO\(_{\mathbb{R}}\) & Bestwert\\
-			
-	%		\rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt}\\
-			
-	%		Cigar & 3.5 (13516) & 1.4 (5376) & \textbf{1.0} (3840)\\
-			
-	%		Diagonal Plane & 50.2 (8531) & \textbf{1.0} (170) & \textbf{1.0} (170)\\
-			
-	%		Ellipsoid & \textbf{1.0} (947) & 12.2 (11570) & \textbf{1.0} (947)\\
-			
-	%		Paraboloid & 7.3 (10041) & 1.1 (1570) & \textbf{1.0} (1370)\\
-			
-	%		Plane & 63.9 (11176) & \textbf{1.0} (175) & \textbf{1.0} (175)\\
-			
-	%		Rosenbrock & \(\infty\) & *1.1 (7909) & \textbf{1.0} (7190)\\
-			
-	%		Tablet & 4.2 (10812) & \textbf{1.0} (2567) & \textbf{1.0} (2567)
-			
-	%	\end{tabularx}
-		
-	%	\smallskip
-		
-	%	Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Bei Ergebnissen, wo ein * steht, wurde die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht, und dort wo \(\infty\) steht wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht.\hfill\newline
-		
-	%\end{table}
-	
-	%Wie in Tabelle~\ref{VerglelichACORundACORSimple} zu sehen, ist ACO\(_{\mathbb{R}}\) der bessere Algorithmus. ACO\(_{\mathbb{R}}\)-simple mag zwar bei einer Testfunktion vorne liegen, jedoch ist ACO\(_{\mathbb{R}}\)-simple zu schlecht bei den Maximierungsproblemen und auch nicht so gut bei den anderen Testfunktionen, vor allem bei \glqq Rosenbrock\grqq, wo der Algorithmus das Optimum gar nicht findet.
 	
 	%TODO zuert Tabellen oder Text?
 	
@@ -2347,7 +2170,7 @@ within=section,
 		
 		%\caption{Vergleich der Ergebnisse zwischen ACO\(_{\mathbb{R}}\), ACO\(_{\mathbb{R}}\)-very-simple und den Iterationen von ACO\(_{\mathbb{R}}\)-very-simple auf Testfunktionen, die zum Vergleich zwischen Algorithmen, die probabilistisches einsetzen, benutzt werden, basierend auf meiner Bachelorarbeit~\cite{FCM_2019}, \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning} Teil 2}
 		
-		\caption{Vergleich der Ergebnisse zwischen ACO\(_{\mathbb{R}}\), ACO\(_{\mathbb{R}}\)-very-simple und den Iterationen von ACO\(_{\mathbb{R}}\)-very-simple-mixed-variable, mit Neustartstrategie \(fixed = 0\) (NSS-f0), auf Testfunktionen, die zum Vergleich zwischen Algorithmen, die probabilistisches Lernen einsetzen, benutzt werden, basierend auf meiner Bachelorarbeit~\cite{FCM_2019}, \textit{Socha und Dorigo}~\cite{socha2008ant} und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}}
+		\caption{Vergleich der Ergebnisse zwischen ACO\(_{\mathbb{R}}\), ACO\(_{\mathbb{R}}\)-very-simple und den Varianten von ACO\(_{\mathbb{R}}\)-very-simple-mixed-variable, mit Neustartstrategie \(fixed = 0\) (NSS-f0), auf Testfunktionen, die zum Vergleich zwischen Algorithmen, die probabilistisches Lernen einsetzen, benutzt werden, basierend auf meiner Bachelorarbeit~\cite{FCM_2019}, \textit{Socha und Dorigo}~\cite{socha2008ant} und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}}
 		
 		%TODO wie viele zitieren?
 		
@@ -2399,124 +2222,9 @@ within=section,
 	%TODO schlechter und viel schlechter beibehalten oder nur schlehchter
 	%TODO generell blumigere Sprache beim Vergleich beibehalten?
 	
-	Wie in den Tabellen \ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Teil_1} und \ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Teil_2} zu sehen, ist \ac{acorvs} des beste Algorithmus in 3 von 5 Problemen und sehr gut in Einem. Nur für die Testfunktion \glqq Rosenbrock\grqq{} konvergiert \ac{acorvs} nicht. Die Leistung von \ac{acorvsmv} mit NSS-f0 sind dagegen schlechter. Die Iterationen von \ac{acorvsmv} mit NSS-adapt sind nicht aufgeführt, da keine der Iterationen von \ac{acorvsmv} mit NSS-adapt bei keiner der Testfunktionen aus den Tabellen \ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Teil_1} und \ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Teil_2} konvergierte. Positiv fallen zudem die Algorithmen ACO\(_\mathbb{R}\) und CMA-ES auf, da ihre relative Anzahl an Funktionsauswertungen nur wenig schlechter sind, als der Bestwert, außer bei der Testfunktion \glqq Ellipsoid\grqq.\hfill\newline
+	Wie in den Tabellen \ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Teil_1} und \ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Teil_2} zu sehen, ist \ac{acorvs} des beste Algorithmus in 3 von 5 Problemen und sehr gut in Einem. Nur für die Testfunktion \glqq Rosenbrock\grqq{} konvergiert \ac{acorvs} nicht. Die Leistung von \ac{acorvsmv} mit NSS-f0 sind dagegen schlechter. Die Varianten von \ac{acorvsmv} mit NSS-adapt sind nicht aufgeführt, da keine der Varianten von \ac{acorvsmv} mit NSS-adapt bei keiner der Testfunktionen aus den Tabellen \ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Teil_1} und \ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Teil_2} konvergierte. Positiv fallen zudem die Algorithmen ACO\(_\mathbb{R}\) und CMA-ES auf, da ihre relative Anzahl an Funktionsauswertungen nur wenig schlechter sind, als der Bestwert, außer bei der Testfunktion \glqq Ellipsoid\grqq.\hfill\newline
 	
-	Wir schlussfolgern also, dass unter den Algorithmen, die probabilistisches Lernen einsetzten, \ac{acorvs} der bessere Algorithmus ist, knapp gefolgt von ACO\(_\mathbb{R}\) und CMA-ES. Auf der anderen Seite, gemessen daran, dass die Iterationen von \ac{acorvsmv}, unabhängig der Neustartstrategie, sowohl komplexer als \ac{acorvs} sind, als auch schlechter bzw. viel schlechter, sofern sie konvergieren, schlussfolgern wir, dass die Erweiterung von \ac{acorvs} zu den Iterationen von \ac{acorvsmv}, bei Testfunktionen, welche zum Vergleich für Algorithmen, die probabilistisches Lernen einsetzten, genommen werden, keinen Mehrwert brachte.
-	
-	%Wie in Tabelle~\ref{VerglelichACORundACORVerySimple} zu sehen, ist ACO\(_{\mathbb{R}}\)-very-simple, bei einfachen Testproblemen, der bessere Algorithmus in allen Testproblemen, bis auf \glqq Rosenbrock\grqq. Hätte ACO\(_{\mathbb{R}}\)-very-simple auch bei diesem Problem eine Lösung gefunden, wäre er, für einfache Testprobleme, der klare Favorit gewesen. So aber kann man sagen, dass die Algorithmen, bei einfachen Testproblemen, ebenbürtig sind, besonders, da ACO\(_{\mathbb{R}}\) bei den anderen Testfunktionen nur wenig schlechter ist, außer \glqq Ellipsoid\grqq.\hfill\newline
-	
-	%Auch wenn aus den Tabellen~\ref{VerglelichACORundACORSimple} und~\ref{VerglelichACORundACORVerySimple} bereits entnommen werden kann, dass von den beiden Algorithmen ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple, ACO\(_{\mathbb{R}}\)-very-simple der bessere ist, betrachten wir in Tabelle~\ref{VerglelichACORSimpleundACORVerySimple} nochmal eine direkte Gegenüberstellung, um ein noch klareres Ergebnis zu erhalten.
-	
-	%\begin{table}[H]
-		
-	%	\fontsize{10pt}{12pt}
-		
-	%	\caption{Vergleich der Ergebnisse zwischen ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple}
-		
-	%	\label{VerglelichACORSimpleundACORVerySimple}
-		
-	%	\begin{tabularx}{\textwidth}{l|l|l}
-			
-	%		\rule{4.8cm}{0.4pt} & \rule{4.8cm}{0.4pt} & \rule{4.8cm}{0.4pt}\\
-			
-	%		Testfunktion & ACO\(_{\mathbb{R}}\)-simple & ACO\(_{\mathbb{R}}\)-very-simple\\
-			
-	%		\rule{4.8cm}{0.4pt} & \rule{4.8cm}{0.4pt} & \rule{4.8cm}{0.4pt}\\
-			
-	%		Cigar & 6.6 (13516) & \textbf{1.0} (2037) \\
-			
-	%		Diagonal Plane & 57.6 (8531) & \textbf{1.0} (148) \\
-			
-	%		Ellipsoid & 1.5 (947) & \textbf{1.0} (644) \\
-			
-	%		Paraboloid & 6.8 (10041) & \textbf{1.0} (1483) \\
-			
-	%		Plane & 85.3 (11176) & \textbf{1.0} (131) \\
-			
-	%		Rosenbrock & \(\infty\) & \(\infty\)\\
-			
-	%		Tablet & 6.2 (10812) & \textbf{1.0} (1751) 
-			
-	%	\end{tabularx}
-		
-	%	\smallskip
-		
-	%	Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Dort, wo \(\infty\) steht, wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht.\hfill\newline
-		
-	%4\end{table}
-	
-	%Wie in Tabelle~\ref{VerglelichACORSimpleundACORVerySimple} nochmal deutlich zu sehen ist, ist ACO\(_{\mathbb{R}}\)-very-simple, bei einfach Testproblemen, der bessere Algorithmus.
-	
-	%\begin{table}[H]
-		
-		%\fontsize{10pt}{12pt}
-		
-		%\caption{Zweiter Teil des Vergleiches der Ergebnisse zwischen ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\) basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant} und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}}
-		
-		%\label{VerglelichACORundACORSimpleTeil2}
-		
-		%\begin{tabularx}{\textwidth}{l|l|l|l}
-			
-		%	\rule{3,55cm}{0.4pt} & \rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt}\\
-			
-		%	Testfunktion & ACO\(_{\mathbb{R}}\)-simple & ACO\(_{\mathbb{R}}\) & Bestwert\\
-			
-		%	\rule{3,55cm}{0.4pt} & \rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt} & \rule{3,45cm}{0.4pt}\\
-			
-		%	\(B_2\) & 5.3 (2272) & 1.3 (544) & \textbf{1.0} (430)\\
-			
-		%	Branin RCOS & 6.5 (1600) & 3.5 (858) & \textbf{1.0} (245)\\
-			
-		%	Easom & - & \textbf{1.0} [98\%] (772) & \textbf{1.0} (772)\\
-			
-		%	De Jong & 2.9 (965) & 1.0 ($\sim$ 392) & \textbf{1.0} (329)\\
-			
-		%	Goldstein and Price & 4.0 (917) & 1.7 (384) & \textbf{1.0} (231)\\
-			
-		%	Griewangk & \(\infty\) & \textbf{1.0} [61\%] (1390) & \textbf{1.0} (1390)\\
-			
-		%	Hartmann(3,4) & - & \textbf{1.0} (342) & \textbf{1.0} (342)\\
-			
-		%	Hartmann(6,4) & 2.3 (1714) & \textbf{1.0} (722) & \textbf{1.0} (722)\\
-			
-		%	Martin and Gaddy & 2.8 (974) & \textbf{1.0} (345) & \textbf{1.0} (345)\\
-			
-		%	Paraboloid(6) & 3.0 (2308) & 1.6 (781) & \textbf{1.0} (781)\\
-			
-		%	Rosenbrock(2) & 15.2 (7317) & 1.7 (820) & \textbf{1.0} (480)\\
-			
-		%	Rosenbrock(5) & \(\infty\) & 1.2 [97\%] (2487) & \textbf{1.0} (2142)\\
-			
-		%	Shekel(4,5) & 2.7 (1642) & 1.3 [57\%] (787) & \textbf{1.0} [76\%] (610)\\
-			
-		%	Shekel(4,7) & 2.3 (1595) & 1.1 [79\%] (748) & \textbf{1.0} [83\%] (680)\\
-			
-		%	Shekel(4,10) & 2.4 (1559) & 1.1 [81\%] (715) & \textbf{1.0} [83\%] (650)\\
-			
-		%	Zakharov(2) & 3.4 (664) & 1.7 (332) & \textbf{1.0} (195)\\
-			
-		%	Zakharov(5) & 5.7 (4157) & \textbf{1.0} (727) & \textbf{1.0} (727)\\
-			
-		%\end{tabularx}
-		
-		%\smallskip
-		
-		%Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Bei Ergebnissen, wo die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht wurde, ist der Anteil der erfolgreichen Durchläufe in Prozent in eckigen Klammern angegeben, wo \(\infty\) steht, wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht.\\
-		%Bei der Funktion \glqq De Jong\grqq \hspace{.16667em} konnte für ACO\(_{\mathbb{R}}\) die genaue Anzahl an Funktionsauswertungen nicht ermittelt werden.\hfill\newline
-		
-	%\end{table}
-	
-	%\noindent Wie in Tabelle~\ref{VerglelichACORundACORSimpleTeil2} zu sehen, ist ACO\(_{\mathbb{R}}\)-simple der schlechtere Algorithmus, er ist sogar bei einer Funktion viel schlechter als ACO\(_{\mathbb{R}}\).\hfill\newline
-	
-	%Die Easom-Testfunktion konnte leider nicht angegeben werden, da bei dem Initialisierungsintervall zu große Werte für den Algorithmus auftreten und es zu einem Überlauf kommt. Bei kleineren Initialisierungsintervallen konvergiert der Algorithmus jedoch schnell.\hfill\newline
-	
-	%Die Hartmann(3,4)-Testfunktion konnte leider nicht angegeben werden, da die Anzahl der durchschnittlichen Funktionsauswertungen bei dieser Testfunktion bei 4 lag und es ist eher wahrscheinlich, dass bei dem Auswerten, Berechnen oder Initialisieren ein Fehler aufgetreten ist, als dass der Algorithmus wirklich nur 4 Funktionsauswertungen braucht.\hfill\newline
-	
-	%Auf der anderen Seite, wenn die Genauigkeit auf \(|f-f^*|<|\epsilon_1f + \epsilon_2|\), \(\epsilon_1=\epsilon_2=10^{-10}\) angehoben wird, braucht der Algorithmus mehrere Tausend Funktionsauswertungen (5000-12000) und findet das Optimum sogar manchmal nicht, was viel eher dafür spricht, dass es hauptsächlich an der Initialisierung gepaart mit der geringen Anforderung an die Genauigkeit liegt und es kein Fehler der Berechnung ist.\hfill\newline
-	
-	%Weiter haben Tests ergeben, dass selbst bei einer Archivgröße von \textit{k}=10, statt \textit{k}=100, das selbe Ergebnis beobachtet werden kann, was die Initialisierung ausschließt, da 10 zufällige Lösungen, selbst wenn es gute sind, den Effekt nicht erklären können und vor allem nicht bei allen 50 Durchläufen, da auch mal schlechte Lösungen ins Archiv hätten aufgenommen werden müssen. Das Ergebnis konnte jedoch konstant beobachtet werden, unabhängig von der Archivgröße.\hfill\newline
-	
-	%Damit lässt sich die geringe Anforderung an die Genauigkeit als Quelle des Effektes feststellen. Auf der anderen Seite ist das Ergebnis einfach zu gut, um lediglich mit einer geringen Anforderung an die Genauigkeit erklärt werden zu können. Ich gehe davon aus, dass es noch andere Faktoren gibt und führe das Ergebnis in der Tabelle~\ref{VerglelichACORundACORSimpleTeil2} nicht auf.
+	Wir schlussfolgern also, dass unter den Algorithmen, die probabilistisches Lernen einsetzten, \ac{acorvs} der bessere Algorithmus ist, knapp gefolgt von ACO\(_\mathbb{R}\) und CMA-ES. Auf der anderen Seite, gemessen daran, dass die Varianten von \ac{acorvsmv}, unabhängig der Neustartstrategie, sowohl komplexer als \ac{acorvs} sind, als auch schlechter bzw. viel schlechter, sofern sie konvergieren, schlussfolgern wir, dass die Erweiterung von \ac{acorvs} zu den Varianten von \ac{acorvsmv}, bei Testfunktionen, welche zum Vergleich für Algorithmen, die probabilistisches Lernen einsetzten, genommen werden, keinen Mehrwert brachte.
 	
 	\begin{table}[H]
 		
@@ -2586,7 +2294,7 @@ within=section,
 		
 		%\caption{Vergleich der Ergebnisse zwischen Algorithmen, die probabilistisches Lernen einsetzten auf Testfunktionen, die zum Vergleich zwischen Algorithmen, die probabilistisches Lernen einsetzten, benutzt werden, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning} Teil 1}
 		
-		\caption{Vergleich der Ergebnisse zwischen Algorithmen, die verwandt zu Ameisenalgorithmen sind, mit Neustartstrategie \(fixed = 0\) (NSS-f0) für Iterationen von \acl{acorvsmv}, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}, Teil 2}
+		\caption{Vergleich der Ergebnisse zwischen Algorithmen, die verwandt zu Ameisenalgorithmen sind, mit Neustartstrategie \(fixed = 0\) (NSS-f0) für Varianten von \acl{acorvsmv}, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}, Teil 2}
 		
 		%TODO fixed 0
 		
@@ -2652,7 +2360,7 @@ within=section,
 		
 		%\caption{Vergleich der Ergebnisse zwischen Algorithmen, die probabilistisches Lernen einsetzten auf Testfunktionen, die zum Vergleich zwischen Algorithmen, die probabilistisches Lernen einsetzten, benutzt werden, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning} Teil 1}
 		
-		\caption{Vergleich der Ergebnisse zwischen Algorithmen, die verwandt zu Ameisenalgorithmen sind, mit Neustartstrategie \(adaptive\) (NSS-adapt) für Iterationen von \acl{acorvsmv}, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}, Teil 3, adaptive}
+		\caption{Vergleich der Ergebnisse zwischen Algorithmen, die verwandt zu Ameisenalgorithmen sind, mit Neustartstrategie \(adaptive\) (NSS-adapt) für Varianten von \acl{acorvsmv}, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}, Teil 3, adaptive}
 		
 		%TODO adaptive
 		
@@ -2714,9 +2422,9 @@ within=section,
 		
 	\end{table}
 	
-	Wie in den Tabellen \ref{subsec:Vergleich_Von_ACO_R_Und_Iterationen_Von_ACO_R_Very_Simple:tab:Vergleich_Zu_Ameisen_Verwandte_Algorithmen_Teil_1}, \ref{subsec:Vergleich_Von_ACO_R_Und_Iterationen_Von_ACO_R_Very_Simple:tab:Vergleich_Zu_Ameisen_Verwandte_Algorithmen_Teil_2} und \ref{subsec:Vergleich_Von_ACO_R_Und_Iterationen_Von_ACO_R_Very_Simple:tab:Vergleich_Zu_Ameisen_Verwandte_Algorithmen_Teil_3} zu sehen, im Gegenteil zu den Testfunktionen, die zum Vergleich zwischen Algorithmen, die probabilistisches Lernen einsetzen, benutzt werden, ist es bei Testfunktionen, die benutzt werden, um Algorithmen, die verwandt zu Ameisenalgorithmen sind, zu testen, nicht mehr eindeutig, welcher Algorithmus der beste ist. So sind ACO\(_\mathbb{R}\) und \ac{acorvs} die besten Algorithmen jeder in jeweils 3 von 8 Probleme und Hom-HPB-ACO\(_\mathbb{R}\)-VS-MV mit NSS-f0 ist der beste Algorithmus in 2 der 8 Probleme. Ferner sind die Algorithmen ACO\(_\mathbb{R}\), \ac{acorvs} und Hom-HPB-ACO\(_\mathbb{R}\)-VS-MV mit NSS-f0 bei den Probleme, wo sie nicht der beste Algorithmus sind, wenn man ihre relative Anzahl an Funktionsauswertungen betrachtet, nahe dem Bestwert, außer bei den Testfunktionen \glqq Griewangk\grqq{} und \glqq Rosenbrock(5)\grqq, wo \ac{acorvs} viel schlechter ist als ACO\(_\mathbb{R}\) und Hom-HPB-ACO\(_\mathbb{R}\)-VS-MV mit NSS-f0 nicht konvergiert. Auf der anderen Seite kann aus der Tabelle~\ref{subsec:Vergleich_Von_ACO_R_Und_Iterationen_Von_ACO_R_Very_Simple:tab:Vergleich_Zu_Ameisen_Verwandte_Algorithmen_Teil_1} entnommen werden, dass die Algorithmen CACO, API und CIAC, dort, wo Ergebnisse in der Literatur berichtet wurden, schlechter bis viel schlechter sind, als die drei genannten Favoriten. Bei den Iterationen von \ac{acorvsmv} mit NSS-adapt sind die Ergebnisse gemischt aber da sie bei 4 der 8 Probleme viel schlechter sind, werden sie auch, insgesamt, als schlechter als ACO\(_\mathbb{R}\), \ac{acorvs} und Hom-HPB-ACO\(_\mathbb{R}\)-VS-MV mit NSS-f0 betrachtet.\hfill\newline
+	Wie in den Tabellen \ref{subsec:Vergleich_Von_ACO_R_Und_Iterationen_Von_ACO_R_Very_Simple:tab:Vergleich_Zu_Ameisen_Verwandte_Algorithmen_Teil_1}, \ref{subsec:Vergleich_Von_ACO_R_Und_Iterationen_Von_ACO_R_Very_Simple:tab:Vergleich_Zu_Ameisen_Verwandte_Algorithmen_Teil_2} und \ref{subsec:Vergleich_Von_ACO_R_Und_Iterationen_Von_ACO_R_Very_Simple:tab:Vergleich_Zu_Ameisen_Verwandte_Algorithmen_Teil_3} zu sehen, im Gegenteil zu den Testfunktionen, die zum Vergleich zwischen Algorithmen, die probabilistisches Lernen einsetzen, benutzt werden, ist es bei Testfunktionen, die benutzt werden, um Algorithmen, die verwandt zu Ameisenalgorithmen sind, zu testen, nicht mehr eindeutig, welcher Algorithmus der beste ist. So sind ACO\(_\mathbb{R}\) und \ac{acorvs} die besten Algorithmen jeder in jeweils 3 von 8 Probleme und Hom-HPB-ACO\(_\mathbb{R}\)-VS-MV mit NSS-f0 ist der beste Algorithmus in 2 der 8 Probleme. Ferner sind die Algorithmen ACO\(_\mathbb{R}\), \ac{acorvs} und Hom-HPB-ACO\(_\mathbb{R}\)-VS-MV mit NSS-f0 bei den Probleme, wo sie nicht der beste Algorithmus sind, wenn man ihre relative Anzahl an Funktionsauswertungen betrachtet, nahe dem Bestwert, außer bei den Testfunktionen \glqq Griewangk\grqq{} und \glqq Rosenbrock(5)\grqq, wo \ac{acorvs} viel schlechter ist als ACO\(_\mathbb{R}\) und Hom-HPB-ACO\(_\mathbb{R}\)-VS-MV mit NSS-f0 nicht konvergiert. Auf der anderen Seite kann aus der Tabelle~\ref{subsec:Vergleich_Von_ACO_R_Und_Iterationen_Von_ACO_R_Very_Simple:tab:Vergleich_Zu_Ameisen_Verwandte_Algorithmen_Teil_1} entnommen werden, dass die Algorithmen CACO, API und CIAC, dort, wo Ergebnisse in der Literatur berichtet wurden, schlechter bis viel schlechter sind, als die drei genannten Favoriten. Bei den Varianten von \ac{acorvsmv} mit NSS-adapt sind die Ergebnisse gemischt aber da sie bei 4 der 8 Probleme viel schlechter sind, werden sie auch, insgesamt, als schlechter als ACO\(_\mathbb{R}\), \ac{acorvs} und Hom-HPB-ACO\(_\mathbb{R}\)-VS-MV mit NSS-f0 betrachtet.\hfill\newline
 	
-	Wir schlussfolgern also, dass unter den Algorithmen, die verwandt zu Ameisenalgorithmen sind, ACO\(_\mathbb{R}\) der bessere Algorithmus ist, da er nicht nur bei 3 der 8 Probleme der beste Algorithmus ist, sondern auch, dort wo er nicht der beste Algorithmus ist, er, wenn man seine relative Anzahl an Funktionsauswertungen betrachtet, nahe dem Bestwert ist. Besonders hebt sich ACO\(_\mathbb{R}\) bei den Funktionen \glqq Griewangk\grqq{} und \glqq Rosenbrock(5)\grqq{} hervor. Knapp gefolgt wird ACO\(_\mathbb{R}\) von \ac{acorvs} und Hom-HPB-ACO\(_\mathbb{R}\)-VS-MV mit NSS-f0. Ferner, gemessen daran, dass die Iterationen von \ac{acorvsmv}, unabhängig der Neustartstrategie, abgesehen von Hom-HPB-ACO\(_\mathbb{R}\)-VS-MV, nicht besser als \ac{acorvs} sind, jedoch komplexer und Hom-HPB-ACO\(_\mathbb{R}\)-VS-MV auch nur, im Durchschnitt, genauso gut ist, wie \ac{acorvs}, aber auch komplexer, schlussfolgern wir, dass die Erweiterung von \ac{acorvs}	zu den Iterationen von \ac{acorvsmv}, bei Testfunktionen, welche zum Vergleich für Algorithmen, die verwandt zu Ameisenalgorithmen sind, genommen werden, keinen Mehrwert brachte.
+	Wir schlussfolgern also, dass unter den Algorithmen, die verwandt zu Ameisenalgorithmen sind, ACO\(_\mathbb{R}\) der bessere Algorithmus ist, da er nicht nur bei 3 der 8 Probleme der beste Algorithmus ist, sondern auch, dort wo er nicht der beste Algorithmus ist, er, wenn man seine relative Anzahl an Funktionsauswertungen betrachtet, nahe dem Bestwert ist. Besonders hebt sich ACO\(_\mathbb{R}\) bei den Funktionen \glqq Griewangk\grqq{} und \glqq Rosenbrock(5)\grqq{} hervor. Knapp gefolgt wird ACO\(_\mathbb{R}\) von \ac{acorvs} und Hom-HPB-ACO\(_\mathbb{R}\)-VS-MV mit NSS-f0. Ferner, gemessen daran, dass die Varianten von \ac{acorvsmv}, unabhängig der Neustartstrategie, abgesehen von Hom-HPB-ACO\(_\mathbb{R}\)-VS-MV, nicht besser als \ac{acorvs} sind, jedoch komplexer und Hom-HPB-ACO\(_\mathbb{R}\)-VS-MV auch nur, im Durchschnitt, genauso gut ist, wie \ac{acorvs}, aber auch komplexer, schlussfolgern wir, dass die Erweiterung von \ac{acorvs} zu den Varianten von \ac{acorvsmv}, bei Testfunktionen, welche zum Vergleich für Algorithmen, die verwandt zu Ameisenalgorithmen sind, genommen werden, keinen Mehrwert brachte.
 	
 	
 	%TODO ist es ok, dass Probleme und Testfunktion als Sysnonyme interchanging benutzt werden? Testfunktionen für Funktionen Problem für CSD
@@ -2725,7 +2433,7 @@ within=section,
 		
 		%\fontsize{10pt}{12pt}
 		
-		\caption{Vergleich zwischen ACO\(_{\mathbb{R}}\), \acl{acorvs}, Iterationen von \acl{acorvsmv} und anderen Meta-Heuristiken, die für stetige Probleme adaptiert wurden, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant} und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}, Teil 1}
+		\caption{Vergleich zwischen ACO\(_{\mathbb{R}}\), \acl{acorvs}, Varianten von \acl{acorvsmv} und anderen Meta-Heuristiken, die für stetige Probleme adaptiert wurden, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant} und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}, Teil 1}
 		
 		\label{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Mit_Meta_-_Heuristiken_Adaptiert_Fuer_Stetige_Probleme_Teil_1}
 		
@@ -2811,7 +2519,7 @@ within=section,
 		
 		%\fontsize{10pt}{12pt}
 		
-		\caption{Vergleich zwischen ACO\(_{\mathbb{R}}\), \acl{acorvs}, Iterationen von \acl{acorvsmv} mit Neustartstrategie \(fixed = 0\) (NSS-f0) und anderen Meta-Heuristiken, die für stetige Probleme adaptiert wurden, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant} und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}, Teil 2}
+		\caption{Vergleich zwischen ACO\(_{\mathbb{R}}\), \acl{acorvs}, Varianten von \acl{acorvsmv} mit Neustartstrategie \(fixed = 0\) (NSS-f0) und anderen Meta-Heuristiken, die für stetige Probleme adaptiert wurden, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant} und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}, Teil 2}
 		
 		\label{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Mit_Meta_-_Heuristiken_Adaptiert_Fuer_Stetige_Probleme_Teil_2}
 		
@@ -2912,7 +2620,7 @@ within=section,
 		
 		%\fontsize{10pt}{12pt}
 		
-		\caption{Vergleich zwischen ACO\(_{\mathbb{R}}\),\acl{acorvs}, Iterationen von \acl{acorvsmv} mit Neustartstrategie \(adaptive\) (NSS-adapt) und anderen Meta-Heuristiken, die für stetige Probleme adaptiert wurden, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant} und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}, Teil 3}
+		\caption{Vergleich zwischen ACO\(_{\mathbb{R}}\),\acl{acorvs}, Varianten von \acl{acorvsmv} mit Neustartstrategie \(adaptive\) (NSS-adapt) und anderen Meta-Heuristiken, die für stetige Probleme adaptiert wurden, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant} und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}, Teil 3}
 		
 		\label{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Mit_Meta_-_Heuristiken_Adaptiert_Fuer_Stetige_Probleme_Teil_3}
 		
@@ -2992,91 +2700,11 @@ within=section,
 		
 	\end{table}
 	
-	Wie in den Tabellen \ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Mit_Meta_-_Heuristiken_Adaptiert_Fuer_Stetige_Probleme_Teil_1}, \ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Mit_Meta_-_Heuristiken_Adaptiert_Fuer_Stetige_Probleme_Teil_2} und \ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Mit_Meta_-_Heuristiken_Adaptiert_Fuer_Stetige_Probleme_Teil_3} zu sehen, ähnlich wie bei der Betrachtung von Testfunktionen, die benutzt werden, um Algorithmen, die verwandt zu Ameisenalgorithmen sind, zu testen, ist das Bild nicht eindeutig. Zwar ist \ac{acorvs} der beste Algorithmus bei 6 der 15 Probleme aber er ist viel schlechter bei zwei der Probleme, nämlich \glqq Griewangk\grqq{} und \glqq Rosenbrock(5)\grqq und bei den Problemen \glqq Easom\grqq{} und \glqq Hartmann(3,4)\grqq{} konnte für \ac{acorvs} keine Angabe gemacht werden, wie in meiner Bachelorarbeit~\cite{FCM_2019} dargelegt. Auf der anderen Seite ist ACO\(_\mathbb{R}\) nur bei einem der Probleme der beste Algorithmus aber, wenn man seine relative Anzahl an Funktionsauswertungen betrachtet, ist er bei jedem Problem nahe dem Bestwert. Ähnlich ist auch ECTS, ein Algorithmus der bei 5 der 15 Probleme der beste Algorithmus ist, bei den Problemen, wo er nicht der beste ist, nahe am relativen Bestwert. Jedoch fehlen bei ECTS 4 der 15 Probleme, vor allem das Problem \glqq Griewangk\grqq{}, welches sich als schwer herausgestellt hat und die Güte von ECTS bzgl. dieses Problems besonders interessant gewesen wäre. Schließlich ist ECTS bei zwei Problemen sehr schlecht, weswegen dieser Algorithmus insgesamt im Vergleich weniger gut abschneidet. Die Güte von Hom-HPB-ACO\(_\mathbb{R}\)-VS-MV ist vergleichbar mit ACO\(_\mathbb{R}\), da Hom.HPB-ACO\(_\mathbb{R}\)-VS-MV nur bei zwei der Probleme der beste ist aber, wenn man seine relative Anzahl an Funktionsauswertungen betrachtet, er bei allen übrigen Problemen, bis auf \glqq Griewangk\grqq und \glqq Rosenbrock\grqq{}, den Problemen, wo der Algorithmus nicht konvergiert, nahe dem Bestwert ist. Aber da HPB-ACO\(\mathbb{R}\)-VS-MV gerade bei den schwereren Probleme nicht konvergiert, werten wir ACO\(_\mathbb{R}\) als den besseren Algorithmus.\hfill\newline
+	Wie in den Tabellen \ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Mit_Meta_-_Heuristiken_Adaptiert_Fuer_Stetige_Probleme_Teil_1}, \ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Mit_Meta_-_Heuristiken_Adaptiert_Fuer_Stetige_Probleme_Teil_2} und \ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Mit_Meta_-_Heuristiken_Adaptiert_Fuer_Stetige_Probleme_Teil_3} zu sehen, ähnlich wie bei der Betrachtung von Testfunktionen, die benutzt werden, um Algorithmen, die verwandt zu Ameisenalgorithmen sind, zu testen, ist das Bild nicht eindeutig. Zwar ist \ac{acorvs} der beste Algorithmus bei 6 der 15 Probleme aber er ist viel schlechter bei zwei der Probleme, nämlich \glqq Griewangk\grqq{} und \glqq Rosenbrock(5)\grqq und bei den Problemen \glqq Easom\grqq{} und \glqq Hartmann(3,4)\grqq{} konnte für \ac{acorvs} keine Angabe gemacht werden, wie in meiner Bachelorarbeit~\cite{FCM_2019} dargelegt. Auf der anderen Seite ist ACO\(_\mathbb{R}\) nur bei einem der Probleme der beste Algorithmus aber, wenn man seine relative Anzahl an Funktionsauswertungen betrachtet, ist er bei jedem Problem nahe dem Bestwert. Ähnlich ist auch ECTS, ein Algorithmus der bei 5 der 15 Probleme der beste Algorithmus ist, bei den Problemen, wo er nicht der beste ist, nahe am relativen Bestwert. Jedoch fehlen bei ECTS 4 der 15 Probleme, vor allem das Problem \glqq Griewangk\grqq{}, welches sich als schwer herausgestellt hat und die Güte von ECTS bzgl. dieses Problems besonders interessant gewesen wäre. Schließlich ist ECTS bei zwei Problemen sehr schlecht, weswegen dieser Algorithmus insgesamt im Vergleich weniger gut abschneidet. Die Güte von Hom-HPB-ACO\(_\mathbb{R}\)-VS-MV ist vergleichbar mit ACO\(_\mathbb{R}\), da Hom.HPB-ACO\(_\mathbb{R}\)-VS-MV nur bei zwei der Probleme der beste ist aber, wenn man seine relative Anzahl an Funktionsauswertungen betrachtet, er bei allen übrigen Problemen, bis auf \glqq Griewangk\grqq und \glqq Rosenbrock\grqq{}, den Problemen, wo der Algorithmus nicht konvergiert, nahe dem Bestwert ist. Aber da HPB-ACO\(\mathbb{R}\)-VS-MV gerade bei den schwereren Probleme nicht konvergiert, wird ACO\(_\mathbb{R}\) als den besseren Algorithmus eingestuft.\hfill\newline
 	
-	Wir schlussfolgern also, dass unter den Meta-Heuristiken, die für stetige Probleme adaptiert wurden, ACO\(_\mathbb{R}\) der bessere Algorithmus ist. Er ist zwar nur bei einem Problem der Beste aber die Tatsache, dass, wenn man seine relative Anzahl an Funktionsauswertungen betrachtet, er bei allen anderen Problemen nahe dem Bestwert ist, spricht dafür, dass ACO\(_\mathbb{R}\) der beste Algorithmus ist, da er eine hohe Güte problemunabhängig zeigt, was ich als wichtiger ansehe, als Bestwerte zu erreichen. Da aber Bestwerte trotzdem für einen Algorithmus sprechen, wird \ac{acorvs} und ECTS ein zweiter Platz zugeteilt. Die Algorithmen teilen sich den zweiten Platz, da sie beide 5 Mal der beste Algorithmus sind und zudem 2 Mal gerade dort die besten sind, wo der jeweils andere Algorithmus schlecht ist, so ist ECTS der beste Algorithmus bei den Problemen \glqq Rosenbrock(2)\grqq{} und \glqq Rosenbrock(5)\grqq, wo \ac{acorvs} eine relative Anzahl an Funktionsauswertungen von 2.5 bzw. 18.4 braucht, während \ac{acorvs} der beste Algorithmus bei den Problemen \glqq Hartmann(6,4)\grqq{} und \glqq Zakharov(5)\grqq{} ist, wo ECTS eine relative Anzahl an Funktionsauswertungen von 4.0 bzw. 3.2 braucht. Auf dem dritten Platz wird Het-HPB-ACO\(_\mathbb{R}\)-VS-MV mit NSS-f0 platziert, da dieser Algorithmus ein Mal der beste ist, bei allen anderen Testfunktionen, außer \glqq Rosenbrock\grqq{}, nahe dem Bestwert ist, wenn man seine relative Anzahl an Funktionsauswertungen betrachtet und, im Gegenteil zu den anderen beiden Iterationen von \ac{acorvsmv} mit NSS-f0, bei der Testfunktion \glqq Rosenbrock\grqq{}, konvergiert.\hfill\newline
+	Wir schlussfolgern also, dass unter den Meta-Heuristiken, die für stetige Probleme adaptiert wurden, ACO\(_\mathbb{R}\) der bessere Algorithmus ist. Er ist zwar nur bei einem Problem der Beste aber die Tatsache, dass, wenn man seine relative Anzahl an Funktionsauswertungen betrachtet, er bei allen anderen Problemen nahe dem Bestwert ist, spricht dafür, dass ACO\(_\mathbb{R}\) der beste Algorithmus ist, da er eine hohe Güte problemunabhängig zeigt, was als wichtiger ansehen wurde, als Bestwerte zu erreichen. Da aber Bestwerte trotzdem für einen Algorithmus sprechen, wird \ac{acorvs} und ECTS ein zweiter Platz zugeteilt. Die Algorithmen teilen sich den zweiten Platz, da sie beide 5 Mal der beste Algorithmus sind und zudem 2 Mal gerade dort die besten sind, wo der jeweils andere Algorithmus schlecht ist, so ist ECTS der beste Algorithmus bei den Problemen \glqq Rosenbrock(2)\grqq{} und \glqq Rosenbrock(5)\grqq, wo \ac{acorvs} eine relative Anzahl an Funktionsauswertungen von 2.5 bzw. 18.4 braucht, während \ac{acorvs} der beste Algorithmus bei den Problemen \glqq Hartmann(6,4)\grqq{} und \glqq Zakharov(5)\grqq{} ist, wo ECTS eine relative Anzahl an Funktionsauswertungen von 4.0 bzw. 3.2 braucht. Auf dem dritten Platz wird Het-HPB-ACO\(_\mathbb{R}\)-VS-MV mit NSS-f0 platziert, da dieser Algorithmus ein Mal der beste ist, bei allen anderen Testfunktionen, außer \glqq Rosenbrock\grqq{}, nahe dem Bestwert ist, wenn man seine relative Anzahl an Funktionsauswertungen betrachtet und, im Gegenteil zu den anderen beiden Varianten von \ac{acorvsmv} mit NSS-f0, bei der Testfunktion \glqq Rosenbrock\grqq{}, konvergiert.\hfill\newline
 	
-	Es fällt ferner auf, dass je komplexer eine Iteration von \ac{acorvsmv} mit NSS-adapt wird, desto schlechter wird sie im Durchschnitt. Auch mit NSS-f0 wird Het-HSPPB-ACO\(_\mathbb{R}\)-VS-MV bei \glqq Schekel(4,5)\grqq, \glqq Schekel(4,7)\grqq{} und \glqq Schekel(4,10)\grqq{} deutlich schlechter als \ac{acorvs}, Hom-HPB-ACO\(_\mathbb{R}\)-VS-MV mit NSS-f0 und Het-HPB-ACO\(_\mathbb{R}\)-VS-MV mit NSS-f0. Sonst sind die Iterationen von \ac{acorvsmv} mit NSS-f0 in ihrer Güte, im Durchschnitt, was ihre relative Anzahl an Funktionsauswertungen angeht, nahe den Bestwerten. Jedoch sind alle Iterationen von \ac{acorvsmv}, unabhängig ihrer Neustartstrategie, komplexer als \ac{acorvs}. Wir schlussfolgern also, dass die Erweiterung von \ac{acorvs} zu den Iterationen von \ac{acorvsmv}, bei Testfunktionen, welche zum Vergleich für Meta-Heuristiken, die für stetige Probleme adaptiert wurden, genommen werden, keinen Mehrwert brachte.
-	
-	%Wie in Tabelle~\ref{VerglelichACORundACORVerySimpleTeil2} zu sehen, ist es nicht mehr klar, welcher der Algorithmen vorzuziehen ist. ACO\(_{\mathbb{R}}\) ist bei vier Testfunktionen der beste Algorithmus, während ACO\(_{\mathbb{R}}\)-very-simple bei Sieben. Beide Algorithmen sind jedoch bei einem Teil der Testfunktionen schlechter als das Optimum.\hfill\newline
-	
-	%Die Easom-Testfunktion konnte leider nicht angegeben werden, da bei den Initialisierungsintervall zu große Werte für den Algorithmus auftreten und es zu einem Überlauf kommt. Bei kleineren Initialisierungsintervallen konvergiert der Algorithmus jedoch sehr schnell.\hfill\newline
-	
-	%Die Hartmann(3,4) Testfunktion konnte leider nicht angegeben werden, da die Anzahl der durchschnittlichen Funktionsauswertungen bei dieser Testfunktion bei 2 lag und es ist eher wahrscheinlich, dass bei dem Auswerten, Berechnen oder Instanzieren ein Fehler aufgetreten ist, als dass wirklich nur 2 Funktionsauswertungen nötig waren. Der Fehler konnte leider nicht gefunden werden.\hfill\newline
-	
-	%Auf der anderen Seite, wenn die Genauigkeit auf \(|f-f^*|<|\epsilon_1f + \epsilon_2|\), \(\epsilon_1=\epsilon_2=10^{-10}\) angehoben wird, braucht der Algorithmus auch hier mehrere Tausend Funktionsauswertungen (1000-5000), was viel eher dafür spricht, dass es hier genauso hauptsächlich an der Initialisierung gepaart mit der geringen Anforderung an die Genauigkeit liegt und es kein Fehler der Berechnung ist.\hfill\newline
-	
-	%Hier ist die Argumentation die selbe, nämlich dass es an der geringen Genauigkeit liegt, dass so ein Ergebnis beobachtet werden kann.\hfill\newline
-	
-	%Allerdings entscheide ich mich genauso wie in Tabelle~\ref{VerglelichACORundACORSimpleTeil2} das Ergebnis in der Tabelle~\ref{VerglelichACORundACORVerySimpleTeil2} nicht aufzuführen.\hfill\newline
-	
-	%Wie bereits erwähnt, geht es über den Umfang dieser Arbeit hinaus, ACO\(_{\mathbb{R}}\)-very-simple mit anderen Algorithmen aus \textit{Socha und Dorigo}~\cite{socha2008ant} als ACO\(_{\mathbb{R}}\) zu vergleichen, weswegen nur betrachtet wird, ob einer der beiden Algorithmen der beste ist oder nicht, wie in Tabelle~\ref{VerglelichACORundACORVerySimple} und Tabelle~\ref{VerglelichACORundACORVerySimpleTeil2} verdeutlicht.\hfill\newline
-	
-	%Deswegen lässt es sich, durch diese eingeschränkte Sichtweise, leicht urteilen, dass ACO\(_{\mathbb{R}}\)-very-simple der Favorit ist. Er mag ACO\(_{\mathbb{R}}\) zwar bei einer einfacheren Testfunktion (Rosenbrock) unterlegen sein, wie in Tabelle~\ref{VerglelichACORundACORVerySimple} zu sehen, ist jedoch auch im Schnitt besser, wenn es um schwerere Testfunktionen geht, wie in Tabelle~\ref{VerglelichACORundACORVerySimpleTeil2} klar wird. ACO\(_{\mathbb{R}}\)-very-simple mag bei zwei der schwereren Testfunktionen (Griewangk und Rosenbrock(5)) wesentlich mehr Funktionsauswertungen brauchen als ACO\(_{\mathbb{R}}\), ist jedoch bei den besonders schweren Testfunktionen, den Hartmann- und Shekelfunktionen, ACO\(_{\mathbb{R}}\) überlegen.\hfill\newline
-	
-	%Wie auch bei den einfachen Testfunktionen, um das Ergebnis klarer zu sehen, vergleichen wir ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple direkt in Tabelle~\ref{VerglelichACORSimpleundACORVerySimpleTeil2}
-	
-	%\begin{table}[H]
-		
-	%	\fontsize{10pt}{12pt}
-		
-	%	\caption{Zweiter Teil des Vergleiches der Ergebnisse zwischen ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple}
-		
-	%	\label{VerglelichACORSimpleundACORVerySimpleTeil2}
-		
-	%	\begin{tabularx}{\textwidth}{l|l|l}
-			
-	%		\rule{4.8cm}{0.4pt} & \rule{4.8cm}{0.4pt} & \rule{4.8cm}{0.4pt}\\
-			
-	%		Testfunktion & ACO\(_{\mathbb{R}}\)-simple & ACO\(_{\mathbb{R}}\)-very-simple\\
-			
-	%		\rule{4.8cm}{0.4pt} & \rule{4.8cm}{0.4pt} & \rule{4.8cm}{0.4pt}\\
-			
-	%		\(B_2\) & 3.0 (2272) & \textbf{1.0} (747)\\
-			
-	%		Branin RCOS & 2.1 (1600) & \textbf{1.0} (747)\\
-			
-	%		Easom & - & -\\
-			
-	%		De Jong & 3.0 (965) & \textbf{1.0} (319)\\
-			
-	%		Goldstein and Price & 2.7 (917) & \textbf{1.0} (344)\\
-			
-	%		Griewangk & \(\infty\) & \textbf{1.0} [44\%] (17062)\\
-			
-	%		Hartmann(3,4) & - & -\\
-			
-	%		Hartmann(6,4) & 5.0 (1714) & \textbf{1.0} (377)\\
-			
-	%		Martin and Gaddy & 2.6 (974) & \textbf{1.0} (356)\\
-			
-	%		Paraboloid(6) & 4.7 (2308) & \textbf{1.0} (490)\\
-			
-	%		Rosenbrock(2) & 6.2 (7317) & \textbf{1.0} (1195)\\
-			
-	%		Rosenbrock(5) & \(\infty\) & \textbf{1.0} [54\%] (39345)\\
-			
-	%		Shekel(4,5) & 3.7 (1642) & \textbf{1.0} (445)\\
-			
-	%		Shekel(4,7) & 3.6 (1595) & \textbf{1.0} (444)\\
-			
-	%		Shekel(4,10) & 3.5 (1559) & \textbf{1.0} (443)\\
-			
-	%		Zakharov(2) & 2.3 (664) & \textbf{1.0} (293)\\
-			
-	%		Zakharov(5) & 6.0 (4157) & \textbf{1.0} (694)\\
-			
-	%	\end{tabularx}
-		
-	%	\smallskip
-		
-	%	Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Bei Ergebnissen, wo die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht wurde, ist der Anteil der erfolgreichen Durchläufe in Prozent in eckigen Klammern angegeben, wo \(\infty\) steht, wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht.\hfill\newline
-		
-	%\end{table}
-	
-	%Wie in Tabelle~\ref{VerglelichACORSimpleundACORVerySimpleTeil2} nochmal deutlich zu sehen, ist ACO\(_{\mathbb{R}}\)-very-simple, auch bei schwereren Testproblemen, der bessere Algorithmus.\hfill\newline
-	
-	%\subsection{Vergleich bzgl. diskreter Testfunktionen} \label{subsec:Vergleich_Algorithmen:Vergleich_Auf_Diskreten_Testfunktionen}
+	Es fällt ferner auf, dass je komplexer eine Iteration von \ac{acorvsmv} mit NSS-adapt wird, desto schlechter wird sie im Durchschnitt. Auch mit NSS-f0 wird Het-HSPPB-ACO\(_\mathbb{R}\)-VS-MV bei \glqq Schekel(4,5)\grqq, \glqq Schekel(4,7)\grqq{} und \glqq Schekel(4,10)\grqq{} deutlich schlechter als \ac{acorvs}, Hom-HPB-ACO\(_\mathbb{R}\)-VS-MV mit NSS-f0 und Het-HPB-ACO\(_\mathbb{R}\)-VS-MV mit NSS-f0. Sonst sind die Varianten von \ac{acorvsmv} mit NSS-f0 in ihrer Güte, im Durchschnitt, was ihre relative Anzahl an Funktionsauswertungen angeht, nahe den Bestwerten. Jedoch sind alle Varianten von \ac{acorvsmv}, unabhängig ihrer Neustartstrategie, komplexer als \ac{acorvs}. Deswegen wird eingestuft, dass die Erweiterung von \ac{acorvs} zu den Varianten von \ac{acorvsmv}, bei Testfunktionen, welche zum Vergleich für Meta-Heuristiken, die für stetige Probleme adaptiert wurden, genommen werden, keinen Mehrwert brachte.
 	
 	\subsection{Vergleich bzgl. Testfunktionen mit gemischten Variablen} \label{subsec:Vergleich_Testfunktionen_Gemischte_Variablen}
 	
@@ -3084,7 +2712,7 @@ within=section,
 	
 	Für den Vergleich wurden die Funktionen \glqq Cigar\grqq, \glqq Ellipsoid\grqq, \glqq Paraboloid\grqq{} und \glqq Tablet\grqq{} gewählt, da sie sowohl für verschiedene Dimensionen definiert werden konnten, als auch wo die Algorithmen, bis auf wenige Ausnahmen, konvergierten.\hfill\newline
 	
-	Wie in den Tabellen \ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Funktionen_Mit_Gemischten_Variablen_Teil_1} und \ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Funktionen_Mit_Gemischten_Variablen_Teil_2} zu sehen, sind die Unterschiede, in der relativen Anzahl an Funktionsauswertungen der Algorithmen, für Algorithmen, mit der selben Neustartstrategie, gering. So ist zwar Het-HPB-ACO\(_\mathbb{R}\)-VS-MV mit NSS-f0 der beste Algorithmus bei 24 der 36 Probleme aber die anderen beiden Algorithmen Hom-HPB-ACO\(_\mathbb{R}\)-VS-MV mit NSS-f0 und Het-HSPPB-ACO\(_\mathbb{R}\)-VS-MV mit NSS-f0 sind, wenn man ihre relativen Anzahlen an Funktionsauswertungen betrachtet, bis auf zwei Ausreißer, nie schlechter als um den Faktor \(2.0\). Die relative Anzahl an Funktionsauswertungen bei Algorithmen mit der Neustartstrategie \(adaptive\) ist stärker gestreut aber auch hier sind die Anzahlen der relativen Funktionsauswertungen der Algorithmen vergleichbar. Was sich unterscheidet, ist der Faktor, mit dem die relativen Anzahlen an Funktionsauswertungen größer werden. Wenn man die Funktionen aus der Tabelle~\ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Funktionen_Mit_Gemischten_Variablen_Teil_2} betrachtet, so wächst der Faktor, mit dem die relativen Anzahlen an Funktionsauswertungen größer werden, sofern die Algorithmen konvergieren, mit zunehmender Dimension überproportional stark, im Vergleich zu den Funktionen aus Tabelle~\ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Funktionen_Mit_Gemischten_Variablen_Teil_1}. Wir schlussfolgern also, dass der Entscheidende Unterschied die Neustartstrategie ist und dass \(fixed = 0\), \(adaptive\) überlegen ist.
+	Wie in den Tabellen \ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Funktionen_Mit_Gemischten_Variablen_Teil_1} und \ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Funktionen_Mit_Gemischten_Variablen_Teil_2} zu sehen, sind die Unterschiede, in der relativen Anzahl an Funktionsauswertungen der Algorithmen, für Algorithmen, mit der selben Neustartstrategie, gering. So ist zwar Het-HPB-ACO\(_\mathbb{R}\)-VS-MV mit NSS-f0 der beste Algorithmus bei 24 der 36 Probleme aber die anderen beiden Algorithmen Hom-HPB-ACO\(_\mathbb{R}\)-VS-MV mit NSS-f0 und Het-HSPPB-ACO\(_\mathbb{R}\)-VS-MV mit NSS-f0 sind, wenn man ihre relativen Anzahlen an Funktionsauswertungen betrachtet, bis auf zwei Ausreißer, nie schlechter als um den Faktor \(2.0\). Die relative Anzahl an Funktionsauswertungen bei Algorithmen mit der Neustartstrategie \(adaptive\) ist stärker gestreut aber auch hier sind die Anzahlen der relativen Funktionsauswertungen der Algorithmen vergleichbar. Was sich unterscheidet, ist der Faktor, mit dem die relativen Anzahlen an Funktionsauswertungen größer werden. Wenn man die Funktionen aus der Tabelle~\ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Funktionen_Mit_Gemischten_Variablen_Teil_2} betrachtet, so wächst der Faktor, mit dem die relativen Anzahlen an Funktionsauswertungen größer werden, sofern die Algorithmen konvergieren, mit zunehmender Dimension überproportional stark, im Vergleich zu den Funktionen aus Tabelle~\ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Probabilistisches_Lernen_Funktionen_Mit_Gemischten_Variablen_Teil_1}. Deswegen wird eingestuft, dass der Entscheidende Unterschied die Neustartstrategie ist und dass \(fixed = 0\), \(adaptive\) überlegen ist.
 	
 	%TODO kann man das Wort überproportional benutzten?
 	
@@ -3096,7 +2724,7 @@ within=section,
 		
 		%\caption{Vergleich der Ergebnisse zwischen Algorithmen, die probabilistisches Lernen einsetzten auf Testfunktionen, die zum Vergleich zwischen Algorithmen, die probabilistisches Lernen einsetzten, benutzt werden, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning} Teil 1}
 		
-		\caption{Vergleich zwischen den Iterationen von \acl{acorvsmv} mit Neustartstrategie \(fixed = 0\) (NSS-f0), basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}, Teil 1}
+		\caption{Vergleich zwischen den Varianten von \acl{acorvsmv} mit Neustartstrategie \(fixed = 0\) (NSS-f0), basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}, Teil 1}
 		
 		%TODO wie viele zitieren?
 		
@@ -3214,7 +2842,7 @@ within=section,
 		
 		%\caption{Vergleich der Ergebnisse zwischen Algorithmen, die probabilistisches Lernen einsetzten auf Testfunktionen, die zum Vergleich zwischen Algorithmen, die probabilistisches Lernen einsetzten, benutzt werden, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning} Teil 1}
 		
-		\caption{Vergleich zwischen den Iterationen von \acl{acorvsmv} mit Neustartstrategie \(adaptive\) (NSS-adapt), basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}, Teil 1}
+		\caption{Vergleich zwischen den Varianten von \acl{acorvsmv} mit Neustartstrategie \(adaptive\) (NSS-adapt), basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}, Teil 1}
 		
 		%TODO wie viele zitieren?
 		
@@ -3334,18 +2962,18 @@ within=section,
 	
 	%TODO Boxplots für min und max veranschaulichen
 	
-	Dies ist der letzte Vergleich, den wir in dieser Arbeit betrachten. In Abschnitt~\ref{subsec:Vergleich_Algorithmen:Vergleich_Auf_Stetigen_Testfunktionen} haben wir gesehen, dass die Iterationen von \ac{acorvsmv} mit stetigen Testfunktionen umgehen können und im Abschnitt~\ref{subsubsec:Vergleich_Algorithmen:Vergleich_Auf_Konstruierten_Testfunktionen_Mit_Gemischten_Variablen} haben wir gesehen, dass die Iterationen von \ac{acorvsmv} mit konstruierten Testfunktionen mit gemischten Variablen umgehen können. Jetzt wollen wir untersuchen, ob die Iterationen von \ac{acorvsmv} auch mit einem realen Problem umgehen können.\hfill\newline 
+	Dies ist der letzte Vergleich, den in dieser Arbeit betrachten wird. In Abschnitt~\ref{subsec:Vergleich_Algorithmen:Vergleich_Auf_Stetigen_Testfunktionen} wurde gezeigt, dass die Varianten von \ac{acorvsmv} mit stetigen Testfunktionen umgehen können und im Abschnitt~\ref{subsubsec:Vergleich_Algorithmen:Vergleich_Auf_Konstruierten_Testfunktionen_Mit_Gemischten_Variablen} haben wurde gezeigt, dass die Varianten von \ac{acorvsmv} mit konstruierten Testfunktionen mit gemischten Variablen umgehen können. Jetzt wird untersucht, ob die Varianten von \ac{acorvsmv} auch mit einem realen Problem umgehen können.\hfill\newline 
 	
-	Hier wurde von \textit{Socha}~\cite{socha2009ant} im Gegenteil zu anderen Vergleichen wo ganze Zahlen verwendet, die Erfolgsrate mancher Algorithmen in Prozent auf Zehntel genau angegeben, weswegen wir in den Tabellen in diesem Abschnitt auch die Erfolgsrate von den Iterationen von \ac{acorvsmv} auf Zehntel genau angeben.\hfill\newline
+	Hier wurde von \textit{Socha}~\cite{socha2009ant} im Gegenteil zu anderen Vergleichen wo ganze Zahlen verwendet, die Erfolgsrate mancher Algorithmen in Prozent auf Zehntel genau angegeben, weswegen in den Tabellen in diesem Abschnitt auch die Erfolgsrate von den Varianten von \ac{acorvsmv} auf Zehntel genau angegeben werden.\hfill\newline
 	
 	%TODO habe notwendige Daten gefunden, wie arbeite ich sie ein?
 	%TODO Daten sind im Fließtext, was nun?
 	
-	In der Tabelle~\ref{subsubsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_CSD} sind die Ergebnisse von ACO\(_\mathbb{R}\), ACO\(_\text{MV}\) und Vergleichsalgorithmen zu sehen. In den Tabellen \ref{subsubsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_CSD_fixed} und \ref{subsubsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_CSD_adaptive} sind nochmal die Ergebnisse von ACO\(_\mathbb{R}\), ACO\(_\text{MV}\) und dann die Ergebnisse von den Iterationen von \ac{acorvsmv} zu sehen. Leider fehlt für die Algorithmen \glqq NLIDP\grqq{} aus \textit{Sandgren}~\cite{sandgren1990nonlinear}, \glqq GA\grqq{} aus \textit{Wu und Chow}~\cite{wu1995genetic} und \glqq DE\grqq{} aus \textit{Lampinen und Zelinka}~\cite{Lampinen_and_Zelinka_CSD} die Anzahl an Funktionsauswertungen, welche die Algorithmen gebraucht haben, um das Optimum zu erreichten, weswegen sie auch in \textit{Socha}~\cite{socha2009ant} fehlen, der Arbeit, welche auf ihnen aufbaut. Es wird in allen Arbeiten, entweder nur die Anzahl an verfügbaren Funktionsauswertungen für die Optimumssuche angegeben, in allen Fällen, wo es angegeben wurde, sind es 8000, und der Anteil der Erfolgreichen Durchläufe in Prozent, oder nur der Anteil der erfolgreichen Durchläufe in Prozent. In \textit{Liao et al.}~\cite{ACO_2013}, der Folgearbeit zu \textit{Socha}~\cite{socha2009ant}, wird aber angeben, dass in der Tat die vollen 8000 Funktionsauswertungen gebraucht wurden und diese sogar zu wenig waren, da der Anteil der erfolgreichen Durchläufe für ACO\(_\textbf{MV}\) in \textbf{Socha}~\cite{socha2009ant} bei 39.0\% und in \textit{Liao et al.}~\cite{ACO_2013} bei 74\% liegt. Ferner wird in \textit{Liao et al.}~\cite{ACO_2013} angegeben, dass ACO\(_\textbf{MV}\) für das \ac{csd} im Durchschnitt 9948 Funktionsauswertungen gebraucht hat und bei einer Maximalzahl von 19588 Funktionsauswertungen ACO\(_\textbf{MV}\) eine Durchgangserfolgsrate von 100\% hatte. Aber diese Angaben werden im Fließtext, außerhalb der tabellarischen Vergleiche mit anderen Funktionen, gemacht. Aber wenn wir uns auf diese Werte stützen, können wir sagen, dass das Ergebnis von 619 Funktionsausführungen in Tabelle~\ref{subsubsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_CSD_fixed} sehr gut ist. Eine andere Tatsache, welche die Vermutung untermauert, dass exakt 8000 Funktionsauswertungen von ACO\(_\textbf{MV}\) gebraucht wurden, ist das für ein anderes Ingenieursproblem, das Pressure Vessel Design Problem, in \textit{Socha}~\cite{socha2009ant}, sowohl die maximale zur Verfügung stehende Anzahl an Funktionsauswertungen, dort sind es 10000, als auch die Benötigte, angegeben werden.\hfill\newline
+	In der Tabelle~\ref{subsubsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_CSD} sind die Ergebnisse von ACO\(_\mathbb{R}\), ACO\(_\text{MV}\) und Vergleichsalgorithmen zu sehen. In den Tabellen \ref{subsubsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_CSD_fixed} und \ref{subsubsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_CSD_adaptive} sind nochmal die Ergebnisse von ACO\(_\mathbb{R}\), ACO\(_\text{MV}\) und dann die Ergebnisse von den Varianten von \ac{acorvsmv} zu sehen. Leider fehlt für die Algorithmen \glqq NLIDP\grqq{} aus \textit{Sandgren}~\cite{sandgren1990nonlinear}, \glqq GA\grqq{} aus \textit{Wu und Chow}~\cite{wu1995genetic} und \glqq DE\grqq{} aus \textit{Lampinen und Zelinka}~\cite{Lampinen_and_Zelinka_CSD} die Anzahl an Funktionsauswertungen, welche die Algorithmen gebraucht haben, um das Optimum zu erreichten, weswegen sie auch in \textit{Socha}~\cite{socha2009ant} fehlen, der Arbeit, welche auf ihnen aufbaut. Es wird in allen Arbeiten, entweder nur die Anzahl an verfügbaren Funktionsauswertungen für die Optimumssuche angegeben, in allen Fällen, wo es angegeben wurde, sind es 8000, und der Anteil der Erfolgreichen Durchläufe in Prozent, oder nur der Anteil der erfolgreichen Durchläufe in Prozent. In \textit{Liao et al.}~\cite{ACO_2013}, der Folgearbeit zu \textit{Socha}~\cite{socha2009ant}, wird aber angeben, dass in der Tat die vollen 8000 Funktionsauswertungen gebraucht wurden und diese sogar zu wenig waren, da der Anteil der erfolgreichen Durchläufe für ACO\(_\textbf{MV}\) in \textbf{Socha}~\cite{socha2009ant} bei 39.0\% und in \textit{Liao et al.}~\cite{ACO_2013} bei 74\% liegt. Ferner wird in \textit{Liao et al.}~\cite{ACO_2013} angegeben, dass ACO\(_\textbf{MV}\) für das \ac{csd} im Durchschnitt 9948 Funktionsauswertungen gebraucht hat und bei einer Maximalzahl von 19588 Funktionsauswertungen ACO\(_\textbf{MV}\) eine Durchgangserfolgsrate von 100\% hatte. Aber diese Angaben werden im Fließtext, außerhalb der tabellarischen Vergleiche mit anderen Funktionen, gemacht. Aber wenn von diesen Werten ausgegangen wird, kann festgestellt werden, dass das Ergebnis von 619 Funktionsausführungen in Tabelle~\ref{subsubsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_CSD_fixed} gut ist. Eine andere Tatsache, welche die Vermutung untermauert, dass exakt 8000 Funktionsauswertungen von ACO\(_\textbf{MV}\) gebraucht wurden, ist das für ein anderes Ingenieursproblem, das Pressure Vessel Design Problem, in \textit{Socha}~\cite{socha2009ant}, sowohl die maximale zur Verfügung stehende Anzahl an Funktionsauswertungen, dort sind es 10000, als auch die Benötigte, angegeben werden.\hfill\newline
 	
 	%TODO ist bei Iterationen klar, dass es die Iterationen von ACO_R-VS-MV sind?
 	
-	Wir können jedoch das selbe Ergebnis beobachten, wie bei den konstruierten Testfunktionen mit gemischten Variablen, nämlich, dass die Iterationen von \ac{acorvsmv} mit NSS-f0 besser sind als die Iterationen von \ac{acorvsmv} mit NSS-adapt. Wir können auch weiter beobachten, dass, wenn der gesamte Raum, zum ziehen der Initiallösungen, genommen wird, aber dann nur, mit den Constrains konforme, Lösungen bei der Lösungssuche erlaubt werden, also bei dem Fall \glqq penalty-exact\grqq, keine Iteration von \ac{acorvsmv}, unabhängig der Neustartstrategie, konvergiert. Wir gehen davon aus, dass das daran liegt, dass, ausgehend von nur 13 zufälligen Initiallösungen, es sehr schwer ist, eine mit den Constrains konforme Lösung zu generieren, da die Größe des gesamten Suchraums, aus dem die Initiallösungen gezogen werden, im Vergleich zur Größe des Teils des Suchraums, der mit den Constrains konforme Lösungen enthält, viel größer ist, wie in Abbildung~\ref{subsubsec:Testfunktionen:CSD:fig:3D_plot:CSD:filtered_and_unfiltered_search_spaces_combined} zu sehen.
+	Wir können jedoch das selbe Ergebnis beobachten, wie bei den konstruierten Testfunktionen mit gemischten Variablen, nämlich, dass die Varianten von \ac{acorvsmv} mit NSS-f0 besser sind als die Varianten von \ac{acorvsmv} mit NSS-adapt. Es kann auch weiter beobachten werden, dass, wenn der gesamte Raum, zum ziehen der Initiallösungen, genommen wird, aber dann nur, mit den Constrains konforme, Lösungen bei der Lösungssuche erlaubt werden, also bei dem Fall \glqq penalty-exact\grqq, keine Iteration von \ac{acorvsmv}, unabhängig der Neustartstrategie, konvergiert. Es wird davon ausgegangen, dass das daran liegt, dass, ausgehend von nur 13 zufälligen Initiallösungen, es sehr schwer ist, eine mit den Constrains konforme Lösung zu generieren, da die Größe des gesamten Suchraums, aus dem die Initiallösungen gezogen werden, im Vergleich zur Größe des Teils des Suchraums, der mit den Constrains konforme Lösungen enthält, viel größer ist, wie in Abbildung~\ref{subsubsec:Testfunktionen:CSD:fig:3D_plot:CSD:filtered_and_unfiltered_search_spaces_combined} zu sehen.
 	
 		\begin{table}[H]
 		
@@ -3353,7 +2981,7 @@ within=section,
 		
 		%\caption{Vergleich der Ergebnisse zwischen Algorithmen, die probabilistisches Lernen einsetzten auf Testfunktionen, die zum Vergleich zwischen Algorithmen, die probabilistisches Lernen einsetzten, benutzt werden, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning} Teil 1}
 		
-		\caption{Vergleich der Ergebnisse zwischen den Iterationen von \acl{acorvsmv} mit Neustartstrategie \(adaptive\) (NSS-adapt)}
+		\caption{Vergleich der Ergebnisse zwischen den Varianten von \acl{acorvsmv} mit Neustartstrategie \(adaptive\) (NSS-adapt)}
 		
 		%TODO fixed 0
 		
@@ -3411,7 +3039,7 @@ within=section,
 		
 		%\caption{Vergleich der Ergebnisse zwischen Algorithmen, die probabilistisches Lernen einsetzten auf Testfunktionen, die zum Vergleich zwischen Algorithmen, die probabilistisches Lernen einsetzten, benutzt werden, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning} Teil 1}
 		
-		\caption{Vergleich der Ergebnisse zwischen den Iterationen von \acl{acorvsmv} mit Neustartstrategie \(fixed = 0\) (NSS-f0)}
+		\caption{Vergleich der Ergebnisse zwischen den Varianten von \acl{acorvsmv} mit Neustartstrategie \(fixed = 0\) (NSS-f0)}
 		
 		%TODO fixed 0
 		
@@ -3462,7 +3090,7 @@ within=section,
 		
 		\smallskip
 		
-		Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Bei Ergebnissen, wo die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht wurde, ist der Anteil der erfolgreichen Durchläufe in Prozent in eckigen Klammern angegeben, danach sind in Klammern die Anzahl an Iteration angegeben, die notwendig waren, um gefilterte Ausgangslösungen zu erhalten, und die Anzahl an Iterationen, um gefilterte Lösungen während der Algorithmenausführung zu erhalten, wo \(\infty\) steht, wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht.\hfill\newline
+		Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Bei Ergebnissen, wo die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht wurde, ist der Anteil der erfolgreichen Durchläufe in Prozent in eckigen Klammern angegeben, danach sind in Klammern die Anzahl an Iteration angegeben, die notwendig waren, um gefilterte Ausgangslösungen zu erhalten, und die Anzahl an Varianten, um gefilterte Lösungen während der Algorithmenausführung zu erhalten, wo \(\infty\) steht, wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht.\hfill\newline
 		
 		%TODO kann auch ein längerer Absatzt beibehalten werden? Ja
 		
@@ -3474,7 +3102,7 @@ within=section,
 		
 		%\caption{Vergleich der Ergebnisse zwischen Algorithmen, die probabilistisches Lernen einsetzten auf Testfunktionen, die zum Vergleich zwischen Algorithmen, die probabilistisches Lernen einsetzten, benutzt werden, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant}, und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning} Teil 1}
 		
-		\caption{Vergleich der Ergebnisse zwischen den Iterationen von \acl{acorvsmv} mit Neustartstrategie \(adaptive\) (NSS-adapt)}
+		\caption{Vergleich der Ergebnisse zwischen den Varianten von \acl{acorvsmv} mit Neustartstrategie \(adaptive\) (NSS-adapt)}
 		
 		%TODO fixed 0
 		
@@ -3521,15 +3149,15 @@ within=section,
 		
 		\smallskip
 		
-		Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Bei Ergebnissen, wo die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht wurde, ist der Anteil der erfolgreichen Durchläufe in Prozent in eckigen Klammern angegeben. Bei den Algorithmen, welche \glqq adaptive\grqq{} als Neustartstrategie angewendet haben, steht die durchschnittliche Anzahl an Neustarts in geschweiften Klammern, danach sind in Klammern die Anzahl an Iteration angegeben, die notwendig waren, um gefilterte Ausgangslösungen zu erhalten, und die Anzahl an Iterationen, um gefilterte Lösungen während der Algorithmenausführung zu erhalten, wo \(\infty\) steht, wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht.\hfill\newline
+		Dargestellt ist zuerst die relative Anzahl an Funktionsauswertungen und in Klammern danach die absolute. Bei Ergebnissen, wo die erforderliche Genauigkeit nicht bei jedem Durchlauf des Algorithmus erreicht wurde, ist der Anteil der erfolgreichen Durchläufe in Prozent in eckigen Klammern angegeben. Bei den Algorithmen, welche \glqq adaptive\grqq{} als Neustartstrategie angewendet haben, steht die durchschnittliche Anzahl an Neustarts in geschweiften Klammern, danach sind in Klammern die Anzahl an Iteration angegeben, die notwendig waren, um gefilterte Ausgangslösungen zu erhalten, und die Anzahl an Varianten, um gefilterte Lösungen während der Algorithmenausführung zu erhalten, wo \(\infty\) steht, wurde die Genauigkeit bei keinem Durchlauf des Algorithmus erreicht.\hfill\newline
 		
 		%TODO kann auch ein längerer Absatzt beibehalten werden? Ja
 		
 	\end{table}
 	
-	Wir können weiter feststellen, dass bei allen Iterationen von \ac{acorvsmv}, unabhängig der Neustartstrategie, wo die Initiallösungen aus dem gefilterten Raum gezogen wurden, also die Fälle \glqq exact-exact\grqq{} und \glqq exact-penalty\grqq, für das generieren der Initiallösungen die meisten Funktionsauswertungen gebraucht wurden. Deswegen untersuchen wir das Verhältnis zwischen, für die Initialisierung und für die Lösungssuche verwendeter Funktionsauswertungen, nochmal gesondert. Alle Boxplots in diesem Abschnitt und in der Anlage~\ref{anlage:Vergleich_pre_add_und_realen_Funktionsauswertungen} wurden von mir mit der Python-Bibliothek \glqq matplotlib.pyplot\grqq{} erstellt. In allen Abbildungen werden bei \glqq real\grqq{} nur die Funktionsauswertungen von erfolgreichen Durchläufen betrachtet.\hfill\newline
+	Wir können weiter feststellen, dass bei allen Varianten von \ac{acorvsmv}, unabhängig der Neustartstrategie, wo die Initiallösungen aus dem gefilterten Raum gezogen wurden, also die Fälle \glqq exact-exact\grqq{} und \glqq exact-penalty\grqq, für das generieren der Initiallösungen die meisten Funktionsauswertungen gebraucht wurden. Deswegen wird das Verhältnis untersucht zwischen, für die Initialisierung und für die Lösungssuche verwendeter Funktionsauswertungen, nochmal gesondert. Alle Boxplots in diesem Abschnitt und in der Anlage~\ref{anlage:Vergleich_pre_add_und_realen_Funktionsauswertungen} wurden von mir mit der Python-Bibliothek \glqq matplotlib.pyplot\grqq{} erstellt. In allen Abbildungen werden bei \glqq real\grqq{} nur die Funktionsauswertungen von erfolgreichen Durchläufen betrachtet.\hfill\newline
 	
-	Wie in den Abbildungen \ref{subsubsec:Testfunktionen:CSD:fig:hom_het_and_het_p_CSD_pre_add_and_real_iteratoins_exact_exact_f0} und \ref{subsubsec:Testfunktionen:CSD:fig:hom_hpb_CSD_pre_add_and_real_iteratoins_exact_exact_adapt} zu sehen, brauchen alle Iterationen von ACO\(_\mathbb{R}\)-VS-MV, unabhängig der Neustartstrategie, viel mehr Funktionsauswertungen für das Suchen gefilterter Lösungen als für die Konstruktion neuer Lösungen selbst, auch wenn man die, bei der Lösungssuche zusätzlichen Funktionsauswertungen mitzählt. Das gleiche Verhalten kann man in den Tabellen \ref{subsubsec:Testfunktionen:CSD:fig:hom_het_and_het_p_CSD_pre_add_and_real_iteratoins_exact_penalty_f0} und \ref{subsubsec:Testfunktionen:CSD:fig:hom_het_and_het_p_CSD_pre_add_and_real_iteratoins_exact_penalty_adap}, welche sich im Anhang befinden. Auf der anderen Seite können wir beobachten, dass das beste Ergebnis bei dem Fall \glqq penalty-penalty\grqq{} erreicht wurde. Ebenso sehen wir, dass das Hinzufügen von adaptiven Neustarts die Leistung des Algorithmus verschlechtert bzw. sehr verschlechtert. Wir schlussfolgern also, dass, sowohl das Filtern des Raumes vor der Algorithmusausführung allein keinen Mehrwert brachte, als auch das Filtern des Raum von der Algorithmusausführung verbunden mit dem Filtern von Lösungen während der Algorithmusausführung, keinen Mehrwert brachte. 
+	Wie in den Abbildungen \ref{subsubsec:Testfunktionen:CSD:fig:hom_het_and_het_p_CSD_pre_add_and_real_iteratoins_exact_exact_f0} und \ref{subsubsec:Testfunktionen:CSD:fig:hom_hpb_CSD_pre_add_and_real_iteratoins_exact_exact_adapt} zu sehen, brauchen alle Varianten von ACO\(_\mathbb{R}\)-VS-MV, unabhängig der Neustartstrategie, viel mehr Funktionsauswertungen für das Suchen gefilterter Lösungen als für die Konstruktion neuer Lösungen selbst, auch wenn man die, bei der Lösungssuche zusätzlichen Funktionsauswertungen mitzählt. Das gleiche Verhalten kann man in den Tabellen \ref{subsubsec:Testfunktionen:CSD:fig:hom_het_and_het_p_CSD_pre_add_and_real_iteratoins_exact_penalty_f0} und \ref{subsubsec:Testfunktionen:CSD:fig:hom_het_and_het_p_CSD_pre_add_and_real_iteratoins_exact_penalty_adap}, welche sich im Anhang befinden. Auf der anderen Seite kann beobachtet werden, dass das beste Ergebnis bei dem Fall \glqq penalty-penalty\grqq{} erreicht wurde. Ebenso sehen wir, dass das Hinzufügen von adaptiven Neustarts die Leistung des Algorithmus verschlechtert. Es folgt der Schluss, dass, sowohl das Filtern des Raumes vor der Algorithmusausführung allein keinen Mehrwert brachte, als auch das Filtern des Raum von der Algorithmusausführung verbunden mit dem Filtern von Lösungen während der Algorithmusausführung, keinen Mehrwert brachte. 
 	
 	\begin{figure}[H]
 		
@@ -3560,7 +3188,7 @@ within=section,
 	
 	
 	
-	Zwar können wir nicht mit Sicherheit sagen, wie gut die 
+	Zwar kann nicht mit Sicherheit gesagt werden, wie gut die 
 	
 	%\section{Konvergenzbetrachtung} \label{Konvergenzbetrachtung}
 
@@ -3589,9 +3217,9 @@ within=section,
 	
 	\section{Kurzzusammenfassung}
 	
-	Im Gegenteil zu \acl{acorvs} aus meiner Bachelorarbeit~\cite{FCM_2019}, schneiden die Iterationen von \acl{acorvsmv} bei konstruierten Testfunktionen zwar teilweise vergleichbar mit \ac{acorvs} ab, aber das Ziel dieser Arbeit war es herauszufinden, ob eine komplexere Formulierung von \ac{acorvs} zu besseren Ergebnissen führt und, was konstruierte Funktionen angeht, ist dies nicht geschehen. Auf der anderen Seite schneiden die 
+	Im Gegenteil zu \acl{acorvs} aus meiner Bachelorarbeit~\cite{FCM_2019}, schneiden die Varianten von \acl{acorvsmv} bei konstruierten Testfunktionen zwar teilweise vergleichbar mit \ac{acorvs} ab, aber das Ziel dieser Arbeit war es herauszufinden, ob eine komplexere Formulierung von \ac{acorvs} zu besseren Ergebnissen führt und, was konstruierte Funktionen angeht, ist dies nicht geschehen. Auf der anderen Seite schneiden die 
 	
-	Es scheint so als ob wir mit \acl{acorvs} aus meiner Bachelorarbeit~\cite{FCM_2019} ein lokales Optimum, was ACO-Metaheuristiken für Funktionsoptimierung angeht, gefunden haben.
+	Es scheint so als ob mit \acl{acorvs} aus meiner Bachelorarbeit~\cite{FCM_2019} ein lokales Optimum, was ACO-Metaheuristiken für Funktionsoptimierung angeht, gefunden wurde.
 	
 	Es ist erstaunlich, wie die Vereinfachung abschneidet. Zwar mag ACO\(_{\mathbb{R}}\)-very-simple nicht immer der beste Algorithmus sein, aber er ist der beste bei 12 von 24 Testfunktion, also bei der Hälfte aller Testfunktion. Damit ist er ACO\(_{\mathbb{R}}\) überlegen. Natürlich sind fünf dieser Testfunktionen einfach, aber selbst bei den schweren Funktionen weiß ACO\(_{\mathbb{R}}\)-very-simple zu überzeugen, insbesondere, da er sehr schnell ist und unter bestimmten Umständen sogar auf ein exaktes Ergebnis verzichten kann.\hfill\newline
 	
