@@ -9,8 +9,8 @@
 \contentsline {figure}{\numberline {8}{\ignorespaces Skizze einer Schraubenfeder mit Federdurchmesser (links), Windungszahl (mitte) und Drahtdurchmesser (rechts)¨; das Bild wurde von mir mit einem Zeichenprogramm erstellt und dann mit ChatGPT verbessert}}{37}{}%
 \contentsline {figure}{\numberline {9}{\ignorespaces gefilterter und ungefilterter Suchraum für das CSD-Problem}}{41}{}%
 \contentsline {figure}{\numberline {10}{\ignorespaces gefilterter Raum (orange) und ungefilterter Raum (blau)}}{41}{}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Verhältnis zwischen den benötigten Funktionsauswertungen für Vorfiltern, zusätzlichem Filtern und realen Iterationsschritten der Algorithmen für den Fall \glqq exact-exact\grqq {} und NSS-f0}}{56}{}%
-\contentsline {figure}{\numberline {12}{\ignorespaces Verhältnis zwischen den benötigten Funktionsauswertungen für Vorfiltern, zusätzlichem Filtern und realen Iterationsschritten der Algorithmen für den Fall \glqq exact-exact\grqq {} und NSS-adapt}}{56}{}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Verhältnis zwischen den benötigten Funktionsauswertungen für Vorfiltern, zusätzlichem Filtern und realen Iterationsschritten der Algorithmen für den Fall \glqq exact-exact\grqq {} und NSS-f0}}{55}{}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Verhältnis zwischen den benötigten Funktionsauswertungen für Vorfiltern, zusätzlichem Filtern und realen Iterationsschritten der Algorithmen für den Fall \glqq exact-exact\grqq {} und NSS-adapt}}{55}{}%
 \contentsline {figure}{\numberline {13}{\ignorespaces Verhältnis zwischen den benötigten Funktionsauswertungen für Vorfiltern, zusätzlichem Filtern und realen Iterationsschritten der Algorithmen für den Fall \glqq exact-penalty\grqq {} und NSS-f0}}{I}{}%
 \contentsline {figure}{\numberline {14}{\ignorespaces Verhältnis zwischen den benötigten Funktionsauswertungen für Vorfiltern, zusätzlichem Filtern und realen Iterationsschritten der Algorithmen für den Fall \glqq exact-penalty\grqq {} und NSS-adapt}}{I}{}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
