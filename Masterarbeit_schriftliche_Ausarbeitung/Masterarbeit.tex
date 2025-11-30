@@ -156,7 +156,7 @@ within=section,
 	
 	\begin{flushright}
 		
-		Leipzig, November, 2025 \hfill vorgelegt von\\
+		Leipzig, Dezember, 2025 \hfill vorgelegt von\\
 		
 		\bigskip
 		
@@ -206,15 +206,13 @@ within=section,
 	\section{Einleitung}
 	\pagenumbering{arabic}
 	
-	Die Informatik als Wissenschaft gliedert sich in viele Bereiche, eines davon ist das Entwickeln von Algorithmen zum heuristischen Berechnen von Näherungslösungen von Problemen, von denen ausgegangen wird, dass es für sie keine effizienten Algorithmen gibt und somit eine Näherungslösung das Beste ist, was erreicht werden kann als Kompromiss. Ferner gibt es keine Möglichkeit zur verifizieren, ob diese so gefundenen Lösungen tatsächlich Lösungen zu den Problemen sind, sie sind nur gut genug um in der Praxis stellvertretend als angenäherte Lösungen zu dienen.\hfill\newline
+	Ein wichtiger Bereich der Informatik ist das Kreieren von Algorithmen zum Lösen von Problemen, besonders für das angenäherte Lösen von Problemen, für die eine analytische Lösung entweder nicht möglich ist, aufgrund der Beschaffenheit des Problems, oder für die eine analytische Lösung machbar ist aber diese zu berechnen Jahrhunderte brauchen kann, was zu lange dauert. Es wird also nach Algorithmen gesucht, die hinreichend gute Lösungen liefern und das in absehbarer Zeit.\hfill\newline
 	
-	Die, für das heuristische Berechnen von Lösungen, verwendeten Algorithmen können weiter aufgeteilt werden in Klassen von Algorithmen. Die hier relevante Klasse sind Ameisenalgorithmen, um genau zu sein, Ameisenalgorithmen in stetigen Variablen. Diese Klassen können weiter aufgeteilt werden in Varianten zur Lösungserzeugung. Konkret beschäftigt sich diese Arbeit mit dem Vergleich zweier Varianten der Lösungserzeugung von Ameisenalgorithmen, die erste Variante repräsentiert durch den Algorithmus ACO\(_{\mathbb{R}}\) und die andere durch die Algorithmen ACO\(_{\mathbb{R}}\)-simple und ACO\(_{\mathbb{R}}\)-very-simple.\hfill\newline
+	Viele dieser Algorithmen sind natürlichen Vorgängen oder der Natur selbst direkt nachgeahmt, wie das Simulated Annealing aus \textit{Kirkpatrick et al.}~\cite{kirkpatrick1983optimization}, die Evolution Strategies aus \textit{Rechenberg}~\cite{rechenberg1973evolutionsstrategie} oder die ACO-Metaheuristik aus \textit{Dorigo et al.}~\cite{dorigo1996ant}. Der letzte Algorithmus steht für Ant Colony Optimizationder und ist der Nahrungssuche von Ameisen nachempfunden, weswegen dort von künstlichen Ameisen gesprochen wird. ACO war erfolgreich im Lösen von Permutationsproblemen und diskreten Problemen, wie dem Traveling Salesperson Problem \cite{stutzle1999aco}.\hfill\newline
 	
-	Ameisenalgorithmen begannen ihre Entwicklung durch die Inspiration von dem Verhalten von Ameisen bei der Nahrungssuche. Dadurch waren die ersten Ameisenalgorithmen dafür gedacht, Anordnungsprobleme, Permutationsprobleme, zu lösen, worin sie sehr erfolgreich waren, z.B. bei der Routenplanung für Fahrzeuge. Sie hatten nur ein Nachteil, sie waren nur für diskrete Variablen einsetzbar, also Variablem, die nur endlich viele Werte annehmen konnten. Dies limitierte jedoch den Einsatzbereich der Algorithmen für Probleme, wie sie in der Praxis oft vorkommen, Probleme in stetigen Variablen, also Probleme mit Variablen, die beliebige Werte annehmen können.\hfill\newline
+	Einer der nächsten Evolutionsschritte dieser Algorithmen war das Erweitern diskreter Algorithmen zu Stetigen, so entstanden aus der ACO-Metaheuristik, CACO vorgestellt von \textit{Bilchev und Parmee}~\cite{bilchev1995ant}, API vorgestellt von \textit{Monmarché et al.}~\cite{monmarche2000pachycondyla}, CIAC vorgestellt von \textit{Dréo and Siarry}~\cite{dreo2002new} und ACO\(_\mathbb{R}\) vorgestellt von \textit{Socha und Dorigo}~\cite{socha2008ant}. Der letzte Algorithmen bestach dadurch, dass er bei vielen Testfunktionen der beste war und, dass er bei Testfunktionen, wenn er nicht der beste war, er trotzdem gut war. Auch hier wird die Metapher von künstlichen Ameisen beibehalten. Zudem wird in \textit{Socha und Dorigo}~\cite{socha2008ant} ausgesagt, dass ACO\(_\mathbb{R}\) von allen Erweiterungen der ACO-Metaheuristik, die von ACO im Geiste treueste Erweiterung ist.\hfill\newline
 	
-	Dieses Hindernis wurde jedoch bereits überwunden, durch gleich mehrere Varianten der Lösungserzeugung von Ameisenalgorithmen, u.a. Continuous ACO (CACO) vorgestellt in \textit{Bilchev and Parmee}~\cite{bilchev1995ant} und dem hier betrachteten Algorithmus ACO\(_{\mathbb{R}}\) vorgestellt in \textit{Socha und Dorigo}~\cite{socha2008ant}. Doch alle Varianten der Lösungserzeugung in stetigen Variablen, welche durch Ameisenalgorithmen inspiriert wurden, zeichnen sich dadurch aus, dass ihre Verwendung von bereits gefunden Lösungen und das Zusammensetzen dieser zu neuen Lösungen eine gewisse Komplexität aufweist.\hfill\newline
-	
-	Genau mit diesem Problem beschäftigt sich die hier vorliegende Arbeit durch das Vorstellen einer sehr stark vereinfachten Variante zur Lösungserzeugung eines Ameisenalgorithmus und dem Vergleich dieser Variante mit der, wie das Paper von \textit{Socha und Dorigo}~\cite{socha2008ant} selbst aussagt, ACO im Geiste treusten Variante, ACO\(_{\mathbb{R}}\). Wir beantworten also in dieser Arbeit die Frage, durch den Vergleich der beiden Varianten, ob die Komplexität wirklich nötig ist.
+	Um Probleme der nächsten Klasse zu lösen, Probleme, bei denen eine Menge ihrer Variablen nur diskrete Werte annehmen kann, während eine andere Menge nur Stetige, also Probleme mit gemischten Variablen, wurden die bis dato bekannten Algorithmen wieder erweitert. Die beiden Erweiterung, die in dieser Arbeit betrachtet werden, sind ACO\(_\text{MV}\) von \textit{Socha}~\cite{socha2009ant} und die Varianten von \ac{acorvsmv}, einem Algorithmus, der in dieser Arbeit eingeführt wird. Während ACO\(_\text{MV}\) eine direkte Erweiterung von ACO\(_\mathbb{R}\) ist, werden die Varianten von \ac{acorvsmv} durch das Kombinierten von \ac{acorvsmv} mit dem HSPPBO-Schema gewonnen. Das HSPPBO-Schema diktiert wie Ameisen in einer hierarchischen Struktur verwaltet werden. Somit untersuchen wir in dieser Arbeit die Güte der Funktionsoptimierung von der Kombination des HSPPBO-Schema mit der \ac{acorvsmv}-Metaheuristik.
 	
 	\newpage
 	
@@ -765,7 +763,7 @@ within=section,
 	
 	%TODO besser Beschreibung als gemischte Variablen
 	
-	Um ACO\(_\mathbb{R}\)-VS anzupassen werden nicht-stetige Probleme als stetige Probleme behandelt. Das heißt, es wird mit nicht-stetigen Werten gerechnet als wären sie stetig. Es wird also bis zur Gleichung~\ref{subsec:ACO_R_-_very_-_simple:eq:interval} genauso verfahren, wie im Abschnitt~\ref{subsec:ACO_R_-_very_-_simple}, um einen neuen, stetigen Wert zu erhalten. Nachdem man einen neuen stetigen Wert gewonnen hat, betrachtet man die nicht-stetigen Werte zwischen denen der stetige Wert liegt und wählt dann als Ergebnis, den nicht-stetigen Wert, an dem der Stetige am nächsten liegt.\hfill\newline
+	Um ACO\(_\mathbb{R}\)-VS anzupassen werden nicht-stetige Probleme als stetige Probleme behandelt. Das heißt, es wird mit nicht-stetigen Werten gerechnet als wären sie stetig. Es wird also bis zur Gleichung~\ref{subsec:ACO_R_-_very_-_simple:eq:interval} genauso verfahren, wie im Abschnitt~\ref{subsec:ACO_R_-_very_-_simple}, um einen neuen, stetigen Wert zu erhalten. Nachdem man einen neuen stetigen Wert gewonnen hat, betrachtet man die nicht-stetigen Werte zwischen denen der stetige Wert liegt und wählt dann als Ergebnis, den nicht-stetigen Wert, an dem der Stetige am nächsten liegt. Diese so gewonnen Erweiterung von \ac{acorvs} wird \acl{acorvsmv} oder kurz \ac{acorvsmv} genannt.\hfill\newline
 	
 	Schließlich wird \ac{acorvs} um eine Neustartstrategie erweitert. Der Algorithmus kann entweder eine fixe Anzahl an Neustarts ausführen oder adaptiv neu starten. Für die Neustartstrategie, bei welcher der Algorithmus eine fixe Anzahl neu startet, wird die Anzahl mit \(fixed = n\) angegeben. Es wurde \(n = 0\) gesetzt, um einen Kontrast zu der Neustartstrategie \(adaptvie\) zu haben. Wenn die Neustartstrategie \(adaptiv\) gewählt wurde, startet der Algorithmus neu, wenn eine Periode von \(\gamma\) Lösungen hintereinander sich um weniger als ein Threshold \(\varepsilon_{th}\) unterscheiden. Im Sinne der Einfachheit wurde als Start \(\gamma = 7\) und \(\varepsilon_{th} = 10^{-10}\) gesetzt. 
 	
@@ -3156,38 +3154,58 @@ within=section,
 	
 	Wir können weiter feststellen, dass bei allen Varianten von \ac{acorvsmv}, unabhängig der Neustartstrategie, wo die Initiallösungen aus dem gefilterten Raum gezogen wurden, also die Fälle \glqq exact-exact\grqq{} und \glqq exact-penalty\grqq, für das generieren der Initiallösungen die meisten Funktionsauswertungen gebraucht wurden. Deswegen wird das Verhältnis untersucht zwischen, für die Initialisierung und für die Lösungssuche verwendeter Funktionsauswertungen, nochmal gesondert. Alle Boxplots in diesem Abschnitt und in der Anlage~\ref{anlage:Vergleich_pre_add_und_realen_Funktionsauswertungen} wurden von mir mit der Python-Bibliothek \glqq matplotlib.pyplot\grqq{} erstellt. In allen Abbildungen werden bei \glqq real\grqq{} nur die Funktionsauswertungen von erfolgreichen Durchläufen betrachtet.\hfill\newline
 	
-	Wie in den Abbildungen \ref{subsubsec:Testfunktionen:CSD:fig:hom_het_and_het_p_CSD_pre_add_and_real_iteratoins_exact_exact_f0} und \ref{subsubsec:Testfunktionen:CSD:fig:hom_hpb_CSD_pre_add_and_real_iteratoins_exact_exact_adapt} zu sehen, brauchen alle Varianten von ACO\(_\mathbb{R}\)-VS-MV, unabhängig der Neustartstrategie, mehr Funktionsauswertungen für das Suchen gefilterter Lösungen als für die Konstruktion neuer Lösungen selbst, auch wenn man die, bei der Lösungssuche zusätzlichen Funktionsauswertungen mitzählt. Das gleiche Verhalten kann man in den Abbildungen \ref{subsubsec:Testfunktionen:CSD:fig:hom_het_and_het_p_CSD_pre_add_and_real_iteratoins_exact_penalty_f0} und \ref{subsubsec:Testfunktionen:CSD:fig:hom_het_and_het_p_CSD_pre_add_and_real_iteratoins_exact_penalty_adap}, welche sich im Anhang befinden. Auf der anderen Seite kann beobachtet werden, dass das beste Ergebnis bei dem Fall \glqq penalty-penalty\grqq{} erreicht wurde. Ebenso kann beobachtet werden, dass das Hinzufügen von adaptiven Neustarts die Leistung des Algorithmus verschlechtert. Es folgt der Schluss, dass, sowohl das Filtern des Raumes vor der Algorithmusausführung allein keinen Mehrwert brachte, als auch das Filtern des Raum von der Algorithmusausführung verbunden mit dem Filtern von Lösungen während der Algorithmusausführung, keinen Mehrwert brachte. 
+	Wie in den Abbildungen \ref{subsubsec:Testfunktionen:CSD:fig:hom_het_and_het_p_CSD_pre_add_and_real_iteratoins_exact_exact_f0_Teil_1} bis \ref{subsubsec:Testfunktionen:CSD:fig:hom_hpb_CSD_pre_add_and_real_iteratoins_exact_exact_adapt_Teil_2} zu sehen, brauchen alle Varianten von ACO\(_\mathbb{R}\)-VS-MV, unabhängig der Neustartstrategie, mehr Funktionsauswertungen für das Suchen gefilterter Lösungen als für die Konstruktion neuer Lösungen selbst, auch wenn man die, bei der Lösungssuche zusätzlichen Funktionsauswertungen mitzählt. Das gleiche Verhalten kann man in den Abbildungen \ref{subsubsec:Testfunktionen:CSD:fig:hom_het_and_het_p_CSD_pre_add_and_real_iteratoins_exact_penalty_f0_Teil_1} bis \ref{subsubsec:Testfunktionen:CSD:fig:hom_het_and_het_p_CSD_pre_add_and_real_iteratoins_exact_penalty_adap_Teil_2}, welche sich im Anhang befinden. Auf der anderen Seite kann beobachtet werden, dass das beste Ergebnis bei dem Fall \glqq penalty-penalty\grqq{} erreicht wurde. Ebenso kann beobachtet werden, dass das Hinzufügen von adaptiven Neustarts die Leistung des Algorithmus verschlechtert. Es folgt der Schluss, dass, sowohl das Filtern des Raumes vor der Algorithmusausführung allein keinen Mehrwert brachte, als auch das Filtern des Raum von der Algorithmusausführung verbunden mit dem Filtern von Lösungen während der Algorithmusausführung, keinen Mehrwert brachte. 
 	
 	\begin{figure}[H]
 		
 		\centering
-		\includegraphics[width=.3\textwidth]{Abbildungen/Coil_Spring_Design_-_Dateien/hom_hpb_aco_r_vs_mv_pre_add_and_real_iterations_exact_exact_fixed_0.png}\hfill
-		\includegraphics[width=.3\textwidth]{Abbildungen/Coil_Spring_Design_-_Dateien/het_hpb_aco_r_vs_mv_pre_add_and_real_iterations_exact_exact_fixed_0.png}\hfill
-		\includegraphics[width=.3\textwidth]{Abbildungen/Coil_Spring_Design_-_Dateien/het_hsppb_aco_r_vs_mv_pre_add_and_real_iterations_exact_exact_fixed_0.png}
+		\includegraphics[width=.5\textwidth]{Abbildungen/Coil_Spring_Design_-_Dateien/hom_hpb_aco_r_vs_mv_pre_add_and_real_iterations_exact_exact_fixed_0.png}\hfill
+		\includegraphics[width=.5\textwidth]{Abbildungen/Coil_Spring_Design_-_Dateien/het_hpb_aco_r_vs_mv_pre_add_and_real_iterations_exact_exact_fixed_0.png}
 		
-		\caption{Verhältnis zwischen den benötigten Funktionsauswertungen für Vorfiltern, zusätzlichem Filtern und realen Iterationsschritten der Algorithmen für den Fall \glqq exact-exact\grqq{} und NSS-f0}
-		\label{subsubsec:Testfunktionen:CSD:fig:hom_het_and_het_p_CSD_pre_add_and_real_iteratoins_exact_exact_f0}
+		\caption{Verhältnis zwischen den benötigten Funktionsauswertungen für Vorfiltern, zusätzlichem Filtern und realen Iterationsschritten der Algorithmen für den Fall \glqq exact-exact\grqq{} und NSS-f0, Teil 1}
+		\label{subsubsec:Testfunktionen:CSD:fig:hom_het_and_het_p_CSD_pre_add_and_real_iteratoins_exact_exact_f0_Teil_1}
 		
 	\end{figure}
+	
+	\begin{figure}[H]
+		
+		\centering
+		\includegraphics[width=.5\textwidth]{Abbildungen/Coil_Spring_Design_-_Dateien/het_hsppb_aco_r_vs_mv_pre_add_and_real_iterations_exact_exact_fixed_0.png}
+		
+		\caption{Verhältnis zwischen den benötigten Funktionsauswertungen für Vorfiltern, zusätzlichem Filtern und realen Iterationsschritten der Algorithmen für den Fall \glqq exact-exact\grqq{} und NSS-f0, Teil 2}
+		\label{subsubsec:Testfunktionen:CSD:fig:hom_het_and_het_p_CSD_pre_add_and_real_iteratoins_exact_exact_f0_Teil_2}
+		
+	\end{figure}
+	
+	
 	
 	%TODO passt es, dass ich nur erfolgreiche Durchläufe betrachte? Angeben wie viele es gab und wie viele erfolgreich waren
 	
 	\begin{figure}[H]
 		
 		\centering
-		\includegraphics[width=.3\textwidth]{Abbildungen/Coil_Spring_Design_-_Dateien/hom_hpb_aco_r_vs_mv_pre_add_and_real_iterations_exact_exact_adaptive.png}\hfill
-		\includegraphics[width=.3\textwidth]{Abbildungen/Coil_Spring_Design_-_Dateien/het_hpb_aco_r_vs_mv_pre_add_and_real_iterations_exact_exact_adaptive.png}\hfill
-		\includegraphics[width=.3\textwidth]{Abbildungen/Coil_Spring_Design_-_Dateien/het_hsppb_aco_r_vs_mv_pre_add_and_real_iterations_exact_exact_adaptive.png}
+		\includegraphics[width=.5\textwidth]{Abbildungen/Coil_Spring_Design_-_Dateien/hom_hpb_aco_r_vs_mv_pre_add_and_real_iterations_exact_exact_adaptive.png}\hfill
+		\includegraphics[width=.5\textwidth]{Abbildungen/Coil_Spring_Design_-_Dateien/het_hpb_aco_r_vs_mv_pre_add_and_real_iterations_exact_exact_adaptive.png}
 		
-		\caption{Verhältnis zwischen den benötigten Funktionsauswertungen für Vorfiltern, zusätzlichem Filtern und realen Iterationsschritten der Algorithmen für den Fall \glqq exact-exact\grqq{} und NSS-adapt}
-		\label{subsubsec:Testfunktionen:CSD:fig:hom_hpb_CSD_pre_add_and_real_iteratoins_exact_exact_adapt}
+		\caption{Verhältnis zwischen den benötigten Funktionsauswertungen für Vorfiltern, zusätzlichem Filtern und realen Iterationsschritten der Algorithmen für den Fall \glqq exact-exact\grqq{} und NSS-adapt, Teil 1}
+		\label{subsubsec:Testfunktionen:CSD:fig:hom_hpb_CSD_pre_add_and_real_iteratoins_exact_exact_adapt_Teil_1}
+		
+	\end{figure}
+	
+	\begin{figure}[H]
+		
+		\centering
+		\includegraphics[width=.5\textwidth]{Abbildungen/Coil_Spring_Design_-_Dateien/het_hsppb_aco_r_vs_mv_pre_add_and_real_iterations_exact_exact_adaptive.png}
+		
+		\caption{Verhältnis zwischen den benötigten Funktionsauswertungen für Vorfiltern, zusätzlichem Filtern und realen Iterationsschritten der Algorithmen für den Fall \glqq exact-exact\grqq{} und NSS-adapt, Teil 2}
+		\label{subsubsec:Testfunktionen:CSD:fig:hom_hpb_CSD_pre_add_and_real_iteratoins_exact_exact_adapt_Teil_2}
 		
 	\end{figure}
 	
 	
 	
 	
-	Zwar kann nicht mit Sicherheit gesagt werden, wie gut die 
+	% Zwar kann nicht mit Sicherheit gesagt werden, wie gut die 
 	
 	%\section{Konvergenzbetrachtung} \label{Konvergenzbetrachtung}
 
@@ -3260,11 +3278,20 @@ within=section,
 		
 		\centering
 		\includegraphics[width=.3\textwidth]{Abbildungen/Coil_Spring_Design_-_Dateien/hom_hpb_aco_r_vs_mv_pre_add_and_real_iterations_exact_penalty_fixed_0.png}\hfill
-		\includegraphics[width=.3\textwidth]{Abbildungen/Coil_Spring_Design_-_Dateien/het_hpb_aco_r_vs_mv_pre_add_and_real_iterations_exact_penalty_fixed_0.png}\hfill
+		\includegraphics[width=.3\textwidth]{Abbildungen/Coil_Spring_Design_-_Dateien/het_hpb_aco_r_vs_mv_pre_add_and_real_iterations_exact_penalty_fixed_0.png}
+		
+		\caption{Verhältnis zwischen den benötigten Funktionsauswertungen für Vorfiltern, zusätzlichem Filtern und realen Iterationsschritten der Algorithmen für den Fall \glqq exact-penalty\grqq{} und NSS-f0, Teil 1}
+		\label{subsubsec:Testfunktionen:CSD:fig:hom_het_and_het_p_CSD_pre_add_and_real_iteratoins_exact_penalty_f0_Teil_1}
+		
+	\end{figure}
+	
+	\begin{figure}[H]
+		
+		\centering
 		\includegraphics[width=.3\textwidth]{Abbildungen/Coil_Spring_Design_-_Dateien/het_hsppb_aco_r_vs_mv_pre_add_and_real_iterations_exact_penalty_fixed_0.png}
 		
-		\caption{Verhältnis zwischen den benötigten Funktionsauswertungen für Vorfiltern, zusätzlichem Filtern und realen Iterationsschritten der Algorithmen für den Fall \glqq exact-penalty\grqq{} und NSS-f0}
-		\label{subsubsec:Testfunktionen:CSD:fig:hom_het_and_het_p_CSD_pre_add_and_real_iteratoins_exact_penalty_f0}
+		\caption{Verhältnis zwischen den benötigten Funktionsauswertungen für Vorfiltern, zusätzlichem Filtern und realen Iterationsschritten der Algorithmen für den Fall \glqq exact-penalty\grqq{} und NSS-f0, Teil 2}
+		\label{subsubsec:Testfunktionen:CSD:fig:hom_het_and_het_p_CSD_pre_add_and_real_iteratoins_exact_penalty_f0_Teil_2}
 		
 	\end{figure}
 	
@@ -3272,11 +3299,20 @@ within=section,
 		
 		\centering
 		\includegraphics[width=.3\textwidth]{Abbildungen/Coil_Spring_Design_-_Dateien/hom_hpb_aco_r_vs_mv_pre_add_and_real_iterations_exact_penalty_adaptive.png}\hfill
-		\includegraphics[width=.3\textwidth]{Abbildungen/Coil_Spring_Design_-_Dateien/het_hpb_aco_r_vs_mv_pre_add_and_real_iterations_exact_penalty_adaptive.png}\hfill
+		\includegraphics[width=.3\textwidth]{Abbildungen/Coil_Spring_Design_-_Dateien/het_hpb_aco_r_vs_mv_pre_add_and_real_iterations_exact_penalty_adaptive.png}
+		
+		\caption{Verhältnis zwischen den benötigten Funktionsauswertungen für Vorfiltern, zusätzlichem Filtern und realen Iterationsschritten der Algorithmen für den Fall \glqq exact-penalty\grqq{} und NSS-adapt, Teil 1}
+		\label{subsubsec:Testfunktionen:CSD:fig:hom_het_and_het_p_CSD_pre_add_and_real_iteratoins_exact_penalty_adap_Teil_1}
+		
+	\end{figure}
+	
+	\begin{figure}[H]
+		
+		\centering
 		\includegraphics[width=.3\textwidth]{Abbildungen/Coil_Spring_Design_-_Dateien/het_hsppb_aco_r_vs_mv_pre_add_and_real_iterations_exact_penalty_adaptive.png}
 		
-		\caption{Verhältnis zwischen den benötigten Funktionsauswertungen für Vorfiltern, zusätzlichem Filtern und realen Iterationsschritten der Algorithmen für den Fall \glqq exact-penalty\grqq{} und NSS-adapt}
-		\label{subsubsec:Testfunktionen:CSD:fig:hom_het_and_het_p_CSD_pre_add_and_real_iteratoins_exact_penalty_adap}
+		\caption{Verhältnis zwischen den benötigten Funktionsauswertungen für Vorfiltern, zusätzlichem Filtern und realen Iterationsschritten der Algorithmen für den Fall \glqq exact-penalty\grqq{} und NSS-adapt, Teil 2}
+		\label{subsubsec:Testfunktionen:CSD:fig:hom_het_and_het_p_CSD_pre_add_and_real_iteratoins_exact_penalty_adap_Teil_2}
 		
 	\end{figure}
 	

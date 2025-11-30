@@ -63,10 +63,10 @@
 \contentsline {subsection}{\numberline {7.2}Vergleich bzgl. Testfunktionen mit gemischten Variablen}{49}{}%
 \contentsline {subsubsection}{\numberline {7.2.1}Vergleich bzgl. konstruierter Testfunktionen mit gemischten Variablen}{49}{}%
 \contentsline {subsubsection}{\numberline {7.2.2}Vergleich bzgl. dem Coil Spring Design Problem (CSD)}{51}{}%
-\contentsline {section}{\numberline {8}Kurzzusammenfassung}{55}{}%
-\contentsline {section}{Literaturverzeichnis}{57}{}%
-\contentsline {section}{Tabellenverzeichnis}{60}{}%
-\contentsline {section}{Abbildungsverzeichnis}{60}{}%
+\contentsline {section}{\numberline {8}Kurzzusammenfassung}{56}{}%
+\contentsline {section}{Literaturverzeichnis}{58}{}%
+\contentsline {section}{Tabellenverzeichnis}{61}{}%
+\contentsline {section}{Abbildungsverzeichnis}{61}{}%
 \contentsline {part}{\nonumberline Anlagen}{I}{}%
 \contentsline {section}{\numberline {A}Vergleich der pre-, add- und realen Funktionsauswertungen}{I}{}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
