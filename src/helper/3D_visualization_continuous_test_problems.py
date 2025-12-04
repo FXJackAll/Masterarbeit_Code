@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 # from sympy.printing.pretty.pretty_symbology import linewidth
 
 # path where to save the box plot
-save_pic_path = "../figures/3D_visualization_shekel_2_10_-0_10_coolwarm.png"
+save_pic_path = "../figures/3D_visualization_hartmann_not_6_2_4_0_1_coolwarm.png"
 
 fig, ax = plt.subplots(subplot_kw={"projection": "3d"})
 
@@ -228,11 +228,11 @@ def f_zakharov_2(x,y):
     return function_value
 
 # Easom
-x = np.linspace(-0.0, 10.0, 50, dtype=float)
-y = np.linspace(-0.0, 10.0, 50, dtype=float)
+x = np.linspace(-0.0, 1.0, 50, dtype=float)
+y = np.linspace(-0.0, 1.0, 50, dtype=float)
 
 X, Y = np.meshgrid(x,y)
-Z = f_shekel_2_10(X,Y)
+Z = f_hartmann_not_6_2_4(X,Y)
 
 surf = ax.plot_surface(X, Y, Z, cmap=cm.coolwarm, linewidth=0, antialiased=False)
 
@@ -244,9 +244,9 @@ ax.set_ylabel('y')
 ax.zaxis.set_rotate_label(False)
 ax.set_zlabel('$f(x)$', rotation=5)
 
-ax.set_title('Shekel(2,10')
+ax.set_title('Hartmann(2,6)')
 
-ax.view_init(elev=30, azim=45)
+ax.view_init(elev=30, azim=230)
 
 fig.colorbar(surf, ax=ax, fraction=0.02, pad=0.1)
 
