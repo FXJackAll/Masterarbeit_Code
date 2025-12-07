@@ -598,7 +598,7 @@ within=section,
 	%\noindent Ferner werden die Parametervektoren \(\omega\) , \(\mu\) und \(\sigma\) folgendermaßen berechnet.
 	
 	\begin{equation} \label{subsec:ACO_R:eq:mu}
-		\mu = \{ \mu^i_1, ...,\mu^i_k \} = \{ s^i_1, ..., s^i_k \}, ~ i \in \{1, ..., n\},
+		\mu = \{ \mu^i_1, ...,\mu^i_k \} = \{ s^i_1, ..., s^i_k \}, ~ i \in \{1, ..., n\}
 	\end{equation}
 	
 	%\noindent wobei \(n\) die Anzahl der Dimensionen ist, \(i\) der Konstruktionsschritt und \(s^i_j\) die \(i\)-te Variable der \(j\)-ten Lösung ist. Die Gewichte für jede Lösung ergeben sich nach Gleichung~(\ref{subsec:ACO_R:eq:omega}).\hfill\newline
@@ -617,7 +617,7 @@ within=section,
 	\end{equation}
 	
 	\begin{equation} \label{subsec:ACO_R:eq:Probability_Distribution}
-		p_l = \frac{\omega_l}{\sum_{r=1}^{k} \omega_r},  ~ 
+		p_l = \frac{\omega_l}{\sum_{r=1}^{k} \omega_r}, ~ 
 		l \in \{1, ..., k\}
 	\end{equation}
 	
@@ -647,19 +647,19 @@ within=section,
 	
 	\begin{equation} \label{subsec:ACO_R_-_simple:eq:omega}
 		\omega_i = \frac{1}{qk\sqrt{2\pi}}e^{-\frac{(i-1)^2}{2q^2k^2}}, ~ 
-		i \in \{1, ..., k\},
+		i \in \{1, ..., k\}
 	\end{equation}
 	
 	%\noindent wobei auch hier k die Anzahl der Lösungen im Lösungsarchiv ist, also die Größe des Archivs. Danach wird die Wahrscheinlichkeitsverteilung, nach welcher eine Lösung aus dem Archiv gewählt wird, gemäß Gleichung~(\ref{ACO_R_simple_probability_distribution}) berechnet.
 	
 	\begin{equation} \label{subsec:ACO_R_-_simple:eq:Probability_Distribution}
-		p_i=\frac{w_i}{\sum_{j=1}^{n} w_j}, ~  i \in \{1, ..., k\}.
+		p_i=\frac{w_i}{\sum_{j=1}^{n} w_j}, ~  i \in \{1, ..., k\}
 	\end{equation}
 	
 	%\noindent Es wird also zufällig eine Lösung \(s_i\) mit der Wahrscheinlichkeit \(p_i\) aus dem Lösungsarchiv gewählt. Danach wird die lineare Abweichung in der d-ten Dimension zu dieser Lösung mit der Gleichung~(\ref{ACO_R_simple_linear_distribution}) berechnet.
 	
 	\begin{equation} \label{subsec:ACO_R_-_simple:eq:Linear_Deviation}
-		\delta_d = \xi\sum_{j=1}^{k} \frac{|s_{j\_d}-s_{i\_d}|}{k-1}, ~ j \in \{1, ..., k\}, ~ d \in \{1, ..., n\},
+		\delta_d = \xi\sum_{j=1}^{k} \frac{|s_{j\_d}-s_{i\_d}|}{k-1}, ~ j \in \{1, ..., k\}, ~ d \in \{1, ..., n\}
 	\end{equation}
 	
 	%\noindent Dabei ist \(n\) die Anzahl der Dimensionen des Problems.\hfill\newline
@@ -667,7 +667,7 @@ within=section,
 	%\noindent Anschließend wird für jede Dimension ein zufälliger Punkt aus dem Intervall
 	
 	\begin{equation} \label{subsec:ACO_R_-_simple:eq:Suchintervall}
-		[s_d - \delta_d, s_d + \delta_d], ~ d \in \{1, ..., n\},
+		[s_d - \delta_d, s_d + \delta_d], ~ d \in \{1, ..., n\}
 	\end{equation}
 	
 	%\noindent genommen. Damit haben wir, ausgehen von einem Lösungsarchiv, eine neue Lösung gewonnen. \hfill\newline
@@ -713,7 +713,7 @@ within=section,
 	%\noindent Es wird also, wie oben erwähnt, immer nur die erste Lösung \(s_1\) aus dem Lösungsarchiv gewählt. Danach wird die lineare Abweichung in der d-ten Dimension zu dieser Lösung mit der Gleichung~(\ref{eq:ACO_R_very_simple_linear_distribution}) berechnet.
 	
 	\begin{equation} \label{subsec:ACO_R_-_very_-_simple:eq:Linear_Diviation}
-		\delta_d = \xi\sum_{j=1}^{k} \frac{|s_{j\_d}-s_{1\_d}|}{k-1}, ~ j \in \{1, ..., k\}, ~ d \in \{1, ..., n\},
+		\delta_d = \xi\sum_{j=1}^{k} \frac{|s_{j\_d}-s_{1\_d}|}{k-1}, ~ j \in \{1, ..., k\}, ~ d \in \{1, ..., n\}
 	\end{equation}
 	
 	%\noindent Dabei ist \(n\) die Anzahl der Dimensionen des Problems.\hfill\newline
@@ -721,7 +721,7 @@ within=section,
 	%\noindent Anschließend wird für jede Dimension wieder ein zufälliger Punkt aus dem Intervall
 	
 	\begin{equation} \label{subsec:ACO_R_-_very_-_simple:eq:interval}
-		[s_d - \delta_d, s_d + \delta_d], ~ d \in \{1, ..., n\},
+		[s_d - \delta_d, s_d + \delta_d], ~ d \in \{1, ..., n\}
 	\end{equation}
 	
 	%\noindent genommen. Damit haben wir auch hier, ausgehen von einem Lösungsarchiv, eine neue Lösung gewonnen.\hfill\newline
@@ -896,7 +896,7 @@ within=section,
 	
 	CIAC steht für \textbf{C}ontinuous \textbf{I}nteracting \textbf{A}nt \textbf{C}olony. In CIAC kommunizieren die Ameisen auf zwei Wegen, indirekt über Pheromon und direkt über Nachrichten. Nachrichten bestehen wiederum aus zwei Komponenten, die Position des Senders und dem Funktionswert der Zielfunktion an seiner Position.
 	
-	\subsubsection{Meta-Heuristiken, die für stetige Probleme adaptiert wurden} \label{subsubsec:Grundlagen:Vergleichsalgorithmen:Meta_-_Heuristiken_stetige_Probleme}
+	\subsubsection{Metaheuristiken, die für stetige Probleme adaptiert wurden} \label{subsubsec:Grundlagen:Vergleichsalgorithmen:Meta_-_Heuristiken_stetige_Probleme}
 	
 	\paragraph{CGA}\mbox{}\\
 	
@@ -925,13 +925,13 @@ within=section,
 	
 	Die folgende Beschreibung ist nach \textit{Storn und Price}~\cite{storn1997differential}.\hfill\newline
 	
-	DE steht für \textbf{D}ifferential \textbf{E}volution. DE wendet Selektion, Crossover und Mutation, um ein Minimum einer gegebenen Zielfunktion zu finden. Diese Meta-Heuristik heißt differential, da in der mathematischen Definition des Schrittes \glqq Mutation\grqq{} eine Differenz zentrale Bedeutung hat, wie in Gleichung~\ref{subsubsubpar:Grundlagen:Vergleichsalgorithmen:DE:eq:Mutation} zu sehen.
+	DE steht für \textbf{D}ifferential \textbf{E}volution. DE wendet Selektion, Crossover und Mutation, um ein Minimum einer gegebenen Zielfunktion zu finden. Diese Metaheuristik heißt differential, da in der mathematischen Definition des Schrittes \glqq Mutation\grqq{} eine Differenz zentrale Bedeutung hat, wie in Gleichung~\ref{subsubsubpar:Grundlagen:Vergleichsalgorithmen:DE:eq:Mutation} zu sehen.
 	
 	\begin{equation} \label{subsubsubpar:Grundlagen:Vergleichsalgorithmen:DE:eq:Mutation}
 		v_{i, G + 1} = x_{r_1, G} + F \cdot (x_{r_2, G} - x_{r_3, G}),
 	\end{equation}
 	
-	wobei die \(x_{i, G}, \, i \in \{1, \dots, N\}, \, N \in \mathbb{N}\) Ausgangsparametervektoren sind, \(G\) die Generation ist, \(r_1, r_2, r_3 \in \{1, \dots, N\}\) Indizes sind, die zufällig gewählt wurden, jedoch verschieden von \(i\) sind, \(F \in [0, 2]\) ist ein konstanter Faktor, der den Einfluss der Differenz \((x_{r_2, G} - x_{r_3, G})\) steuert und \((x_{r_2, G} - x_{r_3, G})\) ist die Differenz nach der die Meta-Heuristik benannt ist. 
+	wobei die \(x_{i, G}, \, i \in \{1, \dots, N\}, \, N \in \mathbb{N}\) Ausgangsparametervektoren sind, \(G\) die Generation ist, \(r_1, r_2, r_3 \in \{1, \dots, N\}\) Indizes sind, die zufällig gewählt wurden, jedoch verschieden von \(i\) sind, \(F \in [0, 2]\) ist ein konstanter Faktor, der den Einfluss der Differenz \((x_{r_2, G} - x_{r_3, G})\) steuert und \((x_{r_2, G} - x_{r_3, G})\) ist die Differenz nach der die Metaheuristik benannt ist. 
 	
 	%TODO Differenz kurz erklären
 	
@@ -2426,9 +2426,9 @@ within=section,
 	
 	Wie in den Tabellen \ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Mit_Meta_-_Heuristiken_Adaptiert_Fuer_Stetige_Probleme_Teil_1}, \ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Mit_Meta_-_Heuristiken_Adaptiert_Fuer_Stetige_Probleme_Teil_2} und \ref{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Mit_Meta_-_Heuristiken_Adaptiert_Fuer_Stetige_Probleme_Teil_3} zu sehen, ähnlich wie bei der Betrachtung von Testfunktionen, die benutzt werden, um Algorithmen, die verwandt zu Ameisenalgorithmen sind, zu testen, ist das Bild nicht eindeutig. Zwar ist \ac{acorvs} der beste Algorithmus bei 6 der 15 Probleme aber er ist viel schlechter bei zwei der Probleme, nämlich \glqq Griewangk\grqq{} und \glqq Rosenbrock(5)\grqq und bei den Problemen \glqq Easom\grqq{} und \glqq Hartmann(3,4)\grqq{} konnte für \ac{acorvs} keine Angabe gemacht werden, wie in meiner Bachelorarbeit~\cite{FCM_2019} dargelegt. Auf der anderen Seite ist ACO\(_\mathbb{R}\) nur bei einem der Probleme der beste Algorithmus aber, wenn man seine relative Anzahl an Funktionsauswertungen betrachtet, ist er bei jedem Problem nahe dem Bestwert. Ähnlich ist auch ECTS, ein Algorithmus der bei 5 der 15 Probleme der beste Algorithmus ist, bei den Problemen, wo er nicht der beste ist, nahe am relativen Bestwert. Jedoch fehlen bei ECTS 4 der 15 Probleme, vor allem das Problem \glqq Griewangk\grqq{}, welches sich als schwer herausgestellt hat und die Güte von ECTS bzgl. dieses Problems besonders interessant gewesen wäre. Schließlich ist ECTS bei zwei Problemen sehr schlecht, weswegen dieser Algorithmus insgesamt im Vergleich weniger gut abschneidet. Die Güte von Hom-HPB-ACO\(_\mathbb{R}\)-VS-MV ist vergleichbar mit ACO\(_\mathbb{R}\), da Hom.HPB-ACO\(_\mathbb{R}\)-VS-MV nur bei zwei der Probleme der beste ist aber, wenn man seine relative Anzahl an Funktionsauswertungen betrachtet, er bei allen übrigen Problemen, bis auf \glqq Griewangk\grqq und \glqq Rosenbrock\grqq{}, den Problemen, wo der Algorithmus nicht konvergiert, nahe dem Bestwert ist. Aber da HPB-ACO\(\mathbb{R}\)-VS-MV gerade bei den schwereren Probleme nicht konvergiert, wird ACO\(_\mathbb{R}\) als den besseren Algorithmus eingestuft.\hfill\newline
 	
-	Es folgt, dass unter den Meta-Heuristiken, die für stetige Probleme adaptiert wurden, ACO\(_\mathbb{R}\) der bessere Algorithmus ist. Er ist zwar nur bei einem Problem der Beste aber die Tatsache, dass, wenn man seine relative Anzahl an Funktionsauswertungen betrachtet, er bei allen anderen Problemen nahe dem Bestwert ist, spricht dafür, dass ACO\(_\mathbb{R}\) der beste Algorithmus ist, da er eine hohe Güte problemunabhängig zeigt, was als wichtiger ansehen wurde, als Bestwerte zu erreichen. Da aber Bestwerte trotzdem für einen Algorithmus sprechen, wird \ac{acorvs} und ECTS ein zweiter Platz zugeteilt. Die Algorithmen teilen sich den zweiten Platz, da sie beide 5 Mal der beste Algorithmus sind und zudem 2 Mal gerade dort die besten sind, wo der jeweils andere Algorithmus schlecht ist, so ist ECTS der beste Algorithmus bei den Problemen \glqq Rosenbrock(2)\grqq{} und \glqq Rosenbrock(5)\grqq, wo \ac{acorvs} eine relative Anzahl an Funktionsauswertungen von 2.5 bzw. 18.4 braucht, während \ac{acorvs} der beste Algorithmus bei den Problemen \glqq Hartmann(6,4)\grqq{} und \glqq Zakharov(5)\grqq{} ist, wo ECTS eine relative Anzahl an Funktionsauswertungen von 4.0 bzw. 3.2 braucht. Auf dem dritten Platz wird Het-HPB-ACO\(_\mathbb{R}\)-VS-MV mit NSS-f0 platziert, da dieser Algorithmus ein Mal der beste ist, bei allen anderen Testfunktionen, außer \glqq Rosenbrock\grqq{}, nahe dem Bestwert ist, wenn man seine relative Anzahl an Funktionsauswertungen betrachtet und, im Gegenteil zu den anderen beiden Varianten von \ac{acorvsmv} mit NSS-f0, bei der Testfunktion \glqq Rosenbrock\grqq{}, konvergiert.\hfill\newline
+	Es folgt, dass unter den Metaheuristiken, die für stetige Probleme adaptiert wurden, ACO\(_\mathbb{R}\) der bessere Algorithmus ist. Er ist zwar nur bei einem Problem der Beste aber die Tatsache, dass, wenn man seine relative Anzahl an Funktionsauswertungen betrachtet, er bei allen anderen Problemen nahe dem Bestwert ist, spricht dafür, dass ACO\(_\mathbb{R}\) der beste Algorithmus ist, da er eine hohe Güte problemunabhängig zeigt, was als wichtiger ansehen wurde, als Bestwerte zu erreichen. Da aber Bestwerte trotzdem für einen Algorithmus sprechen, wird \ac{acorvs} und ECTS ein zweiter Platz zugeteilt. Die Algorithmen teilen sich den zweiten Platz, da sie beide 5 Mal der beste Algorithmus sind und zudem 2 Mal gerade dort die besten sind, wo der jeweils andere Algorithmus schlecht ist, so ist ECTS der beste Algorithmus bei den Problemen \glqq Rosenbrock(2)\grqq{} und \glqq Rosenbrock(5)\grqq, wo \ac{acorvs} eine relative Anzahl an Funktionsauswertungen von 2.5 bzw. 18.4 braucht, während \ac{acorvs} der beste Algorithmus bei den Problemen \glqq Hartmann(6,4)\grqq{} und \glqq Zakharov(5)\grqq{} ist, wo ECTS eine relative Anzahl an Funktionsauswertungen von 4.0 bzw. 3.2 braucht. Auf dem dritten Platz wird Het-HPB-ACO\(_\mathbb{R}\)-VS-MV mit NSS-f0 platziert, da dieser Algorithmus ein Mal der beste ist, bei allen anderen Testfunktionen, außer \glqq Rosenbrock\grqq{}, nahe dem Bestwert ist, wenn man seine relative Anzahl an Funktionsauswertungen betrachtet und, im Gegenteil zu den anderen beiden Varianten von \ac{acorvsmv} mit NSS-f0, bei der Testfunktion \glqq Rosenbrock\grqq{}, konvergiert.\hfill\newline
 	
-	Es fällt ferner auf, dass je komplexer eine Iteration von \ac{acorvsmv} mit NSS-adapt wird, desto schlechter wird sie im Durchschnitt. Auch mit NSS-f0 wird Het-HSPPB-ACO\(_\mathbb{R}\)-VS-MV bei \glqq Schekel(4,5)\grqq, \glqq Schekel(4,7)\grqq{} und \glqq Schekel(4,10)\grqq{} deutlich schlechter als \ac{acorvs}, Hom-HPB-ACO\(_\mathbb{R}\)-VS-MV mit NSS-f0 und Het-HPB-ACO\(_\mathbb{R}\)-VS-MV mit NSS-f0. Sonst sind die Varianten von \ac{acorvsmv} mit NSS-f0 in ihrer Güte, im Durchschnitt, was ihre relative Anzahl an Funktionsauswertungen angeht, nahe den Bestwerten. Jedoch sind alle Varianten von \ac{acorvsmv}, unabhängig ihrer Neustartstrategie, komplexer als \ac{acorvs}. Deswegen wird eingestuft, dass die Erweiterung von \ac{acorvs} zu den Varianten von \ac{acorvsmv}, bei Testfunktionen, welche zum Vergleich für Meta-Heuristiken, die für stetige Probleme adaptiert wurden, genommen werden, keinen Mehrwert brachte.
+	Es fällt ferner auf, dass je komplexer eine Iteration von \ac{acorvsmv} mit NSS-adapt wird, desto schlechter wird sie im Durchschnitt. Auch mit NSS-f0 wird Het-HSPPB-ACO\(_\mathbb{R}\)-VS-MV bei \glqq Schekel(4,5)\grqq, \glqq Schekel(4,7)\grqq{} und \glqq Schekel(4,10)\grqq{} deutlich schlechter als \ac{acorvs}, Hom-HPB-ACO\(_\mathbb{R}\)-VS-MV mit NSS-f0 und Het-HPB-ACO\(_\mathbb{R}\)-VS-MV mit NSS-f0. Sonst sind die Varianten von \ac{acorvsmv} mit NSS-f0 in ihrer Güte, im Durchschnitt, was ihre relative Anzahl an Funktionsauswertungen angeht, nahe den Bestwerten. Jedoch sind alle Varianten von \ac{acorvsmv}, unabhängig ihrer Neustartstrategie, komplexer als \ac{acorvs}. Deswegen wird eingestuft, dass die Erweiterung von \ac{acorvs} zu den Varianten von \ac{acorvsmv}, bei Testfunktionen, welche zum Vergleich für Metaheuristiken, die für stetige Probleme adaptiert wurden, genommen werden, keinen Mehrwert brachte.
 	
 	%TODO ist es ok, dass Probleme und Testfunktion als Sysnonyme interchanging benutzt werden? Testfunktionen für Funktionen Problem für CSD
 	
@@ -2436,7 +2436,7 @@ within=section,
 		
 		%\fontsize{10pt}{12pt}
 		
-		\caption{Vergleich zwischen ACO\(_{\mathbb{R}}\), \acl{acorvs}, Varianten von \acl{acorvsmv} und anderen Meta-Heuristiken, die für stetige Probleme adaptiert wurden, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant} und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}, Teil 1}
+		\caption{Vergleich zwischen ACO\(_{\mathbb{R}}\), \acl{acorvs}, Varianten von \acl{acorvsmv} und anderen Metaheuristiken, die für stetige Probleme adaptiert wurden, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant} und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}, Teil 1}
 		
 		\label{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Mit_Meta_-_Heuristiken_Adaptiert_Fuer_Stetige_Probleme_Teil_1}
 		
@@ -2522,7 +2522,7 @@ within=section,
 		
 		%\fontsize{10pt}{12pt}
 		
-		\caption{Vergleich zwischen ACO\(_{\mathbb{R}}\), \acl{acorvs}, Varianten von \acl{acorvsmv} mit Neustartstrategie \(fixed = 0\) (NSS-f0) und anderen Meta-Heuristiken, die für stetige Probleme adaptiert wurden, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant} und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}, Teil 2}
+		\caption{Vergleich zwischen ACO\(_{\mathbb{R}}\), \acl{acorvs}, Varianten von \acl{acorvsmv} mit Neustartstrategie \(fixed = 0\) (NSS-f0) und anderen Metaheuristiken, die für stetige Probleme adaptiert wurden, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant} und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}, Teil 2}
 		
 		\label{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Mit_Meta_-_Heuristiken_Adaptiert_Fuer_Stetige_Probleme_Teil_2}
 		
@@ -2623,7 +2623,7 @@ within=section,
 		
 		%\fontsize{10pt}{12pt}
 		
-		\caption{Vergleich zwischen ACO\(_{\mathbb{R}}\),\acl{acorvs}, Varianten von \acl{acorvsmv} mit Neustartstrategie \(adaptive\) (NSS-adapt) und anderen Meta-Heuristiken, die für stetige Probleme adaptiert wurden, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant} und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}, Teil 3}
+		\caption{Vergleich zwischen ACO\(_{\mathbb{R}}\),\acl{acorvs}, Varianten von \acl{acorvsmv} mit Neustartstrategie \(adaptive\) (NSS-adapt) und anderen Metaheuristiken, die für stetige Probleme adaptiert wurden, basierend auf \textit{Socha und Dorigo}~\cite{socha2008ant} und damit auf \textit{Kern et al., 2004}~\cite{kern2004learning}, Teil 3}
 		
 		\label{subsec:Vergleich_Von_ACO_R_ACO_R_Very_Simple_Und_Iterationen:tab:Vergleich_Mit_Meta_-_Heuristiken_Adaptiert_Fuer_Stetige_Probleme_Teil_3}
 		

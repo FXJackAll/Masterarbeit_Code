@@ -30,7 +30,7 @@
 \contentsline {paragraph}{\numberline {2.14.2.1}CACO}{16}{}%
 \contentsline {paragraph}{\numberline {2.14.2.2}API}{16}{}%
 \contentsline {paragraph}{\numberline {2.14.2.3}CIAC}{17}{}%
-\contentsline {subsubsection}{\numberline {2.14.3}Meta-Heuristiken, die für stetige Probleme adaptiert wurden}{17}{}%
+\contentsline {subsubsection}{\numberline {2.14.3}Metaheuristiken, die für stetige Probleme adaptiert wurden}{17}{}%
 \contentsline {paragraph}{\numberline {2.14.3.1}CGA}{17}{}%
 \contentsline {paragraph}{\numberline {2.14.3.2}ECTS}{17}{}%
 \contentsline {paragraph}{\numberline {2.14.3.3}ESA}{18}{}%
