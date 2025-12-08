@@ -108,7 +108,7 @@ while len(x) <= 500:
 
 ax.scatter(x, y, z)
 
-ax.set_title('Initialisierungsdata')
+ax.set_title('Initialisierungsraum')
 
 ax.set_xlabel('Drahtdurchmesser in Inch')
 ax.set_ylabel('Federdurchmesser in Inch')
