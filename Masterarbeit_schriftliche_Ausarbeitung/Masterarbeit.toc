@@ -30,43 +30,43 @@
 \contentsline {paragraph}{\numberline {2.14.2.1}CACO}{16}{}%
 \contentsline {paragraph}{\numberline {2.14.2.2}API}{16}{}%
 \contentsline {paragraph}{\numberline {2.14.2.3}CIAC}{17}{}%
-\contentsline {subsubsection}{\numberline {2.14.3}Metaheuristiken, die für stetige Probleme adaptiert wurden}{17}{}%
+\contentsline {subsubsection}{\numberline {2.14.3}Metaheuristiken, die für stetige Testfunktionen adaptiert wurden}{17}{}%
 \contentsline {paragraph}{\numberline {2.14.3.1}CGA}{17}{}%
 \contentsline {paragraph}{\numberline {2.14.3.2}ECTS}{17}{}%
 \contentsline {paragraph}{\numberline {2.14.3.3}ESA}{18}{}%
 \contentsline {paragraph}{\numberline {2.14.3.4}DE}{18}{}%
-\contentsline {subsubsection}{\numberline {2.14.4}Algorithmen, die für Probleme mit gemischten Variablen entwickelt wurden}{18}{}%
-\contentsline {paragraph}{\numberline {2.14.4.1}NLIDP}{18}{}%
+\contentsline {subsubsection}{\numberline {2.14.4}Algorithmen, die für Probleme mit gemischten Variablen entwickelt wurden}{19}{}%
+\contentsline {paragraph}{\numberline {2.14.4.1}NLIDP}{19}{}%
 \contentsline {paragraph}{\numberline {2.14.4.2}GA}{19}{}%
-\contentsline {section}{\numberline {3}SPPBO-Schema}{19}{}%
+\contentsline {section}{\numberline {3}SPPBO-Schema}{20}{}%
 \contentsline {section}{\numberline {4}HSPPBO-Schema}{21}{}%
 \contentsline {section}{\numberline {5}Kombinieren des HSPPBO-Schemas mit \acl {acorvsmv}}{22}{}%
 \contentsline {subsection}{\numberline {5.1}Hom-HPB-ACO\(_\mathbb {R}\)-VS-MV}{22}{}%
 \contentsline {subsection}{\numberline {5.2}Het-HPB-ACO\(_\mathbb {R}\)-VS-MV}{23}{}%
-\contentsline {subsection}{\numberline {5.3}Het-HSPPB-ACO\(_\mathbb {R}\)-VS-MV}{23}{}%
+\contentsline {subsection}{\numberline {5.3}Het-HSPPB-ACO\(_\mathbb {R}\)-VS-MV}{24}{}%
 \contentsline {section}{\numberline {6}Testfunktionen}{24}{}%
-\contentsline {subsection}{\numberline {6.1}Stetige Testfunktionen}{25}{}%
-\contentsline {subsubsection}{\numberline {6.1.1}Testfunktion - Paraboloid}{31}{}%
-\contentsline {subsubsection}{\numberline {6.1.2}Testfunktion - Easom}{32}{}%
-\contentsline {subsubsection}{\numberline {6.1.3}Testfunktion - Griewangk}{33}{}%
-\contentsline {subsubsection}{\numberline {6.1.4}Testfunktion - Rosenbrock}{33}{}%
-\contentsline {subsubsection}{\numberline {6.1.5}Testfunktion - Hartmann}{34}{}%
-\contentsline {subsubsection}{\numberline {6.1.6}Testfunktion - Shekel}{35}{}%
-\contentsline {subsection}{\numberline {6.2}Testfunktionen mit gemischten Variablem}{35}{}%
-\contentsline {subsubsection}{\numberline {6.2.1}Konstruierte Testfunktionen}{35}{}%
-\contentsline {subsubsection}{\numberline {6.2.2}Coil Spring Design Problem (CSD)}{36}{}%
-\contentsline {paragraph}{\numberline {6.2.2.1}Vollständiger Raum als Initialisierungsintervall}{39}{}%
-\contentsline {paragraph}{\numberline {6.2.2.2}Gefilterter Raum als Initialisierungsintervall}{40}{}%
-\contentsline {paragraph}{\numberline {6.2.2.3}Resultierende Testkombinationen für das \ac {csd}}{41}{}%
-\contentsline {section}{\numberline {7}Vergleich von ACO\(_{\mathbb {R}}\), ACO\(_\text {MV}\) und den Varianten von \acl {acorvsmv}}{42}{}%
-\contentsline {subsection}{\numberline {7.1}Vergleich bzgl. stetiger Testfunktionen}{42}{}%
-\contentsline {subsection}{\numberline {7.2}Vergleich bzgl. Testfunktionen mit gemischten Variablen}{49}{}%
-\contentsline {subsubsection}{\numberline {7.2.1}Vergleich bzgl. konstruierter Testfunktionen mit gemischten Variablen}{49}{}%
-\contentsline {subsubsection}{\numberline {7.2.2}Vergleich bzgl. dem Coil Spring Design Problem (CSD)}{51}{}%
-\contentsline {section}{\numberline {8}Kurzzusammenfassung}{56}{}%
-\contentsline {section}{Literaturverzeichnis}{58}{}%
-\contentsline {section}{Tabellenverzeichnis}{61}{}%
-\contentsline {section}{Abbildungsverzeichnis}{61}{}%
+\contentsline {subsection}{\numberline {6.1}Stetige Testfunktionen}{26}{}%
+\contentsline {subsubsection}{\numberline {6.1.1}Testfunktion - Paraboloid}{32}{}%
+\contentsline {subsubsection}{\numberline {6.1.2}Testfunktion - Easom}{33}{}%
+\contentsline {subsubsection}{\numberline {6.1.3}Testfunktion - Griewangk}{34}{}%
+\contentsline {subsubsection}{\numberline {6.1.4}Testfunktion - Rosenbrock}{34}{}%
+\contentsline {subsubsection}{\numberline {6.1.5}Testfunktion - Hartmann}{35}{}%
+\contentsline {subsubsection}{\numberline {6.1.6}Testfunktion - Shekel}{36}{}%
+\contentsline {subsection}{\numberline {6.2}Testfunktionen mit gemischten Variablem}{36}{}%
+\contentsline {subsubsection}{\numberline {6.2.1}Konstruierte Testfunktionen}{36}{}%
+\contentsline {subsubsection}{\numberline {6.2.2}Coil Spring Design Problem (CSD)}{37}{}%
+\contentsline {paragraph}{\numberline {6.2.2.1}Vollständiger Raum als Initialisierungsintervall}{40}{}%
+\contentsline {paragraph}{\numberline {6.2.2.2}Gefilterter Raum als Initialisierungsintervall}{41}{}%
+\contentsline {paragraph}{\numberline {6.2.2.3}Resultierende Testkombinationen für das \ac {csd}}{42}{}%
+\contentsline {section}{\numberline {7}Vergleich von ACO\(_{\mathbb {R}}\), ACO\(_\text {MV}\) und den Varianten von \acl {acorvsmv}}{43}{}%
+\contentsline {subsection}{\numberline {7.1}Vergleich bzgl. stetiger Testfunktionen}{43}{}%
+\contentsline {subsection}{\numberline {7.2}Vergleich bzgl. Testfunktionen mit gemischten Variablen}{50}{}%
+\contentsline {subsubsection}{\numberline {7.2.1}Vergleich bzgl. konstruierter Testfunktionen mit gemischten Variablen}{50}{}%
+\contentsline {subsubsection}{\numberline {7.2.2}Vergleich bzgl. dem Coil Spring Design Problem (CSD)}{52}{}%
+\contentsline {section}{\numberline {8}Kurzzusammenfassung}{57}{}%
+\contentsline {section}{Literaturverzeichnis}{59}{}%
+\contentsline {section}{Tabellenverzeichnis}{62}{}%
+\contentsline {section}{Abbildungsverzeichnis}{62}{}%
 \contentsline {part}{\nonumberline Anlagen}{I}{}%
 \contentsline {section}{\numberline {A}Vergleich der pre-, add- und realen Funktionsauswertungen}{I}{}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

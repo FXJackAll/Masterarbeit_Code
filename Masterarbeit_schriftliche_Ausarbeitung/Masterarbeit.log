@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.18)  7 DEC 2025 21:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.18)  8 DEC 2025 15:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -879,12 +879,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 855--856
 
  []
 
-
+[15]
 Underfull \hbox (badness 10000) in paragraph at lines 861--862
 
  []
 
-[15]
+
 Underfull \hbox (badness 10000) in paragraph at lines 865--866
 
  []
@@ -949,12 +949,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 909--910
 
  []
 
-
+[17]
 Underfull \hbox (badness 10000) in paragraph at lines 916--917
 
  []
 
-[17]
+
 Underfull \hbox (badness 10000) in paragraph at lines 918--919
 
  []
@@ -974,12 +974,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 940--941
 
  []
 
-
+[18]
 Underfull \hbox (badness 10000) in paragraph at lines 942--943
 
  []
 
-[18]
+
 Underfull \hbox (badness 10000) in paragraph at lines 958--959
 
  []
@@ -994,12 +994,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 968--969
 
  []
 
-
+[19]
 Underfull \hbox (badness 10000) in paragraph at lines 970--971
 
  []
 
-[19]
+
 Underfull \hbox (badness 10000) in paragraph at lines 972--973
 
  []
@@ -1068,7 +1068,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1165--1166
 
  []
 
-
+[25]
 Overfull \hbox (2.96037pt too wide) in paragraph at lines 1188--1189
 \T1/cmr/m/n/12 den-sel-ben ste-ti-gen Test-funk-tio-nen ge-tes-tet, wie der ur-
 sprüng-li-che Al-go-rith-mus [][].
@@ -1079,7 +1079,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1188--1189
 
  []
 
-[25]
+
 Underfull \hbox (badness 10000) in paragraph at lines 1194--1195
 
  []
@@ -1089,17 +1089,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 1196--1197
 
  []
 
-
+[26]
 Underfull \hbox (badness 10000) in paragraph at lines 1248--1250
 
  []
 
-[26]
+
 Underfull \hbox (badness 10000) in paragraph at lines 1266--1267
 
  []
 
-
+[27]
 Underfull \hbox (badness 10000) in paragraph at lines 1270--1272
 
  []
@@ -1109,29 +1109,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 1273--1274
 
  []
 
-[27]
+
 Underfull \hbox (badness 10000) in alignment at lines 1320--1320
 [][] 
  []
 
-
+[28]
 Overfull \hbox (3.46674pt too wide) in alignment at lines 1382--1382
 [][] 
  []
 
-[28]
+[29]
 Overfull \hbox (3.0604pt too wide) in alignment at lines 1483--1483
 [][] 
  []
 
-[29]
+[30]
 Underfull \hbox (badness 10000) in alignment at lines 1517--1517
 [][] 
  []
 
-[30]
+[31]
 <Abbildungen/3D_Visualisationen/3D_visualization_paraboloid_2_-3_7_coolwarm.png
-, id=152, 462.528pt x 346.896pt>
+, id=155, 462.528pt x 346.896pt>
 File: Abbildungen/3D_Visualisationen/3D_visualization_paraboloid_2_-3_7_coolwar
 m.png Graphic file (type png)
 <use Abbildungen/3D_Visualisationen/3D_visualization_paraboloid_2_-3_7_coolwarm
@@ -1139,9 +1139,9 @@ m.png Graphic file (type png)
 Package pdftex.def Info: Abbildungen/3D_Visualisationen/3D_visualization_parabo
 loid_2_-3_7_coolwarm.png  used on input line 1533.
 (pdftex.def)             Requested size: 370.02289pt x 277.51717pt.
- [31]
+ [32]
 <Abbildungen/3D_Visualisationen/3D_visualization_easom_2_-100_100_coolwarm.png,
- id=156, 462.528pt x 346.896pt>
+ id=160, 462.528pt x 346.896pt>
 File: Abbildungen/3D_Visualisationen/3D_visualization_easom_2_-100_100_coolwarm
 .png Graphic file (type png)
 <use Abbildungen/3D_Visualisationen/3D_visualization_easom_2_-100_100_coolwarm.
@@ -1150,19 +1150,19 @@ Package pdftex.def Info: Abbildungen/3D_Visualisationen/3D_visualization_easom_
 2_-100_100_coolwarm.png  used on input line 1548.
 (pdftex.def)             Requested size: 224.06548pt x 168.0485pt.
 <Abbildungen/3D_Visualisationen/3D_visualization_easom_2_1_5_coolwarm.png, id=1
-57, 462.528pt x 346.896pt>
+61, 462.528pt x 346.896pt>
 File: Abbildungen/3D_Visualisationen/3D_visualization_easom_2_1_5_coolwarm.png 
 Graphic file (type png)
 <use Abbildungen/3D_Visualisationen/3D_visualization_easom_2_1_5_coolwarm.png>
 Package pdftex.def Info: Abbildungen/3D_Visualisationen/3D_visualization_easom_
 2_1_5_coolwarm.png  used on input line 1549.
 (pdftex.def)             Requested size: 224.06548pt x 168.0485pt.
- [32 <./Abbildungen/3D_Visualisationen/3D_visualization_paraboloid_2_-3_7_coolw
+ [33 <./Abbildungen/3D_Visualisationen/3D_visualization_paraboloid_2_-3_7_coolw
 arm.png> <./Abbildungen/3D_Visualisationen/3D_visualization_easom_2_-100_100_co
 olwarm.png> <./Abbildungen/3D_Visualisationen/3D_visualization_easom_2_1_5_cool
 warm.png>]
 <Abbildungen/3D_Visualisationen/3D_visualization_griewangk_2_-600_600_coolwarm.
-png, id=165, 462.528pt x 346.896pt>
+png, id=168, 462.528pt x 346.896pt>
 File: Abbildungen/3D_Visualisationen/3D_visualization_griewangk_2_-600_600_cool
 warm.png Graphic file (type png)
 <use Abbildungen/3D_Visualisationen/3D_visualization_griewangk_2_-600_600_coolw
@@ -1171,7 +1171,7 @@ Package pdftex.def Info: Abbildungen/3D_Visualisationen/3D_visualization_griewa
 ngk_2_-600_600_coolwarm.png  used on input line 1563.
 (pdftex.def)             Requested size: 134.44064pt x 100.83015pt.
 <Abbildungen/3D_Visualisationen/3D_visualization_griewangk_2_-10_10_coolwarm.pn
-g, id=166, 462.528pt x 346.896pt>
+g, id=169, 462.528pt x 346.896pt>
 File: Abbildungen/3D_Visualisationen/3D_visualization_griewangk_2_-10_10_coolwa
 rm.png Graphic file (type png)
 <use Abbildungen/3D_Visualisationen/3D_visualization_griewangk_2_-10_10_coolwar
@@ -1180,7 +1180,7 @@ Package pdftex.def Info: Abbildungen/3D_Visualisationen/3D_visualization_griewa
 ngk_2_-10_10_coolwarm.png  used on input line 1564.
 (pdftex.def)             Requested size: 134.44064pt x 100.83015pt.
 <Abbildungen/3D_Visualisationen/3D_visualization_griewangk_2_-4_4_coolwarm.png,
- id=167, 462.528pt x 346.896pt>
+ id=170, 462.528pt x 346.896pt>
 File: Abbildungen/3D_Visualisationen/3D_visualization_griewangk_2_-4_4_coolwarm
 .png Graphic file (type png)
 <use Abbildungen/3D_Visualisationen/3D_visualization_griewangk_2_-4_4_coolwarm.
@@ -1189,7 +1189,7 @@ Package pdftex.def Info: Abbildungen/3D_Visualisationen/3D_visualization_griewa
 ngk_2_-4_4_coolwarm.png  used on input line 1565.
 (pdftex.def)             Requested size: 134.44064pt x 100.83015pt.
 <Abbildungen/3D_Visualisationen/3D_visualization_rosenbrock_2_-2_2_coolwarm.png
-, id=168, 462.528pt x 346.896pt>
+, id=171, 462.528pt x 346.896pt>
 File: Abbildungen/3D_Visualisationen/3D_visualization_rosenbrock_2_-2_2_coolwar
 m.png Graphic file (type png)
 <use Abbildungen/3D_Visualisationen/3D_visualization_rosenbrock_2_-2_2_coolwarm
@@ -1197,12 +1197,12 @@ m.png Graphic file (type png)
 Package pdftex.def Info: Abbildungen/3D_Visualisationen/3D_visualization_rosenb
 rock_2_-2_2_coolwarm.png  used on input line 1580.
 (pdftex.def)             Requested size: 370.02289pt x 277.51717pt.
- [33 <./Abbildungen/3D_Visualisationen/3D_visualization_griewangk_2_-600_600_co
+ [34 <./Abbildungen/3D_Visualisationen/3D_visualization_griewangk_2_-600_600_co
 olwarm.png> <./Abbildungen/3D_Visualisationen/3D_visualization_griewangk_2_-10_
 10_coolwarm.png> <./Abbildungen/3D_Visualisationen/3D_visualization_griewangk_2
 _-4_4_coolwarm.png>]
 <Abbildungen/3D_Visualisationen/3D_visualization_hartmann_not_3_2_4_0_1_coolwar
-m.png, id=175, 462.528pt x 346.896pt>
+m.png, id=178, 462.528pt x 346.896pt>
 File: Abbildungen/3D_Visualisationen/3D_visualization_hartmann_not_3_2_4_0_1_co
 olwarm.png Graphic file (type png)
 <use Abbildungen/3D_Visualisationen/3D_visualization_hartmann_not_3_2_4_0_1_coo
@@ -1211,7 +1211,7 @@ Package pdftex.def Info: Abbildungen/3D_Visualisationen/3D_visualization_hartma
 nn_not_3_2_4_0_1_coolwarm.png  used on input line 1593.
 (pdftex.def)             Requested size: 224.06548pt x 168.0485pt.
 <Abbildungen/3D_Visualisationen/3D_visualization_hartmann_not_6_2_4_0_1_coolwar
-m.png, id=176, 462.528pt x 346.896pt>
+m.png, id=179, 462.528pt x 346.896pt>
 File: Abbildungen/3D_Visualisationen/3D_visualization_hartmann_not_6_2_4_0_1_co
 olwarm.png Graphic file (type png)
 <use Abbildungen/3D_Visualisationen/3D_visualization_hartmann_not_6_2_4_0_1_coo
@@ -1225,12 +1225,12 @@ Underfull \hbox (badness 1478) in paragraph at lines 1596--1596
 mann(2,6)
  []
 
-[34 <./Abbildungen/3D_Visualisationen/3D_visualization_rosenbrock_2_-2_2_coolwa
+[35 <./Abbildungen/3D_Visualisationen/3D_visualization_rosenbrock_2_-2_2_coolwa
 rm.png> <./Abbildungen/3D_Visualisationen/3D_visualization_hartmann_not_3_2_4_0
 _1_coolwarm.png> <./Abbildungen/3D_Visualisationen/3D_visualization_hartmann_no
 t_6_2_4_0_1_coolwarm.png>]
 <Abbildungen/3D_Visualisationen/3D_visualization_shekel_2_5_-0_10_coolwarm.png,
- id=183, 462.528pt x 346.896pt>
+ id=186, 462.528pt x 346.896pt>
 File: Abbildungen/3D_Visualisationen/3D_visualization_shekel_2_5_-0_10_coolwarm
 .png Graphic file (type png)
 <use Abbildungen/3D_Visualisationen/3D_visualization_shekel_2_5_-0_10_coolwarm.
@@ -1239,7 +1239,7 @@ Package pdftex.def Info: Abbildungen/3D_Visualisationen/3D_visualization_shekel
 _2_5_-0_10_coolwarm.png  used on input line 1610.
 (pdftex.def)             Requested size: 134.44064pt x 100.83015pt.
 <Abbildungen/3D_Visualisationen/3D_visualization_shekel_2_7_-0_10_coolwarm.png,
- id=184, 462.528pt x 346.896pt>
+ id=187, 462.528pt x 346.896pt>
 File: Abbildungen/3D_Visualisationen/3D_visualization_shekel_2_7_-0_10_coolwarm
 .png Graphic file (type png)
 <use Abbildungen/3D_Visualisationen/3D_visualization_shekel_2_7_-0_10_coolwarm.
@@ -1248,7 +1248,7 @@ Package pdftex.def Info: Abbildungen/3D_Visualisationen/3D_visualization_shekel
 _2_7_-0_10_coolwarm.png  used on input line 1611.
 (pdftex.def)             Requested size: 134.44064pt x 100.83015pt.
 <Abbildungen/3D_Visualisationen/3D_visualization_shekel_2_10_-0_10_coolwarm.png
-, id=185, 462.528pt x 346.896pt>
+, id=188, 462.528pt x 346.896pt>
 File: Abbildungen/3D_Visualisationen/3D_visualization_shekel_2_10_-0_10_coolwar
 m.png Graphic file (type png)
 <use Abbildungen/3D_Visualisationen/3D_visualization_shekel_2_10_-0_10_coolwarm
@@ -1256,7 +1256,7 @@ m.png Graphic file (type png)
 Package pdftex.def Info: Abbildungen/3D_Visualisationen/3D_visualization_shekel
 _2_10_-0_10_coolwarm.png  used on input line 1612.
 (pdftex.def)             Requested size: 134.44064pt x 100.83015pt.
- [35 <./Abbildungen/3D_Visualisationen/3D_visualization_shekel_2_5_-0_10_coolwa
+ [36 <./Abbildungen/3D_Visualisationen/3D_visualization_shekel_2_5_-0_10_coolwa
 rm.png> <./Abbildungen/3D_Visualisationen/3D_visualization_shekel_2_7_-0_10_coo
 lwarm.png> <./Abbildungen/3D_Visualisationen/3D_visualization_shekel_2_10_-0_10
 _coolwarm.png>]
@@ -1264,7 +1264,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1760--1761
 
  []
 
-<Abbildungen/Coil_Spring_Design_-_Dateien/CSD_schematical.png, id=192, 1541.76p
+<Abbildungen/Coil_Spring_Design_-_Dateien/CSD_schematical.png, id=195, 1541.76p
 t x 1027.84pt>
 File: Abbildungen/Coil_Spring_Design_-_Dateien/CSD_schematical.png Graphic file
  (type png)
@@ -1272,7 +1272,7 @@ File: Abbildungen/Coil_Spring_Design_-_Dateien/CSD_schematical.png Graphic file
 Package pdftex.def Info: Abbildungen/Coil_Spring_Design_-_Dateien/CSD_schematic
 al.png  used on input line 1764.
 (pdftex.def)             Requested size: 308.34654pt x 205.56436pt.
-[36]
+[37]
 Underfull \hbox (badness 10000) in paragraph at lines 1769--1770
 
  []
@@ -1282,13 +1282,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 1771--1772
 
  []
 
-[37 <./Abbildungen/Coil_Spring_Design_-_Dateien/CSD_schematical.png (PNG copy)>
+[38 <./Abbildungen/Coil_Spring_Design_-_Dateien/CSD_schematical.png (PNG copy)>
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 1859--1860
 
  []
 
-[38]
+[39]
 Underfull \hbox (badness 10000) in paragraph at lines 1903--1904
 
  []
@@ -1303,7 +1303,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1969--1973
 
  []
 
-[39]
+[40]
 Underfull \hbox (badness 10000) in paragraph at lines 2050--2052
 
  []
@@ -1313,7 +1313,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2050--2052
 
  []
 
-<Abbildungen/3D_Visualisationen/3D_visualization_CSD_filtered_space.png, id=206
+<Abbildungen/3D_Visualisationen/3D_visualization_CSD_filtered_space.png, id=209
 , 462.528pt x 346.896pt>
 File: Abbildungen/3D_Visualisationen/3D_visualization_CSD_filtered_space.png Gr
 aphic file (type png)
@@ -1322,16 +1322,16 @@ Package pdftex.def Info: Abbildungen/3D_Visualisationen/3D_visualization_CSD_fi
 ltered_space.png  used on input line 2062.
 (pdftex.def)             Requested size: 179.24963pt x 134.43668pt.
 <Abbildungen/3D_Visualisationen/3D_visualization_CSD_unfiltered_space.png, id=2
-07, 462.528pt x 346.896pt>
+10, 462.528pt x 346.896pt>
 File: Abbildungen/3D_Visualisationen/3D_visualization_CSD_unfiltered_space.png 
 Graphic file (type png)
 <use Abbildungen/3D_Visualisationen/3D_visualization_CSD_unfiltered_space.png>
 Package pdftex.def Info: Abbildungen/3D_Visualisationen/3D_visualization_CSD_un
 filtered_space.png  used on input line 2064.
 (pdftex.def)             Requested size: 179.24963pt x 134.43668pt.
-[40]
+[41]
 <Abbildungen/3D_Visualisationen/3D_visualization_CSD_unfiltered_and_filtered_sp
-ace.png, id=211, 462.528pt x 346.896pt>
+ace.png, id=214, 462.528pt x 346.896pt>
 File: Abbildungen/3D_Visualisationen/3D_visualization_CSD_unfiltered_and_filter
 ed_space.png Graphic file (type png)
 <use Abbildungen/3D_Visualisationen/3D_visualization_CSD_unfiltered_and_filtere
@@ -1344,7 +1344,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2093--2094
 
  []
 
-[41 <./Abbildungen/3D_Visualisationen/3D_visualization_CSD_filtered_space.png> 
+[42 <./Abbildungen/3D_Visualisationen/3D_visualization_CSD_filtered_space.png> 
 <./Abbildungen/3D_Visualisationen/3D_visualization_CSD_unfiltered_space.png> <.
 /Abbildungen/3D_Visualisationen/3D_visualization_CSD_unfiltered_and_filtered_sp
 ace.png>]
@@ -1373,7 +1373,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2163--2164
 
  []
 
-[42]
+[43]
 Underfull \hbox (badness 10000) in paragraph at lines 2216--2217
 
  []
@@ -1383,7 +1383,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2227--2228
 
  []
 
-[43]
+[44]
 Underfull \hbox (badness 10000) in paragraph at lines 2287--2288
 
  []
@@ -1468,7 +1468,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2353--2354
 
  []
 
-[44]
+[45]
 Underfull \hbox (badness 10000) in paragraph at lines 2417--2417
 []|\T1/cmr/bx/n/8 1.0 \T1/cmr/m/n/8 (1390)
  []
@@ -1548,12 +1548,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 2427--2428
 
  []
 
-[45]
+[46]
 Underfull \hbox (badness 10000) in paragraph at lines 2429--2430
 
  []
 
-[46]
+[47]
 Underfull \hbox (badness 10000) in paragraph at lines 2517--2518
 
  []
@@ -1568,7 +1568,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2617--2619
 
  []
 
-[47]
+[48]
 Underfull \hbox (badness 10000) in paragraph at lines 2698--2698
 []|\T1/cmr/m/n/8 2.2 (777)
  []
@@ -1708,17 +1708,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 2702--2703
 
  []
 
-[48]
+[49]
 Underfull \hbox (badness 10000) in paragraph at lines 2710--2711
 
  []
 
-[49]
+[50]
 Underfull \hbox (badness 10000) in alignment at lines 2946--2946
 [][][][][] 
  []
 
-[50]
+[51]
 Underfull \hbox (badness 10000) in paragraph at lines 2962--2963
 
  []
@@ -1728,7 +1728,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2964--2965
 
  []
 
-[51]
+[52]
 Underfull \hbox (badness 10000) in paragraph at lines 2969--2970
 
  []
@@ -1738,7 +1738,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3027--3028
 
  []
 
-[52]
+[53]
 Underfull \hbox (badness 1577) in paragraph at lines 3086--3086
 []|\T1/cmr/bx/n/8 1.0 \T1/cmr/m/n/8 (144575)
  []
@@ -1953,13 +1953,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 3149--3150
 
  []
 
-[53]
+[54]
 Underfull \hbox (badness 10000) in paragraph at lines 3155--3156
 
  []
 
 <Abbildungen/Coil_Spring_Design_-_Dateien/hom_hpb_aco_r_vs_mv_pre_add_and_real_
-iterations_exact_exact_fixed_0.png, id=260, 462.528pt x 346.896pt>
+iterations_exact_exact_fixed_0.png, id=263, 462.528pt x 346.896pt>
 File: Abbildungen/Coil_Spring_Design_-_Dateien/hom_hpb_aco_r_vs_mv_pre_add_and_
 real_iterations_exact_exact_fixed_0.png Graphic file (type png)
 <use Abbildungen/Coil_Spring_Design_-_Dateien/hom_hpb_aco_r_vs_mv_pre_add_and_r
@@ -1969,7 +1969,7 @@ _vs_mv_pre_add_and_real_iterations_exact_exact_fixed_0.png  used on input line
 3162.
 (pdftex.def)             Requested size: 224.06548pt x 168.0485pt.
 <Abbildungen/Coil_Spring_Design_-_Dateien/het_hpb_aco_r_vs_mv_pre_add_and_real_
-iterations_exact_exact_fixed_0.png, id=261, 462.528pt x 346.896pt>
+iterations_exact_exact_fixed_0.png, id=264, 462.528pt x 346.896pt>
 File: Abbildungen/Coil_Spring_Design_-_Dateien/het_hpb_aco_r_vs_mv_pre_add_and_
 real_iterations_exact_exact_fixed_0.png Graphic file (type png)
 <use Abbildungen/Coil_Spring_Design_-_Dateien/het_hpb_aco_r_vs_mv_pre_add_and_r
@@ -1978,9 +1978,9 @@ Package pdftex.def Info: Abbildungen/Coil_Spring_Design_-_Dateien/het_hpb_aco_r
 _vs_mv_pre_add_and_real_iterations_exact_exact_fixed_0.png  used on input line 
 3163.
 (pdftex.def)             Requested size: 224.06548pt x 168.0485pt.
-[54]
+[55]
 <Abbildungen/Coil_Spring_Design_-_Dateien/het_hsppb_aco_r_vs_mv_pre_add_and_rea
-l_iterations_exact_exact_fixed_0.png, id=265, 462.528pt x 346.896pt>
+l_iterations_exact_exact_fixed_0.png, id=268, 462.528pt x 346.896pt>
 File: Abbildungen/Coil_Spring_Design_-_Dateien/het_hsppb_aco_r_vs_mv_pre_add_an
 d_real_iterations_exact_exact_fixed_0.png Graphic file (type png)
 <use Abbildungen/Coil_Spring_Design_-_Dateien/het_hsppb_aco_r_vs_mv_pre_add_and
@@ -1990,7 +1990,7 @@ _r_vs_mv_pre_add_and_real_iterations_exact_exact_fixed_0.png  used on input lin
 e 3173.
 (pdftex.def)             Requested size: 224.06548pt x 168.0485pt.
 <Abbildungen/Coil_Spring_Design_-_Dateien/hom_hpb_aco_r_vs_mv_pre_add_and_real_
-iterations_exact_exact_adaptive.png, id=266, 462.528pt x 346.896pt>
+iterations_exact_exact_adaptive.png, id=269, 462.528pt x 346.896pt>
 File: Abbildungen/Coil_Spring_Design_-_Dateien/hom_hpb_aco_r_vs_mv_pre_add_and_
 real_iterations_exact_exact_adaptive.png Graphic file (type png)
 <use Abbildungen/Coil_Spring_Design_-_Dateien/hom_hpb_aco_r_vs_mv_pre_add_and_r
@@ -2000,7 +2000,7 @@ _vs_mv_pre_add_and_real_iterations_exact_exact_adaptive.png  used on input line
  3187.
 (pdftex.def)             Requested size: 224.06548pt x 168.0485pt.
 <Abbildungen/Coil_Spring_Design_-_Dateien/het_hpb_aco_r_vs_mv_pre_add_and_real_
-iterations_exact_exact_adaptive.png, id=267, 462.528pt x 346.896pt>
+iterations_exact_exact_adaptive.png, id=270, 462.528pt x 346.896pt>
 File: Abbildungen/Coil_Spring_Design_-_Dateien/het_hpb_aco_r_vs_mv_pre_add_and_
 real_iterations_exact_exact_adaptive.png Graphic file (type png)
 <use Abbildungen/Coil_Spring_Design_-_Dateien/het_hpb_aco_r_vs_mv_pre_add_and_r
@@ -2009,13 +2009,13 @@ Package pdftex.def Info: Abbildungen/Coil_Spring_Design_-_Dateien/het_hpb_aco_r
 _vs_mv_pre_add_and_real_iterations_exact_exact_adaptive.png  used on input line
  3188.
 (pdftex.def)             Requested size: 224.06548pt x 168.0485pt.
- [55 <./Abbildungen/Coil_Spring_Design_-_Dateien/hom_hpb_aco_r_vs_mv_pre_add_an
+ [56 <./Abbildungen/Coil_Spring_Design_-_Dateien/hom_hpb_aco_r_vs_mv_pre_add_an
 d_real_iterations_exact_exact_fixed_0.png> <./Abbildungen/Coil_Spring_Design_-_
 Dateien/het_hpb_aco_r_vs_mv_pre_add_and_real_iterations_exact_exact_fixed_0.png
 > <./Abbildungen/Coil_Spring_Design_-_Dateien/het_hsppb_aco_r_vs_mv_pre_add_and
 _real_iterations_exact_exact_fixed_0.png>]
 <Abbildungen/Coil_Spring_Design_-_Dateien/het_hsppb_aco_r_vs_mv_pre_add_and_rea
-l_iterations_exact_exact_adaptive.png, id=274, 462.528pt x 346.896pt>
+l_iterations_exact_exact_adaptive.png, id=278, 462.528pt x 346.896pt>
 File: Abbildungen/Coil_Spring_Design_-_Dateien/het_hsppb_aco_r_vs_mv_pre_add_an
 d_real_iterations_exact_exact_adaptive.png Graphic file (type png)
 <use Abbildungen/Coil_Spring_Design_-_Dateien/het_hsppb_aco_r_vs_mv_pre_add_and
@@ -2029,7 +2029,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3237--3238
 
  []
 
-[56 <./Abbildungen/Coil_Spring_Design_-_Dateien/hom_hpb_aco_r_vs_mv_pre_add_and
+[57 <./Abbildungen/Coil_Spring_Design_-_Dateien/hom_hpb_aco_r_vs_mv_pre_add_and
 _real_iterations_exact_exact_adaptive.png> <./Abbildungen/Coil_Spring_Design_-_
 Dateien/het_hpb_aco_r_vs_mv_pre_add_and_real_iterations_exact_exact_adaptive.pn
 g> <./Abbildungen/Coil_Spring_Design_-_Dateien/het_hsppb_aco_r_vs_mv_pre_add_an
@@ -2038,7 +2038,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3239--3240
 
  []
 
-[57] (./Masterarbeit.bbl [58] [59] [60]) [61] (./Masterarbeit.lot [62])
+[58] (./Masterarbeit.bbl [59] [60] [61]) [62] (./Masterarbeit.lot [63])
 \tf@lot=\write4
 \openout4 = `Masterarbeit.lot'.
 
@@ -2049,14 +2049,14 @@ Overfull \hbox (9.41122pt too wide) in paragraph at lines 7--7
 -mann(2,6) (rechts) [][]  
  []
 
-[63])
+[64])
 \tf@lof=\write5
 \openout5 = `Masterarbeit.lof'.
 
- [64]
+ [65]
 part without number
 <Abbildungen/Coil_Spring_Design_-_Dateien/hom_hpb_aco_r_vs_mv_pre_add_and_real_
-iterations_exact_penalty_fixed_0.png, id=308, 462.528pt x 346.896pt>
+iterations_exact_penalty_fixed_0.png, id=311, 462.528pt x 346.896pt>
 File: Abbildungen/Coil_Spring_Design_-_Dateien/hom_hpb_aco_r_vs_mv_pre_add_and_
 real_iterations_exact_penalty_fixed_0.png Graphic file (type png)
 <use Abbildungen/Coil_Spring_Design_-_Dateien/hom_hpb_aco_r_vs_mv_pre_add_and_r
@@ -2066,7 +2066,7 @@ _vs_mv_pre_add_and_real_iterations_exact_penalty_fixed_0.png  used on input lin
 e 3280.
 (pdftex.def)             Requested size: 134.44064pt x 100.83015pt.
 <Abbildungen/Coil_Spring_Design_-_Dateien/het_hpb_aco_r_vs_mv_pre_add_and_real_
-iterations_exact_penalty_fixed_0.png, id=309, 462.528pt x 346.896pt>
+iterations_exact_penalty_fixed_0.png, id=312, 462.528pt x 346.896pt>
 File: Abbildungen/Coil_Spring_Design_-_Dateien/het_hpb_aco_r_vs_mv_pre_add_and_
 real_iterations_exact_penalty_fixed_0.png Graphic file (type png)
 <use Abbildungen/Coil_Spring_Design_-_Dateien/het_hpb_aco_r_vs_mv_pre_add_and_r
@@ -2076,7 +2076,7 @@ _vs_mv_pre_add_and_real_iterations_exact_penalty_fixed_0.png  used on input lin
 e 3281.
 (pdftex.def)             Requested size: 134.44064pt x 100.83015pt.
 <Abbildungen/Coil_Spring_Design_-_Dateien/het_hsppb_aco_r_vs_mv_pre_add_and_rea
-l_iterations_exact_penalty_fixed_0.png, id=310, 462.528pt x 346.896pt>
+l_iterations_exact_penalty_fixed_0.png, id=313, 462.528pt x 346.896pt>
 File: Abbildungen/Coil_Spring_Design_-_Dateien/het_hsppb_aco_r_vs_mv_pre_add_an
 d_real_iterations_exact_penalty_fixed_0.png Graphic file (type png)
 <use Abbildungen/Coil_Spring_Design_-_Dateien/het_hsppb_aco_r_vs_mv_pre_add_and
@@ -2086,7 +2086,7 @@ _r_vs_mv_pre_add_and_real_iterations_exact_penalty_fixed_0.png  used on input l
 ine 3291.
 (pdftex.def)             Requested size: 134.44064pt x 100.83015pt.
 <Abbildungen/Coil_Spring_Design_-_Dateien/hom_hpb_aco_r_vs_mv_pre_add_and_real_
-iterations_exact_penalty_adaptive.png, id=311, 462.528pt x 346.896pt>
+iterations_exact_penalty_adaptive.png, id=314, 462.528pt x 346.896pt>
 File: Abbildungen/Coil_Spring_Design_-_Dateien/hom_hpb_aco_r_vs_mv_pre_add_and_
 real_iterations_exact_penalty_adaptive.png Graphic file (type png)
 <use Abbildungen/Coil_Spring_Design_-_Dateien/hom_hpb_aco_r_vs_mv_pre_add_and_r
@@ -2096,7 +2096,7 @@ _vs_mv_pre_add_and_real_iterations_exact_penalty_adaptive.png  used on input li
 ne 3301.
 (pdftex.def)             Requested size: 134.44064pt x 100.83015pt.
 <Abbildungen/Coil_Spring_Design_-_Dateien/het_hpb_aco_r_vs_mv_pre_add_and_real_
-iterations_exact_penalty_adaptive.png, id=312, 462.528pt x 346.896pt>
+iterations_exact_penalty_adaptive.png, id=315, 462.528pt x 346.896pt>
 File: Abbildungen/Coil_Spring_Design_-_Dateien/het_hpb_aco_r_vs_mv_pre_add_and_
 real_iterations_exact_penalty_adaptive.png Graphic file (type png)
 <use Abbildungen/Coil_Spring_Design_-_Dateien/het_hpb_aco_r_vs_mv_pre_add_and_r
@@ -2106,7 +2106,7 @@ _vs_mv_pre_add_and_real_iterations_exact_penalty_adaptive.png  used on input li
 ne 3302.
 (pdftex.def)             Requested size: 134.44064pt x 100.83015pt.
 <Abbildungen/Coil_Spring_Design_-_Dateien/het_hsppb_aco_r_vs_mv_pre_add_and_rea
-l_iterations_exact_penalty_adaptive.png, id=313, 462.528pt x 346.896pt>
+l_iterations_exact_penalty_adaptive.png, id=316, 462.528pt x 346.896pt>
 File: Abbildungen/Coil_Spring_Design_-_Dateien/het_hsppb_aco_r_vs_mv_pre_add_an
 d_real_iterations_exact_penalty_adaptive.png Graphic file (type png)
 <use Abbildungen/Coil_Spring_Design_-_Dateien/het_hsppb_aco_r_vs_mv_pre_add_and
@@ -2187,10 +2187,10 @@ xmf/fonts/type1/public/cm-super/sfsx1728.pfb></usr/share/texmf/fonts/type1/publ
 ic/cm-super/sfsx2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1000
 .pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/tex
 mf/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on Masterarbeit.pdf (72 pages, 2597853 bytes).
+Output written on Masterarbeit.pdf (73 pages, 2598654 bytes).
 PDF statistics:
- 500 PDF objects out of 1000 (max. 8388607)
- 285 compressed objects within 3 object streams
+ 505 PDF objects out of 1000 (max. 8388607)
+ 289 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  146 words of extra memory for PDF output out of 10000 (max. 10000000)
 
