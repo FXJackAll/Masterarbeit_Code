@@ -11,7 +11,7 @@
 \contentsline {subsection}{\numberline {2.3}Weiterentwicklung der ACO-Metaheuristik zu der PB-ACO-Metaheuristik}{6}{}%
 \contentsline {subsection}{\numberline {2.4}Alternative Verwaltung für ein Lösungsarchiv}{8}{}%
 \contentsline {subsection}{\numberline {2.5}Ameisenalgorithmen mit einem stetigen Lösungsarchiv}{8}{}%
-\contentsline {subsection}{\numberline {2.6}Ameisenalgorithmen Mit Einem Gemischten Lösungsarchiv}{8}{}%
+\contentsline {subsection}{\numberline {2.6}Ameisenalgorithmen mit einem gemischten Lösungsarchiv}{8}{}%
 \contentsline {subsection}{\numberline {2.7}Ameisenalgorithmen mit gemischten Lösungsarchiven in einer hierarchischen Struktur}{9}{}%
 \contentsline {subsection}{\numberline {2.8}Optimierungsprobleme}{9}{}%
 \contentsline {subsection}{\numberline {2.9}ACO\(_{\mathbb {R}}\)}{10}{}%
