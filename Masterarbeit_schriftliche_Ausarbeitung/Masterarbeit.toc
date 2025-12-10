@@ -62,11 +62,12 @@
 \contentsline {subsection}{\numberline {7.1}Vergleich bzgl. stetiger Testfunktionen}{43}{}%
 \contentsline {subsection}{\numberline {7.2}Vergleich bzgl. Testfunktionen mit gemischten Variablen}{50}{}%
 \contentsline {subsubsection}{\numberline {7.2.1}Vergleich bzgl. konstruierter Testfunktionen mit gemischten Variablen}{50}{}%
-\contentsline {subsubsection}{\numberline {7.2.2}Vergleich bzgl. dem Coil Spring Design Problem (CSD)}{52}{}%
-\contentsline {section}{\numberline {8}Kurzzusammenfassung}{57}{}%
-\contentsline {section}{Literaturverzeichnis}{59}{}%
-\contentsline {section}{Tabellenverzeichnis}{62}{}%
-\contentsline {section}{Abbildungsverzeichnis}{62}{}%
+\contentsline {subsubsection}{\numberline {7.2.2}Vergleich bzgl. dem Coil Spring Design Problem (CSD)}{54}{}%
+\contentsline {section}{\numberline {8}Kurzzusammenfassung}{59}{}%
+\contentsline {section}{Literaturverzeichnis}{61}{}%
+\contentsline {section}{Tabellenverzeichnis}{64}{}%
+\contentsline {section}{Abbildungsverzeichnis}{64}{}%
 \contentsline {part}{\nonumberline Anlagen}{I}{}%
-\contentsline {section}{\numberline {A}Vergleich der pre-, add- und realen Funktionsauswertungen}{I}{}%
+\contentsline {section}{\numberline {A}Vergleich der Neustartstrategien auf konstruierten Testfunktionen mit gemischten Variablen}{I}{}%
+\contentsline {section}{\numberline {B}Vergleich der pre-, add- und realen Funktionsauswertungen}{III}{}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
