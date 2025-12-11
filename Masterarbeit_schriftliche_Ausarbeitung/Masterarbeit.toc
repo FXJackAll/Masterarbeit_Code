@@ -1,5 +1,5 @@
 \babel@toc {ngerman}{}\relax 
-\contentsline {section}{Abkürzungsverzeichnis}{}{}%
+\contentsline {section}{Abkürzungsverzeichnis}{IV}{}%
 \contentsline {section}{\numberline {1}Einleitung}{1}{}%
 \contentsline {section}{\numberline {2}Grundlagen}{2}{}%
 \contentsline {subsection}{\numberline {2.1}Einführung in Ameisenalgorithmen}{2}{}%
@@ -67,7 +67,7 @@
 \contentsline {section}{Literaturverzeichnis}{61}{}%
 \contentsline {section}{Tabellenverzeichnis}{64}{}%
 \contentsline {section}{Abbildungsverzeichnis}{64}{}%
-\contentsline {part}{\nonumberline Anlagen}{I}{}%
-\contentsline {section}{\numberline {A}Vergleich der Neustartstrategien auf konstruierten Testfunktionen mit gemischten Variablen}{I}{}%
-\contentsline {section}{\numberline {B}Vergleich der pre-, add- und realen Funktionsauswertungen}{III}{}%
+\contentsline {part}{\nonumberline Anlagen}{V}{}%
+\contentsline {section}{\numberline {A}Vergleich der Neustartstrategien auf konstruierten Testfunktionen mit gemischten Variablen}{V}{}%
+\contentsline {section}{\numberline {B}Vergleich der pre-, add- und realen Funktionsauswertungen}{VII}{}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
