@@ -52,7 +52,7 @@
 \contentsline {subsubsection}{\numberline {6.1.4}Testfunktion - Rosenbrock}{34}{}%
 \contentsline {subsubsection}{\numberline {6.1.5}Testfunktion - Hartmann}{35}{}%
 \contentsline {subsubsection}{\numberline {6.1.6}Testfunktion - Shekel}{36}{}%
-\contentsline {subsection}{\numberline {6.2}Testfunktionen mit gemischten Variablem}{36}{}%
+\contentsline {subsection}{\numberline {6.2}Testfunktionen mit gemischten Variablen}{36}{}%
 \contentsline {subsubsection}{\numberline {6.2.1}Konstruierte Testfunktionen}{36}{}%
 \contentsline {subsubsection}{\numberline {6.2.2}Coil Spring Design Problem (CSD)}{37}{}%
 \contentsline {paragraph}{\numberline {6.2.2.1}Vollständiger Raum als Initialisierungsintervall}{40}{}%

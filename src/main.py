@@ -1,3 +1,31 @@
+'''
+
+folgende Programmbestandteile sind von mir:
+
+- alles in "problems" außer den Ordnern "atsp" und "tsp" und deren Inhalt
+- in "src": - alles in "continuous_problems"
+            - alles in "figures"
+            - alles in "helper"
+            - alles in "mixed_variable_problems"
+            - alles in "performance_data"
+            - alles in "search_algorithms"
+            - die Erweiterung von "hsppbo" zu "hsppbo_tisd", da ich "hsppbo" nur kopiert habe
+              und nur an "hsppbo_tisd" gearbeitet habe, sind alle Veränderungen von "hsppbo" zu "hsppbo_tisd" von mir,
+              insbesondere kann "hsppbo_tisd" jetzt abstrakte Funktionen optimiert werden können,
+              nicht nur Instanzen von TSP, und es hat jetzt ein absolutes und relatives Abbruchkriterium,
+              sowie eine absolute und relative Neustartmechanik
+            - die Erweiterung von "main", sodass jetzt abstrakte Funktionen optimiert werden können,
+              nicht nur Instanzen von TSP
+            - die Erweiterung von "problem"
+            - die Erweiterung von "sce_tree" zu "sce_tree_tisd", analog ist jede Erweiterung von "sce_tree"
+              zu "sce_tree_tisd" von mir, insbesondere kann "sce_tree_tisd" jetzt abstrakte Populationen
+              halten, nicht nur Instanzen von TSP
+            - "search_algorithms"
+
+'''
+
+
+
 import os
 # import sys
 import argparse
