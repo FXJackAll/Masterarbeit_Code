@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.18)  11 DEC 2025 20:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.18)  14 DEC 2025 20:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -445,25 +445,79 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
 Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+Package: adjustbox 2022/10/17 v1.3a Adjusting TeX boxes (trim, clip, ...)
+
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks29
+\XKV@tempa@toks=\toks30
+)
+\XKV@depth=\count320
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/trimclip.sty
+Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
+
+(/usr/share/texlive/texmf-dist/tex/latex/collectbox/collectbox.sty
+Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
+\collectedbox=\box58
+)
+\tc@llx=\dimen188
+\tc@lly=\dimen189
+\tc@urx=\dimen190
+\tc@ury=\dimen191
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen192
+\adjbox@Height=\dimen193
+\adjbox@Depth=\dimen194
+\adjbox@Totalheight=\dimen195
+\adjbox@pwidth=\dimen196
+\adjbox@pheight=\dimen197
+\adjbox@pdepth=\dimen198
+\adjbox@ptotalheight=\dimen199
+
+(/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
+\c@checkoddpage=\count321
+)
+(/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box59
+\sift@deathcycles=\count322
+\@vwid@loff=\dimen256
+\@vwid@roff=\dimen257
+))
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count320
-\lst@gtempboxa=\box58
-\lst@token=\toks29
-\lst@length=\count321
-\lst@currlwidth=\dimen188
-\lst@column=\count322
-\lst@pos=\count323
-\lst@lostspace=\dimen189
-\lst@width=\dimen190
-\lst@newlines=\count324
-\lst@lineno=\count325
-\lst@maxwidth=\dimen191
+\lst@mode=\count323
+\lst@gtempboxa=\box60
+\lst@token=\toks31
+\lst@length=\count324
+\lst@currlwidth=\dimen258
+\lst@column=\count325
+\lst@pos=\count326
+\lst@lostspace=\dimen259
+\lst@width=\dimen260
+\lst@newlines=\count327
+\lst@lineno=\count328
+\lst@maxwidth=\dimen261
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
-\c@lstnumber=\count326
-\lst@skipnumbers=\count327
-\lst@framebox=\box59
+\c@lstnumber=\count329
+\lst@skipnumbers=\count330
+\lst@framebox=\box61
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2023/02/27 1.9 listings configuration
@@ -495,17 +549,17 @@ nment
 
 (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count328
-\float@exts=\toks30
-\float@box=\box60
-\@float@everytoks=\toks31
-\@floatcapt=\box61
+\c@float@type=\count331
+\float@exts=\toks32
+\float@box=\box62
+\@float@everytoks=\toks33
+\@floatcapt=\box63
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
 )
-\@float@every@algorithm=\toks32
-\c@algorithm=\count329
+\@float@every@algorithm=\toks34
+\c@algorithm=\count332
 )
 (/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
 Package: algpseudocode 
@@ -514,26 +568,26 @@ Package: algpseudocode
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
-\c@ALG@line=\count330
-\c@ALG@rem=\count331
-\c@ALG@nested=\count332
+\c@ALG@line=\count333
+\c@ALG@rem=\count334
+\c@ALG@nested=\count335
 \ALG@tlm=\skip74
 \ALG@thistlm=\skip75
-\c@ALG@Lnr=\count333
-\c@ALG@blocknr=\count334
-\c@ALG@storecount=\count335
-\c@ALG@tmpcounter=\count336
+\c@ALG@Lnr=\count336
+\c@ALG@blocknr=\count337
+\c@ALG@storecount=\count338
+\c@ALG@tmpcounter=\count339
 \ALG@tmplength=\skip76
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
 )
 Package newfloat Info: New float `anlage' with options ` fileext=loa, listname=
 Anlagenverzeichnis, name=Anlage, placement=htbp, within=section, ' on input lin
-e 79.
-\c@anlage=\count337
-Package newfloat Info: float type `anlage'=8 on input line 79.
-\c@loadepth=\count338
-Package tocbasic Info: setting babel extension for `loa' on input line 79.
+e 81.
+\c@anlage=\count340
+Package newfloat Info: float type `anlage'=8 on input line 81.
+\c@loadepth=\count341
+Package tocbasic Info: setting babel extension for `loa' on input line 81.
  (/usr/share/texlive/texmf-dist/tex/latex/acronym/acronym.sty
 Package: acronym 2020/04/17 v1.47 Support for acronyms (Tobias Oetiker)
 
@@ -542,12 +596,12 @@ Package: suffix 2006/07/15 1.5a Variant command support
 )
 (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty
 (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
-\xs_counta=\count339
-\xs_countb=\count340
+\xs_counta=\count342
+\xs_countb=\count343
 )
 Package: xstring 2023/08/22 v1.86 String manipulations (CT)
 )
-\AC@clearlist=\toks33
+\AC@clearlist=\toks35
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
@@ -559,34 +613,34 @@ LaTeX Warning: Unused global option(s):
 (./Masterarbeit.aux)
 \openout1 = `Masterarbeit.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count341
-\scratchdimen=\dimen192
-\scratchbox=\box62
-\nofMPsegments=\count342
-\nofMParguments=\count343
-\everyMPshowfont=\toks34
-\MPscratchCnt=\count344
-\MPscratchDim=\dimen193
-\MPnumerator=\count345
-\makeMPintoPDFobject=\count346
-\everyMPtoPDFconversion=\toks35
+\scratchcounter=\count344
+\scratchdimen=\dimen262
+\scratchbox=\box64
+\nofMPsegments=\count345
+\nofMParguments=\count346
+\everyMPshowfont=\toks36
+\MPscratchCnt=\count347
+\MPscratchDim=\dimen263
+\MPnumerator=\count348
+\makeMPintoPDFobject=\count349
+\everyMPtoPDFconversion=\toks37
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 
@@ -636,23 +690,23 @@ Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count347
+\c@lstlisting=\count350
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
-06.
+08.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 
 LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <18> not available
-(Font)              size <17.28> substituted on input line 132.
+(Font)              size <17.28> substituted on input line 134.
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/
 dvips/cm-super/cm-super-t1.enc}]
 LaTeX Font Info:    Trying to load font information for T1+cmss on input line 1
-84.
+86.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2023/04/13 v2.5m Standard LaTeX font definitions
@@ -675,11 +729,6 @@ although it is yet undefined on input line 60.
 
  [3]
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 206--207
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 208--209
 
  []
@@ -689,18 +738,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 210--211
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 212--213
+
+ []
+
 Package acronym Info: Label `acro:acorvsmv' newly defined as it shall be overri
 dden
-although it is yet undefined on input line 212.
+although it is yet undefined on input line 214.
 [1]
-Underfull \hbox (badness 10000) in paragraph at lines 228--229
+Underfull \hbox (badness 10000) in paragraph at lines 230--231
 
  []
 
 Package acronym Info: Label `acro:sce' newly defined as it shall be overridden
-although it is yet undefined on input line 230.
+although it is yet undefined on input line 232.
 
-Overfull \hbox (0.148pt too wide) in paragraph at lines 230--231
+Overfull \hbox (0.148pt too wide) in paragraph at lines 232--233
 \OMS/cmsy/m/n/12 ff\OML/cmm/m/it/12 NF\OMS/cmsy/m/n/12 g\OML/cmm/m/it/12 ; \OMS
 /cmsy/m/n/12 f\OML/cmm/m/it/12 ND\OMS/cmsy/m/n/12 g\OML/cmm/m/it/12 ; \OMS/cmsy
 /m/n/12 f\OML/cmm/m/it/12 DF\OMS/cmsy/m/n/12 gg$\T1/cmr/m/n/12 . Zu-sam-men-ge-
@@ -716,77 +770,72 @@ OMS/cmsy/m/n/12 gg\OT1/cmr/m/n/12 )$\T1/cmr/m/n/12 .
 File: Abbildungen/Pheromon_Dreieck.png Graphic file (type png)
 <use Abbildungen/Pheromon_Dreieck.png>
 Package pdftex.def Info: Abbildungen/Pheromon_Dreieck.png  used on input line 2
-35.
+37.
 (pdftex.def)             Requested size: 301.12732pt x 233.07254pt.
  [3 <./Abbildungen/Pheromon_Dreieck.png>]
 Package acronym Info: Label `acro:tsp' newly defined as it shall be overridden
-although it is yet undefined on input line 264.
+although it is yet undefined on input line 266.
  [4]
-Underfull \hbox (badness 10000) in paragraph at lines 272--273
+Underfull \hbox (badness 10000) in paragraph at lines 274--275
 
  []
 
 
-Overfull \hbox (6.57614pt too wide) in paragraph at lines 286--287
+Overfull \hbox (6.57614pt too wide) in paragraph at lines 288--289
 []\T1/cmr/m/n/12 Wie in \T1/cmr/m/it/12 Do-ri-go et al. \T1/cmr/m/n/12 [11] be-
 schrie-ben wer-den bei der An-wen-dung der ACO-Metaheuristik
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 286--287
+Underfull \hbox (badness 10000) in paragraph at lines 288--289
 
  []
 
 [5]
 
-LaTeX Warning: Command \textasciiacute invalid in math mode on input line 289.
+LaTeX Warning: Command \textasciiacute invalid in math mode on input line 291.
 
 
-LaTeX Warning: Command \textasciiacute invalid in math mode on input line 289.
+LaTeX Warning: Command \textasciiacute invalid in math mode on input line 291.
 
 Missing character: There is no ´ in font cmr12!
-
-Underfull \hbox (badness 10000) in paragraph at lines 323--324
-
- []
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 325--326
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 327--328
+
+ []
+
 [6] [7]
-Underfull \hbox (badness 10000) in paragraph at lines 349--350
+Underfull \hbox (badness 10000) in paragraph at lines 351--352
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 357--358
+Underfull \hbox (badness 10000) in paragraph at lines 359--360
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 369--370
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 371--372
 
  []
 
-[9]
+
 Underfull \hbox (badness 10000) in paragraph at lines 373--374
 
  []
 
-
+[9]
 Underfull \hbox (badness 10000) in paragraph at lines 375--376
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 381--382
+Underfull \hbox (badness 10000) in paragraph at lines 377--378
 
  []
 
@@ -795,13 +844,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 383--384
 
  []
 
-[10{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 391--392
+
+Underfull \hbox (badness 10000) in paragraph at lines 385--386
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 413--414
+[10{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+Underfull \hbox (badness 10000) in paragraph at lines 393--394
 
  []
 
@@ -811,56 +860,56 @@ Underfull \hbox (badness 10000) in paragraph at lines 415--416
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 419--420
+Underfull \hbox (badness 10000) in paragraph at lines 417--418
 
  []
 
-[11]
+
 Underfull \hbox (badness 10000) in paragraph at lines 421--422
 
  []
 
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 423--424
 
-Underfull \hbox (badness 10000) in alignment at lines 464--464
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 466--466
 [][][] 
  []
 
 [12]
 Package acronym Info: Label `acro:acorvs' newly defined as it shall be overridd
 en
-although it is yet undefined on input line 470.
+although it is yet undefined on input line 472.
 
-Underfull \hbox (badness 10000) in alignment at lines 501--501
+Underfull \hbox (badness 10000) in alignment at lines 503--503
 [][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 507--508
-
- []
-
-[13]
 Underfull \hbox (badness 10000) in paragraph at lines 509--510
 
  []
 
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 511--512
 
-Underfull \hbox (badness 10000) in alignment at lines 530--530
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 532--532
 [][][] 
  []
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 544--545
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 546--547
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 565--566
+Underfull \hbox (badness 10000) in paragraph at lines 548--549
 
  []
 
@@ -870,7 +919,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 567--568
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 571--572
+Underfull \hbox (badness 10000) in paragraph at lines 569--570
 
  []
 
@@ -879,18 +928,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 573--574
 
  []
 
-[15]
-Underfull \hbox (badness 10000) in paragraph at lines 577--578
+
+Underfull \hbox (badness 10000) in paragraph at lines 575--576
 
  []
 
-
+[15]
 Underfull \hbox (badness 10000) in paragraph at lines 579--580
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 583--584
+Underfull \hbox (badness 10000) in paragraph at lines 581--582
 
  []
 
@@ -900,7 +949,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 585--586
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 591--592
+Underfull \hbox (badness 10000) in paragraph at lines 587--588
 
  []
 
@@ -910,7 +959,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 593--594
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 597--598
+Underfull \hbox (badness 10000) in paragraph at lines 595--596
 
  []
 
@@ -919,18 +968,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 599--600
 
  []
 
-[16]
-Underfull \hbox (badness 10000) in paragraph at lines 603--604
+
+Underfull \hbox (badness 10000) in paragraph at lines 601--602
 
  []
 
-
+[16]
 Underfull \hbox (badness 10000) in paragraph at lines 605--606
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 611--612
+Underfull \hbox (badness 10000) in paragraph at lines 607--608
 
  []
 
@@ -940,7 +989,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 613--614
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 617--618
+Underfull \hbox (badness 10000) in paragraph at lines 615--616
 
  []
 
@@ -949,18 +998,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 619--620
 
  []
 
-[17]
-Underfull \hbox (badness 10000) in paragraph at lines 623--624
+
+Underfull \hbox (badness 10000) in paragraph at lines 621--622
 
  []
 
-
+[17]
 Underfull \hbox (badness 10000) in paragraph at lines 625--626
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 629--630
+Underfull \hbox (badness 10000) in paragraph at lines 627--628
 
  []
 
@@ -970,17 +1019,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 631--632
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 643--644
+Underfull \hbox (badness 10000) in paragraph at lines 633--634
 
  []
 
-[18]
+
 Underfull \hbox (badness 10000) in paragraph at lines 645--646
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 661--662
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 647--648
 
  []
 
@@ -990,75 +1039,75 @@ Underfull \hbox (badness 10000) in paragraph at lines 663--664
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 669--670
+Underfull \hbox (badness 10000) in paragraph at lines 665--666
 
  []
 
-[19]
+
 Underfull \hbox (badness 10000) in paragraph at lines 671--672
 
  []
 
-
+[19]
 Underfull \hbox (badness 10000) in paragraph at lines 673--674
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 706--707
+Underfull \hbox (badness 10000) in paragraph at lines 675--676
 
  []
 
-[20]
+
 Underfull \hbox (badness 10000) in paragraph at lines 708--709
 
  []
 
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 710--711
+
+ []
+
 [21]
-Underfull \hbox (badness 10000) in paragraph at lines 766--767
+Underfull \hbox (badness 10000) in paragraph at lines 768--769
 
  []
 
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 776--777
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 778--779
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 780--781
+
+ []
+
 [23]
-Underfull \hbox (badness 10000) in paragraph at lines 792--793
+Underfull \hbox (badness 10000) in paragraph at lines 794--795
 
  []
 
 [24]
-Underfull \hbox (badness 10000) in paragraph at lines 819--820
+Underfull \hbox (badness 10000) in paragraph at lines 821--822
 
  []
 
 
-Overfull \hbox (7.81984pt too wide) in paragraph at lines 821--822
+Overfull \hbox (7.81984pt too wide) in paragraph at lines 823--824
 []\T1/cmr/m/n/12 Weitere Ein-trä-ge, die not-wen-dig wur-den, sind ^^Rdi-men-si
 -on^^P, ^^Rop-ti-mum^^P, ^^Rdis-crete_values^^P
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 821--822
+Underfull \hbox (badness 10000) in paragraph at lines 823--824
 
  []
 
 [25]
-Overfull \hbox (2.96037pt too wide) in paragraph at lines 827--828
+Overfull \hbox (2.96037pt too wide) in paragraph at lines 829--830
 \T1/cmr/m/n/12 den-sel-ben ste-ti-gen Test-funk-tio-nen ge-tes-tet, wie der ur-
 sprüng-li-che Al-go-rith-mus [][].
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 827--828
-
  []
 
 
@@ -1071,43 +1120,48 @@ Underfull \hbox (badness 10000) in paragraph at lines 831--832
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 833--834
+
+ []
+
 [26]
-Underfull \hbox (badness 10000) in paragraph at lines 845--847
+Underfull \hbox (badness 10000) in paragraph at lines 847--849
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 848--849
-
- []
-
-[27]
 Underfull \hbox (badness 10000) in paragraph at lines 850--851
 
  []
 
-
+[27]
 Underfull \hbox (badness 10000) in paragraph at lines 852--853
 
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 889--889
+Underfull \hbox (badness 10000) in paragraph at lines 854--855
+
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 891--891
 [][] 
  []
 
 [28]
-Overfull \hbox (3.46674pt too wide) in alignment at lines 947--947
+Overfull \hbox (3.46674pt too wide) in alignment at lines 949--949
 [][] 
  []
 
 [29]
-Overfull \hbox (3.0604pt too wide) in alignment at lines 1046--1046
+Overfull \hbox (3.0604pt too wide) in alignment at lines 1048--1048
 [][] 
  []
 
 [30]
-Underfull \hbox (badness 10000) in alignment at lines 1078--1078
+Underfull \hbox (badness 10000) in alignment at lines 1080--1080
 [][] 
  []
 
@@ -1119,7 +1173,7 @@ m.png Graphic file (type png)
 <use Abbildungen/3D_Visualisationen/3D_visualization_paraboloid_2_-3_7_coolwarm
 .png>
 Package pdftex.def Info: Abbildungen/3D_Visualisationen/3D_visualization_parabo
-loid_2_-3_7_coolwarm.png  used on input line 1088.
+loid_2_-3_7_coolwarm.png  used on input line 1090.
 (pdftex.def)             Requested size: 370.02289pt x 277.51717pt.
  [32]
 <Abbildungen/3D_Visualisationen/3D_visualization_easom_2_-100_100_coolwarm.png,
@@ -1129,7 +1183,7 @@ File: Abbildungen/3D_Visualisationen/3D_visualization_easom_2_-100_100_coolwarm
 <use Abbildungen/3D_Visualisationen/3D_visualization_easom_2_-100_100_coolwarm.
 png>
 Package pdftex.def Info: Abbildungen/3D_Visualisationen/3D_visualization_easom_
-2_-100_100_coolwarm.png  used on input line 1101.
+2_-100_100_coolwarm.png  used on input line 1103.
 (pdftex.def)             Requested size: 224.06548pt x 168.0485pt.
 <Abbildungen/3D_Visualisationen/3D_visualization_easom_2_1_5_coolwarm.png, id=1
 61, 462.528pt x 346.896pt>
@@ -1137,7 +1191,7 @@ File: Abbildungen/3D_Visualisationen/3D_visualization_easom_2_1_5_coolwarm.png
 Graphic file (type png)
 <use Abbildungen/3D_Visualisationen/3D_visualization_easom_2_1_5_coolwarm.png>
 Package pdftex.def Info: Abbildungen/3D_Visualisationen/3D_visualization_easom_
-2_1_5_coolwarm.png  used on input line 1102.
+2_1_5_coolwarm.png  used on input line 1104.
 (pdftex.def)             Requested size: 224.06548pt x 168.0485pt.
  [33 <./Abbildungen/3D_Visualisationen/3D_visualization_paraboloid_2_-3_7_coolw
 arm.png> <./Abbildungen/3D_Visualisationen/3D_visualization_easom_2_-100_100_co
@@ -1150,7 +1204,7 @@ warm.png Graphic file (type png)
 <use Abbildungen/3D_Visualisationen/3D_visualization_griewangk_2_-600_600_coolw
 arm.png>
 Package pdftex.def Info: Abbildungen/3D_Visualisationen/3D_visualization_griewa
-ngk_2_-600_600_coolwarm.png  used on input line 1116.
+ngk_2_-600_600_coolwarm.png  used on input line 1118.
 (pdftex.def)             Requested size: 134.44064pt x 100.83015pt.
 <Abbildungen/3D_Visualisationen/3D_visualization_griewangk_2_-10_10_coolwarm.pn
 g, id=169, 462.528pt x 346.896pt>
@@ -1159,7 +1213,7 @@ rm.png Graphic file (type png)
 <use Abbildungen/3D_Visualisationen/3D_visualization_griewangk_2_-10_10_coolwar
 m.png>
 Package pdftex.def Info: Abbildungen/3D_Visualisationen/3D_visualization_griewa
-ngk_2_-10_10_coolwarm.png  used on input line 1117.
+ngk_2_-10_10_coolwarm.png  used on input line 1119.
 (pdftex.def)             Requested size: 134.44064pt x 100.83015pt.
 <Abbildungen/3D_Visualisationen/3D_visualization_griewangk_2_-4_4_coolwarm.png,
  id=170, 462.528pt x 346.896pt>
@@ -1168,7 +1222,7 @@ File: Abbildungen/3D_Visualisationen/3D_visualization_griewangk_2_-4_4_coolwarm
 <use Abbildungen/3D_Visualisationen/3D_visualization_griewangk_2_-4_4_coolwarm.
 png>
 Package pdftex.def Info: Abbildungen/3D_Visualisationen/3D_visualization_griewa
-ngk_2_-4_4_coolwarm.png  used on input line 1118.
+ngk_2_-4_4_coolwarm.png  used on input line 1120.
 (pdftex.def)             Requested size: 134.44064pt x 100.83015pt.
 <Abbildungen/3D_Visualisationen/3D_visualization_rosenbrock_2_-2_2_coolwarm.png
 , id=171, 462.528pt x 346.896pt>
@@ -1177,7 +1231,7 @@ m.png Graphic file (type png)
 <use Abbildungen/3D_Visualisationen/3D_visualization_rosenbrock_2_-2_2_coolwarm
 .png>
 Package pdftex.def Info: Abbildungen/3D_Visualisationen/3D_visualization_rosenb
-rock_2_-2_2_coolwarm.png  used on input line 1131.
+rock_2_-2_2_coolwarm.png  used on input line 1133.
 (pdftex.def)             Requested size: 370.02289pt x 277.51717pt.
  [34 <./Abbildungen/3D_Visualisationen/3D_visualization_griewangk_2_-600_600_co
 olwarm.png> <./Abbildungen/3D_Visualisationen/3D_visualization_griewangk_2_-10_
@@ -1190,7 +1244,7 @@ olwarm.png Graphic file (type png)
 <use Abbildungen/3D_Visualisationen/3D_visualization_hartmann_not_3_2_4_0_1_coo
 lwarm.png>
 Package pdftex.def Info: Abbildungen/3D_Visualisationen/3D_visualization_hartma
-nn_not_3_2_4_0_1_coolwarm.png  used on input line 1144.
+nn_not_3_2_4_0_1_coolwarm.png  used on input line 1146.
 (pdftex.def)             Requested size: 224.06548pt x 168.0485pt.
 <Abbildungen/3D_Visualisationen/3D_visualization_hartmann_not_6_2_4_0_1_coolwar
 m.png, id=179, 462.528pt x 346.896pt>
@@ -1199,10 +1253,10 @@ olwarm.png Graphic file (type png)
 <use Abbildungen/3D_Visualisationen/3D_visualization_hartmann_not_6_2_4_0_1_coo
 lwarm.png>
 Package pdftex.def Info: Abbildungen/3D_Visualisationen/3D_visualization_hartma
-nn_not_6_2_4_0_1_coolwarm.png  used on input line 1145.
+nn_not_6_2_4_0_1_coolwarm.png  used on input line 1147.
 (pdftex.def)             Requested size: 224.06548pt x 168.0485pt.
 
-Underfull \hbox (badness 1478) in paragraph at lines 1147--1147
+Underfull \hbox (badness 1478) in paragraph at lines 1149--1149
 [][][]|\T1/cmr/m/n/12 Hartmann-Testfunktionen: Hart-mann(2,4) (links) und Hart-
 mann(2,6)
  []
@@ -1218,7 +1272,7 @@ File: Abbildungen/3D_Visualisationen/3D_visualization_shekel_2_5_-0_10_coolwarm
 <use Abbildungen/3D_Visualisationen/3D_visualization_shekel_2_5_-0_10_coolwarm.
 png>
 Package pdftex.def Info: Abbildungen/3D_Visualisationen/3D_visualization_shekel
-_2_5_-0_10_coolwarm.png  used on input line 1159.
+_2_5_-0_10_coolwarm.png  used on input line 1161.
 (pdftex.def)             Requested size: 134.44064pt x 100.83015pt.
 <Abbildungen/3D_Visualisationen/3D_visualization_shekel_2_7_-0_10_coolwarm.png,
  id=187, 462.528pt x 346.896pt>
@@ -1227,7 +1281,7 @@ File: Abbildungen/3D_Visualisationen/3D_visualization_shekel_2_7_-0_10_coolwarm
 <use Abbildungen/3D_Visualisationen/3D_visualization_shekel_2_7_-0_10_coolwarm.
 png>
 Package pdftex.def Info: Abbildungen/3D_Visualisationen/3D_visualization_shekel
-_2_7_-0_10_coolwarm.png  used on input line 1160.
+_2_7_-0_10_coolwarm.png  used on input line 1162.
 (pdftex.def)             Requested size: 134.44064pt x 100.83015pt.
 <Abbildungen/3D_Visualisationen/3D_visualization_shekel_2_10_-0_10_coolwarm.png
 , id=188, 462.528pt x 346.896pt>
@@ -1236,13 +1290,13 @@ m.png Graphic file (type png)
 <use Abbildungen/3D_Visualisationen/3D_visualization_shekel_2_10_-0_10_coolwarm
 .png>
 Package pdftex.def Info: Abbildungen/3D_Visualisationen/3D_visualization_shekel
-_2_10_-0_10_coolwarm.png  used on input line 1161.
+_2_10_-0_10_coolwarm.png  used on input line 1163.
 (pdftex.def)             Requested size: 134.44064pt x 100.83015pt.
  [36 <./Abbildungen/3D_Visualisationen/3D_visualization_shekel_2_5_-0_10_coolwa
 rm.png> <./Abbildungen/3D_Visualisationen/3D_visualization_shekel_2_7_-0_10_coo
 lwarm.png> <./Abbildungen/3D_Visualisationen/3D_visualization_shekel_2_10_-0_10
 _coolwarm.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1205--1206
+Underfull \hbox (badness 10000) in paragraph at lines 1207--1208
 
  []
 
@@ -1252,46 +1306,46 @@ File: Abbildungen/Coil_Spring_Design_-_Dateien/CSD_schematical.png Graphic file
  (type png)
 <use Abbildungen/Coil_Spring_Design_-_Dateien/CSD_schematical.png>
 Package pdftex.def Info: Abbildungen/Coil_Spring_Design_-_Dateien/CSD_schematic
-al.png  used on input line 1209.
+al.png  used on input line 1211.
 (pdftex.def)             Requested size: 308.34654pt x 205.56436pt.
 [37]
-Underfull \hbox (badness 10000) in paragraph at lines 1214--1215
+Underfull \hbox (badness 10000) in paragraph at lines 1216--1217
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1216--1217
+Underfull \hbox (badness 10000) in paragraph at lines 1218--1219
 
  []
 
 [38 <./Abbildungen/Coil_Spring_Design_-_Dateien/CSD_schematical.png (PNG copy)>
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1304--1305
+Underfull \hbox (badness 10000) in paragraph at lines 1306--1307
 
  []
 
 [39]
-Underfull \hbox (badness 10000) in paragraph at lines 1348--1349
+Underfull \hbox (badness 10000) in paragraph at lines 1350--1351
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1414--1418
+Underfull \hbox (badness 10000) in paragraph at lines 1416--1420
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1414--1418
+Underfull \hbox (badness 10000) in paragraph at lines 1416--1420
 
  []
 
 [40]
-Underfull \hbox (badness 10000) in paragraph at lines 1493--1495
+Underfull \hbox (badness 10000) in paragraph at lines 1495--1497
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1493--1495
+Underfull \hbox (badness 10000) in paragraph at lines 1495--1497
 
  []
 
@@ -1301,7 +1355,7 @@ File: Abbildungen/3D_Visualisationen/3D_visualization_CSD_filtered_space.png Gr
 aphic file (type png)
 <use Abbildungen/3D_Visualisationen/3D_visualization_CSD_filtered_space.png>
 Package pdftex.def Info: Abbildungen/3D_Visualisationen/3D_visualization_CSD_fi
-ltered_space.png  used on input line 1500.
+ltered_space.png  used on input line 1502.
 (pdftex.def)             Requested size: 179.24963pt x 134.43668pt.
 <Abbildungen/3D_Visualisationen/3D_visualization_CSD_unfiltered_space.png, id=2
 10, 462.528pt x 346.896pt>
@@ -1309,7 +1363,7 @@ File: Abbildungen/3D_Visualisationen/3D_visualization_CSD_unfiltered_space.png
 Graphic file (type png)
 <use Abbildungen/3D_Visualisationen/3D_visualization_CSD_unfiltered_space.png>
 Package pdftex.def Info: Abbildungen/3D_Visualisationen/3D_visualization_CSD_un
-filtered_space.png  used on input line 1502.
+filtered_space.png  used on input line 1504.
 (pdftex.def)             Requested size: 179.24963pt x 134.43668pt.
 [41]
 <Abbildungen/3D_Visualisationen/3D_visualization_CSD_unfiltered_and_filtered_sp
@@ -1319,10 +1373,10 @@ ed_space.png Graphic file (type png)
 <use Abbildungen/3D_Visualisationen/3D_visualization_CSD_unfiltered_and_filtere
 d_space.png>
 Package pdftex.def Info: Abbildungen/3D_Visualisationen/3D_visualization_CSD_un
-filtered_and_filtered_space.png  used on input line 1511.
+filtered_and_filtered_space.png  used on input line 1513.
 (pdftex.def)             Requested size: 231.26343pt x 173.44757pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1516--1517
+Underfull \hbox (badness 10000) in paragraph at lines 1518--1519
 
  []
 
@@ -1330,373 +1384,373 @@ Underfull \hbox (badness 10000) in paragraph at lines 1516--1517
 <./Abbildungen/3D_Visualisationen/3D_visualization_CSD_unfiltered_space.png> <.
 /Abbildungen/3D_Visualisationen/3D_visualization_CSD_unfiltered_and_filtered_sp
 ace.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1526--1527
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 1528--1529
 
  []
 
 
-Overfull \hbox (3.67667pt too wide) in paragraph at lines 1530--1531
+Underfull \hbox (badness 10000) in paragraph at lines 1530--1531
+
+ []
+
+
+Overfull \hbox (3.67667pt too wide) in paragraph at lines 1532--1533
 []\T1/cmr/m/n/12 Es folgt, dass un-ter den Al-go-rith-men, die pro-ba-bi-lis-ti
 -sches Ler-nen ein-setz-ten, [][]
  []
 
 
-Overfull \hbox (2.99617pt too wide) in alignment at lines 1560--1560
+Overfull \hbox (2.99617pt too wide) in alignment at lines 1562--1562
 [][][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1564--1565
+Underfull \hbox (badness 10000) in paragraph at lines 1566--1567
 
  []
 
 [43]
-Underfull \hbox (badness 10000) in paragraph at lines 1601--1602
+Underfull \hbox (badness 10000) in paragraph at lines 1603--1604
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1605--1606
+Underfull \hbox (badness 10000) in paragraph at lines 1607--1608
 
  []
 
 [44]
-Underfull \hbox (badness 10000) in paragraph at lines 1647--1648
+Underfull \hbox (badness 10000) in paragraph at lines 1649--1650
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1687--1687
+Underfull \hbox (badness 10000) in paragraph at lines 1689--1689
 []|\T1/cmr/bx/n/8 1.0 \T1/cmr/m/n/8 (389)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1687--1687
+Underfull \hbox (badness 10000) in paragraph at lines 1689--1689
 []|\T1/cmr/m/n/8 1.2 (471)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1687--1687
+Underfull \hbox (badness 10000) in paragraph at lines 1689--1689
 []|\T1/cmr/m/n/8 1.0 (354)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1687--1687
+Underfull \hbox (badness 10000) in paragraph at lines 1689--1689
 []|\T1/cmr/m/n/8 1.3 (443)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1687--1687
+Underfull \hbox (badness 10000) in paragraph at lines 1689--1689
 []|\T1/cmr/bx/n/8 1.0 \T1/cmr/m/n/8 (1390)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1687--1687
+Underfull \hbox (badness 10000) in paragraph at lines 1689--1689
 []|\T1/cmr/m/n/8 12.3 (17062)
  []
 
 
-Overfull \hbox (1.49739pt too wide) in paragraph at lines 1687--1687
+Overfull \hbox (1.49739pt too wide) in paragraph at lines 1689--1689
 []|\T1/cmr/m/n/8 Rosenbrock(2)| 
  []
 
 
-Overfull \hbox (1.49739pt too wide) in paragraph at lines 1687--1687
+Overfull \hbox (1.49739pt too wide) in paragraph at lines 1689--1689
 []|\T1/cmr/m/n/8 Rosenbrock(5)| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1687--1687
+Underfull \hbox (badness 10000) in paragraph at lines 1689--1689
 []|\T1/cmr/bx/n/8 1.0 \T1/cmr/m/n/8 (2487)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1687--1687
+Underfull \hbox (badness 10000) in paragraph at lines 1689--1689
 []|\T1/cmr/m/n/8 15.8 (39345)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1687--1687
+Underfull \hbox (badness 10000) in paragraph at lines 1689--1689
 []|\T1/cmr/m/n/8 27.1 (67340)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1687--1687
+Underfull \hbox (badness 10000) in paragraph at lines 1689--1689
 []|\T1/cmr/m/n/8 1.8 (787)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1687--1687
+Underfull \hbox (badness 10000) in paragraph at lines 1689--1689
 []|\T1/cmr/m/n/8 1.2 (517)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1687--1687
+Underfull \hbox (badness 10000) in paragraph at lines 1689--1689
 []|\T1/cmr/m/n/8 1.3 (593)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1687--1687
+Underfull \hbox (badness 10000) in paragraph at lines 1689--1689
 []|\T1/cmr/m/n/8 58.1 (25860)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1691--1692
+Underfull \hbox (badness 10000) in paragraph at lines 1693--1694
 
  []
 
 [45]
-Underfull \hbox (badness 10000) in paragraph at lines 1734--1734
+Underfull \hbox (badness 10000) in paragraph at lines 1736--1736
 []|\T1/cmr/bx/n/8 1.0 \T1/cmr/m/n/8 (1390)
  []
 
 
-Underfull \hbox (badness 7486) in paragraph at lines 1734--1734
+Underfull \hbox (badness 7486) in paragraph at lines 1736--1736
 []|\T1/cmr/m/n/8 12.3 (17062)
  []
 
 
-Underfull \hbox (badness 7486) in paragraph at lines 1734--1734
+Underfull \hbox (badness 7486) in paragraph at lines 1736--1736
 []|\T1/cmr/m/n/8 22.4 (10977)
  []
 
 
-Underfull \hbox (badness 7486) in paragraph at lines 1734--1734
+Underfull \hbox (badness 7486) in paragraph at lines 1736--1736
 []|\T1/cmr/m/n/8 44.0 (21546)
  []
 
 
-Underfull \hbox (badness 7486) in paragraph at lines 1734--1734
+Underfull \hbox (badness 7486) in paragraph at lines 1736--1736
 []|\T1/cmr/m/n/8 19.7 (16117)
  []
 
 
-Underfull \hbox (badness 7486) in paragraph at lines 1734--1734
+Underfull \hbox (badness 7486) in paragraph at lines 1736--1736
 []|\T1/cmr/m/n/8 28.8 (23618)
  []
 
 
-Underfull \hbox (badness 7486) in paragraph at lines 1734--1734
+Underfull \hbox (badness 7486) in paragraph at lines 1736--1736
 []|\T1/cmr/m/n/8 48.7 (39916)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1734--1734
+Underfull \hbox (badness 10000) in paragraph at lines 1736--1736
 []|\T1/cmr/bx/n/8 1.0 \T1/cmr/m/n/8 (2487)
  []
 
 
-Underfull \hbox (badness 7486) in paragraph at lines 1734--1734
+Underfull \hbox (badness 7486) in paragraph at lines 1736--1736
 []|\T1/cmr/m/n/8 15.8 (39345)
  []
 
 
-Underfull \hbox (badness 7486) in paragraph at lines 1734--1734
+Underfull \hbox (badness 7486) in paragraph at lines 1736--1736
 []|\T1/cmr/m/n/8 30.2 (75218)
  []
 
 
-Underfull \hbox (badness 7486) in paragraph at lines 1734--1734
+Underfull \hbox (badness 7486) in paragraph at lines 1736--1736
 []|\T1/cmr/m/n/8 15.0 (37414)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1734--1734
+Underfull \hbox (badness 10000) in paragraph at lines 1736--1736
 []|\T1/cmr/m/n/8 1.8 (787)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1734--1734
+Underfull \hbox (badness 10000) in paragraph at lines 1736--1736
 []|\T1/cmr/m/n/8 11.0 (4913)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1734--1734
+Underfull \hbox (badness 10000) in paragraph at lines 1736--1736
 []|\T1/cmr/m/n/8 18.8 (8348)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1738--1739
+Underfull \hbox (badness 10000) in paragraph at lines 1740--1741
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1742--1743
-
- []
-
-[46]
 Underfull \hbox (badness 10000) in paragraph at lines 1744--1745
 
  []
 
+[46]
+Underfull \hbox (badness 10000) in paragraph at lines 1746--1747
+
+ []
+
 [47]
-Underfull \hbox (badness 10000) in paragraph at lines 1806--1807
+Underfull \hbox (badness 10000) in paragraph at lines 1808--1809
 
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 1877--1877
+Underfull \hbox (badness 10000) in alignment at lines 1879--1879
 [][][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1881--1883
+Underfull \hbox (badness 10000) in paragraph at lines 1883--1885
 
  []
 
 [48]
-Underfull \hbox (badness 10000) in paragraph at lines 1937--1937
+Underfull \hbox (badness 10000) in paragraph at lines 1939--1939
 []|\T1/cmr/m/n/8 2.2 (777)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1937--1937
+Underfull \hbox (badness 10000) in paragraph at lines 1939--1939
 []|\T1/cmr/m/n/8 3.3 (1173)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1937--1937
+Underfull \hbox (badness 10000) in paragraph at lines 1939--1939
 []|\T1/cmr/m/n/8 3.9 (1390)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1937--1937
+Underfull \hbox (badness 10000) in paragraph at lines 1939--1939
 []|\T1/cmr/m/n/8 6.3 (2207)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1937--1937
+Underfull \hbox (badness 10000) in paragraph at lines 1939--1939
 []|\T1/cmr/bx/n/8 1.0 \T1/cmr/m/n/8 (1390)
  []
 
 
-Underfull \hbox (badness 6332) in paragraph at lines 1937--1937
+Underfull \hbox (badness 6332) in paragraph at lines 1939--1939
 []|\T1/cmr/m/n/8 12.3 (17062)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1937--1937
+Underfull \hbox (badness 10000) in paragraph at lines 1939--1939
 []|\T1/cmr/m/n/8 8.7 (3280)
  []
 
 
-Underfull \hbox (badness 6332) in paragraph at lines 1937--1937
+Underfull \hbox (badness 6332) in paragraph at lines 1939--1939
 []|\T1/cmr/m/n/8 19.2 (16117)
  []
 
 
-Underfull \hbox (badness 6332) in paragraph at lines 1937--1937
+Underfull \hbox (badness 6332) in paragraph at lines 1939--1939
 []|\T1/cmr/m/n/8 28.1 (23618)
  []
 
 
-Underfull \hbox (badness 6332) in paragraph at lines 1937--1937
+Underfull \hbox (badness 6332) in paragraph at lines 1939--1939
 []|\T1/cmr/m/n/8 47.5 (39916)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1937--1937
+Underfull \hbox (badness 10000) in paragraph at lines 1939--1939
 []|\T1/cmr/m/n/8 1.2 (2487)
  []
 
 
-Underfull \hbox (badness 6332) in paragraph at lines 1937--1937
+Underfull \hbox (badness 6332) in paragraph at lines 1939--1939
 []|\T1/cmr/m/n/8 18.4 (39345)
  []
 
 
-Underfull \hbox (badness 6332) in paragraph at lines 1937--1937
+Underfull \hbox (badness 6332) in paragraph at lines 1939--1939
 []|\T1/cmr/m/n/8 35.1 (75218)
  []
 
 
-Underfull \hbox (badness 6332) in paragraph at lines 1937--1937
+Underfull \hbox (badness 6332) in paragraph at lines 1939--1939
 []|\T1/cmr/m/n/8 17.5 (37414)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1937--1937
+Underfull \hbox (badness 10000) in paragraph at lines 1939--1939
 []|\T1/cmr/m/n/8 1.8 (787)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1937--1937
+Underfull \hbox (badness 10000) in paragraph at lines 1939--1939
 []|\T1/cmr/m/n/8 11.0 (4913)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1937--1937
+Underfull \hbox (badness 10000) in paragraph at lines 1939--1939
 []|\T1/cmr/m/n/8 18.8 (8348)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1937--1937
+Underfull \hbox (badness 10000) in paragraph at lines 1939--1939
 []|\T1/cmr/m/n/8 1.8 (748)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1937--1937
+Underfull \hbox (badness 10000) in paragraph at lines 1939--1939
 []|\T1/cmr/m/n/8 9.5 (4237)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1937--1937
+Underfull \hbox (badness 10000) in paragraph at lines 1939--1939
 []|\T1/cmr/m/n/8 14.7 (6523)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1937--1937
+Underfull \hbox (badness 10000) in paragraph at lines 1939--1939
 []|\T1/cmr/m/n/8 1.6 (715)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1937--1937
+Underfull \hbox (badness 10000) in paragraph at lines 1939--1939
 []|\T1/cmr/m/n/8 9.0 (3976)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1937--1937
+Underfull \hbox (badness 10000) in paragraph at lines 1939--1939
 []|\T1/cmr/m/n/8 15.6 (6913)
  []
 
 
-Underfull \hbox (badness 6332) in paragraph at lines 1937--1937
+Underfull \hbox (badness 6332) in paragraph at lines 1939--1939
 []|\T1/cmr/m/n/8 24.5 (10869)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1937--1937
+Underfull \hbox (badness 10000) in paragraph at lines 1939--1939
 []|\T1/cmr/m/n/8 11.3 (7853)
  []
 
 
-Underfull \hbox (badness 6332) in paragraph at lines 1937--1937
+Underfull \hbox (badness 6332) in paragraph at lines 1939--1939
 []|\T1/cmr/m/n/8 22.0 (15273)
  []
 
 
-Underfull \hbox (badness 6332) in paragraph at lines 1937--1937
+Underfull \hbox (badness 6332) in paragraph at lines 1939--1939
 []|\T1/cmr/m/n/8 60.0 (41606)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1941--1942
+Underfull \hbox (badness 10000) in paragraph at lines 1943--1944
 
  []
 
 [49]
-Underfull \hbox (badness 10000) in paragraph at lines 1949--1950
+Underfull \hbox (badness 10000) in paragraph at lines 1951--1952
 
  []
 
 [50] [51]
-Underfull \hbox (badness 10000) in alignment at lines 2145--2145
+Underfull \hbox (badness 10000) in alignment at lines 2147--2147
 [][][][][] 
  []
 
@@ -1708,14 +1762,9 @@ gies_hom_hpb_aco_r_vs_mv.png Graphic file (type png)
 <use Abbildungen/2D_Visualisationen/2D_visualization_comparison_restart_strateg
 ies_hom_hpb_aco_r_vs_mv.png>
 Package pdftex.def Info: Abbildungen/2D_Visualisationen/2D_visualization_compar
-ison_restart_strategies_hom_hpb_aco_r_vs_mv.png  used on input line 2157.
+ison_restart_strategies_hom_hpb_aco_r_vs_mv.png  used on input line 2159.
 (pdftex.def)             Requested size: 403.31511pt x 302.50107pt.
  [53]
-Underfull \hbox (badness 10000) in paragraph at lines 2166--2167
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 2168--2169
 
  []
@@ -1725,229 +1774,234 @@ Underfull \hbox (badness 10000) in paragraph at lines 2170--2171
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 2172--2173
+
+ []
+
 [54 <./Abbildungen/2D_Visualisationen/2D_visualization_comparison_restart_strat
 egies_hom_hpb_aco_r_vs_mv.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 2204--2205
+Underfull \hbox (badness 10000) in paragraph at lines 2206--2207
 
  []
 
 [55]
-Underfull \hbox (badness 1577) in paragraph at lines 2237--2237
+Underfull \hbox (badness 1577) in paragraph at lines 2239--2239
 []|\T1/cmr/bx/n/8 1.0 \T1/cmr/m/n/8 (144575)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2237--2237
+Underfull \hbox (badness 10000) in paragraph at lines 2239--2239
 \T1/cmr/m/n/8 [22.0%]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2237--2237
+Underfull \hbox (badness 10000) in paragraph at lines 2239--2239
 \T1/cmr/m/n/8 (142931)
  []
 
 
-Underfull \hbox (badness 4981) in paragraph at lines 2237--2237
+Underfull \hbox (badness 4981) in paragraph at lines 2239--2239
 []|\T1/cmr/m/n/8 1.1 (152564)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2237--2237
+Underfull \hbox (badness 10000) in paragraph at lines 2239--2239
 \T1/cmr/m/n/8 [18.0%]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2237--2237
+Underfull \hbox (badness 10000) in paragraph at lines 2239--2239
 \T1/cmr/m/n/8 (149447)
  []
 
 
-Underfull \hbox (badness 4981) in paragraph at lines 2237--2237
+Underfull \hbox (badness 4981) in paragraph at lines 2239--2239
 []|\T1/cmr/m/n/8 1.2 (174319)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2237--2237
+Underfull \hbox (badness 10000) in paragraph at lines 2239--2239
 \T1/cmr/m/n/8 [46.0%]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2237--2237
+Underfull \hbox (badness 10000) in paragraph at lines 2239--2239
 \T1/cmr/m/n/8 (158855)
  []
 
 
-Underfull \hbox (badness 4981) in paragraph at lines 2237--2237
+Underfull \hbox (badness 4981) in paragraph at lines 2239--2239
 []|\T1/cmr/m/n/8 1.2 (133910)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2237--2237
+Underfull \hbox (badness 10000) in paragraph at lines 2239--2239
 \T1/cmr/m/n/8 [20.0%]
  []
 
 
-Underfull \hbox (badness 4981) in paragraph at lines 2237--2237
+Underfull \hbox (badness 4981) in paragraph at lines 2239--2239
 []|\T1/cmr/m/n/8 1.0 (116594)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2237--2237
+Underfull \hbox (badness 10000) in paragraph at lines 2239--2239
 \T1/cmr/m/n/8 [28.0%]
  []
 
 
-Underfull \hbox (badness 1577) in paragraph at lines 2237--2237
+Underfull \hbox (badness 1577) in paragraph at lines 2239--2239
 []|\T1/cmr/bx/n/8 1.0 \T1/cmr/m/n/8 (112408)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2237--2237
+Underfull \hbox (badness 10000) in paragraph at lines 2239--2239
 []|\T1/cmr/m/n/8 1.3 (783)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2237--2237
+Underfull \hbox (badness 10000) in paragraph at lines 2239--2239
 \T1/cmr/m/n/8 [10.0%] (0)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2237--2237
+Underfull \hbox (badness 10000) in paragraph at lines 2239--2239
 []|\T1/cmr/bx/n/8 1.0 \T1/cmr/m/n/8 (619)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2237--2237
+Underfull \hbox (badness 10000) in paragraph at lines 2239--2239
 \T1/cmr/m/n/8 [22.0%] (0)
  []
 
 
-Underfull \hbox (badness 4981) in paragraph at lines 2237--2237
+Underfull \hbox (badness 4981) in paragraph at lines 2239--2239
 []|\T1/cmr/m/n/8 30.0 (18587)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2237--2237
+Underfull \hbox (badness 10000) in paragraph at lines 2239--2239
 \T1/cmr/m/n/8 [66.0%] (0)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2241--2242
+Underfull \hbox (badness 10000) in paragraph at lines 2243--2244
 
  []
 
 
-Underfull \hbox (badness 4981) in paragraph at lines 2274--2274
+Underfull \hbox (badness 4981) in paragraph at lines 2276--2276
 []|\T1/cmr/m/n/8 6.3 (988021)
  []
 
 
-Underfull \hbox (badness 1292) in paragraph at lines 2274--2274
+Underfull \hbox (badness 1292) in paragraph at lines 2276--2276
 \OMS/cmsy/m/n/8 f\OT1/cmr/m/n/8 9\OMS/cmsy/m/n/8 g$ \T1/cmr/m/n/8 (979734)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2274--2274
+Underfull \hbox (badness 10000) in paragraph at lines 2276--2276
 \OMS/cmsy/m/n/8 f\OT1/cmr/m/n/8 14\OMS/cmsy/m/n/8 g$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2274--2274
+Underfull \hbox (badness 10000) in paragraph at lines 2276--2276
 \T1/cmr/m/n/8 (1371913)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2274--2274
+Underfull \hbox (badness 10000) in paragraph at lines 2276--2276
 \OMS/cmsy/m/n/8 f\OT1/cmr/m/n/8 14\OMS/cmsy/m/n/8 g$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2274--2274
+Underfull \hbox (badness 10000) in paragraph at lines 2276--2276
 \T1/cmr/m/n/8 (1298758)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2274--2274
+Underfull \hbox (badness 10000) in paragraph at lines 2276--2276
 []|\T1/cmr/m/n/8 32.0
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2274--2274
+Underfull \hbox (badness 10000) in paragraph at lines 2276--2276
 \T1/cmr/m/n/8 (3600212)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2274--2274
+Underfull \hbox (badness 10000) in paragraph at lines 2276--2276
 \OMS/cmsy/m/n/8 f\OT1/cmr/m/n/8 45\OMS/cmsy/m/n/8 g$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2274--2274
+Underfull \hbox (badness 10000) in paragraph at lines 2276--2276
 \T1/cmr/m/n/8 (3591069)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2274--2274
+Underfull \hbox (badness 10000) in paragraph at lines 2276--2276
 []|\T1/cmr/m/n/8 57.7
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2274--2274
+Underfull \hbox (badness 10000) in paragraph at lines 2276--2276
 \T1/cmr/m/n/8 (6491284)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2274--2274
+Underfull \hbox (badness 10000) in paragraph at lines 2276--2276
 \OMS/cmsy/m/n/8 f\OT1/cmr/m/n/8 87\OMS/cmsy/m/n/8 g$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2274--2274
+Underfull \hbox (badness 10000) in paragraph at lines 2276--2276
 \T1/cmr/m/n/8 (6475082)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2274--2274
+Underfull \hbox (badness 10000) in paragraph at lines 2276--2276
 []|\T1/cmr/m/n/8 104.9
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2274--2274
+Underfull \hbox (badness 10000) in paragraph at lines 2276--2276
 \T1/cmr/m/n/8 (11791721)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2274--2274
+Underfull \hbox (badness 10000) in paragraph at lines 2276--2276
 \OMS/cmsy/m/n/8 f\OT1/cmr/m/n/8 166\OMS/cmsy/m/n/8 g$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2274--2274
+Underfull \hbox (badness 10000) in paragraph at lines 2276--2276
 \T1/cmr/m/n/8 (11764326)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2274--2274
+Underfull \hbox (badness 10000) in paragraph at lines 2276--2276
 []|\T1/cmr/m/n/8 13.5 (8358)
  []
 
 
-Underfull \hbox (badness 4981) in paragraph at lines 2274--2274
+Underfull \hbox (badness 4981) in paragraph at lines 2276--2276
 []|\T1/cmr/m/n/8 16.8 (10393)
  []
 
 
-Underfull \hbox (badness 4981) in paragraph at lines 2274--2274
+Underfull \hbox (badness 4981) in paragraph at lines 2276--2276
 []|\T1/cmr/m/n/8 39.7 (24552)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2278--2279
+Underfull \hbox (badness 10000) in paragraph at lines 2280--2281
 
  []
 
 [56]
-Underfull \hbox (badness 10000) in paragraph at lines 2282--2283
+Underfull \hbox (badness 10000) in paragraph at lines 2284--2285
 
  []
 
@@ -1959,7 +2013,7 @@ real_iterations_exact_exact_fixed_0.png Graphic file (type png)
 eal_iterations_exact_exact_fixed_0.png>
 Package pdftex.def Info: Abbildungen/Coil_Spring_Design_-_Dateien/hom_hpb_aco_r
 _vs_mv_pre_add_and_real_iterations_exact_exact_fixed_0.png  used on input line 
-2289.
+2291.
 (pdftex.def)             Requested size: 224.06548pt x 168.0485pt.
 <Abbildungen/Coil_Spring_Design_-_Dateien/het_hpb_aco_r_vs_mv_pre_add_and_real_
 iterations_exact_exact_fixed_0.png, id=273, 462.528pt x 346.896pt>
@@ -1969,7 +2023,7 @@ real_iterations_exact_exact_fixed_0.png Graphic file (type png)
 eal_iterations_exact_exact_fixed_0.png>
 Package pdftex.def Info: Abbildungen/Coil_Spring_Design_-_Dateien/het_hpb_aco_r
 _vs_mv_pre_add_and_real_iterations_exact_exact_fixed_0.png  used on input line 
-2290.
+2292.
 (pdftex.def)             Requested size: 224.06548pt x 168.0485pt.
 [57]
 <Abbildungen/Coil_Spring_Design_-_Dateien/het_hsppb_aco_r_vs_mv_pre_add_and_rea
@@ -1980,7 +2034,7 @@ d_real_iterations_exact_exact_fixed_0.png Graphic file (type png)
 _real_iterations_exact_exact_fixed_0.png>
 Package pdftex.def Info: Abbildungen/Coil_Spring_Design_-_Dateien/het_hsppb_aco
 _r_vs_mv_pre_add_and_real_iterations_exact_exact_fixed_0.png  used on input lin
-e 2300.
+e 2302.
 (pdftex.def)             Requested size: 224.06548pt x 168.0485pt.
 <Abbildungen/Coil_Spring_Design_-_Dateien/hom_hpb_aco_r_vs_mv_pre_add_and_real_
 iterations_exact_exact_adaptive.png, id=278, 462.528pt x 346.896pt>
@@ -1990,7 +2044,7 @@ real_iterations_exact_exact_adaptive.png Graphic file (type png)
 eal_iterations_exact_exact_adaptive.png>
 Package pdftex.def Info: Abbildungen/Coil_Spring_Design_-_Dateien/hom_hpb_aco_r
 _vs_mv_pre_add_and_real_iterations_exact_exact_adaptive.png  used on input line
- 2310.
+ 2312.
 (pdftex.def)             Requested size: 224.06548pt x 168.0485pt.
 <Abbildungen/Coil_Spring_Design_-_Dateien/het_hpb_aco_r_vs_mv_pre_add_and_real_
 iterations_exact_exact_adaptive.png, id=279, 462.528pt x 346.896pt>
@@ -2000,7 +2054,7 @@ real_iterations_exact_exact_adaptive.png Graphic file (type png)
 eal_iterations_exact_exact_adaptive.png>
 Package pdftex.def Info: Abbildungen/Coil_Spring_Design_-_Dateien/het_hpb_aco_r
 _vs_mv_pre_add_and_real_iterations_exact_exact_adaptive.png  used on input line
- 2311.
+ 2313.
 (pdftex.def)             Requested size: 224.06548pt x 168.0485pt.
  [58 <./Abbildungen/Coil_Spring_Design_-_Dateien/hom_hpb_aco_r_vs_mv_pre_add_an
 d_real_iterations_exact_exact_fixed_0.png> <./Abbildungen/Coil_Spring_Design_-_
@@ -2015,10 +2069,10 @@ d_real_iterations_exact_exact_adaptive.png Graphic file (type png)
 _real_iterations_exact_exact_adaptive.png>
 Package pdftex.def Info: Abbildungen/Coil_Spring_Design_-_Dateien/het_hsppb_aco
 _r_vs_mv_pre_add_and_real_iterations_exact_exact_adaptive.png  used on input li
-ne 2321.
+ne 2323.
 (pdftex.def)             Requested size: 224.06548pt x 168.0485pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 2330--2331
+Underfull \hbox (badness 10000) in paragraph at lines 2332--2333
 
  []
 
@@ -2027,7 +2081,7 @@ _real_iterations_exact_exact_adaptive.png> <./Abbildungen/Coil_Spring_Design_-_
 Dateien/het_hpb_aco_r_vs_mv_pre_add_and_real_iterations_exact_exact_adaptive.pn
 g> <./Abbildungen/Coil_Spring_Design_-_Dateien/het_hsppb_aco_r_vs_mv_pre_add_an
 d_real_iterations_exact_exact_adaptive.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 2332--2333
+Underfull \hbox (badness 10000) in paragraph at lines 2334--2335
 
  []
 
@@ -2065,7 +2119,7 @@ gies_het_hpb_aco_r_vs_mv.png Graphic file (type png)
 <use Abbildungen/2D_Visualisationen/2D_visualization_comparison_restart_strateg
 ies_het_hpb_aco_r_vs_mv.png>
 Package pdftex.def Info: Abbildungen/2D_Visualisationen/2D_visualization_compar
-ison_restart_strategies_het_hpb_aco_r_vs_mv.png  used on input line 2369.
+ison_restart_strategies_het_hpb_aco_r_vs_mv.png  used on input line 2371.
 (pdftex.def)             Requested size: 403.31511pt x 302.50107pt.
 <Abbildungen/2D_Visualisationen/2D_visualization_comparison_restart_strategies_
 het_hsppb_aco_r_vs_mv.png, id=320, 462.528pt x 346.896pt>
@@ -2074,7 +2128,7 @@ gies_het_hsppb_aco_r_vs_mv.png Graphic file (type png)
 <use Abbildungen/2D_Visualisationen/2D_visualization_comparison_restart_strateg
 ies_het_hsppb_aco_r_vs_mv.png>
 Package pdftex.def Info: Abbildungen/2D_Visualisationen/2D_visualization_compar
-ison_restart_strategies_het_hsppb_aco_r_vs_mv.png  used on input line 2380.
+ison_restart_strategies_het_hsppb_aco_r_vs_mv.png  used on input line 2382.
 (pdftex.def)             Requested size: 403.31511pt x 302.50107pt.
 [5 <./Abbildungen/2D_Visualisationen/2D_visualization_comparison_restart_strate
 gies_het_hpb_aco_r_vs_mv.png>]
@@ -2086,7 +2140,7 @@ real_iterations_exact_penalty_fixed_0.png Graphic file (type png)
 eal_iterations_exact_penalty_fixed_0.png>
 Package pdftex.def Info: Abbildungen/Coil_Spring_Design_-_Dateien/hom_hpb_aco_r
 _vs_mv_pre_add_and_real_iterations_exact_penalty_fixed_0.png  used on input lin
-e 2392.
+e 2394.
 (pdftex.def)             Requested size: 224.06548pt x 168.0485pt.
 <Abbildungen/Coil_Spring_Design_-_Dateien/het_hpb_aco_r_vs_mv_pre_add_and_real_
 iterations_exact_penalty_fixed_0.png, id=328, 462.528pt x 346.896pt>
@@ -2096,7 +2150,7 @@ real_iterations_exact_penalty_fixed_0.png Graphic file (type png)
 eal_iterations_exact_penalty_fixed_0.png>
 Package pdftex.def Info: Abbildungen/Coil_Spring_Design_-_Dateien/het_hpb_aco_r
 _vs_mv_pre_add_and_real_iterations_exact_penalty_fixed_0.png  used on input lin
-e 2393.
+e 2395.
 (pdftex.def)             Requested size: 224.06548pt x 168.0485pt.
  [6 <./Abbildungen/2D_Visualisationen/2D_visualization_comparison_restart_strat
 egies_het_hsppb_aco_r_vs_mv.png>]
@@ -2108,7 +2162,7 @@ d_real_iterations_exact_penalty_fixed_0.png Graphic file (type png)
 _real_iterations_exact_penalty_fixed_0.png>
 Package pdftex.def Info: Abbildungen/Coil_Spring_Design_-_Dateien/het_hsppb_aco
 _r_vs_mv_pre_add_and_real_iterations_exact_penalty_fixed_0.png  used on input l
-ine 2403.
+ine 2405.
 (pdftex.def)             Requested size: 224.06548pt x 168.0485pt.
 <Abbildungen/Coil_Spring_Design_-_Dateien/hom_hpb_aco_r_vs_mv_pre_add_and_real_
 iterations_exact_penalty_adaptive.png, id=334, 462.528pt x 346.896pt>
@@ -2118,7 +2172,7 @@ real_iterations_exact_penalty_adaptive.png Graphic file (type png)
 eal_iterations_exact_penalty_adaptive.png>
 Package pdftex.def Info: Abbildungen/Coil_Spring_Design_-_Dateien/hom_hpb_aco_r
 _vs_mv_pre_add_and_real_iterations_exact_penalty_adaptive.png  used on input li
-ne 2413.
+ne 2415.
 (pdftex.def)             Requested size: 224.06548pt x 168.0485pt.
 <Abbildungen/Coil_Spring_Design_-_Dateien/het_hpb_aco_r_vs_mv_pre_add_and_real_
 iterations_exact_penalty_adaptive.png, id=335, 462.528pt x 346.896pt>
@@ -2128,7 +2182,7 @@ real_iterations_exact_penalty_adaptive.png Graphic file (type png)
 eal_iterations_exact_penalty_adaptive.png>
 Package pdftex.def Info: Abbildungen/Coil_Spring_Design_-_Dateien/het_hpb_aco_r
 _vs_mv_pre_add_and_real_iterations_exact_penalty_adaptive.png  used on input li
-ne 2414.
+ne 2416.
 (pdftex.def)             Requested size: 224.06548pt x 168.0485pt.
  [7 <./Abbildungen/Coil_Spring_Design_-_Dateien/hom_hpb_aco_r_vs_mv_pre_add_and
 _real_iterations_exact_penalty_fixed_0.png> <./Abbildungen/Coil_Spring_Design_-
@@ -2143,23 +2197,29 @@ d_real_iterations_exact_penalty_adaptive.png Graphic file (type png)
 _real_iterations_exact_penalty_adaptive.png>
 Package pdftex.def Info: Abbildungen/Coil_Spring_Design_-_Dateien/het_hsppb_aco
 _r_vs_mv_pre_add_and_real_iterations_exact_penalty_adaptive.png  used on input 
-line 2424.
+line 2426.
 (pdftex.def)             Requested size: 224.06548pt x 168.0485pt.
  [8 <./Abbildungen/Coil_Spring_Design_-_Dateien/hom_hpb_aco_r_vs_mv_pre_add_and
 _real_iterations_exact_penalty_adaptive.png> <./Abbildungen/Coil_Spring_Design_
 -_Dateien/het_hpb_aco_r_vs_mv_pre_add_and_real_iterations_exact_penalty_adaptiv
 e.png> <./Abbildungen/Coil_Spring_Design_-_Dateien/het_hsppb_aco_r_vs_mv_pre_ad
 d_and_real_iterations_exact_penalty_adaptive.png>]
-Overfull \hbox (12.59427pt too wide) in paragraph at lines 2453--2454
+Overfull \hbox (12.59427pt too wide) in paragraph at lines 2455--2456
  $[]$  $[]$  $[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2453--2454
+Underfull \hbox (badness 10000) in paragraph at lines 2455--2456
 
  []
 
-[1] (./Masterarbeit.aux)
+<Abbildungen/Unterschrift.png, id=349, 137.5539pt x 75.4017pt>
+File: Abbildungen/Unterschrift.png Graphic file (type png)
+<use Abbildungen/Unterschrift.png>
+Package pdftex.def Info: Abbildungen/Unterschrift.png  used on input line 2459.
+
+(pdftex.def)             Requested size: 224.06548pt x 122.82887pt.
+[1 <./Abbildungen/Unterschrift.png>] (./Masterarbeit.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -2171,13 +2231,13 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 15159 strings out of 474222
- 294719 string characters out of 5748732
+ 16277 strings out of 474222
+ 314408 string characters out of 5748732
  2017975 words of memory out of 5000000
- 37160 multiletter control sequences out of 15000+600000
+ 38244 multiletter control sequences out of 15000+600000
  585652 words of font info for 99 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,22n,107p,10934b,1713s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,22n,107p,10934b,1755s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/
@@ -2212,10 +2272,10 @@ xmf/fonts/type1/public/cm-super/sfsx1728.pfb></usr/share/texmf/fonts/type1/publ
 ic/cm-super/sfsx2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1000
 .pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/tex
 mf/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on Masterarbeit.pdf (77 pages, 2745346 bytes).
+Output written on Masterarbeit.pdf (77 pages, 2811583 bytes).
 PDF statistics:
- 523 PDF objects out of 1000 (max. 8388607)
+ 525 PDF objects out of 1000 (max. 8388607)
  297 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 161 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 166 words of extra memory for PDF output out of 10000 (max. 10000000)
 
