@@ -16,9 +16,6 @@ print("in performance_box_plot_of_test_function: " + str("klappt"))
 
 objective_function_name = "Paraboloid"
 
-# performance_path_write = data_to_analyze['performance_path_write']
-# performance_path_plot_write = data_to_analyze['performance_path_plot_write']
-
 # path where to read the performance data from
 read_data_path = "../performance_data/H_Hom_ACO_R_Very_Simple/continuous_performance_data/10_10/paraboloid_10_fixed_continuous_10.txt"
 

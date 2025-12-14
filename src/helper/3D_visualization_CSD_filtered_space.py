@@ -57,46 +57,29 @@ while len(x) <= 500:
 
     if (8 * C_f * F_max * D)/(pi * d**3) - S > 0:
 
-        # print('in get_solution_quality: test')
-
         continue
 
     if l_f - l_max > 0:
-
-        # print('in get_solution_quality: test2')
 
         continue
 
     if D - D_max > 0:
 
-        # print('in get_solution_quality: test3')
-
         continue
 
     if 3 - D/d > 0:
-
-        # print('in get_solution_quality: test4')
-        # print('in get_solution_quality D: ' + str(D))
-        # print('in get_solution_quality d: ' + str(d))
-        # print('in get_solution_quality D/d: ' + str(D/d))
 
         continue
 
     if sigma_p - sigma_pm > 0:
 
-        # print('in get_solution_quality: test5')
-
         continue
 
     if sigma_p + (F_max - F_p)/K + 1.05*(N + 2)*d - l_f > 0:
 
-        # print('in get_solution_quality: test6')
-
         continue
 
     if sigma_w - (F_max - F_p)/K > 0:
-
-        # print('in get_solution_quality: test7')
 
         continue
 

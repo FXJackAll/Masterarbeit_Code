@@ -2,11 +2,13 @@
 
 folgende Programmbestandteile sind von mir:
 
-- alles in "problems" außer den Ordnern "atsp" und "tsp" und deren Inhalt
+- in "problems": - alles in "continuous_problems"
+                 - alles in "discrete_problems"
+                 - alles in "mixed_variable_problems"
 - in "src": - alles in "continuous_problems"
             - alles in "figures"
             - alles in "helper"
-            - alles in "mixed_variable_problems"
+            - alles in "mixed_variable_problems", in der Masterarbeit wurde "CSD" verwendet, "CSD_penalty" und "CSD_exact" sind veraltet
             - alles in "performance_data"
             - alles in "search_algorithms"
             - die Erweiterung von "hsppbo" zu "hsppbo_tisd", da ich "hsppbo" nur kopiert habe
@@ -76,11 +78,13 @@ from src.continuous_problems.simple_continuous_problems.diagonal_plane import Di
 
 folgende Programmbestandteile sind von mir:
 
-- alles in "problems" außer den Ordnern "atsp" und "tsp" und deren Inhalt
+- in "problems": - alles in "continuous_problems"
+                 - alles in "discrete_problems"
+                 - alles in "mixed_variable_problems"
 - in "src": - alles in "continuous_problems"
             - alles in "figures"
             - alles in "helper"
-            - alles in "mixed_variable_problems"
+            - alles in "mixed_variable_problems", in der Masterarbeit wurde "CSD" verwendet, "CSD_penalty" und "CSD_exact" sind veraltet
             - alles in "performance_data"
             - alles in "search_algorithms"
             - die Erweiterung von "hsppbo" zu "hsppbo_tisd", da ich "hsppbo" nur kopiert habe
@@ -120,6 +124,7 @@ def user_input():
     #                    help='Type of the problem, e.g. TSP (standard, symmetric TSP), ATSP (asymmetric TSP), QAP, TISD')
     parser.add_argument('-pt', '--problem-type', type=str, default='CSD',
                         help='Type of the problem, e.g. TSP (standard, symmetric TSP), ATSP (asymmetric TSP), QAP, TISD')
+    # in der Masterarbeit wurde 'CSD' benutzt; 'CSD_penalty' und 'CSD_exact' sind veraltet
 
     parser.add_argument('-rot', '--rotation', action=argparse.BooleanOptionalAction, default=False,
                         help='enables random rotation of the given test function')
@@ -134,8 +139,6 @@ def user_input():
     parser.add_argument('-mfev', '--max_func_evaluations', type=int, default=8000,
                         help='Maximum number of function evaluations to run the search algorithm')
 
-
-    # TODO implement accuracy
     parser.add_argument('-acc', '--accuracy', type=str, choices=['absolute', 'relative'], default='relative',
                         help='Accuracy at which the algorithm;'
                              'absolute: |f - f*| < Term, relative: |f - f*| < |Term * f| + Term')
@@ -197,7 +200,6 @@ def user_input():
     # parser.add_argument('-')
     parser.add_argument('-ddt', '--dynamic-detection-threshold', type=check_percent_range, default=0.25,
                         help='Threshold (swaps per SCE and iteration) for detecting a change')
-    # TODO find out what detection pause does
     parser.add_argument('-dp', '--detection_pause', type=int, default=5,
                         help='')
     parser.add_argument('-r', '--reaction-type', type=str, choices=[
@@ -208,11 +210,6 @@ def user_input():
     # print(args.search_algorithms)
 
     return args
-
-# TODO: implement pheromon buckshot
-
-# TODO: implement absolute and relatve restart
-
 
 # check if number is between 0 and 1
 def check_percent_range(number: float) -> float:

@@ -99,8 +99,6 @@ class Tablet(Problem):
 
         continuous_variables = solution['continuous'][0]
 
-        # print('in Paraboloid: ' + str(continuous_variables))
-
         function_value = 10 ** 4 * continuous_variables[0] ** 2
 
         for i in range(self._dimension - 1):
@@ -165,7 +163,3 @@ class Tablet(Problem):
     def dimension(self, value):
 
         self.dimension = value
-
-
-# test = Paraboloid('paraboloid10')
-# print(test.init_solution())

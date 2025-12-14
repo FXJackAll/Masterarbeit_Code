@@ -1,10 +1,3 @@
-import os
-import glob
-
-import matplotlib
-
-# matplotlib.use('agg')
-
 import matplotlib.pyplot as plt
 
 '''
@@ -12,14 +5,7 @@ makes a box plot of the performance data of the given objective function
 :return: none
 '''
 
-# print("in performance_box_plot_of_test_function: " + str("klappt"))
-
 objective_function_name = "Paraboloid"
-
-# performance_path_write = data_to_analyze['performance_path_write']
-# performance_path_plot_write = data_to_analyze['performance_path_plot_write']
-
-# path where to read the performance data from
 
 read_data_path_1 = "../performance_data/ACO_R_Very_Simple/continuous_performance_data/10_4_10_4/shekel_4_10_fixed_0_continuous_10_4_10_4.txt"
 read_data_path_2 = "../performance_data/H_Hom_ACO_R_Very_Simple/continuous_performance_data/10_4_10_4/shekel_4_10_fixed_0_continuous_10_4_10_4.txt"
@@ -47,8 +33,6 @@ with open(read_data_path_1, "r") as performance_data:
         if not line:
 
             break
-
-        # print("box_plot_comparing_algorithms line: " + str(line))
 
         # gathering all data in a list
         temp_spread.append(int(line))

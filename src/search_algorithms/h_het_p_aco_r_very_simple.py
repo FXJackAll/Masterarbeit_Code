@@ -3,7 +3,6 @@ from numpy.random import choice
 from functools import reduce
 from bisect import bisect
 from random import uniform
-# from unittest.mock import right
 
 from src.search_algorithm import Search_Algorithm
 
@@ -12,7 +11,6 @@ class H_Het_P_ACO_R_Very_Simple(Search_Algorithm):
 
     def construct_solution(self, search_parameters: dict) -> dict:
         problem = search_parameters['problem']
-        search_space_dimension = problem.dimension
 
         sce_index = search_parameters['sce_index']
 
@@ -49,20 +47,11 @@ class H_Het_P_ACO_R_Very_Simple(Search_Algorithm):
 
         raw_populations = search_parameters['populations']
 
-        w_personal_previous = search_parameters['w_personal_previous']
-        w_personal_best = search_parameters['w_personal_best']
-        w_parent_best = search_parameters['w_parent_best']
-
-        # print("in aco_r_very_simple: " + str(len(raw_populations[2]['continuous'])))
-
         natural_numbers_populations = [raw_populations[g]['natural_numbers'] for g in range(len(raw_populations))]
         continuous_populations = [raw_populations[h]['continuous'] for h in range(len(raw_populations))]
         discrete_populations = [raw_populations[i]['discrete'] for i in range(len(raw_populations))]
-        ordinal_populations = [raw_populations[j]['ordinal'] for j in range(len(raw_populations))]
+        ordinal_populations = [raw_populations[j]['ordinal'] for j in range(len(raw_populations))]  # isn't used now but probably will be used in future work
         categorical_populations = [raw_populations[k]['categorical'] for k in range(len(raw_populations))]
-
-        # print('in aco_r_very_simple: ' + str(continuous_populations))
-        # print("in aco_r_very_simple: " + str(continuous_populations[0]))
 
         best_solution = search_parameters['best_solution']
 
@@ -74,11 +63,7 @@ class H_Het_P_ACO_R_Very_Simple(Search_Algorithm):
         discrete_variable_boundaries = variable_boundaries['discrete']
         continuous_variable_boundaries = variable_boundaries['continuous']
 
-        # print("in aco_very_simple: " + str(continuous_variable_boundaries))
-
         magnitude_of_categorical_variables = problem.get_magnitudes_of_categorical_variables()
-
-        # linear_div_inflation = 1
 
         new_natural_numbers_solution_coordinates = [[] for i in range(len(natural_numbers_populations[0]))]
         new_continuous_coordinates = [[] for i in range(len(discrete_populations[0]))]
@@ -86,13 +71,9 @@ class H_Het_P_ACO_R_Very_Simple(Search_Algorithm):
         new_continuous_solution_coordinates = [[] for i in range(len(continuous_populations[0]))]
         new_categorical_choices = [[] for i in range(len(categorical_populations[0]))]
 
-        # print('in aco_r_very_simple:' + str(new_continuous_solution_coordinates))
-
         natural_numbers_matrix = [[] for dim in range(len(natural_numbers_populations[0]))]
         discrete_matrix = [[] for dim in range(len(discrete_populations[0]))]
         continuous_matrix = [[] for dim in range(len(continuous_populations[0]))]
-
-        # print('in aco_r_very_simple:' + str(continuous_populations[0]))
 
         solution_choice = choice(['calculated', 'random'], 1, p=[1-h_probability, h_probability])
 
@@ -107,8 +88,6 @@ class H_Het_P_ACO_R_Very_Simple(Search_Algorithm):
             natural_numbers_means_row_vector = best_solution[0]['natural_numbers'][variable]
 
             linear_div_inflated_natural_numbers = [0 for dim in range(len(natural_numbers_matrix[variable][0]))]
-
-            # print('in aco_r_very_simple: ' + str(linear_div_inflated))
 
             # loop repeats for every dimension of the objective function/dimension of the first solution in solution archive
             for dim in range(len(linear_div_inflated_natural_numbers)):
@@ -128,8 +107,6 @@ class H_Het_P_ACO_R_Very_Simple(Search_Algorithm):
 
             left_boundary = [natural_numbers_variable_boundaries[variable][0] for i in range(len(linear_div_inflated_natural_numbers))]
             right_boundary = [natural_numbers_variable_boundaries[variable][1] for i in range(len(linear_div_inflated_natural_numbers))]
-
-            # print("in aco_r_very_simple: " + str(left_boundary))
 
             match solution_choice:
 
@@ -198,8 +175,6 @@ class H_Het_P_ACO_R_Very_Simple(Search_Algorithm):
 
                 case 'random':
 
-                    #random_discrete_value = [random.choice(discrete_values) for i in range(len(linear_div_inflated_discrete))]
-
                     for i in range(len(linear_div_inflated_discrete)):
 
                         random_discrete_value = random.choice(discrete_values)
@@ -216,33 +191,13 @@ class H_Het_P_ACO_R_Very_Simple(Search_Algorithm):
 
             for solution in range(len(continuous_populations)):
 
-                # print('in aco_r_very_simple: ' + str(continuous_populations[solution]))
-
                 continuous_matrix[variable].append(continuous_populations[solution][variable])
 
             number_of_continuous_rows = len(continuous_matrix[variable])
 
-            # print('in aco_r_very_simple: ' + str(best_solution))
-
             continuous_means_row_vector = best_solution[0]['continuous'][variable]
 
-            # print('in aco_r_very_simple: ' + str(matrix))
-
-            # solution archive interpreted as matrix
-            # matrix = continuous_populations
-            # number of solutions in solution archive
-            # number_of_rows = len(matrix)
-
-            # the chosen solution vector, named in paper as "s_L"; actually small L but that looks like the number "one"
-            # means_row_vector = best_solution[0]['continuous'][0]
-
-            # print(means_row_vector)
-
-            # linear_div_inflation = linear_deviation_parameters['linear_div_inflation']
-
             linear_div_inflated = [0 for dim in range(len(continuous_matrix[variable][0]))]
-
-            # print('in aco_r_very_simple: ' + str(linear_div_inflated))
 
             # loop repeats for every dimension of the objective function/dimension of the first solution in solution archive
             for dim in range(len(linear_div_inflated)):
@@ -265,9 +220,6 @@ class H_Het_P_ACO_R_Very_Simple(Search_Algorithm):
 
                 case 'calculated':
 
-                    # print("in aco_r_very_simple: " + str(left_boundary))
-                    # print("in h_p_aco_r_very_simple: " + str(solution_choice))
-
                     new_continuous_solution_coordinates[variable] = [uniform(max(continuous_means_row_vector[i] - lin_deviation_vector[i], left_boundary[i]),
                                                                              min(continuous_means_row_vector[i] + lin_deviation_vector[i], right_boundary[i]))
                                                                      for i in range(len(linear_div_inflated))]
@@ -277,28 +229,13 @@ class H_Het_P_ACO_R_Very_Simple(Search_Algorithm):
                     new_continuous_solution_coordinates[variable] = [
                         uniform(left_boundary[i], right_boundary[i]) for i in range(len(linear_div_inflated))]
 
-                    # print("in h_p_aco_r_very_simple: " + str(solution_choice))
-
                 case _:
 
                     pass
 
-
-        # print('in aco_r_very_simple:' + str(categorical_populations))
-
-        # print("in aco_r_very_simple: " + str(search_space_dimension))
-
         for magnitude in range(len(magnitude_of_categorical_variables)):
 
             for variable in range(len(categorical_populations[0])):
-
-                # print("in aco_very_simple len: " + str(len(categorical_populations[0])))
-
-                # print("in aco_very_simple categorical_populations[0]: " + str(categorical_populations[0]))
-
-                # print("in aco_very_simple variable: " + str(variable))
-
-                # print("in aco_very_simple magnitude_of_cat: " + str(magnitude_of_categorical_variables[magnitude]))
 
                 new_categorical_choices[variable] = random.randint(0, magnitude_of_categorical_variables[magnitude])
 
@@ -311,10 +248,4 @@ class H_Het_P_ACO_R_Very_Simple(Search_Algorithm):
                         'categorical': new_categorical_choices
                         }
 
-        # print("in aco_r_very_simple: " + str(new_categorical_choices))
-
-        # print(problem.init_solution()[1])
-
         return new_solution
-
-# print(max(1, True))

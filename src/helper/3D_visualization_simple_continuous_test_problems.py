@@ -1,12 +1,6 @@
-from functools import reduce
-from mpl_toolkits import mplot3d
 import numpy as np
-from mpl_toolkits.mplot3d.axis3d import ZAxis
-from numpy import sqrt, pi, cos, exp
 from matplotlib import cm
-from matplotlib.ticker import LinearLocator
 import matplotlib.pyplot as plt
-# from sympy.printing.pretty.pretty_symbology import linewidth
 
 # path where to save the box plot
 save_pic_path = "../figures/3D_visualization_paraboloid_2_-3_7_coolwarm.png"
@@ -45,8 +39,6 @@ X, Y = np.meshgrid(x,y)
 Z = f_paraboloid_2(X,Y)
 
 surf = ax.plot_surface(X, Y, Z, cmap=cm.coolwarm, linewidth=0, antialiased=False)
-
-# ax.zaxis.set_major_locator(LinearLocator(10))
 
 ax.set_xlabel('x')
 ax.set_ylabel('y')

@@ -13,12 +13,6 @@ from config import params
 
 class HSPPBO_TISD:
 
-    #def __init__(self, problem: Problem, search_algorithms: Search_Algorithm, logger: Logger,
-    #             pers_best=0.075, pers_prev=0.075, parent_best=0.01,
-    #             alpha=1, beta=9, detection_threshold=0.25, reaction_type='partly', detection_pause=5,
-    #             solution_creating_behaviour='weak-heterogeneous',
-    #             max_iteration_count=2600) -> None:
-
     def __init__(self, HSPPBO_parameters) -> None:
         """
         Initialize the hsppbo algorithm with the given parameters.
@@ -137,8 +131,6 @@ class HSPPBO_TISD:
 
             temp_solution = self._tree.get_best_solution(self._tree.tree.root)[1]
 
-            # print('in HSPPPBO_TISD execute: ' + 'test')
-
             # check for dynamic change within the problem instance
             # if dynamic is triggered (true), recalculate the solution quality for each node
             if self._problem.check_dynamic_change(i):
@@ -174,12 +166,9 @@ class HSPPBO_TISD:
             for sce in self._tree.all_nodes_top_down:
                 # get the pers best solution of the sce and its parent
                 sce_solution_quality = self._tree.get_best_solution(sce)[1]
-                # print("in HSPPBO_TISD execute: " + str(sce_solution_quality))
                 # get the solution quality of the sce and its parent
                 parent_sce = self._tree.get_parent(sce)
                 parent_solution_quality = self._tree.get_best_solution(parent_sce)[1]
-                # print("in HSPPBO_TISD execute: " + str(parent_solution_quality))
-                # print("hsppbo_tisd execute: " + str(sce_solution_quality))
                 # swap parent and sce position, if sce solution is better
                 if sce_solution_quality < parent_solution_quality:
                     self._tree.swap_nodes(sce, parent_sce)
@@ -198,24 +187,14 @@ class HSPPBO_TISD:
 
             best_solution = self._tree.get_best_solution(self._tree.tree.root)[0]
             best_solution["required_restarts"] = self._required_restarts
-            # print("in hsspbo_tisd execute: " + str(best_solution))
             best_solution_quality = self._tree.get_best_solution(self._tree.tree.root)[1]
-            # print("in hsppbo_tisd execute: " + str(best_solution_quality))
             self._logger.log_iteration(i, self._sce_count * (i + 1), swap_count, detection_pause_count == 0, best_solution_quality, best_solution)
-
-            # print("In HSSPBO_TISD accuracy: " + str(self._accuracy))
 
             match self._accuracy:
 
                 case 'absolute':
 
-                    # print("in HSPPBO_TISD execute: klappt")
-
-                    # print("in HSPPBO_TISD execute: " + str(best_solution_quality))
-
                     if np.abs(best_solution_quality - self._problem_optimum) < self._absolute_accuracy:
-
-                        # print("in HSPPBO_TISD execute: " + str(best_solution_quality))
 
                         best_solution = self._tree.get_best_solution(self._tree.tree.root)
                         # append last solution quality - without dynamic, this is the only list entry
@@ -225,10 +204,6 @@ class HSPPBO_TISD:
                         if verbose:
                             self._tree.tree.show(data_property="pb_quality")
                             self._problem.visualize(solution=best_solution[0])
-
-                        # if "so_far" not in best_solution:
-
-                           # best_solution["so_far"] = self._problem.req_iterations()
 
                         best_solution[0]["so_far"] = self._problem.req_pre_iterations()
                         best_solution[0]["add_it"] = self._problem.additional_req_iterations()
@@ -237,15 +212,8 @@ class HSPPBO_TISD:
 
                 case 'relative':
 
-                    # print('in HSPPBO tisd execute ' + 'test')
-
                     if (np.abs(best_solution_quality - self._problem_optimum)
                             < (np.abs(self._relative_accuracy * best_solution_quality) + self._relative_accuracy)):
-
-                        # print("in HSPPBO_TISD execute: " + str(np.abs(self._relative_accuracy * solution_quality) + self._relative_accuracy))
-                        # print("in HSPPBO_TISD execute: " + str(self._relative_accuracy))
-
-                        # print(np.abs(solution_quality - self._problem_optimum))
 
                         best_solution = self._tree.get_best_solution(self._tree.tree.root)
                         # append last solution quality - without dynamic, this is the only list entry
@@ -255,12 +223,6 @@ class HSPPBO_TISD:
                         if verbose:
                             self._tree.tree.show(data_property="pb_quality")
                             self._problem.visualize(solution=best_solution[0])
-
-                        # if "so_far" not in best_solution[0][0]:
-
-                          #  best_solution[0][0]["so_far"] = self._problem.req_iterations()
-
-                        # print(best_solution)
 
                         best_solution[0]["so_far"] = self._problem.req_pre_iterations()
                         best_solution[0]["add_it"] = self._problem.additional_req_iterations()
@@ -273,33 +235,20 @@ class HSPPBO_TISD:
 
             if (self._restart_behavior == 'adaptive' and i%self._period == 0):
 
-                # print("in HSPPBO_TISD execute: " + str(temp_solution))
-                # print("in HSPPBO_TISD execute: " + str(best_solution) + " " + str(best_solution_quality))
-
                 if abs(best_solution_quality - temp_solution) < self._adaptive_threshold:
 
                     self._tree.reset()
                     self._tree.init_tree()
-                    # print("in HSPPBO_TISD execute: " + str(self._required_restarts))
                     self._required_restarts += 1
-
-                    # print("in HSPPBO_TISD execute: klappt")
 
         best_solution = self._tree.get_best_solution(self._tree.tree.root)
         best_solution[0]["required_restarts"] = self._required_restarts
-        # print("in HSPPBO_TISD execute: " + str(best_solution[0]))
         # append last solution quality - without dynamic, this is the only list entry
         self._solution_quality_intervals.append(best_solution[1])
 
         if verbose:
             self._tree.tree.show(data_property="pb_quality")
             self._problem.visualize(solution=best_solution[0])
-
-        # print('test')
-
-        # if "so_far" not in best_solution[0][0]:
-
-          #  best_solution[0][0]["so_far"] = self._problem.req_iterations()
 
         best_solution[0]["so_far"] = self._problem.req_pre_iterations()
         best_solution[0]["add_it"] = self._problem.additional_req_iterations()
@@ -336,11 +285,6 @@ class HSPPBO_TISD:
 
         best_solution = self._tree.get_best_solution(self._tree.tree.root)
 
-        # print(sce_index, linear_div_inflation)
-        # print(linear_div_inflation)
-
-        # TODO pass different types of variables (like continuous or categorical) in populations
-
         search_parameter = {'problem': self._problem,
                             'sce_index': sce_index,
                             'populations': self._tree.get_populations(sce_index),
@@ -353,142 +297,20 @@ class HSPPBO_TISD:
                             'h_probabilities': self._h_probabilities,
                             }
 
-        # get the solution populations from the tree as dict
-        # populations = self.tree.get_populations(sce_index)
-        # print("in HSPPBO_TISD" + " " + str(populations))
-
-        # first node already present, therefore subtract 1
-        # for i in range(0, self.problem.dimension-1):
-
-            # create array of tau values for each unvisited path i,k with k as all unvisited nodes
-            # tau_arr = np.array(
-            #    [self.tau(populations, solution[i], k) for k in tuple(unvisited)])
-
-            # create probability distribution from the tau array and select a new node based on that
-            # rnd_distr = tau_arr / np.sum(tau_arr)
-            # next_node = random.choices(unvisited, rnd_distr)[0]
-
-        # linear_deviation_in_i_th_dimension = [abs(row[i] - means_row_vector[i]) for row in matrix]
-
-        # sum_of_linear_deviations = reduce(lambda a, b: a + b, linear_deviation_in_i_th_dimension)
-
-        # inflated linear deviation
-        # linear_div_inflated[i] = linear_div_inflation * (1 / (number_of_rows - 1)) * sum_of_linear_deviations
-
-            # add new node to the solution path and remove it from the unvisited list
-            # solution.append(next_node)
-            # unvisited.remove(next_node)
-
-        # random_distribution = [1-(self.w_pers_prev + self.w_pers_best + self.w_parent_best),
-        #                       self.w_pers_prev, self.w_pers_best, self.w_parent_best]
-
-        # print(random_distribution)
-
-        # random_solution = self.problem.init_solution()[0]
-
-        # print(random_solution)
-
-        # possible_solutions = (random_solution,
-        #                      populations[0],
-        #                      populations[1],
-        #                      populations[2])
-
-        # next_solution = random.choices(possible_solutions, random_distribution)
-
-        # TODO muss früher passieren
         additional_iterations = 0
-
-        # print("in HSSPBO_TISD find_next_solution: " + str(self._tree.get_solution(0)))
-
-        # for sce_index in range(self._sce_count):
-
-            # print("in HSPPBO_TISD find_next_solutoin: " + str(sce_index))
-        #    additionally_so_far += self._tree.get_solution(sce_index)[0]["so_far"]
-
-        # print("in HSPPBO_TISD find_next_solution: " + str(additionally_so_far))
 
         next_solution = 0
 
-        # print('in HSPPBO: ' + 'test')
-
-        # if self._problem.type == 'TISD':
-
-            # print('test')
-
-        #    integrand_sign = False
-
-        #    while integrand_sign == False:
-
-        #        solution_and_integrand = self._search_algorithm.construct_solution(self, search_parameter)
-
-        #        integrand_sign = solution_and_integrand[1]
-
-        #        print('in HSPPBO construct_solution: ' + str(integrand_sign))
-
-                # print(next_solution[0])
-
-                # next_solution_quality = self.problem.get_solution_quality(next_solution[0])
-
-        #        next_solution = solution_and_integrand[0]
-
-        # else:
-
-        #    next_solution = self._search_algorithm.construct_solution(self, search_parameter)
-
-
-
         condition = False
 
-        # match self._accepted_solutions:
-
-        #    case 'exact-term':
-
         while not condition:
-
-            # print("in find_next_solution: klappt")
-
-            # print("in find_next_solution additional iterations: " + str(additional_iterations))
 
             next_solution = self._search_algorithm.construct_solution(self, search_parameter)
             condition = self._problem.get_solution_quality(next_solution)[1]
 
             additional_iterations += 1
 
-            # print("in find_next_solution condition: " + str(condition))
-
-            # if condition:
-
-            #    break
-
-        # print("in find_next_solution additional iterations: " + str(additional_iterations))
-
         self._problem.add_additional_req_iterations(additional_iterations - 1)
-
-        # next_solution["add_it"] = self._problem.additional_req_iterations()
-
-        #    case 'penalty-term':
-
-        #        next_solution = self._search_algorithm.construct_solution(self, search_parameter)
-        #        next_solution["add_it"] = 0
-                # print("in HSPPBO_TISD find_next_solution: " + str(next_solution))
-
-        #    case _:
-
-        #        pass
-
-
-
-        # next_solution = self._search_algorithm.construct_solution(self, search_parameter)
-
-        # print(f"in SHPPBO {next_solution}")
-
-        # test = TISD(tisd_name='tisd10')
-        # test_solution = test.init_solution()
-
-        # print(solution)
-        # print(tuple(solution))
-        # return sce_index, tuple(solution)
-        # print("hsppbo_tisd find_next_solution: " + str(next_solution))
 
         return [sce_index, next_solution]
 

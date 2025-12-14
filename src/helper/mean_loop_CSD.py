@@ -1,11 +1,7 @@
 import os
 from math import ceil
 
-from src.helper.mean import save_data_path
-
 directory = "/home/user/Schreibtisch/Masterarbeit_Code/src/performance_data/H_Het_P_ACO_R_Very_Simple/mixed_variable_performance_data"
-
-# print(directory)
 
 for file in os.listdir(directory):
 
@@ -66,8 +62,6 @@ for file in os.listdir(directory):
                     sum_of_iterations += int(split_line[4])
 
                     sum_of_time += float(split_line[6])
-
-                    # print(split_line[2])
 
             if number_of_entries != 0:
 

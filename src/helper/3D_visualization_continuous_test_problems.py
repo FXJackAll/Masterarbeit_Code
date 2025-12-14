@@ -1,12 +1,8 @@
 from functools import reduce
-from mpl_toolkits import mplot3d
 import numpy as np
-from mpl_toolkits.mplot3d.axis3d import ZAxis
 from numpy import sqrt, pi, cos, exp
 from matplotlib import cm
-from matplotlib.ticker import LinearLocator
 import matplotlib.pyplot as plt
-# from sympy.printing.pretty.pretty_symbology import linewidth
 
 # path where to save the box plot
 save_pic_path = "../figures/3D_visualization_hartmann_not_6_2_4_0_1_coolwarm.png"

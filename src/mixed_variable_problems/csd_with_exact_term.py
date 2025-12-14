@@ -1,10 +1,7 @@
-import sys
 import os
 import json
-# from collections.abc import set_iterator
 
 from src.problem import Problem
-from bisect import bisect
 from random import choice, randint, uniform
 import numpy as np
 from numpy import pi
@@ -80,12 +77,6 @@ class CSD_exact(Problem):
 
     def get_variable_boundaries(self) -> dict:
 
-        # variable_boundaries = {'natural_numbers': [[1, 70]], # TODO: im Paper werden keine Boundaries genannt, obwohl das sehr wichtig ist,
-                               # weil das Interval aus dem die ersten k Lösungen gezogen werden, Einfluss hat auf das Verhalten
-                               # des Algorithmus
-        #                       'discrete': [[self._d_min, 0.5]],
-        #                       'continuous': [[self._D_min, self._D_max + self._epsilon]]}
-
         return self._variable_boundaries
 
     def init_solution(self) -> (dict, float):
@@ -109,13 +100,7 @@ class CSD_exact(Problem):
 
                     additionally_required_pre_iterations += 1
 
-                    # print('in csd init_solution: test')
-
-                    # solution = insulators, delta_x, temperatures, c
-
                     N = randint(self._N_min, self._N_max + 1) # "self._N_max + 1" because the upper bound of randint is exclusive
-
-                    # print('in init_solution: ' + str(N))
 
                     d = choice(self._d_values)
 
@@ -123,10 +108,6 @@ class CSD_exact(Problem):
 
                         additionally_required_pre_iterations += 1
                         d = choice(self._d_values)
-                        # print('in csd init_solution: ' + str(d))
-                        # print('in csd init_solution: ' + str(bool(self._d_min - d > 0)))
-
-                    # print('in csd init_solution: test')
 
                     D = uniform(self._D_min, self._D_max)
 
@@ -138,9 +119,6 @@ class CSD_exact(Problem):
 
                     result = self.get_solution_quality(solution)
                     condition = result[1]
-                    # print("in Schleife: " + str(solution))
-                    # print('in tisd init_solution: ' + str(self._t_p))
-                    # print("in tisd init_solution: " + str(condition))
 
                     self._additionally_required_pre_iterations += additionally_required_pre_iterations
 
@@ -148,13 +126,7 @@ class CSD_exact(Problem):
 
                 N = randint(self._N_min, self._N_max + 1)  # "self._N_max + 1" because the upper bound of randint is exclusive
 
-                # print('in init_solution: ' + str(N))
-
                 d = choice(self._d_values)
-                # print('in csd init_solution: ' + str(d))
-                # print('in csd init_solution: ' + str(bool(self._d_min - d > 0)))
-
-                # print('in csd init_solution: test')
 
                 D = uniform(self._D_min, self._D_max)
 
@@ -164,16 +136,9 @@ class CSD_exact(Problem):
                             'ordinal': [],
                             'categorical': []}
 
-        # print("außerhalb der Schleife: " + str(solution))
-
-        # self._additionally_required_pre_iterations += additionally_required_pre_iterations
-
-        # print("in CSD_exact init_solution: " + str(self._additionally_required_iterations))
         solution["so_far"] = self._additionally_required_pre_iterations
 
-        # return insulators, delta_x, temperatures, c, self.get_solution_quality(solution)
         return [solution, self.get_solution_quality(solution)]
-        # return self.get_solution_quality(solution)
 
     def get_solution_quality(self, solution: dict) -> (float, bool):
         """
@@ -200,50 +165,31 @@ class CSD_exact(Problem):
 
         if (8 * C_f * self._F_max * D)/(pi * d**3) - self._S > 0:
 
-            # print('in get_solution_quality: test')
-
             return [V, False]
 
         if l_f - self._l_max > 0:
-
-            # print('in get_solution_quality: test2')
 
             return [V, False]
 
         if D - self._D_max > 0:
 
-            # print('in get_solution_quality: test3')
-
             return [V, False]
 
         if 3 - D/d > 0:
-
-            # print('in get_solution_quality: test4')
-            # print('in get_solution_quality D: ' + str(D))
-            # print('in get_solution_quality d: ' + str(d))
-            # print('in get_solution_quality D/d: ' + str(D/d))
 
             return [V, False]
 
         if sigma_p - self._sigma_pm > 0:
 
-            # print('in get_solution_quality: test5')
-
             return [V, False]
 
         if sigma_p + (self._F_max - self._F_p)/K + 1.05*(N + 2)*d - l_f > 0:
-
-            # print('in get_solution_quality: test6')
 
             return [V, False]
 
         if self._sigma_w - (self._F_max - self._F_p)/K > 0:
 
-            # print('in get_solution_quality: test7')
-
             return [V, False]
-
-        # )print('in get_solution_quality:')
 
         return [V, True]
 
@@ -297,19 +243,3 @@ class CSD_exact(Problem):
     def __str__(self) -> str:
 
         pass
-
-# test = CSD("csd10", "../problems/mixed_variable/")
-# discrete_values = test.get_discrete_values()
-
-# insertion_index = bisect(discrete_values, 0.0333, lo=0, hi=len(discrete_values))
-# left_of_discrete_value, right_of_discrete_value = discrete_values[insertion_index], discrete_values[insertion_index - 1]
-# discrete_value = left_of_discrete_value if (abs(left_of_discrete_value - 0.0333)
-#                                             < abs(right_of_discrete_value - 0.333)) else right_of_discrete_value
-# print(discrete_value)
-# print(test.dimension)
-# test.get_solution_quality((1,2,3))
-# for i in range(100):
-  #  print(test.init_solution())
-# print(test.init_solution())
-
-# print(randint(1,1000))

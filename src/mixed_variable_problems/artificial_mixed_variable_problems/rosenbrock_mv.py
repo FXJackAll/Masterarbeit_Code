@@ -103,10 +103,6 @@ class Rosenbrock_MV(Problem):
         continuous_variables = solution['continuous'][0]
         discrete_variables = solution['discrete'][0]
 
-        dimension = len(solution)
-        # print(solution)
-        # continuous_variables = solution['continuous'][0]
-
         continuous_function_value = reduce(lambda a, b: a + b, list(map(lambda x, y: 100 * (x ** 2 - y) ** 2 + (x - 1) ** 2,
                                                                         continuous_variables[0:self._continuous_dimension - 1], continuous_variables[1:self._continuous_dimension])))
 

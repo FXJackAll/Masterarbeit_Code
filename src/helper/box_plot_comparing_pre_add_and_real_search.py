@@ -53,16 +53,6 @@ with open(read_data_path_4, "r") as performance_data:
     # spread[1] = temp_spread_add
     spread[1] = temp_spread_real
 
-    # print(spread)
-
-#    spread_number += 1
-
-# df = pd.DataFrame(spread)
-
-# print(df)
-
-# sns.boxplot(data=df, x="pre-, add- und reale Funktionsauswertungen")
-
 fig = plt.figure(1)
 
 # create axes instance

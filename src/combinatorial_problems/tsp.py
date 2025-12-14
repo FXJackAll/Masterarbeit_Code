@@ -1,4 +1,4 @@
-from problem import Problem
+from src.problem import Problem
 from functools import partial
 from math import ceil
 import tsplib95

@@ -52,11 +52,6 @@ class SCETree_TISD:
 
             pers_best, pb_quality = self.solution_generator()
             pers_prev, pp_quality = self.solution_generator()
-            # print("in SCETree init_tree: " + str(pp_quality))
-
-            # print("in sce_tree_tisd init_tree " + str(pb_quality[0]))
-
-            # print("in sce_tree_tisd init_tree: " + str(i))
 
             self.tree.create_node("SCE_"+str(i), i, parent=p, data=SCENode(pers_best, pb_quality[0], pers_prev, pp_quality[0]))
 
@@ -227,8 +222,6 @@ class SCETree_TISD:
         Returns:
             tuple[dict[int]]: Tuple of populations with solutions in dicts as (node: index)
         """
-        # print("in sce_tree_get_populations:" + " " + str(self.tree.get_node(nid).data.pers_prev))
-        # print({k: v for v, k in enumerate(self.tree.get_node(nid).data.pers_prev)})
         if self.tree.root == nid:
             return (self.tree.get_node(nid).data.pers_prev,
                     self.tree.get_node(nid).data.pers_best,

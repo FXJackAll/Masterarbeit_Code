@@ -1,4 +1,4 @@
-from problem import Problem
+from src.problem import Problem
 import random
 import numpy as np
 from scipy import interpolate
@@ -80,9 +80,6 @@ class TISD(Problem):
 
             self.rng = np.random
 
-            # print(self._aluminium_temp_in_kelvin)
-            # print(self._T_hot)
-            # print(self._T_cold)
             self._instance.close()
 
     def reset(self) -> None:
@@ -134,31 +131,18 @@ class TISD(Problem):
 
         while not condition:
 
-            # print('in tisd init_solution: ' + str(self._t_p))
-
             # given n heat intercepts (n+1) insulators are needed
             insulators = [random.randint(0, len(self._possible_insulating_materials) - 1) for i in range(dim+1)]
-            # print("in init_solution: " + str(len(insulators)))
-            # print([random.randint(1, len(self._possible_insulating_materials)) for i in range(dim+1)])
-            # last_insulator = insulators[-1]
-            #insulators = insulators.append(self._T_cold)
-            # print("in init_solution: " + str(last_insulator))
-            # for i in range(len(insulators)-1):
 
             # for (n+1) intercepts (n+1) thicknesses are needed
             delta_x = np.random.rand(dim+1)
             delta_x = delta_x / np.sum(delta_x)
             assert np.isclose(delta_x.sum(), 1)
-            # print(delta_x)
-            # print(delta_x.sum())
 
             temperatures = [random.random()*self._T_hot for i in range(dim) if (random.random != 0 or random.random != 1)]
             temperatures.sort()
             temperatures.insert(0, self._T_cold)
             temperatures.append(self._T_hot)
-            # print(temperatures)
-
-            # solution = insulators, delta_x, temperatures, c
 
             solution = {'continuous': [temperatures, delta_x],
                         'ordinal': [],
@@ -167,15 +151,8 @@ class TISD(Problem):
 
             self._t_p = self.get_solution_quality(solution)
             condition = self._t_p[1]
-            # print("in Schleife: " + str(solution))
-            # print('in tisd init_solution: ' + str(self._t_p))
-            # print("in tisd init_solution: " + str(condition))
 
-        # print("außerhalb der Schleife: " + str(solution))
-
-        # return insulators, delta_x, temperatures, c, self.get_solution_quality(solution)
         return solution, self.get_solution_quality(solution)
-        # return self.get_solution_quality(solution)
 
     def get_solution_quality(self, solution: dict) -> (float, bool):
         """
@@ -193,20 +170,13 @@ class TISD(Problem):
         # print('in tisd: ' + 'test')
 
         self._t_p = 0.0
-        # p_i = 0
-        # print("in tisd_get_solution_quality" + " " + str(solution))
-        # print("in tisd_get_solution_quality solution[1]" + " " + str(solution[1]))
-        # print("in tisd_get_solution_quality 0" + " " + str(solution[0]))
-        # print("in tisd_get_solution_quality 1" + " " + str(solution[1]))
-        # print("in tisd_get_solution_quality 2" + " " + str(solution[2]))
-        # print("in tisd_get_solution_quality 3" + " " + str(solution[3]))
+
         integrands = solution['categorical']
         delta_x = solution['continuous'][1]
-        # print("in tisd get_solution_quality: " + str(delta_x))
+
         delta_x = delta_x / np.sum(delta_x)
         assert np.isclose(delta_x.sum(), 1)
-        # print("in TISD get_solution_quality: " + str(delta_x))
-        # print(np.sum(delta_x))
+
         t = solution['continuous'][0]
 
         # c = thermodynamic cycle efficiency coefficient at the i-th intercept
@@ -217,45 +187,8 @@ class TISD(Problem):
                 c[i] = 4
             if t[i + 1] <= 4.2:
                 c[i] = 5
-        # print(c)
-
-        # c = solution[3]
-
-        # print(self._possible_integrands[integrands[1]])
-
-        # self._t_p = 0
-
-        # print(self._t_p)
 
         for i in range(1, self._dimension+1):
-
-            # print("in tisd get_solution_quality: " + str(self._possible_integrands[integrands[i-1]]))
-
-            # print(i)
-            # print(integrands[1])
-            # print(self._t_p)
-            # self._t_p = 0
-
-            # integrand = (1/delta_x[i] * quad(self._possible_integrands[integrands[i-1]], t[i], t[i+1])[0]
-            #             - 1/delta_x[i-1] * quad(self._possible_integrands[integrands[i-1]], t[i-1], t[i])[0])
-
-            # if integrand <= 0:
-
-            #    return self._t_p, False
-
-            # print(self._T_hot / t[i] - 1)
-            # print(1/delta_x[i] * quad(self._possible_integrands[integrands[i]], t[i], t[i+1])[0]
-            #      - 1/delta_x[i-1] * quad(self._possible_integrands[integrands[i-1]], t[i-1], t[i])[0])
-
-            # print("in get_solution_quality: " + str(1/delta_x[i] * quad(self._possible_integrands[integrands[i-1]], t[i], t[i+1])[0]))
-            # print("in get_solution_quality: " + str(1/delta_x[i-1] * quad(self._possible_integrands[integrands[i-1]], t[i-1], t[i])[0]))
-
-            # print("in get_solution_quality: " + str(integrands[i]))
-            # print("in get_solution_quality: " + str(integrands[i-1]))
-            # print()
-
-            # print("in get_solution_quality: " + str(self._T_hot/t[i] - 1))
-            # print("in get_solution_quality: " + str(c[i-1]))
 
             p_i = (c[i-1] * (self._T_hot / t[i] - 1)
                    * (1/delta_x[i] * quad(self._possible_integrands[integrands[i]], t[i], t[i+1])[0]
@@ -267,33 +200,14 @@ class TISD(Problem):
 
             if p_i <= 0:
 
-                # print("in get_solution_quality: " + str(p_i))
-
                 return self._t_p, False
 
             self._t_p = self._t_p + p_i
-
-            # print(c[i-1] * (self._T_hot / t[i] - 1))
-
-            # if self._t_p <= 0:
-            #    self._t_p = 0
-
-        # print(self._t_p)
-
-            # print(t[i+1])
-            # print(1/delta_x[i] * quad(self._possible_integrands[integrands[i-1]], t[i], t[i+1])[0])
-            # print(- 1/delta_x[i-1] * quad(self._possible_integrands[integrands[i-1]], t[i-1], t[i])[0])
-        # print(i)
-        # print(self._t_p)
-
-        # print("in tisd get_solution_quality: " + str(True))
 
         return self._t_p, True
 
     @staticmethod
     def get_cubic_spline(x, x_points, y_points):
-        # x_points = [0, 1, 2, 3, 4, 5]
-        # y_points = [12, 14, 22, 39, 58, 77]
 
         tck = interpolate.splrep(x_points, y_points)
 
@@ -422,15 +336,3 @@ class TISD(Problem):
     def __str__(self) -> str:
 
         pass
-
-
-# test = TISD("tisd10", "../problems/mixed_variable/")
-
-# print(test.dimension)
-# test.get_solution_quality((1,2,3))
-# a = test.temperature
-# b = test.conductivity
-# print(quad(test.get_aluminium_integrand, 0, 1))
-# print(range(0, test.dimension))
-# test.set_random_seed()
-# print(test.init_solution())

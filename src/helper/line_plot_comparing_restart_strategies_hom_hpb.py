@@ -1,8 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-from src.helper.box_plot_comparing_algorithms import save_pic_path
-
 save_pic_path = "../figures/2D_visualization_comparison_restart_strategies_hom_hpb_aco_r_vs_mv.png"
 
 x_labels = np.array(["(2, 11)", "(2, 21)", "(2, 51)",

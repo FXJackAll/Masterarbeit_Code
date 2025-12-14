@@ -1,12 +1,9 @@
-import sys
 import os
 from functools import reduce
 from operator import mul
 import json
-# from collections.abc import set_iterator
 
 from src.problem import Problem
-from bisect import bisect
 from random import choice, randint, uniform
 import numpy as np
 from numpy import pi
@@ -86,12 +83,6 @@ class CSD(Problem):
 
     def get_variable_boundaries(self) -> dict:
 
-        # variable_boundaries = {'natural_numbers': [[1, 70]], # TODO: im Paper werden keine Boundaries genannt, obwohl das sehr wichtig ist,
-                               # weil das Interval aus dem die ersten k Lösungen gezogen werden, Einfluss hat auf das Verhalten
-                               # des Algorithmus
-        #                       'discrete': [[self._d_min, 0.5]],
-        #                       'continuous': [[self._D_min, self._D_max + self._epsilon]]}
-
         return self._variable_boundaries
 
     def init_solution(self) -> (dict, float):
@@ -102,7 +93,6 @@ class CSD(Problem):
             tuple, float: a possible solution problem instance of a TISD problem,
                           and its solution quality (total refrigeration power P required)
         """
-        # dim = self._dimension
         condition = False
         additionally_required_pre_iterations = 0
         solution = 0
@@ -115,13 +105,7 @@ class CSD(Problem):
 
                     additionally_required_pre_iterations += 1
 
-                    # print('in csd init_solution: test')
-
-                    # solution = insulators, delta_x, temperatures, c
-
                     N = randint(self._N_min, self._N_max + 1) # "self._N_max + 1" because the upper bound of randint is exclusive
-
-                    # print('in init_solution: ' + str(N))
 
                     d = choice(self._d_values)
 
@@ -129,10 +113,6 @@ class CSD(Problem):
 
                         additionally_required_pre_iterations += 1
                         d = choice(self._d_values)
-                        # print('in csd init_solution: ' + str(d))
-                        # print('in csd init_solution: ' + str(bool(self._d_min - d > 0)))
-
-                    # print('in csd init_solution: test')
 
                     D = uniform(self._D_min, self._D_max)
 
@@ -144,9 +124,6 @@ class CSD(Problem):
 
                     result = self.get_init_solution_quality(solution)
                     condition = result[1]
-                    # print("in Schleife: " + str(solution))
-                    # print('in tisd init_solution: ' + str(self._t_p))
-                    # print("in tisd init_solution: " + str(condition))
 
                     self._additionally_required_pre_iterations += additionally_required_pre_iterations
 
@@ -154,13 +131,7 @@ class CSD(Problem):
 
                 N = randint(self._N_min, self._N_max + 1)  # "self._N_max + 1" because the upper bound of randint is exclusive
 
-                # print('in init_solution: ' + str(N))
-
                 d = choice(self._d_values)
-                # print('in csd init_solution: ' + str(d))
-                # print('in csd init_solution: ' + str(bool(self._d_min - d > 0)))
-
-                # print('in csd init_solution: test')
 
                 D = uniform(self._D_min, self._D_max)
 
@@ -174,16 +145,9 @@ class CSD(Problem):
 
                 pass
 
-        # print("außerhalb der Schleife: " + str(solution))
-
-        # self._additionally_required_pre_iterations += additionally_required_pre_iterations
-
-        # print("in CSD_exact init_solution: " + str(self._additionally_required_iterations))
         solution["so_far"] = self._additionally_required_pre_iterations
 
-        # return insulators, delta_x, temperatures, c, self.get_solution_quality(solution)
         return [solution, self.get_init_solution_quality(solution)]
-        # return self.get_solution_quality(solution)
 
     def get_init_solution_quality(self, solution: dict) -> (float, bool):
 
@@ -223,60 +187,44 @@ class CSD(Problem):
             case "exact":
 
                 if g_1 > 0:
-                    # print('in get_solution_quality: test')
 
                     return [V, False]
 
                 if g_2 > 0:
-                    # print('in get_solution_quality: test2')
 
                     return [V, False]
 
                 if g_3 > 0:
-                    # print('in get_solution_quality: test3')
 
                     return [V, False]
 
                 if g_5 > 0:
-                    # print('in get_solution_quality: test4')
-                    # print('in get_solution_quality D: ' + str(D))
-                    # print('in get_solution_quality d: ' + str(d))
-                    # print('in get_solution_quality D/d: ' + str(D/d))
 
                     return [V, False]
 
                 if g_6 > 0:
-                    # print('in get_solution_quality: test5')
 
                     return [V, False]
 
                 if g_7 > 0:
-                    # print('in get_solution_quality: test6')
 
                     return [V, False]
 
                 if g_8 > 0:
-                    # print('in get_solution_quality: test7')
 
                     return [V, False]
-
-                    # )print('in get_solution_quality:')
 
                 return [V, True]
 
             case "penalty":
 
-                # print("in get_solution_quality: klappt")
-
                 self._constraints = [1, 1, 1, 1, 1, 1, 1, 1]
 
                 if g_1 > 0:
-                    # print("in csd_with_penalty_term g_1: " + str(g_1))
 
                     self._constraints[0] = (self._constraints[0] + 10 ** (-5) * g_1) ** 3
 
                 if g_2 > 0:
-                    # print("in csd_with_penalty_term g_2: " + str(g_2))
 
                     self._constraints[1] = (self._constraints[1] + 1 * g_2) ** 3
 
@@ -298,17 +246,9 @@ class CSD(Problem):
                 if g_8 > 0:
                     self._constraints[7] = (self._constraints[7] + 10 ** 2 * g_8) ** 3
 
-                    # )print('in get_solution_quality:')
-
                 V_c = 1 / 4 * pi ** 2 * D * d ** 2 * (N + 2)
 
-                # for i in range(len(self._constraints)):
-
-                #    V = V * self._constraints[i]
-
                 V = V_c * reduce(mul, self._constraints)
-
-                # print("in csd_with_penalty_term get_solution_quality: " + str(V))
 
                 return [V, True]
 
@@ -352,72 +292,45 @@ class CSD(Problem):
 
             case "exact":
 
-                # print("in get_solution_quality exact klappt")
-
                 if g_1 > 0:
-
-                    # print('in get_solution_quality: test')
 
                     return [V, False]
 
                 if g_2 > 0:
-
-                    # print('in get_solution_quality: test2')
 
                     return [V, False]
 
                 if g_3 > 0:
 
-                    # print('in get_solution_quality: test3')
-
                     return [V, False]
 
                 if g_5 > 0:
-
-                    # print('in get_solution_quality: test4')
-                    # print('in get_solution_quality D: ' + str(D))
-                    # print('in get_solution_quality d: ' + str(d))
-                    # print('in get_solution_quality D/d: ' + str(D/d))
 
                     return [V, False]
 
                 if g_6 > 0:
 
-                    # print('in get_solution_quality: test5')
-
                     return [V, False]
 
                 if g_7 > 0:
-
-                    # print('in get_solution_quality: test6')
 
                     return [V, False]
 
                 if g_8 > 0:
 
-                    # print('in get_solution_quality: test7')
-
                     return [V, False]
-
-                    # )print('in get_solution_quality:')
 
                 return [V, True]
 
             case "penalty":
 
-                # print("in get_solution_quality: klappt")
-
                 self._constraints = [1, 1, 1, 1, 1, 1, 1, 1]
 
                 if g_1 > 0:
 
-                    # print("in csd_with_penalty_term g_1: " + str(g_1))
-
                     self._constraints[0] = (self._constraints[0] + 10**(-5) * g_1) ** 3
 
                 if g_2 > 0:
-
-                    # print("in csd_with_penalty_term g_2: " + str(g_2))
 
                     self._constraints[1] = (self._constraints[1] + 1 * g_2) ** 3
 
@@ -444,17 +357,9 @@ class CSD(Problem):
 
                     self._constraints[7] = (self._constraints[7] + 10 ** 2 * g_8) ** 3
 
-                    # )print('in get_solution_quality:')
-
                 V_c = 1 / 4 * pi ** 2 * D * d ** 2 * (N + 2)
 
-                # for i in range(len(self._constraints)):
-
-                #    V = V * self._constraints[i]
-
                 V = V_c * reduce(mul, self._constraints)
-
-                # print("in csd_with_penalty_term get_solution_quality: " + str(V))
 
                 return [V, True]
 
@@ -512,19 +417,3 @@ class CSD(Problem):
     def __str__(self) -> str:
 
         pass
-
-# test = CSD("csd10", "../problems/mixed_variable/")
-# discrete_values = test.get_discrete_values()
-
-# insertion_index = bisect(discrete_values, 0.0333, lo=0, hi=len(discrete_values))
-# left_of_discrete_value, right_of_discrete_value = discrete_values[insertion_index], discrete_values[insertion_index - 1]
-# discrete_value = left_of_discrete_value if (abs(left_of_discrete_value - 0.0333)
-#                                             < abs(right_of_discrete_value - 0.333)) else right_of_discrete_value
-# print(discrete_value)
-# print(test.dimension)
-# test.get_solution_quality((1,2,3))
-# for i in range(100):
-  #  print(test.init_solution())
-# print(test.init_solution())
-
-# print(randint(1,1000))

@@ -1,26 +1,11 @@
-import os
-import glob
-
-import matplotlib
-
-# matplotlib.use('agg')
-
 import matplotlib.pyplot as plt
-import re
-
-from src.helper.box_plot_comparing_algorithms import algorithm_names
 
 '''
 makes a box plot of the performance data of the given objective function
 :return: none
 '''
 
-# print("in performance_box_plot_of_test_function: " + str("klappt"))
-
 objective_function_name = "Paraboloid"
-
-# performance_path_write = data_to_analyze['performance_path_write']
-# performance_path_plot_write = data_to_analyze['performance_path_plot_write']
 
 # path where to read the performance data from
 
@@ -39,29 +24,6 @@ algorithm_names = ['Hom-HPB', 'Het-HPB', 'Het-HSPPB']
 
 spread = [0 for i in range(len(read_data_paths))]
 spread_number = 0
-
-# with open(read_data_path_1, "r") as performance_data:
-
-    # reading all the data from file
-#    lines_in_data = performance_data.read().splitlines()
-
-#    temp_spread = [0]
-
-#    for line in lines_in_data:
-
-#        if not line:
-
-#            break
-
-        # print("box_plot_comparing_algorithms line: " + str(line))
-
-        # gathering all data in a list
-#        temp_spread.append(int(line))
-
-    # removing the first zero from the spread as we started it with zero and then just appended lines
-#    temp_spread.pop(0)
-
-#    spread[0] = temp_spread
 
 for read_data_path in read_data_paths:
 
@@ -99,17 +61,13 @@ fig = plt.figure(1)
 # create axes instance
 ax = fig.add_subplot(111)
 
-# spread = [spread, [1, 1]]
-
 # creates box plot
 # it may look like it's not used but it's necessary
 bp = ax.boxplot(spread)
 
-# costom caption
+# custom caption
 # ax.set_title('Variations of ACO$_\mathbb{R}$-Very-Simple')
 ax.set_title('CSD - exact-exact - fixed 0')
-
-# ax.set_subtitle('Paraboloid(6)')
 
 # custom x-axis label
 # must be set after box plot is done

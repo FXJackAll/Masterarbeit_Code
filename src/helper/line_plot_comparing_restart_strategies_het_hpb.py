@@ -1,5 +1,3 @@
-from json.decoder import NaN
-
 import matplotlib.pyplot as plt
 import numpy as np
 

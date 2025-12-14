@@ -17,19 +17,6 @@ class De_Jong(Problem):
         self._simple_con_pr_name = simple_con_pr_name
         self._problem_path = problem_path
 
-        # if load_instance:
-        #    self._instance = open(self._problem_path + simple_con_pr_name + '.simple_con_pr', "r")
-        #    self._instance_content = self._instance.readlines()
-        #    self._dimension = int(self._instance_content[3][12:])
-        #    self._left_search_space_boundary = float(self._instance_content[4][29:])
-        #    self._right_search_space_boundary = float(self._instance_content[5][30:])
-
-        #    self._magnitudes_of_categorical_variables = [3, 5]
-
-        #    self.rng = np.random
-
-        #    self._instance.close()
-
         if load_instance:
 
             with open(os.path.join(self._problem_path, self._simple_con_pr_name + ".json")) as f:
@@ -84,11 +71,6 @@ class De_Jong(Problem):
 
     def get_variable_boundaries(self) -> dict:
 
-        # variable_boundaries = {'continuous': [[self._left_search_space_boundary, self._right_search_space_boundary], [1, 1]],
-        #                       'ordinal': []}
-
-        # print(self._variable_boundaries)
-
         return self._variable_boundaries
 
     def init_solution(self) -> (dict, float):
@@ -117,8 +99,6 @@ class De_Jong(Problem):
         """
 
         continuous_variables = solution['continuous'][0]
-
-        # print('in Paraboloid: ' + str(continuous_variables))
 
         function_value = reduce(lambda a, b: a + b, list((map(lambda x: x ** 2, continuous_variables))))
 
@@ -177,7 +157,3 @@ class De_Jong(Problem):
     def dimension(self, value):
 
         self.dimension = value
-
-
-# test = Paraboloid('paraboloid10')
-# print(test.init_solution())

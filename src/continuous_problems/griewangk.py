@@ -174,7 +174,3 @@ class Griewangk(Problem):
     def dimension(self, value):
 
         self.dimension = value
-
-
-# test = Paraboloid('paraboloid10')
-# print(test.init_solution())
